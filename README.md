@@ -16,3 +16,4 @@ Generelt vil mer mindre kompliserte komponenter prioriteres høyere.
 
 PostProsessorer som kan legge til browser-unike css-greier. Som webkit.
 Legge inn som et prosjekt i npmjs.com
+Dra inn NAV sine frontend-komponenter og tweake de til å passe med arbeidsplassen-design
