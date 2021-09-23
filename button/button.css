@@ -1,4 +1,31 @@
 .button {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    user-select: none;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px darkblue;
+}
+
+.button-primary {
     background-color: blue;
+    border: 2px solid transparent;
+    color: #fff;
+}
+
+.button-primary:hover {
+    background-color: cornflowerblue;
+}
+
+.button-secondary {
+    background-color: transparent;
+    border: 2px solid blue;
+    color: blue;
+}
+
+.button-secondary:hover {
+    background-color: cornflowerblue;
     color: #fff;
 }
