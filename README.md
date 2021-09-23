@@ -19,8 +19,10 @@ Generelt vil mer mindre kompliserte komponenter prioriteres høyere.
 
 1. Knapper
 2. Lenker
-3. Input, checkbox, radio, select
-
+3. Input 
+4. Checkbox
+5. Radio
+6. Select
 
 ## Todos / vurdere fremover
 
