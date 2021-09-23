@@ -4,7 +4,6 @@ Her finner du css-kode for felles komponenter på Arbeidsplassen.
 Hver komponent inneholder:
 - css-fil, f.eks buttons.css
 - html-fil som inneholder eksempel på hvordan html og css virker sammen
-viser hvordan html-koden må se ut.
 
 ## Hvordan utvikle lokalt på din maskin
 - Det er ikke nødvending med `npm install` eller noe, du jobber rett på css-/html-filene
