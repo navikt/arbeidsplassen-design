@@ -11,6 +11,7 @@ Generelt vil mer mindre kompliserte komponenter prioriteres høyere.
 2. Lenker
 3. Skjemaer og inputs
     - inkluderer check-boxes
+4. Header og footer
 
 ## Todos / vurdere fremover
 
