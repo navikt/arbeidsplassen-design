@@ -15,3 +15,4 @@ Generelt vil mer mindre kompliserte komponenter prioriteres høyere.
 ## Todos / vurdere fremover
 
 PostProsessorer som kan legge til browser-unike css-greier. Som webkit.
+Legge inn som et prosjekt i npmjs.com
