@@ -3,15 +3,7 @@ html, body {
     height: 100%;
 }
 
-.body-flex {
-    display: flex;
-    flex-direction: column;
+.example-body-dark {
+    background: #062140;
 }
 
-.main-flex {
-    flex: 1 0 auto;
-}
-
-.footer-flex {
-    flex-shrink: 0;
-}

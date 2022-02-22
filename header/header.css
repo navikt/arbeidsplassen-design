@@ -10,6 +10,11 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    background: #fff;
+}
+
+#arbeidsplassen-header.arbeidsplassen-header-dark {
+    background: #062140;
 }
 
 .arbeidsplassen-header-nav {
@@ -249,6 +254,11 @@
     font-size: 1.125rem;
     margin: 0 0 1.5rem 0;
     line-height: 1;
+    color: #062140;
+}
+
+.arbeidsplassen-header-dark #arbeidsplassen-header-current-user-container {
+    color: #fff;
 }
 
 @media (min-width: 1157px) {
