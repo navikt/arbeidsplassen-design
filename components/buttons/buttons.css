@@ -1,4 +1,4 @@
-.arbeidsplassen-button {
+.ads-button {
     display: inline-flex;
     align-items: center;
     flex-direction: row;
@@ -16,16 +16,16 @@
 }
 
 @media (min-width: 768px) {
-    .arbeidsplassen-button {
+    .ads-button {
         padding: 0.5rem 1.25rem;
     }
 }
 
-.arbeidsplassen-button > svg {
+.ads-button > svg {
     margin-right: 0.5rem;
 }
 
-.arbeidsplassen-button:focus {
+.ads-button:focus {
     outline: 3px solid transparent;
     box-shadow: 0 0 0 3px #062140;
     background-color: #fbd8e7;
@@ -33,38 +33,38 @@
     color: #8c368e;
 }
 
-.arbeidsplassen-button--primary {
+.ads-button--primary {
     background-color: #8c368e;
     border-color: #8c368e;
     color: #fff;
 }
 
-.arbeidsplassen-button:hover {
+.ads-button:hover {
     background-color: #fbd8e7;
     border-color: #8c368e;
     color: #8c368e;
 }
 
-.arbeidsplassen-button--secondary {
+.ads-button--secondary {
     background-color: #fff;
     border-color: #8c368e;
     color: #8c368e;
 }
 
-.arbeidsplassen-button--flat {
+.ads-button--flat {
     background-color: #fff;
     border-color: #fff;
     color: #8c368e;
 }
 
-.arbeidsplassen-button:disabled {
+.ads-button:disabled {
     cursor: not-allowed;
     background-color: #fff;
     color: #333;
     border-color: #333;
 }
 
-.arbeidsplassen-button:disabled:hover {
+.ads-button:disabled:hover {
     background-color: #fff;
     color: #333;
     border-color: #333;
