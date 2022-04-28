@@ -1,0 +1,14 @@
+.ads-link {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    color: #8c368e;
+}
+
+.ads-link:focus {
+    outline: 3px solid transparent;
+    color: #fff;
+    background: #062140;
+}
+
+.ads-link:hover {
+    text-decoration: none;
+}
