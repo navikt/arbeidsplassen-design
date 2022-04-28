@@ -1,15 +1,15 @@
 <html>
 <head>
-    <title>Header forside</title>
+    <title>Header dark mode</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="stylesheet" href="../../fonts/fonts.css">
-    <link rel="stylesheet" href="../../example.css">
-    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../components/fonts/fonts.css">
+    <link rel="stylesheet" href="example.css">
+    <link rel="stylesheet" href="../components/header/header.css">
 </head>
-<body>
+<body class="example-body-dark">
 
-<header id="arbeidsplassen-header">
+<header id="arbeidsplassen-header" class="arbeidsplassen-header-dark">
     <nav class="arbeidsplassen-header-nav" aria-label="Hovedmeny">
         <a href="/" class="arbeidsplassen-header-til-forsiden" aria-label="Gå til forsiden">
             <i role="img" aria-label="Arbeidsplassen logo" class="arbeidsplassen-header-logo"></i>
@@ -23,11 +23,15 @@
         <div id="arbeidsplassen-header-menu-wrapper">
             <div id="arbeidsplassen-header-menu" class="arbeidsplassen-header-menu-hidden">
                 <ul class="arbeidsplassen-header-ul">
-                    <li><a href="/">Jobbsøker</a></li>
-                    <li><a href="/bedrift">Bedrift</a></li>
+                    <li><a href="/kandidater">Kandidatsøk</a></li>
+                    <li><a href="/kandidater/lister">Kandidatlister</a></li>
+                    <li><a href="/stillingsregistrering/stillingsannonser">Stillingsannonser</a></li>
+                    <li><a href="/jobbtreff/bedrift">Jobbtreff</a></li>
+                    <li><a href="/stillingsregistrering">Vår side</a></li>
                 </ul>
                 <div id="arbeidsplassen-header-current-user-container">
-                    Ola Nordmann
+                    Travelt Firma AS
+                    <button type="button">Bytt</button>
                 </div>
                 <div id="arbeidsplassen-header-login-container">
                     <button type="button">Logg ut</button>
