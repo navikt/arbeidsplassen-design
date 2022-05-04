@@ -1,14 +1,14 @@
-.ads-link {
+.dsa-link {
     font-family: 'Source Sans Pro', Arial, sans-serif;
     color: #8c368e;
 }
 
-.ads-link:hover {
+.dsa-link:hover {
     text-decoration: none;
     color: #9C4F9C;
 }
 
-.ads-link:focus {
+.dsa-link:focus {
     outline: none;
     color: #fff;
     background: #062140;

@@ -20,7 +20,7 @@ There is no npm install as you may be used to. For now we just work directly on 
 ## Code style
 
 - To avoid css naming conflicts, all css selectors are prefixed with
-  `ads-`, for example `ads-button`
+  `dsa-`, for example `dsa-button`
 - Class names follows BEM-syntax
 - In the example files we must avoid mixing css from the components with styles specific to the example docs itself.
   When writing documentation you should use the `x-` classes defined in examples.css. For example `x-h1`

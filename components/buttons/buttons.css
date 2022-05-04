@@ -1,4 +1,4 @@
-.ads-button {
+.dsa-button {
     display: inline-flex;
     align-items: center;
     flex-direction: row;
@@ -16,16 +16,16 @@
 }
 
 @media (min-width: 768px) {
-    .ads-button {
+    .dsa-button {
         padding: 0.5rem 1.25rem;
     }
 }
 
-.ads-button > svg {
+.dsa-button > svg {
     margin-right: 0.5rem;
 }
 
-.ads-button:focus {
+.dsa-button:focus {
     outline: 3px solid transparent;
     box-shadow: 0 0 0 3px #062140;
     background-color: #fbd8e7;
@@ -33,38 +33,38 @@
     color: #8c368e;
 }
 
-.ads-button--primary {
+.dsa-button--primary {
     background-color: #8c368e;
     border-color: #8c368e;
     color: #fff;
 }
 
-.ads-button:hover {
+.dsa-button:hover {
     background-color: #fbd8e7;
     border-color: #8c368e;
     color: #8c368e;
 }
 
-.ads-button--secondary {
+.dsa-button--secondary {
     background-color: #fff;
     border-color: #8c368e;
     color: #8c368e;
 }
 
-.ads-button--flat {
+.dsa-button--flat {
     background-color: #fff;
     border-color: #fff;
     color: #8c368e;
 }
 
-.ads-button:disabled {
+.dsa-button:disabled {
     cursor: not-allowed;
     background-color: #fff;
     color: #333;
     border-color: #333;
 }
 
-.ads-button:disabled:hover {
+.dsa-button:disabled:hover {
     background-color: #fff;
     color: #333;
     border-color: #333;
