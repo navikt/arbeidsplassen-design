@@ -9,11 +9,13 @@
     background-color: #f3eaf3;
     display: flex;
     justify-content: center;
+    line-height: 1.5;
+    min-height: 639px;
 }
 
 @media (min-width: 860px) {
     .dsa-footer {
-        min-height: 299px;
+        min-height: 291px;
     }
 }
 
@@ -32,7 +34,7 @@
     .dsa-footer-inner {
         display: flex;
         width: auto;
-        padding: 4rem 1rem 3.25rem 1rem;
+        padding: 4rem 1rem 2.5rem 1rem;
     }
 }
 
@@ -72,6 +74,7 @@
     margin: 0 0 0.75rem 0;
     font-size: 1.25rem;
     font-weight: 600;
+    line-height: 1.15;
 }
 
 .dsa-footer-a-service-from-nav {
