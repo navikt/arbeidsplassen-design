@@ -32,6 +32,12 @@
     }
 }
 
+@media (min-width: 900px) {
+    .dsa-header-nav {
+        padding: 1rem 2.5rem;
+    }
+}
+
 .dsa-header-til-forsiden {
     display: inline-block;
     height: 40px;
