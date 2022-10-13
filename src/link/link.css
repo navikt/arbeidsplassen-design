@@ -1,19 +1,17 @@
 .dsa-link {
-    color: var(--secondary-60);
+  color: var(--secondary-60);
 }
 
 .dsa-link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .dsa-link:visited {
-    color: var(--secondary-60);
+  color: var(--secondary-60);
 }
 
 .dsa-link:focus {
-    outline: none;
-    color: #fff;
-    background: var(--primary-100);
+  outline: none;
+  color: #fff;
+  background: var(--primary-100);
 }
-
-

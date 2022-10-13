@@ -1,88 +1,87 @@
 .dsa-footer {
-    background-color: var(--tertiary-5);
-    line-height: 1.5;
-    min-height: 691px;
-    color: var(--primary-100);
-    padding: 4rem 1.5rem;
+  background-color: var(--tertiary-5);
+  line-height: 1.5;
+  min-height: 691px;
+  color: var(--primary-100);
+  padding: 4rem 1.5rem;
 }
 
 @media (min-width: 940px) {
-    .dsa-footer {
-        min-height: 327px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .dsa-footer {
+    min-height: 327px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .dsa-footer-sections {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem 4rem;
-    margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 4rem;
+  margin-bottom: 3rem;
 }
 
 .dsa-footer-section h2 {
-    margin: 0 0 1rem 0;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
 .dsa-footer-section ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .dsa-footer-section a {
-    color: var(--primary-100);
-    font-size: 1rem;
-    margin: 0 0 1rem 0;
-    display: inline-block;
-    white-space: nowrap;
+  color: var(--primary-100);
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .dsa-footer-section a:focus-visible {
-    outline: none;
-    background: var(--primary-100);
-    color: var(--neutral-0);
+  outline: none;
+  background: var(--primary-100);
+  color: var(--neutral-0);
 }
 
 .dsa-footer-section a:hover {
-    text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .dsa-footer-bottom {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
 
 @media (min-width: 940px) {
-    .dsa-footer-bottom {
-        flex-direction: row;
-        align-items: center;
-    }
+  .dsa-footer-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .dsa-footer-bottom-link {
-    margin: 0;
-    display: inline-flex;
-    height: 20px;
-    color: var(--primary-100);
+  margin: 0;
+  display: inline-flex;
+  height: 20px;
+  color: var(--primary-100);
 }
 
 .dsa-footer-bottom-link:focus {
-    outline: 3px solid var(--primary-100);
+  outline: 3px solid var(--primary-100);
 }
 
 .dsa-footer-bottom-about {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }

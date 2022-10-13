@@ -1,10 +1,9 @@
 .dsa-panel {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .dsa-panel .dsa-body-text {
-    flex: 1;
+  flex: 1;
 }
-

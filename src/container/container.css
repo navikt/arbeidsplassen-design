@@ -2,22 +2,22 @@
 .dsa-container-lg,
 .dsa-container-md,
 .dsa-container-sm {
-    padding: 0 1.5rem;
-    margin: 0 auto;
+  padding: 0 1.5rem;
+  margin: 0 auto;
 }
 
 .dsa-container-xl {
-    max-width: 1272px;
+  max-width: 1272px;
 }
 
 .dsa-container-lg {
-    max-width: 736px;
+  max-width: 736px;
 }
 
 .dsa-container-md {
-    max-width: 568px;
+  max-width: 568px;
 }
 
 .dsa-container-sm {
-    max-width: 375px;
+  max-width: 375px;
 }

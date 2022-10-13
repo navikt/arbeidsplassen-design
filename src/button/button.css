@@ -1,71 +1,71 @@
 .dsa-button-primary,
 .dsa-button-secondary,
 .dsa-button-tertiary {
-    display: inline-flex;
-    gap: 0.5rem;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 5rem;
-    padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
-    border-width: 2px;
-    border-style: solid;
-    background: none;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
-    white-space: nowrap;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5rem;
+  padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+  border-width: 2px;
+  border-style: solid;
+  background: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .dsa-button-primary {
-    background-color: var(--secondary-60);
-    border-color: var(--secondary-60);
-    color: #fff;
+  background-color: var(--secondary-60);
+  border-color: var(--secondary-60);
+  color: #fff;
 }
 
 .dsa-button-secondary {
-    background-color: #fff;
-    border-color: var(--secondary-60);
-    color: var(--secondary-60);
+  background-color: #fff;
+  border-color: var(--secondary-60);
+  color: var(--secondary-60);
 }
 
 .dsa-button-tertiary {
-    background-color: #fff;
-    border-color: #fff;
-    color: var(--secondary-60);
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--secondary-60);
 }
 
 .dsa-button-tertiary:hover,
 .dsa-button-tertiary:focus {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .dsa-button-primary:focus,
 .dsa-button-secondary:focus,
 .dsa-button-tertiary:focus {
-    outline: 2px solid var(--secondary-60);
-    outline-offset: 2px;
+  outline: 2px solid var(--secondary-60);
+  outline-offset: 2px;
 }
 
 .dsa-button-primary:hover {
-    background-color: var(--secondary-80);
-    border-color: var(--secondary-80);
-    color: var(--neutral-0);
+  background-color: var(--secondary-80);
+  border-color: var(--secondary-80);
+  color: var(--neutral-0);
 }
 
 .dsa-button-secondary:hover,
 .dsa-button-tertiary:hover {
-    background-color: var(--secondary-20);
+  background-color: var(--secondary-20);
 }
 
 .dsa-button-primary:disabled,
 .dsa-button-secondary:disabled,
 .dsa-button-tertiary:disabled {
-    cursor: not-allowed;
-    background-color: var(--neutral-20);
-    color: var(--neutral-80);
-    border-color: var(--neutral-80);
+  cursor: not-allowed;
+  background-color: var(--neutral-20);
+  color: var(--neutral-80);
+  border-color: var(--neutral-80);
 }
