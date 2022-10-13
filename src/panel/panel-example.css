@@ -1,0 +1,5 @@
+.dsa-panel-example {
+    padding: 1.25rem;
+    border: 1px solid var(--neutral-40);
+    border-radius: 4px;
+}

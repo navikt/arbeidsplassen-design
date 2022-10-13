@@ -1,0 +1,31 @@
+{
+  "name": "arbeidsplassen-design",
+  "version": "1.0.0",
+  "description": "In this repo we maintain a shared CSS and HTML implementation of components used across Arbeidsplassen.",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --open --config webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navikt/arbeidsplassen-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navikt/arbeidsplassen-design/issues"
+  },
+  "homepage": "https://github.com/navikt/arbeidsplassen-design#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

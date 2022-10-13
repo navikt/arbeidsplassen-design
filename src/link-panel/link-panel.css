@@ -1,0 +1,12 @@
+.dsa-link-panel {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-80);
+    background-color: var(--primary-20);
+}
+
+.dsa-link-panel-content {
+    flex: 1;
+}
+

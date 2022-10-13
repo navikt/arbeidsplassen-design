@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Design - Arbeidsplassen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<%= require('html-loader!../skip-link/skip-link.html').default %>
+<%= require('html-loader!../header/header-forside.html').default %>
+<main id="main-content">
+    <div class="dsa-container-lg dsa-mb-6">
+        <h1 class="dsa-heading-xxl dsa-heading-mb">Design</h1>
+
+        <ul class="dsa-list dsa-mb-2">
+            <li><a href="#accordion" class="dsa-link">Accordion</a></li>
+            <li><a href="#alert" class="dsa-link">Alert</a></li>
+            <li><a href="#body-text" class="dsa-link">Body text</a></li>
+            <li><a href="#button" class="dsa-link">Button</a></li>
+            <li><a href="#container" class="dsa-link">Container</a></li>
+            <li><a href="#checkbox" class="dsa-link">Checkbox</a></li>
+            <li><a href="#container" class="dsa-link">Container</a></li>
+            <li><a href="#heading" class="dsa-link">Heading</a></li>
+            <li><a href="#ingress" class="dsa-link">Ingress</a></li>
+            <li><a href="#link" class="dsa-link">Link</a></li>
+            <li><a href="#link-panel" class="dsa-link">Link panel</a></li>
+            <li><a href="#margin" class="dsa-link">Margin</a></li>
+            <li><a href="#radio" class="dsa-link">Radio</a></li>
+            <li><a href="#selext" class="dsa-link">Select</a></li>
+            <li><a href="#text-field" class="dsa-link">Text field</a></li>
+            <li><a href="#textarea" class="dsa-link">Textarea</a></li>
+        </ul>
+
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb">Colors</h2>
+            <p class="dsa-body-text dsa-mb-2">
+                Alle farger er definert som css-variabler i <code class="dsa-code">:root</code>.
+            </p>
+            <div class="_doc-grid-1-1-1 dsa-mb-2">
+                <div>
+                    <h3 class="dsa-heading-xs dsa-heading-mb">Primary</h3>
+                    <div class="_doc-color-bubble _doc-bg-primary-100">--primary-100</div>
+                    <div class="_doc-color-bubble _doc-bg-primary-80">--primary-80</div>
+                    <div class="_doc-color-bubble _doc-bg-primary-60">--primary-60</div>
+                    <div class="_doc-color-bubble _doc-bg-primary-40">--primary-40</div>
+                    <div class="_doc-color-bubble _doc-bg-primary-20">--primary-20</div>
+                    <div class="_doc-color-bubble _doc-bg-primary-10">--primary-10</div>
+                    <div class="_doc-color-bubble _doc-bg-primary-5">--primary-5</div>
+                </div>
+                <div>
+                    <h3 class="dsa-heading-xs dsa-heading-mb">Secondary</h3>
+                    <div class="_doc-color-bubble _doc-bg-secondary-100">--secondary-100</div>
+                    <div class="_doc-color-bubble _doc-bg-secondary-80">--secondary-80</div>
+                    <div class="_doc-color-bubble _doc-bg-secondary-60">--secondary-60</div>
+                    <div class="_doc-color-bubble _doc-bg-secondary-40">--secondary-40</div>
+                    <div class="_doc-color-bubble _doc-bg-secondary-20">--secondary-20</div>
+                    <div class="_doc-color-bubble _doc-bg-neutral-0 dsa-text-neutral-0 dsa-border-primary-100">ingen</div>
+                    <div class="_doc-color-bubble _doc-bg-neutral-0 dsa-text-neutral-0 dsa-border-primary-100">ingen</div>
+                </div>
+                <div>
+                    <h3 class="dsa-heading-xs dsa-heading-mb">Tertiary</h3>
+                    <div class="_doc-color-bubble _doc-bg-neutral-0 dsa-text-neutral-0 dsa-border-primary-100">ingen</div>
+                    <div class="_doc-color-bubble _doc-bg-neutral-0 dsa-text-neutral-0 dsa-border-primary-100">ingen</div>
+                    <div class="_doc-color-bubble _doc-bg-tertiary-60">--tertiary-60</div>
+                    <div class="_doc-color-bubble _doc-bg-tertiary-40">--tertiary-40</div>
+                    <div class="_doc-color-bubble _doc-bg-tertiary-20">--tertiary-20</div>
+                    <div class="_doc-color-bubble _doc-bg-tertiary-10">--tertiary-10</div>
+                    <div class="_doc-color-bubble _doc-bg-tertiary-5">--tertiary-5</div>
+                </div>
+            </div>
+
+            <div class="_doc-grid-1-1-1">
+                <div>
+                    <h3 class="dsa-heading-xs dsa-heading-mb">Grå - inaktiv/outline</h3>
+                    <div class="_doc-color-bubble _doc-bg-neutral-80">--neutral-80</div>
+                    <div class="_doc-color-bubble _doc-bg-neutral-60">--neutral-60</div>
+                    <div class="_doc-color-bubble _doc-bg-neutral-40">--neutral-40</div>
+                    <div class="_doc-color-bubble _doc-bg-neutral-20">--neutral-20</div>
+                    <div class="_doc-color-bubble _doc-bg-neutral-0 dsa-border-primary-100">--neutral-0</div>
+                </div>
+                <div>
+                    <h3 class="dsa-heading-xs dsa-heading-mb">Informasjon</h3>
+                    <div class="_doc-color-bubble _doc-bg-info-error-text">--info-error-text</div>
+                    <div class="_doc-color-bubble _doc-bg-info-error">--info-error-bg</div>
+                    <div class="_doc-color-bubble _doc-bg-info-warning">--info-warning-bg</div>
+                    <div class="_doc-color-bubble _doc-bg-info-neutral">--info-neutral-bg</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="link-panel">Link panel</h2>
+            <div class="_doc-grid-1-1">
+                <%= require('html-loader!../link-panel/link-panel.html').default %>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="heading">Heading</h2>
+            <p class="dsa-body-text dsa-mb-1">
+                Headings <code class="dsa-code">.dsa-heading-{xxl|xl|lg|md|sm|xs}</code> kommer uten marginer.
+                Ønsker du standard margin under heading, så kan du legge til
+                <code class="dsa-code">.dsa-heading-mb</code>.
+            </p>
+            <div class="dsa-panel-example">
+                <%= require('html-loader!../heading/heading.html').default %>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="ingress">Ingress</h2>
+            <p class="dsa-body-text dsa-mb-1">
+                Ingress <code class="dsa-code">.dsa-ingress</code> kommer uten marginer.
+                Ønsker du standard margin under lead, så kan du legge til
+                <code class="dsa-code">.dsa-ingress-mb</code>.
+            </p>
+            <div class="dsa-panel-example">
+                <%= require('html-loader!../ingress/ingress.html').default %>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="body-text">Body text</h2>
+            <p class="dsa-body-text dsa-mb-1">
+                Body text <code class="dsa-code">.dsa-body-text</code> kommer uten marginer.
+                Er det flere avsnitt etter hverandre så kan du få luft mellom disse ved å
+                legge til <code class="dsa-code">.dsa-body-text-mb</code>.
+            </p>
+            <div class="dsa-panel-example">
+                <%= require('html-loader!../body-text/body-text.html').default %>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="link">Link</h2>
+            <div class="dsa-panel-example">
+                <%= require('html-loader!../link/link.html').default %>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="button">Button</h2>
+            <div class="dsa-panel-example">
+                <div class="_doc-flex">
+                    <%= require('html-loader!../button/button.html').default %>
+                </div>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="text-field">Text field</h2>
+            <div class="dsa-panel-example">
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="textarea">Textarea</h2>
+            <div class="dsa-panel-example">
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="select">Select</h2>
+            <div class="dsa-panel-example">
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="checkbox">Checkbox</h2>
+            <div class="dsa-panel-example">
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="radio">Radio</h2>
+            <div class="dsa-panel-example">
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="alert">Alert</h2>
+            <div class="dsa-panel-example">
+                <%= require('html-loader!../alert/alert.html').default %>
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="accordion">Accordion</h2>
+            <div class="dsa-panel-example">
+            </div>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="container">Container</h2>
+            <p class="dsa-body-text">
+                Container finnes i tre bredder 1272px, 736px og 568px.
+                Bruk <code class="dsa-code">.dsa-container-{xl|lg|md}</code>
+            </p>
+        </section>
+
+        <section class="dsa-mb-4">
+            <h2 class="dsa-heading-xl dsa-heading-mb" id="margin">Margin</h2>
+            <p class="dsa-body-text">
+                De fleste komponenter har ingen margin. Margin legges som oftes under en komponent.
+                Du kan legge til <code class="dsa-code">margin-bottom</code> på en komponent ved å bruke
+                hjelpeklassen
+                <code class="dsa-code">.dsa-mb-{0_5|1|1_5|2|3|4|5|6}</code>, hvor tallet
+                er antall rem.
+            </p>
+        </section>
+    </div>
+    </div>
+</main>
+
+<%= require('html-loader!../footer/footer.html').default %>
+</body>
+</html>
