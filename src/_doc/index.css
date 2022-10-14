@@ -1,20 +1,6 @@
 @import "../index.css";
 @import "./colors/colors.css";
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: var(--primary-100);
-}
-
 ._doc-color-bubble {
   padding: 1.5rem 1.75rem;
   margin: 0 0 1rem 0;

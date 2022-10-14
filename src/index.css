@@ -17,3 +17,17 @@
 @import "./panel/panel-example.css";
 @import "./skip-link/skip-link.css";
 @import "./text-field/text-field.css";
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--primary-100);
+}
