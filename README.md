@@ -17,4 +17,4 @@ npm start
 npm run build
 ```
 
-Filen bygges i [/dist/arbeidsplassen.css](https://github.com/navikt/arbeidsplassen-design/dist/arbeidsplassen.css)
+Filen bygges i [/dist/arbeidsplassen.css](https://github.com/navikt/arbeidsplassen-design/blob/main/dist/arbeidsplassen.css)
