@@ -9,3 +9,11 @@ komponenten oppfører seg slik du ønsker.
 npm install
 npm start
 ```
+
+For å bygge en ny css-fil, hvor all css-kode er slått samen i en enkelt fil kjør
+
+```
+npm run build
+```
+
+Filen bygges i /dist/arbeidsplassen.css
