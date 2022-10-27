@@ -10,6 +10,7 @@ import Section from "../components/Section/Section";
 import Header from "../components/Header/Header";
 import Anchor from "../components/Anchor/Anchor";
 import Alert from "../components/Alert/Alert";
+import BackLink from "../components/BackLink/BackLink";
 
 function Demo() {
     return (
@@ -50,9 +51,6 @@ function Demo() {
                             <Button variant="primary">Button</Button>
                             <Button variant="secondary">Button</Button>
                             <Button variant="tertiary">Button</Button>
-                            <Button variant="primary" loading>
-                                Button
-                            </Button>
                             <Button variant="primary" disabled>
                                 Button
                             </Button>
@@ -62,6 +60,11 @@ function Demo() {
                     <Section>
                         <Heading level={2}>Link</Heading>
                         <Anchor href="/">Link</Anchor>
+                    </Section>
+
+                    <Section>
+                        <Heading level={2}>BackLink</Heading>
+                        <BackLink />
                     </Section>
 
                     <Section>

@@ -1,7 +1,7 @@
-import ChevronLeft from "@/common/components/Feather/ChevronLeftIcon";
+import React from "react";
+import ChevronLeft from "../Feather/ChevronLeft";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import React from "react";
 
 const BackLink = React.forwardRef(function Anchor({ onClick, href, children, className }, ref) {
     return (

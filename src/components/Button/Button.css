@@ -49,18 +49,18 @@
     outline-offset: 2px;
 }
 
-.button-primary:not(.button-with-spinner):hover {
+.button-primary:hover {
     background-color: var(--secondary-80);
     border-color: var(--secondary-80);
     color: var(--neutral-0);
 }
 
-.button-secondary:not(.button-with-spinner):hover,
-.button-tertiary:not(.button-with-spinner):hover {
+.button-secondary:hover,
+.button-tertiary:hover {
     background-color: var(--secondary-20);
 }
 
-.button-tertiary:not(.button-with-spinner):hover {
+.button-tertiary:hover {
     background-color: var(--secondary-20);
 }
 
@@ -68,11 +68,6 @@
 .button-secondary:disabled,
 .button-tertiary:disabled {
     cursor: not-allowed;
-}
-
-.button-primary:disabled:not(.button-with-spinner),
-.button-secondary:disabled:not(.button-with-spinner),
-.button-tertiary:disabled:not(.button-with-spinner) {
     background-color: var(--neutral-20);
     color: var(--neutral-80);
     border-color: var(--neutral-80);
@@ -91,34 +86,4 @@
     text-decoration-color: transparent;
 }
 
-.button-spinner {
-    margin: 0 0.5rem;
-    border-width: 4px;
-    border-style: solid;
-    width: 1.5em;
-    height: 1.5em;
-    display: inline-block;
-    border-radius: 100%;
-    animation: button-spinner-animation 1s infinite linear;
-    position: relative;
-}
 
-.button-primary .button-spinner {
-    border-left-color: var(--secondary-40);
-    border-bottom-color: var(--secondary-40);
-}
-
-.button-secondary .button-spinner,
-.button-tertiary .button-spinner {
-    border-left-color: var(--secondary-20);
-    border-bottom-color: var(--secondary-20);
-}
-
-@keyframes button-spinner-animation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
