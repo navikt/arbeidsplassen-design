@@ -1,0 +1,25 @@
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    clip: rect(1px, 1px, 1px, 1px);
+    background-color: var(--secondary-60);
+    color: #fff;
+}
+
+.skip-link:focus,
+.skip-link:active {
+    text-align: center;
+    margin: auto;
+    clip: auto;
+    outline: none;
+    padding: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.15;
+}
+
+.skip-link:focus:hover,
+.skip-link:active:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,120 @@
+:root {
+    --jumbo-gap: var(--gutter-2);
+    --jumbo-padding: var(--gutter-2);
+}
+
+@media (min-width: 375px) {
+    :root {
+        --jumbo-gap: var(--gutter-2);
+        --jumbo-padding: var(--gutter-2) var(--gutter-4);
+    }
+}
+
+@media (min-width: 648px) {
+    :root {
+        --jumbo-gap: var(--gutter);
+        --jumbo-padding: var(--gutter);
+    }
+}
+
+@media (min-width: 960px) {
+    :root {
+        --jumbo-gap: var(--gutter-2);
+        --jumbo-padding: var(--gutter-2);
+    }
+}
+
+@media (min-width: 1272px) {
+    :root {
+        --jumbo-gap: var(--gutter-3);
+        --jumbo-padding: var(--gutter-3);
+    }
+}
+
+.jumbo {
+    background: var(--tertiary-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--jumbo-gap);
+    padding: var(--jumbo-padding);
+    border-radius: 0.625rem;
+    width: 100%;
+}
+
+.jumbo-primary {
+    background: var(--primary-20);
+}
+
+.jumbo-secondary {
+    background: var(--secondary-20);
+}
+
+.jumbo-tertiary {
+    background: var(--tertiary-5);
+}
+
+.jumbo-image-wrapper {
+    max-width: 220px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.jumbo-image {
+    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+
+.jumbo-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.jumbo-text {
+    flex: 1;
+}
+
+.jumbo-anchor {
+    font-size: 1.25rem;
+}
+
+@media (min-width: 648px) {
+    .jumbo {
+        flex-direction: row;
+    }
+
+    .jumbo-image-wrapper {
+        align-self: center;
+        flex: 1;
+        max-width: unset;
+        width: unset;
+    }
+
+    .jumbo-content {
+        flex: 1;
+        border-top-left-radius: 0;
+        position: initial;
+        z-index: unset;
+        margin-top: unset;
+        text-align: left;
+        padding: var(--gutter-2) 0;
+    }
+
+    .jumbo-image {
+        width: unset;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 6rem;
+    }
+}
+
+@media (min-width: 1272px) {
+    .jumbo-image-wrapper {
+        flex: 2;
+    }
+    .jumbo-content {
+        padding: calc(var(--gutter) * 4) 0;
+        flex: 3;
+    }
+}

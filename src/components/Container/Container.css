@@ -1,0 +1,33 @@
+.container {
+    padding: 0 var(--gutter);
+    width: 100%;
+}
+
+.container-primary-color {
+    background-color: var(--primary-20);
+}
+
+.container-secondary-color {
+    background-color: var(--secondary-20);
+}
+
+.container-tertiary-color {
+    background-color: var(--tertiary-10);
+}
+
+.container-inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-inner-xlarge {
+    max-width: 1272px;
+}
+
+.container-inner-large {
+    max-width: 960px;
+}
+
+.container-inner-medium {
+    max-width: 670px;
+}

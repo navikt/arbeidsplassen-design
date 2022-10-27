@@ -1,0 +1,20 @@
+.anchor,
+.anchor:visited {
+    color: var(--secondary-60);
+}
+
+.anchor.anchor-dark,
+.anchor:visited.dark {
+    color: var(--primary-100);
+}
+
+.anchor:hover {
+    text-decoration: none;
+}
+
+.anchor:focus,
+.anchor:focus.anchor-dark {
+    outline: none;
+    color: #fff;
+    background: var(--secondary-60);
+}

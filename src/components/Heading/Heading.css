@@ -1,0 +1,60 @@
+.heading {
+    font-weight: 600;
+    margin-top: 0;
+    overflow-wrap: break-word;
+    margin-bottom: 0;
+}
+
+.heading-xxlarge {
+    font-size: var(--font-size-xxlarge);
+    line-height: var(--line-height-xxlarge);
+}
+
+.heading-xxlarge:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.heading-xlarge {
+    font-size: var(--font-size-xlarge);
+    line-height: var(--line-height-xlarge);
+}
+
+.heading-xlarge:not(:last-child) {
+    margin-bottom: 1.75rem;
+}
+
+.heading-large {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+}
+
+.heading-large:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.heading-medium {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+}
+
+.heading-medium:not(:last-child) {
+    margin-bottom: 0.75rem;
+}
+
+.heading-small {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+}
+
+.heading-small:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.heading-xsmall {
+    font-size: var(--font-size-xsmall);
+    line-height: var(--line-height-xsmall);
+}
+
+.heading-xsmall:not(:last-child) {
+    margin-bottom: 0.25rem;
+}

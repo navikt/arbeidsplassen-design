@@ -1,0 +1,10 @@
+.body-text {
+    font-size: var(--font-size-body-text);
+    line-height: var(--line-height-body-text);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.body-text:not(:last-child) {
+    margin-bottom: 1rem;
+}

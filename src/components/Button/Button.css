@@ -1,0 +1,124 @@
+.button {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5rem;
+    padding: var(--button-padding);
+    border-width: 2px;
+    border-style: solid;
+    background: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--font-family);
+    line-height: 1.5;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.button-primary {
+    background-color: var(--secondary-60);
+    border-color: var(--secondary-60);
+    color: #fff;
+}
+
+.button-secondary {
+    background-color: #fff;
+    border-color: var(--secondary-60);
+    color: var(--secondary-60);
+}
+
+.button-tertiary {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--secondary-60);
+}
+
+.button-tertiary:hover,
+.button-tertiary:focus {
+    text-decoration: none;
+}
+
+.button-primary:focus,
+.button-secondary:focus,
+.button-tertiary:focus {
+    outline: 2px solid var(--secondary-60);
+    outline-offset: 2px;
+}
+
+.button-primary:not(.button-with-spinner):hover {
+    background-color: var(--secondary-80);
+    border-color: var(--secondary-80);
+    color: var(--neutral-0);
+}
+
+.button-secondary:not(.button-with-spinner):hover,
+.button-tertiary:not(.button-with-spinner):hover {
+    background-color: var(--secondary-20);
+}
+
+.button-tertiary:not(.button-with-spinner):hover {
+    background-color: var(--secondary-20);
+}
+
+.button-primary:disabled,
+.button-secondary:disabled,
+.button-tertiary:disabled {
+    cursor: not-allowed;
+}
+
+.button-primary:disabled:not(.button-with-spinner),
+.button-secondary:disabled:not(.button-with-spinner),
+.button-tertiary:disabled:not(.button-with-spinner) {
+    background-color: var(--neutral-20);
+    color: var(--neutral-80);
+    border-color: var(--neutral-80);
+}
+
+.button-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.button-tertiary .button-text {
+    text-decoration: underline;
+}
+
+.button-tertiary:hover .button-text {
+    text-decoration-color: transparent;
+}
+
+.button-spinner {
+    margin: 0 0.5rem;
+    border-width: 4px;
+    border-style: solid;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    border-radius: 100%;
+    animation: button-spinner-animation 1s infinite linear;
+    position: relative;
+}
+
+.button-primary .button-spinner {
+    border-left-color: var(--secondary-40);
+    border-bottom-color: var(--secondary-40);
+}
+
+.button-secondary .button-spinner,
+.button-tertiary .button-spinner {
+    border-left-color: var(--secondary-20);
+    border-bottom-color: var(--secondary-20);
+}
+
+@keyframes button-spinner-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

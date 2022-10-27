@@ -1,0 +1,33 @@
+import React from "react";
+import PropTypes from "prop-types";
+import cn from "classnames";
+
+function Heading({ level, size, children, className, id }) {
+    const defaultSizes = ["xxlarge", "xlarge", "large", "medium", "small", "xsmall"];
+    const HeadingLevel = "h" + level;
+
+    if (!size) {
+        size = defaultSizes[level - 1];
+    }
+
+    return (
+        <HeadingLevel id={id} className={cn("heading", `heading-${size}`, className)}>
+            {children}
+        </HeadingLevel>
+    );
+}
+
+Heading.defaultProps = {
+    id: undefined,
+    size: undefined,
+    className: undefined,
+};
+
+Heading.propTypes = {
+    id: PropTypes.string,
+    level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+    size: PropTypes.oneOf(["xxlarge", "xlarge", "large", "medium", "small", "xsmall"]),
+    className: PropTypes.string,
+};
+
+export default Heading;
