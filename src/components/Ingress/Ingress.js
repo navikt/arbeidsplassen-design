@@ -1,9 +1,9 @@
 import React from "react";
-import cn from "classnames";
 import PropTypes from "prop-types";
+import joinClassNames from "../joinClassNames";
 
 function Ingress({ children, className }) {
-    return <p className={cn("dsa-ingress", className)}>{children}</p>;
+    return <p className={joinClassNames("dsa-ingress", className)}>{children}</p>;
 }
 
 Ingress.defaultProps = {

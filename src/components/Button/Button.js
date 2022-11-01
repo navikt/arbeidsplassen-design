@@ -1,19 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "classnames";
+import joinClassNames from "../joinClassNames";
 
 function Button({ children, htmlType, variant, icon, onClick, className, disabled }) {
     return (
         <button
             disabled={disabled}
             onClick={onClick}
-            className={cn("dsa-button", `dsa-button-${variant}`, className)}
+            className={joinClassNames("dsa-button", `dsa-button-${variant}`, className)}
             type={htmlType}
         >
-            <>
-                {icon && <span className="dsa-button-icon">{icon}</span>}
-                <span className="dsa-button-text">{children}</span>
-            </>
+            {icon && <span className="dsa-button-icon">{icon}</span>}
+            <span className="dsa-button-text">{children}</span>
         </button>
     );
 }

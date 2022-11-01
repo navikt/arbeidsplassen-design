@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "classnames";
+import joinClassNames from "../joinClassNames";
 
 function BodyText({ children, className }) {
-    return <p className={cn("dsa-body-text", className)}>{children}</p>;
+    return <p className={joinClassNames("dsa-body-text", className)}>{children}</p>;
 }
 
 BodyText.defaultProps = {

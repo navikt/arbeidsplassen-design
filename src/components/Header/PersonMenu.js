@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 
 function PersonMenu({ active }) {
     return (
@@ -8,17 +7,17 @@ function PersonMenu({ active }) {
                 <a href="/">Forside</a>
             </li>
             <li>
-                <a href="/stillinger" className={classNames({ ["dsa-header-active"]: active === "stillinger" })}>
+                <a href="/stillinger" className={active === "stillinger" ? "dsa-header-active" : undefined}>
                     Ledige stillinger
                 </a>
             </li>
             <li>
-                <a href="/jobbtreff" className={classNames({ ["dsa-header-active"]: active === "jobbtreff" })}>
+                <a href="/jobbtreff" className={active === "jobbtreff" ? "dsa-header-active" : undefined}>
                     Jobbtreff
                 </a>
             </li>
             <li>
-                <a href="/cv" className={classNames({ ["dsa-header-active"]: active === "cv" })}>
+                <a href="/cv" className={active === "cv" ? "dsa-header-active" : undefined}>
                     CV
                 </a>
             </li>

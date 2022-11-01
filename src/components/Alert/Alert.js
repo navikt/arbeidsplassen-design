@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import XOctagonIcon from "../Feather/XOctagonIcon";
 import AlertCircleIcon from "../Feather/AlertCircleIcon";
 import AlertTriangleIcon from "../Feather/AlertTriangleIcon";
 import XIcon from "../Feather/XIcon";
+import joinClassNames from "../joinClassNames";
 
 function Alert({ variant, title, children, onClose, className }) {
     return (
-        <div className={classNames("dsa-alert", `dsa-alert-${variant}`, className)}>
+        <div className={joinClassNames("dsa-alert", `dsa-alert-${variant}`, className)}>
             <div className="dsa-alert-heading">
                 {variant === "info" && <AlertCircleIcon title="Informasjon" />}
                 {variant === "warning" && <AlertTriangleIcon title="Informasjon" />}

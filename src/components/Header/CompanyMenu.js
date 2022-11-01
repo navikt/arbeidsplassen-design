@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 
 function CompanyMenu({ active }) {
     return (
@@ -10,29 +9,26 @@ function CompanyMenu({ active }) {
             <li>
                 <a
                     href="/bedrift/stillingsannonser"
-                    className={classNames({ ["dsa-header-active"]: active === "stillingsannonser" })}
+                    className={active === "stillingsannonser" ? "dsa-header-active" : undefined}
                 >
                     Stillingsannonser
                 </a>
             </li>
             <li>
-                <a href="/bedrift/jobbtreff" className={classNames({ ["dsa-header-active"]: active === "jobbtreff" })}>
+                <a href="/bedrift/jobbtreff" className={active === "jobbtreff" ? "dsa-header-active" : undefined}>
                     Jobbtreff
                 </a>
             </li>
             <li>
                 <a
                     href="/bedrift/interessemeldinger"
-                    className={classNames({ ["dsa-header-active"]: active === "interessemeldinger" })}
+                    className={active === "interessemeldinger" ? "dsa-header-active" : undefined}
                 >
                     Interessemeldinger
                 </a>
             </li>
             <li>
-                <a
-                    href="/bedrift/kandidater"
-                    className={classNames({ ["dsa-header-active"]: active === "kandidater" })}
-                >
+                <a href="/bedrift/kandidater" className={active === "kandidater" ? "dsa-header-active" : undefined}>
                     Kandidatlister
                 </a>
             </li>

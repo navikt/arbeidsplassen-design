@@ -3,18 +3,6 @@
     width: 100%;
 }
 
-.dsa-container-primary-color {
-    background-color: var(--primary-20);
-}
-
-.dsa-container-secondary-color {
-    background-color: var(--secondary-20);
-}
-
-.dsa-container-tertiary-color {
-    background-color: var(--tertiary-10);
-}
-
 .dsa-container-inner {
     margin-left: auto;
     margin-right: auto;

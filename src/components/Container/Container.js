@@ -1,33 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "classnames";
 import "./Container.css";
+import joinClassNames from "../joinClassNames";
 
-function Container({ size, children, color, className }) {
+function Container({ size, children, className }) {
     return (
-        <div
-            className={cn(
-                "dsa-container",
-                {
-                    [`dsa-container-${color}-color`]: color,
-                },
-                className
-            )}
-        >
-            <div className={cn("dsa-container-inner", `dsa-container-inner-${size}`)}>{children}</div>
+        <div className={joinClassNames("dsa-container", className)}>
+            <div className={joinClassNames("dsa-container-inner", `dsa-container-inner-${size}`)}>{children}</div>
         </div>
     );
 }
 
 Container.defaultProps = {
     className: undefined,
-    color: undefined,
     size: "xlarge",
 };
 
 Container.propTypes = {
     className: PropTypes.string,
-    color: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
     size: PropTypes.oneOf(["xlarge", "large", "medium"]),
 };
 

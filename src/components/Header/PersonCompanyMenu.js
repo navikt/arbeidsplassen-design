@@ -1,17 +1,16 @@
 import React from "react";
-import classNames from "classnames";
 
-function PersonOrCompany({ active }) {
+function PersonCompanyMenu({ active }) {
     return (
         <div className="dsa-header-menu-both">
             <ul>
                 <li>
-                    <a href="/" className={classNames({ ["dsa-header-active"]: active === "person" })}>
+                    <a href="/" className={active === "person" ? "dsa-header-active" : undefined}>
                         Person
                     </a>
                 </li>
                 <li>
-                    <a href="/bedrift" className={classNames({ ["dsa-header-active"]: active === "bedrift" })}>
+                    <a href="/bedrift" className={active === "bedrift" ? "dsa-header-active" : undefined}>
                         Bedrift
                     </a>
                 </li>
@@ -20,4 +19,4 @@ function PersonOrCompany({ active }) {
     );
 }
 
-export default PersonOrCompany;
+export default PersonCompanyMenu;

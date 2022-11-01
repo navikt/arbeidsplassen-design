@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import joinClassNames from "../joinClassNames";
 
 function Tag({ children, variant, className }) {
-    return <div className={classNames("dsa-tag", `dsa-tag-${variant}`, className)}>{children}</div>;
+    return <div className={joinClassNames("dsa-tag", `dsa-tag-${variant}`, className)}>{children}</div>;
 }
 
 Tag.defaultProps = {

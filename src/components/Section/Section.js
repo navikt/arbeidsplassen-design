@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import joinClassNames from "../joinClassNames";
 
 function Section({ id, children, className }) {
     return (
-        <section id={id} className={classNames("dsa-section", className)}>
+        <section id={id} className={joinClassNames("dsa-section", className)}>
             {children}
         </section>
     );

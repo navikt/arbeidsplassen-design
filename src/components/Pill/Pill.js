@@ -1,12 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import joinClassNames from "../joinClassNames";
 
 function Pill({ children, className, onClick }) {
     return (
         <span>
             <span className="dsa-pill-screen-reader-only">{children}</span>
-            <button className={classNames("dsa-pill", className)} aria-label={`Slett ${children}`} onClick={onClick}>
+            <button
+                className={joinClassNames("dsa-pill", className)}
+                aria-label={`Slett ${children}`}
+                onClick={onClick}
+            >
                 <span aria-hidden="true">{children}</span>
                 <svg
                     role="img"

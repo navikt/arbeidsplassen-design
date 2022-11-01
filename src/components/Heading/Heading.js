@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import joinClassNames from "../joinClassNames";
 
 function Heading({ level, size, children, className, id }) {
     const defaultSizes = ["xxlarge", "xlarge", "large", "medium", "small", "xsmall"];
@@ -11,7 +11,7 @@ function Heading({ level, size, children, className, id }) {
     }
 
     return (
-        <HeadingLevel id={id} className={classNames("dsa-heading", `dsa-heading-${size}`, className)}>
+        <HeadingLevel id={id} className={joinClassNames("dsa-heading", `dsa-heading-${size}`, className)}>
             {children}
         </HeadingLevel>
     );

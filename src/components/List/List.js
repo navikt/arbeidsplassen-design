@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+import joinClassNames from "../joinClassNames";
 
 function List({ children, variant, className }) {
     const ListType = variant;
-    return <ListType className={classNames("dsa-list", className)}>{children}</ListType>;
+    return <ListType className={joinClassNames("dsa-list", className)}>{children}</ListType>;
 }
 
 List.defaultProps = {

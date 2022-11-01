@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import classNames from "classnames";
 import PropTypes from "prop-types";
 import Logo from "./Logo";
-import PersonOrCompany from "./PersonOrCompany";
+import PersonCompanyMenu from "./PersonCompanyMenu";
 import MenuButton from "./MenuButton";
 import LoginButton from "./LoginButton";
 import PersonMenu from "./PersonMenu";
 import CompanyMenu from "./CompanyMenu";
 import LoggedInUser from "./LoggedInUser";
+import joinClassNames from "../joinClassNames";
 
 export default function Header({
     className,
@@ -26,11 +26,11 @@ export default function Header({
 
     return (
         <header className="dsa-header-wrapper">
-            <nav aria-label="Hovedmeny" className={classNames("dsa-header", className)}>
+            <nav aria-label="Hovedmeny" className={joinClassNames("dsa-header", className)}>
                 <Logo />
 
                 {menu === "none" ? (
-                    <PersonOrCompany active={active} />
+                    <PersonCompanyMenu active={active} />
                 ) : (
                     <MenuButton toggleMenu={toggleMenu} isMobileMenuHidden={isMobileMenuHidden} />
                 )}
@@ -42,7 +42,12 @@ export default function Header({
                         handleLogOutClick={handleLogOutClick}
                     />
                 ) : (
-                    <div className={classNames("dsa-header-menu", { ["dsa-header-menu-hidden"]: isMobileMenuHidden })}>
+                    <div
+                        className={joinClassNames(
+                            "dsa-header-menu",
+                            isMobileMenuHidden ? "dsa-header-menu-hidden" : undefined
+                        )}
+                    >
                         {menu === "person" && <PersonMenu active={active} />}
                         {menu === "bedrift" && <CompanyMenu active={active} />}
 
