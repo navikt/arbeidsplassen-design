@@ -1,20 +1,20 @@
 @import "./variables.css";
 
-@import "./components/Alert/Alert.css";
-@import "./components/Anchor/Anchor.css";
-@import "./components/BodyText/BodyText.css";
-@import "./components/Button/Button.css";
-@import "./components/Container/Container.css";
-@import "./components/Footer/Footer.css";
-@import "./components/Header/Header.css";
-@import "./components/Heading/Heading.css";
-@import "./components/Ingress/Ingress.css";
-@import "./components/LinkButton/LinkButton.css";
-@import "./components/List/List.css";
-@import "./components/Pill/Pill.css";
-@import "./components/Section/Section.css";
-@import "./components/SkipLink/SkipLink.css";
-@import "./components/Tag/Tag.css";
+@import "./Alert/Alert.css";
+@import "./Anchor/Anchor.css";
+@import "./BodyText/BodyText.css";
+@import "./Button/Button.css";
+@import "./Container/Container.css";
+@import "./Footer/Footer.css";
+@import "./Header/Header.css";
+@import "./Heading/Heading.css";
+@import "./Ingress/Ingress.css";
+@import "./LinkButton/LinkButton.css";
+@import "./List/List.css";
+@import "./Pill/Pill.css";
+@import "./Section/Section.css";
+@import "./SkipLink/SkipLink.css";
+@import "./Tag/Tag.css";
 
 *,
 *:before,

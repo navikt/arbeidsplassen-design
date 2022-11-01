@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
-    entry: "./src/demo/index.js",
+    entry: "./demo/index.js",
     module: {
         rules: [
             {
@@ -23,7 +23,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/demo/index.html",
+            template: "./demo/index.html",
         }),
     ],
 };

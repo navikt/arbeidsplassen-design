@@ -1,24 +1,24 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import BodyText from "../components/BodyText/BodyText";
-import Container from "../components/Container/Container";
-import Heading from "../components/Heading/Heading";
-import Ingress from "../components/Ingress/Ingress";
-import Button from "../components/Button/Button";
-import Footer from "../components/Footer/Footer";
-import Section from "../components/Section/Section";
-import Header from "../components/Header/Header";
-import Anchor from "../components/Anchor/Anchor";
-import Alert from "../components/Alert/Alert";
-import Tag from "../components/Tag/Tag";
-import Pill from "../components/Pill/Pill";
-import TrashIcon from "../components/Feather/TrashIcon";
-import List from "../components/List/List";
-import ChevronLeft from "../components/Feather/ChevronLeft";
-import ChevronRight from "../components/Feather/ChevronRight";
+import BodyText from "../src/BodyText/BodyText";
+import Container from "../src/Container/Container";
+import Heading from "../src/Heading/Heading";
+import Ingress from "../src/Ingress/Ingress";
+import Button from "../src/Button/Button";
+import Footer from "../src/Footer/Footer";
+import Section from "../src/Section/Section";
+import Header from "../src/Header/Header";
+import Anchor from "../src/Anchor/Anchor";
+import Alert from "../src/Alert/Alert";
+import Tag from "../src/Tag/Tag";
+import Pill from "../src/Pill/Pill";
+import TrashIcon from "../src/Feather/TrashIcon";
+import List from "../src/List/List";
+import ChevronLeft from "../src/Feather/ChevronLeft";
+import ChevronRight from "../src/Feather/ChevronRight";
 
 import "./Demo.css";
-import "../index.css";
+import "../src/index.css";
 
 function Index() {
     return (
