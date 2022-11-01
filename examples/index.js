@@ -17,7 +17,7 @@ import List from "../src/List/List";
 import ChevronLeft from "../src/Feather/ChevronLeft";
 import ChevronRight from "../src/Feather/ChevronRight";
 
-import "./Demo.css";
+import "./examples.css";
 import "../src/index.css";
 
 function Index() {
