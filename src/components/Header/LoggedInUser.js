@@ -2,19 +2,13 @@ import React from "react";
 import UserIcon from "../Feather/UserIcon";
 import EmployerIcon from "../Feather/EmployerIcon";
 
-function LoggedInUser({ menu, userNameAndInfo }) {
+function LoggedInUser({ menu, userName }) {
     return (
         <div className="dsa-header-user">
             {menu === "person" && (
                 <a href="/minside" className="dsa-header-account">
                     <UserIcon />
-                    {userNameAndInfo?.fornavn && userNameAndInfo?.etternavn ? (
-                        <>
-                            {userNameAndInfo.fornavn} {userNameAndInfo.etternavn}
-                        </>
-                    ) : (
-                        <>Min side</>
-                    )}
+                    {userName ? userName : "Min side"}
                 </a>
             )}
             {menu === "bedrift" && (

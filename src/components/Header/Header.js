@@ -13,7 +13,7 @@ export default function Header({
     className,
     menu,
     active,
-    userNameAndInfo,
+    userName,
     authenticationStatus,
     handleLogInClick,
     handleLogOutClick,
@@ -47,7 +47,7 @@ export default function Header({
                         {menu === "bedrift" && <CompanyMenu active={active} />}
 
                         {authenticationStatus === "IS_AUTHENTICATED" && (
-                            <LoggedInUser menu={menu} userNameAndInfo={userNameAndInfo} />
+                            <LoggedInUser menu={menu} userName={userName} />
                         )}
 
                         {menu !== "none" && (
@@ -67,8 +67,14 @@ export default function Header({
 Header.defaultProps = {
     menu: "none",
     active: "person",
+    authenticationStatus: "UNKNOWN",
+    userName: undefined,
 };
 
 Header.propTypes = {
+    handleLogInClick: PropTypes.func.isRequired,
+    handleLogOutClick: PropTypes.func.isRequired,
     menu: PropTypes.oneOf(["none", "person", "bedrift"]),
+    authenticationStatus: PropTypes.oneOf(["UNKNOWN", "IS_AUTHENTICATED", "NOT_AUTHENTICATED"]),
+    userName: PropTypes.string,
 };

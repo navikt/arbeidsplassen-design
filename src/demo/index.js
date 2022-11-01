@@ -23,7 +23,12 @@ import "../index.css";
 function Index() {
     return (
         <div className="demo">
-            <Header />
+            <Header
+                menu="person"
+                active="stillinger"
+                authenticationStatus="IS_AUTHENTICATED"
+                userName="Navn Navnesen"
+            />
             <main>
                 <Container size="medium">
                     <Section>
