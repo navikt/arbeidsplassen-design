@@ -1,33 +1,33 @@
-.container {
+.dsa-container {
     padding: 0 var(--gutter);
     width: 100%;
 }
 
-.container-primary-color {
+.dsa-container-primary-color {
     background-color: var(--primary-20);
 }
 
-.container-secondary-color {
+.dsa-container-secondary-color {
     background-color: var(--secondary-20);
 }
 
-.container-tertiary-color {
+.dsa-container-tertiary-color {
     background-color: var(--tertiary-10);
 }
 
-.container-inner {
+.dsa-container-inner {
     margin-left: auto;
     margin-right: auto;
 }
 
-.container-inner-xlarge {
+.dsa-container-inner-xlarge {
     max-width: 1272px;
 }
 
-.container-inner-large {
+.dsa-container-inner-large {
     max-width: 960px;
 }
 
-.container-inner-medium {
+.dsa-container-inner-medium {
     max-width: 670px;
 }

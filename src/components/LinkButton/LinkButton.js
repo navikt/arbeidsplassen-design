@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const LinkButton = React.forwardRef(function LinkButton({ onClick, href, children, className }, ref) {
     return (
-        <a className={classNames("link-button", className)} href={href} ref={ref} onClick={onClick}>
+        <a className={classNames("dsa-link-button", className)} href={href} ref={ref} onClick={onClick}>
             {children}
             <ArrowRightIcon ariaHidden />
         </a>

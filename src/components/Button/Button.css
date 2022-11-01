@@ -1,4 +1,4 @@
-.button {
+.dsa-button {
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
@@ -19,70 +19,70 @@
     text-decoration: none;
 }
 
-.button-primary {
+.dsa-button-primary {
     background-color: var(--secondary-60);
     border-color: var(--secondary-60);
     color: #fff;
 }
 
-.button-secondary {
+.dsa-button-secondary {
     background-color: #fff;
     border-color: var(--secondary-60);
     color: var(--secondary-60);
 }
 
-.button-tertiary {
+.dsa-button-tertiary {
     background-color: transparent;
     border-color: transparent;
     color: var(--secondary-60);
 }
 
-.button-tertiary:hover,
-.button-tertiary:focus {
+.dsa-button-tertiary:hover,
+.dsa-button-tertiary:focus {
     text-decoration: none;
 }
 
-.button-primary:focus,
-.button-secondary:focus,
-.button-tertiary:focus {
+.dsa-button-primary:focus,
+.dsa-button-secondary:focus,
+.dsa-button-tertiary:focus {
     outline: 2px solid var(--secondary-60);
     outline-offset: 2px;
 }
 
-.button-primary:hover {
+.dsa-button-primary:hover {
     background-color: var(--secondary-80);
     border-color: var(--secondary-80);
     color: var(--neutral-0);
 }
 
-.button-secondary:hover,
-.button-tertiary:hover {
+.dsa-button-secondary:hover,
+.dsa-button-tertiary:hover {
     background-color: var(--secondary-20);
 }
 
-.button-tertiary:hover {
+.dsa-button-tertiary:hover {
     background-color: var(--secondary-20);
 }
 
-.button-primary:disabled,
-.button-secondary:disabled,
-.button-tertiary:disabled {
+.dsa-button-primary:disabled,
+.dsa-button-secondary:disabled,
+.dsa-button-tertiary:disabled {
     cursor: not-allowed;
     background-color: var(--neutral-20);
     color: var(--neutral-80);
     border-color: var(--neutral-80);
 }
 
-.button-icon {
+.dsa-button-icon {
     display: inline-flex;
     align-items: center;
 }
 
-.button-tertiary .button-text {
+.dsa-button-tertiary .dsa-button-text {
     text-decoration: underline;
 }
 
-.button-tertiary:hover .button-text {
+.dsa-button-tertiary:hover .dsa-button-text {
     text-decoration-color: transparent;
 }
 

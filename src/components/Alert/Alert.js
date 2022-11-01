@@ -8,8 +8,8 @@ import XIcon from "../Feather/XIcon";
 
 function Alert({ variant, title, children, onClose, className }) {
     return (
-        <div className={classNames("alert", `alert-${variant}`, className)}>
-            <div className="alert-heading">
+        <div className={classNames("dsa-alert", `dsa-alert-${variant}`, className)}>
+            <div className="dsa-alert-heading">
                 {variant === "info" && <AlertCircleIcon title="Informasjon" />}
                 {variant === "warning" && <AlertTriangleIcon title="Informasjon" />}
                 {variant === "error" && <XOctagonIcon title="Informasjon" />}
@@ -19,7 +19,7 @@ function Alert({ variant, title, children, onClose, className }) {
             <div>{children}</div>
 
             {onClose && (
-                <button className="alert-close" onClick={onClose}>
+                <button className="dsa-alert-close" onClick={onClose}>
                     <XIcon />
                 </button>
             )}

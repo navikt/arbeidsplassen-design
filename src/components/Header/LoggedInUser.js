@@ -4,9 +4,9 @@ import EmployerIcon from "../Feather/EmployerIcon";
 
 function LoggedInUser({ menu, userNameAndInfo }) {
     return (
-        <div className="header-user">
+        <div className="dsa-header-user">
             {menu === "person" && (
-                <a href="/minside" className="header-account">
+                <a href="/minside" className="dsa-header-account">
                     <UserIcon />
                     {userNameAndInfo?.fornavn && userNameAndInfo?.etternavn ? (
                         <>
@@ -18,7 +18,7 @@ function LoggedInUser({ menu, userNameAndInfo }) {
                 </a>
             )}
             {menu === "bedrift" && (
-                <a href="/bedrift/din-bedrift" className="header-account">
+                <a href="/bedrift/din-bedrift" className="dsa-header-account">
                     <EmployerIcon />
                     Din bedrift
                 </a>

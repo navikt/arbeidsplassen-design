@@ -7,13 +7,13 @@ function Button({ children, htmlType, variant, icon, onClick, className, disable
         <button
             disabled={disabled}
             onClick={onClick}
-            className={cn("button", `button-${variant}`, className)}
+            className={cn("dsa-button", `dsa-button-${variant}`, className)}
             type={htmlType}
         >
-                <>
-                    {icon && <span className="button-icon">{icon}</span>}
-                    <span className="button-text">{children}</span>
-                </>
+            <>
+                {icon && <span className="dsa-button-icon">{icon}</span>}
+                <span className="dsa-button-text">{children}</span>
+            </>
         </button>
     );
 }

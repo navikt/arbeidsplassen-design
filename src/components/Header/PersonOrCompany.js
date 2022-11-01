@@ -3,15 +3,15 @@ import classNames from "classnames";
 
 function PersonOrCompany({ active }) {
     return (
-        <div className="header-menu-both">
+        <div className="dsa-header-menu-both">
             <ul>
                 <li>
-                    <a href="/" className={classNames({ ["header-active"]: active === "person" })}>
+                    <a href="/" className={classNames({ ["dsa-header-active"]: active === "person" })}>
                         Person
                     </a>
                 </li>
                 <li>
-                    <a href="/bedrift" className={classNames({ ["header-active"]: active === "bedrift" })}>
+                    <a href="/bedrift" className={classNames({ ["dsa-header-active"]: active === "bedrift" })}>
                         Bedrift
                     </a>
                 </li>

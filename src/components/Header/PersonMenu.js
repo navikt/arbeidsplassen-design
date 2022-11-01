@@ -4,21 +4,21 @@ import classNames from "classnames";
 function PersonMenu({ active }) {
     return (
         <ul>
-            <li className="header-hide-on-desktop">
+            <li className="dsa-header-hide-on-desktop">
                 <a href="/">Forside</a>
             </li>
             <li>
-                <a href="/stillinger" className={classNames({ ["header-active"]: active === "stillinger" })}>
+                <a href="/stillinger" className={classNames({ ["dsa-header-active"]: active === "stillinger" })}>
                     Ledige stillinger
                 </a>
             </li>
             <li>
-                <a href="/jobbtreff" className={classNames({ ["header-active"]: active === "jobbtreff" })}>
+                <a href="/jobbtreff" className={classNames({ ["dsa-header-active"]: active === "jobbtreff" })}>
                     Jobbtreff
                 </a>
             </li>
             <li>
-                <a href="/cv" className={classNames({ ["header-active"]: active === "cv" })}>
+                <a href="/cv" className={classNames({ ["dsa-header-active"]: active === "cv" })}>
                     CV
                 </a>
             </li>

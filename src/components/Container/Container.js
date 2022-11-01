@@ -7,14 +7,14 @@ function Container({ size, children, color, className }) {
     return (
         <div
             className={cn(
-                "container",
+                "dsa-container",
                 {
-                    [`container-${color}-color`]: color,
+                    [`dsa-container-${color}-color`]: color,
                 },
                 className
             )}
         >
-            <div className={cn("container-inner", `container-inner-${size}`)}>{children}</div>
+            <div className={cn("dsa-container-inner", `dsa-container-inner-${size}`)}>{children}</div>
         </div>
     );
 }

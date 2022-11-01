@@ -4,10 +4,10 @@ import Heading from "../Heading/Heading";
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            <nav className="footer-sections">
-                <section className="footer-section">
-                    <Heading level={2} size="small">
+        <footer className="dsa-footer">
+            <nav className="dsa-footer-sections">
+                <section className="dsa-footer-section">
+                    <Heading level="2" size="small">
                         Om oss
                     </Heading>
                     <ul>
@@ -24,8 +24,8 @@ export default function Footer() {
                     </ul>
                 </section>
 
-                <section className="footer-section">
-                    <Heading level={2} size="small">
+                <section className="dsa-footer-section">
+                    <Heading level="2" size="small">
                         Hjelp
                     </Heading>
                     <ul>
@@ -47,8 +47,8 @@ export default function Footer() {
                     </ul>
                 </section>
 
-                <section className="footer-section">
-                    <Heading level={2} size="small">
+                <section className="dsa-footer-section">
+                    <Heading level="2" size="small">
                         Personvern og vilkår
                     </Heading>
                     <ul>
@@ -65,8 +65,8 @@ export default function Footer() {
                     </ul>
                 </section>
             </nav>
-            <div className="footer-bottom">
-                <a href="@/modules/App/Footer/Footer" className="footer-logo" aria-label="Gå til nav.no">
+            <div className="dsa-footer-bottom">
+                <a href="@/modules/App/dsa-footer/dsa-footer" className="dsa-footer-logo" aria-label="Gå til nav.no">
                     <svg width="64" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             fillRule="evenodd"

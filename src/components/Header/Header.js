@@ -25,8 +25,8 @@ export default function Header({
     };
 
     return (
-        <header className="header-wrapper">
-            <nav aria-label="Hovedmeny" className={classNames("header", className)}>
+        <header className="dsa-header-wrapper">
+            <nav aria-label="Hovedmeny" className={classNames("dsa-header", className)}>
                 <Logo />
 
                 {menu === "none" ? (
@@ -42,7 +42,7 @@ export default function Header({
                         handleLogOutClick={handleLogOutClick}
                     />
                 ) : (
-                    <div className={classNames("header-menu", { ["header-menu-hidden"]: isMobileMenuHidden })}>
+                    <div className={classNames("dsa-header-menu", { ["dsa-header-menu-hidden"]: isMobileMenuHidden })}>
                         {menu === "person" && <PersonMenu active={active} />}
                         {menu === "bedrift" && <CompanyMenu active={active} />}
 

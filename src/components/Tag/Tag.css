@@ -1,7 +1,27 @@
-.Tag {
-    padding: 0.25rem 0.75rem;
-    background: #ffecaf;
+.dsa-tag {
+    padding: 0.375rem;
+    border-radius: 0.375rem;
     display: inline-block;
-    line-height: 1.5;
-    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-100);
+}
+
+.dsa-tag-neutral {
+    background: var(--neutral-20);
+    color: var(--neutral-80);
+}
+
+
+.dsa-tag-info {
+    background: var(--secondary-20);
+}
+
+.dsa-tag-success {
+    background: var(--primary-20);
+}
+
+.dsa-tag-error {
+    background: var(--tertiary-20);
 }

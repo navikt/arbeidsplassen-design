@@ -17,7 +17,7 @@ function Jumbo({ href, children, img, altText, title, linkText, color }) {
                 <Image src={img} alt={altText} className="jumbo-image" />
             </div>
             <div className="jumbo-content">
-                <Heading level={2} size="xlarge" className="mb-2">
+                <Heading level="2" size="xlarge" className="mb-2">
                     {title}
                 </Heading>
                 <BodyText className="jumbo-text mb-2">{children}</BodyText>

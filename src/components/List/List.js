@@ -1,19 +1,20 @@
+import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-function List({ children, type, className }) {
-    const ListType = type;
-    return <ListType className={classNames("list", className)}>{children}</ListType>;
+function List({ children, variant, className }) {
+    const ListType = variant;
+    return <ListType className={classNames("dsa-list", className)}>{children}</ListType>;
 }
 
 List.defaultProps = {
     className: undefined,
-    type: "ul",
+    variant: "ul",
 };
 
 List.propTypes = {
     className: PropTypes.string,
-    type: PropTypes.oneOf(["ul", "ol"]),
+    variant: PropTypes.oneOf(["ul", "ol"]),
 };
 
 export default List;

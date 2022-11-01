@@ -6,7 +6,7 @@ const Anchor = React.forwardRef(function Anchor({ onClick, href, children, dark,
     return (
         <a
             href={href}
-            className={classNames("anchor", { ["anchor-dark"]: dark }, className)}
+            className={classNames("dsa-anchor", { ["dsa-anchor-dark"]: dark }, className)}
             onClick={onClick}
             ref={ref}
         >

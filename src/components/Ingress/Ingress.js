@@ -3,7 +3,7 @@ import cn from "classnames";
 import PropTypes from "prop-types";
 
 function Ingress({ children, className }) {
-    return <p className={cn("ingress", className)}>{children}</p>;
+    return <p className={cn("dsa-ingress", className)}>{children}</p>;
 }
 
 Ingress.defaultProps = {

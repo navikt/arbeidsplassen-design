@@ -15,7 +15,7 @@ function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick
                     variant="secondary"
                     onClick={handleLogOutClick}
                     icon={<LogOutIcon />}
-                    className="header-login-button"
+                    className="dsa-header-login-button"
                 >
                     Logg ut
                 </Button>
@@ -24,7 +24,7 @@ function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick
                     variant="secondary"
                     onClick={handleLogInClick}
                     icon={<LogInIcon />}
-                    className="header-logout-button"
+                    className="dsa-header-logout-button"
                 >
                     Logg inn
                 </Button>

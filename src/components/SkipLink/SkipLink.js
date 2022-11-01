@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function SkipLink({ href }) {
     return (
-        <a className={"skip-link"} href={href}>
+        <a className={"dsa-skip-link"} href={href}>
             Gå til hovedinnhold
         </a>
     );

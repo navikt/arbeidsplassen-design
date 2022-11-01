@@ -1,4 +1,4 @@
-.header-wrapper {
+.dsa-header-wrapper {
     background: var(--neutral-0);
     box-shadow: 0 1px 4px 0 #0000001a;
     border-bottom: solid 1px var(--neutral-20);
@@ -9,7 +9,7 @@
     top: 0;
 }
 
-.header {
+.dsa-header {
     max-width: 1272px;
     width: 100%;
     margin-left: auto;
@@ -21,7 +21,7 @@
     gap: var(--gutter) 0;
 }
 
-.header-logo {
+.dsa-header-logo {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     display: inline-block;
@@ -29,11 +29,11 @@
     margin: 0 calc(var(--gutter) * 1.5) 0 0;
 }
 
-.header-logo:focus-visible {
+.dsa-header-logo:focus-visible {
     outline: 2px solid var(--secondary-60);
 }
 
-.header-logo i {
+.dsa-header-logo i {
     display: block;
     width: 48px;
     height: 48px;
@@ -41,7 +41,7 @@
 }
 
 @media (min-width: 648px) {
-    .header-logo i {
+    .dsa-header-logo i {
         width: 216px;
         height: 48px;
         display: block;
@@ -49,13 +49,13 @@
     }
 }
 
-.header-menu-both {
+.dsa-header-menu-both {
     display: flex;
     gap: 1.5rem 0;
     flex: 1;
 }
 
-.header-menu-both ul {
+.dsa-header-menu-both ul {
     flex: 1;
     list-style: none;
     padding: 0;
@@ -65,7 +65,7 @@
     align-items: center;
 }
 
-.header-menu-button {
+.dsa-header-menu-button {
     display: inline-flex;
     gap: 0.75rem;
     align-items: center;
@@ -80,12 +80,12 @@
 }
 
 @media (min-width: 1272px) {
-    .header-hide-on-desktop {
+    .dsa-header-hide-on-desktop {
         display: none;
     }
 }
 
-.header-menu {
+.dsa-header-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -95,13 +95,13 @@
 }
 
 @media (max-width: 1271px) {
-    .header-menu-hidden {
+    .dsa-header-menu-hidden {
         display: none;
     }
 }
 
 @media (min-width: 1272px) {
-    .header-menu {
+    .dsa-header-menu {
         width: auto;
         flex: 1;
         flex-direction: row;
@@ -109,7 +109,7 @@
     }
 }
 
-.header-menu ul {
+.dsa-header-menu ul {
     flex: 1;
     list-style: none;
     padding: 0;
@@ -120,8 +120,8 @@
     align-items: center;
 }
 
-.header-menu-both ul li a,
-.header-menu ul li a {
+.dsa-header-menu-both ul li a,
+.dsa-header-menu ul li a {
     white-space: nowrap;
     color: var(--primary-100);
     text-decoration: none;
@@ -130,32 +130,32 @@
     border-bottom: 3px solid transparent;
 }
 
-.header-menu-both ul li a.header-active,
-.header-menu-both ul li a:hover,
-.header-menu ul li a.header-active,
-.header-menu ul li a:hover {
+.dsa-header-menu-both ul li a.dsa-header-active,
+.dsa-header-menu-both ul li a:hover,
+.dsa-header-menu ul li a.dsa-header-active,
+.dsa-header-menu ul li a:hover {
     border-color: var(--primary-40);
 }
 
-.header-menu-both ul li a.header-active,
-.header-menu ul li a.header-active {
+.dsa-header-menu-both ul li a.dsa-header-active,
+.dsa-header-menu ul li a.dsa-header-active {
     font-weight: 600;
 }
 
-.header-menu-both ul li a:focus,
-.header-menu ul li a:focus {
+.dsa-header-menu-both ul li a:focus,
+.dsa-header-menu ul li a:focus {
     outline: 2px solid var(--secondary-60);
 }
 
 @media (min-width: 1272px) {
-    .header-menu ul {
+    .dsa-header-menu ul {
         flex-direction: row;
         align-items: center;
         margin: 0;
     }
 }
 
-.header-user {
+.dsa-header-user {
     display: flex;
     gap: 2rem;
     flex-direction: column;
@@ -164,13 +164,13 @@
 }
 
 @media (min-width: 1272px) {
-    .header-user {
+    .dsa-header-user {
         flex-direction: row;
         gap: 1.5rem;
     }
 }
 
-.header-account {
+.dsa-header-account {
     line-height: 1.5;
     display: inline-flex;
     align-items: center;
@@ -179,23 +179,23 @@
     white-space: nowrap;
 }
 
-.header-account,
-.header-account:hover,
-.header-account:visited {
+.dsa-header-account,
+.dsa-header-account:hover,
+.dsa-header-account:visited {
     color: var(--secondary-60);
 }
 
-.header-account:hover {
+.dsa-header-account:hover {
     text-decoration: none;
 }
 
-.header-account:focus {
+.dsa-header-account:focus {
     outline: 2px solid var(--secondary-60);
 }
 
 @media (max-width: 400px) {
-    .header-login-button .button-icon,
-    .header-logout-button .button-icon {
+    .dsa-header-login-button .button-icon,
+    .dsa-header-logout-button .button-icon {
         display: none;
     }
 }

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 
 function BodyText({ children, className }) {
-    return <p className={cn("body-text", className)}>{children}</p>;
+    return <p className={cn("dsa-body-text", className)}>{children}</p>;
 }
 
 BodyText.defaultProps = {

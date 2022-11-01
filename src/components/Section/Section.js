@@ -1,10 +1,10 @@
 import React from "react";
-import cn from "classnames";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 function Section({ id, children, className }) {
     return (
-        <section id={id} className={cn("section", className)}>
+        <section id={id} className={classNames("dsa-section", className)}>
             {children}
         </section>
     );

@@ -1,4 +1,4 @@
-.skip-link {
+.dsa-skip-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -8,8 +8,8 @@
     color: #fff;
 }
 
-.skip-link:focus,
-.skip-link:active {
+.dsa-skip-link:focus,
+.dsa-skip-link:active {
     text-align: center;
     margin: auto;
     clip: auto;
@@ -19,7 +19,7 @@
     line-height: 1.15;
 }
 
-.skip-link:focus:hover,
-.skip-link:active:hover {
+.dsa-skip-link:focus:hover,
+.dsa-skip-link:active:hover {
     text-decoration: none;
 }
