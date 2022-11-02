@@ -1,8 +1,11 @@
 .dsa-heading {
     font-weight: 600;
-    margin-top: 0;
+    margin: 0;
     overflow-wrap: break-word;
-    margin-bottom: 0;
+}
+
+.dsa-heading-with-spacing {
+    margin-bottom: 1rem;
 }
 
 .dsa-heading-xxlarge {
@@ -10,17 +13,9 @@
     line-height: var(--line-height-xxlarge);
 }
 
-.dsa-heading-xxlarge:not(:last-child) {
-    margin-bottom: 2rem;
-}
-
 .dsa-heading-xlarge {
     font-size: var(--font-size-xlarge);
     line-height: var(--line-height-xlarge);
-}
-
-.dsa-heading-xlarge:not(:last-child) {
-    margin-bottom: 1.75rem;
 }
 
 .dsa-heading-large {
@@ -28,17 +23,9 @@
     line-height: var(--line-height-large);
 }
 
-.dsa-heading-large:not(:last-child) {
-    margin-bottom: 1rem;
-}
-
 .dsa-heading-medium {
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);
-}
-
-.dsa-heading-medium:not(:last-child) {
-    margin-bottom: 0.75rem;
 }
 
 .dsa-heading-small {
@@ -46,15 +33,7 @@
     line-height: var(--line-height-small);
 }
 
-.dsa-heading-small:not(:last-child) {
-    margin-bottom: 0.5rem;
-}
-
 .dsa-heading-xsmall {
     font-size: var(--font-size-xsmall);
     line-height: var(--line-height-xsmall);
-}
-
-.dsa-heading-xsmall:not(:last-child) {
-    margin-bottom: 0.25rem;
 }

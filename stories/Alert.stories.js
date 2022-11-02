@@ -1,23 +1,12 @@
 import React from "react";
 import Alert from "../src/Alert/Alert";
-import Container from "../src/Container/Container";
 
 export default {
     title: "Example/Alert",
     component: Alert,
 };
 
-const Template = (args) => {
-    if (args.fullWidth) {
-        return <Alert {...args} />;
-    } else {
-        return (
-            <Container size="medium">
-                <Alert {...args} />
-            </Container>
-        );
-    }
-};
+const Template = (args) => <Alert {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -32,6 +21,9 @@ FullWidth.args = {
     fullWidth: true,
     title: "Fullført",
     children: "Søket ble lagret",
+};
+FullWidth.parameters = {
+    layout: "fullscreen",
 };
 
 export const WithoutClose = Template.bind({});

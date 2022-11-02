@@ -1,6 +1,4 @@
 import React from "react";
-import Anchor from "../src/Anchor/Anchor";
-import ChevronLeft from "../src/Feather/ChevronLeft";
 import Tag from "../src/Tag/Tag";
 
 export default {
