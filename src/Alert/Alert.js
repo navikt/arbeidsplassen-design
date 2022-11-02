@@ -6,9 +6,16 @@ import AlertTriangleIcon from "../Feather/AlertTriangleIcon";
 import XIcon from "../Feather/XIcon";
 import joinClassNames from "../joinClassNames";
 
-function Alert({ variant, title, children, onClose, className }) {
+function Alert({ variant, title, fullWidth, children, onClose, className }) {
     return (
-        <div className={joinClassNames("dsa-alert", `dsa-alert-${variant}`, className)}>
+        <div
+            className={joinClassNames(
+                "dsa-alert",
+                `dsa-alert-${variant}`,
+                fullWidth ? "dsa-alert-full-width" : "dsa-alert-inline",
+                className
+            )}
+        >
             <div className="dsa-alert-heading">
                 {variant === "info" && <AlertCircleIcon title="Informasjon" />}
                 {variant === "warning" && <AlertTriangleIcon title="Informasjon" />}
@@ -32,10 +39,12 @@ Alert.defaultProps = {
     title: undefined,
     onClose: undefined,
     className: undefined,
+    fullWidth: false,
 };
 
 Alert.propTypes = {
     variant: PropTypes.oneOf(["info", "warning", "error"]),
+    fullWidth: PropTypes.bool,
     title: PropTypes.string,
     onClose: PropTypes.func,
     className: PropTypes.string,
