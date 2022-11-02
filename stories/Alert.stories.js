@@ -7,13 +7,19 @@ export default {
     component: Alert,
 };
 
-const Template = (args) => <Alert {...args} />;
+const Template = (args) => {
+    if (args.fullWidth) {
+        return <Alert {...args} />;
+    } else {
+        return (
+            <Container size="medium">
+                <Alert {...args} />
+            </Container>
+        );
+    }
+};
 
-export const Inline = (args) => (
-    <Container size="medium">
-        <Alert {...args} />
-    </Container>
-);
+export const Inline = Template.bind({});
 Inline.args = {
     title: "Les dette",
     children:
@@ -31,8 +37,8 @@ FullWidth.args = {
 export const WithoutClose = Template.bind({});
 WithoutClose.args = {
     variant: "info",
-    fullWidth: true,
     onClose: undefined,
-    title: "Fullført",
-    children: "Søket ble lagret",
+    title: "Les dette",
+    children:
+        "Arbeidsplassen.no er en åpen møteplass for alle på arbeidsmarkedet. Vårt mål er at arbeidsmarkedet skal være så oversiktlig som mulig for alle, enten du er på jakt etter en jobb eller leter etter en kandidat.",
 };

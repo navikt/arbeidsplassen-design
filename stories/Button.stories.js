@@ -8,8 +8,9 @@ export default {
     component: Button,
     argTypes: {
         icon: {
-            options: ["Trash", "Heart"],
+            options: ["None", "Trash", "Heart"],
             mapping: {
+                None: undefined,
                 Trash: <TrashIcon />,
                 Heart: <Heart />,
             },

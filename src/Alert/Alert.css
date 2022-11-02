@@ -1,11 +1,15 @@
 .dsa-alert {
-    padding: 1rem 3.5rem 1rem 1rem;
+    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
     font-size: var(--font-size-default);
     line-height: 1.5rem;
     position: relative;
+}
+
+.dsa-alert-width-close {
+    padding: 1rem 3.5rem 1rem 1rem;
 }
 
 .dsa-alert-inline {
@@ -15,6 +19,7 @@
 
 .dsa-alert-full-width {
     justify-content: center;
+    text-align: center;
 }
 
 .dsa-alert:not(:last-child) {

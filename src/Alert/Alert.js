@@ -12,6 +12,7 @@ function Alert({ variant, title, fullWidth, children, onClose, className }) {
             className={joinClassNames(
                 "dsa-alert",
                 `dsa-alert-${variant}`,
+                onClose ? "dsa-alert-width-close" : undefined,
                 fullWidth ? "dsa-alert-full-width" : "dsa-alert-inline",
                 className
             )}
