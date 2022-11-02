@@ -1,4 +1,5 @@
 import React from "react";
+import { HeaderRoutes } from "./Header";
 
 function PersonMenu({ active }) {
     return (
@@ -7,17 +8,17 @@ function PersonMenu({ active }) {
                 <a href="/">Forside</a>
             </li>
             <li>
-                <a href="/stillinger" className={active === "stillinger" ? "dsa-header-active" : undefined}>
+                <a href="/stillinger" className={active === HeaderRoutes.STILLIGER ? "dsa-header-active" : undefined}>
                     Ledige stillinger
                 </a>
             </li>
             <li>
-                <a href="/jobbtreff" className={active === "jobbtreff" ? "dsa-header-active" : undefined}>
+                <a href="/jobbtreff" className={active === HeaderRoutes.JOBBTREFF ? "dsa-header-active" : undefined}>
                     Jobbtreff
                 </a>
             </li>
             <li>
-                <a href="/cv" className={active === "cv" ? "dsa-header-active" : undefined}>
+                <a href="/cv" className={active === HeaderRoutes.CV ? "dsa-header-active" : undefined}>
                     CV
                 </a>
             </li>

@@ -1,20 +1,21 @@
 import React from "react";
 import UserIcon from "../Feather/UserIcon";
 import EmployerIcon from "../Feather/EmployerIcon";
+import { HeaderVariant } from "./Header";
 
-function LoggedInUser({ menu, userName }) {
+function LoggedInUser({ variant, userName }) {
     return (
         <div className="dsa-header-user">
-            {menu === "person" && (
+            {variant === HeaderVariant.PERSON && (
                 <a href="/minside" className="dsa-header-account">
                     <UserIcon />
                     {userName ? userName : "Min side"}
                 </a>
             )}
-            {menu === "bedrift" && (
+            {variant === HeaderVariant.COMPANY && (
                 <a href="/bedrift/din-bedrift" className="dsa-header-account">
                     <EmployerIcon />
-                    Din bedrift
+                    {userName ? userName : "Din bedrift"}
                 </a>
             )}
         </div>

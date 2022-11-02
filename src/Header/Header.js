@@ -9,15 +9,31 @@ import CompanyMenu from "./CompanyMenu";
 import LoggedInUser from "./LoggedInUser";
 import joinClassNames from "../joinClassNames";
 
-export default function Header({
-    className,
-    menu,
-    active,
-    userName,
-    authenticationStatus,
-    handleLogInClick,
-    handleLogOutClick,
-}) {
+export const HeaderAuthenticationStatus = {
+    UNKNOWN: "UNKNOWN",
+    IS_AUTHENTICATED: "IS_AUTHENTICATED",
+    NOT_AUTHENTICATED: "NOT_AUTHENTICATED",
+};
+
+export const HeaderVariant = {
+    ALL: "ALL",
+    PERSON: "PERSON",
+    COMPANY: "COMPANY",
+};
+
+export const HeaderRoutes = {
+    PERSON: "PERSON",
+    BEDRIFT: "BEDRIFT",
+    STILLIGER: "STILLIGER",
+    JOBBTREFF: "JOBBTREFF",
+    CV: "CV",
+    STILLINGSANNONSER: "STILLINGSANNONSER",
+    INTERESSEMELDIGER: "INTERESSEMELDIGER",
+    KANDIDATLISTER: "KANDIDATLISTER",
+    JOBBTREFF_BEDRIFT: "JOBBTREFF_BEDRIFT",
+};
+
+export default function Header({ className, variant, active, userName, authenticationStatus, onLogin, onLogout }) {
     const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
 
     const toggleMenu = () => {
@@ -29,17 +45,17 @@ export default function Header({
             <nav aria-label="Hovedmeny" className={joinClassNames("dsa-header", className)}>
                 <Logo />
 
-                {menu === "none" ? (
+                {variant === HeaderVariant.ALL ? (
                     <PersonCompanyMenu active={active} />
                 ) : (
                     <MenuButton toggleMenu={toggleMenu} isMobileMenuHidden={isMobileMenuHidden} />
                 )}
 
-                {menu === "none" ? (
+                {variant === HeaderVariant.ALL ? (
                     <LoginButton
                         authenticationStatus={authenticationStatus}
-                        handleLogInClick={handleLogInClick}
-                        handleLogOutClick={handleLogOutClick}
+                        handleLogInClick={onLogin}
+                        handleLogOutClick={onLogout}
                     />
                 ) : (
                     <div
@@ -48,18 +64,18 @@ export default function Header({
                             isMobileMenuHidden ? "dsa-header-menu-hidden" : undefined
                         )}
                     >
-                        {menu === "person" && <PersonMenu active={active} />}
-                        {menu === "bedrift" && <CompanyMenu active={active} />}
+                        {variant === HeaderVariant.PERSON && <PersonMenu active={active} />}
+                        {variant === HeaderVariant.COMPANY && <CompanyMenu active={active} />}
 
-                        {authenticationStatus === "IS_AUTHENTICATED" && (
-                            <LoggedInUser menu={menu} userName={userName} />
+                        {authenticationStatus === HeaderAuthenticationStatus.IS_AUTHENTICATED && (
+                            <LoggedInUser variant={variant} userName={userName} />
                         )}
 
-                        {menu !== "none" && (
+                        {variant !== HeaderVariant.ALL && (
                             <LoginButton
                                 authenticationStatus={authenticationStatus}
-                                handleLogInClick={handleLogInClick}
-                                handleLogOutClick={handleLogOutClick}
+                                handleLogInClick={onLogin}
+                                handleLogOutClick={onLogout}
                             />
                         )}
                     </div>
@@ -70,16 +86,17 @@ export default function Header({
 }
 
 Header.defaultProps = {
-    menu: "none",
-    active: "person",
-    authenticationStatus: "UNKNOWN",
+    variant: HeaderVariant.ALL,
+    active: undefined,
+    authenticationStatus: HeaderAuthenticationStatus.UNKNOWN,
     userName: undefined,
 };
 
 Header.propTypes = {
-    handleLogInClick: PropTypes.func.isRequired,
-    handleLogOutClick: PropTypes.func.isRequired,
-    menu: PropTypes.oneOf(["none", "person", "bedrift"]),
-    authenticationStatus: PropTypes.oneOf(["UNKNOWN", "IS_AUTHENTICATED", "NOT_AUTHENTICATED"]),
+    onLogin: PropTypes.func.isRequired,
+    onLogout: PropTypes.func.isRequired,
+    variant: PropTypes.oneOf(Object.keys(HeaderVariant)),
+    authenticationStatus: PropTypes.oneOf(Object.keys(HeaderAuthenticationStatus)),
     userName: PropTypes.string,
+    active: PropTypes.oneOf(Object.keys(HeaderRoutes)),
 };

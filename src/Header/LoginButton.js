@@ -2,9 +2,10 @@ import React from "react";
 import Button from "../Button/Button";
 import LogOutIcon from "../Feather/LogOutIcon";
 import LogInIcon from "../Feather/LogInIcon";
+import { HeaderAuthenticationStatus } from "./Header";
 
 function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick }) {
-    if (authenticationStatus === "IS_AUTHENTICATED") {
+    if (authenticationStatus === HeaderAuthenticationStatus.IS_AUTHENTICATED) {
         return (
             <Button
                 variant="secondary"
@@ -15,7 +16,7 @@ function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick
                 Logg ut
             </Button>
         );
-    } else if (authenticationStatus === "NOT_AUTHENTICATED") {
+    } else if (authenticationStatus === HeaderAuthenticationStatus.NOT_AUTHENTICATED) {
         return (
             <Button
                 variant="secondary"

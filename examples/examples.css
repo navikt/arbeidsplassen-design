@@ -1,9 +1,0 @@
-.demo-flex {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.demo-gap-0_5 {
-    gap: 0.5rem;
-}

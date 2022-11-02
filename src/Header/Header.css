@@ -22,8 +22,6 @@
 }
 
 .dsa-header-logo {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     display: inline-block;
     height: 48px;
     margin: 0 calc(var(--gutter) * 1.5) 0 0;

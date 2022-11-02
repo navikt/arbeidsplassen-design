@@ -1,4 +1,5 @@
 import React from "react";
+import { HeaderRoutes } from "./Header";
 
 function CompanyMenu({ active }) {
     return (
@@ -9,26 +10,32 @@ function CompanyMenu({ active }) {
             <li>
                 <a
                     href="/bedrift/stillingsannonser"
-                    className={active === "stillingsannonser" ? "dsa-header-active" : undefined}
+                    className={active === HeaderRoutes.STILLINGSANNONSER ? "dsa-header-active" : undefined}
                 >
                     Stillingsannonser
                 </a>
             </li>
             <li>
-                <a href="/bedrift/jobbtreff" className={active === "jobbtreff" ? "dsa-header-active" : undefined}>
+                <a
+                    href="/bedrift/jobbtreff"
+                    className={active === HeaderRoutes.JOBBTREFF_BEDRIFT ? "dsa-header-active" : undefined}
+                >
                     Jobbtreff
                 </a>
             </li>
             <li>
                 <a
                     href="/bedrift/interessemeldinger"
-                    className={active === "interessemeldinger" ? "dsa-header-active" : undefined}
+                    className={active === HeaderRoutes.INTERESSEMELDIGER ? "dsa-header-active" : undefined}
                 >
                     Interessemeldinger
                 </a>
             </li>
             <li>
-                <a href="/bedrift/kandidater" className={active === "kandidater" ? "dsa-header-active" : undefined}>
+                <a
+                    href="/bedrift/kandidater"
+                    className={active === HeaderRoutes.KANDIDATLISTER ? "dsa-header-active" : undefined}
+                >
                     Kandidatlister
                 </a>
             </li>
