@@ -1,6 +1,6 @@
 import React from "react";
 
-function ChevronRight({ title = "Høyre", ariaHidden = true, size = 24 }) {
+function ChevronRight({ title = "Høyre", ariaHidden = true, size = "1.5em" }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

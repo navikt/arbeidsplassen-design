@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 
-function Heading({ level, size, children, className, id, spacing }) {
+function Heading({ level, size, children, className, id }) {
     const defaultSizes = [
         "xxlarge",
         "xlarge",
@@ -23,7 +23,6 @@ function Heading({ level, size, children, className, id, spacing }) {
             className={joinClassNames(
                 "dsa-heading",
                 `dsa-heading-${size}`,
-                spacing ? `dsa-heading-${size}-space` : undefined,
                 className
             )}
         >
@@ -36,7 +35,6 @@ Heading.defaultProps = {
     id: undefined,
     size: undefined,
     className: undefined,
-    spacing: false,
 };
 
 Heading.propTypes = {
@@ -51,7 +49,6 @@ Heading.propTypes = {
         "xsmall",
     ]),
     className: PropTypes.string,
-    spacing: PropTypes.bool,
 };
 
 export default Heading;

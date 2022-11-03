@@ -8,5 +8,5 @@ export default {
 
 export const Default = (args) => <LinkButton {...args}></LinkButton>;
 Default.args = {
-    children: "Ledige stillinger",
+    children: "Small link panel",
 };

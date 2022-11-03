@@ -76,16 +76,6 @@
  *********************************************/
 :root {
     --gutter: 1rem;
-
-    --space-0_25: 0.25rem;
-    --space-0_5: 0.5rem;
-    --space-1: 1rem;
-    --space-1_5: 1.5rem;
-    --space-2: 2rem;
-    --space-3: 3rem;
-    --space-4: 4rem;
-    --space-5: 5rem;
-    --space-6: 6rem;
 }
 
 @media (min-width: 648px) {
