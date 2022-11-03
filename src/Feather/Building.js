@@ -1,6 +1,6 @@
 import React from "react";
 
-function EmployerIcon({ title = "Bedrift", ariaHidden = true }) {
+function Building({ title = "Bedrift", ariaHidden = true }) {
     return (
         <svg
             role="img"
@@ -53,4 +53,4 @@ function EmployerIcon({ title = "Bedrift", ariaHidden = true }) {
     );
 }
 
-export default EmployerIcon;
+export default Building;

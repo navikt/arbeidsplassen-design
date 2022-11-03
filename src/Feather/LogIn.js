@@ -1,28 +1,28 @@
 import React from "react";
 
-function UserIcon({ title = "Person", ariaHidden = true }) {
+function LogIn({ title = "Logg inn", ariaHidden }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="1.5em"
+            height="1.5em"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="feather feather-user"
+            className="feather feather-log-in"
             role="img"
             aria-hidden={ariaHidden}
             aria-label={title}
         >
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
+            <title>{title}</title>
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+            <polyline points="10 17 15 12 10 7" />
+            <line x1="15" y1="12" x2="3" y2="12" />
         </svg>
     );
 }
 
-UserIcon.propTypes = {};
-
-export default UserIcon;
+export default LogIn;

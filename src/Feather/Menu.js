@@ -1,6 +1,6 @@
 import React from "react";
 
-function MenuIcon({ title = "Meny", ariaHidden }) {
+function Menu({ title = "Meny", ariaHidden }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,4 +25,4 @@ function MenuIcon({ title = "Meny", ariaHidden }) {
     );
 }
 
-export default MenuIcon;
+export default Menu;

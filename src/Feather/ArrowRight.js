@@ -1,6 +1,6 @@
 import React from "react";
 
-function AlertCircleIcon({ title, ariaHidden }) {
+function ArrowRight({ title, ariaHidden }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -12,17 +12,16 @@ function AlertCircleIcon({ title, ariaHidden }) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="feather feather-alert-circle"
+            className="feather feather-arrow-right"
             role="img"
             aria-hidden={ariaHidden}
             aria-label={title}
         >
             <title>{title}</title>
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12.01" y2="16" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
         </svg>
     );
 }
 
-export default AlertCircleIcon;
+export default ArrowRight;

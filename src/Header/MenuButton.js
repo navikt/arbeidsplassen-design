@@ -1,5 +1,5 @@
 import React from "react";
-import MenuIcon from "../Feather/MenuIcon";
+import Menu from "../Feather/Menu";
 import XIcon from "../Feather/XIcon";
 
 function MenuButton({ isMobileMenuHidden, toggleMenu }) {
@@ -8,7 +8,7 @@ function MenuButton({ isMobileMenuHidden, toggleMenu }) {
             className="dsa-header-menu-button dsa-header-hide-on-desktop"
             onClick={toggleMenu}
         >
-            {isMobileMenuHidden ? <MenuIcon /> : <XIcon />}
+            {isMobileMenuHidden ? <Menu /> : <XIcon />}
             {isMobileMenuHidden ? "Meny" : "Lukk"}
         </button>
     );

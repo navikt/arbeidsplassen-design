@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import XOctagonIcon from "../Feather/XOctagonIcon";
-import AlertCircleIcon from "../Feather/AlertCircleIcon";
-import AlertTriangleIcon from "../Feather/AlertTriangleIcon";
+import XOctagon from "../Feather/XOctagon";
+import AlertCircle from "../Feather/AlertCircle";
+import AlertTriangle from "../Feather/AlertTriangle";
 import XIcon from "../Feather/XIcon";
 import joinClassNames from "../joinClassNames";
 
@@ -18,11 +18,9 @@ function Alert({ variant, title, fullWidth, children, onClose, className }) {
             )}
         >
             <div className="dsa-alert-heading">
-                {variant === "info" && <AlertCircleIcon title="Informasjon" />}
-                {variant === "warning" && (
-                    <AlertTriangleIcon title="Informasjon" />
-                )}
-                {variant === "error" && <XOctagonIcon title="Informasjon" />}
+                {variant === "info" && <AlertCircle title="Informasjon" />}
+                {variant === "warning" && <AlertTriangle title="Informasjon" />}
+                {variant === "error" && <XOctagon title="Informasjon" />}
                 {title}
             </div>
 

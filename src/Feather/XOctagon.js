@@ -1,6 +1,6 @@
 import React from "react";
 
-function TrashIcon({ title = "Slett", ariaHidden = true }) {
+function XOctagon({ title = "Lukk", ariaHidden }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -12,20 +12,17 @@ function TrashIcon({ title = "Slett", ariaHidden = true }) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="feather feather-trash-2"
+            className="feather feather-x-octagon"
             role="img"
             aria-hidden={ariaHidden}
             aria-label={title}
         >
             <title>{title}</title>
-            <polyline points="3 6 5 6 21 6" />
-            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-            <line x1="10" y1="11" x2="10" y2="17" />
-            <line x1="14" y1="11" x2="14" y2="17" />
+            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2" />
+            <line x1="15" y1="9" x2="9" y2="15" />
+            <line x1="9" y1="9" x2="15" y2="15" />
         </svg>
     );
 }
 
-TrashIcon.propTypes = {};
-
-export default TrashIcon;
+export default XOctagon;

@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../src/Button/Button";
-import TrashIcon from "../src/Feather/TrashIcon";
+import Trash from "../src/Feather/Trash";
 import Heart from "../src/Feather/Heart";
 
 export default {
@@ -11,7 +11,7 @@ export default {
             options: ["None", "Trash", "Heart"],
             mapping: {
                 None: undefined,
-                Trash: <TrashIcon />,
+                Trash: <Trash />,
                 Heart: <Heart />,
             },
         },
@@ -36,5 +36,5 @@ export const Tertiary = Template.bind({});
 Tertiary.args = {
     variant: "tertiary",
     children: "Button",
-    icon: <TrashIcon />,
+    icon: <Trash />,
 };

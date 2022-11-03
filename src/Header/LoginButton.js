@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
-import LogOutIcon from "../Feather/LogOutIcon";
-import LogInIcon from "../Feather/LogInIcon";
+import LogOut from "../Feather/LogOut";
+import LogIn from "../Feather/LogIn";
 import { HeaderAuthenticationStatus } from "./Header";
 
 function LoginButton({
@@ -14,7 +14,7 @@ function LoginButton({
             <Button
                 variant="secondary"
                 onClick={handleLogOutClick}
-                icon={<LogOutIcon />}
+                icon={<LogOut />}
                 className="dsa-header-login-button"
             >
                 Logg ut
@@ -27,7 +27,7 @@ function LoginButton({
             <Button
                 variant="secondary"
                 onClick={handleLogInClick}
-                icon={<LogInIcon />}
+                icon={<LogIn />}
                 className="dsa-header-logout-button"
             >
                 Logg inn
