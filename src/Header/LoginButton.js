@@ -4,7 +4,11 @@ import LogOutIcon from "../Feather/LogOutIcon";
 import LogInIcon from "../Feather/LogInIcon";
 import { HeaderAuthenticationStatus } from "./Header";
 
-function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick }) {
+function LoginButton({
+    authenticationStatus,
+    handleLogOutClick,
+    handleLogInClick,
+}) {
     if (authenticationStatus === HeaderAuthenticationStatus.IS_AUTHENTICATED) {
         return (
             <Button
@@ -16,7 +20,9 @@ function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick
                 Logg ut
             </Button>
         );
-    } else if (authenticationStatus === HeaderAuthenticationStatus.NOT_AUTHENTICATED) {
+    } else if (
+        authenticationStatus === HeaderAuthenticationStatus.NOT_AUTHENTICATED
+    ) {
         return (
             <Button
                 variant="secondary"

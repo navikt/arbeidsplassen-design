@@ -1,5 +1,4 @@
 import React from "react";
-import Alert from "../src/Alert/Alert";
 import Container from "../src/Container/Container";
 import Heading from "../src/Heading/Heading";
 import Ingress from "../src/Ingress/Ingress";

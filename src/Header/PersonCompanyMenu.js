@@ -6,12 +6,26 @@ function PersonCompanyMenu({ active }) {
         <div className="dsa-header-menu-both">
             <ul>
                 <li>
-                    <a href="/" className={active === HeaderRoutes.PERSON ? "dsa-header-active" : undefined}>
+                    <a
+                        href="/"
+                        className={
+                            active === HeaderRoutes.PERSON
+                                ? "dsa-header-active"
+                                : undefined
+                        }
+                    >
                         Person
                     </a>
                 </li>
                 <li>
-                    <a href="/bedrift" className={active === HeaderRoutes.BEDRIFT ? "dsa-header-active" : undefined}>
+                    <a
+                        href="/bedrift"
+                        className={
+                            active === HeaderRoutes.BEDRIFT
+                                ? "dsa-header-active"
+                                : undefined
+                        }
+                    >
                         Bedrift
                     </a>
                 </li>

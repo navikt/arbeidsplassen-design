@@ -1,6 +1,5 @@
 import React from "react";
 import Ingress from "../src/Ingress/Ingress";
-import Container from "../src/Container/Container";
 
 export default {
     title: "Example/Ingress",

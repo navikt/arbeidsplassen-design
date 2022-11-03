@@ -1,6 +1,4 @@
 import React from "react";
-import Container from "../src/Container/Container";
-import BodyText from "../src/BodyText/BodyText";
 import Footer from "../src/Footer/Footer";
 
 export default {

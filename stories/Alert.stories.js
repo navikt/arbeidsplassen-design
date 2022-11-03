@@ -1,6 +1,5 @@
 import React from "react";
 import Alert from "../src/Alert/Alert";
-import Container from "../src/Container/Container";
 
 export default {
     title: "Example/Alert",

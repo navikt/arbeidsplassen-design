@@ -1,6 +1,4 @@
 import React from "react";
-import List from "../src/List/List";
-import Container from "../src/Container/Container";
 import LinkButton from "../src/LinkButton/LinkButton";
 
 export default {

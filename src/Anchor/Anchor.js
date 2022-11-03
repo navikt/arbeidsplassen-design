@@ -2,11 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 
-const Anchor = React.forwardRef(function Anchor({ onClick, href, children, dark, className }, ref) {
+const Anchor = React.forwardRef(function Anchor(
+    { onClick, href, children, dark, className },
+    ref
+) {
     return (
         <a
             href={href}
-            className={joinClassNames("dsa-anchor", dark ? "dsa-anchor-dark" : undefined, className)}
+            className={joinClassNames(
+                "dsa-anchor",
+                dark ? "dsa-anchor-dark" : undefined,
+                className
+            )}
             onClick={onClick}
             ref={ref}
         >

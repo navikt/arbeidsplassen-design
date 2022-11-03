@@ -19,7 +19,9 @@ function Alert({ variant, title, fullWidth, children, onClose, className }) {
         >
             <div className="dsa-alert-heading">
                 {variant === "info" && <AlertCircleIcon title="Informasjon" />}
-                {variant === "warning" && <AlertTriangleIcon title="Informasjon" />}
+                {variant === "warning" && (
+                    <AlertTriangleIcon title="Informasjon" />
+                )}
                 {variant === "error" && <XOctagonIcon title="Informasjon" />}
                 {title}
             </div>

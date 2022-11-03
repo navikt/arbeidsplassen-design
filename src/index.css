@@ -15,7 +15,6 @@
 @import "./SkipLink/SkipLink.css";
 @import "./Tag/Tag.css";
 
-
 *,
 *:before,
 *:after {
@@ -129,4 +128,3 @@ body {
 .mt-6 {
     margin-top: var(--space-6);
 }
-

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 
 function ArrowRightCircle({ title = "Høyre", ariaHidden = true }) {

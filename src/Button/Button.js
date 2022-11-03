@@ -2,18 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 
-const Button = React.forwardRef(({ children, htmlType, variant, icon, onClick, className, disabled }, ref) => (
-    <button
-        ref={ref}
-        disabled={disabled}
-        onClick={onClick}
-        className={joinClassNames("dsa-button", `dsa-button-${variant}`, className)}
-        type={htmlType}
-    >
-        {icon && <span className="dsa-button-icon">{icon}</span>}
-        <span className="dsa-button-text">{children}</span>
-    </button>
-));
+const Button = React.forwardRef(
+    (
+        { children, htmlType, variant, icon, onClick, className, disabled },
+        ref
+    ) => (
+        <button
+            ref={ref}
+            disabled={disabled}
+            onClick={onClick}
+            className={joinClassNames(
+                "dsa-button",
+                `dsa-button-${variant}`,
+                className
+            )}
+            type={htmlType}
+        >
+            {icon && <span className="dsa-button-icon">{icon}</span>}
+            <span className="dsa-button-text">{children}</span>
+        </button>
+    )
+);
 
 Button.defaultProps = {
     variant: "primary",

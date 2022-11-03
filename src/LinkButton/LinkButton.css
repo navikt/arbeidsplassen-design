@@ -28,14 +28,13 @@
     align-items: center;
     justify-content: center;
     padding: 0.125rem;
-
 }
-.dsa-link-button-primary-dark  {
+.dsa-link-button-primary-dark {
     background-color: var(--primary-80);
     color: var(--primary-20);
 }
 
-.dsa-link-button-primary-dark .dsa-link-button-icon  {
+.dsa-link-button-primary-dark .dsa-link-button-icon {
     background: var(--primary-20);
     color: var(--primary-80);
 }
