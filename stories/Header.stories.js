@@ -1,5 +1,9 @@
 import React from "react";
-import Header, { HeaderAuthenticationStatus, HeaderRoutes, HeaderVariant } from "../src/Header/Header";
+import Header, {
+    HeaderAuthenticationStatus,
+    HeaderRoutes,
+    HeaderVariant,
+} from "../src/Header/Header";
 
 export default {
     title: "Example/Header",
@@ -16,7 +20,6 @@ All.args = {
     variant: HeaderVariant.ALL,
     active: HeaderRoutes.PERSON,
     authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
-    userName: "Navn Navnesen",
 };
 
 export const Person = Template.bind({});
@@ -32,5 +35,5 @@ Company.args = {
     variant: HeaderVariant.COMPANY,
     active: HeaderRoutes.STILLINGSANNONSER,
     authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
-    userName: "Bedrift AS",
+    companyName: "Bedrift AS",
 };

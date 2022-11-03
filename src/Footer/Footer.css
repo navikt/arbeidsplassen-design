@@ -1,6 +1,6 @@
 .dsa-footer {
-    margin: var(--gutter-3) 0 0 0;
-    padding: var(--gutter-3) var(--gutter);
+    margin: 0;
+    padding: calc(var(--gutter) * 3) var(--gutter);
     background: var(--primary-20);
     line-height: 1.5;
 }
@@ -13,11 +13,27 @@
     }
 }
 
+.dsa-footer-heading {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+@media (min-width: 648px) {
+    .dsa-footer-heading {
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+}
+
 .dsa-footer-sections {
     display: flex;
     flex-direction: column;
-    gap: var(--gutter-2) var(--gutter-4);
-    margin-bottom: var(--gutter-2);
+    gap: calc(var(--gutter) * 2) calc(var(--gutter) * 4);
+    margin-bottom: calc(var(--gutter) * 2) ;
 }
 
 @media (min-width: 648px) {

@@ -2,8 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 
-function Heading({ level, size, children, className, id }) {
-    const defaultSizes = ["xxlarge", "xlarge", "large", "medium", "small", "xsmall"];
+function Heading({ level, size, children, className, id, spacing }) {
+    const defaultSizes = [
+        "xxlarge",
+        "xlarge",
+        "large",
+        "medium",
+        "small",
+        "xsmall",
+    ];
     const HeadingLevel = "h" + level;
 
     if (!size) {
@@ -11,7 +18,15 @@ function Heading({ level, size, children, className, id }) {
     }
 
     return (
-        <HeadingLevel id={id} className={joinClassNames("dsa-heading", `dsa-heading-${size}`, className)}>
+        <HeadingLevel
+            id={id}
+            className={joinClassNames(
+                "dsa-heading",
+                `dsa-heading-${size}`,
+                spacing ? `dsa-heading-${size}-space` : undefined,
+                className
+            )}
+        >
             {children}
         </HeadingLevel>
     );
@@ -21,13 +36,22 @@ Heading.defaultProps = {
     id: undefined,
     size: undefined,
     className: undefined,
+    spacing: false,
 };
 
 Heading.propTypes = {
     id: PropTypes.string,
     level: PropTypes.oneOf(["1", "2", "3", "4", "5", "6"]).isRequired,
-    size: PropTypes.oneOf(["xxlarge", "xlarge", "large", "medium", "small", "xsmall"]),
+    size: PropTypes.oneOf([
+        "xxlarge",
+        "xlarge",
+        "large",
+        "medium",
+        "small",
+        "xsmall",
+    ]),
     className: PropTypes.string,
+    spacing: PropTypes.bool,
 };
 
 export default Heading;

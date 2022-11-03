@@ -1,30 +1,71 @@
 .dsa-link-button {
     display: inline-flex;
-    gap: 0.5rem;
+    justify-content: space-between;
+    gap: var(--gutter);
     align-items: center;
     flex-direction: row;
-    justify-content: center;
-    border-radius: 5rem;
-    padding: var(--button-padding);
-    border-width: 2px;
-    border-style: solid;
+    border-radius: 0.25rem;
+    padding: var(--gutter);
     font-weight: 600;
-    letter-spacing: 0.5px;
-    font-size: 1rem;
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
     cursor: pointer;
     font-family: "Inter", sans-serif;
-    line-height: 1.5;
-    background-color: var(--secondary-60);
-    border-color: var(--secondary-60);
-    color: #fff;
-    text-decoration: underline;
 }
 
 .dsa-link-button:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .dsa-link-button:focus {
     outline: 2px solid var(--secondary-60);
     outline-offset: 2px;
+}
+
+.dsa-link-button-icon {
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.125rem;
+
+}
+.dsa-link-button-primary-dark  {
+    background-color: var(--primary-80);
+    color: var(--primary-20);
+}
+
+.dsa-link-button-primary-dark .dsa-link-button-icon  {
+    background: var(--primary-20);
+    color: var(--primary-80);
+}
+
+.dsa-link-button-primary {
+    background: var(--primary-20);
+    color: var(--primary-80);
+}
+
+.dsa-link-button-primary .dsa-link-button-icon {
+    background: var(--primary-80);
+    color: var(--primary-20);
+}
+
+.dsa-link-button-secondary {
+    background: var(--secondary-20);
+    color: var(--primary-80);
+}
+
+.dsa-link-button-secondary .dsa-link-button-icon {
+    background: var(--primary-80);
+    color: var(--secondary-20);
+}
+
+.dsa-link-button-tertiary {
+    background: var(--tertiary-5);
+    color: var(--primary-80);
+}
+
+.dsa-link-button-tertiary .dsa-link-button-icon {
+    background: var(--primary-80);
+    color: var(--tertiary-5);
 }

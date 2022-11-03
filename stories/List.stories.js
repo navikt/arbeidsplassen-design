@@ -1,21 +1,19 @@
 import React from "react";
-import Container from "../src/Container/Container";
-import BodyText from "../src/BodyText/BodyText";
 import List from "../src/List/List";
 
 export default {
-    title: "Example/BodyText",
+    title: "Example/List",
     component: List,
+    decorators: [(Story) => <div style={{ maxWidth: "600px" }}>{Story()}</div>],
 };
 
-const Template = (args) => (
-    <Container size="medium">
-        <BodyText {...args} />
-    </Container>
+export const Default = (args) => (
+    <List {...args}>
+        <li>Du oppretter selv et jobbtreff på arbeidsplassen.no.</li>
+        <li>Du kan koble jobbtreffet med stillingsannonsene dine.</li>
+        <li>
+            Du velger om jobbtreffet skal annonseres for alle jobbsøkere på
+            arbeidsplassen.no, eller om du vil invitere deltakere selv.
+        </li>
+    </List>
 );
-
-export const Default = Template.bind({});
-Default.args = {
-    children:
-        "Arbeidsplassen.no er en åpen møteplass for alle på arbeidsmarkedet. Vårt mål er at arbeidsmarkedet skal være så oversiktlig som mulig for alle, enten du er på jakt etter en jobb eller leter etter en kandidat.",
-};

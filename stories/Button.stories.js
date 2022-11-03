@@ -36,5 +36,5 @@ export const Tertiary = Template.bind({});
 Tertiary.args = {
     variant: "tertiary",
     children: "Button",
-    icon: "Trash",
+    icon: <TrashIcon />,
 };

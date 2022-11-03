@@ -1,5 +1,9 @@
 .dsa-body-text {
-    font-size: var(--font-size-body-text);
-    line-height: var(--line-height-body-text);
+    font-size: var(--font-size-default);
+    line-height: var(--line-height-default);
     margin: 0;
+}
+
+.dsa-body-text-space {
+    margin-bottom: 1rem;
 }

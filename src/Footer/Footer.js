@@ -1,15 +1,12 @@
 import React from "react";
 import Anchor from "../Anchor/Anchor";
-import Heading from "../Heading/Heading";
 
 export default function Footer() {
     return (
         <footer className="dsa-footer">
             <nav className="dsa-footer-sections">
                 <section className="dsa-footer-section">
-                    <Heading level="2" size="small">
-                        Om oss
-                    </Heading>
+                    <h2 className="dsa-footer-heading">Om oss</h2>
                     <ul>
                         <li>
                             <Anchor href="/om-oss" dark>
@@ -25,9 +22,7 @@ export default function Footer() {
                 </section>
 
                 <section className="dsa-footer-section">
-                    <Heading level="2" size="small">
-                        Hjelp
-                    </Heading>
+                    <h2 className="dsa-footer-heading">Hjelp</h2>
                     <ul>
                         <li>
                             <Anchor href="/hjelp/sporsmal-og-svar" dark>
@@ -48,12 +43,13 @@ export default function Footer() {
                 </section>
 
                 <section className="dsa-footer-section">
-                    <Heading level="2" size="small">
-                        Personvern og vilkår
-                    </Heading>
+                    <h2 className="dsa-footer-heading">Personvern og vilkår</h2>
                     <ul>
                         <li>
-                            <Anchor href="/personvern-og-vilkar/personvern" dark>
+                            <Anchor
+                                href="/personvern-og-vilkar/personvern"
+                                dark
+                            >
                                 Personvern
                             </Anchor>
                         </li>
@@ -66,8 +62,17 @@ export default function Footer() {
                 </section>
             </nav>
             <div className="dsa-footer-bottom">
-                <a href="@/modules/App/dsa-footer/dsa-footer" className="dsa-footer-logo" aria-label="Gå til nav.no">
-                    <svg width="64" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a
+                    href="@/modules/App/dsa-footer/dsa-footer"
+                    className="dsa-footer-logo"
+                    aria-label="Gå til nav.no"
+                >
+                    <svg
+                        width="64"
+                        height="20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
                         <path
                             fillRule="evenodd"
                             clipRule="evenodd"
@@ -76,7 +81,9 @@ export default function Footer() {
                         />
                     </svg>
                 </a>
-                <p>Arbeidsplassen er en tjeneste fra Arbeids- og velferdsetaten</p>
+                <p>
+                    Arbeidsplassen er en tjeneste fra Arbeids- og velferdsetaten
+                </p>
             </div>
         </footer>
     );

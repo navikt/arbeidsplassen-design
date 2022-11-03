@@ -33,7 +33,16 @@ export const HeaderRoutes = {
     JOBBTREFF_BEDRIFT: "JOBBTREFF_BEDRIFT",
 };
 
-export default function Header({ className, variant, active, userName, authenticationStatus, onLogin, onLogout }) {
+export default function Header({
+    className,
+    variant,
+    active,
+    userName,
+    companyName,
+    authenticationStatus,
+    onLogin,
+    onLogout,
+}) {
     const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
 
     const toggleMenu = () => {
@@ -42,13 +51,19 @@ export default function Header({ className, variant, active, userName, authentic
 
     return (
         <header className="dsa-header-wrapper">
-            <nav aria-label="Hovedmeny" className={joinClassNames("dsa-header", className)}>
+            <nav
+                aria-label="Hovedmeny"
+                className={joinClassNames("dsa-header", className)}
+            >
                 <Logo />
 
                 {variant === HeaderVariant.ALL ? (
                     <PersonCompanyMenu active={active} />
                 ) : (
-                    <MenuButton toggleMenu={toggleMenu} isMobileMenuHidden={isMobileMenuHidden} />
+                    <MenuButton
+                        toggleMenu={toggleMenu}
+                        isMobileMenuHidden={isMobileMenuHidden}
+                    />
                 )}
 
                 {variant === HeaderVariant.ALL ? (
@@ -61,14 +76,25 @@ export default function Header({ className, variant, active, userName, authentic
                     <div
                         className={joinClassNames(
                             "dsa-header-menu",
-                            isMobileMenuHidden ? "dsa-header-menu-hidden" : undefined
+                            isMobileMenuHidden
+                                ? "dsa-header-menu-hidden"
+                                : undefined
                         )}
                     >
-                        {variant === HeaderVariant.PERSON && <PersonMenu active={active} />}
-                        {variant === HeaderVariant.COMPANY && <CompanyMenu active={active} />}
+                        {variant === HeaderVariant.PERSON && (
+                            <PersonMenu active={active} />
+                        )}
+                        {variant === HeaderVariant.COMPANY && (
+                            <CompanyMenu active={active} />
+                        )}
 
-                        {authenticationStatus === HeaderAuthenticationStatus.IS_AUTHENTICATED && (
-                            <LoggedInUser variant={variant} userName={userName} />
+                        {authenticationStatus ===
+                            HeaderAuthenticationStatus.IS_AUTHENTICATED && (
+                            <LoggedInUser
+                                variant={variant}
+                                userName={userName}
+                                companyName={companyName}
+                            />
                         )}
 
                         {variant !== HeaderVariant.ALL && (
@@ -90,13 +116,17 @@ Header.defaultProps = {
     active: undefined,
     authenticationStatus: HeaderAuthenticationStatus.UNKNOWN,
     userName: undefined,
+    companyName: undefined,
 };
 
 Header.propTypes = {
     onLogin: PropTypes.func.isRequired,
     onLogout: PropTypes.func.isRequired,
     variant: PropTypes.oneOf(Object.keys(HeaderVariant)),
-    authenticationStatus: PropTypes.oneOf(Object.keys(HeaderAuthenticationStatus)),
+    authenticationStatus: PropTypes.oneOf(
+        Object.keys(HeaderAuthenticationStatus)
+    ),
     userName: PropTypes.string,
+    companyName: PropTypes.string,
     active: PropTypes.oneOf(Object.keys(HeaderRoutes)),
 };

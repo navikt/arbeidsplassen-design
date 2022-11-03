@@ -8,9 +8,9 @@ export default {
 };
 
 const Template = (args) => (
-    <Container size="medium">
+    <div style={{ maxWidth: "600px" }}>
         <BodyText {...args} />
-    </Container>
+    </div>
 );
 
 export const Default = Template.bind({});

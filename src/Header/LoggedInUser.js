@@ -3,7 +3,7 @@ import UserIcon from "../Feather/UserIcon";
 import EmployerIcon from "../Feather/EmployerIcon";
 import { HeaderVariant } from "./Header";
 
-function LoggedInUser({ variant, userName }) {
+function LoggedInUser({ variant, userName, companyName }) {
     return (
         <div className="dsa-header-user">
             {variant === HeaderVariant.PERSON && (
@@ -15,7 +15,7 @@ function LoggedInUser({ variant, userName }) {
             {variant === HeaderVariant.COMPANY && (
                 <a href="/bedrift/din-bedrift" className="dsa-header-account">
                     <EmployerIcon />
-                    {userName ? userName : "Din bedrift"}
+                    {companyName ? companyName : "Din bedrift"}
                 </a>
             )}
         </div>

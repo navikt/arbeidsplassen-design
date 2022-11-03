@@ -17,5 +17,9 @@
 }
 
 .dsa-container-inner-medium {
-    max-width: 670px;
+    max-width: 648px;
+}
+
+.dsa-container-inner-small {
+    max-width: 375px;
 }

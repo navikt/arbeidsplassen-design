@@ -6,4 +6,7 @@ export default {
     component: Pill,
 };
 
-export const Pill = (args) => <Pill {...args} />;
+export const Default = (args) => <Pill {...args} />;
+Default.args = {
+    children: "Fagbrev tømrer",
+};

@@ -4,8 +4,19 @@
     overflow-wrap: break-word;
 }
 
-.dsa-heading-with-spacing {
-    margin-bottom: 1rem;
+.dsa-heading-xxlarge-space {
+    margin-bottom: 1.75rem;
+}
+
+.dsa-heading-xlarge-space,
+.dsa-heading-large-space {
+    margin-bottom: 1.25rem;
+}
+
+.dsa-heading-medium-space,
+.dsa-heading-small-space,
+.dsa-heading-xsmall-space {
+    margin-bottom: 0.25rem;
 }
 
 .dsa-heading-xxlarge {

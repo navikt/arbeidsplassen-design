@@ -1,5 +1,9 @@
 .dsa-ingress {
-    font-size: var(--font-size-ingress);
-    line-height: var(--line-height-ingess);
-    margin-top: 0;
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    margin: 0;
+}
+
+.dsa-ingress-space {
+    margin-bottom: 1rem;
 }
