@@ -8,13 +8,7 @@ export default {
 
 const Template = (args) => <Heading {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
-    level: "1",
-    children: "Heading",
-};
-
-export const Hierarchy = () => (
+export const Default = () => (
     <>
         <Heading level="1">Heading XXL</Heading>
         <Heading level="2">Heading XL</Heading>
