@@ -19,7 +19,7 @@ export const Page = () => (
     <div>
         <Header variant="person" />
         <div className="header-offset">
-            <Alert fullWidth>
+            <Alert fullscreen>
                 <Heading level="3" size="xsmall">
                     Alert title
                 </Heading>
