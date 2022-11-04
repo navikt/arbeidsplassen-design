@@ -1,19 +1,18 @@
 import React from "react";
 import BodyText from "../src/BodyText/BodyText";
+import Container from "../src/Container/Container";
 
 export default {
     title: "Example/BodyText",
     component: BodyText,
+    decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };
 
-const Template = (args) => (
-    <div style={{ maxWidth: "600px" }}>
-        <BodyText {...args} />
-    </div>
+export const Default = (args) => (
+    <BodyText>
+        One morning, when Gregor Samsa woke from troubled dreams, he found
+        himself transformed in his bed into a horrible vermin. He lay on his
+        armour-like back, and if he lifted his head a little he could see his
+        brown belly, slightly domed and divided by arches into stiff sections.
+    </BodyText>
 );
-
-export const Default = Template.bind({});
-Default.args = {
-    children:
-        "Arbeidsplassen.no er en åpen møteplass for alle på arbeidsmarkedet. Vårt mål er at arbeidsmarkedet skal være så oversiktlig som mulig for alle, enten du er på jakt etter en jobb eller leter etter en kandidat.",
-};

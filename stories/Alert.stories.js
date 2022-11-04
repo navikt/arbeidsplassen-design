@@ -9,15 +9,6 @@ export default {
     args: {
         onClose: undefined,
     },
-    decorators: [
-        (Story, context) => {
-            if (context.args.fullscreen) {
-                return Story();
-            } else {
-                return <Container size="medium">{Story()}</Container>;
-            }
-        },
-    ],
 };
 
 export const Default = (args) => (
@@ -38,6 +29,10 @@ export const InlineShortText = (args) => (
     </Alert>
 );
 
+InlineShortText.decorators = [
+    (Story) => <Container size="medium">{Story()}</Container>,
+];
+
 export const InlineLongText = (args) => (
     <Alert {...args}>
         <Heading level="3" size="xsmall">
@@ -49,6 +44,10 @@ export const InlineLongText = (args) => (
     </Alert>
 );
 
+InlineLongText.decorators = [
+    (Story) => <Container size="medium">{Story()}</Container>,
+];
+
 export const InlineNoTitle = (args) => (
     <Alert {...args}>
         He lay on his armour-like back, and if he lifted his head a little he
@@ -56,6 +55,10 @@ export const InlineNoTitle = (args) => (
         stiff sections.
     </Alert>
 );
+
+InlineNoTitle.decorators = [
+    (Story) => <Container size="medium">{Story()}</Container>,
+];
 
 export const FullscreenShortText = (args) => (
     <Alert {...args}>

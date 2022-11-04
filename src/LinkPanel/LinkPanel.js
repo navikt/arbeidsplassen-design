@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 import ChevronRight from "../Feather/ChevronRight";
+import "./LinkPanel.css";
 
 const LinkPanel = React.forwardRef(function LinkPanel(
     { onClick, href, children, className, variant },

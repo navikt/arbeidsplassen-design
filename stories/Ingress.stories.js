@@ -1,19 +1,16 @@
 import React from "react";
+import Container from "../src/Container/Container";
 import Ingress from "../src/Ingress/Ingress";
 
 export default {
     title: "Example/Ingress",
     component: Ingress,
+    decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };
 
-const Template = (args) => (
-    <div style={{ maxWidth: "600px" }}>
-        <Ingress {...args} />
-    </div>
+export const Default = (args) => (
+    <Ingress>
+        One morning, when Gregor Samsa woke from troubled dreams, he found
+        himself transformed in his bed into a horrible vermin.
+    </Ingress>
 );
-
-export const Default = Template.bind({});
-Default.args = {
-    children:
-        "Arbeidsplassen.no er en åpen møteplass for alle på arbeidsmarkedet. Vårt mål er at arbeidsmarkedet skal være så oversiktlig som mulig for alle, enten du er på jakt etter en jobb eller leter etter en kandidat.",
-};

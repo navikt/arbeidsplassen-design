@@ -1,5 +1,6 @@
 import React from "react";
 import joinClassNames from "../joinClassNames";
+import "./Article.css";
 
 export const ArticlePullOutside = ({ children }) => (
     <div className="dsa-article-pull-outside">{children}</div>

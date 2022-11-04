@@ -7,27 +7,20 @@ export default {
     component: Anchor,
 };
 
-const Template = (args) => <Anchor {...args} />;
-
-export const Default = Template.bind({});
+export const Default = (args) => <Anchor {...args} />;
 Default.args = {
     children: "Gå til forsiden",
     href: "#",
 };
 
-export const Dark = Template.bind({});
-Dark.args = {
-    dark: true,
-    children: "Gå til forsiden",
-    href: "#",
-};
+export const Dark = (args) => (
+    <Anchor href="#" dark>
+        Gå til forsiden
+    </Anchor>
+);
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-    children: (
-        <>
-            <ChevronLeft /> Tilbake
-        </>
-    ),
-    href: "#",
-};
+export const WithIcon = (args) => (
+    <Anchor href="#">
+        <ChevronLeft /> Tilbake
+    </Anchor>
+);

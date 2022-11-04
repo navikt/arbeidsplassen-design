@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
+import "./Blockquote.css";
 
 function Blockquote({ children, caption, className }) {
     return (

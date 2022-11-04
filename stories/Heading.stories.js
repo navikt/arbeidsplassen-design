@@ -1,12 +1,12 @@
 import React from "react";
 import Heading from "../src/Heading/Heading";
+import Container from "../src/Container/Container";
 
 export default {
     title: "Example/Heading",
     component: Heading,
+    decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };
-
-const Template = (args) => <Heading {...args} />;
 
 export const Default = () => (
     <>

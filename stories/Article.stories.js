@@ -4,13 +4,14 @@ import Heading from "../src/Heading/Heading";
 import Ingress from "../src/Ingress/Ingress";
 import BodyText from "../src/BodyText/BodyText";
 import List from "../src/List/List";
-import Header from "../src/Header/Header";
-import Alert from "../src/Alert/Alert";
+import Header, {
+    HeaderAuthenticationStatus,
+    HeaderRoutes,
+    HeaderVariant,
+} from "../src/Header/Header";
 import Footer from "../src/Footer/Footer";
 import Anchor from "../src/Anchor/Anchor";
 import LinkPanel from "../src/LinkPanel/LinkPanel";
-import image from "./assets/img.png";
-import Figure from "../src/Figure/Figure";
 import Blockquote from "../src/Blockquote/Blockquote";
 import { ArticleImage, ArticlePullOutside } from "../src/Article/Article";
 
@@ -23,7 +24,11 @@ export default {
 
 export const Article = () => (
     <div>
-        <Header variant="person" />
+        <Header
+            active={HeaderRoutes.PERSON}
+            variant={HeaderVariant.ALL}
+            authenticationStatus={HeaderAuthenticationStatus.NOT_AUTHENTICATED}
+        />
         <div className="header-offset">
             <Container size="medium">
                 <article className="mt-3 mb-4">

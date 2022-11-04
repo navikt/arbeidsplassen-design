@@ -5,6 +5,7 @@ import AlertCircle from "../Feather/AlertCircle";
 import AlertTriangle from "../Feather/AlertTriangle";
 import XIcon from "../Feather/XIcon";
 import joinClassNames from "../joinClassNames";
+import "./Alert.css";
 
 function Alert({
     variant,

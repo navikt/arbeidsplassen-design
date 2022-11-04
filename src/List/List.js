@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
+import "./List.css";
 
 function List({ children, variant, className }) {
     const ListType = variant;

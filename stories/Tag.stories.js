@@ -6,9 +6,4 @@ export default {
     component: Tag,
 };
 
-const Template = (args) => <Tag {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-    children: "Oslo",
-};
+export const Default = (args) => <Tag {...args}>Vermin</Tag>;

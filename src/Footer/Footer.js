@@ -1,5 +1,6 @@
 import React from "react";
 import Anchor from "../Anchor/Anchor";
+import "./Footer.css";
 
 export default function Footer() {
     return (
