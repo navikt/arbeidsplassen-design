@@ -1,11 +1,11 @@
 import React from "react";
 
-function XOctagon({ title = "Lukk", ariaHidden }) {
+function XOctagon({ title = "Lukk", ariaHidden, size = "1.5em" }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width={size}
+            height={size}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"

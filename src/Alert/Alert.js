@@ -6,27 +6,36 @@ import AlertTriangle from "../Feather/AlertTriangle";
 import XIcon from "../Feather/XIcon";
 import joinClassNames from "../joinClassNames";
 
-function Alert({ variant, title, fullWidth, children, onClose, className }) {
+function Alert({
+    variant,
+    fullWidth,
+    children,
+    onClose,
+    className,
+    closeButton,
+}) {
     return (
         <div
             className={joinClassNames(
                 "dsa-alert",
                 `dsa-alert-${variant}`,
-                onClose ? "dsa-alert-width-close" : undefined,
+                closeButton ? "dsa-alert-with-close" : undefined,
                 fullWidth ? "dsa-alert-full-width" : "dsa-alert-inline",
                 className
             )}
         >
-            <div className="dsa-alert-heading">
-                {variant === "info" && <AlertCircle title="Informasjon" />}
-                {variant === "warning" && <AlertTriangle title="Informasjon" />}
-                {variant === "error" && <XOctagon title="Informasjon" />}
-                {title}
+            <div className="dsa-alert-inner">
+                <div className="dsa-alert-icon">
+                    {variant === "info" && <AlertCircle title="Informasjon" />}
+                    {variant === "warning" && (
+                        <AlertTriangle title="Advarsel" />
+                    )}
+                    {variant === "error" && <XOctagon title="Feil" />}
+                </div>
+
+                <div className="dsa-alert-content">{children}</div>
             </div>
-
-            <div>{children}</div>
-
-            {onClose && (
+            {closeButton && (
                 <button className="dsa-alert-close" onClick={onClose}>
                     <XIcon />
                 </button>
@@ -37,18 +46,18 @@ function Alert({ variant, title, fullWidth, children, onClose, className }) {
 
 Alert.defaultProps = {
     variant: "info",
-    title: undefined,
     onClose: undefined,
     className: undefined,
     fullWidth: false,
+    closeButton: false,
 };
 
 Alert.propTypes = {
     variant: PropTypes.oneOf(["info", "warning", "error"]),
     fullWidth: PropTypes.bool,
-    title: PropTypes.string,
     onClose: PropTypes.func,
     className: PropTypes.string,
+    closeButton: PropTypes.bool,
 };
 
 export default Alert;

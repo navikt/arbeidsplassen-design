@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 import ChevronRight from "../Feather/ChevronRight";
 
-const LinkButton = React.forwardRef(function LinkButton(
+const LinkPanel = React.forwardRef(function LinkPanel(
     { onClick, href, children, className, variant },
     ref
 ) {
@@ -26,12 +26,12 @@ const LinkButton = React.forwardRef(function LinkButton(
     );
 });
 
-LinkButton.defaultProps = {
+LinkPanel.defaultProps = {
     className: undefined,
     variant: "primary",
 };
 
-LinkButton.propTypes = {
+LinkPanel.propTypes = {
     className: PropTypes.string,
     variant: PropTypes.oneOf([
         "primary-dark",
@@ -41,4 +41,4 @@ LinkButton.propTypes = {
     ]),
 };
 
-export default LinkButton;
+export default LinkPanel;

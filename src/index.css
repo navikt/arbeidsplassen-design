@@ -10,7 +10,7 @@
 @import "./Header/Header.css";
 @import "./Heading/Heading.css";
 @import "./Ingress/Ingress.css";
-@import "./LinkButton/LinkButton.css";
+@import "./LinkPanel/LinkPanel.css";
 @import "./List/List.css";
 @import "./Pill/Pill.css";
 @import "./SkipLink/SkipLink.css";
@@ -37,24 +37,24 @@ body {
 @media (min-width: 320px) {
     .header-offset {
         /* equals to fixed header height */
-        padding-top: calc(73px + var(--gutter));
-        scroll-padding-top: calc(73px + var(--gutter));
+        padding-top: 73px;
+        scroll-padding-top: 73px;
     }
 }
 
 @media (min-width: 375px) {
     .header-offset {
         /* equals to fixed header height */
-        padding-top: calc(80px + var(--gutter));
-        scroll-padding-top: calc(80px + var(--gutter));
+        padding-top: 80px;
+        scroll-padding-top: 80px;
     }
 }
 
 @media (min-width: 648px) {
     .header-offset {
         /* equals to fixed header height */
-        padding-top: calc(96px + var(--gutter));
-        scroll-padding-top: calc(96px + var(--gutter));
+        padding-top: 96px;
+        scroll-padding-top: 96px;
     }
 }
 
@@ -92,4 +92,40 @@ body {
 
 .mb-6 {
     margin-bottom: 6rem;
+}
+
+.mt-0_25 {
+    margin-bottom: 0.25rem;
+}
+
+.mt-0_5 {
+    margin-top: 0.5rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-1_5 {
+    margin-top: 1.5rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-6 {
+    margin-top: 6rem;
 }

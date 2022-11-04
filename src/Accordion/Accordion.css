@@ -33,11 +33,11 @@
 }
 
 .accordion-content {
-    padding: 1rem 0.75rem 1.5rem 2.25rem;
+    padding: 1rem 0.75rem 1.5rem 0.75rem;
 }
 
 @media (min-width: 648px) {
     .accordion-content {
-        padding: 1rem 0.75rem 1.5rem 2.625rem;
+        padding: 1rem 0.75rem 1.5rem 2.75rem;
     }
 }
