@@ -9,4 +9,5 @@ export default {
 export const Default = (args) => <LinkPanel {...args}></LinkPanel>;
 Default.args = {
     children: "Small link panel",
+    href: "#",
 };

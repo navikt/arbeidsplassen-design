@@ -1,0 +1,29 @@
+.dsa-article-pull-outside {
+    width: 100%;
+}
+
+@media (min-width: 848px) {
+    .dsa-article-pull-outside {
+        width: 800px;
+        margin-right: -100px;
+        margin-left: -100px;
+    }
+}
+
+.dsa-article-image,
+.dsa-article-image img{
+    margin: 0;
+    width: 100%;
+}
+
+.dsa-article-image figcaption {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 1rem 0 0 0;
+}
+
+.dsa-article-blockquote {
+    background: var(--primary-5);
+    padding: calc(var(--gutter) * 1.675);
+}

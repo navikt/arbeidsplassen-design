@@ -1,11 +1,14 @@
 @import "./variables.css";
 
+@import "./Article/Article.css";
 @import "./Accordion/Accordion.css";
 @import "./Alert/Alert.css";
 @import "./Anchor/Anchor.css";
+@import "./Blockquote/Blockquote.css";
 @import "./BodyText/BodyText.css";
 @import "./Button/Button.css";
 @import "./Container/Container.css";
+@import "./Figure/Figure.css";
 @import "./Footer/Footer.css";
 @import "./Header/Header.css";
 @import "./Heading/Heading.css";
@@ -129,3 +132,12 @@ body {
 .mt-6 {
     margin-top: 6rem;
 }
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+

@@ -1,4 +1,4 @@
-.dsa-link-button {
+.dsa-link-panel {
     display: inline-flex;
     justify-content: space-between;
     gap: 2rem;
@@ -11,60 +11,61 @@
     line-height: var(--line-height-medium);
     cursor: pointer;
     font-family: "Inter", sans-serif;
+    text-decoration: none;
 }
 
-.dsa-link-button:hover {
+.dsa-link-panel:hover {
     text-decoration: underline;
 }
 
-.dsa-link-button:focus {
+.dsa-link-panel:focus {
     outline: 2px solid var(--secondary-60);
     outline-offset: 2px;
 }
 
-.dsa-link-button-icon {
+.dsa-link-panel-icon {
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.125rem;
 }
-.dsa-link-button-primary-dark {
+.dsa-link-panel-primary-dark {
     background-color: var(--primary-80);
     color: var(--primary-20);
 }
 
-.dsa-link-button-primary-dark .dsa-link-button-icon {
+.dsa-link-panel-primary-dark .dsa-link-panel-icon {
     background: var(--primary-20);
     color: var(--primary-80);
 }
 
-.dsa-link-button-primary {
+.dsa-link-panel-primary {
     background: var(--primary-20);
     color: var(--primary-80);
 }
 
-.dsa-link-button-primary .dsa-link-button-icon {
+.dsa-link-panel-primary .dsa-link-panel-icon {
     background: var(--primary-80);
     color: var(--primary-20);
 }
 
-.dsa-link-button-secondary {
+.dsa-link-panel-secondary {
     background: var(--secondary-20);
     color: var(--primary-80);
 }
 
-.dsa-link-button-secondary .dsa-link-button-icon {
+.dsa-link-panel-secondary .dsa-link-panel-icon {
     background: var(--primary-80);
     color: var(--secondary-20);
 }
 
-.dsa-link-button-tertiary {
+.dsa-link-panel-tertiary {
     background: var(--tertiary-5);
     color: var(--primary-80);
 }
 
-.dsa-link-button-tertiary .dsa-link-button-icon {
+.dsa-link-panel-tertiary .dsa-link-panel-icon {
     background: var(--primary-80);
     color: var(--tertiary-5);
 }

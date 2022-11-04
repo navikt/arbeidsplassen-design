@@ -1,0 +1,16 @@
+.dsa-blockquote-figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.dsa-blockquote-figcaption {
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+.dsa-blockquote {
+    line-height: 1.5rem;
+    font-style: italic;
+    margin: 0;
+}

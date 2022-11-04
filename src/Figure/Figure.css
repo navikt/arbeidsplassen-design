@@ -1,0 +1,11 @@
+.dsa-figure {
+    margin: 0;
+}
+
+.dsa-figure figcaption {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 1rem 0 0 0;
+}
+

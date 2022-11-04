@@ -10,8 +10,8 @@ const LinkPanel = React.forwardRef(function LinkPanel(
     return (
         <a
             className={joinClassNames(
-                "dsa-link-button",
-                `dsa-link-button-${variant}`,
+                "dsa-link-panel",
+                `dsa-link-panel-${variant}`,
                 className
             )}
             href={href}
@@ -19,7 +19,7 @@ const LinkPanel = React.forwardRef(function LinkPanel(
             onClick={onClick}
         >
             {children}
-            <span className="dsa-link-button-icon">
+            <span className="dsa-link-panel-icon">
                 <ChevronRight size="1em" />
             </span>
         </a>
