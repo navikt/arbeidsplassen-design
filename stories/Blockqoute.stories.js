@@ -1,5 +1,4 @@
 import React from "react";
-import BodyText from "../src/BodyText/BodyText";
 import Container from "../src/Container/Container";
 import Blockquote from "../src/Blockquote/Blockquote";
 
