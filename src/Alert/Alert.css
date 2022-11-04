@@ -11,7 +11,7 @@
     border-radius: 0.375rem;
 }
 
-.dsa-alert-full-width {
+.dsa-alert-fullscreen {
     justify-content: center;
     width: 100%;
 }
@@ -22,14 +22,8 @@
     gap: 0.5rem 0.75rem;
 }
 
-.dsa-alert-full-width .dsa-alert-inner {
+.dsa-alert-fullscreen .dsa-alert-inner {
     justify-content: center;
-}
-
-@media (min-width: 1272px) {
-    .dsa-alert-full-width .dsa-alert-inner {
-        padding-left: var(--gutter);
-    }
 }
 
 .dsa-alert-icon {
@@ -43,7 +37,7 @@
     gap: 0.5rem 0.75rem;
 }
 
-.dsa-alert-full-width .dsa-alert-content {
+.dsa-alert-fullscreen .dsa-alert-content {
     max-width: 960px;
 }
 

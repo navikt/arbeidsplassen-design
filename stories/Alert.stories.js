@@ -11,7 +11,7 @@ export default {
     },
     decorators: [
         (Story, context) => {
-            if (context.args.fullWidth) {
+            if (context.args.fullscreen) {
                 return Story();
             } else {
                 return <Container size="medium">{Story()}</Container>;
@@ -57,7 +57,7 @@ export const InlineNoTitle = (args) => (
     </Alert>
 );
 
-export const FullWidthShortText = (args) => (
+export const FullscreenShortText = (args) => (
     <Alert {...args}>
         <Heading level="3" size="xsmall">
             Alert title
@@ -65,14 +65,14 @@ export const FullWidthShortText = (args) => (
         Gregor Samsa woke from troubled dreams.
     </Alert>
 );
-FullWidthShortText.args = {
-    fullWidth: true,
+FullscreenShortText.args = {
+    fullscreen: true,
 };
-FullWidthShortText.parameters = {
+FullscreenShortText.parameters = {
     layout: "fullscreen",
 };
 
-export const FullWidthLongText = (args) => (
+export const FullscreenLongText = (args) => (
     <Alert {...args}>
         <Heading level="3" size="xsmall">
             Alert title
@@ -83,19 +83,19 @@ export const FullWidthLongText = (args) => (
     </Alert>
 );
 
-FullWidthLongText.args = {
-    fullWidth: true,
+FullscreenLongText.args = {
+    fullscreen: true,
 };
-FullWidthLongText.parameters = {
+FullscreenLongText.parameters = {
     layout: "fullscreen",
 };
 
-export const FullWidthNoTitle = (args) => (
+export const FullscreenNoTitle = (args) => (
     <Alert {...args}>Gregor Samsa woke from troubled dreams.</Alert>
 );
-FullWidthNoTitle.args = {
-    fullWidth: true,
+FullscreenNoTitle.args = {
+    fullscreen: true,
 };
-FullWidthNoTitle.parameters = {
+FullscreenNoTitle.parameters = {
     layout: "fullscreen",
 };

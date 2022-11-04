@@ -8,7 +8,7 @@ import joinClassNames from "../joinClassNames";
 
 function Alert({
     variant,
-    fullWidth,
+    fullscreen,
     children,
     onClose,
     className,
@@ -20,7 +20,7 @@ function Alert({
                 "dsa-alert",
                 `dsa-alert-${variant}`,
                 closeButton ? "dsa-alert-with-close" : undefined,
-                fullWidth ? "dsa-alert-full-width" : "dsa-alert-inline",
+                fullscreen ? "dsa-alert-fullscreen" : "dsa-alert-inline",
                 className
             )}
         >
@@ -48,13 +48,13 @@ Alert.defaultProps = {
     variant: "info",
     onClose: undefined,
     className: undefined,
-    fullWidth: false,
+    fullscreen: false,
     closeButton: false,
 };
 
 Alert.propTypes = {
     variant: PropTypes.oneOf(["info", "warning", "error"]),
-    fullWidth: PropTypes.bool,
+    fullscreen: PropTypes.bool,
     onClose: PropTypes.func,
     className: PropTypes.string,
     closeButton: PropTypes.bool,

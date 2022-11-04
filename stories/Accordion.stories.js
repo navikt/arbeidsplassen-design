@@ -29,7 +29,7 @@ Default.decorators = [
     (Story) => <div style={{ maxWidth: "311px" }}>{Story()}</div>,
 ];
 
-export const MoreThanOne = () => (
+export const Multiple = () => (
     <div>
         <Accordion title="Accordion title" className="mb-1">
             <BodyText>
@@ -47,6 +47,6 @@ export const MoreThanOne = () => (
     </div>
 );
 
-MoreThanOne.decorators = [
+Multiple.decorators = [
     (Story) => <div style={{ maxWidth: "311px" }}>{Story()}</div>,
 ];
