@@ -2,8 +2,6 @@ import React from "react";
 import Alert from "../src/Alert/Alert";
 import Heading from "../src/Heading/Heading";
 import Container from "../src/Container/Container";
-import Trash from "../src/Feather/Trash";
-import Heart from "../src/Feather/Heart";
 
 export default {
     title: "Example/Alert",
