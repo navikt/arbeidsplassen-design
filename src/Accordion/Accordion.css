@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-.dsa-accordion-button[aria-expanded="true"]{
+.dsa-accordion-button[aria-expanded="true"] {
     background: var(--primary-10);
 }
 
