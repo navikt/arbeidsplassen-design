@@ -1,5 +1,23 @@
 @import "./variables.css";
 
+@import "./Accordion/Accordion.css";
+@import "./Alert/Alert.css";
+@import "./Anchor/Anchor.css";
+@import "./Blockquote/Blockquote.css";
+@import "./BodyText/BodyText.css";
+@import "./Button/Button.css";
+@import "./Container/Container.css";
+@import "./Figure/Figure.css";
+@import "./Footer/Footer.css";
+@import "./Header/Header.css";
+@import "./Heading/Heading.css";
+@import "./Ingress/Ingress.css";
+@import "./LinkPanel/LinkPanel.css";
+@import "./List/List.css";
+@import "./Pill/Pill.css";
+@import "./SkipLink/SkipLink.css";
+@import "./Tag/Tag.css";
+
 *,
 *:before,
 *:after {
@@ -119,3 +137,6 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
 }
+
+
+

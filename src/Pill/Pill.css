@@ -17,7 +17,7 @@
 }
 
 .dsa-pill:focus {
-    outline: 2px solid var(--secondary-60);
+    outline: 3px solid var(--secondary-60);
 }
 
 .dsa-pill-screen-reader-only {

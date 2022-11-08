@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import ChevronDown from "../Feather/ChevronDown";
 import ChevronUp from "../Feather/ChevronUp";
 import joinClassNames from "../joinClassNames";
-import "./Accordion.css";
 
 function Accordion({ openByDefault, title, children, className }) {
     const [isOpen, setIsOpen] = useState(openByDefault);

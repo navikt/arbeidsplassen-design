@@ -46,7 +46,7 @@
 }
 
 .dsa-header-logo:focus-visible {
-    outline: 2px solid var(--secondary-60);
+    outline: 3px solid var(--secondary-60);
 }
 
 .dsa-header-logo i {
@@ -149,24 +149,23 @@
     text-decoration: none;
     font-size: var(--font-size-default);
     line-height: 1.5rem;
-    border-bottom: 3px solid transparent;
-}
-
-.dsa-header-menu-both ul li a.dsa-header-active,
-.dsa-header-menu-both ul li a:hover,
-.dsa-header-menu ul li a.dsa-header-active,
-.dsa-header-menu ul li a:hover {
-    border-color: var(--primary-40);
 }
 
 .dsa-header-menu-both ul li a.dsa-header-active,
 .dsa-header-menu ul li a.dsa-header-active {
     font-weight: 600;
+    box-shadow: 0 4px 0 0 var(--primary-40);
+}
+
+.dsa-header-menu-both ul li a:hover,
+.dsa-header-menu ul li a:hover {
+    background: var(--secondary-20);
+    box-shadow: 0 2px 0 0 var(--secondary-60);
 }
 
 .dsa-header-menu-both ul li a:focus,
 .dsa-header-menu ul li a:focus {
-    outline: 2px solid var(--secondary-60);
+    outline: 3px solid var(--secondary-60);
 }
 
 @media (min-width: 1272px) {
@@ -212,7 +211,7 @@
 }
 
 .dsa-header-account:focus {
-    outline: 2px solid var(--secondary-60);
+    outline: 3px solid var(--secondary-60);
 }
 
 @media (max-width: 400px) {

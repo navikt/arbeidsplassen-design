@@ -1,8 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
-import "./Blockquote.css";
 
+/**
+ *
+ * @param children {"sad" | "asdasd"} asd ads
+ * @param caption asdasd
+ * @param className asd ad
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function Blockquote({ children, caption, className }) {
     return (
         <figure className={joinClassNames("dsa-blockquote-figure", className)}>
@@ -13,15 +20,5 @@ function Blockquote({ children, caption, className }) {
         </figure>
     );
 }
-
-Blockquote.defaultProps = {
-    caption: undefined,
-    className: undefined,
-};
-
-Blockquote.propTypes = {
-    caption: PropTypes.string,
-    className: PropTypes.string,
-};
 
 export default Blockquote;

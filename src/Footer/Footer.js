@@ -1,6 +1,5 @@
 import React from "react";
 import Anchor from "../Anchor/Anchor";
-import "./Footer.css";
 
 export default function Footer() {
     return (
@@ -36,7 +35,7 @@ export default function Footer() {
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/hjelp/work-in-norway/no" dark>
+                            <Anchor href="/hjelp/work-in-norway/en" dark>
                                 Information to refugees
                             </Anchor>
                         </li>
@@ -47,16 +46,13 @@ export default function Footer() {
                     <h2 className="dsa-footer-heading">Personvern og vilkår</h2>
                     <ul>
                         <li>
-                            <Anchor
-                                href="/personvern-og-vilkar/personvern"
-                                dark
-                            >
+                            <Anchor href="/personvern" dark>
                                 Personvern
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/personvern-og-vilkar/vilkar" dark>
-                                Vilkår for tjenesten
+                            <Anchor href="/vilkar-og-retningslinjer" dark>
+                                Vilkår og retningslinjer
                             </Anchor>
                         </li>
                     </ul>
@@ -64,7 +60,7 @@ export default function Footer() {
             </nav>
             <div className="dsa-footer-bottom">
                 <a
-                    href="@/modules/App/dsa-footer/dsa-footer"
+                    href="https://www.nav.no/"
                     className="dsa-footer-logo"
                     aria-label="Gå til nav.no"
                 >

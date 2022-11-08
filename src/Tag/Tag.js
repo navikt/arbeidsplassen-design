@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
-import "./Tag.css";
 
 function Tag({ children, variant, small, className }) {
     return (

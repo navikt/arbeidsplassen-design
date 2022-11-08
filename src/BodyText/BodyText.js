@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
-import "./BodyText.css";
 
 function BodyText({ children, className }) {
     return (

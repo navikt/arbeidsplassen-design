@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 import ChevronRight from "../Feather/ChevronRight";
-import "./LinkPanel.css";
 
 const LinkPanel = React.forwardRef(function LinkPanel(
-    { onClick, href, children, className, variant },
+    { onClick, href, children, className, variant, size },
     ref
 ) {
     return (
@@ -13,6 +12,7 @@ const LinkPanel = React.forwardRef(function LinkPanel(
             className={joinClassNames(
                 "dsa-link-panel",
                 `dsa-link-panel-${variant}`,
+                `dsa-link-panel-${size}`,
                 className
             )}
             href={href}
@@ -29,7 +29,8 @@ const LinkPanel = React.forwardRef(function LinkPanel(
 
 LinkPanel.defaultProps = {
     className: undefined,
-    variant: "primary",
+    variant: "tertiary",
+    size: "small",
 };
 
 LinkPanel.propTypes = {
@@ -40,6 +41,7 @@ LinkPanel.propTypes = {
         "secondary",
         "tertiary",
     ]),
+    size: PropTypes.oneOf(["small", "medium"]),
 };
 
 export default LinkPanel;
