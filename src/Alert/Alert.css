@@ -54,11 +54,11 @@
 }
 
 .dsa-alert-close:hover {
-    border-color: var(--primary-100);
+    background: var(--secondary-20);
 }
 
 .dsa-alert-close:focus {
-    outline: 2px solid var(--primary-100);
+    outline: 3px solid var(--secondary-60);
 }
 
 .dsa-alert.dsa-alert-info {

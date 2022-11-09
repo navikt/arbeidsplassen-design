@@ -19,13 +19,21 @@ const LinkPanel = React.forwardRef(function LinkPanel(
             ref={ref}
             onClick={onClick}
         >
-            {children}
-            <span className="dsa-link-panel-icon">
+            <div>{children}</div>
+            <div className="dsa-link-panel-icon">
                 <ChevronRight size="1em" />
-            </span>
+            </div>
         </a>
     );
 });
+
+LinkPanel.Title = ({ children }) => {
+    return <div className="dsa-link-panel-title">{children}</div>;
+};
+
+LinkPanel.Description = ({ children }) => {
+    return <div className="dsa-link-panel-description">{children}</div>;
+};
 
 LinkPanel.defaultProps = {
     className: undefined,
