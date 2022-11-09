@@ -19,25 +19,25 @@ const LinkPanel = React.forwardRef(function LinkPanel(
             ref={ref}
             onClick={onClick}
         >
-            <div>{children}</div>
+            <div className="dsa-link-panel-content">{children}</div>
             <div className="dsa-link-panel-icon">
-                <ChevronRight size="1em" />
+                <ChevronRight size={size === "small" ? "1.5rem" : "2rem"} />
             </div>
         </a>
     );
 });
 
-LinkPanel.Title = ({ children }) => {
-    return <div className="dsa-link-panel-title">{children}</div>;
+export const LinkPanelDescription = ({ children }) => {
+    return <div className="dsa-link-panel-description">{children}</div>;
 };
 
-LinkPanel.Description = ({ children }) => {
-    return <div className="dsa-link-panel-description">{children}</div>;
+export const LinkPanelTitle = ({ children }) => {
+    return <div className="dsa-link-panel-title">{children}</div>;
 };
 
 LinkPanel.defaultProps = {
     className: undefined,
-    variant: "tertiary",
+    variant: "secondary",
     size: "small",
 };
 
@@ -49,7 +49,7 @@ LinkPanel.propTypes = {
         "secondary",
         "tertiary",
     ]),
-    size: PropTypes.oneOf(["small", "medium"]),
+    size: PropTypes.oneOf(["small", "large"]),
 };
 
 export default LinkPanel;
