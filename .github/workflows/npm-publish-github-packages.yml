@@ -35,4 +35,6 @@ jobs:
           node-version: 16
       - run: npm publish
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NPM_AUTOMATION }}
+          GITHUB_TOKEN: ${{ secrets.GIT_REPO }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTOMATION }}
