@@ -55,7 +55,7 @@ body {
     }
 }
 
-@media (min-width: 648px) {
+@media (min-width: 720px) {
     .header-offset {
         /* equals to fixed header height */
         padding-top: 96px;
