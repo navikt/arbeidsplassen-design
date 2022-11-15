@@ -28,7 +28,7 @@ jobs:
             //npm.pkg.github.com/:_authToken=$TOKEN
           EOF
         env:
-          TOKEN: ${{ secrets.GPR_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
