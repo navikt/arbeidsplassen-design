@@ -1,5 +1,4 @@
 import React from "react";
-import List from "../src/List/List";
 import Container from "../src/Container/Container";
 import TabMenu, { TabMenuItem } from "../src/TabMenu/TabMenu";
 
