@@ -1,7 +1,7 @@
 {
   "name": "@navikt/arbeidsplassen-design",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "prettier:format": "npx prettier -w src",
     "start": "start-storybook -p 6006",
