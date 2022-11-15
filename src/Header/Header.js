@@ -50,7 +50,7 @@ export default function Header({
     };
 
     return (
-        <header className="dsa-header-wrapper">
+        <header className="dsa-header-wrapper dsa-container">
             <nav
                 aria-label="Hovedmeny"
                 className={joinClassNames("dsa-header", className)}

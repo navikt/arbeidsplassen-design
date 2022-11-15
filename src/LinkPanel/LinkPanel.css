@@ -5,7 +5,7 @@
     align-items: flex-start;
     flex-direction: row;
     border-radius: 0.25rem;
-    padding: var(--gutter);
+    padding: 1rem;
     font-size: var(--font-size-default);
     line-height: var(--line-height-default);
     cursor: pointer;
@@ -13,8 +13,14 @@
     text-decoration: none;
 }
 
-.dsa-link-panel-large {
-    gap: var(--gutter);
+@media (min-width: 375px) {
+    .dsa-link-panel {
+        padding: 1.5rem;
+    }
+
+    .dsa-link-panel-large {
+        gap: 1.5rem;
+    }
 }
 
 .dsa-link-panel-content {
@@ -29,7 +35,7 @@
     line-height: var(--line-height-medium);
 }
 
-.dsa-link-panel-large .dsa-link-panel-title{
+.dsa-link-panel-large .dsa-link-panel-title {
     font-size: var(--font-size-xlarge);
     line-height: var(--line-height-xlarge);
 }
@@ -62,42 +68,42 @@
     line-height: var(--line-height-xlarge);
 }
 
-.dsa-link-panel-primary-dark {
+.dsa-link-panel-dark-green {
     background-color: var(--primary-80);
     color: var(--primary-20);
 }
 
-.dsa-link-panel-primary-dark .dsa-link-panel-icon {
+.dsa-link-panel-dark-green .dsa-link-panel-icon {
     background: var(--primary-20);
     color: var(--primary-80);
 }
 
-.dsa-link-panel-primary {
+.dsa-link-panel-light-green {
     background: var(--primary-20);
     color: var(--primary-80);
 }
 
-.dsa-link-panel-primary .dsa-link-panel-icon {
+.dsa-link-panel-light-green .dsa-link-panel-icon {
     background: var(--primary-80);
     color: var(--primary-20);
 }
 
-.dsa-link-panel-secondary {
+.dsa-link-panel-blue {
     background: var(--secondary-20);
     color: var(--primary-80);
 }
 
-.dsa-link-panel-secondary .dsa-link-panel-icon {
+.dsa-link-panel-blue .dsa-link-panel-icon {
     background: var(--primary-80);
     color: var(--secondary-20);
 }
 
-.dsa-link-panel-tertiary {
+.dsa-link-panel-orange {
     background: var(--tertiary-5);
     color: var(--primary-80);
 }
 
-.dsa-link-panel-tertiary .dsa-link-panel-icon {
+.dsa-link-panel-orange .dsa-link-panel-icon {
     background: var(--primary-80);
     color: var(--tertiary-5);
 }

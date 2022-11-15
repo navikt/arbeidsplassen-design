@@ -2,9 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 
-function Container({ size, children, className }) {
+function Container({ size, children, className, color }) {
     return (
-        <div className={joinClassNames("dsa-container", className)}>
+        <div
+            className={joinClassNames(
+                "dsa-container",
+                `dsa-container-${color}`,
+                className
+            )}
+        >
             <div
                 className={joinClassNames(
                     "dsa-container-inner",
@@ -19,12 +25,14 @@ function Container({ size, children, className }) {
 
 Container.defaultProps = {
     className: undefined,
-    size: "xlarge",
+    size: "large",
+    color: "none",
 };
 
 Container.propTypes = {
     className: PropTypes.string,
-    size: PropTypes.oneOf(["xlarge", "large", "medium"]),
+    size: PropTypes.oneOf(["large", "medium", "small"]),
+    color: PropTypes.oneOf(["none", "green", "blue", "orange"]),
 };
 
 export default Container;

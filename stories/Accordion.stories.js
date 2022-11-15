@@ -11,7 +11,7 @@ export default {
     },
     decorators: [
         (Story) => (
-            <Container size="small" className="mt-1">
+            <Container size="small" className="gt-1">
                 {Story()}
             </Container>
         ),

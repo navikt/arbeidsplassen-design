@@ -13,19 +13,19 @@
     padding: 0.25rem 0.75rem;
 }
 
-.dsa-tag-neutral {
-    background: var(--neutral-20);
-    color: var(--neutral-80);
-}
-
-.dsa-tag-info {
+.dsa-tag-blue {
     background: var(--secondary-20);
 }
 
-.dsa-tag-success {
+.dsa-tag-green {
     background: var(--primary-20);
 }
 
-.dsa-tag-error {
+.dsa-tag-red {
     background: var(--tertiary-20);
+}
+
+.dsa-tag-grey {
+    background: var(--neutral-20);
+    color: var(--neutral-80);
 }

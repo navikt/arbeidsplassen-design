@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import joinClassNames from "../joinClassNames";
 
-function Tag({ children, variant, small, className }) {
+function Tag({ children, color, small, className }) {
     return (
         <div
             className={joinClassNames(
                 "dsa-tag",
-                `dsa-tag-${variant}`,
+                `dsa-tag-${color}`,
                 small ? "dsa-tag-small" : undefined,
                 className
             )}
@@ -18,14 +18,14 @@ function Tag({ children, variant, small, className }) {
 }
 
 Tag.defaultProps = {
-    variant: "neutral",
+    color: "blue",
     className: undefined,
     small: false,
 };
 
 Tag.propTypes = {
     small: PropTypes.bool,
-    variant: PropTypes.oneOf(["info", "success", "error", "neutral"]),
+    color: PropTypes.oneOf(["blue", "green", "red", "grey"]),
     className: PropTypes.string,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),

@@ -3,8 +3,6 @@ import LinkPanel, {
     LinkPanelDescription,
     LinkPanelTitle,
 } from "../src/LinkPanel/LinkPanel";
-import Heading from "../src/Heading/Heading";
-import BodyText from "../src/BodyText/BodyText";
 
 export default {
     title: "Example/LinkPanel",
@@ -14,13 +12,13 @@ export default {
 
 export const Default = (args) => (
     <LinkPanel {...args}>
-        <LinkPanelTitle>Link panel</LinkPanelTitle>
+        <LinkPanelTitle>Link panel title</LinkPanelTitle>
     </LinkPanel>
 );
 
 export const WithBodyText = (args) => (
     <LinkPanel {...args}>
-        <LinkPanelTitle>Link panel</LinkPanelTitle>
+        <LinkPanelTitle>Link panel title</LinkPanelTitle>
         <LinkPanelDescription>
             One morning, when Gregor Samsa woke from troubled dreams.
         </LinkPanelDescription>

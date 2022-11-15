@@ -78,8 +78,14 @@
     --gutter: 1rem;
 }
 
-@media (min-width: 648px) {
+@media (min-width: 375px) {
     :root {
         --gutter: 1.5rem;
+    }
+}
+
+@media (min-width: 928px) {
+    :root {
+        --gutter: 2rem;
     }
 }

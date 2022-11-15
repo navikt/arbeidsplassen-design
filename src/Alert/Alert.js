@@ -20,7 +20,9 @@ function Alert({
                 "dsa-alert",
                 `dsa-alert-${variant}`,
                 closeButton ? "dsa-alert-with-close" : undefined,
-                fullscreen ? "dsa-alert-fullscreen" : "dsa-alert-inline",
+                fullscreen
+                    ? "dsa-alert-fullscreen dsa-container"
+                    : "dsa-alert-inline",
                 className
             )}
         >

@@ -3,7 +3,8 @@
     box-shadow: 0 1px 4px 0 #0000001a;
     border-bottom: solid 1px var(--neutral-20);
     width: 100%;
-    padding: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -11,12 +12,20 @@
 
 @media (min-width: 375px) {
     .dsa-header-wrapper {
-        padding: var(--gutter);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .dsa-header-wrapper {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 }
 
 .dsa-header {
-    max-width: 1272px;
+    max-width: 1216px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -30,23 +39,23 @@
 .dsa-header-logo {
     display: inline-block;
     height: 48px;
-    margin: 0 0.75rem 0 0;
+    margin: 0 1rem 0 0;
 }
 
 @media (min-width: 375px) {
     .dsa-header-logo {
-        margin: 0 1rem 0 0;
+        margin: 0 1.5rem 0 0;
     }
 }
 
-@media (min-width: 648px) {
+@media (min-width: 720px) {
     .dsa-header-logo {
         margin: 0 2rem 0 0;
     }
 }
 
 .dsa-header-logo:focus-visible {
-    outline: 3px solid var(--secondary-60);
+    outline: 2px solid var(--secondary-60);
 }
 
 .dsa-header-logo i {
@@ -56,7 +65,7 @@
     background-image: url("data:image/svg+xml,%3Csvg width=%2748%27 height=%2748%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M48 24C48 10.745 37.255 0 24 0S0 10.745 0 24s10.745 24 24 24h24V24Z%27 fill=%27%23C1F3DB%27/%3E%3Cpath d=%27M23.343 31.095a5.65 5.65 0 0 0 5.757-6.149 5.756 5.756 0 0 0-5.757-6.148 5.65 5.65 0 0 0-5.757 6.148 5.65 5.65 0 0 0 5.757 6.15Zm-.95-16.321a7.535 7.535 0 0 1 6.722 3.647v-2.698a.422.422 0 0 1 .392-.377h3.436a.423.423 0 0 1 .391.377V30.9h1.508a.482.482 0 0 1 .376.769l-.964 2.682c0 .196-.181.196-.377.196h-4.22a.422.422 0 0 1-.392-.376v-2.698a7.353 7.353 0 0 1-6.721 3.647c-4.989 0-9.223-4.596-9.223-10.173a9.448 9.448 0 0 1 9.042-10.172h.03Z%27 fill=%27%2308213F%27/%3E%3C/svg%3E");
 }
 
-@media (min-width: 648px) {
+@media (min-width: 720px) {
     .dsa-header-logo i {
         width: 216px;
         height: 48px;
@@ -76,14 +85,14 @@
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
     margin: 0;
     align-items: center;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 1344px) {
     .dsa-header-menu-both ul {
-        gap: var(--gutter);
+        gap: 1.5rem;
     }
 }
 
@@ -101,7 +110,7 @@
     color: var(--secondary-60);
 }
 
-@media (min-width: 1272px) {
+@media (min-width: 1344px) {
     .dsa-header-hide-on-desktop {
         display: none;
     }
@@ -116,18 +125,63 @@
     align-items: center;
 }
 
-@media (max-width: 1271px) {
+@media (max-width: 1343px) {
     .dsa-header-menu-hidden {
         display: none;
     }
 }
 
-@media (min-width: 1272px) {
+@media (min-width: 1344px) {
     .dsa-header-menu {
         width: auto;
         flex: 1;
         flex-direction: row;
         padding: 0;
+    }
+}
+
+.dsa-header-menu ul {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 0 1rem 0;
+    align-items: center;
+}
+
+.dsa-header-menu-both ul li a,
+.dsa-header-menu ul li a {
+    white-space: nowrap;
+    color: var(--primary-100);
+    text-decoration: none;
+    font-size: var(--font-size-default);
+    line-height: 1.5rem;
+}
+
+.dsa-header-menu-both ul li a.dsa-header-active,
+.dsa-header-menu ul li a.dsa-header-active {
+    font-weight: 600;
+    box-shadow: 0 4px 0 0 var(--primary-40);
+}
+
+.dsa-header-menu-both ul li a:hover,
+.dsa-header-menu ul li a:hover {
+    background: var(--secondary-20);
+    box-shadow: 0 2px 0 0 var(--secondary-60);
+}
+
+.dsa-header-menu-both ul li a:focus,
+.dsa-header-menu ul li a:focus {
+    outline: 3px solid var(--secondary-60);
+}
+
+@media (min-width: 1344px) {
+    .dsa-header-menu ul {
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
     }
 }
 
@@ -139,7 +193,7 @@
     font-size: var(--font-size-default);
 }
 
-@media (min-width: 1272px) {
+@media (min-width: 1344px) {
     .dsa-header-user {
         flex-direction: row;
         gap: 1.5rem;

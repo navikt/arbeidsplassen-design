@@ -3,7 +3,7 @@ import Anchor from "../Anchor/Anchor";
 
 export default function Footer() {
     return (
-        <footer className="dsa-footer">
+        <footer className="dsa-footer dsa-container">
             <nav className="dsa-footer-sections">
                 <section className="dsa-footer-section">
                     <h2 className="dsa-footer-heading">Om oss</h2>

@@ -4,14 +4,14 @@ import joinClassNames from "../joinClassNames";
 import ChevronRight from "../Feather/ChevronRight";
 
 const LinkPanel = React.forwardRef(function LinkPanel(
-    { onClick, href, children, className, variant, size },
+    { onClick, href, children, className, color, size },
     ref
 ) {
     return (
         <a
             className={joinClassNames(
                 "dsa-link-panel",
-                `dsa-link-panel-${variant}`,
+                `dsa-link-panel-${color}`,
                 `dsa-link-panel-${size}`,
                 className
             )}
@@ -37,18 +37,13 @@ export const LinkPanelTitle = ({ children }) => {
 
 LinkPanel.defaultProps = {
     className: undefined,
-    variant: "secondary",
+    color: "orange",
     size: "small",
 };
 
 LinkPanel.propTypes = {
     className: PropTypes.string,
-    variant: PropTypes.oneOf([
-        "primary-dark",
-        "primary",
-        "secondary",
-        "tertiary",
-    ]),
+    color: PropTypes.oneOf(["dark-green", "light-green", "blue", "orange"]),
     size: PropTypes.oneOf(["small", "large"]),
 };
 
