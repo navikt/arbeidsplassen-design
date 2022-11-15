@@ -21,6 +21,15 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            @navikt:registry=https://npm.pkg.github.com
+            //npm.pkg.github.com/:_authToken=$TOKEN
+          EOF
+        env:
+          TOKEN: ${{ secrets.GPR_TOKEN }}
+      - name: Publish to GPR
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
