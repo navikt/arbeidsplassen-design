@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   deploy-docker-image:
+    if: "contains(github.event.head_commit.message, 'release:publish')"
     name: Publish package
     runs-on: ubuntu-latest
     steps:
