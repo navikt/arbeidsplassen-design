@@ -3,7 +3,7 @@ import BodyText from "../src/BodyText/BodyText";
 import Container from "../src/Container/Container";
 
 export default {
-    title: "Example/BodyText",
+    title: "Typography/BodyText",
     component: BodyText,
     decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };

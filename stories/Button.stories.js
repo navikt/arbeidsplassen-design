@@ -4,7 +4,7 @@ import Trash from "../src/Feather/Trash";
 import Heart from "../src/Feather/Heart";
 
 export default {
-    title: "Example/Button",
+    title: "Components/Button",
     component: Button,
     argTypes: {
         icon: {

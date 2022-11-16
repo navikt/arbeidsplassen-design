@@ -5,7 +5,7 @@ import LinkPanel, {
 } from "../src/LinkPanel/LinkPanel";
 
 export default {
-    title: "Example/LinkPanel",
+    title: "Components/LinkPanel",
     component: LinkPanel,
     decorators: [(Story) => <div style={{ maxWidth: 400 }}>{Story()}</div>],
 };

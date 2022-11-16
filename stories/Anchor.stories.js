@@ -3,7 +3,7 @@ import Anchor from "../src/Anchor/Anchor";
 import ChevronLeft from "../src/Feather/ChevronLeft";
 
 export default {
-    title: "Example/Anchor",
+    title: "Components/Anchor",
     component: Anchor,
 };
 

@@ -3,7 +3,7 @@ import Heading from "../src/Heading/Heading";
 import Container from "../src/Container/Container";
 
 export default {
-    title: "Example/Heading",
+    title: "Typography/Heading",
     component: Heading,
     decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };

@@ -3,7 +3,7 @@ import List from "../src/List/List";
 import Container from "../src/Container/Container";
 
 export default {
-    title: "Example/List",
+    title: "Typography/List",
     component: List,
     decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };

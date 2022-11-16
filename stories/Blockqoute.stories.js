@@ -3,7 +3,7 @@ import Container from "../src/Container/Container";
 import Blockquote from "../src/Blockquote/Blockquote";
 
 export default {
-    title: "Example/Blockquote",
+    title: "Typography/Blockquote",
     component: Blockquote,
     decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };

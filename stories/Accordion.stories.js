@@ -4,7 +4,7 @@ import BodyText from "../src/BodyText/BodyText";
 import Container from "../src/Container/Container";
 
 export default {
-    title: "Example/Accordion",
+    title: "Components/Accordion",
     component: Accordion,
     parameters: {
         layout: "fullscreen",

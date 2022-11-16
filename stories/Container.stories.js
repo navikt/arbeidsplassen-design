@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../src/Container/Container";
 
 export default {
-    title: "Example/Container",
+    title: "Components/Container",
     component: Container,
     parameters: {
         layout: "fullscreen",

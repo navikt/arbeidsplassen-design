@@ -4,7 +4,7 @@ import Heading from "../src/Heading/Heading";
 import Container from "../src/Container/Container";
 
 export default {
-    title: "Example/Alert",
+    title: "Components/Alert",
     component: Alert,
     args: {
         onClose: undefined,

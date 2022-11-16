@@ -2,7 +2,7 @@ import React from "react";
 import Tag from "../src/Tag/Tag";
 
 export default {
-    title: "Example/Tag",
+    title: "Components/Tag",
     component: Tag,
 };
 

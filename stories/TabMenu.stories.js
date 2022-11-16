@@ -3,7 +3,7 @@ import Container from "../src/Container/Container";
 import TabMenu, { TabMenuItem } from "../src/TabMenu/TabMenu";
 
 export default {
-    title: "Example/TabMenu",
+    title: "Components/TabMenu",
     component: TabMenu,
     decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };

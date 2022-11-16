@@ -5,7 +5,7 @@ import Panel from "../src/Panel/Panel";
 import Ingress from "../src/Ingress/Ingress";
 
 export default {
-    title: "Example/Panel",
+    title: "Components/Panel",
     component: Panel,
     parameters: {
         layout: "fullscreen",

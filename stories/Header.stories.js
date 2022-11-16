@@ -6,7 +6,7 @@ import Header, {
 } from "../src/Header/Header";
 
 export default {
-    title: "Example/Header",
+    title: "Components/Header",
     component: Header,
     parameters: {
         layout: "fullscreen",

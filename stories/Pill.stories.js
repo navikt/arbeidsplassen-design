@@ -2,7 +2,7 @@ import React from "react";
 import Pill from "../src/Pill/Pill";
 
 export default {
-    title: "Example/Pill",
+    title: "Components/Pill",
     component: Pill,
 };
 
