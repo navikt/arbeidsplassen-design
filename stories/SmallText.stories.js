@@ -1,5 +1,5 @@
 import React from "react";
-import SmallText from "../src/SmallText/BodyText";
+import SmallText from "../src/SmallText/SmallText";
 
 export default {
     title: "Typography/SmallText",

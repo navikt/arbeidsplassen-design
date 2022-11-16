@@ -15,7 +15,7 @@ import Blockquote from "../../src/Blockquote/Blockquote";
 import LinkPanel, { LinkPanelTitle } from "../../src/LinkPanel/LinkPanel";
 import PullOutside from "../../src/Container/PullOutside";
 import Figure from "../../src/Figure/Figure";
-import SmallText from "../../src/SmallText/BodyText";
+import SmallText from "../../src/SmallText/SmallText";
 
 export default {
     title: "Pages/Article",
