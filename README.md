@@ -7,7 +7,7 @@ npm start
 
 ## Hvordan få tilgang til @navikt/arbeidsplassen-design i et annet prosjekt
 
-Opprett fila ".npmrc" i rotkatalogen på prosjektet.
+Opprett fila `.npmrc` i rotkatalogen på prosjektet.
 
 Legg til følgende i fila
 
