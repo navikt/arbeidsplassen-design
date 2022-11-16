@@ -1,11 +1,10 @@
 import React from "react";
-import Container from "../src/Container/Container";
 import Blockquote from "../src/Blockquote/Blockquote";
 
 export default {
     title: "Typography/Blockquote",
     component: Blockquote,
-    decorators: [(Story) => <Container size="medium">{Story()}</Container>],
+    decorators: [(Story) => <div style={{ maxWidth: 600 }}>{Story()}</div>],
 };
 
 export const Default = (args) => (

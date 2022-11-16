@@ -1,11 +1,10 @@
 import React from "react";
-import Container from "../src/Container/Container";
 import Ingress from "../src/Ingress/Ingress";
 
 export default {
     title: "Typography/Ingress",
     component: Ingress,
-    decorators: [(Story) => <Container size="medium">{Story()}</Container>],
+    decorators: [(Story) => <div style={{ maxWidth: 600 }}>{Story()}</div>],
 };
 
 export const Default = (args) => (

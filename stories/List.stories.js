@@ -1,11 +1,9 @@
 import React from "react";
 import List from "../src/List/List";
-import Container from "../src/Container/Container";
 
 export default {
     title: "Typography/List",
     component: List,
-    decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };
 
 export const Default = (args) => (

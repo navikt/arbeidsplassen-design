@@ -1,11 +1,10 @@
 import React from "react";
 import BodyText from "../src/BodyText/BodyText";
-import Container from "../src/Container/Container";
 
 export default {
     title: "Typography/BodyText",
     component: BodyText,
-    decorators: [(Story) => <Container size="medium">{Story()}</Container>],
+    decorators: [(Story) => <div style={{ maxWidth: 600 }}>{Story()}</div>],
 };
 
 export const Default = (args) => (
