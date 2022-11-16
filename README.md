@@ -17,3 +17,8 @@ Legg til følgende i fila
 ```
 
 Opprett et token med "read:packages" rettigheter. [https://github.com/settings/tokens](https://github.com/settings/tokens) Bytt ut \$TOKEN med tokenet du akkurat opprettet. Velg Authorize token under "Configure SSO" for å gi tokenet tilgang til @navikt.
+
+
+## Hvordan publisere
+
+Endre `version` i `package.json` til ny versjon du ønsker å publisere. Commit med meldingen `release:publish` før du pusher.
