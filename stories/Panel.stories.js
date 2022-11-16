@@ -16,7 +16,7 @@ export const Default = (args) => (
     <>
         <Container
             color={args.fullscreen ? args.color : undefined}
-            className={args.fullscreen ? undefined : "gt-1 gb-1"}
+            className={args.fullscreen ? "gb-1" : "gt-1 gb-1"}
         >
             <Panel {...args} color={args.fullscreen ? undefined : args.color}>
                 <Heading level="3" size="large" className="mb-0_5">
@@ -34,7 +34,7 @@ export const Default = (args) => (
         <Container
             size="medium"
             color={args.fullscreen ? args.color : undefined}
-            className={args.fullscreen ? undefined : "gt-1 gb-1"}
+            className={args.fullscreen ? "gb-1" : "gt-1 gb-1"}
         >
             <Panel {...args} color={args.fullscreen ? undefined : args.color}>
                 <Heading level="3" size="large" className="mb-0_5">
@@ -52,7 +52,7 @@ export const Default = (args) => (
         <Container
             size="small"
             color={args.fullscreen ? args.color : undefined}
-            className={args.fullscreen ? undefined : "gt-1 gb-1"}
+            className={args.fullscreen ? "gb-1" : "gt-1 gb-1"}
         >
             <Panel {...args} color={args.fullscreen ? undefined : args.color}>
                 <Heading level="3" size="large" className="mb-0_5">
