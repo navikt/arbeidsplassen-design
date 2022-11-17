@@ -16,8 +16,17 @@ export const Default = (args) => (
     </LinkPanel>
 );
 
-export const WithBodyText = (args) => (
+export const WithText = (args) => (
     <LinkPanel {...args}>
+        <LinkPanelTitle>Link panel title</LinkPanelTitle>
+        <LinkPanelDescription>
+            One morning, when Gregor Samsa woke from troubled dreams.
+        </LinkPanelDescription>
+    </LinkPanel>
+);
+
+export const LargeWithText = (args) => (
+    <LinkPanel {...args} size="large">
         <LinkPanelTitle>Link panel title</LinkPanelTitle>
         <LinkPanelDescription>
             One morning, when Gregor Samsa woke from troubled dreams.

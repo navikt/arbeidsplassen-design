@@ -11,6 +11,7 @@
     text-align: left;
     line-height: var(--line-height-small);
     font-size: var(--font-size-small);
+    font-family: var(--font-family);
     font-weight: 600;
     cursor: pointer;
     display: inline-flex;

@@ -53,9 +53,6 @@
 }
 
 .dsa-link-panel-icon {
-    margin-top: 0.125rem;
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
     border-radius: 9999px;
     display: flex;
     align-items: center;
@@ -64,8 +61,7 @@
 }
 
 .dsa-link-panel-large .dsa-link-panel-icon {
-    font-size: var(--font-size-xlarge);
-    line-height: var(--line-height-xlarge);
+    margin-top: 0.25rem;
 }
 
 .dsa-link-panel-dark-green {
