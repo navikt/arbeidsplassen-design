@@ -5,6 +5,7 @@ import AlertCircle from "../Feather/AlertCircle";
 import AlertTriangle from "../Feather/AlertTriangle";
 import XIcon from "../Feather/XIcon";
 import joinClassNames from "../joinClassNames";
+import ToolButton from "../ToolButton/ToolButton";
 
 function Alert({
     variant,
@@ -38,9 +39,12 @@ function Alert({
                 <div className="dsa-alert-content">{children}</div>
             </div>
             {closeButton && (
-                <button className="dsa-alert-close" onClick={onClose}>
-                    <XIcon />
-                </button>
+                <ToolButton
+                    className="dsa-alert-close"
+                    onClick={onClose}
+                    ariaLabel="Lukk"
+                    icon={<XIcon />}
+                />
             )}
         </div>
     );

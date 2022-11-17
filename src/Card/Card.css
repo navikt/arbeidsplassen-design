@@ -1,0 +1,97 @@
+.dsa-card {
+    display: flex;
+    width: 100%;
+}
+
+.dsa-card-content {
+    width: 100%;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: auto;
+    column-gap: 1rem;
+    align-items: start;
+    grid-template-areas:
+        "title slot-1 slot-2"
+        "content content content"
+        "expandable expandable expandable"
+        "slot-3 footer footer";
+}
+
+.dsa-card-title {
+    grid-area: title;
+    margin-top: 0.5rem;
+}
+
+.dsa-card-secondary-menu {
+    grid-area: slot-3;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dsa-card-toolbar {
+    grid-area: slot-2;
+    justify-self: end;
+    padding-top: 0.5rem;
+}
+
+.dsa-card-main {
+    grid-area: content;
+}
+
+.dsa-card-expandable-content {
+    margin-top: 1.5rem;
+    grid-area: expandable;
+}
+
+.dsa-card-hidden .dsa-card-expandable-content {
+    display: none;
+}
+
+.dsa-card-content-border {
+    border-left: var(--secondary-20) 2px solid;
+}
+
+@media (min-width: 720px) {
+    .dsa-card-content {
+        padding: 0 1rem 0 1.5rem;
+    }
+
+    .dsa-card-secondary-menu {
+        grid-area: slot-1;
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0;
+    }
+}
+
+.dsa-card-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: -1rem;
+}
+
+.dsa-card-expander {
+    padding: 0.5rem;
+    border: 0;
+    background: none;
+    border-right: var(--secondary-20) 2px solid;
+    cursor: pointer;
+    display: flex;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.dsa-card-expander.dsa-card-expanded {
+    background: var(--primary-10);
+    border-right: var(--primary-60) 2px solid;
+}
+
+.dsa-card-expander:hover {
+    background: var(--secondary-20);
+    border-right: var(--secondary-60) 2px solid;
+    color: var(--secondary-60);
+}

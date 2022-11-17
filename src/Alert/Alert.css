@@ -20,6 +20,7 @@
     width: 100%;
     display: flex;
     gap: 0.5rem 0.75rem;
+    align-self: center;
 }
 
 .dsa-alert-fullscreen .dsa-alert-inner {
@@ -39,26 +40,6 @@
 
 .dsa-alert-fullscreen .dsa-alert-content {
     max-width: 768px;
-}
-
-.dsa-alert-close {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: 4px;
-    color: var(--primary-100);
-}
-
-.dsa-alert-close:hover {
-    background: var(--secondary-20);
-}
-
-.dsa-alert-close:focus {
-    outline: 3px solid var(--secondary-60);
 }
 
 .dsa-alert.dsa-alert-info {

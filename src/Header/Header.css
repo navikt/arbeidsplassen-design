@@ -96,20 +96,6 @@
     }
 }
 
-.dsa-header-menu-button {
-    display: inline-flex;
-    gap: 0.75rem;
-    align-items: center;
-    text-decoration: underline;
-    background: none;
-    border: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.5;
-    text-align: left;
-    color: var(--secondary-60);
-}
-
 @media (min-width: 1344px) {
     .dsa-header-hide-on-desktop {
         display: none;

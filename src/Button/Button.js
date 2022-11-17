@@ -39,6 +39,7 @@ Button.propTypes = {
     htmlType: PropTypes.oneOf(["submit", "button", "reset"]),
     children: PropTypes.string.isRequired,
     className: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
 };
 
 export default Button;

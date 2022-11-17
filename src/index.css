@@ -6,6 +6,7 @@
 @import "./Blockquote/Blockquote.css";
 @import "./BodyText/BodyText.css";
 @import "./Button/Button.css";
+@import "./Card/Card.css";
 @import "./Container/Container.css";
 @import "./Figure/Figure.css";
 @import "./Footer/Footer.css";
@@ -21,6 +22,7 @@
 @import "./SmallText/SmallText.css";
 @import "./TabMenu/TabMenu.css";
 @import "./Tag/Tag.css";
+@import "./ToolButton/ToolButton.css";
 
 *,
 *:before,
@@ -67,11 +69,8 @@ body {
 .flex {
     display: flex;
     gap: var(--gutter);
-    justify-content: space-evenly;
-}
-
-.flex > * {
-    flex: 1;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .text-center {

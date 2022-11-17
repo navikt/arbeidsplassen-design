@@ -1,0 +1,28 @@
+.dsa-tool-button {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--primary-100);
+    gap: 0.5rem;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.dsa-tool-button:hover {
+    background: var(--secondary-20);
+    color: var(--secondary-60);
+}
+
+.dsa-tool-button:focus {
+    outline: 3px solid var(--secondary-60);
+}
+
+.dsa-tool-button-text {
+    margin-right: 0.25rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
