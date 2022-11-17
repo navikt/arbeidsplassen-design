@@ -9,7 +9,7 @@ export default {
         docs: {
             description: {
                 component:
-                    "Får bare benyttes for funksjoner og med ikoner som er godt etablert i digitale flater.",
+                    "Får bare benyttes for funksjoner og med ikoner som er godt etablert i digitale flater. Hvis du ikke bruker label, så husk å legge på aria-label.",
             },
         },
     },
