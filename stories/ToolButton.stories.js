@@ -1,7 +1,4 @@
 import React from "react";
-import Button from "../src/Button/Button";
-import Trash from "../src/Feather/Trash";
-import Heart from "../src/Feather/Heart";
 import ToolButton from "../src/ToolButton/ToolButton";
 import XIcon from "../src/Feather/XIcon";
 

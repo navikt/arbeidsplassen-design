@@ -13,10 +13,8 @@ import BodyText from "../src/BodyText/BodyText";
 import SmallText from "../src/SmallText/SmallText";
 import Button from "../src/Button/Button";
 import Heart from "../src/Feather/Heart";
-import Menu from "../src/Feather/Menu";
 import MoreVertical from "../src/Feather/MoreVertical";
 import ToolButton from "../src/ToolButton/ToolButton";
-import { WithLabel } from "./ToolButton.stories";
 
 export default {
     title: "Components/Card",
