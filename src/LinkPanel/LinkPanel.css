@@ -31,8 +31,8 @@
 
 .dsa-link-panel-title {
     font-weight: 600;
-    font-size: var(--font-size-medium);
-    line-height: var(--line-height-medium);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
 }
 
 .dsa-link-panel-large .dsa-link-panel-title {
