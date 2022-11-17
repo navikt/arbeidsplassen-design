@@ -12,13 +12,13 @@ export default {
         docs: {
             description: {
                 component:
-                    "Får bare benyttes for funksjoner og med ikoner som er godt etablert i digitale flater. Når en ikon ikke er godt kjent eller man ønsker å tydligjøre funksjonen så kan man bruke tool button med label.",
+                    "Får bare benyttes for funksjoner og med ikoner som er godt etablert i digitale flater.",
             },
         },
     },
 };
 
-export const Default = (args) => (
+export const WithoutLabel = (args) => (
     <ToolButton {...args} icon={<XIcon />} ariaLabel="Lukk" />
 );
 
@@ -27,3 +27,11 @@ export const WithLabel = (args) => (
         Lukk
     </ToolButton>
 );
+
+WithLabel.parameters = {
+    docs: {
+        description: {
+            story: "Når en ikon ikke er godt kjent eller man ønsker å tydligjøre funksjonen så kan man bruke tool button med label.",
+        },
+    },
+};

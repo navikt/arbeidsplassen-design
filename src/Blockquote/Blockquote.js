@@ -1,5 +1,5 @@
 import React from "react";
-import joinClassNames from "../joinClassNames";
+import joinClassNames from "../.utils/joinClassNames";
 
 /**
  *

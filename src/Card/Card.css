@@ -54,7 +54,7 @@
     border-left: var(--secondary-20) 2px solid;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 728px) {
     .dsa-card-content {
         padding: 0 1rem 0 1.5rem;
     }

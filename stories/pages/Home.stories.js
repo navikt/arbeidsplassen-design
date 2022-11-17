@@ -25,7 +25,7 @@ export const Default = (args) => (
             authenticationStatus={HeaderAuthenticationStatus.NOT_AUTHENTICATED}
             active={HeaderRoutes.PERSON}
         />
-        <main className="header-offset gb-2">
+        <main className="dsa-header-offset gb-2">
             <Container color="orange" className="gb-1">
                 <Panel fullscreen>
                     <Heading level="3" size="large">

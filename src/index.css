@@ -43,7 +43,7 @@ body {
 }
 
 @media (min-width: 320px) {
-    .header-offset {
+    .dsa-header-offset {
         /* equals to fixed header height */
         padding-top: 73px;
         scroll-padding-top: 73px;
@@ -51,30 +51,19 @@ body {
 }
 
 @media (min-width: 375px) {
-    .header-offset {
+    .dsa-header-offset {
         /* equals to fixed header height */
         padding-top: 80px;
         scroll-padding-top: 80px;
     }
 }
 
-@media (min-width: 720px) {
-    .header-offset {
+@media (min-width: 728px) {
+    .dsa-header-offset {
         /* equals to fixed header height */
         padding-top: 96px;
         scroll-padding-top: 96px;
     }
-}
-
-.flex {
-    display: flex;
-    gap: var(--gutter);
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.text-center {
-    text-align: center;
 }
 
 .mb-0_25 {

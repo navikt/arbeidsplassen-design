@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import joinClassNames from "../joinClassNames";
+import joinClassNames from "../.utils/joinClassNames";
 
 function TabMenu({ children, className }) {
     return (

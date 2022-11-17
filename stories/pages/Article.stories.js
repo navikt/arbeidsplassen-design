@@ -31,7 +31,7 @@ export const Default = (args) => (
             authenticationStatus={HeaderAuthenticationStatus.NOT_AUTHENTICATED}
             active={HeaderRoutes.PERSON}
         />
-        <main className="header-offset">
+        <main className="dsa-header-offset">
             <Container size="small" className="gt-2 gb-2">
                 <Heading level="1" size="xlarge" className="mb-0_5">
                     When Gregor Samsa woke

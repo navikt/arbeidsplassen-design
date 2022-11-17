@@ -16,6 +16,7 @@ import Heart from "../src/Feather/Heart";
 import Menu from "../src/Feather/Menu";
 import MoreVertical from "../src/Feather/MoreVertical";
 import ToolButton from "../src/ToolButton/ToolButton";
+import { WithLabel } from "./ToolButton.stories";
 
 export default {
     title: "Components/Card",
@@ -32,7 +33,9 @@ export const Default = (args) => (
                     size="small"
                     className="dsa-card-header mb-0_5"
                 >
-                    <Anchor href="#">He lay on his armour-like back</Anchor>
+                    <Anchor href="#">
+                        What a strenuous career it is that I've chosen
+                    </Anchor>
                 </Heading>
             </CardTitle>
 
@@ -53,7 +56,9 @@ export const Default = (args) => (
                     rolled back to where he was. He must have tried it a hundred
                     times.
                 </BodyText>
-                <div className="flex">
+                <div
+                    style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}
+                >
                     <div>
                         <Label mini>Category heading</Label>
                         <SmallText>Cat text</SmallText>

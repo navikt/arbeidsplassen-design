@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import joinClassNames from "../joinClassNames";
+import joinClassNames from "../.utils/joinClassNames";
 
 const ToolButton = React.forwardRef(
     ({ children, icon, onClick, className, disabled, ariaLabel }, ref) => (

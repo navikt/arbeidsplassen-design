@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import joinClassNames from "../joinClassNames";
+import joinClassNames from "../.utils/joinClassNames";
 
 const Anchor = React.forwardRef(function Anchor(
     { onClick, href, children, dark, className },

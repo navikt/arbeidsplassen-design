@@ -7,7 +7,7 @@ import LoginButton from "./LoginButton";
 import PersonMenu from "./PersonMenu";
 import CompanyMenu from "./CompanyMenu";
 import LoggedInUser from "./LoggedInUser";
-import joinClassNames from "../joinClassNames";
+import joinClassNames from "../.utils/joinClassNames";
 
 export const HeaderAuthenticationStatus = {
     UNKNOWN: "UNKNOWN",

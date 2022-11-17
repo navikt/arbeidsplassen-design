@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import joinClassNames from "../joinClassNames";
+import joinClassNames from "../.utils/joinClassNames";
 import Button from "../Button/Button";
 import Trash from "../Feather/Trash";
 import User from "../Feather/User";

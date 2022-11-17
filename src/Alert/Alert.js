@@ -4,7 +4,7 @@ import XOctagon from "../Feather/XOctagon";
 import AlertCircle from "../Feather/AlertCircle";
 import AlertTriangle from "../Feather/AlertTriangle";
 import XIcon from "../Feather/XIcon";
-import joinClassNames from "../joinClassNames";
+import joinClassNames from "../.utils/joinClassNames";
 import ToolButton from "../ToolButton/ToolButton";
 
 function Alert({
