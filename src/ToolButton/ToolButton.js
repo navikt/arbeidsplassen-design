@@ -28,7 +28,7 @@ ToolButton.defaultProps = {
 ToolButton.propTypes = {
     disabled: PropTypes.bool,
     icon: PropTypes.node,
-    children: PropTypes.string.isRequired,
+    children: PropTypes.string,
     className: PropTypes.string,
     ariaLabel: PropTypes.string,
     onClick: PropTypes.func.isRequired,
