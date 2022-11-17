@@ -98,7 +98,7 @@
 
 @media (min-width: 1344px) {
     .dsa-header-hide-on-desktop {
-        display: none;
+        display: none!important;
     }
 }
 
