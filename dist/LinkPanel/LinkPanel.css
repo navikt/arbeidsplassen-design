@@ -1,0 +1,105 @@
+.dsa-link-panel {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-direction: row;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: var(--font-size-default);
+    line-height: var(--line-height-default);
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+
+@media (min-width: 375px) {
+    .dsa-link-panel {
+        padding: 1.5rem;
+    }
+
+    .dsa-link-panel-large {
+        gap: 1.5rem;
+    }
+}
+
+.dsa-link-panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dsa-link-panel-title {
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+}
+
+.dsa-link-panel-large .dsa-link-panel-title {
+    font-size: var(--font-size-xlarge);
+    line-height: var(--line-height-xlarge);
+}
+
+.dsa-link-panel:hover .dsa-link-panel-title {
+    text-decoration: underline;
+}
+
+.dsa-link-panel:focus {
+    outline: 3px solid var(--secondary-60);
+}
+
+.dsa-link-panel-primary-dark:focus {
+    outline-offset: 1px;
+}
+
+.dsa-link-panel-icon {
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.125rem;
+}
+
+.dsa-link-panel-large .dsa-link-panel-icon {
+    margin-top: 0.25rem;
+}
+
+.dsa-link-panel-dark-green {
+    background-color: var(--primary-80);
+    color: var(--primary-20);
+}
+
+.dsa-link-panel-dark-green .dsa-link-panel-icon {
+    background: var(--primary-20);
+    color: var(--primary-80);
+}
+
+.dsa-link-panel-light-green {
+    background: var(--primary-20);
+    color: var(--primary-80);
+}
+
+.dsa-link-panel-light-green .dsa-link-panel-icon {
+    background: var(--primary-80);
+    color: var(--primary-20);
+}
+
+.dsa-link-panel-blue {
+    background: var(--secondary-20);
+    color: var(--primary-80);
+}
+
+.dsa-link-panel-blue .dsa-link-panel-icon {
+    background: var(--primary-80);
+    color: var(--secondary-20);
+}
+
+.dsa-link-panel-orange {
+    background: var(--tertiary-5);
+    color: var(--primary-80);
+}
+
+.dsa-link-panel-orange .dsa-link-panel-icon {
+    background: var(--primary-80);
+    color: var(--tertiary-5);
+}

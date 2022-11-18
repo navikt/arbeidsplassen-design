@@ -1,3 +1,2 @@
-import Accordion from './Accordion/Accordion';
-
-export { Accordion };
+export * from './Accordion';
+export * from './Header';

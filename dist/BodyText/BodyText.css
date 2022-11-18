@@ -1,0 +1,5 @@
+.dsa-body-text {
+    font-size: var(--font-size-default);
+    line-height: var(--line-height-default);
+    margin: 0;
+}

@@ -1,0 +1,31 @@
+.dsa-tag {
+    padding: 0.375rem 0.75rem;
+    border-radius: 1.125rem 1.125rem 0 1.125rem;
+    display: inline-block;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-100);
+}
+
+.dsa-tag-small {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.dsa-tag-blue {
+    background: var(--secondary-20);
+}
+
+.dsa-tag-green {
+    background: var(--primary-20);
+}
+
+.dsa-tag-red {
+    background: var(--tertiary-20);
+}
+
+.dsa-tag-grey {
+    background: var(--neutral-20);
+    color: var(--neutral-80);
+}
