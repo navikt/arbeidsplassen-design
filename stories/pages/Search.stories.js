@@ -7,21 +7,20 @@ import Header, {
 import Footer from "../../src/Footer/Footer";
 import Container from "../../src/Container/Container";
 import Heading from "../../src/Heading/Heading";
-import Ingress from "../../src/Ingress/Ingress";
 import BodyText from "../../src/BodyText/BodyText";
 import Anchor from "../../src/Anchor/Anchor";
-import List from "../../src/List/List";
-import Blockquote from "../../src/Blockquote/Blockquote";
-import LinkPanel, { LinkPanelTitle } from "../../src/LinkPanel/LinkPanel";
-import PullOutside from "../../src/Container/PullOutside";
-import Figure from "../../src/Figure/Figure";
 import SmallText from "../../src/SmallText/SmallText";
 import Accordion from "../../src/Accordion/Accordion";
-import Card, { CardSecondaryMenu, CardTitle } from "../../src/Card/Card";
+import ListEntity, {
+    ListEntityContent,
+    ListEntityHeading,
+    ListEntitySecondaryMenu,
+} from "../../src/ListEntity/ListEntity";
 import Label from "../../src/Label/Label";
 import Button from "../../src/Button/Button";
 import Heart from "../../src/Feather/Heart";
 import XIcon from "../../src/Feather/XIcon";
+import * as PropTypes from "prop-types";
 
 export default {
     title: "Pages/Search",
@@ -194,8 +193,8 @@ export const Default = (args) => (
                             </div>
                         </div>
                         {stillinger.concat(stillinger).map((ad) => (
-                            <Card className="mb-2">
-                                <CardTitle>
+                            <ListEntity className="mb-2">
+                                <ListEntityHeading>
                                     <Heading
                                         level="3"
                                         size="small"
@@ -203,7 +202,8 @@ export const Default = (args) => (
                                     >
                                         <Anchor href="#">{ad.title}</Anchor>
                                     </Heading>
-
+                                </ListEntityHeading>
+                                <ListEntityContent>
                                     <Label className="mb-1">
                                         {ad.position}
                                     </Label>
@@ -243,13 +243,13 @@ export const Default = (args) => (
                                             </SmallText>
                                         </div>
                                     </div>
-                                </CardTitle>
-                                <CardSecondaryMenu>
+                                </ListEntityContent>
+                                <ListEntitySecondaryMenu>
                                     <Button variant="tertiary" icon={<Heart />}>
                                         Lagre
                                     </Button>
-                                </CardSecondaryMenu>
-                            </Card>
+                                </ListEntitySecondaryMenu>
+                            </ListEntity>
                         ))}
 
                         <div

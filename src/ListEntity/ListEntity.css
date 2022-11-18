@@ -1,9 +1,9 @@
-.dsa-card {
+.dsa-list-entity {
     display: flex;
     width: 100%;
 }
 
-.dsa-card-content {
+.dsa-list-entity-content {
     width: 100%;
     padding: 0 1rem;
     display: grid;
@@ -18,12 +18,12 @@
         "slot-3 footer footer";
 }
 
-.dsa-card-title {
+.dsa-list-entity-heading {
     grid-area: title;
     margin-top: 0.5rem;
 }
 
-.dsa-card-secondary-menu {
+.dsa-list-entity-secondary-menu {
     grid-area: slot-3;
     display: flex;
     align-items: center;
@@ -31,35 +31,35 @@
     margin-top: 1rem;
 }
 
-.dsa-card-toolbar {
+.dsa-list-entity-toolbar {
     grid-area: slot-2;
     justify-self: end;
     padding-top: 0.5rem;
 }
 
-.dsa-card-main {
+.dsa-list-entity-main {
     grid-area: content;
 }
 
-.dsa-card-expandable-content {
+.dsa-list-entity-expandable-content {
     margin-top: 1.5rem;
     grid-area: expandable;
 }
 
-.dsa-card-hidden .dsa-card-expandable-content {
+.dsa-list-entity-hidden .dsa-list-entity-expandable-content {
     display: none;
 }
 
-.dsa-card-content-border {
+.dsa-list-entity-content-border {
     border-left: var(--secondary-20) 2px solid;
 }
 
 @media (min-width: 728px) {
-    .dsa-card-content {
+    .dsa-list-entity-content {
         padding: 0 1rem 0 1.5rem;
     }
 
-    .dsa-card-secondary-menu {
+    .dsa-list-entity-secondary-menu {
         grid-area: slot-1;
         justify-self: end;
         display: flex;
@@ -69,13 +69,13 @@
     }
 }
 
-.dsa-card-buttons {
+.dsa-list-entity-buttons {
     display: flex;
     gap: 0.5rem;
     margin-left: -1rem;
 }
 
-.dsa-card-expander {
+.dsa-list-entity-expander {
     padding: 0.5rem;
     border: 0;
     background: none;
@@ -85,12 +85,12 @@
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
-.dsa-card-expander.dsa-card-expanded {
+.dsa-list-entity-expander.dsa-list-entity-expanded {
     background: var(--primary-10);
     border-right: var(--primary-60) 2px solid;
 }
 
-.dsa-card-expander:hover {
+.dsa-list-entity-expander:hover {
     background: var(--secondary-20);
     border-right: var(--secondary-60) 2px solid;
     color: var(--secondary-60);

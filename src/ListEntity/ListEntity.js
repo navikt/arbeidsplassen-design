@@ -4,36 +4,16 @@ import joinClassNames from "../.utils/joinClassNames";
 import ChevronDown from "../Feather/ChevronDown";
 import ChevronUp from "../Feather/ChevronUp";
 
-export const CardTitle = ({ children }) => (
-    <div className="dsa-card-title">{children}</div>
-);
-
-export const CardToolbar = ({ children }) => (
-    <div className="dsa-card-toolbar">{children}</div>
-);
-
-export const CardContent = ({ children }) => (
-    <div className="dsa-card-main">{children}</div>
-);
-
-export const CardExpandableContent = ({ children }) => (
-    <div className="dsa-card-expandable-content">{children}</div>
-);
-
-export const CardSecondaryMenu = ({ children }) => (
-    <div className="dsa-card-secondary-menu">{children}</div>
-);
-
-function Card({ children, className, expandable, expandedByDefault }) {
+function ListEntity({ children, className, expandable, expandedByDefault }) {
     const [expanded, setExpanded] = useState(expandedByDefault);
 
     return (
-        <div className={joinClassNames("dsa-card", className)}>
+        <div className={joinClassNames("dsa-list-entity", className)}>
             {expandable && (
                 <button
                     className={joinClassNames(
-                        "dsa-card-expander",
-                        expanded ? "dsa-card-expanded" : undefined
+                        "dsa-list-entity-expander",
+                        expanded ? "dsa-list-entity-expanded" : undefined
                     )}
                     aria-expanded={expanded ? "true" : "false"}
                     onClick={() => {
@@ -49,9 +29,9 @@ function Card({ children, className, expandable, expandedByDefault }) {
             )}
             <div
                 className={joinClassNames(
-                    "dsa-card-content",
-                    !expandable ? "dsa-card-content-border" : undefined,
-                    !expanded ? "dsa-card-hidden" : undefined
+                    "dsa-list-entity-content",
+                    !expandable ? "dsa-list-entity-content-border" : undefined,
+                    !expanded ? "dsa-list-entity-hidden" : undefined
                 )}
             >
                 {children}
@@ -60,16 +40,36 @@ function Card({ children, className, expandable, expandedByDefault }) {
     );
 }
 
-Card.defaultProps = {
+export const ListEntityHeading = ({ children }) => (
+    <div className="dsa-list-entity-heading">{children}</div>
+);
+
+export const ListEntityToolbar = ({ children }) => (
+    <div className="dsa-list-entity-toolbar">{children}</div>
+);
+
+export const ListEntityContent = ({ children }) => (
+    <div className="dsa-list-entity-main">{children}</div>
+);
+
+export const ListEntityExpandableContent = ({ children }) => (
+    <div className="dsa-list-entity-expandable-content">{children}</div>
+);
+
+export const ListEntitySecondaryMenu = ({ children }) => (
+    <div className="dsa-list-entity-secondary-menu">{children}</div>
+);
+
+ListEntity.defaultProps = {
     className: undefined,
     expandable: false,
     expandedByDefault: false,
 };
 
-Card.propTypes = {
+ListEntity.propTypes = {
     className: PropTypes.string,
     expandable: PropTypes.bool,
     expandedByDefault: PropTypes.bool,
 };
 
-export default Card;
+export default ListEntity;
