@@ -1,8 +1,9 @@
 {
   "name": "@navikt/arbeidsplassen-design",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "private": false,
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "prettier:format": "npx prettier -w src",
     "start": "start-storybook -p 6006",
