@@ -6,7 +6,6 @@
 @import "./Blockquote/Blockquote.css";
 @import "./BodyText/BodyText.css";
 @import "./Button/Button.css";
-@import "./Card/Card.css";
 @import "./Container/Container.css";
 @import "./Figure/Figure.css";
 @import "./Footer/Footer.css";
@@ -16,6 +15,7 @@
 @import "./Label/Label.css";
 @import "./LinkPanel/LinkPanel.css";
 @import "./List/List.css";
+@import "./ListEntity/ListEntity.css";
 @import "./Panel/Panel.css";
 @import "./Pill/Pill.css";
 @import "./SkipLink/SkipLink.css";
