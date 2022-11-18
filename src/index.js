@@ -2,7 +2,7 @@ import Accordion from './Accordion/Accordion';
 import Anchor from './Anchor/Anchor';
 import Blockquote from './Blockquote/Blockquote';
 import BodyText from './BodyText/BodyText';
-import Button from './AcButtoncordion/Button';
+import Button from './Button/Button';
 import Container from './Container/Container';
 import Figure from './Figure/Figure';
 import Footer from './Footer/Footer';
