@@ -13,7 +13,6 @@ import Label from './Label/Label';
 import LinkPanel from './LinkPanel/LinkPanel';
 import List from './List/List';
 import ListEntity from './ListEntity/ListEntity';
-import List from './List/List';
 import Panel from './Panel/Panel';
 import Pill from './Pill/Pill';
 import SkipLink from './SkipLink/SkipLink';
