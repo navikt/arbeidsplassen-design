@@ -8,6 +8,8 @@ export default {
     decorators: [(Story) => <Container size="medium">{Story()}</Container>],
 };
 
+TabMenu.Item.displayName = "TabMenu.Item";
+
 export const Default = (args) => (
     <TabMenu {...args}>
         <TabMenu.Item active>

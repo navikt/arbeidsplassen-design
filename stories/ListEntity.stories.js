@@ -16,10 +16,16 @@ export default {
     decorators: [(Story) => <div style={{ maxWidth: 800 }}>{Story()}</div>],
 };
 
+ListEntity.Heading.displayName = "ListEntity.Heading";
+ListEntity.SecondaryMenu.displayName = "ListEntity.SecondaryMenu";
+ListEntity.Toolbar.displayName = "ListEntity.Toolbar";
+ListEntity.Content.displayName = "ListEntity.Content";
+ListEntity.ExpandableContent.displayName = "ListEntity.ExpandableContent";
+
 export const Default = (args) => (
     <ListEntity {...args}>
         <ListEntity.Heading>
-            <Heading level="3" size="small" className="dsa-card-header mb-0_5">
+            <Heading level="3" size="small" className="mb-0_5">
                 <Anchor href="#">
                     What a strenuous career it is that I've chosen
                 </Anchor>
