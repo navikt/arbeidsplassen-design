@@ -1,7 +1,7 @@
 import React from "react";
-import User from "../Feather/User";
-import Building from "../Feather/Building";
-import { HeaderVariant } from "./Header";
+import User from "../../Feather/User";
+import Building from "../../Feather/Building";
+import { HeaderVariant } from "../Header";
 
 function LoggedInUser({ variant, userName, companyName }) {
     return (

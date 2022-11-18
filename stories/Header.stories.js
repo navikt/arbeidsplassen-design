@@ -17,14 +17,14 @@ const Template = (args) => <Header {...args} />;
 
 export const All = Template.bind({});
 All.args = {
-    variant: HeaderVariant.ALL,
+    variant: "all",
     active: HeaderRoutes.PERSON,
     authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
 };
 
 export const Person = Template.bind({});
 Person.args = {
-    variant: HeaderVariant.PERSON,
+    variant: "person",
     active: HeaderRoutes.STILLIGER,
     authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
     userName: "Navn Navnesen",
@@ -32,7 +32,7 @@ Person.args = {
 
 export const Company = Template.bind({});
 Company.args = {
-    variant: HeaderVariant.COMPANY,
+    variant: "company",
     active: HeaderRoutes.STILLINGSANNONSER,
     authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
     companyName: "Bedrift AS",

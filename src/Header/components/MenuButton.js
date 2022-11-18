@@ -1,7 +1,7 @@
 import React from "react";
-import Menu from "../Feather/Menu";
-import XIcon from "../Feather/XIcon";
-import ToolButton from "../ToolButton/ToolButton";
+import Menu from "../../Feather/Menu";
+import XIcon from "../../Feather/XIcon";
+import ToolButton from "../../ToolButton/ToolButton";
 
 function MenuButton({ isMobileMenuHidden, toggleMenu }) {
     return (

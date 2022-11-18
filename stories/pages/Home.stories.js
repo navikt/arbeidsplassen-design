@@ -21,7 +21,7 @@ export default {
 export const Default = (args) => (
     <>
         <Header
-            variant={HeaderVariant.ALL}
+            variant="all"
             authenticationStatus={HeaderAuthenticationStatus.NOT_AUTHENTICATED}
             active={HeaderRoutes.PERSON}
         />

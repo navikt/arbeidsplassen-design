@@ -101,7 +101,7 @@ const Checkbox = ({ children }) => (
 export const Default = (args) => (
     <>
         <Header
-            variant={HeaderVariant.PERSON}
+            variant="person"
             authenticationStatus={HeaderAuthenticationStatus.NOT_AUTHENTICATED}
             active={HeaderRoutes.STILLIGER}
         />

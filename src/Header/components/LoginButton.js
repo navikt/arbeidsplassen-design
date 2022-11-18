@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../Button/Button";
-import LogOut from "../Feather/LogOut";
-import LogIn from "../Feather/LogIn";
-import { HeaderAuthenticationStatus } from "./Header";
+import Button from "../../Button/Button";
+import LogOut from "../../Feather/LogOut";
+import LogIn from "../../Feather/LogIn";
+import { HeaderAuthenticationStatus } from "../Header";
 
 function LoginButton({
     authenticationStatus,

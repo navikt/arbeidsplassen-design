@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Logo from "./Logo";
-import PersonCompanyMenu from "./PersonCompanyMenu";
-import MenuButton from "./MenuButton";
-import LoginButton from "./LoginButton";
-import PersonMenu from "./PersonMenu";
-import CompanyMenu from "./CompanyMenu";
-import LoggedInUser from "./LoggedInUser";
+import Logo from "./components/Logo";
+import PersonCompanyMenu from "./components/PersonCompanyMenu";
+import MenuButton from "./components/MenuButton";
+import LoginButton from "./components/LoginButton";
+import PersonMenu from "./components/PersonMenu";
+import CompanyMenu from "./components/CompanyMenu";
+import LoggedInUser from "./components/LoggedInUser";
 import joinClassNames from "../.utils/joinClassNames";
 
 export const HeaderAuthenticationStatus = {
-    UNKNOWN: "UNKNOWN",
-    IS_AUTHENTICATED: "IS_AUTHENTICATED",
-    NOT_AUTHENTICATED: "NOT_AUTHENTICATED",
+    UNKNOWN: "unknown",
+    IS_AUTHENTICATED: "is-authenticated",
+    NOT_AUTHENTICATED: "not-authenticated",
 };
 
 export const HeaderVariant = {
-    ALL: "ALL",
-    PERSON: "PERSON",
-    COMPANY: "COMPANY",
+    ALL: "all",
+    PERSON: "person",
+    COMPANY: "company",
 };
 
 export const HeaderRoutes = {
-    PERSON: "PERSON",
-    BEDRIFT: "BEDRIFT",
-    STILLIGER: "STILLIGER",
-    JOBBTREFF: "JOBBTREFF",
-    CV: "CV",
-    STILLINGSANNONSER: "STILLINGSANNONSER",
-    INTERESSEMELDIGER: "INTERESSEMELDIGER",
-    KANDIDATLISTER: "KANDIDATLISTER",
-    JOBBTREFF_BEDRIFT: "JOBBTREFF_BEDRIFT",
+    PERSON: "person",
+    BEDRIFT: "bedrift",
+    STILLIGER: "ledige-stillinger",
+    JOBBTREFF: "jobbtreff",
+    CV: "cv",
+    STILLINGSANNONSER: "stillingsannonser",
+    INTERESSEMELDIGER: "interessemeldinger",
+    KANDIDATLISTER: "kandidatlister",
+    JOBBTREFF_BEDRIFT: "jobbtreff-bedrift",
 };
 
 export default function Header({
@@ -112,9 +112,9 @@ export default function Header({
 }
 
 Header.defaultProps = {
-    variant: HeaderVariant.ALL,
+    variant: "all",
     active: undefined,
-    authenticationStatus: HeaderAuthenticationStatus.UNKNOWN,
+    authenticationStatus: "unknown",
     userName: undefined,
     companyName: undefined,
 };
@@ -122,11 +122,23 @@ Header.defaultProps = {
 Header.propTypes = {
     onLogin: PropTypes.func.isRequired,
     onLogout: PropTypes.func.isRequired,
-    variant: PropTypes.oneOf(Object.keys(HeaderVariant)),
-    authenticationStatus: PropTypes.oneOf(
-        Object.keys(HeaderAuthenticationStatus)
-    ),
+    variant: PropTypes.oneOf(["all", "person", "company"]),
+    authenticationStatus: PropTypes.oneOf([
+        "unknown",
+        "is-authenticated",
+        "not-authenticated",
+    ]),
     userName: PropTypes.string,
     companyName: PropTypes.string,
-    active: PropTypes.oneOf(Object.keys(HeaderRoutes)),
+    active: PropTypes.oneOf([
+        "person",
+        "bedrift",
+        "ledige-stillinger",
+        "jobbtreff",
+        "cv",
+        "stillingsannonser",
+        "interessemeldinger",
+        "kandidatlister",
+        "jobbtreff-bedrift",
+    ]),
 };

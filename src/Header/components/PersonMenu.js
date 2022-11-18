@@ -1,14 +1,14 @@
 import React from "react";
-import { HeaderRoutes } from "./Header";
+import { HeaderRoutes } from "../Header";
 
-function CompanyMenu({ active }) {
+function PersonMenu({ active }) {
     return (
         <ul>
             <li className="dsa-header-hide-on-desktop">
                 <a
-                    href="/bedrift"
+                    href="/Users/otenav/IdeaProjects/arbeidsplassen-design/public"
                     className={
-                        active === HeaderRoutes.BEDRIFT
+                        active === HeaderRoutes.PERSON
                             ? "dsa-header-active"
                             : undefined
                     }
@@ -18,21 +18,21 @@ function CompanyMenu({ active }) {
             </li>
             <li>
                 <a
-                    href="/bedrift/stillingsannonser"
+                    href="/stillinger"
                     className={
-                        active === HeaderRoutes.STILLINGSANNONSER
+                        active === HeaderRoutes.STILLIGER
                             ? "dsa-header-active"
                             : undefined
                     }
                 >
-                    Stillingsannonser
+                    Ledige stillinger
                 </a>
             </li>
             <li>
                 <a
-                    href="/bedrift/jobbtreff"
+                    href="/jobbtreff"
                     className={
-                        active === HeaderRoutes.JOBBTREFF_BEDRIFT
+                        active === HeaderRoutes.JOBBTREFF
                             ? "dsa-header-active"
                             : undefined
                     }
@@ -42,30 +42,20 @@ function CompanyMenu({ active }) {
             </li>
             <li>
                 <a
-                    href="/bedrift/interessemeldinger"
+                    href="/cv"
                     className={
-                        active === HeaderRoutes.INTERESSEMELDIGER
+                        active === HeaderRoutes.CV
                             ? "dsa-header-active"
                             : undefined
                     }
                 >
-                    Interessemeldinger
-                </a>
-            </li>
-            <li>
-                <a
-                    href="/bedrift/kandidater"
-                    className={
-                        active === HeaderRoutes.KANDIDATLISTER
-                            ? "dsa-header-active"
-                            : undefined
-                    }
-                >
-                    Kandidatlister
+                    CV
                 </a>
             </li>
         </ul>
     );
 }
 
-export default CompanyMenu;
+PersonMenu.propTypes = {};
+
+export default PersonMenu;
