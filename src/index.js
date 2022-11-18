@@ -21,4 +21,4 @@ import TabMenu from './TabMenu/TabMenu';
 import Tag from './Tag/Tag';
 import ToolButton from './ToolButton/ToolButton';
 
-export {Accordion, Anchor, Blockquote, BodyText, Button, Container, Figure, Footer, Header, Heading, Ingress, Label, LinkPanel, List, ListEntity, List, Panel, Pill, SkipLink, SmallText, TabMenu, Tag, ToolButton}
+export {Accordion, Anchor, Blockquote, BodyText, Button, Container, Figure, Footer, Header, Heading, Ingress, Label, LinkPanel, List, ListEntity, Panel, Pill, SkipLink, SmallText, TabMenu, Tag, ToolButton}
