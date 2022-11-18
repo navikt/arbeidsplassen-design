@@ -1,4 +1,4 @@
-export * from './Accordion/';
+export * from './Accordion/*';
 export * from './Alert/';
 export * from './Anchor/';
 export * from './Blockquote/';
