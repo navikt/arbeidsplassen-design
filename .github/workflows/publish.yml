@@ -19,6 +19,8 @@ jobs:
           node-version: 16.x
           registry-url: https://npm.pkg.github.com/
           scope: "@navikt"
+      - name: Build
+        run: npm run build
       - name: Publish package
         run: npm publish
         env:
