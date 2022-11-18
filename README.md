@@ -18,6 +18,8 @@ Legg til følgende i fila
 
 Opprett et token med "read:packages" rettigheter. [https://github.com/settings/tokens](https://github.com/settings/tokens) Bytt ut \$TOKEN med tokenet du akkurat opprettet. Velg Authorize token under "Configure SSO" for å gi tokenet tilgang til @navikt.
 
+Ikke sjekk inn `.npmrc` til GitHub.
+
 
 ## Hvordan publisere
 
