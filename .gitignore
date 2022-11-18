@@ -2,5 +2,5 @@
 *.iml
 reports/
 node_modules/
-/dist/main.js
+/dist/
 

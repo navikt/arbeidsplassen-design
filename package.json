@@ -28,10 +28,10 @@
     "@storybook/manager-webpack4": "^6.5.13",
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.2.5",
     "prettier": "^2.7.1"
   },
   "dependencies": {
+    "babel-loader": "^8.2.5",
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
