@@ -27,11 +27,11 @@ const LinkPanel = React.forwardRef(function LinkPanel(
     );
 });
 
-export const LinkPanelDescription = ({ children }) => {
+LinkPanel.Description = ({ children }) => {
     return <div className="dsa-link-panel-description">{children}</div>;
 };
 
-export const LinkPanelTitle = ({ children }) => {
+LinkPanel.Title = ({ children }) => {
     return <div className="dsa-link-panel-title">{children}</div>;
 };
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { HeaderRoutes } from "../Header";
 
 function CompanyMenu({ active }) {
     return (
@@ -8,9 +7,7 @@ function CompanyMenu({ active }) {
                 <a
                     href="/bedrift"
                     className={
-                        active === HeaderRoutes.BEDRIFT
-                            ? "dsa-header-active"
-                            : undefined
+                        active === "bedrift" ? "dsa-header-active" : undefined
                     }
                 >
                     Forside
@@ -20,7 +17,7 @@ function CompanyMenu({ active }) {
                 <a
                     href="/bedrift/stillingsannonser"
                     className={
-                        active === HeaderRoutes.STILLINGSANNONSER
+                        active === "stillingsannonser"
                             ? "dsa-header-active"
                             : undefined
                     }
@@ -32,7 +29,7 @@ function CompanyMenu({ active }) {
                 <a
                     href="/bedrift/jobbtreff"
                     className={
-                        active === HeaderRoutes.JOBBTREFF_BEDRIFT
+                        active === "jobbtreff-bedrift"
                             ? "dsa-header-active"
                             : undefined
                     }
@@ -44,7 +41,7 @@ function CompanyMenu({ active }) {
                 <a
                     href="/bedrift/interessemeldinger"
                     className={
-                        active === HeaderRoutes.INTERESSEMELDIGER
+                        active === "interessemeldinger"
                             ? "dsa-header-active"
                             : undefined
                     }
@@ -56,7 +53,7 @@ function CompanyMenu({ active }) {
                 <a
                     href="/bedrift/kandidater"
                     className={
-                        active === HeaderRoutes.KANDIDATLISTER
+                        active === "kandidatlister"
                             ? "dsa-header-active"
                             : undefined
                     }

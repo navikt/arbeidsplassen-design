@@ -1,5 +1,4 @@
 import React from "react";
-import { HeaderRoutes } from "../Header";
 
 function PersonCompanyMenu({ active }) {
     return (
@@ -9,7 +8,7 @@ function PersonCompanyMenu({ active }) {
                     <a
                         href="/Users/otenav/IdeaProjects/arbeidsplassen-design/public"
                         className={
-                            active === HeaderRoutes.PERSON
+                            active === "person"
                                 ? "dsa-header-active"
                                 : undefined
                         }
@@ -21,7 +20,7 @@ function PersonCompanyMenu({ active }) {
                     <a
                         href="/bedrift"
                         className={
-                            active === HeaderRoutes.BEDRIFT
+                            active === "bedrift"
                                 ? "dsa-header-active"
                                 : undefined
                         }

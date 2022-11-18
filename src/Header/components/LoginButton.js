@@ -2,14 +2,13 @@ import React from "react";
 import Button from "../../Button/Button";
 import LogOut from "../../Feather/LogOut";
 import LogIn from "../../Feather/LogIn";
-import { HeaderAuthenticationStatus } from "../Header";
 
 function LoginButton({
     authenticationStatus,
     handleLogOutClick,
     handleLogInClick,
 }) {
-    if (authenticationStatus === HeaderAuthenticationStatus.IS_AUTHENTICATED) {
+    if (authenticationStatus === "is-authenticated") {
         return (
             <Button
                 variant="secondary"
@@ -20,9 +19,7 @@ function LoginButton({
                 Logg ut
             </Button>
         );
-    } else if (
-        authenticationStatus === HeaderAuthenticationStatus.NOT_AUTHENTICATED
-    ) {
+    } else if (authenticationStatus === "not-authenticated") {
         return (
             <Button
                 variant="secondary"

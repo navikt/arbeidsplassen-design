@@ -1,5 +1,4 @@
 import React from "react";
-import { HeaderRoutes } from "../Header";
 
 function PersonMenu({ active }) {
     return (
@@ -8,9 +7,7 @@ function PersonMenu({ active }) {
                 <a
                     href="/Users/otenav/IdeaProjects/arbeidsplassen-design/public"
                     className={
-                        active === HeaderRoutes.PERSON
-                            ? "dsa-header-active"
-                            : undefined
+                        active === "person" ? "dsa-header-active" : undefined
                     }
                 >
                     Forside
@@ -20,7 +17,7 @@ function PersonMenu({ active }) {
                 <a
                     href="/stillinger"
                     className={
-                        active === HeaderRoutes.STILLIGER
+                        active === "ledige-stillinger"
                             ? "dsa-header-active"
                             : undefined
                     }
@@ -32,9 +29,7 @@ function PersonMenu({ active }) {
                 <a
                     href="/jobbtreff"
                     className={
-                        active === HeaderRoutes.JOBBTREFF
-                            ? "dsa-header-active"
-                            : undefined
+                        active === "jobbtreff" ? "dsa-header-active" : undefined
                     }
                 >
                     Jobbtreff
@@ -44,9 +39,7 @@ function PersonMenu({ active }) {
                 <a
                     href="/cv"
                     className={
-                        active === HeaderRoutes.CV
-                            ? "dsa-header-active"
-                            : undefined
+                        active === "cv" ? "dsa-header-active" : undefined
                     }
                 >
                     CV

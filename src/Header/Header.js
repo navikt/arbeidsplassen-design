@@ -9,30 +9,6 @@ import CompanyMenu from "./components/CompanyMenu";
 import LoggedInUser from "./components/LoggedInUser";
 import joinClassNames from "../.utils/joinClassNames";
 
-export const HeaderAuthenticationStatus = {
-    UNKNOWN: "unknown",
-    IS_AUTHENTICATED: "is-authenticated",
-    NOT_AUTHENTICATED: "not-authenticated",
-};
-
-export const HeaderVariant = {
-    ALL: "all",
-    PERSON: "person",
-    COMPANY: "company",
-};
-
-export const HeaderRoutes = {
-    PERSON: "person",
-    BEDRIFT: "bedrift",
-    STILLIGER: "ledige-stillinger",
-    JOBBTREFF: "jobbtreff",
-    CV: "cv",
-    STILLINGSANNONSER: "stillingsannonser",
-    INTERESSEMELDIGER: "interessemeldinger",
-    KANDIDATLISTER: "kandidatlister",
-    JOBBTREFF_BEDRIFT: "jobbtreff-bedrift",
-};
-
 export default function Header({
     className,
     variant,
@@ -57,7 +33,7 @@ export default function Header({
             >
                 <Logo />
 
-                {variant === HeaderVariant.ALL ? (
+                {variant === "all" ? (
                     <PersonCompanyMenu active={active} />
                 ) : (
                     <MenuButton
@@ -66,7 +42,7 @@ export default function Header({
                     />
                 )}
 
-                {variant === HeaderVariant.ALL ? (
+                {variant === "all" ? (
                     <LoginButton
                         authenticationStatus={authenticationStatus}
                         handleLogInClick={onLogin}
@@ -81,15 +57,12 @@ export default function Header({
                                 : undefined
                         )}
                     >
-                        {variant === HeaderVariant.PERSON && (
-                            <PersonMenu active={active} />
-                        )}
-                        {variant === HeaderVariant.COMPANY && (
+                        {variant === "person" && <PersonMenu active={active} />}
+                        {variant === "company" && (
                             <CompanyMenu active={active} />
                         )}
 
-                        {authenticationStatus ===
-                            HeaderAuthenticationStatus.IS_AUTHENTICATED && (
+                        {authenticationStatus === "is-authenticated" && (
                             <LoggedInUser
                                 variant={variant}
                                 userName={userName}
@@ -97,7 +70,7 @@ export default function Header({
                             />
                         )}
 
-                        {variant !== HeaderVariant.ALL && (
+                        {variant !== "all" && (
                             <LoginButton
                                 authenticationStatus={authenticationStatus}
                                 handleLogInClick={onLogin}
