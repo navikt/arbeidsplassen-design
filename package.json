@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-design",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "private": false,
   "scripts": {
     "prettier:format": "npx prettier -w src",
