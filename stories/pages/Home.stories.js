@@ -1,9 +1,5 @@
 import React from "react";
-import Header, {
-    HeaderAuthenticationStatus,
-    HeaderRoutes,
-    HeaderVariant,
-} from "../../src/Header/Header";
+import Header from "../../src/Header/Header";
 import Footer from "../../src/Footer/Footer";
 import Container from "../../src/Container/Container";
 import Panel from "../../src/Panel/Panel";
@@ -18,12 +14,12 @@ export default {
     },
 };
 
-export const Default = (args) => (
+export const Default = () => (
     <>
         <Header
             variant="all"
-            authenticationStatus={HeaderAuthenticationStatus.NOT_AUTHENTICATED}
-            active={HeaderRoutes.PERSON}
+            authenticationStatus="not-authenticated"
+            active="person"
         />
         <main className="dsa-header-offset gb-2">
             <Container color="orange" className="gb-1">

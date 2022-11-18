@@ -1,11 +1,5 @@
 import React from "react";
-import ListEntity, {
-    ListEntityContent,
-    ListEntityExpandableContent,
-    ListEntitySecondaryMenu,
-    ListEntityHeading,
-    ListEntityToolbar,
-} from "../src/ListEntity/ListEntity";
+import ListEntity from "../src/ListEntity/ListEntity";
 import Heading from "../src/Heading/Heading";
 import Anchor from "../src/Anchor/Anchor";
 import Label from "../src/Label/Label";
@@ -24,25 +18,25 @@ export default {
 
 export const Default = (args) => (
     <ListEntity {...args}>
-        <ListEntityHeading>
+        <ListEntity.Heading>
             <Heading level="3" size="small" className="dsa-card-header mb-0_5">
                 <Anchor href="#">
                     What a strenuous career it is that I've chosen
                 </Anchor>
             </Heading>
-        </ListEntityHeading>
+        </ListEntity.Heading>
 
-        <ListEntitySecondaryMenu>
+        <ListEntity.SecondaryMenu>
             <Button variant="tertiary" icon={<Heart />}>
                 Button
             </Button>
-        </ListEntitySecondaryMenu>
+        </ListEntity.SecondaryMenu>
 
-        <ListEntityToolbar>
+        <ListEntity.Toolbar>
             <ToolButton ariaLabel="Meny" icon={<MoreVertical />} />
-        </ListEntityToolbar>
+        </ListEntity.Toolbar>
 
-        <ListEntityContent>
+        <ListEntity.Content>
             <Label className="mb-0_5">Franz Kafka</Label>
             <BodyText className="mb-1">
                 However hard he threw himself onto his right, he always rolled
@@ -58,9 +52,9 @@ export const Default = (args) => (
                     <SmallText>Cat text</SmallText>
                 </div>
             </div>
-        </ListEntityContent>
+        </ListEntity.Content>
 
-        <ListEntityExpandableContent>
+        <ListEntity.ExpandableContent>
             <Heading level="4" size="xsmall" className="mb-0_5">
                 Expandable content area
             </Heading>
@@ -72,6 +66,6 @@ export const Default = (args) => (
                 dull pain there that he had never felt before. "Oh, God", he
                 thought, "what a strenuous career it is that I've chosen!
             </BodyText>
-        </ListEntityExpandableContent>
+        </ListEntity.ExpandableContent>
     </ListEntity>
 );

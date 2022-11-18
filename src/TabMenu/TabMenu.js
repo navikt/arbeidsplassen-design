@@ -18,7 +18,7 @@ TabMenu.propTypes = {
     className: PropTypes.string,
 };
 
-export const TabMenuItem = ({ children, active, className }) => (
+TabMenu.Item = ({ children, active, className }) => (
     <li
         className={joinClassNames(
             "dsa-tab-menu-item",
@@ -30,12 +30,12 @@ export const TabMenuItem = ({ children, active, className }) => (
     </li>
 );
 
-TabMenuItem.defaultProps = {
+TabMenu.Item.defaultProps = {
     className: undefined,
     active: false,
 };
 
-TabMenuItem.propTypes = {
+TabMenu.Item.propTypes = {
     className: PropTypes.string,
     active: PropTypes.bool,
 };

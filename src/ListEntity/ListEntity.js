@@ -40,23 +40,23 @@ function ListEntity({ children, className, expandable, expandedByDefault }) {
     );
 }
 
-export const ListEntityHeading = ({ children }) => (
+ListEntity.Heading = ({ children }) => (
     <div className="dsa-list-entity-heading">{children}</div>
 );
 
-export const ListEntityToolbar = ({ children }) => (
+ListEntity.Toolbar = ({ children }) => (
     <div className="dsa-list-entity-toolbar">{children}</div>
 );
 
-export const ListEntityContent = ({ children }) => (
+ListEntity.Content = ({ children }) => (
     <div className="dsa-list-entity-main">{children}</div>
 );
 
-export const ListEntityExpandableContent = ({ children }) => (
+ListEntity.ExpandableContent = ({ children }) => (
     <div className="dsa-list-entity-expandable-content">{children}</div>
 );
 
-export const ListEntitySecondaryMenu = ({ children }) => (
+ListEntity.SecondaryMenu = ({ children }) => (
     <div className="dsa-list-entity-secondary-menu">{children}</div>
 );
 

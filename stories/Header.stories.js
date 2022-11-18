@@ -1,9 +1,5 @@
 import React from "react";
-import Header, {
-    HeaderAuthenticationStatus,
-    HeaderRoutes,
-    HeaderVariant,
-} from "../src/Header/Header";
+import Header from "../src/Header/Header";
 
 export default {
     title: "Components/Header",
@@ -18,22 +14,22 @@ const Template = (args) => <Header {...args} />;
 export const All = Template.bind({});
 All.args = {
     variant: "all",
-    active: HeaderRoutes.PERSON,
-    authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
+    active: "person",
+    authenticationStatus: "is-authenticated",
 };
 
 export const Person = Template.bind({});
 Person.args = {
     variant: "person",
-    active: HeaderRoutes.STILLIGER,
-    authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
+    active: "ledige-stillinger",
+    authenticationStatus: "is-authenticated",
     userName: "Navn Navnesen",
 };
 
 export const Company = Template.bind({});
 Company.args = {
     variant: "company",
-    active: HeaderRoutes.STILLINGSANNONSER,
-    authenticationStatus: HeaderAuthenticationStatus.IS_AUTHENTICATED,
+    active: "stillingsannonser",
+    authenticationStatus: "is-authenticated",
     companyName: "Bedrift AS",
 };

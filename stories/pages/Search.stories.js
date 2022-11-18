@@ -1,9 +1,5 @@
 import React from "react";
-import Header, {
-    HeaderAuthenticationStatus,
-    HeaderRoutes,
-    HeaderVariant,
-} from "../../src/Header/Header";
+import Header from "../../src/Header/Header";
 import Footer from "../../src/Footer/Footer";
 import Container from "../../src/Container/Container";
 import Heading from "../../src/Heading/Heading";
@@ -11,16 +7,11 @@ import BodyText from "../../src/BodyText/BodyText";
 import Anchor from "../../src/Anchor/Anchor";
 import SmallText from "../../src/SmallText/SmallText";
 import Accordion from "../../src/Accordion/Accordion";
-import ListEntity, {
-    ListEntityContent,
-    ListEntityHeading,
-    ListEntitySecondaryMenu,
-} from "../../src/ListEntity/ListEntity";
+import ListEntity from "../../src/ListEntity/ListEntity";
 import Label from "../../src/Label/Label";
 import Button from "../../src/Button/Button";
 import Heart from "../../src/Feather/Heart";
 import XIcon from "../../src/Feather/XIcon";
-import * as PropTypes from "prop-types";
 
 export default {
     title: "Pages/Search",
@@ -102,8 +93,8 @@ export const Default = (args) => (
     <>
         <Header
             variant="person"
-            authenticationStatus={HeaderAuthenticationStatus.NOT_AUTHENTICATED}
-            active={HeaderRoutes.STILLIGER}
+            authenticationStatus="not-authenticated"
+            active="ledige-stillinger"
         />
         <main className="dsa-header-offset">
             <Container className="gt-2 gb-2">
@@ -194,7 +185,7 @@ export const Default = (args) => (
                         </div>
                         {stillinger.concat(stillinger).map((ad) => (
                             <ListEntity className="mb-2">
-                                <ListEntityHeading>
+                                <ListEntity.Heading>
                                     <Heading
                                         level="3"
                                         size="small"
@@ -202,8 +193,8 @@ export const Default = (args) => (
                                     >
                                         <Anchor href="#">{ad.title}</Anchor>
                                     </Heading>
-                                </ListEntityHeading>
-                                <ListEntityContent>
+                                </ListEntity.Heading>
+                                <ListEntity.Content>
                                     <Label className="mb-1">
                                         {ad.position}
                                     </Label>
@@ -243,12 +234,12 @@ export const Default = (args) => (
                                             </SmallText>
                                         </div>
                                     </div>
-                                </ListEntityContent>
-                                <ListEntitySecondaryMenu>
+                                </ListEntity.Content>
+                                <ListEntity.SecondaryMenu>
                                     <Button variant="tertiary" icon={<Heart />}>
                                         Lagre
                                     </Button>
-                                </ListEntitySecondaryMenu>
+                                </ListEntity.SecondaryMenu>
                             </ListEntity>
                         ))}
 
