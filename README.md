@@ -20,7 +20,6 @@ Opprett et token med "read:packages" rettigheter. [https://github.com/settings/t
 
 Ikke sjekk inn `.npmrc` til GitHub.
 
-
 ## Hvordan publisere
 
-Endre `version` i `package.json` til ny versjon du ønsker å publisere. Kjør git commit med meldingen `release:publish` før du pusher.
+Endre `version` i `package.json` til ny versjon du ønsker å publisere. Kjør `Publish package` workflow under fanen `Actions` på repositoryet på Github.

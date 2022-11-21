@@ -10,8 +10,8 @@
     "build-storybook": "build-storybook",
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files",
     "release:css:patch": "npm --workspace=css version patch -m \"release:css\" && git push",
-    "release:css:minor": "npm --workspace=css version patch -m \"release:css\" && git push",
-    "release:css:major": "npm --workspace=css version patch -m \"release:css\" && git push"
+    "release:css:minor": "npm --workspace=css version minor -m \"release:css\" && git push",
+    "release:css:major": "npm --workspace=css version major -m \"release:css\" && git push"
   },
   "repository": {
     "type": "git",
