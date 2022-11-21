@@ -2,8 +2,6 @@ name: Auto-publish
 on: push
 
 jobs:
-  build: ... # If your package needs to be built, you can put that process here, so that it stays constantly updated
-
   publish:
     name: Publish to NPM & GitHub Package Registry
     runs-on: ubuntu-latest
