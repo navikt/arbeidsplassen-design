@@ -1,28 +1,28 @@
-@import "./src/variables.css";
+@import "./variables.css";
 
-@import "./src/Accordion/Accordion.css";
-@import "./src/Alert/Alert.css";
-@import "./src/Anchor/Anchor.css";
-@import "./src/Blockquote/Blockquote.css";
-@import "./src/BodyText/BodyText.css";
-@import "./src/Button/Button.css";
-@import "./src/Container/Container.css";
-@import "./src/Figure/Figure.css";
-@import "./src/Footer/Footer.css";
-@import "./src/Header/Header.css";
-@import "./src/Heading/Heading.css";
-@import "./src/Ingress/Ingress.css";
-@import "./src/Label/Label.css";
-@import "./src/LinkPanel/LinkPanel.css";
-@import "./src/List/List.css";
-@import "./src/ListEntity/ListEntity.css";
-@import "./src/Panel/Panel.css";
-@import "./src/Pill/Pill.css";
-@import "./src/SkipLink/SkipLink.css";
-@import "./src/SmallText/SmallText.css";
-@import "./src/TabMenu/TabMenu.css";
-@import "./src/Tag/Tag.css";
-@import "./src/ToolButton/ToolButton.css";
+@import "./Accordion.css";
+@import "./Alert.css";
+@import "./Anchor.css";
+@import "./Blockquote.css";
+@import "./BodyText.css";
+@import "./Button.css";
+@import "./Container.css";
+@import "./Figure.css";
+@import "./Footer.css";
+@import "./Header.css";
+@import "./Heading.css";
+@import "./Ingress.css";
+@import "./Label.css";
+@import "./LinkPanel.css";
+@import "./List.css";
+@import "./ListEntity.css";
+@import "./Panel.css";
+@import "./Pill.css";
+@import "./SkipLink.css";
+@import "./SmallText.css";
+@import "./TabMenu.css";
+@import "./Tag.css";
+@import "./ToolButton.css";
 
 *,
 *:before,
