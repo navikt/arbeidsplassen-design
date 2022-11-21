@@ -8,13 +8,13 @@ jobs:
     name: Publish package
     runs-on: ubuntu-latest
     steps:
+      - name: Check package version
+          id: cpv
+          uses: PostHog/check-package-version@v2
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Check package version
-          id: cpv
-          uses: PostHog/check-package-version@v2
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
         with:
