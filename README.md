@@ -1,5 +1,7 @@
 # Arbeidsplassen design
 
+Dette repoet består av komponenter, og en underkomponent med CSS. Begge kan publiseres på GPR.
+
 ```
 npm install
 npm start
@@ -20,6 +22,10 @@ Opprett et token med "read:packages" rettigheter. [https://github.com/settings/t
 
 Ikke sjekk inn `.npmrc` til GitHub.
 
-## Hvordan publisere
+## Hvordan publisere (KOMPONENTER)
 
 Endre `version` i `package.json` til ny versjon du ønsker å publisere. Kjør `Publish package` workflow under fanen `Actions` på repositoryet på Github.
+
+## Hvordan publisere (CSS)
+
+Endre `version` i `css/package.json` til ny versjon du ønsker å publisere. Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github.
