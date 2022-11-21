@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
 
       - name: Check version changes
         uses: EndBug/version-check@v1
@@ -45,4 +45,3 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
