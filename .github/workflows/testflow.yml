@@ -23,22 +23,20 @@ jobs:
         if: steps.check.outputs.changed == 'true'
         run: 'echo "Version change found! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
 
-      - name: Set up Node.js for NPM
-        if: steps.check.outputs.changed == 'true'
-        uses: actions/setup-node@v1
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
         with:
-          registry-url: "https://registry.npmjs.org"
+          node-version: 16.x
+          registry-url: https://npm.pkg.github.com/
+          scope: "@navikt"
 
-      - name: Set up Node.js for GPR
+      - name: Npm install
         if: steps.check.outputs.changed == 'true'
-        uses: actions/setup-node@v1
-        with:
-          registry-url: "https://npm.pkg.github.com/"
-          scope: "@endbug"
+        run: npm install
 
-      - name: Set up package for GPR # You need to make sure you package name has the scope needed for GPR
+      - name: Npm build
         if: steps.check.outputs.changed == 'true'
-        run: npm run gpr-setup
+        run: npm run build
 
       - name: Publish package to GPR
         if: steps.check.outputs.changed == 'true'
