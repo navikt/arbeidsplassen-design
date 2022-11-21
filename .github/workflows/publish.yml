@@ -1,8 +1,8 @@
 name: Publish package
 on:
+    workflow_dispatch:
     branches:
         - main
-    workflow_dispatch:
 
 jobs:
     deploy-docker-image:
