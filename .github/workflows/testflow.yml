@@ -1,12 +1,13 @@
 name: Auto-publish
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
     name: Publish to NPM & GitHub Package Registry
     runs-on: ubuntu-latest
-    if: contains(github.ref, 'master') # Publish it only if the push comes from the master branch
-    needs: build # We need to wait for the build to be committed before publishing
 
     steps:
       - name: Checkout repository
@@ -44,3 +45,4 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
