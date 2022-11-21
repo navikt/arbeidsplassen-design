@@ -5,12 +5,10 @@ on:
       - main
 jobs:
   deploy-docker-image:
+    if: "contains(github.event.head_commit.message, 'release:publish')"
     name: Publish package
     runs-on: ubuntu-latest
     steps:
-      - name: Check package version
-          id: cpv
-          uses: PostHog/check-package-version@v2
       - name: Checkout
         uses: actions/checkout@v2
         with:
