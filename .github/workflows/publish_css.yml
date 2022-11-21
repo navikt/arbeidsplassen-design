@@ -1,8 +1,5 @@
 name: Publish CSS package
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
   
 jobs:
