@@ -16,7 +16,6 @@ jobs:
               uses: actions/checkout@v2
 
             - name: Check package version
-              id: cpv
               uses: PostHog/check-package-version@v2
 
             - name: Echo versions
