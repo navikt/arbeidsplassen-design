@@ -23,6 +23,8 @@ jobs:
           scope: "@navikt"
       - name: Install
         run: npm install
+      - name: Update version
+        run: npm --workspace=css version patch
       - name: Build
         run: npm run build
       - name: Publish package
