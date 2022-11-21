@@ -13,7 +13,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Check package version
-          id: cpv
           uses: PostHog/check-package-version@v2
       - name: Publish new version
           if: steps.cpv.outputs.is-new-version == 'true'
