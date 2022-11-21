@@ -19,8 +19,7 @@ jobs:
         uses: EndBug/version-check@v1
         id: check
 
-      - name: Version update detected
-        if: steps.check.outputs.changed == 'true'
+      - name: Version update detected        
         run: 'echo "Version change found! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
 
       - name: Setup Node
