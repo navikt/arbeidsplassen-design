@@ -2,6 +2,8 @@
 
 Dette repoet består av komponenter, og en underkomponent med CSS. Begge kan publiseres på GPR.
 
+## Hvordan kjøre prosjektet lokalt
+
 ```
 npm install
 npm start
