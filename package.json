@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-design",
-  "version": "1.0.34",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
