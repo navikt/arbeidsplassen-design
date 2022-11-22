@@ -1,4 +1,4 @@
-name: Publish CSS package
+name: Publish CSS package to GPR
 on:
     workflow_dispatch:
 
