@@ -8,7 +8,7 @@ import BodyText from "../../src/BodyText/BodyText";
 import Anchor from "../../src/Anchor/Anchor";
 import List from "../../src/List/List";
 import Blockquote from "../../src/Blockquote/Blockquote";
-import LinkPanel, { LinkPanelTitle } from "../../src/LinkPanel/LinkPanel";
+import LinkPanel from "../../src/LinkPanel/LinkPanel";
 import PullOutside from "../../src/Container/PullOutside";
 import Figure from "../../src/Figure/Figure";
 import SmallText from "../../src/SmallText/SmallText";
@@ -175,7 +175,7 @@ export const Default = (args) => (
                     Videre lesing
                 </Heading>
                 <LinkPanel href="#">
-                    <LinkPanelTitle>Article link</LinkPanelTitle>
+                    <LinkPanel.Title>Article link</LinkPanel.Title>
                 </LinkPanel>
             </Container>
         </main>
