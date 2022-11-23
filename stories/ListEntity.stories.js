@@ -18,7 +18,7 @@ export default {
 
 ListEntity.Heading.displayName = "ListEntity.Heading";
 ListEntity.SecondaryMenu.displayName = "ListEntity.SecondaryMenu";
-ListEntity.Toolbar.displayName = "ListEntity.Toolbar";
+ListEntity.ContextMenu.displayName = "ListEntity.Toolbar";
 ListEntity.Content.displayName = "ListEntity.Content";
 ListEntity.ExpandableContent.displayName = "ListEntity.ExpandableContent";
 
@@ -38,9 +38,9 @@ export const Default = (args) => (
             </Button>
         </ListEntity.SecondaryMenu>
 
-        <ListEntity.Toolbar>
+        <ListEntity.ContextMenu>
             <ToolButton ariaLabel="Meny" icon={<MoreVertical />} />
-        </ListEntity.Toolbar>
+        </ListEntity.ContextMenu>
 
         <ListEntity.Content>
             <Label className="mb-0_5">Franz Kafka</Label>

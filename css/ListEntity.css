@@ -31,7 +31,7 @@
     margin-top: 1rem;
 }
 
-.dsa-list-entity-toolbar {
+.dsa-list-entity-context-menu {
     grid-area: slot-2;
     justify-self: end;
     padding-top: 0.5rem;

@@ -44,8 +44,8 @@ ListEntity.Heading = ({ children }) => (
     <div className="dsa-list-entity-heading">{children}</div>
 );
 
-ListEntity.Toolbar = ({ children }) => (
-    <div className="dsa-list-entity-toolbar">{children}</div>
+ListEntity.ContextMenu = ({ children }) => (
+    <div className="dsa-list-entity-context-menu">{children}</div>
 );
 
 ListEntity.Content = ({ children }) => (
