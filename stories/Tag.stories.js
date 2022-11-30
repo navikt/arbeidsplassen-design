@@ -7,3 +7,8 @@ export default {
 };
 
 export const Default = (args) => <Tag {...args}>Vermin</Tag>;
+
+export const Small = (args) => <Tag {...args}>Small</Tag>;
+Small.args = {
+    small: true,
+};
