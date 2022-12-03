@@ -9,12 +9,12 @@ export default function Footer() {
                     <h2 className="dsa-footer-heading">Om oss</h2>
                     <ul>
                         <li>
-                            <Anchor href="/om-oss" dark>
+                            <Anchor href="/om-arbeidsplassen" dark>
                                 Om arbeidsplassen.no
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/om-oss/kontakt" dark>
+                            <Anchor href="/kontakt" dark>
                                 Kontakt oss
                             </Anchor>
                         </li>
@@ -25,17 +25,17 @@ export default function Footer() {
                     <h2 className="dsa-footer-heading">Hjelp</h2>
                     <ul>
                         <li>
-                            <Anchor href="/hjelp/sporsmal-og-svar" dark>
+                            <Anchor href="/sporsmal-og-svar" dark>
                                 Spørsmål og svar
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/hjelp/tilgjengelighet" dark>
+                            <Anchor href="/tilgjengelighet" dark>
                                 Tilgjengelighet
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/hjelp/work-in-norway/en" dark>
+                            <Anchor href="/en/work-in-norway" dark>
                                 Information to refugees
                             </Anchor>
                         </li>
