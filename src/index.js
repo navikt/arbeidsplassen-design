@@ -1,3 +1,4 @@
+export * from "./Alert";
 export * from "./Accordion";
 export * from "./Anchor";
 export * from "./Blockquote";
