@@ -27,6 +27,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
 }
 
 .dsa-link-panel-title {
@@ -35,6 +38,13 @@
     line-height: var(--line-height-small);
 }
 
+.dsa-link-panel-description {
+    font-size: var(--font-size-default);
+    line-height: var(--line-height-default);
+    font-weight: 400;
+}
+
+.dsa-link-panel-large .dsa-link-panel-content,
 .dsa-link-panel-large .dsa-link-panel-title {
     font-size: var(--font-size-xlarge);
     line-height: var(--line-height-xlarge);
