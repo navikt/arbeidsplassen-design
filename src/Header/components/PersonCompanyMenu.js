@@ -6,7 +6,7 @@ function PersonCompanyMenu({ active }) {
             <ul>
                 <li>
                     <a
-                        href="/Users/otenav/IdeaProjects/arbeidsplassen-design/public"
+                        href="/"
                         className={
                             active === "person"
                                 ? "dsa-header-active"
