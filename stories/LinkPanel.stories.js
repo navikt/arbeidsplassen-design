@@ -11,7 +11,9 @@ LinkPanel.Title.displayName = "LinkPanel.Title";
 LinkPanel.Description.displayName = "LinkPanel.Title";
 
 export const Default = (args) => (
-    <LinkPanel {...args}>Link panel title</LinkPanel>
+    <LinkPanel {...args}>
+        <LinkPanel.Title>Link panel title</LinkPanel.Title>
+    </LinkPanel>
 );
 
 export const WithText = (args) => (
