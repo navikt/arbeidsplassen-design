@@ -33,6 +33,7 @@
 
 html {
     overflow-y: scroll;
+    scroll-padding-top: calc(var(--header-height) + var(--gutter));
 }
 
 body {
@@ -43,28 +44,9 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@media (min-width: 320px) {
-    .dsa-header-offset {
-        /* equals to fixed header height */
-        padding-top: 73px;
-        scroll-padding-top: 73px;
-    }
-}
-
-@media (min-width: 375px) {
-    .dsa-header-offset {
-        /* equals to fixed header height */
-        padding-top: 80px;
-        scroll-padding-top: 80px;
-    }
-}
-
-@media (min-width: 728px) {
-    .dsa-header-offset {
-        /* equals to fixed header height */
-        padding-top: 96px;
-        scroll-padding-top: 96px;
-    }
+.dsa-header-offset {
+    /* Push content down so it is not covered by fixed header */
+    padding-top: var(--header-height);
 }
 
 .mb-0_25 {
