@@ -4,6 +4,7 @@ export { default as Anchor } from "./Anchor/Anchor";
 export { default as Blockquote } from "./Blockquote/Blockquote";
 export { default as BodyText } from "./BodyText/BodyText";
 export { default as Button } from "./Button/Button";
+export { default as ConfirmationDialogue } from "./ConfirmationDialogue/ConfirmationDialogue";
 export { default as Container } from "./Container/Container";
 export { default as Figure } from "./Figure/Figure";
 export { default as Footer } from "./Footer/Footer";
