@@ -1,9 +1,3 @@
-.dsa-anchor {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.125rem;
-}
-
 .dsa-anchor,
 .dsa-anchor:visited {
     color: var(--secondary-60);
