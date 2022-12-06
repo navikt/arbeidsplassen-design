@@ -5,7 +5,10 @@ import joinClassNames from "../.utils/joinClassNames";
 function List({ children, variant, className, ariaLabel }) {
     const ListType = variant;
     return (
-        <ListType className={joinClassNames("dsa-list", className)} ariaLabel={ariaLabel}>
+        <ListType
+            className={joinClassNames("dsa-list", className)}
+            aria-label={ariaLabel}
+        >
             {children}
         </ListType>
     );
