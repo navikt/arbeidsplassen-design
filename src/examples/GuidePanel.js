@@ -33,7 +33,7 @@ const GuidePanelExample = () => {
                 Slik fungerer det
             </Heading>
 
-            <Heading size="small" level="4">Ingen CV eller langt søknadsbrev</Heading>
+            <Heading size="small" level="4" spacingπ>Ingen CV eller langt søknadsbrev</Heading>
             <BodyLong spacing>
                 Du svarer kun på de kvalifikasjoner som bedriften legger vekt på i stillingen.
             </BodyLong>
