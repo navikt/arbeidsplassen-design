@@ -1,23 +1,22 @@
-import { GuidePanel } from "@navikt/ds-react";
+import {BodyLong, GuidePanel, Heading} from "@navikt/ds-react";
 
 const Icon = () => {
     return (
-        <svg width="154" height="139" viewBox="0 0 154 139" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M122.552 57.5294C128.445 58.0441 134.595 59.8192 141.186 65.491C147.904 71.2727 149.347 77.8696 148.017 84.799" stroke="#024B62" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M40.147 60.8385C32.3402 60.2891 24.165 58.0783 15.3194 50.7224C6.30229 43.224 4.24696 34.5293 5.85164 25.333" stroke="#024B62" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M60.8008 93.2139C60.8008 105.159 60.8008 117.104 60.8008 129.049C60.8008 130.91 62.5937 129.74 60.49 128.864" stroke="#024B62" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M96.2927 93.2178C97.8112 105.465 98.3387 117.402 98.3387 129.692C98.3387 130.441 98.3387 132.689 98.3387 131.94" stroke="#024B62" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M7.61139 21.0669C6.98762 21.0669 5.92808 20.7189 5.59582 21.6105C5.46617 21.9584 5.43125 22.3435 5.30856 22.6919C5.18833 23.0333 4.95093 23.3432 4.90356 23.7213C4.84646 24.1771 4.8709 24.7442 4.89885 25.2075C4.92716 25.6769 5.54721 25.7698 5.79361 25.9073C6.10162 26.0792 6.63759 25.9593 6.97093 25.9593C7.34929 25.9593 7.743 25.9996 8.11999 25.9593C9.0176 25.8635 8.79813 24.1449 8.79813 23.357C8.79813 23.2586 8.89077 22.6842 8.86406 22.6514C8.71254 22.4654 8.43162 22.7833 8.28953 22.4779C8.12899 22.1329 7.47257 22.2612 7.22052 21.9517C7.00087 21.6819 6.72712 21.8794 6.47175 21.7898C6.39714 21.7636 6.41195 21.5466 6.44349 21.4833C6.56293 21.2433 6.88073 21.3826 6.99919 21.171C7.1481 20.905 8.12291 21.0669 8.3743 21.0669" stroke="#024B62" strokeWidth="8" strokeLinecap="round"/>
-            <path d="M148.611 82.0669C147.988 82.0669 146.928 81.7189 146.596 82.6105C146.466 82.9584 146.431 83.3435 146.309 83.6919C146.188 84.0333 145.951 84.3432 145.904 84.7213C145.846 85.1771 145.871 85.7442 145.899 86.2075C145.927 86.6769 146.547 86.7698 146.794 86.9073C147.102 87.0792 147.638 86.9593 147.971 86.9593C148.349 86.9593 148.743 86.9996 149.12 86.9593C150.018 86.8635 149.798 85.1449 149.798 84.357C149.798 84.2586 149.891 83.6842 149.864 83.6514C149.713 83.4654 149.432 83.7833 149.29 83.4779C149.129 83.1329 148.473 83.2612 148.221 82.9517C148.001 82.6819 147.727 82.8794 147.472 82.7898C147.397 82.7636 147.412 82.5466 147.443 82.4833C147.563 82.2433 147.881 82.3826 147.999 82.171C148.148 81.905 149.123 82.0669 149.374 82.0669" stroke="#024B62" strokeWidth="8" strokeLinecap="round"/>
-            <path d="M59.297 128.067C58.5173 128.067 57.1929 127.719 56.7776 128.61C56.6155 128.958 56.5718 129.343 56.4185 129.692C56.2682 130.033 55.9714 130.343 55.9122 130.721C55.8408 131.177 55.8714 131.744 55.9063 132.208C55.9417 132.677 56.7168 132.77 57.0248 132.907C57.4098 133.079 58.0798 132.959 58.4964 132.959C58.9694 132.959 59.4615 133 59.9328 132.959C61.0548 132.863 60.7804 131.145 60.7804 130.357C60.7804 130.259 60.8962 129.684 60.8629 129.651C60.6735 129.465 60.3223 129.783 60.1447 129.478C59.944 129.133 59.1235 129.261 58.8084 128.952C58.5339 128.682 58.1917 128.879 57.8725 128.79C57.7792 128.764 57.7977 128.547 57.8371 128.483C57.9864 128.243 58.3837 128.383 58.5318 128.171C58.7179 127.905 59.9364 128.067 60.2506 128.067" stroke="#024B62" strokeWidth="8" strokeLinecap="round"/>
-            <path d="M101.611 130.067C100.988 130.067 99.9281 129.719 99.5958 130.61C99.4662 130.958 99.4313 131.343 99.3086 131.692C99.1883 132.033 98.9509 132.343 98.9036 132.721C98.8465 133.177 98.8709 133.744 98.8989 134.208C98.9272 134.677 99.5472 134.77 99.7936 134.907C100.102 135.079 100.638 134.959 100.971 134.959C101.349 134.959 101.743 135 102.12 134.959C103.018 134.863 102.798 133.145 102.798 132.357C102.798 132.259 102.891 131.684 102.864 131.651C102.713 131.465 102.432 131.783 102.29 131.478C102.129 131.133 101.473 131.261 101.221 130.952C101.001 130.682 100.727 130.879 100.472 130.79C100.397 130.764 100.412 130.547 100.443 130.483C100.563 130.243 100.881 130.383 100.999 130.171C101.148 129.905 102.123 130.067 102.374 130.067" stroke="#024B62" strokeWidth="8" strokeLinecap="round"/>
-            <ellipse cx="74.8689" cy="50.5" rx="50" ry="50.5" fill="#FFB682"/>
-            <ellipse cx="63.3689" cy="46.5" rx="7.5" ry="10.5" fill="white"/>
-            <ellipse cx="88.3689" cy="46.5" rx="7.5" ry="10.5" fill="white"/>
-            <ellipse cx="66.3689" cy="46" rx="4.5" ry="7" fill="#024B62"/>
-            <ellipse cx="91.3689" cy="46" rx="4.5" ry="7" fill="#024B62"/>
-            <circle cx="76.3689" cy="62.5" r="2.5" fill="#024B62"/>
-            <path d="M68.8689 68C68.8689 68 69.8689 73 76.3689 73C82.8689 73 84.8689 68 84.8689 68" stroke="#024B62" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="48" cy="48" r="48" fill="#90E8C3"/>
+            <g clipPath="url(#clip0_1_10)">
+                <ellipse cx="34.7609" cy="44.5" rx="7.76087" ry="11.5" fill="white"/>
+                <ellipse cx="31.1087" cy="44.5" rx="4.1087" ry="7.07692" fill="#024B62"/>
+                <ellipse cx="61.2391" cy="44.5" rx="7.76087" ry="11.5" fill="white"/>
+                <ellipse cx="57.587" cy="44.5" rx="4.1087" ry="7.07692" fill="#024B62"/>
+            </g>
+            <path fillRule="evenodd" clipRule="evenodd" d="M55.3491 68.1294C55.4892 68.631 55.2053 69.1537 54.7152 69.297C54.4143 69.3849 54.0957 69.4836 53.7606 69.5874C50.6227 70.5592 46.0418 71.9779 41.0965 69.218C40.6489 68.9682 40.484 68.3946 40.7281 67.9366C40.9722 67.4787 41.533 67.31 41.9805 67.5598C46.2131 69.9219 50.0558 68.7465 53.2249 67.7772C53.5602 67.6746 53.888 67.5743 54.208 67.4808C54.6982 67.3375 55.2091 67.6279 55.3491 68.1294Z" fill="#024B62"/>
+            <path d="M50.3077 60.8333C50.3077 62.3981 49.2745 63.6667 48 63.6667C46.7255 63.6667 45.6923 62.3981 45.6923 60.8333C45.6923 59.2685 46.7255 58 48 58C49.2745 58 50.3077 59.2685 50.3077 60.8333Z" fill="#024B62"/>
+            <defs>
+                <clipPath id="clip0_1_10">
+                    <rect width="42" height="23" fill="white" transform="translate(27 33)"/>
+                </clipPath>
+            </defs>
         </svg>
 
     )
@@ -25,10 +24,31 @@ const Icon = () => {
 
 const GuidePanelExample = () => {
     return (
-        <GuidePanel poster illustration={<Icon />}>
-            Saksbehandlingstiden varierer fra kommune til kommune. Hvis det går mer
-            enn X måneder siden du søkte, skal du få brev om at saksbehandlingstiden
-            er forlenget.
+        <GuidePanel poster illustration={<Icon/>}>
+            <Heading size="medium" level="3" spacing className="text-center mb-2">
+                Slik fungerer det
+            </Heading>
+            <Heading size="small" level="4">Ingen CV eller langt søknadsbrev</Heading>
+            <BodyLong spacing>
+                Du svarer kun på de kvalifikasjoner som bedriften legger vekt på i stillingen.
+            </BodyLong>
+
+            <Heading size="small" level="3" spacing>Vis frem deg selv </Heading>
+            <BodyLong spacing>
+                Du har mulighet til å skrive en begrunnelse om hvorfor akkurat du passer til stillingen.
+            </BodyLong>
+
+            <Heading size="small" level="3" spacing>Du får beskjed </Heading>
+            <BodyLong spacing>
+                Uansett om bedriften ønsker å ta kontakt med deg eller ikke, gir vi deg en tilbakemelding
+                på e-post sånn at du ikke går og lurer.
+            </BodyLong>
+
+            <Heading size="small" level="3" spacing>Du har kontroll på dine data </Heading>
+            <BodyLong>
+                Du søker kun med relevant informasjon for stillingen og kan når som helst trekke tilbake
+                din søknad og informasjonen du har oppgitt.
+            </BodyLong>
         </GuidePanel>
     );
 };
