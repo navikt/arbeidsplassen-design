@@ -1,4 +1,4 @@
-import {BodyLong, GuidePanel, Heading} from "@navikt/ds-react";
+import {BodyLong, GuidePanel, Heading, Ingress} from "@navikt/ds-react";
 
 const Icon = () => {
     return (
@@ -28,6 +28,7 @@ const GuidePanelExample = () => {
             <Heading size="medium" level="3" spacing className="text-center mb-2">
                 Slik fungerer det
             </Heading>
+
             <Heading size="small" level="4">Ingen CV eller langt søknadsbrev</Heading>
             <BodyLong spacing>
                 Du svarer kun på de kvalifikasjoner som bedriften legger vekt på i stillingen.

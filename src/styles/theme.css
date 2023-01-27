@@ -34,8 +34,6 @@
     /* Font */
     --a-font-family: "Inter", sans-serif;
     --a-font-size-large: 1rem;
-    --a-font-size-xlarge: 1.5rem;
-    --a-font-line-height-xlarge: 2rem;
 
     /* Text colors */
     --a-text-default: var(--secondary-100);

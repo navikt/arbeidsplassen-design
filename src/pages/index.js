@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import "@navikt/ds-css";
-import {BodyLong, Button, Heading} from "@navikt/ds-react";
+import {BodyLong, Heading} from "@navikt/ds-react";
 import ChipsExample from "../examples/ChipsExample";
 import AccordionExample from "../examples/AccordionExample";
 import Footer from "../examples/Footer";
@@ -33,6 +33,7 @@ import HelpTextExample from "../examples/HelpTextExample";
 import LinkPanelExample from "../examples/LinkPanelExample";
 import ModalExample from "../examples/ModalExample";
 import HeadingExample from "../examples/HeadingExample";
+import LinkExample from "../examples/LinkExample";
 
 export default function Home() {
     return (
@@ -71,6 +72,13 @@ export default function Home() {
                             adipisicing magna laboris pariatur commodo quis nulla ea aliquip mollit.
                             Nisi aliquip voluptate laboris nisi eiusmod labore eu non.
                         </BodyLong>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Link
+                        </Heading>
+                        <LinkExample />
                     </section>
 
                     <section className="mb-4">
