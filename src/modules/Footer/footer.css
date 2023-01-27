@@ -1,10 +1,25 @@
+:root {
+    --footer-gutter: 1rem;
+}
+
+@media (min-width: 375px) {
+    :root {
+        --footer-gutter: 1.5rem;
+    }
+}
+
+@media (min-width: 928px) {
+    :root {
+        --footer-gutter: 2rem;
+    }
+}
+
 .dsa-footer {
     margin: 0;
-    padding-top: calc(var(--gutter) * 2);
-    padding-bottom: calc(var(--gutter) * 2);
+    padding-top: calc(var(--footer-gutter) * 2);
+    padding-bottom: calc(var(--footer-gutter) * 2);
     background: var(--primary-20);
     line-height: 1.5;
-
 }
 
 @media (min-width: 648px) {
@@ -34,8 +49,8 @@
 .dsa-footer-sections {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--gutter) * 2) calc(var(--gutter) * 3);
-    margin-bottom: calc(var(--gutter) * 2);
+    gap: calc(var(--footer-gutter) * 2) calc(var(--footer-gutter) * 3);
+    margin-bottom: calc(var(--footer-gutter) * 2);
 }
 
 @media (min-width: 648px) {

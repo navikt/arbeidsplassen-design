@@ -1,3 +1,19 @@
+:root {
+    --header-gutter: 1rem;
+}
+
+@media (min-width: 375px) {
+    :root {
+        --header-gutter: 1.5rem;
+    }
+}
+
+@media (min-width: 928px) {
+    :root {
+        --header-gutter: 2rem;
+    }
+}
+
 @media (min-width: 320px) {
     :root {
         --header-height: 73px;
@@ -123,7 +139,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 2rem var(--gutter);
+    gap: 2rem var(--header-gutter);
     padding: 1.5rem 0;
     align-items: center;
 }
@@ -141,6 +157,10 @@
         flex-direction: row;
         padding: 0;
     }
+}
+
+.dsa-header-offset {
+    padding-top: var(--header-height);
 }
 
 .dsa-header-menu ul {
