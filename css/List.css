@@ -1,8 +1,0 @@
-.dsa-list {
-    margin: 0;
-    line-height: 1.5;
-}
-
-.dsa-list li:not(:last-child) {
-    margin: 0 0 calc(var(--gutter) * 0.25) 0;
-}

@@ -1,48 +1,19 @@
 {
-  "name": "@navikt/arbeidsplassen-react",
-  "version": "1.0.12",
-  "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "name": "design",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "prettier:format": "npx prettier -w src",
-    "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/navikt/arbeidsplassen-design.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/navikt/arbeidsplassen-design/issues"
-  },
-  "homepage": "https://github.com/navikt/arbeidsplassen-design#readme",
-  "devDependencies": {
-    "@navikt/arbeidsplassen-css": "file:css",
-    "@storybook/addon-actions": "^6.5.13",
-    "@storybook/addon-essentials": "^6.5.13",
-    "@storybook/addon-interactions": "^6.5.13",
-    "@storybook/addon-links": "^6.5.13",
-    "@storybook/builder-webpack4": "^6.5.13",
-    "@storybook/manager-webpack4": "^6.5.13",
-    "@storybook/react": "^6.5.13",
-    "@storybook/testing-library": "^0.0.13",
-    "prettier": "^2.7.1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.2",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^8.2.5",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "workspaces": [
-    "css"
-  ]
+    "@navikt/ds-css": "^2.0.12",
+    "@navikt/ds-react": "^2.0.12",
+    "@next/font": "13.1.1",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
 }
