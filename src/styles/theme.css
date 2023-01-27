@@ -28,51 +28,78 @@
     --info-neutral-bg: #b0b7df;
     --info-success-bg: #c1f3db;
 }
-
 [data-theme="arbeidsplassen"]{
+    /* Default */
+    --a-border-default: var(--secondary-100);
+
+    /* Font */
     --a-font-family: "Inter", sans-serif;
     --a-font-size-large: 1rem;
     --a-font-size-xlarge: 1.5rem;
     --a-font-line-height-xlarge: 2rem;
+
+    /* Text colors */
     --a-text-default: var(--secondary-100);
     --a-text-danger: var(--info-error-text);
+
+    /* Action color, for example buttons */
     --a-surface-action: var(--secondary-60);
-    --a-surface-action-hover: var(--secondary-80);
     --a-surface-action-active: var(--secondary-60);
-    --a-surface-action-subtle-hover: var(--secondary-20);
     --a-surface-action-selected: var(--secondary-60);
-    --a-surface-info-subtle: var(--secondary-20);
+    --a-surface-action-hover: var(--secondary-80);
+    --a-surface-action-subtle-hover: var(--secondary-20);
+    --a-surface-action-selected-hover: var(--secondary-20);
+    --a-text-action: var(--secondary-60);
+    --a-border-action: var(--secondary-60);
+
+    /* Info colors */
     --a-surface-info: var(--secondary-40);
+    --a-surface-info-subtle: var(--secondary-20);
     --a-border-info: var(--secondary-40);
-    --a-border-danger: var(--info-error-text);
-    --a-surface-success-subtle: var(--primary-5);
+
+    /* Success colors */
     --a-surface-success: var(--primary-20);
+    --a-surface-success-subtle: var(--primary-5);
     --a-border-success: var(--primary-40);
     --a-text-on-success: var(--secondary-100);
-    --a-text-on-danger: var(--secondary-100);
-    --a-surface-action-selected-hover: var(--secondary-20);
+
+    /* Warning colors */
     --a-surface-warning-subtle: var(--info-warning-bg-subtle);
     --a-surface-warning: var(--info-warning-bg);
-    --a-surface-danger-subtle: var(--tertiary-10);
+
+    /* Danger colors */
     --a-surface-danger: var(--tertiary-20);
-    --a-text-action: var(--secondary-60);
-    --a-border-default: var(--secondary-100);
-    --a-border-action: var(--secondary-60);
-    --a-border-divider: var(--primary-20);
+    --a-surface-danger-subtle: var(--tertiary-10);
+    --a-border-danger: var(--info-error-text);
+    --a-text-on-danger: var(--secondary-100);
+
+    /* Checkbox */
+    --ac-radio-checkbox-action: var(--secondary-60);
+
+    /* Chips toogle */
     --ac-chip-toggle-pressed-bg: var(--primary-80);
     --ac-chip-toggle-pressed-text: var(--primary-20);
     --ac-chip-toggle-pressed-hover-bg: var(--primary-100);
     --ac-chip-toggle-border: var(--primary-80);
     --ac-chip-toggle-hover-bg: var(--secondary-20);
     --ac-chip-toggle-bg: var(--neutral-0);
+
+    /* Chips removable */
     --ac-chip-removable-action-bg: var(--primary-80);
     --ac-chip-removable-action-text: var(--primary-20);
     --ac-chip-removable-action-hover-bg: var(--primary-100);
-    --ac-radio-checkbox-action: var(--secondary-60);
+
+    /* Accordion */
     --ac-accordion-item-bg-open: var(--primary-5);
+
+    /* Guide panel */
     --ac-guide-panel-illustration-bg: var(--primary-5);
     --ac-guide-panel-border: var(--primary-40);
+
+    /* Other */
+    --a-border-divider: var(--primary-20);
 }
+
 
 .navds-button:not(
     .navds-button--icon-only,
