@@ -1,7 +1,7 @@
 import { ToggleGroup } from "@navikt/ds-react";
-import Heart from "./Feather/Heart";
-import User from "./Feather/User";
-import Building from "./Feather/Building";
+import Heart from "../components/Feather/Heart";
+import User from "../components/Feather/User";
+import Building from "../components/Feather/Building";
 
 const ToggleGroupExample = () => {
     return (

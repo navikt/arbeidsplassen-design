@@ -1,5 +1,5 @@
-@import "../modules/Header/header.css";
-@import "../modules/Footer/footer.css";
+@import "../components/Header/header.css";
+@import "../components/Footer/footer.css";
 @import "theme.css";
 @import "helpers.css";
 

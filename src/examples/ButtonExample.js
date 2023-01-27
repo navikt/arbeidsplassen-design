@@ -1,5 +1,5 @@
 import {Button} from "@navikt/ds-react";
-import Trash from "./Feather/Trash";
+import Trash from "../components/Feather/Trash";
 
 const ButtonExample = () => {
 

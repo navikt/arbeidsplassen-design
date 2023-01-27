@@ -5,7 +5,7 @@ function PersonMenu({ active }) {
         <ul>
             <li className="dsa-header-hide-on-desktop">
                 <a
-                    href="/"
+                    href="/Users/otenav/IdeaProjects/arbeidsplassen-design/src/pages"
                     className={
                         active === "person" ? "dsa-header-active" : undefined
                     }
