@@ -233,7 +233,7 @@ export default function Home() {
                             Panel
                         </Heading>
                         <BodyLong spacing>
-                            Add class <code className="code">.bg-primary|secondary|tertiary</code> to get custom background color
+                            Add class <code className="code">.bg-primary|secondary|tertiary</code>
                         </BodyLong>
                         <PanelExample/>
                     </section>
@@ -243,7 +243,7 @@ export default function Home() {
                             LinkPanel
                         </Heading>
                         <BodyLong spacing>
-                            Add class <code className="code">.bg-primary|secondary|tertiary</code> to get custom background color
+                            Add class <code className="code">.bg-primary|secondary|tertiary</code>
                         </BodyLong>
                         <LinkPanelExample />
                     </section>

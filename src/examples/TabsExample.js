@@ -16,13 +16,13 @@ const TabsExample = () => {
                 <Tabs.Tab value="inbox" label="Inbox" icon={<Email title="inbox" />} />
                 <Tabs.Tab value="sendt" label="Sendt" icon={<Send title="sendt" />} />
             </Tabs.List>
-            <Tabs.Panel value="logg" className="h-24 w-full bg-gray-50 p-4">
+            <Tabs.Panel value="logg">
                 Logg-tab
             </Tabs.Panel>
-            <Tabs.Panel value="inbox" className="h-24 w-full bg-gray-50 p-4">
+            <Tabs.Panel value="inbox">
                 Inbox-tab
             </Tabs.Panel>
-            <Tabs.Panel value="sendt" className="h-24  w-full bg-gray-50 p-4">
+            <Tabs.Panel value="sendt">
                 Sendt-tab
             </Tabs.Panel>
         </Tabs>

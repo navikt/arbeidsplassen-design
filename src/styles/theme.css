@@ -99,6 +99,9 @@
     --ac-link-panel-hover-text: var(--secondary-100);
     --ac-link-panel-hover-border: transparent;
 
+    /* Tabs */
+    --ac-tabs-selected-border: var(--primary-40);
+
     /* Other */
     --a-border-divider: var(--primary-20);
 
