@@ -101,6 +101,7 @@
     /* Other */
     --a-border-divider: var(--primary-20);
 
+    /* Remove all shadows */
     --a-shadow-xlarge: none;
     --a-shadow-large: none;
     --a-shadow-medium: none;
