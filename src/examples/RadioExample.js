@@ -5,7 +5,7 @@ const RadioExample = () => {
 
     return (
         <RadioGroup
-            legend="Velg din aldersgruppe."
+            legend="Velg din aldersgruppe"
             onChange={(val) => handleChange(val)}
             defaultValue="10"
         >

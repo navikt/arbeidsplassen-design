@@ -1,24 +1,63 @@
 import { Accordion } from "@navikt/ds-react";
+import {Checkbox, CheckboxGroup} from "@navikt/ds-react";
+
+const Arbeidsted = () => {
+    const handleChange = (val) => console.log(val);
+
+    return (
+        <>
+            <CheckboxGroup
+                hideLegend
+                legend="Velg arbeidssted"
+                onChange={(val) => handleChange(val)}
+                defaultValue={["Bakerst"]}
+            >
+                <Checkbox value="Fremst">Alta</Checkbox>
+                <Checkbox value="Midterst">Bergen</Checkbox>
+                <Checkbox value="Bakerst">Oslo</Checkbox>
+                <Checkbox value="Fremst">Trondheim</Checkbox>
+            </CheckboxGroup>
+        </>
+
+    );
+};
+
+const Yrke = () => {
+    const handleChange = (val) => console.log(val);
+
+    return (
+        <>
+            <CheckboxGroup
+                hideLegend
+                legend="Velg arbeidssted"
+                onChange={(val) => handleChange(val)}
+                defaultValue={["Bakerst"]}
+            >
+                <Checkbox value="Fremst">Helse og sosial (5715)</Checkbox>
+                <Checkbox value="Midterst">Utdanning (3037)</Checkbox>
+                <Checkbox value="Bakerst">Salg og service (2635)</Checkbox>
+                <Checkbox value="Fremst">Kontor og økonomi (2220)</Checkbox>
+            </CheckboxGroup>
+        </>
+
+    );
+};
 
 const AccordionExample = () => {
     return (
         <Accordion style={{ width: "100%", maxWidth: "65ch" }}>
             <Accordion.Item>
-                <Accordion.Header>Til deg som er mellom 62 og 67 år</Accordion.Header>
+                <Accordion.Header>Område</Accordion.Header>
                 <Accordion.Content>
-                    Hvis du er mellom 62 og 67 år når du søker, må du som hovedregel ha
-                    hatt en pensjonsgivende inntekt som tilsvarer x G, året før du fikk
-                    nedsatt arbeidsevnen. NAV kan gjøre unntak.
+                    <Arbeidsted />
                 </Accordion.Content>
             </Accordion.Item>
-            <Accordion.Item defaultOpen>
+            <Accordion.Item>
                 <Accordion.Header>
-                    Til deg som har yrkesskade eller yrkessykdom
+                    Yrke
                 </Accordion.Header>
                 <Accordion.Content>
-                    Med yrkesskade mener vi at du har fått en skade som følge av en
-                    arbeidsulykke. Vi kan godkjenne en sykdom som yrkessykdom hvis den
-                    kommer av skadelig påvirkning fra arbeidsmiljøet.
+                   <Yrke />
                 </Accordion.Content>
             </Accordion.Item>
         </Accordion>

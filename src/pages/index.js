@@ -43,7 +43,14 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Header variant="person" onLogin={() => {}} onLogout={() => {}} authenticationStatus="not-authenticated"/>
+            <Header
+                variant="person"
+                onLogin={() => {}}
+                onLogout={() => {}}
+                authenticationStatus="is-authenticated"
+                active="ledige-stillinger"
+                userName="Navn Navnesen"
+            />
             <main className="dsa-header-offset">
                 <div className="container mt-4">
                     <section className="mb-4">
@@ -225,6 +232,9 @@ export default function Home() {
                         <Heading level="2" size="large" spacing>
                             Panel
                         </Heading>
+                        <BodyLong spacing>
+                            Add class <code className="code">.bg-primary|secondary|tertiary</code> to get custom background color
+                        </BodyLong>
                         <PanelExample/>
                     </section>
 
@@ -232,6 +242,9 @@ export default function Home() {
                         <Heading level="2" size="large" spacing>
                             LinkPanel
                         </Heading>
+                        <BodyLong spacing>
+                            Add class <code className="code">.bg-primary|secondary|tertiary</code> to get custom background color
+                        </BodyLong>
                         <LinkPanelExample />
                     </section>
 
@@ -274,7 +287,6 @@ export default function Home() {
                         <Heading level="2" size="large" spacing>
                             Pagination
                         </Heading>
-                        <PaginationExample />
                     </section>
                 </div>
             </main>

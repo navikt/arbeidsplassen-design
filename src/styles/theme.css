@@ -84,14 +84,28 @@
     --ac-chip-removable-action-hover-bg: var(--primary-100);
 
     /* Accordion */
-    --ac-accordion-item-bg-open: var(--primary-5);
+    --ac-accordion-item-bg-open: var(--primary-10);
+    --ac-accordion-header-border: var(--secondary-100);
+    --ac-accordion-item-border-open: var(--secondary-100);
+    --ac-accordion-content-border: transparent;
+    --ac-accordion-content-border-open: transparent;
 
     /* Guide panel */
     --ac-guide-panel-illustration-bg: #90e8c3;
     --ac-guide-panel-border: #90e8c3;
 
+    /* Link panel */
+    --ac-link-panel-hover-text: var(--secondary-100);
+    --ac-link-panel-hover-border: transparent;
+
     /* Other */
     --a-border-divider: var(--primary-20);
+
+    --a-shadow-xlarge: none;
+    --a-shadow-large: none;
+    --a-shadow-medium: none;
+    --a-shadow-small: none;
+    --a-shadow-xsmall: none;
 }
 
 
@@ -115,7 +129,15 @@
     padding: 0.375rem 0.75rem!important;
 }
 
+.navds-panel {
+    padding: 2rem!important;
+}
+
 .navds-guide-panel__content {
     border-width: 3px!important;
     padding: 4rem!important;
+}
+
+.navds-accordion__header:hover {
+    background: var(--secondary-20)!important;
 }

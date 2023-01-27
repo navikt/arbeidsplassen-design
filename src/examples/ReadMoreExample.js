@@ -1,10 +1,11 @@
-import { ReadMore } from "@navikt/ds-react";
+import {ReadMore} from "@navikt/ds-react";
 
 const ReadMoreExample = () => {
     return (
-        <ReadMore header="Gregor Samsa woke from troubled dreams" open>
-            One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a
-            horrible vermin.
+        <ReadMore header="Slik fungerer det" defaultOpen>
+            Velg superrask søknad når dere registrerer en stillingsannonse. Spesifiser hvilke kvalifikasjoner dere har
+            behov for. Jobbsøkerne svarer på hvilke kvalifikasjoner de oppfyller, og begrunner kort hvorfor de er rett
+            person for jobben.
         </ReadMore>
     );
 };
