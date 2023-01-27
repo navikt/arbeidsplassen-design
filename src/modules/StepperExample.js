@@ -40,7 +40,6 @@ const StepperExample = () => {
                 Display only
             </Heading>
             <Stepper
-                activeStep={activeStep}
                 activeStep={-1}
                 interactive={false}
                 orientation="horizontal"
