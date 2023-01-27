@@ -21,12 +21,11 @@
     --neutral-40: #c9c4bf;
     --neutral-20: #eceae8;
     --neutral-0: #ffffff;
-    --info-error-text: #b50101;
-    --info-error-bg: #ffc7b7;
-    --info-warning-bg-subtle: #fcfae1;
-    --info-warning-bg: #fcf9b5;
-    --info-neutral-bg: #b0b7df;
-    --info-success-bg: #c1f3db;
+    --info: #b0b7df;
+    --success: #c1f3db;
+    --warning-subtle: #fcfae1;
+    --warning: #fcf9b5;
+    --danger: #b50101;
 }
 [data-theme="arbeidsplassen"]{
     /* Default */
@@ -40,11 +39,11 @@
 
     /* Text colors */
     --a-text-default: var(--secondary-100);
-    --a-text-danger: var(--info-error-text);
+    --a-text-danger: var(--danger);
 
-    /* Action color, for example buttons */
+    /* Action color, for example buttons, checkbox, radio */
     --a-surface-action: var(--secondary-60);
-    --a-surface-action-active: var(--secondary-60);
+    --a-surface-action-active: var(--secondary-100);
     --a-surface-action-selected: var(--secondary-60);
     --a-surface-action-hover: var(--secondary-80);
     --a-surface-action-subtle-hover: var(--secondary-20);
@@ -64,17 +63,14 @@
     --a-text-on-success: var(--secondary-100);
 
     /* Warning colors */
-    --a-surface-warning-subtle: var(--info-warning-bg-subtle);
-    --a-surface-warning: var(--info-warning-bg);
+    --a-surface-warning: var(--warning);
+    --a-surface-warning-subtle: var(--warning-subtle);
+    --a-border-warning: var(--tertiary-60);
 
     /* Danger colors */
-    --a-surface-danger: var(--tertiary-20);
+    --a-surface-danger: var(--danger);
     --a-surface-danger-subtle: var(--tertiary-10);
-    --a-border-danger: var(--info-error-text);
-    --a-text-on-danger: var(--secondary-100);
-
-    /* Checkbox */
-    --ac-radio-checkbox-action: var(--secondary-60);
+    --a-border-danger: var(--danger);
 
     /* Chips toogle */
     --ac-chip-toggle-pressed-bg: var(--primary-80);
