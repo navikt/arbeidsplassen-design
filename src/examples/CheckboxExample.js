@@ -7,7 +7,7 @@ const CheckboxExample = () => {
         <>
             <CheckboxGroup
                 legend="Velg arbeidssted"
-                description="Fremste rad er nærmest nødutgangene"
+                description="Du kan velge flere steder om du vil"
                 onChange={(val) => handleChange(val)}
                 defaultValue={["Bakerst"]}
             >
@@ -18,7 +18,6 @@ const CheckboxExample = () => {
                 <Checkbox value="Førersetet" disabled>Jan Mayen</Checkbox>
             </CheckboxGroup>
         </>
-
     );
 };
 
