@@ -1,6 +1,6 @@
 import React from "react";
-import LogOut from "../../Feather/LogOut";
-import LogIn from "../../Feather/LogIn";
+import LogOut from "../../icons/LogOut";
+import LogIn from "../../icons/LogIn";
 import {Button} from "@navikt/ds-react";
 
 function LoginButton({

@@ -1,6 +1,6 @@
 import React from "react";
-import User from "../../Feather/User";
-import Building from "../../Feather/Building";
+import User from "../../icons/User";
+import Building from "../../icons/Building";
 
 function LoggedInUser({ variant, userName, companyName }) {
     return (

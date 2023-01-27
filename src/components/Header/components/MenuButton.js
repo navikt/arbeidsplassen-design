@@ -1,6 +1,6 @@
 import React from "react";
-import Menu from "../../Feather/Menu";
-import XIcon from "../../Feather/XIcon";
+import Menu from "../../icons/Menu";
+import XIcon from "../../icons/XIcon";
 import {Button} from "@navikt/ds-react";
 
 function MenuButton({ isMobileMenuHidden, toggleMenu }) {
