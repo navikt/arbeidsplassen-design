@@ -122,6 +122,10 @@
     background-color: var(--tertiary-5)!important;
 }
 
+
+/********************************************************************
+ * TODO: Sjekk om Navs designsystem heller kan tilby css-variabler
+ ********************************************************************/
 .navds-button:not(
     .navds-button--icon-only,
     .navds-search__button-search,
