@@ -5,35 +5,8 @@
 .container {
     max-width: 800px;
     width: 100%;
-    margin: 0 auto;
+    margin: 2rem auto 0;
     padding: 1rem;
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mt-2 {
-    margin-top: 2rem!important;
-}
-
-.mt-4 {
-    margin-top: 4rem!important;
-}
-
-.mb-2 {
-    margin-bottom: 2rem!important;
-}
-
-.mb-4 {
-    margin-bottom: 4rem!important;
 }
 
 .bg-primary {
@@ -48,12 +21,23 @@
     background-color: var(--tertiary-5)!important;
 }
 
-.code {
-    background: var(--neutral-20);
-    box-shadow: inset;
-    color: var(--danger);
-    padding: 0 4px;
-    border-radius: 2px;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 2rem!important;
+}
+
+.mb-4 {
+    margin-bottom: 4rem!important;
 }
 
 

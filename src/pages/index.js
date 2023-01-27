@@ -52,7 +52,7 @@ export default function Home() {
                 userName="Navn Navnesen"
             />
             <main className="dsa-header-offset">
-                <div className="container mt-4">
+                <div className="container">
                     <section className="mb-4">
                         <HeadingExample />
                     </section>

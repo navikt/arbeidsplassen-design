@@ -27,6 +27,7 @@
     --warning: #fcf9b5;
     --danger: #b50101;
 }
+
 [data-theme="arbeidsplassen"]{
     /* Default */
     --a-border-default: var(--secondary-100);
@@ -108,7 +109,6 @@
     --a-shadow-small: none;
     --a-shadow-xsmall: none;
 }
-
 
 .navds-button:not(
     .navds-button--icon-only,
