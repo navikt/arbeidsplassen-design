@@ -9,18 +9,6 @@
     padding: 1rem;
 }
 
-.bg-primary {
-    background-color: var(--primary-20)!important;
-}
-
-.bg-secondary {
-    background-color: var(--secondary-20)!important;
-}
-
-.bg-tertiary {
-    background-color: var(--tertiary-5)!important;
-}
-
 .flex {
     display: flex;
     flex-wrap: wrap;
