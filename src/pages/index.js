@@ -32,6 +32,7 @@ import GuidePanelExample from "../examples/GuidePanel";
 import HelpTextExample from "../examples/HelpTextExample";
 import LinkPanelExample from "../examples/LinkPanelExample";
 import ModalExample from "../examples/ModalExample";
+import HeadingExample from "../examples/HeadingExample";
 
 export default function Home() {
     return (
@@ -45,10 +46,38 @@ export default function Home() {
             <main className="dsa-header-offset">
                 <div className="container mt-4">
                     <section className="mb-4">
+                        <HeadingExample />
+                    </section>
+
+                    <section className="mb-4">
                         <Heading level="2" size="large" spacing>
-                            Alert
+                            Ingress
                         </Heading>
-                        <AlertExample/>
+                        <IngressExample />
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            BodyLong
+                        </Heading>
+                        <BodyLong spacing>
+                            One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in
+                            his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a
+                            little he could see his brown belly, slightly domed and divided by arches into stiff
+                            sections.
+                        </BodyLong>
+                        <BodyLong>
+                            Magna aliqua et adipisicing nostrud elit ea. Id ipsum ut laborum ut
+                            adipisicing magna laboris pariatur commodo quis nulla ea aliquip mollit.
+                            Nisi aliquip voluptate laboris nisi eiusmod labore eu non.
+                        </BodyLong>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            GuidePanel
+                        </Heading>
+                        <GuidePanelExample />
                     </section>
 
                     <section className="mb-4">
@@ -81,6 +110,13 @@ export default function Home() {
 
                     <section className="mb-4">
                         <Heading level="2" size="large" spacing>
+                            Search
+                        </Heading>
+                        <SearchExample />
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
                             Checkbox
                         </Heading>
                         <CheckboxExample />
@@ -109,23 +145,16 @@ export default function Home() {
 
                     <section className="mb-4">
                         <Heading level="2" size="large" spacing>
+                            ConfirmationPanel
+                        </Heading>
+                        <ConfirmationPanelExample />
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
                             ErrorSummary
                         </Heading>
                         <ErrorSummaryExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Search
-                        </Heading>
-                        <SearchExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Pagination
-                        </Heading>
-                        <PaginationExample />
                     </section>
 
                     <section className="mb-4">
@@ -140,20 +169,6 @@ export default function Home() {
                             Tag
                         </Heading>
                         <TagExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            ConfirmationPanel
-                        </Heading>
-                        <ConfirmationPanelExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            ReadMore
-                        </Heading>
-                        <ReadMoreExample/>
                     </section>
 
                     <section className="mb-4">
@@ -214,9 +229,9 @@ export default function Home() {
 
                     <section className="mb-4">
                         <Heading level="2" size="large" spacing>
-                            GuidePanel
+                            ReadMore
                         </Heading>
-                        <GuidePanelExample />
+                        <ReadMoreExample/>
                     </section>
 
                     <section className="mb-4">
@@ -228,6 +243,13 @@ export default function Home() {
 
                     <section className="mb-4">
                         <Heading level="2" size="large" spacing>
+                            Alert
+                        </Heading>
+                        <AlertExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
                             Modal
                         </Heading>
                         <ModalExample/>
@@ -235,33 +257,16 @@ export default function Home() {
 
                     <section className="mb-4">
                         <Heading level="2" size="large" spacing>
-                            Ingress
-                        </Heading>
-                        <IngressExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            BodyLong
-                        </Heading>
-                        <BodyLong spacing>
-                            One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in
-                            his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a
-                            little he could see his brown belly, slightly domed and divided by arches into stiff
-                            sections.
-                        </BodyLong>
-                        <BodyLong>
-                            Magna aliqua et adipisicing nostrud elit ea. Id ipsum ut laborum ut
-                            adipisicing magna laboris pariatur commodo quis nulla ea aliquip mollit.
-                            Nisi aliquip voluptate laboris nisi eiusmod labore eu non.
-                        </BodyLong>
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
                             Table
                         </Heading>
                         <TableExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Pagination
+                        </Heading>
+                        <PaginationExample />
                     </section>
                 </div>
             </main>
