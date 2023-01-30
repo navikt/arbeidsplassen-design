@@ -34,6 +34,7 @@ import LinkPanelExample from "../examples/LinkPanelExample";
 import ModalExample from "../examples/ModalExample";
 import HeadingExample from "../examples/HeadingExample";
 import LinkExample from "../examples/LinkExample";
+import Illustration from "../examples/Illustration";
 
 export default function Home() {
     return (
@@ -45,8 +46,10 @@ export default function Home() {
             </Head>
             <Header
                 variant="person"
-                onLogin={() => {}}
-                onLogout={() => {}}
+                onLogin={() => {
+                }}
+                onLogout={() => {
+                }}
                 authenticationStatus="is-authenticated"
                 active="ledige-stillinger"
                 userName="Navn Navnesen"
@@ -54,14 +57,14 @@ export default function Home() {
             <main className="dsa-header-offset">
                 <div className="container">
                     <section className="mb-4">
-                        <HeadingExample />
+                        <HeadingExample/>
                     </section>
 
                     <section className="mb-4">
                         <Heading level="2" size="large" spacing>
                             Ingress
                         </Heading>
-                        <IngressExample />
+                        <IngressExample/>
                     </section>
 
                     <section className="mb-4">
@@ -69,15 +72,15 @@ export default function Home() {
                             BodyLong
                         </Heading>
                         <BodyLong spacing>
-                            One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in
-                            his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a
-                            little he could see his brown belly, slightly domed and divided by arches into stiff
-                            sections.
+                            Jobbtreff er en ny tjeneste på arbeidsplassen.no. Nå kan du som er jobbsøker bli kjent med
+                            en bedrift som trenger folk. De forteller om hva slags kompetanse de trenger og om
+                            jobbmulighetene. Vi har forenklet søkeprosessen slik at du med noen få klikk kan vise
+                            hvorfor du er rett person for jobben.
                         </BodyLong>
                         <BodyLong>
-                            Magna aliqua et adipisicing nostrud elit ea. Id ipsum ut laborum ut
-                            adipisicing magna laboris pariatur commodo quis nulla ea aliquip mollit.
-                            Nisi aliquip voluptate laboris nisi eiusmod labore eu non.
+                            Vi har forenklet søkeprosessen slik at du med noen få klikk kan vise
+                            hvorfor du er rett person for jobben. De forteller om hva slags kompetanse de trenger og om
+                            jobbmulighetene.
                         </BodyLong>
                     </section>
 
@@ -85,147 +88,16 @@ export default function Home() {
                         <Heading level="2" size="large" spacing>
                             Link
                         </Heading>
-                        <LinkExample />
+                        <LinkExample/>
                     </section>
 
                     <section className="mb-4">
                         <Heading level="2" size="large" spacing>
-                            GuidePanel
+                            Illustration
                         </Heading>
-                        <GuidePanelExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Button
-                        </Heading>
-                        <ButtonExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            TextField
-                        </Heading>
-                       <TextFieldExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Select
-                        </Heading>
-                        <SelectExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Textarea
-                        </Heading>
-                        <TextareaExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Search
-                        </Heading>
-                        <SearchExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Checkbox
-                        </Heading>
-                        <CheckboxExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Radio
-                        </Heading>
-                        <RadioExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            DatePicker
-                        </Heading>
-                        <DatePickerExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Switch
-                        </Heading>
-                        <SwitchExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            ConfirmationPanel
-                        </Heading>
-                        <ConfirmationPanelExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            ErrorSummary
-                        </Heading>
-                        <ErrorSummaryExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Chips
-                        </Heading>
-                        <ChipsExample/>
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Tag
-                        </Heading>
-                        <TagExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Stepper
-                        </Heading>
-                        <StepperExample/>
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            ToggleGroup
-                        </Heading>
-                        <ToggleGroupExample/>
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Tabs
-                        </Heading>
-                        <TabsExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Popover
-                        </Heading>
-                        <PopoverExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            Tooltip
-                        </Heading>
-                        <TooltipExample />
-                    </section>
-
-                    <section className="mb-4">
-                        <Heading level="2" size="large" spacing>
-                            HelpText
-                        </Heading>
-                        <HelpTextExample />
+                        <div className="text-center">
+                            <Illustration/>
+                        </div>
                     </section>
 
                     <section className="mb-4">
@@ -245,7 +117,147 @@ export default function Home() {
                         <BodyLong spacing>
                             Add class <code className="code">.bg-primary|secondary|tertiary</code>
                         </BodyLong>
-                        <LinkPanelExample />
+                        <LinkPanelExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            GuidePanel
+                        </Heading>
+                        <GuidePanelExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Button
+                        </Heading>
+                        <ButtonExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            TextField
+                        </Heading>
+                        <TextFieldExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Select
+                        </Heading>
+                        <SelectExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Textarea
+                        </Heading>
+                        <TextareaExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Search
+                        </Heading>
+                        <SearchExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Checkbox
+                        </Heading>
+                        <CheckboxExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Radio
+                        </Heading>
+                        <RadioExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            DatePicker
+                        </Heading>
+                        <DatePickerExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Switch
+                        </Heading>
+                        <SwitchExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            ToggleGroup
+                        </Heading>
+                        <ToggleGroupExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Tabs
+                        </Heading>
+                        <TabsExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Popover
+                        </Heading>
+                        <PopoverExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Tooltip
+                        </Heading>
+                        <TooltipExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            HelpText
+                        </Heading>
+                        <HelpTextExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Chips
+                        </Heading>
+                        <ChipsExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Tag
+                        </Heading>
+                        <TagExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            ConfirmationPanel
+                        </Heading>
+                        <ConfirmationPanelExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            ErrorSummary
+                        </Heading>
+                        <ErrorSummaryExample/>
+                    </section>
+
+                    <section className="mb-4">
+                        <Heading level="2" size="large" spacing>
+                            Stepper
+                        </Heading>
+                        <StepperExample/>
                     </section>
 
                     <section className="mb-4">
@@ -290,7 +302,7 @@ export default function Home() {
                     </section>
                 </div>
             </main>
-            <Footer />
+            <Footer/>
         </div>
     )
 }
