@@ -16,13 +16,11 @@ const ModalExample = () => {
                 aria-label="Modal demo"
                 onClose={() => setOpen((x) => !x)}
                 aria-labelledby="modal-heading"
+                className="modal-small"
             >
                 <Modal.Content>
                     <Heading spacing level="1" size="large" id="modal-heading">
                         Laborum proident id ullamco
-                    </Heading>
-                    <Heading spacing level="2" size="medium">
-                        Excepteur labore nostrud incididunt exercitation.
                     </Heading>
                     <BodyLong spacing>
                         Culpa aliquip ut cupidatat laborum minim quis ex in aliqua. Qui
@@ -32,6 +30,9 @@ const ModalExample = () => {
                         exercitation non minim minim pariatur sunt laborum ipsum.
                         Exercitation nostrud est laborum magna non non aliqua qui esse.
                     </BodyLong>
+                    <Button variant="primary" onClick={() => setOpen((x) => !x)}>
+                        Lukk modal
+                    </Button>
                 </Modal.Content>
             </Modal>
         </>

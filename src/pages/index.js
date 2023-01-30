@@ -3,7 +3,7 @@ import "@navikt/ds-css";
 import {BodyLong, Heading} from "@navikt/ds-react";
 import ChipsExample from "../examples/ChipsExample";
 import AccordionExample from "../examples/AccordionExample";
-import Footer from "../examples/Footer";
+import Footer from "../components/Footer/Footer";
 import RadioExample from "../examples/RadioExample";
 import ButtonExample from "../examples/ButtonExample";
 import TextFieldExample from "../examples/TextFieldExample";

@@ -34,7 +34,6 @@
 
     /* Font */
     --a-font-family: "Inter", sans-serif;
-    --a-font-size-large: 1rem;
 
     /* Text colors */
     --a-text-default: var(--secondary-100);
@@ -88,8 +87,6 @@
     --ac-accordion-item-bg-open: var(--primary-10);
     --ac-accordion-header-border: var(--secondary-100);
     --ac-accordion-item-border-open: var(--secondary-100);
-    --ac-accordion-content-border: transparent;
-    --ac-accordion-content-border-open: transparent;
 
     /* Guide panel */
     --ac-guide-panel-illustration-bg: #90e8c3;

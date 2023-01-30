@@ -11,6 +11,9 @@ const TagExample = () => {
             <Tag variant="success">Success</Tag>
             <Tag variant="warning">Warning</Tag>
             <Tag variant="error">Error</Tag>
+            <Tag variant="error">Error</Tag>
+            <Tag variant="info" size="small">Small</Tag>
+            <Tag variant="info" size="xsmall">Xsmall</Tag>
         </div>
     );
 };

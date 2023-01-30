@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Illustration() {
+function Image() {
     return (
         <svg role="img" width="666" height="379" viewBox="0 0 666 379" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M246.349 354.559C243.481 377.544 172.38 378.046 154.742 378.046C137.104 378.046 53.5347 380.093 57.2344 360.653C60.934 341.213 125.529 328.386 154.742 340.425C183.954 352.465 249.216 331.575 246.349 354.559Z" fill="#DFE2F3"/>
@@ -127,8 +127,16 @@ function Illustration() {
                 </clipPath>
             </defs>
         </svg>
-
     );
+}
+
+function Illustration() {
+    return (
+        <figure>
+            <Image />
+            <figcaption>Figur: Sammen er vi sterke</figcaption>
+        </figure>
+    )
 }
 
 Illustration.defaultProps = {

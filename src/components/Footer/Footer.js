@@ -60,7 +60,7 @@ export default function Footer() {
             </nav>
             <div className="dsa-footer-bottom">
                 <a
-                    href="https://www.nav.no/"
+                    href="src/components/Footer/Footer"
                     className="dsa-footer-logo"
                     aria-label="Gå til nav.no"
                 >
