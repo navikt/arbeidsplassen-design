@@ -110,15 +110,15 @@
     --a-shadow-xsmall: none;
 }
 
-.bg-primary {
+.bg-primary-20 {
     background-color: var(--primary-20)!important;
 }
 
-.bg-secondary {
+.bg-secondary-20 {
     background-color: var(--secondary-20)!important;
 }
 
-.bg-tertiary {
+.bg-tertiary-5 {
     background-color: var(--tertiary-5)!important;
 }
 
