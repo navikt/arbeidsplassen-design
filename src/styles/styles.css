@@ -28,6 +28,14 @@
     margin-bottom: 4rem;
 }
 
+.dsa-guide-panel-content {
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.pa-2 {
+    padding: 2rem!important;
+}
+
 .modal-small {
     max-width: 800px;
     width: 100%;

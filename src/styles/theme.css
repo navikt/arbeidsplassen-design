@@ -143,16 +143,8 @@
     border-radius: var(--a-border-radius-full)!important;
     border-bottom-right-radius: 0!important;
     font-weight: 600!important;
-    padding: 0.375rem 0.75rem!important;
-}
-
-.navds-panel {
-    padding: 2rem!important;
-}
-
-.navds-guide-panel__content {
-    border-width: 3px!important;
-    padding: 4rem!important;
+    padding-left: 0.75rem!important;
+    padding-right: 0.75rem!important;
 }
 
 .navds-accordion__header:hover {

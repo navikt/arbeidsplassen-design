@@ -17,13 +17,10 @@ const TabsExample = () => {
                 <Tabs.Tab value="sendt" label="Sendt" icon={<Send title="sendt" />} />
             </Tabs.List>
             <Tabs.Panel value="logg">
-                Logg-tab
             </Tabs.Panel>
             <Tabs.Panel value="inbox">
-                Inbox-tab
             </Tabs.Panel>
             <Tabs.Panel value="sendt">
-                Sendt-tab
             </Tabs.Panel>
         </Tabs>
     );

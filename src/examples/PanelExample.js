@@ -2,7 +2,7 @@ import {BodyLong, Heading, Panel} from "@navikt/ds-react";
 
 const PanelExample = () => {
     return (
-        <Panel border={false} className="bg-tertiary-5">
+        <Panel border={false} className="bg-tertiary-5 pa-2">
             <Heading spacing level="2" size="large">
                 Tips til jobbsøknaden
             </Heading>
