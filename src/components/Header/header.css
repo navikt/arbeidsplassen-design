@@ -91,7 +91,7 @@
   outline: 2px solid var(--secondary-60);
 }
 
-.dsa-header-logo i {
+.dsa-header-logo-img {
   display: block;
   width: 48px;
   height: 48px;
@@ -99,7 +99,7 @@
 }
 
 @media (min-width: 728px) {
-  .dsa-header-logo i {
+  .dsa-header-logo-img {
     width: 216px;
     height: 48px;
     display: block;
