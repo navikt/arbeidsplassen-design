@@ -1,62 +1,45 @@
-:root {
-    --footer-gutter: 1rem;
-}
-
-@media (min-width: 375px) {
-    :root {
-        --footer-gutter: 1.5rem;
-    }
-}
-
-@media (min-width: 928px) {
-    :root {
-        --footer-gutter: 2rem;
-    }
-}
-
 .dsa-footer {
     margin: 0;
-    padding-top: calc(var(--footer-gutter) * 2);
-    padding-bottom: calc(var(--footer-gutter) * 2);
-    background: var(--primary-20);
+    padding: 2.5rem 1rem;
+    background: #c1f3db;
     line-height: 1.5;
 }
 
-@media (min-width: 648px) {
+@media (min-width: 768px) {
     .dsa-footer {
+        padding: 4rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
 
-.dsa-footer-heading {
-    margin: 0 0 1rem 0;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-}
-
-@media (min-width: 648px) {
-    .dsa-footer-heading {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: 600;
-    }
-}
-
 .dsa-footer-sections {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--footer-gutter) * 2) calc(var(--footer-gutter) * 3);
-    margin-bottom: calc(var(--footer-gutter) * 2);
+    gap: 2.5rem 4rem;
+    margin-bottom: 2.5rem;
 }
 
-@media (min-width: 648px) {
+@media (min-width: 768px) {
     .dsa-footer-sections {
         flex-direction: row;
         flex-wrap: wrap;
+        margin-bottom: 4rem;
+    }
+}
+
+.dsa-footer-h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .dsa-footer-h2 {
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 }
 
@@ -67,11 +50,23 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 1rem
 }
 
-.dsa-footer-section ul li {
-    margin-bottom: 1rem;
+.dsa-footer-section ul li a {
     font-size: 1rem;
+    line-height: 1.5;
+    color: #003141;
+}
+
+.dsa-footer-section ul li a:hover {
+    text-decoration: none;
+}
+
+.dsa-footer-section ul li a:focus {
+    outline: none;
+    color: #fff;
+    background: #0b1649;
 }
 
 .dsa-footer-bottom {
@@ -80,7 +75,7 @@
     flex-direction: column;
 }
 
-@media (min-width: 648px) {
+@media (min-width: 768px) {
     .dsa-footer-bottom {
         align-items: center;
     }
@@ -90,13 +85,15 @@
     margin: 0;
     display: inline-flex;
     height: 20px;
-    color: var(--primary-100);
+    color: #003141;
 }
 
 .dsa-footer-logo:focus {
-    outline: 3px solid var(--secondary-60);
+    outline: 3px solid #1c2d9a;
 }
 
-.dsa-footer-bottom p {
+.dsa-footer-p {
     margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }

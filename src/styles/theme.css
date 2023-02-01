@@ -34,6 +34,7 @@
 
     /* Font */
     --a-font-family: "Inter", sans-serif;
+    --a-font-size-large: 1rem;
 
     /* Text colors */
     --a-text-default: var(--secondary-100);
@@ -149,4 +150,8 @@
 
 .navds-accordion__header:hover {
     background: var(--secondary-20)!important;
+}
+
+.navds-text-field__asdinput {
+    border-radius: 8px!important;
 }

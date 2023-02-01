@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import "@navikt/ds-css";
 import {BodyLong, Heading} from "@navikt/ds-react";
 import ChipsExample from "../examples/ChipsExample";
 import AccordionExample from "../examples/AccordionExample";
@@ -35,6 +34,7 @@ import ModalExample from "../examples/ModalExample";
 import HeadingExample from "../examples/HeadingExample";
 import LinkExample from "../examples/LinkExample";
 import Illustration from "../examples/Illustration";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -96,7 +96,6 @@ export default function Home() {
                             Illustration
                         </Heading>
                         <div className="text-center">
-                            <Illustration/>
                         </div>
                     </section>
 

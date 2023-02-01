@@ -1,74 +1,79 @@
 import React from "react";
-import {Link} from "@navikt/ds-react";
 
 export default function Footer() {
     return (
-        <footer className="dsa-footer dsa-container">
+        <footer className="dsa-footer">
             <nav className="dsa-footer-sections">
                 <section className="dsa-footer-section">
-                    <h2 className="dsa-footer-heading">Om oss</h2>
+                    <h2 className="dsa-footer-h2">Om oss</h2>
                     <ul>
                         <li>
-                            <Link href="/om-arbeidsplassen" dark>
-                                Om arbeidsplassen.no
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/kontakt" dark>
+                            <a href="/kontakt">
                                 Kontakt oss
-                            </Link>
+                            </a>
                         </li>
-                    </ul>
-                </section>
-
-                <section className="dsa-footer-section">
-                    <h2 className="dsa-footer-heading">Hjelp</h2>
-                    <ul>
                         <li>
-                            <Link href="/sporsmal-og-svar" dark>
+                            <a href="/om-arbeidsplassen">
+                                Om arbeidsplassen.no
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sporsmal-og-svar">
                                 Spørsmål og svar
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/tilgjengelighet" dark>
-                                Tilgjengelighet
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/en/work-in-norway" dark>
-                                Information to refugees
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </section>
 
                 <section className="dsa-footer-section">
-                    <h2 className="dsa-footer-heading">Personvern og vilkår</h2>
+                    <h2 className="dsa-footer-h2">Hjelp</h2>
                     <ul>
                         <li>
-                            <Link href="/personvern" dark>
-                                Personvern
-                            </Link>
+                            <a href="/tilgjengelighet">
+                                Tilgjengelighet
+                            </a>
                         </li>
                         <li>
-                            <Link href="/vilkar-og-retningslinjer" dark>
+                            <a href="/arbeidsgivertjenester">
+                                Hjelp til innlogging
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/en/work-in-norway">
+                                Work in Norway
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section className="dsa-footer-section">
+                    <h2 className="dsa-footer-h2">Personvern og vilkår</h2>
+                    <ul>
+                        <li>
+                            <a href="/personvern">
+                                Personvern
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/vilkar-og-retningslinjer">
                                 Vilkår og retningslinjer
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </section>
             </nav>
             <div className="dsa-footer-bottom">
                 <a
-                    href="src/components/Footer/Footer"
+                    href="https://www.nav.no/"
                     className="dsa-footer-logo"
-                    aria-label="Gå til nav.no"
                 >
                     <svg
+                        role="img"
                         width="64"
                         height="20"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
+                        aria-label="NAV"
                     >
                         <path
                             fillRule="evenodd"
@@ -78,8 +83,8 @@ export default function Footer() {
                         />
                     </svg>
                 </a>
-                <p>
-                    Arbeidsplassen er en tjeneste fra Arbeids- og velferdsetaten
+                <p className="dsa-footer-p">
+                    arbeidsplassen.no er en tjeneste fra Arbeids- og velferdsetaten
                 </p>
             </div>
         </footer>
