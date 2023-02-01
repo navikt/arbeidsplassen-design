@@ -17,6 +17,7 @@ const StepperExample = () => {
         >
           <Stepper.Step href="#">Din bedrift</Stepper.Step>
           <Stepper.Step href="#">Om stillingen</Stepper.Step>
+          <Stepper.Step href="#">Om bedriften</Stepper.Step>
           <Stepper.Step href="#">Motta søknader</Stepper.Step>
           <Stepper.Step href="#">Publisering</Stepper.Step>
         </Stepper>
@@ -37,7 +38,10 @@ const StepperExample = () => {
           <Stepper.Step href="#" completed>
             Om stillingen
           </Stepper.Step>
-          <Stepper.Step href="#">Motta søknader</Stepper.Step>
+          <Stepper.Step href="#">Om bedriften</Stepper.Step>
+          <Stepper.Step href="#" interactive={false}>
+            Motta søknader
+          </Stepper.Step>
           <Stepper.Step href="#" interactive={false}>
             Publisering
           </Stepper.Step>
@@ -47,24 +51,14 @@ const StepperExample = () => {
         <Heading size="small" level="3" spacing>
           Display only
         </Heading>
-        <Stepper activeStep={-1} interactive={false} orientation="horizontal">
-          <Stepper.Step href="#">Din bedrift</Stepper.Step>
-          <Stepper.Step href="#">Om stillingen</Stepper.Step>
-          <Stepper.Step href="#">Motta søknader</Stepper.Step>
-          <Stepper.Step href="#">Publisering</Stepper.Step>
-        </Stepper>
-      </div>
-      <div className="mb-2">
-        <Heading size="small" level="3" spacing>
-          Vertical
-        </Heading>
         <Stepper
           activeStep={activeStep}
-          onStepChange={(x) => setActiveStep(x)}
-          orientation="vertical"
+          interactive={false}
+          orientation="horizontal"
         >
           <Stepper.Step href="#">Din bedrift</Stepper.Step>
           <Stepper.Step href="#">Om stillingen</Stepper.Step>
+          <Stepper.Step href="#">Om bedriften</Stepper.Step>
           <Stepper.Step href="#">Motta søknader</Stepper.Step>
           <Stepper.Step href="#">Publisering</Stepper.Step>
         </Stepper>

@@ -100,6 +100,18 @@
   /* Tabs */
   --ac-tabs-selected-border: var(--primary-40);
 
+  /* Stepper */
+  --ac-stepper-line: var(--secondary-40);
+  --ac-stepper-line-completed: var(--secondary-60);
+  --ac-stepper-active: var(--secondary-80);
+  --ac-stepper-active-bg: var(--secondary-80);
+  --ac-stepper-active-border: var(--secondary-80);
+
+  --ac-stepper-non-interactive: var(--neutral-80);
+  --ac-stepper-non-interactive-active: var(--secondary-80);
+  --ac-stepper-non-interactive-active-bg: var(--secondary-80);
+  --ac-stepper-non-interactive-active-border: var(--secondary-80);
+
   /* Other */
   --a-border-divider: var(--primary-20);
 
