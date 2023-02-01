@@ -1,138 +1,183 @@
 :root {
-  --primary-100: #003141;
-  --primary-80: #024b62;
-  --primary-60: #028088;
-  --primary-40: #60c7ae;
-  --primary-20: #c1f3db;
-  --primary-10: #dff8ec;
-  --primary-5: #effcf3;
-  --secondary-100: #0b1649;
-  --secondary-80: #252a76;
-  --secondary-60: #1c2d9a;
-  --secondary-40: #b0b7df;
-  --secondary-20: #dfe2f3;
-  --tertiary-60: #cd6148;
-  --tertiary-40: #ffaf96;
-  --tertiary-20: #ffc7b7;
-  --tertiary-10: #ffeadd;
-  --tertiary-5: #fff1e8;
-  --neutral-80: #5e5955;
-  --neutral-60: #a7a29e;
-  --neutral-40: #c9c4bf;
-  --neutral-20: #eceae8;
-  --neutral-0: #ffffff;
-  --info: #b0b7df;
-  --success: #c1f3db;
-  --warning-subtle: #fcfae1;
-  --warning: #fcf9b5;
-  --danger: #b50101;
+    --primary-100: #003141;
+    --primary-80: #024b62;
+    --primary-60: #028088;
+    --primary-40: #60c7ae;
+    --primary-20: #c1f3db;
+    --primary-10: #dff8ec;
+    --primary-5: #effcf3;
+    --secondary-100: #0b1649;
+    --secondary-80: #252a76;
+    --secondary-60: #1c2d9a;
+    --secondary-40: #b0b7df;
+    --secondary-20: #dfe2f3;
+    --tertiary-60: #cd6148;
+    --tertiary-40: #ffaf96;
+    --tertiary-20: #ffc7b7;
+    --tertiary-10: #ffeadd;
+    --tertiary-5: #fff1e8;
+    --neutral-80: #5e5955;
+    --neutral-60: #a7a29e;
+    --neutral-40: #c9c4bf;
+    --neutral-20: #eceae8;
+    --neutral-0: #ffffff;
+    --info: #b0b7df;
+    --success: #c1f3db;
+    --warning-subtle: #fcfae1;
+    --warning: #fcf9b5;
+    --danger: #b50101;
 }
 
 [data-theme="arbeidsplassen"] {
-  /* Default */
-  --a-border-default: var(--secondary-100);
+    /* Font */
+    --a-font-family: "Inter", sans-serif;
+    --a-font-size-large: 1rem;
 
-  /* Font */
-  --a-font-family: "Inter", sans-serif;
-  --a-font-size-large: 1rem;
+    /* Background */
+    --a-bg-default: var(--neutral-0);
+    --a-bg-subtle: var(--neutral-20);
 
-  /* Text colors */
-  --a-text-default: var(--secondary-100);
-  --a-text-danger: var(--danger);
+    /* Surface */
+    --a-surface-default: var(--neutral-0);
+    --a-surface-hover: rgba(0, 0, 0, 0.03);
+    --a-surface-active: rgba(0, 0, 0, 0.05);
+    --a-surface-selected: var(--secondary-20);
+    --a-surface-subtle: var(--neutral-40);
+    --a-surface-transparent: rgba(255, 255, 255, 0);
+    --a-surface-backdrop: rgba(0, 0, 0, 0.65);
+    --a-surface-inverted-hover: rgba(64, 64, 64, 1);
+    --a-surface-inverted-active: rgba(89, 89, 89, 1);
+    --a-surface-inverted: rgba(38, 38, 38, 1);
+    --a-surface-action-subtle: rgba(230, 240, 255, 1);
+    --a-surface-action-subtle-hover: rgba(204, 225, 255, 1);
+    --a-surface-action: var(--secondary-60);
+    --a-surface-action-hover: var(--secondary-80);
+    --a-surface-action-active: var(--secondary-100);
+    --a-surface-action-selected: var(--secondary-80);
+    --a-surface-action-selected-hover: var(--secondary-20);
+    --a-surface-neutral-subtle: rgba(0, 0, 0, 0.05);
+    --a-surface-neutral-subtle-hover: rgba(0, 0, 0, 0.1);
+    --a-surface-neutral: rgba(112, 112, 112, 1);
+    --a-surface-neutral-hover: rgba(89, 89, 89, 1);
+    --a-surface-neutral-selected: rgba(89, 89, 89, 1);
+    --a-surface-success-subtle: var(--primary-5);
+    --a-surface-success-subtle-hover: var(--primary-10);
+    --a-surface-success: var(--primary-20);
+    --a-surface-success-hover: var(--primary-40);
+    --a-surface-danger-subtle: var(--tertiary-10);
+    --a-surface-danger-subtle-hover: var(--tertiary-20);
+    --a-surface-danger: var(--danger);
+    --a-surface-danger-hover: rgba(173, 0, 0, 1);
+    --a-surface-danger-active: rgba(140, 0, 0, 1);
+    --a-surface-warning-subtle: var(--warning-subtle);
+    --a-surface-warning: var(--warning);
+    --a-surface-warning-subtle-hover: rgba(255, 236, 204, 1);
+    --a-surface-info-subtle: rgba(235, 252, 255, 1);
+    --a-surface-info-subtle-hover: rgba(216, 249, 255, 1);
+    --a-surface-info: var(--secondary-20);
+    --a-surface-alt-1: rgba(130, 105, 162, 1);
+    --a-surface-alt-1-subtle: rgba(239, 236, 244, 1);
+    --a-surface-alt-2: rgba(193, 203, 51, 1);
+    --a-surface-alt-2-subtle: rgba(253, 255, 230, 1);
+    --a-surface-alt-3: rgba(0, 91, 130, 1);
+    --a-surface-alt-3-subtle: rgba(230, 241, 248, 1);
+    --a-surface-alt-3-strong: rgba(0, 52, 83, 1);
 
-  /* Action color, for example buttons, checkbox, radio */
-  --a-surface-action: var(--secondary-60);
-  --a-surface-action-active: var(--secondary-100);
-  --a-surface-action-selected: var(--secondary-60);
-  --a-surface-action-hover: var(--secondary-80);
-  --a-surface-action-subtle-hover: var(--secondary-20);
-  --a-surface-action-selected-hover: var(--secondary-20);
-  --a-text-action: var(--secondary-60);
-  --a-border-action: var(--secondary-60);
+    /* Text colors */
+    --a-text-default: var(--secondary-100);
+    --a-text-subtle: rgba(0, 0, 0, 0.56);
+    --a-text-visited: rgba(99, 70, 137, 1);
+    --a-text-danger: var(--danger);
+    --a-text-action: var(--secondary-60);
+    --a-text-action-selected: var(--secondary-80);
+    --a-text-action-on-action-subtle: rgba(0, 86, 180, 1);
+    --a-text-on-inverted: var(--neutral-0);
+    --a-text-on-neutral: var(--neutral-0);
+    --a-text-on-action: var(--neutral-0);
+    --a-text-on-success: var(--primary-100);
+    --a-text-on-danger: var(--neutral-0);
+    --a-text-on-warning: var(--primary-100);
+    --a-text-on-info: var(--primary-100);
+    --a-text-on-alt-1: var(--neutral-0);
+    --a-text-on-alt-2: rgba(38, 38, 38, 1);
+    --a-text-on-alt-3: var(--neutral-0);
 
-  /* Info colors */
-  --a-surface-info: var(--secondary-40);
-  --a-surface-info-subtle: var(--secondary-20);
-  --a-border-info: var(--secondary-40);
+    /* Border colors */
+    --a-border-default: var(--neutral-40);
+    --a-border-strong: rgba(0, 0, 0, 0.56);
+    --a-border-divider: var(--primary-20);
+    --a-border-subtle: rgba(0, 0, 0, 0.1);
+    --a-border-subtle-hover: rgba(0, 0, 0, 0.19);
+    --a-border-action: var(--secondary-60);
+    --a-border-action-selected: var(--secondary-80);
+    --a-border-selected: var(--secondary-80);
+    --a-border-success: var(--primary-40);
+    --a-border-danger: var(--danger);
+    --a-border-warning: var(--tertiary-60);
+    --a-border-info: var(--secondary-40);
+    --a-border-on-inverted: rgba(229, 229, 229, 1);
+    --a-border-on-inverted-subtle: rgba(89, 89, 89, 1);
+    --a-border-focus: rgba(0, 52, 125, 1);
+    --a-border-focus-on-inverted: rgba(153, 195, 255, 1);
+    --a-border-alt-1: rgba(130, 105, 162, 1);
+    --a-border-alt-2: rgba(193, 203, 51, 1);
+    --a-border-alt-3: rgba(0, 91, 130, 1);
 
-  /* Success colors */
-  --a-surface-success: var(--primary-20);
-  --a-surface-success-subtle: var(--primary-5);
-  --a-border-success: var(--primary-40);
-  --a-text-on-success: var(--secondary-100);
+    /* Remove all shadows */
+    --a-shadow-xlarge: none;
+    --a-shadow-large: none;
+    --a-shadow-medium: none;
+    --a-shadow-small: none;
+    --a-shadow-xsmall: none;
 
-  /* Warning colors */
-  --a-surface-warning: var(--warning);
-  --a-surface-warning-subtle: var(--warning-subtle);
-  --a-border-warning: var(--tertiary-60);
+    /* Chips toogle */
+    --ac-chip-toggle-pressed-bg: var(--primary-80);
+    --ac-chip-toggle-pressed-text: var(--primary-20);
+    --ac-chip-toggle-pressed-hover-bg: var(--primary-100);
+    --ac-chip-toggle-border: var(--primary-80);
+    --ac-chip-toggle-hover-bg: var(--secondary-20);
+    --ac-chip-toggle-bg: var(--neutral-0);
 
-  /* Danger colors */
-  --a-surface-danger: var(--danger);
-  --a-surface-danger-subtle: var(--tertiary-10);
-  --a-border-danger: var(--danger);
+    /* Chips removable */
+    --ac-chip-removable-action-bg: var(--primary-80);
+    --ac-chip-removable-action-text: var(--primary-20);
+    --ac-chip-removable-action-hover-bg: var(--primary-100);
 
-  /* Chips toogle */
-  --ac-chip-toggle-pressed-bg: var(--primary-80);
-  --ac-chip-toggle-pressed-text: var(--primary-20);
-  --ac-chip-toggle-pressed-hover-bg: var(--primary-100);
-  --ac-chip-toggle-border: var(--primary-80);
-  --ac-chip-toggle-hover-bg: var(--secondary-20);
-  --ac-chip-toggle-bg: var(--neutral-0);
+    /* Accordion */
+    --ac-accordion-item-bg-open: var(--primary-10);
+    --ac-accordion-header-border: var(--secondary-100);
+    --ac-accordion-item-border-open: var(--secondary-100);
 
-  /* Chips removable */
-  --ac-chip-removable-action-bg: var(--primary-80);
-  --ac-chip-removable-action-text: var(--primary-20);
-  --ac-chip-removable-action-hover-bg: var(--primary-100);
+    /* Guide panel */
+    --ac-guide-panel-illustration-bg: #90e8c3;
+    --ac-guide-panel-border: #90e8c3;
 
-  /* Accordion */
-  --ac-accordion-item-bg-open: var(--primary-10);
-  --ac-accordion-header-border: var(--secondary-100);
-  --ac-accordion-item-border-open: var(--secondary-100);
+    /* Link panel */
+    --ac-link-panel-hover-text: currentColor;
+    --ac-link-panel-hover-border: transparent;
 
-  /* Guide panel */
-  --ac-guide-panel-illustration-bg: #90e8c3;
-  --ac-guide-panel-border: #90e8c3;
-
-  /* Link panel */
-  --ac-link-panel-hover-text: var(--secondary-100);
-  --ac-link-panel-hover-border: transparent;
-
-  /* Tabs */
-  --ac-tabs-selected-border: var(--primary-40);
-
-  /* Stepper */
-  --ac-stepper-line: var(--secondary-40);
-  --ac-stepper-line-completed: var(--secondary-60);
-  --ac-stepper-active: var(--secondary-80);
-  --ac-stepper-active-bg: var(--secondary-80);
-  --ac-stepper-active-border: var(--secondary-80);
-
-  --ac-stepper-non-interactive: var(--neutral-80);
-  --ac-stepper-non-interactive-active: var(--secondary-80);
-  --ac-stepper-non-interactive-active-bg: var(--secondary-80);
-  --ac-stepper-non-interactive-active-border: var(--secondary-80);
-
-  /* Other */
-  --a-border-divider: var(--primary-20);
-
-  /* Remove all shadows */
-  --a-shadow-xlarge: none;
-  --a-shadow-large: none;
-  --a-shadow-medium: none;
-  --a-shadow-small: none;
-  --a-shadow-xsmall: none;
+    /* Tabs */
+    --ac-tabs-selected-border: var(--primary-40);
 }
 
-.bg-primary-20 {
-  background-color: var(--primary-20) !important;
+.bg-text-primary-dark {
+    color: var(--primary-20) !important;
+    background-color: var(--primary-80) !important;
 }
 
-.bg-secondary-20 {
-  background-color: var(--secondary-20) !important;
+.bg-text-primary-light {
+    color: var(--primary-80) !important;
+    background-color: var(--primary-20) !important;
 }
 
-.bg-tertiary-5 {
-  background-color: var(--tertiary-5) !important;
+.bg-text-secondary {
+    color: var(--primary-80) !important;
+    background-color: var(--secondary-20) !important;
+}
+
+.bg-text-tertiary {
+    color: var(--primary-80) !important;
+    background-color: var(--tertiary-5) !important;
 }
 
 /********************************************************************
@@ -144,26 +189,26 @@
     .navds-date__field-button,
     .navds-pagination__item
   ) {
-  border-radius: var(--a-border-radius-full) !important;
+    border-radius: var(--a-border-radius-full) !important;
 }
 
 .navds-chips__chip {
-  border-bottom-right-radius: 0 !important;
-  font-weight: 600 !important;
+    border-bottom-right-radius: 0 !important;
+    font-weight: 600 !important;
 }
 
 .navds-tag {
-  border-radius: var(--a-border-radius-full) !important;
-  border-bottom-right-radius: 0 !important;
-  font-weight: 600 !important;
-  padding-left: 0.75rem !important;
-  padding-right: 0.75rem !important;
+    border-radius: var(--a-border-radius-full) !important;
+    border-bottom-right-radius: 0 !important;
+    font-weight: 600 !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
 }
 
 .navds-accordion__header:hover {
-  background: var(--secondary-20) !important;
+    background: var(--secondary-20) !important;
 }
 
 .navds-text-field__asdinput {
-  border-radius: 8px !important;
+    border-radius: 8px !important;
 }

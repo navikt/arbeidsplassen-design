@@ -101,10 +101,6 @@ export default function Home() {
             <Heading level="2" size="large" spacing>
               Panel
             </Heading>
-            <BodyLong spacing>
-              Add class{" "}
-              <code className="code">.bg-primary|secondary|tertiary</code>
-            </BodyLong>
             <PanelExample />
           </section>
 
@@ -112,10 +108,6 @@ export default function Home() {
             <Heading level="2" size="large" spacing>
               LinkPanel
             </Heading>
-            <BodyLong spacing>
-              Add class{" "}
-              <code className="code">.bg-primary|secondary|tertiary</code>
-            </BodyLong>
             <LinkPanelExample />
           </section>
 
