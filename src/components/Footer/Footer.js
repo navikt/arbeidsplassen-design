@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="dsa-footer">
-            <nav className="dsa-footer-sections">
-                <section className="dsa-footer-section">
-                    <h2 className="dsa-footer-h2">Om oss</h2>
+        <footer className="arb-footer">
+            <nav className="arb-footer-sections">
+                <section className="arb-footer-section">
+                    <h2 className="arb-footer-h2">Om oss</h2>
                     <ul>
                         <li>
                             <a href="/kontakt">
@@ -25,8 +25,8 @@ export default function Footer() {
                     </ul>
                 </section>
 
-                <section className="dsa-footer-section">
-                    <h2 className="dsa-footer-h2">Hjelp</h2>
+                <section className="arb-footer-section">
+                    <h2 className="arb-footer-h2">Hjelp</h2>
                     <ul>
                         <li>
                             <a href="/tilgjengelighet">
@@ -46,8 +46,8 @@ export default function Footer() {
                     </ul>
                 </section>
 
-                <section className="dsa-footer-section">
-                    <h2 className="dsa-footer-h2">Personvern og vilkår</h2>
+                <section className="arb-footer-section">
+                    <h2 className="arb-footer-h2">Personvern og vilkår</h2>
                     <ul>
                         <li>
                             <a href="/personvern">
@@ -62,10 +62,10 @@ export default function Footer() {
                     </ul>
                 </section>
             </nav>
-            <div className="dsa-footer-bottom">
+            <div className="arb-footer-bottom">
                 <a
                     href="https://www.nav.no/"
-                    className="dsa-footer-logo"
+                    className="arb-footer-logo"
                 >
                     <svg
                         role="img"
@@ -83,7 +83,7 @@ export default function Footer() {
                         />
                     </svg>
                 </a>
-                <p className="dsa-footer-p">
+                <p className="arb-footer-p">
                     arbeidsplassen.no er en tjeneste fra Arbeids- og velferdsetaten
                 </p>
             </div>

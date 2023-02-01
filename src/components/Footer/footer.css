@@ -1,4 +1,4 @@
-.dsa-footer {
+.arb-footer {
     margin: 0;
     padding: 2.5rem 1rem;
     background: #c1f3db;
@@ -6,7 +6,7 @@
 }
 
 @media (min-width: 768px) {
-    .dsa-footer {
+    .arb-footer {
         padding: 4rem 1rem;
         display: flex;
         flex-direction: column;
@@ -14,7 +14,7 @@
     }
 }
 
-.dsa-footer-sections {
+.arb-footer-sections {
     display: flex;
     flex-direction: column;
     gap: 2.5rem 4rem;
@@ -22,14 +22,14 @@
 }
 
 @media (min-width: 768px) {
-    .dsa-footer-sections {
+    .arb-footer-sections {
         flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 4rem;
     }
 }
 
-.dsa-footer-h2 {
+.arb-footer-h2 {
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -37,13 +37,13 @@
 }
 
 @media (min-width: 768px) {
-    .dsa-footer-h2 {
+    .arb-footer-h2 {
         font-size: 1.5rem;
         line-height: 2rem;
     }
 }
 
-.dsa-footer-section ul {
+.arb-footer-section ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -53,46 +53,46 @@
     gap: 1rem
 }
 
-.dsa-footer-section ul li a {
+.arb-footer-section ul li a {
     font-size: 1rem;
     line-height: 1.5;
     color: #003141;
 }
 
-.dsa-footer-section ul li a:hover {
+.arb-footer-section ul li a:hover {
     text-decoration: none;
 }
 
-.dsa-footer-section ul li a:focus {
+.arb-footer-section ul li a:focus {
     outline: none;
     color: #fff;
-    background: #0b1649;
+    background: #1c2d9a;
 }
 
-.dsa-footer-bottom {
+.arb-footer-bottom {
     display: flex;
     gap: 1rem;
     flex-direction: column;
 }
 
 @media (min-width: 768px) {
-    .dsa-footer-bottom {
+    .arb-footer-bottom {
         align-items: center;
     }
 }
 
-.dsa-footer-logo {
+.arb-footer-logo {
     margin: 0;
     display: inline-flex;
     height: 20px;
     color: #003141;
 }
 
-.dsa-footer-logo:focus {
+.arb-footer-logo:focus {
     outline: 3px solid #1c2d9a;
 }
 
-.dsa-footer-p {
+.arb-footer-p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.5;
