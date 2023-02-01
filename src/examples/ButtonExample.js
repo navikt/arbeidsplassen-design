@@ -4,7 +4,7 @@ import Trash from "../components/icons/Trash";
 const ButtonExample = () => {
   return (
     <>
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button variant="primary">Slett</Button>
         <Button variant="primary" icon={<Trash />}>
           Slett
@@ -22,7 +22,7 @@ const ButtonExample = () => {
           Laster
         </Button>
       </div>
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button disabled variant="primary">
           Slett
         </Button>
@@ -48,7 +48,7 @@ const ButtonExample = () => {
         </Button>
       </div>
 
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button variant="secondary">Slett</Button>
         <Button variant="secondary" icon={<Trash />}>
           Slett
@@ -66,7 +66,7 @@ const ButtonExample = () => {
           Laster
         </Button>
       </div>
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button disabled variant="secondary">
           Slett
         </Button>
@@ -92,7 +92,7 @@ const ButtonExample = () => {
         </Button>
       </div>
 
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button variant="tertiary">Slett</Button>
         <Button variant="tertiary" icon={<Trash />}>
           Slett
@@ -110,7 +110,7 @@ const ButtonExample = () => {
           Laster
         </Button>
       </div>
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button disabled variant="tertiary">
           Slett
         </Button>
@@ -136,7 +136,7 @@ const ButtonExample = () => {
         </Button>
       </div>
 
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button variant="danger">Slett</Button>
         <Button variant="danger" icon={<Trash />}>
           Slett
@@ -154,7 +154,7 @@ const ButtonExample = () => {
           Laster
         </Button>
       </div>
-      <div className="flex mb-2">
+      <div className="flex flex-justify-space-between mb-2">
         <Button disabled variant="danger">
           Slett
         </Button>
