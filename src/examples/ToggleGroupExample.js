@@ -1,7 +1,6 @@
 import { ToggleGroup } from "@navikt/ds-react";
 import Heart from "../components/icons/Heart";
-import User from "../components/icons/User";
-import Building from "../components/icons/Building";
+import Trash from "../components/icons/Trash";
 
 const ToggleGroupExample = () => {
     return (
@@ -11,11 +10,11 @@ const ToggleGroupExample = () => {
                 Ulest
             </ToggleGroup.Item>
             <ToggleGroup.Item value="lest">
-                <User />
+                <Trash />
                 Leste
             </ToggleGroup.Item>
             <ToggleGroup.Item value="sendt">
-                <Building />
+                <Heart />
                 Sendt
             </ToggleGroup.Item>
         </ToggleGroup>
