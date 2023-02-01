@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prettier:format": "npx prettier -w src"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
   },
   "dependencies": {
     "@navikt/ds-css": "^2.0.12",

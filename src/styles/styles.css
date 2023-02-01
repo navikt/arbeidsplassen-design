@@ -3,45 +3,41 @@
 @import "theme.css";
 
 .container {
-    max-width: 800px;
-    width: 100%;
-    margin: 2rem auto 0;
-    padding: 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto 0;
+  padding: 1rem;
 }
 
 .flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .mb-2 {
-    margin-bottom: 2rem!important;
+  margin-bottom: 2rem !important;
 }
 
 .mb-4 {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .dsa-guide-panel-content {
-    padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 
 .pa-2 {
-    padding: 2rem!important;
+  padding: 2rem !important;
 }
 
 .modal-small {
-    max-width: 800px;
-    width: 100%;
-    padding: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+  padding: 1.5rem;
 }
-
-
-
-
