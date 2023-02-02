@@ -1,5 +1,5 @@
 import "@navikt/ds-css";
-import "../examples/styles/styles.css";
+import "../examples/styles/examples.css";
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;

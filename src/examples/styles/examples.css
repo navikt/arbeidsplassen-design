@@ -1,6 +1,6 @@
-@import "src/components/Header/header.css";
-@import "src/components/Footer/footer.css";
-@import "src/components/theme.css";
+@import "../../components/Header/header.css";
+@import "../../components/Footer/footer.css";
+@import "../../components/theme.css";
 
 .container {
   max-width: 800px;
