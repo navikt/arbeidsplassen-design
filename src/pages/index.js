@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { BodyLong, Heading } from "@navikt/ds-react";
+import {BodyLong, Heading} from "@navikt/ds-react";
 import ChipsExample from "../examples/ChipsExample";
 import AccordionExample from "../examples/AccordionExample";
 import Footer from "../components/Footer/Footer";
@@ -19,7 +19,6 @@ import StepperExample from "../examples/StepperExample";
 import ToggleGroupExample from "../examples/ToggleGroupExample";
 import SearchExample from "../examples/SearchExample";
 import DatePickerExample from "../examples/DatePickerExample";
-import PaginationExample from "../examples/PaginationExample";
 import PopoverExample from "../examples/PopoverExample";
 import ErrorSummaryExample from "../examples/ErrorSummaryExample";
 import SwitchExample from "../examples/SwitchExample";
@@ -33,8 +32,9 @@ import LinkPanelExample from "../examples/LinkPanelExample";
 import ModalExample from "../examples/ModalExample";
 import HeadingExample from "../examples/HeadingExample";
 import LinkExample from "../examples/LinkExample";
-import Illustration from "../examples/Illustration";
-import Link from "next/link";
+import TableSortableExample from "../examples/TableSortableExample";
+import TableExpandableExample from "../examples/TableExpandableExample";
+import TableSelectableExample from "../examples/TableSeletable";
 
 export default function Home() {
   return (
@@ -284,6 +284,27 @@ export default function Home() {
               Table
             </Heading>
             <TableExample />
+          </section>
+
+          <section className="mb-4">
+            <Heading level="2" size="large" spacing>
+              Selectable table
+            </Heading>
+            <TableSelectableExample />
+          </section>
+
+          <section className="mb-4">
+            <Heading level="2" size="large" spacing>
+              Sortable table
+            </Heading>
+            <TableSortableExample />
+          </section>
+
+          <section className="mb-4">
+            <Heading level="2" size="large" spacing>
+              Expandable table
+            </Heading>
+            <TableExpandableExample />
           </section>
 
           <section className="mb-4">
