@@ -1,5 +1,6 @@
 import { Accordion } from "@navikt/ds-react";
 import { Checkbox, CheckboxGroup } from "@navikt/ds-react";
+import Layout from "../examples/Layout";
 
 const Arbeidsted = () => {
   const handleChange = (val) => console.log(val);
@@ -43,20 +44,22 @@ const Yrke = () => {
 
 const AccordionExample = () => {
   return (
-    <Accordion style={{ width: "100%", maxWidth: "65ch" }}>
-      <Accordion.Item>
-        <Accordion.Header>Område</Accordion.Header>
-        <Accordion.Content>
-          <Arbeidsted />
-        </Accordion.Content>
-      </Accordion.Item>
-      <Accordion.Item>
-        <Accordion.Header>Yrke</Accordion.Header>
-        <Accordion.Content>
-          <Yrke />
-        </Accordion.Content>
-      </Accordion.Item>
-    </Accordion>
+    <Layout title="Accordion">
+      <Accordion>
+        <Accordion.Item>
+          <Accordion.Header>Område</Accordion.Header>
+          <Accordion.Content>
+            <Arbeidsted />
+          </Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header>Yrke</Accordion.Header>
+          <Accordion.Content>
+            <Yrke />
+          </Accordion.Content>
+        </Accordion.Item>
+      </Accordion>
+    </Layout>
   );
 };
 

@@ -56,7 +56,7 @@ const GuidePanelExample = () => {
   return (
     <div>
       <GuidePanel poster illustration={<Icon />} className="mb-4">
-        <div className="dsa-guide-panel-content">
+        <div className="arb-guide-panel-lofsty">
           <Heading size="medium" level="3" spacing className="text-center mb-2">
             Slik fungerer det
           </Heading>

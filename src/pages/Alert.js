@@ -1,5 +1,6 @@
 import { Alert, Heading, Link } from "@navikt/ds-react";
-import asMarkup from "./utils/asMarkup";
+import asMarkup from "../examples/utils/asMarkup";
+import Layout from "../examples/Layout";
 
 function Template({ showTitle, ...args }) {
   return (
@@ -21,7 +22,7 @@ function Template({ showTitle, ...args }) {
 
 const AlertExample = () => {
   return (
-    <>
+    <Layout title="Alert">
       <Template variant="info" />
       <Template variant="success" />
       <Template variant="warning" />
@@ -29,7 +30,7 @@ const AlertExample = () => {
       <Template variant="info" size="small" />
       <Template variant="info" fullWidth />
       <Template variant="info" inline />
-    </>
+    </Layout>
   );
 };
 

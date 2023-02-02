@@ -1,4 +1,4 @@
-export default function asMarkup(as, props) {
+export default function asMarkup(as, props, selfClosing) {
   const keys = Object.keys(props);
   let p = "";
   keys.forEach((key) => {
@@ -10,7 +10,8 @@ export default function asMarkup(as, props) {
   return (
     <code>
       &lt;{as}
-      {p}&gt;
+      {p}
+      {selfClosing && " /"}&gt;
     </code>
   );
 }

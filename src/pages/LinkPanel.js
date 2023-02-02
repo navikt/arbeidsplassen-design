@@ -1,5 +1,6 @@
-import { LinkPanel } from "@navikt/ds-react";
-import asMarkup from "./utils/asMarkup";
+import { Heading, LinkPanel } from "@navikt/ds-react";
+import asMarkup from "../examples/utils/asMarkup";
+import Layout from "../examples/Layout";
 
 function Template({ skipDescription, ...args }) {
   return (
@@ -20,7 +21,7 @@ function Template({ skipDescription, ...args }) {
 
 export default function LinkPanelExample() {
   return (
-    <>
+    <Layout title="LinkPanel">
       <Template />
       <Template className="arb-link-panel-green-dark" />
       <Template className="arb-link-panel-green" />
@@ -28,6 +29,6 @@ export default function LinkPanelExample() {
       <Template className="arb-link-panel-peach" />
 
       <Template className="arb-link-panel-peach" skipDescription />
-    </>
+    </Layout>
   );
 }

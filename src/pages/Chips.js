@@ -1,5 +1,6 @@
 import { Chips } from "@navikt/ds-react";
 import { useState } from "react";
+import Layout from "../examples/Layout";
 
 const ChipsExample = () => {
   const options = ["Norsk", "Dansk", "Svensk", "Tysk", "Spansk"];
@@ -8,7 +9,7 @@ const ChipsExample = () => {
   const [filter, setFilter] = useState(options);
 
   return (
-    <div>
+    <Layout title="Chips">
       <div className="mb-2">
         <Chips>
           {options.map((c) => (
@@ -44,7 +45,7 @@ const ChipsExample = () => {
           ))}
         </Chips>
       </div>
-    </div>
+    </Layout>
   );
 };
 

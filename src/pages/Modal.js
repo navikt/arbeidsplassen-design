@@ -1,5 +1,6 @@
 import { BodyLong, Button, Heading, Modal } from "@navikt/ds-react";
 import { useEffect, useState } from "react";
+import Layout from "../examples/Layout";
 
 const ModalExample = () => {
   const [open, setOpen] = useState(false);
@@ -9,7 +10,7 @@ const ModalExample = () => {
   }, []);
 
   return (
-    <>
+    <Layout title="Modal">
       <Button onClick={() => setOpen(true)}>Åpne modal</Button>
       <Modal
         open={open}
@@ -35,7 +36,7 @@ const ModalExample = () => {
           </Button>
         </Modal.Content>
       </Modal>
-    </>
+    </Layout>
   );
 };
 

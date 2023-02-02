@@ -1,5 +1,6 @@
 import { BodyLong, Heading, Panel } from "@navikt/ds-react";
-import asMarkup from "./utils/asMarkup";
+import asMarkup from "../examples/utils/asMarkup";
+import Layout from "../examples/Layout";
 
 function Template({ ...args }) {
   return (
@@ -21,11 +22,11 @@ function Template({ ...args }) {
 
 export default function PanelExample() {
   return (
-    <>
+    <Layout title="Panel">
       <Template className="arb-panel-green arb-panel-lofty" />
       <Template className="arb-panel-blue arb-panel-lofty" />
       <Template className="arb-panel-peach arb-panel-lofty" />
       <Template className="arb-panel-peach arb-panel-compact" />
-    </>
+    </Layout>
   );
 }
