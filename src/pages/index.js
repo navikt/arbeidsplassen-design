@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {BodyLong, Heading} from "@navikt/ds-react";
+import { BodyLong, Heading } from "@navikt/ds-react";
 import ChipsExample from "../examples/ChipsExample";
 import AccordionExample from "../examples/AccordionExample";
 import Footer from "../components/Footer/Footer";

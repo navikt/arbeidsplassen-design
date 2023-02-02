@@ -1,6 +1,6 @@
 import { ToggleGroup } from "@navikt/ds-react";
-import Heart from "../components/icons/Heart";
-import Trash from "../components/icons/Trash";
+import Heart from "./icons/Heart";
+import Trash from "./icons/Trash";
 
 const ToggleGroupExample = () => {
   return (

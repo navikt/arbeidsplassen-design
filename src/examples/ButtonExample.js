@@ -1,5 +1,5 @@
 import { Button } from "@navikt/ds-react";
-import Trash from "../components/icons/Trash";
+import Trash from "./icons/Trash";
 
 const ButtonExample = () => {
   return (

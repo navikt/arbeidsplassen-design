@@ -1,0 +1,80 @@
+@import "src/components/Header/header.css";
+@import "src/components/Footer/footer.css";
+@import "src/components/theme.css";
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto 0;
+  padding: 1rem;
+}
+
+.container-small {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.page-margin-top-and-bottom {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.flex-justify-space-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.dsa-guide-panel-content {
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.pa-2 {
+  padding: 2rem !important;
+}
+
+.modal-small {
+  max-width: 800px;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.bg-text-primary-dark {
+  color: var(--arb-green-200) !important;
+  background-color: var(--arb-green-700) !important;
+}
+
+.bg-text-primary-light {
+  color: var(--arb-green-700) !important;
+  background-color: var(--arb-green-200) !important;
+}
+
+.bg-text-secondary {
+  color: var(--arb-green-700) !important;
+  background-color: var(--arb-blue-200) !important;
+}
+
+.bg-text-tertiary {
+  color: var(--arb-green-700) !important;
+  background-color: var(--tertiary-5) !important;
+}
