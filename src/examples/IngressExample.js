@@ -3,9 +3,8 @@ import { Ingress } from "@navikt/ds-react";
 const IngressExample = () => {
   return (
     <Ingress>
-      Arbeidsplassen er en åpen møteplass for alle på arbeidsmarkedet. Vårt mål
-      er at arbeidsmarkedet skal være så oversiktlig som mulig for alle, enten
-      du er på jakt etter en jobb eller leter etter en kandidat.
+      Vil du bli kjent med en bedrift? Følg en direkte sending der bedriften
+      forteller om seg selv og hva slags stillinger du kan søke på.
     </Ingress>
   );
 };

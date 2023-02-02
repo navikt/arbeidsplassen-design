@@ -1,6 +1,6 @@
 :root {
     --arb-transparent: rgba(255, 255, 255, 0);
-    --arb-white: #ffffff; 
+    --arb-white: #FFFFFF;
     --arb-blue-50: #E3E6F7;
     --arb-blue-100: #C6CDF5;
     --arb-blue-200: #90A1EE;
@@ -21,46 +21,46 @@
     --arb-green-700: #024B62;
     --arb-green-800: #003141;
     --arb-green-900: #081D27;
-    --arb-orange-50: #EFFCF3;
-    --arb-orange-100: #DFF8EC;
-    --arb-orange-200: #C1F3DB;
-    --arb-orange-300: #8FCFBD;
-    --arb-orange-400: #60C7AE;
-    --arb-orange-500: #03B0A4;
-    --arb-orange-600: #028088;
-    --arb-orange-700: #024B62;
-    --arb-orange-800: #003141;
-    --arb-orange-900: #081D27;
-    --arb-red-50: #EFFCF3;
-    --arb-red-100: #DFF8EC;
-    --arb-red-200: #C1F3DB;
-    --arb-red-300: #8FCFBD;
-    --arb-red-400: #60C7AE;
-    --arb-red-500: #03B0A4;
-    --arb-red-600: #028088;
-    --arb-red-700: #024B62;
-    --arb-red-800: #003141;
-    --arb-red-900: #081D27;
-    --arb-gray-50: #FFFFFF;
-    --arb-gray-100: #F8F8F8;
-    --arb-gray-200: #EBEBEB;
-    --arb-gray-300: #DDDDDD;
-    --arb-gray-400: #C3C3C3;
-    --arb-gray-500: #A8A8A8;
-    --arb-gray-600: #8D8D8D;
-    --arb-gray-700: #808080;
-    --arb-gray-800: #575757;
-    --arb-gray-900: #4A4A4A;
-
-    --tertiary-60: #cd6148;
-    --tertiary-20: #ffc7b7;
-    --tertiary-10: #ffeadd;
-    --tertiary-5: #fff1e8;
-
-    /*todo*/
-    --warning-subtle: #fcfae1;
-    --warning: #fcf9b5;
-    --danger: #b50101;
+    --arb-orange-50: #FFF9F0;
+    --arb-orange-100: #FFECCC;
+    --arb-orange-200: #FFD799;
+    --arb-orange-300: #FFC166;
+    --arb-orange-400: #FFAA33;
+    --arb-orange-500: #FF9100;
+    --arb-orange-600: #D47B00;
+    --arb-orange-700: #A86400;
+    --arb-orange-800: #7D4C00;
+    --arb-orange-900: #523300;
+    --arb-red-50: #FFE6E6;
+    --arb-red-100: #FFB8B8;
+    --arb-red-200: #F68282;
+    --arb-red-300: #F25C5C;
+    --arb-red-400: #DE2E2E;
+    --arb-red-500: #C30000;
+    --arb-red-600: #AD0000;
+    --arb-red-700: #8C0000;
+    --arb-red-800: #5C0000;
+    --arb-red-900: #260000;
+    --arb-gray-50: #F8F8F8;
+    --arb-gray-100: #EBEBEB;
+    --arb-gray-200: #DDDDDD;
+    --arb-gray-300: #C3C3C3;
+    --arb-gray-400: #A8A8A8;
+    --arb-gray-500: #8D8D8D;
+    --arb-gray-600: #808080;
+    --arb-gray-700: #575757;
+    --arb-gray-800: #4A4A4A;
+    --arb-gray-900: #404040;
+    --arb-peach-50: #FFF4ED;
+    --arb-peach-100: #FFEADD;
+    --arb-peach-200: #FFC7B7;
+    --arb-peach-300: #FFAF96;
+    --arb-peach-400: #CD6148;
+    --arb-peach-500: #A75139;
+    --arb-peach-600: #823E2C;
+    --arb-peach-700: #5D2C1F;
+    --arb-peach-800: #381B12;
+    --arb-peach-900: #1F0C07;
 }
 
 [data-theme="arbeidsplassen"] {
@@ -101,11 +101,11 @@
     --a-surface-success-hover: var(--arb-green-600);
     --a-surface-danger-subtle: var(--tertiary-10);
     --a-surface-danger-subtle-hover: var(--tertiary-20);
-    --a-surface-danger: var(--danger);
+    --a-surface-danger: var(--arb-red-600);
     --a-surface-danger-hover: rgba(173, 0, 0, 1);
     --a-surface-danger-active: rgba(140, 0, 0, 1);
-    --a-surface-warning-subtle: var(--warning-subtle);
-    --a-surface-warning: var(--warning);
+    --a-surface-warning-subtle: var(--arb-orange-50);
+    --a-surface-warning: var(--arb-orange-100);
     --a-surface-warning-subtle-hover: rgba(255, 236, 204, 1);
     --a-surface-info-subtle: rgba(235, 252, 255, 1);
     --a-surface-info-subtle-hover: rgba(216, 249, 255, 1);
@@ -122,7 +122,7 @@
     --a-text-default: var(--arb-green-900);
     --a-text-subtle: rgba(0, 0, 0, 0.56);
     --a-text-visited: rgba(99, 70, 137, 1);
-    --a-text-danger: var(--danger);
+    --a-text-danger: var(--arb-red-600);
     --a-text-action: var(--arb-blue-500);
     --a-text-action-selected: var(--arb-blue-700);
     --a-text-action-on-action-subtle: var(--arb-blue-600);
@@ -147,7 +147,7 @@
     --a-border-action-selected: var(--arb-blue-700);
     --a-border-selected: var(--arb-blue-700);
     --a-border-success: var(--arb-green-400);
-    --a-border-danger: var(--danger);
+    --a-border-danger: var(--arb-red-600);
     --a-border-warning: var(--tertiary-60);
     --a-border-info: var(--arb-blue-300);
     --a-border-on-inverted: rgba(229, 229, 229, 1);
@@ -193,6 +193,16 @@
 
     /* Tabs */
     --ac-tabs-selected-border: var(--arb-green-400);
+
+    /* Alert */
+    --ac-alert-info-bg: var(--arb-blue-50);
+    --ac-alert-info-border: var(--arb-blue-50);
+    --ac-alert-success-bg: var(--arb-green-200);
+    --ac-alert-success-border: var(--arb-green-200);
+    --ac-alert-warning-bg: var(--arb-orange-200);
+    --ac-alert-warning-border: var(--arb-orange-200);
+    --ac-alert-error-bg: var(--arb-red-100);
+    --ac-alert-error-border: var(--arb-red-100)
 }
 
 /********************************************************************
@@ -222,4 +232,12 @@
 
 .navds-accordion__header:hover {
     background: var(--arb-blue-200) !important;
+}
+
+.navds-alert:not(.navds-alert--full-width) {
+    border-radius: 0.375rem;
+}
+
+.navds-alert__icon path {
+    fill: var(--arb-green-800);
 }

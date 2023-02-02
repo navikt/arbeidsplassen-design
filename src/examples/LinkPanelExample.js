@@ -1,45 +1,33 @@
 import { LinkPanel } from "@navikt/ds-react";
+import asMarkup from "./utils/asMarkup";
 
-const LinkPanelExample = () => {
+function Template({ skipDescription, ...args }) {
+  return (
+    <div className="mb-2">
+      <LinkPanel href="#" {...args}>
+        <LinkPanel.Title>Møt en bedrift</LinkPanel.Title>
+        {!skipDescription && (
+          <LinkPanel.Description>
+            Følg en direkte sending og bli kjent med bedriften og deres
+            stillinger.
+          </LinkPanel.Description>
+        )}
+      </LinkPanel>
+      {asMarkup("LinkPanel", args)}
+    </div>
+  );
+}
+
+export default function LinkPanelExample() {
   return (
     <>
-        <LinkPanel href="#" className="mb-2 pa-2">
-            <LinkPanel.Title>Finn en jobb</LinkPanel.Title>
-            <LinkPanel.Description>
-                Søk i Norges største database etter din neste jobb.
-            </LinkPanel.Description>
-        </LinkPanel>
+      <Template />
+      <Template className="arb-link-panel-green-dark" />
+      <Template className="arb-link-panel-green" />
+      <Template className="arb-link-panel-blue" />
+      <Template className="arb-link-panel-peach" />
 
-      <LinkPanel href="#" border={false} className="bg-text-tertiary mb-2 pa-2">
-          <LinkPanel.Title>Finn en jobb</LinkPanel.Title>
-        <LinkPanel.Description>
-          Søk i Norges største database etter din neste jobb.
-        </LinkPanel.Description>
-      </LinkPanel>
-
-        <LinkPanel href="#" border={false} className="bg-text-primary-dark mb-2 pa-2">
-            <LinkPanel.Title>Finn en jobb</LinkPanel.Title>
-            <LinkPanel.Description>
-                Søk i Norges største database etter din neste jobb.
-            </LinkPanel.Description>
-        </LinkPanel>
-
-      <LinkPanel href="#" border={false} className="bg-text-primary-light mb-2 pa-2">
-        <LinkPanel.Title>Møt en bedrift</LinkPanel.Title>
-        <LinkPanel.Description>
-          Følg en direkte sending og bli kjent med bedriften og deres
-          stillinger. Motta søknader raskt og enkelt fra relevante jobbsøkere.
-        </LinkPanel.Description>
-      </LinkPanel>
-
-      <LinkPanel href="#" border={false} className="bg-text-secondary mb-2 pa-2">
-        <LinkPanel.Title>Stillingsannonse med superrask søknad</LinkPanel.Title>
-        <LinkPanel.Description>
-          Motta søknader raskt og enkelt fra relevante jobbsøkere.
-        </LinkPanel.Description>
-      </LinkPanel>
+      <Template className="arb-link-panel-peach" skipDescription />
     </>
   );
-};
-
-export default LinkPanelExample;
+}

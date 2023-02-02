@@ -1,0 +1,51 @@
+.arb-panel-green {
+    color: var(--arb-green-800);
+    background-color: var(--arb-green-200);
+    border-radius: 0.25rem;
+}
+
+.arb-panel-blue {
+    color: var(--arb-green-800);
+    background-color: var(--arb-blue-50);
+    border-radius: 0.25rem;
+}
+
+.arb-panel-peach {
+    color: var(--arb-green-800);
+    background-color: var(--arb-peach-50);
+    border-radius: 0.25rem;
+}
+
+.arb-panel-lofty {
+    padding: 1rem;
+}
+
+@media (min-width: 375px) {
+    .arb-panel-lofty {
+        padding: 1.5rem;
+    }
+
+    .arb-panel-compact {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (min-width: 728px) {
+    .arb-panel-lofty {
+        padding: 2rem;
+    }
+
+    .arb-panel-compact {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (min-width: 928px) {
+    .arb-panel-lofty {
+        padding: 3rem 4rem;
+    }
+
+    .arb-panel-compact {
+        padding: 1.5rem 4rem;
+    }
+}

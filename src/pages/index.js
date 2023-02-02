@@ -69,17 +69,13 @@ export default function Home() {
             <Heading level="2" size="large" spacing>
               BodyLong
             </Heading>
-            <BodyLong spacing>
+            <BodyLong>
               Jobbtreff er en ny tjeneste på arbeidsplassen.no. Nå kan du som er
               jobbsøker bli kjent med en bedrift som trenger folk. De forteller
-              om hva slags kompetanse de trenger og om jobbmulighetene. Vi har
-              forenklet søkeprosessen slik at du med noen få klikk kan vise
-              hvorfor du er rett person for jobben.
-            </BodyLong>
-            <BodyLong>
-              Vi har forenklet søkeprosessen slik at du med noen få klikk kan
-              vise hvorfor du er rett person for jobben. De forteller om hva
-              slags kompetanse de trenger og om jobbmulighetene.
+              om hva slags kompetanse de trenger og om jobbmulighetene. Dersom
+              det er noe du gjerne vil at bedriften skal snakke om, kan du sende
+              inn forhåndsdefinerte temaer før sendingen starter. Du kan også
+              stille spørsmål underveis i sendingen.
             </BodyLong>
           </section>
 
@@ -88,13 +84,6 @@ export default function Home() {
               Link
             </Heading>
             <LinkExample />
-          </section>
-
-          <section className="mb-4">
-            <Heading level="2" size="large" spacing>
-              Illustration
-            </Heading>
-            <div className="text-center"></div>
           </section>
 
           <section className="mb-4">

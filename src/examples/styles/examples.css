@@ -1,7 +1,3 @@
-@import "../../components/Header/header.css";
-@import "../../components/Footer/footer.css";
-@import "../../components/theme.css";
-
 .container {
   max-width: 800px;
   width: 100%;
@@ -22,11 +18,22 @@
   margin-bottom: 4rem;
 }
 
+code {
+  font-size: 1rem;
+  background: #f3f6f7;
+  color: #666;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
 .flex {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .flex-justify-space-between {
@@ -35,6 +42,10 @@
 
 .text-center {
   text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 1rem !important;
 }
 
 .mb-2 {
@@ -59,22 +70,4 @@
   padding: 1.5rem;
 }
 
-.bg-text-primary-dark {
-  color: var(--arb-green-200) !important;
-  background-color: var(--arb-green-700) !important;
-}
 
-.bg-text-primary-light {
-  color: var(--arb-green-700) !important;
-  background-color: var(--arb-green-200) !important;
-}
-
-.bg-text-secondary {
-  color: var(--arb-green-700) !important;
-  background-color: var(--arb-blue-200) !important;
-}
-
-.bg-text-tertiary {
-  color: var(--arb-green-700) !important;
-  background-color: var(--tertiary-5) !important;
-}
