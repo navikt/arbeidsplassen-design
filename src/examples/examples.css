@@ -2,6 +2,10 @@ body {
   overflow-y: scroll;
 }
 
+.layout {
+  margin-bottom: 4rem;
+}
+
 .layout-toc {
   max-width: 1440px;
   width: 100%;

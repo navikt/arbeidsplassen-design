@@ -1,0 +1,28 @@
+.arb-article {
+    max-width: 600px;
+    width: 100%;
+}
+
+.arb-article-section {
+    margin-bottom: 3rem;
+}
+
+.arb-article-subsection {
+    margin-bottom: 2rem;
+}
+
+.arb-article-figure {
+    margin-bottom: 3rem;
+}
+
+.arb-article-figure-pull-outside {
+    width: 100%;
+}
+
+@media (min-width: 928px) {
+    .arb-article-figure-pull-outside {
+        width: 800px;
+        margin-left: -100px;
+        margin-right: -100px;
+    }
+}

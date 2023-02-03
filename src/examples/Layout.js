@@ -4,6 +4,7 @@ import { BodyLong, Heading } from "@navikt/ds-react";
 const tableOfContentByFilename = [
   "Accordion",
   "Alert",
+  "Article",
   "Button",
   "Checkbox",
   "Chips",

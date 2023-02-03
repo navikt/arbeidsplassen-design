@@ -1,4 +1,4 @@
-import { BodyLong, GuidePanel, Heading, Ingress } from "@navikt/ds-react";
+import { BodyLong, GuidePanel, Heading } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 
 const Icon = () => {
