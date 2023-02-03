@@ -6,7 +6,7 @@ function Template({ showTitle, ...args }) {
   return (
     <div className="mb-2">
       <Alert {...args}>
-        {showTitle && (
+        {!showTitle && (
           <Heading spacing size="small" level="3">
             Viktig informasjon
           </Heading>
