@@ -40,6 +40,11 @@ export default function Layout({ children, title }) {
     <div className="container">
       <div className="container-toc">
         <ul>
+          <li>
+            <BodyLong>
+              <Link href="/">← Design</Link>
+            </BodyLong>
+          </li>
           {tableOfContentByFilename.map((it) => (
             <li>
               <BodyLong>
