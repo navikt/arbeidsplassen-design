@@ -1,11 +1,12 @@
 import { Heading, Stepper } from "@navikt/ds-react";
 import { useState } from "react";
+import Layout from "../examples/Layout";
 
 const StepperExample = () => {
   const [activeStep, setActiveStep] = useState(3);
 
   return (
-    <>
+    <Layout title="Stepper">
       <div className="mb-2">
         <Heading size="small" level="3" spacing>
           Default
@@ -63,7 +64,7 @@ const StepperExample = () => {
           <Stepper.Step href="#">Publisering</Stepper.Step>
         </Stepper>
       </div>
-    </>
+    </Layout>
   );
 };
 

@@ -5,18 +5,25 @@ body {
 .container {
   max-width: 1140px;
   width: 100%;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   padding: 1rem;
+}
+
+.container-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 4rem;
   display: flex;
-  gap: 8rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.container-toc {
-  min-width: 240px;
-}
-
-.container-content {
-  flex: 1;
+.container-toc ul li a{
+  background: var(--arb-gray-100);
+  color: var(--arb-green-800)!important;
+  padding: 0 6px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .container-small {

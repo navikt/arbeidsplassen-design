@@ -1,8 +1,9 @@
 import { Table } from "@navikt/ds-react";
-import { format } from "date-fns";
+import Layout from "../examples/Layout";
 
-const TableExample = () => {
+export default function TableExample() {
   return (
+    <Layout title="Table">
       <Table>
         <Table.Header>
           <Table.Row>
@@ -14,46 +15,43 @@ const TableExample = () => {
         <Table.Body>
           {data.map(({ name, fnr, start }, i) => {
             return (
-                <Table.Row key={i + fnr}>
-                  <Table.HeaderCell scope="row">{name}</Table.HeaderCell>
-                  <Table.DataCell>{fnr}</Table.DataCell>
-                  <Table.DataCell>
-                    {format(new Date(start), "dd.MM.yyyy")}
-                  </Table.DataCell>
-                </Table.Row>
+              <Table.Row key={i + fnr}>
+                <Table.HeaderCell scope="row">{name}</Table.HeaderCell>
+                <Table.DataCell>{fnr}</Table.DataCell>
+                <Table.DataCell>{start}</Table.DataCell>
+              </Table.Row>
             );
           })}
         </Table.Body>
       </Table>
+    </Layout>
   );
-};
+}
 
 const data = [
   {
     name: "Jakobsen, Markus",
     fnr: "03129265463",
-    start: "2021-04-28T19:12:14.358Z",
+    start: "2021-04-28",
   },
   {
     name: "Halvorsen, Mari",
     fnr: "16063634134",
-    start: "2022-01-29T09:51:19.833Z",
+    start: "2022-01-29",
   },
   {
     name: "Christiansen, Mathias",
     fnr: "18124441438",
-    start: "2021-06-04T20:57:29.159Z",
+    start: "2021-06-04",
   },
   {
     name: "Fredriksen, Leah",
     fnr: "24089080180",
-    start: "2021-08-31T15:47:36.293Z",
+    start: "2021-08-31",
   },
   {
     name: "Evensen, Jonas",
     fnr: "18106248460",
-    start: "2021-07-17T11:13:26.116Z",
+    start: "2021-07-17",
   },
 ];
-
-export default TableExample;

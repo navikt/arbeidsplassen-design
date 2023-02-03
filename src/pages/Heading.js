@@ -1,8 +1,9 @@
 import { Heading } from "@navikt/ds-react";
+import Layout from "../examples/Layout";
 
 const HeadingExample = () => {
   return (
-    <div>
+    <Layout title="Heading">
       <Heading level="1" size="xlarge" spacing>
         Heading 1
       </Heading>
@@ -18,7 +19,7 @@ const HeadingExample = () => {
       <Heading level="5" size="xsmall" spacing>
         Heading 5
       </Heading>
-    </div>
+    </Layout>
   );
 };
 

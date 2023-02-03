@@ -1,4 +1,5 @@
 import { BodyLong, GuidePanel, Heading, Ingress } from "@navikt/ds-react";
+import Layout from "../examples/Layout";
 
 const Icon = () => {
   return (
@@ -54,7 +55,7 @@ const Icon = () => {
 
 const GuidePanelExample = () => {
   return (
-    <div>
+    <Layout title="GuidePanel">
       <GuidePanel poster illustration={<Icon />} className="mb-4">
         <div className="arb-guide-panel-lofsty">
           <Heading size="medium" level="3" spacing className="text-center mb-2">
@@ -104,7 +105,7 @@ const GuidePanelExample = () => {
           passer til stillingen.
         </BodyLong>
       </GuidePanel>
-    </div>
+    </Layout>
   );
 };
 

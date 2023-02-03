@@ -1,10 +1,11 @@
 import { Checkbox, CheckboxGroup } from "@navikt/ds-react";
+import Layout from "../examples/Layout";
 
 const CheckboxExample = () => {
   const handleChange = (val) => console.log(val);
 
   return (
-    <>
+    <Layout title="Checkbox">
       <CheckboxGroup
         legend="Velg arbeidssted"
         description="Du kan velge flere steder om du vil"
@@ -19,7 +20,7 @@ const CheckboxExample = () => {
           Jan Mayen
         </Checkbox>
       </CheckboxGroup>
-    </>
+    </Layout>
   );
 };
 

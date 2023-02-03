@@ -5,17 +5,35 @@ export default function Layout({ children, title }) {
   const tableOfContentByFilename = [
     "Accordion",
     "Alert",
+    "Button",
+    "Checkbox",
     "Chips",
     "ConfirmationPanel",
+    "DatePicker",
+    "ErrorSummary",
+    "GuidePanel",
+    "Heading",
+    "HelpText",
+    "Ingress",
     "Link",
     "LinkPanel",
     "Modal",
+    "Pagination",
     "Panel",
+    "Popover",
     "Radio",
     "ReadMore",
+    "Search",
+    "Select",
+    "Stepper",
+    "Switch",
+    "Table",
     "Tabs",
     "Tag",
+    "Textarea",
     "TextField",
+    "ToggleGroup",
+    "Tooltip",
   ].sort();
 
   return (
@@ -31,6 +49,7 @@ export default function Layout({ children, title }) {
           ))}
         </ul>
       </div>
+
       <div className="container-content">
         <Heading size="xlarge" level="1" spacing>
           {title}

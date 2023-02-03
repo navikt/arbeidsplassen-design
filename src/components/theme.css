@@ -170,7 +170,7 @@
     --ac-chip-toggle-pressed-text: var(--arb-green-200);
     --ac-chip-toggle-pressed-hover-bg: var(--arb-green-900);
     --ac-chip-toggle-border: var(--arb-green-700);
-    --ac-chip-toggle-hover-bg: var(--arb-blue-200);
+    --ac-chip-toggle-hover-bg: var(--arb-blue-50);
     --ac-chip-toggle-bg: var(--arb-white);
 
     /* Chips removable */

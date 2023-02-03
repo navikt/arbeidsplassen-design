@@ -1,17 +1,12 @@
 export default function asMarkup(as, props, selfClosing) {
-  const keys = Object.keys(props);
-  let p = "";
-  keys.forEach((key) => {
+  const attr = Object.keys(props).map((key) => {
     if (props[key] === true) {
-      p += ` ${key}`;
-    } else p += ` ${key}="${props[key]}"`;
+      return key;
+    }
+    return `${key}="${props[key]}"`;
   });
 
-  return (
-    <code>
-      &lt;{as}
-      {p}
-      {selfClosing && " /"}&gt;
-    </code>
-  );
+  const markup = [as, ...attr, selfClosing ? "/" : ""].join(" ").trim();
+
+  return <code>&lt;{markup}&gt;</code>;
 }
