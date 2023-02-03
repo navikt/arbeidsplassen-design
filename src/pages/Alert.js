@@ -1,6 +1,6 @@
 import { Alert, Heading, Link } from "@navikt/ds-react";
-import asMarkup from "../examples/utils/asMarkup";
 import Layout from "../examples/Layout";
+import Code from "../examples/Code";
 
 function Template({ showTitle, ...args }) {
   return (
@@ -15,7 +15,7 @@ function Template({ showTitle, ...args }) {
         himself transformed in his bed into a horrible vermin.{" "}
         <Link href="#">Les mer om feilen på arbeidsplassen.no</Link>
       </Alert>
-      {asMarkup("Alert", args)}
+      <Code as="Alert" attributes={args} />
     </div>
   );
 }

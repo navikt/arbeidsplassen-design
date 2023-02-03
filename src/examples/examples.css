@@ -2,14 +2,14 @@ body {
   overflow-y: scroll;
 }
 
-.container {
-  max-width: 1140px;
+.layout-toc {
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
 }
 
-.container-toc ul {
+.layout-toc ul {
   list-style: none;
   padding: 0;
   margin: 2rem 0 4rem;
@@ -18,7 +18,7 @@ body {
   gap: 1rem;
 }
 
-.container-toc ul li a{
+.layout-toc ul li a{
   background: var(--arb-gray-100);
   color: var(--arb-green-800)!important;
   padding: 0 6px;
@@ -26,12 +26,14 @@ body {
   display: inline-block;
 }
 
-.container-small {
-  max-width: 600px;
+.layout-content-default {
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+}
+
+.layout-content-full-width {
+  width: 100%;
 }
 
 .page-margin-top-and-bottom {

@@ -1,13 +1,13 @@
 import React from "react";
 import { TextField } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import asMarkup from "../examples/utils/asMarkup";
+import Code from "../examples/Code";
 
 function Template({ ...args }) {
   return (
     <div className="mb-4">
       <TextField {...args} />
-      {asMarkup("TextField", args, true)}
+      <Code as="TextField" attributes={args} />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Layout from "../examples/Layout";
 
 export default function FooterPage() {
   return (
-    <Layout>
+    <Layout size="full-width">
       <Footer />
     </Layout>
   );

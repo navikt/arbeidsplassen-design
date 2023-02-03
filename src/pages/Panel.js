@@ -1,6 +1,6 @@
 import { BodyLong, Heading, Panel } from "@navikt/ds-react";
-import asMarkup from "../examples/utils/asMarkup";
 import Layout from "../examples/Layout";
+import Code from "../examples/Code";
 
 function Template({ ...args }) {
   return (
@@ -15,7 +15,7 @@ function Template({ ...args }) {
           akkurat deg. Les annonsen nøye og se hva de spør etter.
         </BodyLong>
       </Panel>
-      {asMarkup("Panel", args)}
+      <Code as="Panel" attributes={args} />
     </div>
   );
 }

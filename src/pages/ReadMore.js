@@ -1,6 +1,6 @@
 import { ReadMore } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import asMarkup from "../examples/utils/asMarkup";
+import Code from "../examples/Code";
 
 const Template = ({ ...args }) => {
   return (
@@ -11,7 +11,7 @@ const Template = ({ ...args }) => {
         på hvilke kvalifikasjoner de oppfyller, og begrunner kort hvorfor de er
         rett person for jobben.
       </ReadMore>
-      {asMarkup("ReadMore", args)}
+      <Code as="ReadMore" attributes={args} />
     </div>
   );
 };

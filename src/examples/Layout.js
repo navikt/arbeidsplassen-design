@@ -1,44 +1,45 @@
 import Link from "next/link";
 import { BodyLong, Heading } from "@navikt/ds-react";
 
-export default function Layout({ children, title }) {
-  const tableOfContentByFilename = [
-    "Accordion",
-    "Alert",
-    "Button",
-    "Checkbox",
-    "Chips",
-    "ConfirmationPanel",
-    "DatePicker",
-    "ErrorSummary",
-    "GuidePanel",
-    "Heading",
-    "HelpText",
-    "Ingress",
-    "Link",
-    "LinkPanel",
-    "Modal",
-    "Pagination",
-    "Panel",
-    "Popover",
-    "Radio",
-    "ReadMore",
-    "Search",
-    "Select",
-    "Stepper",
-    "Switch",
-    "Table",
-    "Tabs",
-    "Tag",
-    "Textarea",
-    "TextField",
-    "ToggleGroup",
-    "Tooltip",
-  ].sort();
+const tableOfContentByFilename = [
+  "Accordion",
+  "Alert",
+  "Button",
+  "Checkbox",
+  "Chips",
+  "ConfirmationPanel",
+  "DatePicker",
+  "ErrorSummary",
+  "Footer",
+  "GuidePanel",
+  "Heading",
+  "HelpText",
+  "Ingress",
+  "Link",
+  "LinkPanel",
+  "Modal",
+  "Pagination",
+  "Panel",
+  "Popover",
+  "Radio",
+  "ReadMore",
+  "Search",
+  "Select",
+  "Stepper",
+  "Switch",
+  "Table",
+  "Tabs",
+  "Tag",
+  "Textarea",
+  "TextField",
+  "ToggleGroup",
+  "Tooltip",
+].sort();
 
+export default function Layout({ children, title, size = "default" }) {
   return (
-    <div className="container">
-      <div className="container-toc">
+    <div className="layout">
+      <div className="layout-toc">
         <ul>
           <li>
             <BodyLong>
@@ -54,8 +55,7 @@ export default function Layout({ children, title }) {
           ))}
         </ul>
       </div>
-
-      <div className="container-content">
+      <div className={`layout-content-${size}`}>
         <Heading size="xlarge" level="1" spacing>
           {title}
         </Heading>
