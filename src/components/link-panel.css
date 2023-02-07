@@ -13,22 +13,22 @@
 }
 
 .arb-link-panel-green {
-    color: var(--arb-green-800);
+    color: var(--arb-green-700);
     background-color: var(--arb-green-200);
     border: 0;
     border-radius: 0.25rem;
 }
 
 .arb-link-panel-blue {
-    color: var(--arb-green-800);
+    color: var(--arb-green-700);
     background-color: var(--arb-blue-50);
     border: 0;
     border-radius: 0.25rem;
 }
 
 .arb-link-panel-peach {
-    color: var(--arb-green-800);
-    background-color: var(--arb-peach-50);
+    color: var(--arb-green-700);
+    background-color: var(--arb-peach-100);
     border: 0;
     border-radius: 0.25rem;
 }
@@ -38,13 +38,4 @@
 .arb-link-panel-blue,
 .arb-link-panel-peach{
     padding: 1.5rem;
-}
-
-@media (min-width: 728px) {
-    .arb-link-panel-green,
-    .arb-link-panel-green-dark,
-    .arb-link-panel-blue,
-    .arb-link-panel-peach{
-        padding: 1.5rem;
-    }
 }

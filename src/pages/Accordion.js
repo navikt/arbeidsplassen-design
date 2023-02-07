@@ -58,6 +58,12 @@ const AccordionExample = () => {
             <Yrke />
           </Accordion.Content>
         </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header>Publisert</Accordion.Header>
+          <Accordion.Content>
+            <Yrke />
+          </Accordion.Content>
+        </Accordion.Item>
       </Accordion>
     </Layout>
   );
