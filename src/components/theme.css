@@ -214,6 +214,21 @@
     --ac-alert-error-border: var(--arb-red-100);
 
     /* Tag */
+    --ac-tag-info-bg: var(--arb-blue-50);
+    --ac-tag-info-text: var(--arb-green-800);
+    --ac-tag-info-border: var(--arb-blue-200);
+    --ac-tag-success-bg: var(--arb-green-100);
+    --ac-tag-success-text: var(--arb-green-800);
+    --ac-tag-success-border: var(--arb-green-400);
+    --ac-tag-warning-bg: var(--arb-orange-50);
+    --ac-tag-warning-text: var(--arb-green-800);
+    --ac-tag-warning-border: var(--arb-orange-300);
+    --ac-tag-error-bg: var(--arb-red-50);
+    --ac-tag-error-text: var(--arb-green-800);
+    --ac-tag-error-border: var(--arb-red-200);
+    --ac-tag-neutral-bg: var(--arb-gray-50);
+    --ac-tag-neutral-text: var(--arb-green-800);
+    --ac-tag-neutral-border: var(--arb-gray-300);
     --ac-tag-info-filled-bg: var(--arb-blue-100);
     --ac-tag-info-filled-text: var(--arb-green-800);
     --ac-tag-success-filled-bg: var(--arb-green-200);
