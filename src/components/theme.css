@@ -244,11 +244,13 @@
     --ac-tag-neutral-filled-text: var(--arb-gray-700);
 }
 
-/********************************************************************
- * Overrides that could not be done with css variables
- ********************************************************************/
+/**********************
+ * Button
+ *********************/
+.navds-button {
+    border-radius: 0.375rem!important;
+}
 
-/* Button */
 .navds-button:not(
     .navds-button--icon-only,
     .navds-search__button-search,
@@ -256,21 +258,31 @@
     .navds-pagination__item
   ) {
     border-radius: var(--a-border-radius-full) !important;
-}
-
-.navds-button--medium {
     padding: 0.75rem 1.5rem!important;
 }
 
-.navds-button--small {
+.navds-button--small:not(
+    .navds-button--icon-only,
+    .navds-search__button-search,
+    .navds-date__field-button,
+    .navds-pagination__item
+  )  {
     padding: 0.5rem 1rem!important;
 }
 
-.navds-button--xsmall {
+.navds-button--xsmall:not(
+    .navds-button--icon-only,
+    .navds-search__button-search,
+    .navds-date__field-button,
+    .navds-pagination__item
+  )  {
     padding: 0.375rem 1rem!important;
 }
 
-/* Chips */
+
+/**********************
+ * Chips
+ *********************/
 .navds-chips__chip {
     font-weight: 600 !important;
     border-bottom-right-radius: 0 !important;
@@ -280,7 +292,10 @@
     color: var(--arb-blue-500)!important; /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
-/* Tag */
+
+/**********************
+ * Tag
+ *********************/
 .navds-tag {
     font-weight: 600 !important;
     border-radius: var(--a-border-radius-full) !important;
@@ -298,7 +313,10 @@
     padding-right: 0.5rem !important;
 }
 
-/* Accordion */
+
+/**********************
+ * Accordion
+ *********************/
 .navds-accordion__header:hover {
     background: var(--arb-blue-50) !important;
 }
@@ -309,7 +327,10 @@
     border-radius: 0.25rem;
 }
 
-/* Alert */
+
+/**********************
+ * Alert
+ *********************/
 .navds-alert:not(.navds-alert--full-width) {
     border-radius: 0.375rem;
 }
@@ -330,16 +351,31 @@
     fill: var(--arb-red-500);/* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
-/* Confirmation panel */
+/**********************
+ * ConfirmationPanel
+ *********************/
 .navds-confirmation-panel__inner {
     border-radius: 0.375rem;
 }
 
-/* Border radius form fields */
-.navds-text-field__input,
+
+/**********************
+ * Form fields
+ *********************/
+.navds-text-field__input:not(.navds-search__input--primary),
 .navds-select__input,
 .navds-textarea__input {
     border-radius: 0.5rem!important;
+}
+
+.navds-search__input--primary {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.navds-search__button-search {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .navds-checkbox__label::before {

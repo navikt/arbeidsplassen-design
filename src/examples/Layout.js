@@ -48,7 +48,7 @@ export default function Layout({ children, title, size = "default" }) {
             </BodyLong>
           </li>
           {tableOfContentByFilename.map((it) => (
-            <li>
+            <li key={it}>
               <BodyLong>
                 <Link href={`/${it}`}>{it}</Link>
               </BodyLong>
