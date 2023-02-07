@@ -203,6 +203,9 @@
     /* Tabs */
     --ac-tabs-selected-border: var(--arb-green-400);
 
+    /* ReadMore */
+    --ac-read-more-line: var(--arb-green-200);
+
     /* Alert */
     --ac-alert-info-bg: var(--arb-blue-100);
     --ac-alert-info-border: var(--arb-blue-100);
@@ -274,7 +277,7 @@
 }
 
 .navds-chips__toggle[aria-pressed="false"] {
-    color: var(--arb-blue-500)!important;
+    color: var(--arb-blue-500)!important; /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
 /* Tag */
@@ -312,19 +315,19 @@
 }
 
 .navds-alert--info path {
-    fill: var(--arb-blue-400);
+    fill: var(--arb-blue-400);/* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
 .navds-alert--success path {
-    fill: var(--arb-green-600);
+    fill: var(--arb-green-600);/* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
 .navds-alert--warning path {
-    fill: var(--arb-orange-500);
+    fill: var(--arb-orange-500);/* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
 .navds-alert--error path {
-    fill: var(--arb-red-500);
+    fill: var(--arb-red-500);/* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
 /* Confirmation panel */
