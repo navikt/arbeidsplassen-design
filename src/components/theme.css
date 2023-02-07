@@ -334,3 +334,14 @@
 .navds-confirmation-panel__inner {
     border-radius: 0.375rem;
 }
+
+/* Border radius form fields */
+.navds-text-field__input,
+.navds-select__input,
+.navds-textarea__input {
+    border-radius: 0.5rem!important;
+}
+
+.navds-checkbox__label::before {
+    border-radius: 0.375rem!important;
+}
