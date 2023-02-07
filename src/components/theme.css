@@ -96,7 +96,7 @@
     --a-surface-action: var(--arb-blue-500);
     --a-surface-action-hover: var(--arb-blue-600);
     --a-surface-action-active: var(--arb-blue-800);
-    --a-surface-action-selected: rgba(0, 91, 130, 1);/*todo*/
+    --a-surface-action-selected: var(--arb-blue-800);
     --a-surface-action-selected-hover: rgba(0, 80, 119, 1);/*todo*/
     --a-surface-neutral-subtle: rgba(0, 0, 0, 0.05);/*todo var*/
     --a-surface-neutral-subtle-hover: var(--arb-grayalpha-200);
@@ -132,7 +132,7 @@
     --a-text-visited: rgba(99, 70, 137, 1); /*todo*/
     --a-text-danger: var(--arb-red-500);
     --a-text-action: var(--arb-blue-500);
-    --a-text-action-selected: rgba(0, 91, 130, 1); /*todo*/
+    --a-text-action-selected: var(--arb-blue-800);
     --a-text-action-on-action-subtle: var(--arb-blue-500);
     --a-text-on-inverted: var(--arb-white);
     --a-text-on-neutral: var(--arb-white);
@@ -152,7 +152,7 @@
     --a-border-subtle: var(--arb-grayalpha-200);
     --a-border-subtle-hover: var(--arb-grayalpha-300);
     --a-border-action: var(--arb-blue-500);
-    --a-border-action-selected: rgba(0, 91, 130, 1); /*todo*/
+    --a-border-action-selected: var(--arb-blue-800);
     --a-border-selected: var(--arb-blue-500);
     --a-border-success: var(--arb-green-500);
     --a-border-danger: var(--arb-red-500);
@@ -242,6 +242,14 @@
     --ac-tag-error-filled-text: var(--arb-green-800);
     --ac-tag-neutral-filled-bg: var(--arb-gray-200);
     --ac-tag-neutral-filled-text: var(--arb-gray-700);
+
+    /* Stepper */
+    --ac-stepper-line: var(--arb-gray-200);
+    --ac-stepper-line-completed: var(--arb-blue-300);
+    --ac-stepper-non-interactive: var(--arb-gray-700);
+    --ac-stepper-non-interactive-active: var(--arb-green-700);
+    --ac-stepper-non-interactive-active-bg: var(--arb-green-700);
+    --ac-stepper-non-interactive-active-border: var(--arb-green-700);
 }
 
 /**********************
