@@ -8,40 +8,48 @@ export default function Footer() {
           <h2 className="arb-footer-h2">Om oss</h2>
           <ul>
             <li>
-              <a href="/kontakt">Kontakt oss</a>
-            </li>
-            <li>
               <a href="/om-arbeidsplassen">Om arbeidsplassen.no</a>
             </li>
             <li>
-              <a href="/sporsmal-og-svar">Spørsmål og svar</a>
+              <a href="/kontakt">Kontakt oss</a>
+            </li>
+            <li>
+              <a href="/personvern">Personvern</a>
+            </li>
+            <li>
+              <a href="/tilgjengelighet">Tilgjengelighet</a>
             </li>
           </ul>
         </section>
 
         <section className="arb-footer-section">
-          <h2 className="arb-footer-h2">Hjelp</h2>
+          <h2 className="arb-footer-h2">For jobbsøkere</h2>
           <ul>
             <li>
-              <a href="/tilgjengelighet">Tilgjengelighet</a>
+              <a href="/sporsmal-og-svar">Spørsmål og svar</a>
+            </li>
+            <li>
+              <a href="/jobbe-i-utlandet">Jobbe i utlandet</a>
+            </li>
+            <li>
+              <a href="/en/work-in-norway">Refugees from Ukraine</a>
+            </li>
+          </ul>
+        </section>
+
+        <section className="arb-footer-section">
+          <h2 className="arb-footer-h2">For bedrifter</h2>
+          <ul>
+            <li>
+              <a href="/vilkar-og-retningslinjer">Vilkår og retningslinjer</a>
             </li>
             <li>
               <a href="/arbeidsgivertjenester">Hjelp til innlogging</a>
             </li>
             <li>
-              <a href="/en/work-in-norway">Work in Norway</a>
-            </li>
-          </ul>
-        </section>
-
-        <section className="arb-footer-section">
-          <h2 className="arb-footer-h2">Personvern og vilkår</h2>
-          <ul>
-            <li>
-              <a href="/personvern">Personvern</a>
-            </li>
-            <li>
-              <a href="/vilkar-og-retningslinjer">Vilkår og retningslinjer</a>
+              <a href="/overforing-av-stillingsannonser">
+                Overføre annonser via API
+              </a>
             </li>
           </ul>
         </section>
