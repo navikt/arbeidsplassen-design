@@ -17,7 +17,7 @@
 .arb-footer-sections {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem 4rem;
+  gap: 2.5rem 5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -84,7 +84,7 @@
 .arb-footer-logo {
   margin: 0;
   display: inline-flex;
-  height: 20px;
+  height: 40px;
   color: #003141;
 }
 
