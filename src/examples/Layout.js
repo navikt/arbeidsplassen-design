@@ -13,6 +13,7 @@ const tableOfContentByFilename = [
   "ErrorSummary",
   "Footer",
   "GuidePanel",
+  "Header",
   "Heading",
   "HelpText",
   "Ingress",
@@ -37,9 +38,14 @@ const tableOfContentByFilename = [
   "Tooltip",
 ].sort();
 
-export default function Layout({ children, title, size = "default" }) {
+export default function Layout({
+  children,
+  title,
+  size = "default",
+  headerOffset = false,
+}) {
   return (
-    <div className="layout">
+    <div className={`layout${headerOffset && " dsa-header-offset"}`}>
       <div className="layout-toc">
         <ul>
           <li>
