@@ -1,5 +1,5 @@
 import Layout from "../examples/Layout";
-import Header from "../common/Header/Header";
+import Header from "../common/components/Header/Header";
 
 export default function HeaderPage() {
   return (

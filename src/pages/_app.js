@@ -1,5 +1,5 @@
 import "@navikt/ds-css";
-import "../common/styles.css";
+import "../common/css/styles.css";
 import "../examples/article.css";
 import "../examples/examples.css";
 
