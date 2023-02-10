@@ -1,7 +1,7 @@
 import { ToggleGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import UsersIcon from "../common/icons/feather/UsersIcon";
-import TrashIcon from "../common/icons/feather/TrashIcon";
+import UsersIcon from "../packages/arbeidsplassen-react/Icons/feather/UsersIcon";
+import TrashIcon from "../packages/arbeidsplassen-react/Icons/feather/TrashIcon";
 
 const ToggleGroupExample = () => {
   return (

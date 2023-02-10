@@ -1,4 +1,4 @@
-import Footer from "../common/components/Footer/Footer";
+import Footer from "../packages/arbeidsplassen-react/Footer/Footer";
 import Layout from "../examples/Layout";
 
 export default function FooterPage() {
