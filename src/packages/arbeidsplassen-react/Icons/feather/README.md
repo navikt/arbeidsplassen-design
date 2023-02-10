@@ -1,4 +1,5 @@
 ## License
+
 Icons taken from https://github.com/feathericons/feather/ is licensed under the MIT License (MIT):
 
 ```

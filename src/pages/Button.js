@@ -1,6 +1,6 @@
 import { Button } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import TrashIcon from "../packages/arbeidsplassen-react/Icons/feather/TrashIcon";
+import { TrashIcon } from "../packages/arbeidsplassen-react";
 
 const ButtonExample = () => {
   return (

@@ -1,5 +1,5 @@
 import Layout from "../examples/Layout";
-import Header from "../packages/arbeidsplassen-react/Header/Header";
+import { Header } from "../packages/arbeidsplassen-react";
 
 export default function HeaderPage() {
   return (

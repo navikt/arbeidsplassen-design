@@ -1,8 +1,10 @@
 import Layout from "../examples/Layout";
-import MinusCircleIcon from "../packages/arbeidsplassen-react/Icons/feather/MinusCircleIcon";
-import PlusCircleIcon from "../packages/arbeidsplassen-react/Icons/feather/PlusCircleIcon";
-import UsersIcon from "../packages/arbeidsplassen-react/Icons/feather/UsersIcon";
-import TrashIcon from "../packages/arbeidsplassen-react/Icons/feather/TrashIcon";
+import {
+  MinusCircleIcon,
+  PlusCircleIcon,
+  TrashIcon,
+  UsersIcon,
+} from "../packages/arbeidsplassen-react";
 
 const IconsExample = () => {
   return (

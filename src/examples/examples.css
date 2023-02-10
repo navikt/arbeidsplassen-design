@@ -22,9 +22,9 @@ body {
   gap: 1rem;
 }
 
-.layout-toc ul li a{
+.layout-toc ul li a {
   background: var(--arb-gray-100);
-  color: var(--arb-green-800)!important;
+  color: var(--arb-green-800) !important;
   padding: 0 6px;
   border-radius: 4px;
   display: inline-block;
@@ -92,5 +92,3 @@ code {
   width: 100%;
   padding: 1.5rem;
 }
-
-

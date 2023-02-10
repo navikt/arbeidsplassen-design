@@ -1,29 +1,29 @@
 .arb-article {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .arb-article-section {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .arb-article-subsection {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .arb-article-figure {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .arb-article-figure-pull-outside {
-    width: 100%;
+  width: 100%;
 }
 
 @media (min-width: 928px) {
-    .arb-article-figure-pull-outside {
-        width: 800px;
-        margin-left: -100px;
-        margin-right: -100px;
-    }
+  .arb-article-figure-pull-outside {
+    width: 800px;
+    margin-left: -100px;
+    margin-right: -100px;
+  }
 }
