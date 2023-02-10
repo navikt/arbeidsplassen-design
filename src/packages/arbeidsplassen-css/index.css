@@ -1,6 +1,6 @@
 @import "./theme.css";
-@import "./header.css";
-@import "./footer.css";
-@import "./link-panel.css";
-@import "./panel.css";
-@import "./guide-panel.css";
+@import "./Header/header.css";
+@import "./Footer/footer.css";
+@import "./Panel/link-panel.css";
+@import "./Panel/panel.css";
+@import "./GuidePanel/guide-panel.css";
