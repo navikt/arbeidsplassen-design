@@ -1,5 +1,5 @@
 import "@navikt/ds-css";
-import "../packages/arbeidsplassen-css/styles.css";
+import "../packages/arbeidsplassen-css/index.css";
 import "../examples/article.css";
 import "../examples/examples.css";
 
