@@ -1,22 +1,22 @@
 import { ToggleGroup } from "@navikt/ds-react";
-import Heart from "../examples/icons/Heart";
-import Trash from "../examples/icons/Trash";
 import Layout from "../examples/Layout";
+import UsersIcon from "../common/icons/feather/UsersIcon";
+import TrashIcon from "../common/icons/feather/TrashIcon";
 
 const ToggleGroupExample = () => {
   return (
     <Layout title="ToggleGroup">
       <ToggleGroup defaultValue="lest" onChange={console.log}>
         <ToggleGroup.Item value="ulest">
-          <Heart />
+          <UsersIcon />
           Ulest
         </ToggleGroup.Item>
         <ToggleGroup.Item value="lest">
-          <Trash />
+          <TrashIcon />
           Leste
         </ToggleGroup.Item>
         <ToggleGroup.Item value="sendt">
-          <Heart />
+          <UsersIcon />
           Sendt
         </ToggleGroup.Item>
       </ToggleGroup>

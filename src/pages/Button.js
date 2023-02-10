@@ -1,16 +1,16 @@
 import { Button } from "@navikt/ds-react";
-import Trash from "../examples/icons/Trash";
 import Layout from "../examples/Layout";
+import TrashIcon from "../common/icons/feather/TrashIcon";
 
 const ButtonExample = () => {
   return (
     <Layout title="Button">
       <div className="flex mb-2">
         <Button variant="primary">Button</Button>
-        <Button variant="primary" icon={<Trash />}>
+        <Button variant="primary" icon={<TrashIcon />}>
           Button
         </Button>
-        <Button variant="primary" icon={<Trash />} iconPosition="right">
+        <Button variant="primary" icon={<TrashIcon />} iconPosition="right">
           Button
         </Button>
         <Button variant="primary" size="small">
@@ -27,13 +27,13 @@ const ButtonExample = () => {
         <Button disabled variant="primary">
           Button
         </Button>
-        <Button disabled variant="primary" icon={<Trash />}>
+        <Button disabled variant="primary" icon={<TrashIcon />}>
           Button
         </Button>
         <Button
           disabled
           variant="primary"
-          icon={<Trash />}
+          icon={<TrashIcon />}
           iconPosition="right"
         >
           Button
@@ -51,10 +51,10 @@ const ButtonExample = () => {
 
       <div className="flex mb-2">
         <Button variant="secondary">Button</Button>
-        <Button variant="secondary" icon={<Trash />}>
+        <Button variant="secondary" icon={<TrashIcon />}>
           Button
         </Button>
-        <Button variant="secondary" icon={<Trash />} iconPosition="right">
+        <Button variant="secondary" icon={<TrashIcon />} iconPosition="right">
           Button
         </Button>
         <Button variant="secondary" size="small">
@@ -71,13 +71,13 @@ const ButtonExample = () => {
         <Button disabled variant="secondary">
           Button
         </Button>
-        <Button disabled variant="secondary" icon={<Trash />}>
+        <Button disabled variant="secondary" icon={<TrashIcon />}>
           Button
         </Button>
         <Button
           disabled
           variant="secondary"
-          icon={<Trash />}
+          icon={<TrashIcon />}
           iconPosition="right"
         >
           Button
@@ -95,10 +95,10 @@ const ButtonExample = () => {
 
       <div className="flex mb-2">
         <Button variant="tertiary">Button</Button>
-        <Button variant="tertiary" icon={<Trash />}>
+        <Button variant="tertiary" icon={<TrashIcon />}>
           Button
         </Button>
-        <Button variant="tertiary" icon={<Trash />} iconPosition="right">
+        <Button variant="tertiary" icon={<TrashIcon />} iconPosition="right">
           Button
         </Button>
         <Button variant="tertiary" size="small">
@@ -115,13 +115,13 @@ const ButtonExample = () => {
         <Button disabled variant="tertiary">
           Button
         </Button>
-        <Button disabled variant="tertiary" icon={<Trash />}>
+        <Button disabled variant="tertiary" icon={<TrashIcon />}>
           Button
         </Button>
         <Button
           disabled
           variant="tertiary"
-          icon={<Trash />}
+          icon={<TrashIcon />}
           iconPosition="right"
         >
           Button
@@ -139,10 +139,10 @@ const ButtonExample = () => {
 
       <div className="flex mb-2">
         <Button variant="danger">Button</Button>
-        <Button variant="danger" icon={<Trash />}>
+        <Button variant="danger" icon={<TrashIcon />}>
           Button
         </Button>
-        <Button variant="danger" icon={<Trash />} iconPosition="right">
+        <Button variant="danger" icon={<TrashIcon />} iconPosition="right">
           Button
         </Button>
         <Button variant="danger" size="small">
@@ -159,10 +159,15 @@ const ButtonExample = () => {
         <Button disabled variant="danger">
           Button
         </Button>
-        <Button disabled variant="danger" icon={<Trash />}>
+        <Button disabled variant="danger" icon={<TrashIcon />}>
           Button
         </Button>
-        <Button disabled variant="danger" icon={<Trash />} iconPosition="right">
+        <Button
+          disabled
+          variant="danger"
+          icon={<TrashIcon />}
+          iconPosition="right"
+        >
           Button
         </Button>
         <Button disabled variant="danger" size="small">
