@@ -1,7 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-css",
   "version": "1.0.13",
-  "description": "",
   "main": "index.css",
   "private": false,
   "scripts": {
@@ -19,5 +18,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/navikt/arbeidsplassen-design#readme"
+  "homepage": "https://github.com/navikt/arbeidsplassen-design#readme",
+  "devDependencies": {},
+  "description": ""
 }
