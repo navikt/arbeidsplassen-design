@@ -20,6 +20,6 @@ jobs:
       - name: Install
         run: npm install
       - name: Publish package
-        run: npm --workspace=@navikt/arbeidsplassen-css publish
+        run: npm --workspace=arbeidsplassen-css publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
