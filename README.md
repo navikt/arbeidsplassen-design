@@ -7,7 +7,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Hvordan få tilgang til @navikt/arbeidsplassen-design i et annet prosjekt
 
-Opprett fila `.npmrc` i rotkatalogen på prosjektet.
+Opprett fila `.npmrc` i hjemkatalogen din. F.eks. `~/.npmrc`
 
 Legg til følgende i fila
 
