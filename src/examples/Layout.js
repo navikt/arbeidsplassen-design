@@ -16,7 +16,6 @@ const tableOfContentByFilename = [
   "Header",
   "Heading",
   "HelpText",
-  "Icons",
   "Ingress",
   "Link",
   "LinkPanel",
