@@ -6,6 +6,8 @@ jobs:
   deploy-docker-image:
     name: Publish package
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
     steps:
       - name: Checkout
         uses: actions/checkout@v3
