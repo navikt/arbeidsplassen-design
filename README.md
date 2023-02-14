@@ -20,6 +20,8 @@ Opprett et token med "read:packages" rettigheter. [https://github.com/settings/t
 
 Ikke sjekk inn `.npmrc` til GitHub.
 
+Mer informasjon om autentisering: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token
+
 ## Hvordan publisere (REACT)
 
 Endre `version` i `src/packages/arbeidsplassen-react/package.json` til ny versjon du ønsker å publisere. Kjør `Publish REACT package` workflow under fanen `Actions` på repositoryet på Github. https://github.com/navikt/arbeidsplassen-design/actions
