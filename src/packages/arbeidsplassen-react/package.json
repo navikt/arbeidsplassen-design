@@ -1,11 +1,11 @@
 {
   "name": "@navikt/arbeidsplassen-react",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && NODE_ENV=production babel . --out-dir dist --copy-files"
+    "build": "rm -rf dist && NODE_ENV=production babel . --out-dir dist"
   },
   "repository": {
     "type": "git",
