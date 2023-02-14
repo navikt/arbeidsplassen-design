@@ -46,7 +46,7 @@ export default function Layout({
   headerOffset = false,
 }) {
   return (
-    <div className={`layout${headerOffset && " dsa-header-offset"}`}>
+    <div className={`layout${headerOffset && " arb-header-offset"}`}>
       <div className="layout-toc">
         <ul>
           <li>

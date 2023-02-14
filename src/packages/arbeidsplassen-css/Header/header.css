@@ -32,7 +32,7 @@
   }
 }
 
-.dsa-header-wrapper {
+.arb-header-wrapper {
   background: var(--arb-white);
   box-shadow: 0 1px 4px 0 #0000001a;
   border-bottom: solid 1px var(--arb-gray-200);
@@ -44,20 +44,20 @@
 }
 
 @media (min-width: 375px) {
-  .dsa-header-wrapper {
+  .arb-header-wrapper {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 }
 
 @media (min-width: 728px) {
-  .dsa-header-wrapper {
+  .arb-header-wrapper {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
 }
 
-.dsa-header {
+.arb-header {
   max-width: 1216px;
   width: 100%;
   margin-left: auto;
@@ -69,29 +69,29 @@
   gap: 0.75rem 0;
 }
 
-.dsa-header-logo {
+.arb-header-logo {
   display: inline-block;
   height: 48px;
   margin: 0 1rem 0 0;
 }
 
 @media (min-width: 375px) {
-  .dsa-header-logo {
+  .arb-header-logo {
     margin: 0 1.5rem 0 0;
   }
 }
 
 @media (min-width: 728px) {
-  .dsa-header-logo {
+  .arb-header-logo {
     margin: 0 2rem 0 0;
   }
 }
 
-.dsa-header-logo:focus-visible {
+.arb-header-logo:focus-visible {
   outline: 2px solid var(--arb-blue-500);
 }
 
-.dsa-header-logo-img {
+.arb-header-logo-img {
   display: block;
   width: 48px;
   height: 48px;
@@ -99,7 +99,7 @@
 }
 
 @media (min-width: 728px) {
-  .dsa-header-logo-img {
+  .arb-header-logo-img {
     width: 216px;
     height: 48px;
     display: block;
@@ -107,13 +107,13 @@
   }
 }
 
-.dsa-header-menu-both {
+.arb-header-menu-both {
   display: flex;
   gap: 1.5rem 0;
   flex: 1;
 }
 
-.dsa-header-menu-both ul {
+.arb-header-menu-both ul {
   flex: 1;
   list-style: none;
   padding: 0;
@@ -124,18 +124,18 @@
 }
 
 @media (min-width: 1344px) {
-  .dsa-header-menu-both ul {
+  .arb-header-menu-both ul {
     gap: 1.5rem;
   }
 }
 
 @media (min-width: 1344px) {
-  .dsa-header-hide-on-desktop {
+  .arb-header-hide-on-desktop {
     display: none !important;
   }
 }
 
-.dsa-header-menu {
+.arb-header-menu {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -145,13 +145,13 @@
 }
 
 @media (max-width: 1343px) {
-  .dsa-header-menu-hidden {
+  .arb-header-menu-hidden {
     display: none;
   }
 }
 
 @media (min-width: 1344px) {
-  .dsa-header-menu {
+  .arb-header-menu {
     width: auto;
     flex: 1;
     flex-direction: row;
@@ -159,11 +159,11 @@
   }
 }
 
-.dsa-header-offset {
+.arb-header-offset {
   padding-top: var(--header-height);
 }
 
-.dsa-header-menu ul {
+.arb-header-menu ul {
   flex: 1;
   list-style: none;
   padding: 0;
@@ -174,8 +174,8 @@
   align-items: center;
 }
 
-.dsa-header-menu-both ul li a,
-.dsa-header-menu ul li a {
+.arb-header-menu-both ul li a,
+.arb-header-menu ul li a {
   white-space: nowrap;
   color: var(--arb-green-900);
   text-decoration: none;
@@ -183,32 +183,32 @@
   line-height: 1.5rem;
 }
 
-.dsa-header-menu-both ul li a.dsa-header-active,
-.dsa-header-menu ul li a.dsa-header-active {
+.arb-header-menu-both ul li a.arb-header-active,
+.arb-header-menu ul li a.arb-header-active {
   font-weight: 600;
   box-shadow: 0 4px 0 0 var(--primary-40);
 }
 
-.dsa-header-menu-both ul li a:hover,
-.dsa-header-menu ul li a:hover {
+.arb-header-menu-both ul li a:hover,
+.arb-header-menu ul li a:hover {
   background: var(--arb-blue-200);
   box-shadow: 0 2px 0 0 var(--arb-blue-500);
 }
 
-.dsa-header-menu-both ul li a:focus,
-.dsa-header-menu ul li a:focus {
+.arb-header-menu-both ul li a:focus,
+.arb-header-menu ul li a:focus {
   outline: 3px solid var(--arb-blue-500);
 }
 
 @media (min-width: 1344px) {
-  .dsa-header-menu ul {
+  .arb-header-menu ul {
     flex-direction: row;
     align-items: center;
     margin: 0;
   }
 }
 
-.dsa-header-user {
+.arb-header-user {
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -217,13 +217,13 @@
 }
 
 @media (min-width: 1344px) {
-  .dsa-header-user {
+  .arb-header-user {
     flex-direction: row;
     gap: 1.5rem;
   }
 }
 
-.dsa-header-account {
+.arb-header-account {
   line-height: 1.5;
   display: inline-flex;
   align-items: center;
@@ -232,23 +232,23 @@
   white-space: nowrap;
 }
 
-.dsa-header-account,
-.dsa-header-account:hover,
-.dsa-header-account:visited {
+.arb-header-account,
+.arb-header-account:hover,
+.arb-header-account:visited {
   color: var(--arb-blue-500);
 }
 
-.dsa-header-account:hover {
+.arb-header-account:hover {
   text-decoration: none;
 }
 
-.dsa-header-account:focus {
+.arb-header-account:focus {
   outline: 3px solid var(--arb-blue-500);
 }
 
 @media (max-width: 400px) {
-  .dsa-header-login-button .dsa-button-icon,
-  .dsa-header-logout-button .dsa-button-icon {
+  .arb-header-login-button .arb-button-icon,
+  .arb-header-logout-button .arb-button-icon {
     display: none;
   }
 }

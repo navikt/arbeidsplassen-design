@@ -3,10 +3,10 @@ import React from "react";
 function PersonMenu({ active }) {
   return (
     <ul>
-      <li className="dsa-header-hide-on-desktop">
+      <li className="arb-header-hide-on-desktop">
         <a
           href="/Users/otenav/IdeaProjects/arbeidsplassen-design/src/pages"
-          className={active === "person" ? "dsa-header-active" : undefined}
+          className={active === "person" ? "arb-header-active" : undefined}
         >
           Forside
         </a>
@@ -15,7 +15,7 @@ function PersonMenu({ active }) {
         <a
           href="/stillinger"
           className={
-            active === "ledige-stillinger" ? "dsa-header-active" : undefined
+            active === "ledige-stillinger" ? "arb-header-active" : undefined
           }
         >
           Ledige stillinger
@@ -24,7 +24,7 @@ function PersonMenu({ active }) {
       <li>
         <a
           href="/jobbtreff"
-          className={active === "jobbtreff" ? "dsa-header-active" : undefined}
+          className={active === "jobbtreff" ? "arb-header-active" : undefined}
         >
           Jobbtreff
         </a>
@@ -32,7 +32,7 @@ function PersonMenu({ active }) {
       <li>
         <a
           href="/cv"
-          className={active === "cv" ? "dsa-header-active" : undefined}
+          className={active === "cv" ? "arb-header-active" : undefined}
         >
           CV
         </a>

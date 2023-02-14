@@ -7,7 +7,7 @@ function MenuButton({ isMobileMenuHidden, toggleMenu }) {
   return (
     <Button
       variant="tertiary"
-      className="dsa-header-menu-button dsa-header-hide-on-desktop"
+      className="arb-header-menu-button arb-header-hide-on-desktop"
       onClick={toggleMenu}
       icon={isMobileMenuHidden ? <Menu /> : <XIcon />}
     >

@@ -3,10 +3,10 @@ import React from "react";
 function CompanyMenu({ active }) {
   return (
     <ul>
-      <li className="dsa-header-hide-on-desktop">
+      <li className="arb-header-hide-on-desktop">
         <a
           href="/bedrift"
-          className={active === "bedrift" ? "dsa-header-active" : undefined}
+          className={active === "bedrift" ? "arb-header-active" : undefined}
         >
           Forside
         </a>
@@ -15,7 +15,7 @@ function CompanyMenu({ active }) {
         <a
           href="/bedrift/stillingsannonser"
           className={
-            active === "stillingsannonser" ? "dsa-header-active" : undefined
+            active === "stillingsannonser" ? "arb-header-active" : undefined
           }
         >
           Stillingsannonser
@@ -25,7 +25,7 @@ function CompanyMenu({ active }) {
         <a
           href="/bedrift/jobbtreff"
           className={
-            active === "jobbtreff-bedrift" ? "dsa-header-active" : undefined
+            active === "jobbtreff-bedrift" ? "arb-header-active" : undefined
           }
         >
           Jobbtreff
@@ -35,7 +35,7 @@ function CompanyMenu({ active }) {
         <a
           href="/bedrift/interessemeldinger"
           className={
-            active === "interessemeldinger" ? "dsa-header-active" : undefined
+            active === "interessemeldinger" ? "arb-header-active" : undefined
           }
         >
           Interessemeldinger
@@ -45,7 +45,7 @@ function CompanyMenu({ active }) {
         <a
           href="/bedrift/kandidater"
           className={
-            active === "kandidatlister" ? "dsa-header-active" : undefined
+            active === "kandidatlister" ? "arb-header-active" : undefined
           }
         >
           Kandidatlister

@@ -2,9 +2,9 @@ import React from "react";
 
 function Logo() {
   return (
-    <a href="/" className="dsa-header-logo">
+    <a href="/" className="arb-header-logo">
       <div
-        className="dsa-header-logo-img"
+        className="arb-header-logo-img"
         role="img"
         aria-label="Arbeidsplassen"
       />

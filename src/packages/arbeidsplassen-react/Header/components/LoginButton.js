@@ -14,7 +14,7 @@ function LoginButton({
         variant="secondary"
         onClick={handleLogOutClick}
         icon={<LogOut />}
-        className="dsa-header-login-button"
+        className="arb-header-login-button"
       >
         Logg ut
       </Button>
@@ -25,7 +25,7 @@ function LoginButton({
         variant="secondary"
         onClick={handleLogInClick}
         icon={<LogIn />}
-        className="dsa-header-logout-button"
+        className="arb-header-logout-button"
       >
         Logg inn
       </Button>

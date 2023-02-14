@@ -29,10 +29,10 @@ export default function Header({
   };
 
   return (
-    <header className="dsa-header-wrapper dsa-container">
+    <header className="arb-header-wrapper arb-container">
       <nav
         aria-label="Hovedmeny"
-        className={joinClassNames("dsa-header", className)}
+        className={joinClassNames("arb-header", className)}
       >
         <Logo />
 
@@ -54,8 +54,8 @@ export default function Header({
         ) : (
           <div
             className={joinClassNames(
-              "dsa-header-menu",
-              isMobileMenuHidden ? "dsa-header-menu-hidden" : undefined
+              "arb-header-menu",
+              isMobileMenuHidden ? "arb-header-menu-hidden" : undefined
             )}
           >
             {variant === "person" && <PersonMenu active={active} />}
