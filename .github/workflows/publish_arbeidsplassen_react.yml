@@ -15,7 +15,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - name: Build package
-        run: npm run build
+        run: npm --workspace=src/packages/arbeidsplassen-react run build
       - name: Publish package
         run: npm --workspace=src/packages/arbeidsplassen-react publish
         env:
