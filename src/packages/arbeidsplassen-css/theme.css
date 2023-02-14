@@ -69,12 +69,10 @@
 }
 
 [data-theme="arbeidsplassen"] {
-  color: var(--a-text-default);
-
-  /* Font */
+  /* Font
   --a-font-family: "Inter", sans-serif;
   --a-font-size-large: 1rem;
-  --a-font-size-medium: 0.875rem;
+  --a-font-size-medium: 0.875rem; */
 
   /* Background */
   --a-bg-default: var(--arb-white);
