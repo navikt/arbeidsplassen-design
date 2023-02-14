@@ -22,8 +22,8 @@ Ikke sjekk inn `.npmrc` til GitHub.
 
 ## Hvordan publisere (REACT)
 
-Endre `version` i `src/packages/arbeidsplassen-react/package.json` til ny versjon du ønsker å publisere. Kjør `Publish package` workflow under fanen `Actions` på repositoryet på Github.
+Endre `version` i `src/packages/arbeidsplassen-react/package.json` til ny versjon du ønsker å publisere. Kjør `Publish REACT package` workflow under fanen `Actions` på repositoryet på Github. https://github.com/navikt/arbeidsplassen-design/actions
 
 ## Hvordan publisere (CSS)
 
-Endre `version` i `src/packages/arbeidsplassen-css/package.json` til ny versjon du ønsker å publisere. Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github.
+Endre `version` i `src/packages/arbeidsplassen-css/package.json` til ny versjon du ønsker å publisere. Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github. https://github.com/navikt/arbeidsplassen-design/actions
