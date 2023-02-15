@@ -23,9 +23,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist"
-  ],
   "workspaces": [
     "src/packages/arbeidsplassen-css",
     "src/packages/arbeidsplassen-react"
