@@ -171,6 +171,15 @@
   --a-shadow-small: none;
   --a-shadow-xsmall: none;
 
+  /* TextField */
+  --ac-textfield-border: var(--arb-blue-900);
+
+  /* Textarea */
+  --ac-textarea-border: var(--arb-blue-900);
+
+  /* Select */
+  --ac-select-border: var(--arb-blue-900);
+
   /* Chips toogle */
   --ac-chip-toggle-pressed-bg: var(--arb-green-700);
   --ac-chip-toggle-pressed-text: var(--arb-green-200);
@@ -385,8 +394,7 @@
 }
 
 .navds-search__button-search {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem 0 !important;
 }
 
 .navds-checkbox__label::before {
