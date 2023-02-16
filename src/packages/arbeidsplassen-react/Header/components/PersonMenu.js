@@ -29,6 +29,14 @@ function PersonMenu({ active }) {
           CV
         </a>
       </li>
+      <li>
+        <a
+          href="/min-side"
+          className={active === "cv" ? "arb-header-active" : undefined}
+        >
+          Min side
+        </a>
+      </li>
     </ul>
   );
 }

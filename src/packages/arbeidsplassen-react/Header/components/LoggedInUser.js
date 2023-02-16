@@ -1,6 +1,6 @@
 import React from "react";
-import User from "./icons/User";
-import Building from "./icons/Building";
+import { Button } from "@navikt/ds-react";
+import { Settings, Office1 } from "@navikt/ds-icons";
 
 function LoggedInUser({
   variant,
@@ -12,21 +12,25 @@ function LoggedInUser({
   return (
     <div className="arb-header-user">
       {variant === "person" && (
-        <a href="/minside" className="arb-header-account">
-          <User />
-          {userName ? userName : "Min side"}
-        </a>
+        <>
+          <a href="/personinnstillinger" className="arb-header-account">
+            <Settings aria-hidden="true" title="Innstillinger" />
+            Innstillinger
+          </a>
+          {userName}
+        </>
       )}
       {variant === "company" && (
         <>
           {showChangeCompany && (
-            <button
+            <Button
+              variant="tertiary"
               type="button"
               onClick={onChangeCompanyClick}
-              className="arb-header-change-company"
+              icon={<Office1 />}
             >
-              <Building /> Bytt bedrift
-            </button>
+              Bytt bedrift
+            </Button>
           )}
 
           {companyName}
