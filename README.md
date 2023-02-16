@@ -55,8 +55,8 @@ npm run dev
 
 **arbeidsplassen-react**
 
->Endre `version` i `src/packages/arbeidsplassen-react/package.json` til ny versjon du ønsker å publisere. Kjør `Publish REACT package` workflow under fanen `Actions` på repositoryet på Github. https://github.com/navikt/arbeidsplassen-design/actions
+Endre `version` i `src/packages/arbeidsplassen-react/package.json` til ny versjon du ønsker å publisere. Kjør `Publish REACT package` workflow under fanen `Actions` på repositoryet på Github. https://github.com/navikt/arbeidsplassen-design/actions
 
 **arbeidsplassen-css**
 
->Endre `version` i `src/packages/arbeidsplassen-css/package.json` til ny versjon du ønsker å publisere. Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github. https://github.com/navikt/arbeidsplassen-design/actions
+Endre `version` i `src/packages/arbeidsplassen-css/package.json` til ny versjon du ønsker å publisere. Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github. https://github.com/navikt/arbeidsplassen-design/actions
