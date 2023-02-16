@@ -13,7 +13,7 @@ npm install @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt
 Legg til `data-theme="arbeidsplassen"` på for eksempel `body` i koden for å aktivere arbeidsplassen
 sitt "theme".
 
-Importer både css fra arbeidsplassen-design og css fra Nav sitt designsystem i koden, f.eks i `app.js`:
+Importer både css fra arbeidsplassen-design og css fra Nav sitt designsystem i koden din, f.eks i `app.js`:
 ```
 import "@navikt/ds-css";
 import "@navikt/arbeidsplassen-css";
