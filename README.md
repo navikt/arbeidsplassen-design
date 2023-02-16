@@ -1,6 +1,6 @@
 ## Ta i bruk designsystemet i ditt prosjekt
 
-Vi bruker design-komponentene til [Aksel](https://aksel.nav.no/) med vår egen "theme" som endrer farger og noen
+>Vi bruker design-komponentene til [Aksel](https://aksel.nav.no/) med vår egen "theme" som endrer farger og noen
 utvalgte css-variabler. I tillegg har vi noen egne React-komponenter, slik som `Header` og `Footer`.
 
 **Installasjon**
@@ -13,9 +13,13 @@ npm install @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt
 Legg til `data-theme="arbeidsplassen"` på for eksempel `body` i koden for å aktivere arbeidsplassen
 sitt "theme".
 
-Eksempel på bruk i din kode:
+Import arbeidsplassen css i koden, f.eks i app.js:
 ```
 import "@navikt/arbeidsplassen-css";
+```
+
+Eksempel på bruk i din kode:
+```
 import { Header, Footer } from "@navikt/arbeidsplassen-react";
 ```
 
