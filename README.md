@@ -1,6 +1,6 @@
 ## Ta i bruk designsystemet i ditt prosjekt
 
->Vi bruker design-komponentene til [Aksel](https://aksel.nav.no/) med vår egen "theme" som endrer farger og noen
+Vi bruker design-komponentene til [Aksel](https://aksel.nav.no/) med vår egen "theme" som endrer farger og noen
 utvalgte css-variabler. I tillegg har vi noen egne React-komponenter, slik som `Header` og `Footer`.
 
 **Installasjon**
