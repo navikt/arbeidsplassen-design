@@ -25,7 +25,7 @@ import { Header, Footer } from "@navikt/arbeidsplassen-react";
 import { Button, TextField } from "@navikt/ds-react";
 ```
 
-### Hvordan få tilgang til @navikt/arbeidsplassen-react og  @navikt/arbeidsplassen-css i et annet prosjekt
+### Hvordan få tilgang til @navikt/arbeidsplassen-react og  @navikt/arbeidsplassen-css
 
 Opprett fila `.npmrc` i hjemkatalogen din. F.eks. `~/.npmrc` Mer info: https://docs.npmjs.com/cli/v9/configuring-npm/npmrc
 
