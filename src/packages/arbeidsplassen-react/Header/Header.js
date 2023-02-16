@@ -118,7 +118,6 @@ Header.propTypes = {
     "cv",
     "stillingsannonser",
     "var-side",
-    "kandidatlister",
     "jobbtreff-bedrift",
   ]),
 };

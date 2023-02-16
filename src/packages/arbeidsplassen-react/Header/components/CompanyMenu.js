@@ -25,16 +25,6 @@ function CompanyMenu({ active }) {
       </li>
       <li>
         <a
-          href="/kandidater/lister"
-          className={
-            active === "kandidatlister" ? "arb-header-active" : undefined
-          }
-        >
-          Kandidatlister
-        </a>
-      </li>
-      <li>
-        <a
           href="/stillingsregistrering"
           className={active === "var-side" ? "arb-header-active" : undefined}
         >
