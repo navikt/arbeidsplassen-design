@@ -16,7 +16,6 @@ sitt "theme".
 Importer arbeidsplassen sin css i f.eks app.js:
 ```
 import "@navikt/arbeidsplassen-css";
-import { Header } from "@navikt/arbeidsplassen-css";
 ```
 
 Header og Footer brukes slik:
