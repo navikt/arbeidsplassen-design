@@ -21,7 +21,7 @@ import { Header } from "@navikt/arbeidsplassen-css";
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-***Hvordan få tilgang til @navikt/arbeidsplassen-react og  @navikt/arbeidsplassen-css i et annet prosjekt***
+**Hvordan få tilgang til @navikt/arbeidsplassen-react og  @navikt/arbeidsplassen-css i et annet prosjekt**
 
 Opprett fila `.npmrc` i hjemkatalogen din. F.eks. `~/.npmrc` Mer info: https://docs.npmjs.com/cli/v9/configuring-npm/npmrc
 
