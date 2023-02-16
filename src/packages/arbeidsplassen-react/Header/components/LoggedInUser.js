@@ -2,7 +2,13 @@ import React from "react";
 import User from "./icons/User";
 import Building from "./icons/Building";
 
-function LoggedInUser({ variant, userName, companyName }) {
+function LoggedInUser({
+  variant,
+  userName,
+  companyName,
+  showChangeCompany,
+  onChangeCompanyClick,
+}) {
   return (
     <div className="arb-header-user">
       {variant === "person" && (
@@ -12,10 +18,19 @@ function LoggedInUser({ variant, userName, companyName }) {
         </a>
       )}
       {variant === "company" && (
-        <a href="/bedrift/din-bedrift" className="arb-header-account">
-          <Building />
-          {companyName ? companyName : "Din bedrift"}
-        </a>
+        <>
+          {showChangeCompany && (
+            <button
+              type="button"
+              onClick={onChangeCompanyClick}
+              className="arb-header-change-company"
+            >
+              <Building /> Bytt bedrift
+            </button>
+          )}
+
+          {companyName}
+        </>
       )}
     </div>
   );

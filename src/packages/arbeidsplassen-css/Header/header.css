@@ -34,13 +34,9 @@
 
 .arb-header-wrapper {
   background: var(--arb-white);
-  box-shadow: 0 1px 4px 0 #0000001a;
   border-bottom: solid 1px var(--arb-gray-200);
   width: 100%;
   padding: 1rem 0.75rem;
-  position: fixed;
-  z-index: 999;
-  top: 0;
 }
 
 @media (min-width: 375px) {
@@ -88,7 +84,7 @@
 }
 
 .arb-header-logo:focus-visible {
-  outline: 2px solid var(--arb-blue-500);
+  outline: 2px solid var(--arb-blue-900);
 }
 
 .arb-header-logo-img {
@@ -186,18 +182,24 @@
 .arb-header-menu-both ul li a.arb-header-active,
 .arb-header-menu ul li a.arb-header-active {
   font-weight: 600;
-  box-shadow: 0 4px 0 0 var(--primary-40);
+  box-shadow: 0 4px 0 0 var(--arb-green-400);
 }
 
 .arb-header-menu-both ul li a:hover,
 .arb-header-menu ul li a:hover {
-  background: var(--arb-blue-200);
-  box-shadow: 0 2px 0 0 var(--arb-blue-500);
+  color: var(--arb-blue-600);
+  box-shadow: 0 2px 0 0 var(--arb-blue-600);
+}
+
+.arb-header-menu-both ul li a:active,
+.arb-header-menu ul li a:active {
+  color: #fff;
+  background: var(--arb-blue-800);
 }
 
 .arb-header-menu-both ul li a:focus,
 .arb-header-menu ul li a:focus {
-  outline: 3px solid var(--arb-blue-500);
+  outline: 3px solid var(--arb-blue-900);
 }
 
 @media (min-width: 1344px) {
@@ -243,7 +245,7 @@
 }
 
 .arb-header-account:focus {
-  outline: 3px solid var(--arb-blue-500);
+  outline: 3px solid var(--arb-blue-900);
 }
 
 @media (max-width: 400px) {
@@ -251,4 +253,26 @@
   .arb-header-logout-button .arb-button-icon {
     display: none;
   }
+}
+
+.arb-header-change-company {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: var(--arb-blue-500);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arb-header-change-company:hover {
+  text-decoration: none;
+}
+
+.arb-header-change-company:focus {
+  outline: 3px solid var(--arb-blue-900);
 }

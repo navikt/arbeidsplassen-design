@@ -21,6 +21,8 @@ export default function Header({
   authenticationStatus,
   onLogin,
   onLogout,
+  showChangeCompany,
+  onChangeCompanyClick,
 }) {
   const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
 
@@ -66,6 +68,8 @@ export default function Header({
                 variant={variant}
                 userName={userName}
                 companyName={companyName}
+                showChangeCompany={showChangeCompany}
+                onChangeCompanyClick={onChangeCompanyClick}
               />
             )}
 
@@ -89,6 +93,8 @@ Header.defaultProps = {
   authenticationStatus: "unknown",
   userName: undefined,
   companyName: undefined,
+  showChangeCompany: false,
+  onChangeCompanyClick: undefined,
 };
 
 Header.propTypes = {
@@ -102,6 +108,8 @@ Header.propTypes = {
   ]),
   userName: PropTypes.string,
   companyName: PropTypes.string,
+  showChangeCompany: PropTypes.bool,
+  onChangeCompanyClick: PropTypes.func,
   active: PropTypes.oneOf([
     "person",
     "bedrift",
@@ -109,7 +117,7 @@ Header.propTypes = {
     "jobbtreff",
     "cv",
     "stillingsannonser",
-    "interessemeldinger",
+    "var-side",
     "kandidatlister",
     "jobbtreff-bedrift",
   ]),

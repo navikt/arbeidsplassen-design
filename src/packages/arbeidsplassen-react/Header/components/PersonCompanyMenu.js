@@ -6,7 +6,7 @@ function PersonCompanyMenu({ active }) {
       <ul>
         <li>
           <a
-            href="/Users/otenav/IdeaProjects/arbeidsplassen-design/src/pages"
+            href="/"
             className={active === "person" ? "arb-header-active" : undefined}
           >
             Person
