@@ -1,6 +1,7 @@
 @import "./theme.css";
 @import "./Header/header.css";
 @import "./Footer/footer.css";
-@import "./Panel/link-panel.css";
+@import "./LinkPanel/link-panel.css";
 @import "./Panel/panel.css";
 @import "./GuidePanel/guide-panel.css";
+@import "./SkipLink/skip-link.css";

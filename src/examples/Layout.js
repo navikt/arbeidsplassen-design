@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BodyLong, Heading } from "@navikt/ds-react";
+import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 
 const tableOfContentByFilename = [
   "Accordion",
@@ -27,6 +28,7 @@ const tableOfContentByFilename = [
   "ReadMore",
   "Search",
   "Select",
+  "SkipLink",
   "Stepper",
   "Switch",
   "Table",
@@ -45,7 +47,8 @@ export default function Layout({
   headerOffset = false,
 }) {
   return (
-    <div className={`layout${headerOffset && " arb-header-offset"}`}>
+    <div className={`layout${headerOffset ? " arb-header-offset" : ""}`}>
+      <SkipLink />
       <div className="layout-toc">
         <ul>
           <li>
@@ -62,12 +65,12 @@ export default function Layout({
           ))}
         </ul>
       </div>
-      <div className={`layout-content-${size}`}>
+      <main id="main" className={`layout-content-${size}`}>
         <Heading size="xlarge" level="1" spacing>
           {title}
         </Heading>
         {children}
-      </div>
+      </main>
     </div>
   );
 }

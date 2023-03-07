@@ -1,0 +1,25 @@
+.arb-skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    clip: rect(1px, 1px, 1px, 1px);
+    background-color: var(--a-surface-action);
+    color: #fff
+}
+
+.arb-skip-link:focus,
+.arb-skip-link:active {
+    text-align: center;
+    margin: auto;
+    clip: auto;
+    outline: none;
+    padding: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.15;
+}
+
+.arb-skip-link:focus:hover,
+.arb-skip-link:active:hover {
+    text-decoration: none;
+}
