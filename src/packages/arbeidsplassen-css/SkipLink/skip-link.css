@@ -17,6 +17,7 @@
     padding: 1.25rem;
     font-size: 1.125rem;
     line-height: 1.15;
+    z-index: 999;
 }
 
 .arb-skip-link:focus:hover,
