@@ -348,25 +348,25 @@
   border-radius: 0.375rem;
 }
 
-.navds-alert--info path {
+.navds-alert--info .navds-alert__icon path {
   fill: var(
     --arb-blue-400
   ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
-.navds-alert--success path {
+.navds-alert--success .navds-alert__icon path {
   fill: var(
     --arb-green-600
   ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
-.navds-alert--warning path {
+.navds-alert--warning .navds-alert__icon path {
   fill: var(
     --arb-orange-500
   ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
 }
 
-.navds-alert--error path {
+.navds-alert--error .navds-alert__icon path {
   fill: var(
     --arb-red-500
   ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/

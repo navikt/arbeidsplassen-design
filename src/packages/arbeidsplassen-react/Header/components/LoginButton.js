@@ -1,7 +1,6 @@
 import React from "react";
-import LogOut from "./icons/LogOut";
-import LogIn from "./icons/LogIn";
 import { Button } from "@navikt/ds-react";
+import { EnterIcon, LeaveIcon } from "@navikt/aksel-icons";
 
 function LoginButton({
   authenticationStatus,
@@ -13,7 +12,7 @@ function LoginButton({
       <Button
         variant="secondary"
         onClick={handleLogOutClick}
-        icon={<LogOut />}
+        icon={<LeaveIcon aria-hidden="true" />}
         className="arb-header-login-button"
       >
         Logg ut
@@ -24,7 +23,7 @@ function LoginButton({
       <Button
         variant="secondary"
         onClick={handleLogInClick}
-        icon={<LogIn />}
+        icon={<EnterIcon aria-hidden="true" />}
         className="arb-header-logout-button"
       >
         Logg inn

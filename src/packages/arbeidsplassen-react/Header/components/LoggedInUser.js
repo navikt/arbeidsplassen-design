@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@navikt/ds-react";
-import { Settings, Office1 } from "@navikt/ds-icons";
+import { Buldings3Icon, CogIcon } from "@navikt/aksel-icons";
 
 function LoggedInUser({
   variant,
@@ -14,7 +14,7 @@ function LoggedInUser({
       {variant === "person" && (
         <>
           <a href="/personinnstillinger" className="arb-header-account">
-            <Settings aria-hidden="true" title="Innstillinger" />
+            <CogIcon aria-hidden="true" width="1.5em" height="1.5em" />
             Innstillinger
           </a>
           {userName}
@@ -27,7 +27,7 @@ function LoggedInUser({
               variant="tertiary"
               type="button"
               onClick={onChangeCompanyClick}
-              icon={<Office1 />}
+              icon={<Buldings3Icon aria-hidden="true" />}
             >
               Bytt bedrift
             </Button>
