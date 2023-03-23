@@ -1,0 +1,19 @@
+.arb-primary-solid-bg-text {
+    color: var(--arb-text-on-panel-primary-solid);
+    background-color: var(--arb-surface-panel-primary-solid);
+}
+
+.arb-primary-bg-text {
+    color: var(--arb-text-on-panel-primary);
+    background-color: var(--arb-surface-panel-primary);
+}
+
+.arb-secondary-bg-text {
+    color: var(--arb-text-on-panel-secondary);
+    background-color: var(--arb-surface-panel-secondary);
+}
+
+.arb-tertiary-bg-text {
+    color: var(--arb-text-on-panel-tertiary);
+    background-color: var(--arb-surface-panel-tertiary);
+}

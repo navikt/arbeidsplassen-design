@@ -1,18 +1,4 @@
-.arb-panel-green {
-  color: var(--arb-green-800);
-  background-color: var(--arb-green-200);
-  border-radius: 0.25rem;
-}
-
-.arb-panel-blue {
-  color: var(--arb-green-800);
-  background-color: var(--arb-blue-50);
-  border-radius: 0.25rem;
-}
-
-.arb-panel-peach {
-  color: var(--arb-green-800);
-  background-color: var(--arb-peach-50);
+.arb-panel {
   border-radius: 0.25rem;
 }
 

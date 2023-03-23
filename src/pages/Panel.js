@@ -23,10 +23,11 @@ function Template({ ...args }) {
 export default function PanelExample() {
   return (
     <Layout title="Panel">
-      <Template className="arb-panel-green arb-panel-lofty" />
-      <Template className="arb-panel-blue arb-panel-lofty" />
-      <Template className="arb-panel-peach arb-panel-lofty" />
-      <Template className="arb-panel-peach arb-panel-compact" />
+      <Template className="arb-panel arb-primary-bg-text arb-panel-lofty" />
+      <Template className="arb-panel arb-secondary-bg-text arb-panel-lofty" />
+      <Template className="arb-panel arb-tertiary-bg-text arb-panel-lofty" />
+      <Template className="arb-panel arb-tertiary-bg-text arb-panel-compact" />
+      <Template className="arb-panel arb-tertiary-bg-text" />
     </Layout>
   );
 }

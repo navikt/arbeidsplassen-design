@@ -23,12 +23,15 @@ export default function LinkPanelExample() {
   return (
     <Layout title="LinkPanel">
       <Template />
-      <Template className="arb-link-panel-green-dark" />
-      <Template className="arb-link-panel-green" />
-      <Template className="arb-link-panel-blue" />
-      <Template className="arb-link-panel-peach" />
+      <Template className="arb-link-panel arb-primary-solid-bg-text" />
+      <Template className="arb-link-panel arb-primary-bg-text" />
+      <Template className="arb-link-panel arb-secondary-bg-text" />
+      <Template className="arb-link-panel arb-tertiary-bg-text" />
 
-      <Template className="arb-link-panel-peach" skipDescription />
+      <Template
+        className="arb-link-panel arb-tertiary-bg-text"
+        skipDescription
+      />
     </Layout>
   );
 }

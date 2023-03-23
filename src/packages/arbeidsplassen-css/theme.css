@@ -74,6 +74,16 @@
   --a-font-size-large: 1rem;
   --a-font-size-medium: 0.875rem; */
 
+  /* Custom */
+  --arb-surface-panel-primary: var(--arb-green-200);
+  --arb-text-on-panel-primary: var(--arb-green-700);
+  --arb-surface-panel-primary-solid: var(--arb-green-700);
+  --arb-text-on-panel-primary-solid: var(--arb-green-200);
+  --arb-surface-panel-secondary: var(--arb-blue-50);
+  --arb-text-on-panel-secondary: var(--arb-green-700);
+  --arb-surface-panel-tertiary: var(--arb-peach-100);
+  --arb-text-on-panel-tertiary: var(--arb-green-700);
+
   /* Background */
   --a-bg-default: var(--arb-white);
   --a-bg-subtle: var(--arb-gray-100);

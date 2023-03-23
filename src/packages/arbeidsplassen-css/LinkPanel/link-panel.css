@@ -1,41 +1,18 @@
-.arb-link-panel-green-dark {
-  color: var(--arb-green-200);
-  background-color: var(--arb-green-700);
-  border-color: transparent;
+.arb-link-panel {
   border-radius: 0.25rem;
-}
-
-.arb-link-panel-green-dark:focus {
-  color: var(--arb-green-200);
-  background-color: var(--arb-green-700);
-  border-color: #fff;
-  border-radius: 0.25rem;
-}
-
-.arb-link-panel-green {
-  color: var(--arb-green-700);
-  background-color: var(--arb-green-200);
-  border: 0;
-  border-radius: 0.25rem;
-}
-
-.arb-link-panel-blue {
-  color: var(--arb-green-700);
-  background-color: var(--arb-blue-50);
-  border: 0;
-  border-radius: 0.25rem;
-}
-
-.arb-link-panel-peach {
-  color: var(--arb-green-700);
-  background-color: var(--arb-peach-100);
-  border: 0;
-  border-radius: 0.25rem;
-}
-
-.arb-link-panel-green,
-.arb-link-panel-green-dark,
-.arb-link-panel-blue,
-.arb-link-panel-peach {
   padding: 1.5rem;
 }
+
+.arb-link-panel:not(.arb-primary-solid-bg-text) {
+  border: 0;
+}
+
+
+.arb-link-panel.arb-primary-solid-bg-text {
+  border-color: var(--arb-green-700);
+}
+
+.arb-link-panel.arb-primary-solid-bg-text:focus {
+  border-color: #fff;
+}
+

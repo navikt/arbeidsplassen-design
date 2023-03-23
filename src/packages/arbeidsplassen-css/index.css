@@ -1,4 +1,5 @@
 @import "./theme.css";
+@import "./color-utilities.css";
 @import "./Header/header.css";
 @import "./Footer/footer.css";
 @import "./LinkPanel/link-panel.css";
