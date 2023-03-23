@@ -1,7 +1,7 @@
 .arb-footer {
   margin: 0;
   padding: 2.5rem 1rem;
-  background: #c1f3db;
+  background: var(--arb-surface-primary);
   line-height: 1.5;
 }
 
@@ -34,6 +34,7 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin: 0 0 1rem 0;
+  color: var(--arb-text-on-primary);
 }
 
 @media (min-width: 768px) {
@@ -56,7 +57,7 @@
 .arb-footer-section ul li a {
   font-size: 1rem;
   line-height: 1.5;
-  color: #003141;
+  color: var(--arb-text-on-primary);
 }
 
 .arb-footer-section ul li a:hover {
@@ -66,7 +67,7 @@
 .arb-footer-section ul li a:focus {
   outline: none;
   color: #fff;
-  background: #1c2d9a;
+  background: var(--a-border-focus);
 }
 
 .arb-footer-bottom {
@@ -85,15 +86,24 @@
   margin: 0;
   display: inline-flex;
   height: 40px;
-  color: #003141;
 }
 
+.arb-footer-logo-bg {
+  fill: var(--arb-green-800);
+}
+
+.arb-footer-logo-text {
+  fill: var(--arb-text-on-primary-solid);
+}
+
+
 .arb-footer-logo:focus {
-  outline: 3px solid #1c2d9a;
+  outline: 3px solid var(--a-border-focus);
 }
 
 .arb-footer-p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
+  color: var(--arb-text-on-primary);
 }
