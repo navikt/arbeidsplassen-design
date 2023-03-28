@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-css",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "main": "index.css",
   "private": false,
   "scripts": {

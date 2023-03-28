@@ -100,7 +100,7 @@
   --a-surface-inverted-active: var(--arb-gray-700);
   --a-surface-inverted: var(--arb-gray-900);
   --a-surface-action-subtle: var(--arb-blue-50);
-  --a-surface-action-subtle-hover: var(--arb-blue-100);
+  --a-surface-action-subtle-hover: var(--arb-blue-50);
   --a-surface-action: var(--arb-blue-500);
   --a-surface-action-hover: var(--arb-blue-600);
   --a-surface-action-active: var(--arb-blue-800);
