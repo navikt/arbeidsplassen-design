@@ -17,7 +17,9 @@ export default function Footer() {
               <a href="/tilgjengelighet">Tilgjengelighet</a>
             </li>
             <li>
-              <a href="/om-arbeidsplassen">Om arbeidsplassen.no</a>
+              <a href="/om-arbeidsplassen">
+                Om <span translate="no">arbeidsplassen.no</span>
+              </a>
             </li>
           </ul>
         </section>
@@ -76,7 +78,9 @@ export default function Footer() {
             />
           </svg>
         </a>
-        <p className="arb-footer-p">arbeidsplassen.no – en tjeneste fra Nav</p>
+        <p className="arb-footer-p">
+          <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
+        </p>
       </div>
     </footer>
   );
