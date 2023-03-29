@@ -12,11 +12,11 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
-    "@navikt/aksel-icons": "^2.8.2",
+    "@navikt/aksel-icons": "^2.8.5",
     "@navikt/arbeidsplassen-react": "^1.0.13",
-    "@navikt/ds-css": "^2.7.7",
+    "@navikt/ds-css": "^2.8.5",
     "@navikt/ds-icons": "^2.7.7",
-    "@navikt/ds-react": "^2.7.7",
+    "@navikt/ds-react": "^2.8.5",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

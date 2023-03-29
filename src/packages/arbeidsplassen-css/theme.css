@@ -206,9 +206,10 @@
   --ac-chip-removable-action-hover-bg: var(--arb-green-800);
 
   /* Accordion */
-  --ac-accordion-item-bg-open: var(--arb-green-100);
   --ac-accordion-header-border: var(--arb-green-300);
   --ac-accordion-header-border-hover: var(--arb-blue-50);
+  --ac-accordion-header-bg-hover: var(--arb-blue-50);
+  --ac-accordion-item-bg-open: var(--arb-green-100);
   --ac-accordion-item-border-open: transparent;
   --ac-accordion-content-border: transparent;
   --ac-accordion-content-border-open: transparent;
@@ -341,10 +342,6 @@
 /**********************
  * Accordion
  *********************/
-.navds-accordion__header:hover {
-  background: var(--arb-blue-50) !important;
-}
-
 .navds-accordion__header:hover,
 .navds-accordion__header:focus,
 .navds-accordion__item--open .navds-accordion__header {
@@ -359,27 +356,19 @@
 }
 
 .navds-alert--info .navds-alert__icon path {
-  fill: var(
-    --arb-blue-400
-  ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
+  fill: var(--arb-blue-400);
 }
 
 .navds-alert--success .navds-alert__icon path {
-  fill: var(
-    --arb-green-600
-  ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
+  fill: var(--arb-green-600);
 }
 
 .navds-alert--warning .navds-alert__icon path {
-  fill: var(
-    --arb-orange-500
-  ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
+  fill: var(--arb-orange-500);
 }
 
 .navds-alert--error .navds-alert__icon path {
-  fill: var(
-    --arb-red-500
-  ); /* todo: spørre om dette kan være en variabel i Aksel designsystem*/
+  fill: var(--arb-red-500);
 }
 
 /**********************
