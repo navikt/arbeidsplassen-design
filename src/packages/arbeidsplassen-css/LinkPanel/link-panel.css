@@ -7,7 +7,6 @@
   border: 0;
 }
 
-
 .arb-link-panel.arb-primary-solid-bg-text {
   border-color: var(--arb-green-700);
 }
@@ -15,4 +14,3 @@
 .arb-link-panel.arb-primary-solid-bg-text:focus {
   border-color: #fff;
 }
-

@@ -1,19 +1,19 @@
 .arb-primary-solid-bg-text {
-    color: var(--arb-text-on-primary-solid);
-    background-color: var(--arb-surface-primary-solid);
+  color: var(--arb-text-on-primary-solid);
+  background-color: var(--arb-surface-primary-solid);
 }
 
 .arb-primary-bg-text {
-    color: var(--arb-text-on-primary);
-    background-color: var(--arb-surface-primary);
+  color: var(--arb-text-on-primary);
+  background-color: var(--arb-surface-primary);
 }
 
 .arb-secondary-bg-text {
-    color: var(--arb-text-on-secondary);
-    background-color: var(--arb-surface-secondary);
+  color: var(--arb-text-on-secondary);
+  background-color: var(--arb-surface-secondary);
 }
 
 .arb-tertiary-bg-text {
-    color: var(--arb-text-on-tertiary);
-    background-color: var(--arb-surface-tertiary);
+  color: var(--arb-text-on-tertiary);
+  background-color: var(--arb-surface-tertiary);
 }

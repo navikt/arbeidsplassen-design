@@ -96,7 +96,6 @@
   fill: var(--arb-text-on-primary-solid);
 }
 
-
 .arb-footer-logo:focus {
   outline: 3px solid var(--a-border-focus);
 }
