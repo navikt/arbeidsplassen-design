@@ -1,11 +1,11 @@
 {
   "name": "@navikt/arbeidsplassen-react",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && babel . --out-dir dist"
+    "build": "rm -rf dist && babel . --out-dir dist && cp jsconfig.json ./dist/jsconfig.json"
   },
   "babel": {
     "presets": [
