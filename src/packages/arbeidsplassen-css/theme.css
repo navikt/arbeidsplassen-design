@@ -1,19 +1,29 @@
+[data-font="Inter"] {
+  /* Font */
+  --a-font-family: "Inter", sans-serif;
+
+  /* Text */
+  --a-font-size-medium: 0.875rem;
+  --a-font-size-large: 1rem;
+  --a-font-size-xlarge: 1.5rem;
+  --a-font-line-height-xlarge: 1.5;
+
+  /* Heading */
+  --a-font-size-heading-xsmall: 1rem;
+  --a-font-size-heading-small: 1.25rem;
+  --a-font-size-heading-medium: 1.5rem;
+  --a-font-size-heading-large: 1.75rem;
+  --a-font-size-heading-xlarge: 2rem;
+  --a-font-size-heading-2xlarge: 3rem;
+  --a-font-line-height-heading-xsmall: 1.5;
+  --a-font-line-height-heading-small: 1.4;
+  --a-font-line-height-heading-medium: 1.33;
+  --a-font-line-height-heading-large: 1.25;
+  --a-font-line-height-heading-xlarge: 1.2;
+  --a-font-line-height-heading-2xlarge: 1.17;
+}
+
 [data-theme="arbeidsplassen"] {
-  /* Font
-      --a-font-family: "Inter", sans-serif;
-      --a-font-size-large: 1rem;
-      --a-font-size-medium: 0.875rem; */
-
-  /* Custom */
-  --arb-surface-primary: var(--arb-green-200);
-  --arb-text-on-primary: var(--arb-green-700);
-  --arb-surface-primary-solid: var(--arb-green-700);
-  --arb-text-on-primary-solid: var(--arb-green-200);
-  --arb-surface-secondary: var(--arb-blue-50);
-  --arb-text-on-secondary: var(--arb-green-700);
-  --arb-surface-tertiary: var(--arb-peach-100);
-  --arb-text-on-tertiary: var(--arb-green-700);
-
   /* Background */
   --a-bg-default: var(--arb-white);
   --a-bg-subtle: var(--arb-gray-100);
@@ -205,6 +215,44 @@
   --ac-stepper-non-interactive-active: var(--arb-green-700);
   --ac-stepper-non-interactive-active-bg: var(--arb-green-700);
   --ac-stepper-non-interactive-active-border: var(--arb-green-700);
+
+  /* Custom */
+  --arb-surface-primary: var(--arb-green-200);
+  --arb-text-on-primary: var(--arb-green-700);
+  --arb-surface-primary-solid: var(--arb-green-700);
+  --arb-text-on-primary-solid: var(--arb-green-200);
+  --arb-surface-secondary: var(--arb-blue-50);
+  --arb-text-on-secondary: var(--arb-green-700);
+  --arb-surface-tertiary: var(--arb-peach-100);
+  --arb-text-on-tertiary: var(--arb-green-700);
+}
+
+/**********************
+ * Heading
+ *********************/
+[data-font="Inter"] .navds-heading--xlarge,
+[data-font="Inter"] .navds-heading--large {
+  font-weight: 700 !important;
+}
+
+[data-font="Inter"] .navds-heading--xlarge {
+  letter-spacing: -0.05em !important;
+}
+
+[data-font="Inter"] .navds-heading--large {
+  letter-spacing: -0.03em !important;
+}
+
+[data-font="Inter"] .navds-heading--medium {
+  letter-spacing: -0.02em !important;
+}
+
+[data-font="Inter"] .navds-heading--small {
+  letter-spacing: -0.01em !important;
+}
+
+[data-font="Inter"] .navds-heading--xsmall {
+  letter-spacing: -0.01em !important;
 }
 
 /**********************

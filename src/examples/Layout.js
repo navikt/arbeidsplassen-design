@@ -5,7 +5,6 @@ import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 const tableOfContentByFilename = [
   "Accordion",
   "Alert",
-  "Article",
   "Button",
   "Checkbox",
   "Chips",
@@ -38,6 +37,7 @@ const tableOfContentByFilename = [
   "TextField",
   "ToggleGroup",
   "Tooltip",
+  "Typography",
 ].sort();
 
 export default function Layout({

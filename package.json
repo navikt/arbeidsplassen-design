@@ -9,7 +9,7 @@
     "prettier:format": "npx prettier -w src"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.7"
   },
   "dependencies": {
     "@navikt/aksel-icons": "^2.8.6",

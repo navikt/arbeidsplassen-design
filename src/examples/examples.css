@@ -31,9 +31,10 @@ body {
 }
 
 .layout-content-default {
-  max-width: 800px;
+  max-width: 75ch;
   width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .layout-content-full-width {
