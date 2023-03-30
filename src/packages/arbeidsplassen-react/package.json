@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-react",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
@@ -26,7 +26,8 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "dist",
+    "jsconfig.json"
   ],
   "homepage": "https://github.com/navikt/arbeidsplassen-design#readme",
   "description": "",
