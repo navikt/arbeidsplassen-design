@@ -165,6 +165,9 @@
   --ac-link-panel-hover-text: currentColor;
   --ac-link-panel-hover-border: var(--arb-blue-700);
 
+  /* Guide panel */
+  --ac-guide-panel-border: var(--arb-green-400);
+
   /* Tabs */
   --ac-tabs-selected-border: var(--arb-green-400);
 
