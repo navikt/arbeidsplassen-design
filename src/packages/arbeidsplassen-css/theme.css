@@ -1,4 +1,4 @@
-[data-font="Inter"] {
+[data-theme="arbeidsplassen"] {
   /* Font */
   --a-font-family: "Inter", sans-serif;
 
@@ -21,9 +21,7 @@
   --a-font-line-height-heading-large: 1.25;
   --a-font-line-height-heading-xlarge: 1.2;
   --a-font-line-height-heading-2xlarge: 1.17;
-}
 
-[data-theme="arbeidsplassen"] {
   /* Background */
   --a-bg-default: var(--arb-white);
   --a-bg-subtle: var(--arb-gray-100);
