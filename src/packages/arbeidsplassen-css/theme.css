@@ -231,28 +231,28 @@
 /**********************
  * Heading
  *********************/
-[data-font="Inter"] .navds-heading--xlarge,
-[data-font="Inter"] .navds-heading--large {
+.navds-heading--xlarge,
+.navds-heading--large {
   font-weight: 700 !important;
 }
 
-[data-font="Inter"] .navds-heading--xlarge {
+.navds-heading--xlarge {
   letter-spacing: -0.05em !important;
 }
 
-[data-font="Inter"] .navds-heading--large {
+.navds-heading--large {
   letter-spacing: -0.03em !important;
 }
 
-[data-font="Inter"] .navds-heading--medium {
+.navds-heading--medium {
   letter-spacing: -0.02em !important;
 }
 
-[data-font="Inter"] .navds-heading--small {
+.navds-heading--small {
   letter-spacing: -0.01em !important;
 }
 
-[data-font="Inter"] .navds-heading--xsmall {
+.navds-heading--xsmall {
   letter-spacing: -0.01em !important;
 }
 
