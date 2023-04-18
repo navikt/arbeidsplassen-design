@@ -29,10 +29,27 @@ const ChipsExample = () => {
           ))}
         </Chips>
       </div>
+      <div className="mb-2">
+        <Chips>
+          {filter.map((c) => (
+            <Chips.Removable
+              key={c}
+              onClick={() =>
+                setFilter((x) =>
+                  x.length === 1 ? options : x.filter((y) => y !== c)
+                )
+              }
+            >
+              {c}
+            </Chips.Removable>
+          ))}
+        </Chips>
+      </div>
       <div>
         <Chips>
           {filter.map((c) => (
             <Chips.Removable
+              variant="neutral"
               key={c}
               onClick={() =>
                 setFilter((x) =>

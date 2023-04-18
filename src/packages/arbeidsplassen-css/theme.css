@@ -150,6 +150,12 @@
   --ac-chip-removable-action-text: var(--arb-green-200);
   --ac-chip-removable-action-hover-bg: var(--arb-green-800);
 
+  --ac-chip-removable-neutral-bg: var(--arb-white);
+  --ac-chip-removable-neutral-text: var(--arb-blue-500);
+  --ac-chip-removable-neutral-border: var(--arb-blue-500);
+  --ac-chip-removable-neutral-hover-border: var(--arb-blue-500);
+  --ac-chip-removable-neutral-hover-bg: var(--arb-blue-50);
+
   /* Accordion */
   --ac-accordion-header-border: var(--arb-green-300);
   --ac-accordion-header-border-hover: var(--arb-blue-50);
