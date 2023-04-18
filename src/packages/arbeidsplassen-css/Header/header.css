@@ -34,7 +34,6 @@
 
 .arb-header-wrapper {
   background: var(--arb-white);
-  border-bottom: solid 1px var(--arb-gray-200);
   width: 100%;
   padding: 1rem 0.75rem;
 }
