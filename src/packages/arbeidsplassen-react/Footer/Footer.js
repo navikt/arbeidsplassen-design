@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="arb-footer">
-      <nav className="arb-footer-sections">
+      <nav className="container-large arb-footer-sections">
         <section className="arb-footer-section">
           <h2 className="arb-footer-h2">Om oss</h2>
           <ul>
