@@ -1,0 +1,16 @@
+.text-center {
+    text-align: center !important;
+}
+
+@media (min-width: 768px) {
+    .md-text-center {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .lg-text-center {
+        text-align: center !important;
+    }
+}
+

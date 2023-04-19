@@ -40,14 +40,9 @@ const tableOfContentByFilename = [
   "Typography",
 ].sort();
 
-export default function Layout({
-  children,
-  title,
-  size = "default",
-  headerOffset = false,
-}) {
+export default function Layout({ children, title, size = "default" }) {
   return (
-    <div className={`layout${headerOffset ? " arb-header-offset" : ""}`}>
+    <div className="layout">
       <SkipLink />
       <div className="layout-toc">
         <ul>
