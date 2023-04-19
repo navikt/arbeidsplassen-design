@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BodyLong, Heading } from "@navikt/ds-react";
 import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
+import { Footer, Header } from "@navikt/arbeidsplassen-react";
 
 const tableOfContentByFilename = [
   "Accordion",
@@ -11,7 +12,6 @@ const tableOfContentByFilename = [
   "ConfirmationPanel",
   "DatePicker",
   "ErrorSummary",
-  "Footer",
   "GuidePanel",
   "Header",
   "Heading",
@@ -40,32 +40,38 @@ const tableOfContentByFilename = [
   "Typography",
 ].sort();
 
-export default function Layout({ children, title, size = "default" }) {
+export default function Layout({ children, title, skipContainer = false }) {
   return (
-    <div className="layout">
-      <SkipLink />
-      <div className="layout-toc">
-        <ul>
-          <li>
-            <BodyLong>
-              <Link href="/">← Design</Link>
-            </BodyLong>
-          </li>
-          {tableOfContentByFilename.map((it) => (
-            <li key={it}>
-              <BodyLong>
-                <Link href={`/${it}`}>{it}</Link>
-              </BodyLong>
-            </li>
-          ))}
-        </ul>
+    <>
+      <div className="arb-push-footer-down">
+        <SkipLink />
+        <Header />
+        <main id="main" className="mb-6">
+          <div className="container-large layout-toc">
+            <ul>
+              <li>
+                <BodyLong>
+                  <Link href="/">← Design</Link>
+                </BodyLong>
+              </li>
+              {tableOfContentByFilename.map((it) => (
+                <li key={it}>
+                  <BodyLong>
+                    <Link href={`/${it}`}>{it}</Link>
+                  </BodyLong>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={!skipContainer ? "container-medium" : ""}>
+            <Heading size="xlarge" level="1" spacing>
+              {title}
+            </Heading>
+            {children}
+          </div>
+        </main>
       </div>
-      <main id="main" className={`layout-content-${size}`}>
-        <Heading size="xlarge" level="1" spacing>
-          {title}
-        </Heading>
-        {children}
-      </main>
-    </div>
+      <Footer />
+    </>
   );
 }

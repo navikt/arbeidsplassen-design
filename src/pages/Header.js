@@ -3,7 +3,7 @@ import { Header } from "../packages/arbeidsplassen-react";
 
 export default function HeaderPage() {
   return (
-    <Layout size="full-width">
+    <Layout skipContainer>
       <Header
         authenticationStatus="is-authenticated"
         userName="Espen Askeladd"
