@@ -7,7 +7,7 @@
   padding-right: 1rem;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 425px) {
   .container-small,
   .container-medium,
   .container-large {
