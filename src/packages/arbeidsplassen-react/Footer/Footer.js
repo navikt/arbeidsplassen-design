@@ -35,7 +35,7 @@ export default function Footer() {
                 <a href="/jobbe-i-utlandet">Jobbe i utlandet</a>
               </li>
               <li>
-                <a href="/en/work-in-norway">
+                <a href="/work-in-norway-en">
                   Information to refugees from Ukraine
                 </a>
               </li>
