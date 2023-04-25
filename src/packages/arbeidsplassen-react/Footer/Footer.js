@@ -86,7 +86,7 @@ export default function Footer() {
             </svg>
           </a>
           <p className="arb-footer-p">
-            <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
+            <span translate="no">arbeidsplassen.no</span> – en tjeneste fra NAV
           </p>
         </section>
       </div>
