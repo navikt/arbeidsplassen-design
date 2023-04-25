@@ -29,6 +29,9 @@ export default function Footer() {
             <h2 className="arb-footer-h2">For jobbsøkere</h2>
             <ul>
               <li>
+                <a href="/nyttige-artikler-for-jobbsokere">Nyttige artikler for jobbsøkere</a>
+              </li>
+              <li>
                 <a href="/sporsmal-og-svar">Spørsmål og svar</a>
               </li>
               <li>
@@ -55,6 +58,9 @@ export default function Footer() {
                 <a href="/overforing-av-stillingsannonser">
                   Overføre annonser med API
                 </a>
+              </li>
+              <li>
+                <a href="/nyttige-artikler-for-bedrifter">Nyttige artikler for bedrifter</a>
               </li>
             </ul>
           </section>
