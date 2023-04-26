@@ -29,7 +29,9 @@ export default function Footer() {
             <h2 className="arb-footer-h2">For jobbsøkere</h2>
             <ul>
               <li>
-                <a href="/nyttige-artikler-for-jobbsokere">Nyttige artikler for jobbsøkere</a>
+                <a href="/nyttige-artikler-for-jobbsokere">
+                  Nyttige artikler for jobbsøkere
+                </a>
               </li>
               <li>
                 <a href="/sporsmal-og-svar">Spørsmål og svar</a>
@@ -38,7 +40,7 @@ export default function Footer() {
                 <a href="/jobbe-i-utlandet">Jobbe i utlandet</a>
               </li>
               <li>
-                <a href="/work-in-norway-en">
+                <a href="/en/work-in-norway">
                   Information to refugees from Ukraine
                 </a>
               </li>
@@ -60,7 +62,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/nyttige-artikler-for-bedrifter">Nyttige artikler for bedrifter</a>
+                <a href="/nyttige-artikler-for-bedrifter">
+                  Nyttige artikler for bedrifter
+                </a>
               </li>
             </ul>
           </section>
