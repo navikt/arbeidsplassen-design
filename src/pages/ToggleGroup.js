@@ -1,21 +1,25 @@
 import { ToggleGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import { Delete, People } from "@navikt/ds-icons";
+import {
+  ClockDashedIcon,
+  InboxIcon,
+  PaperplaneIcon,
+} from "@navikt/aksel-icons";
 
 const ToggleGroupExample = () => {
   return (
     <Layout title="ToggleGroup">
       <ToggleGroup defaultValue="lest" onChange={console.log}>
         <ToggleGroup.Item value="ulest">
-          <People />
+          <InboxIcon />
           Ulest
         </ToggleGroup.Item>
         <ToggleGroup.Item value="lest">
-          <Delete />
+          <ClockDashedIcon />
           Leste
         </ToggleGroup.Item>
         <ToggleGroup.Item value="sendt">
-          <People />
+          <PaperplaneIcon />
           Sendt
         </ToggleGroup.Item>
       </ToggleGroup>

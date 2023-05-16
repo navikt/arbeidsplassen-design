@@ -1,7 +1,11 @@
-import { Email, Historic, Send } from "@navikt/ds-icons";
-import { BodyLong, Panel, Tabs } from "@navikt/ds-react";
+import { Tabs } from "@navikt/ds-react";
 import { useState } from "react";
 import Layout from "../examples/Layout";
+import {
+  ClockDashedIcon,
+  InboxIcon,
+  PaperplaneIcon,
+} from "@navikt/aksel-icons";
 
 const TabsExample = () => {
   const [state, setState] = useState("logg");
@@ -13,14 +17,18 @@ const TabsExample = () => {
           <Tabs.Tab
             value="logg"
             label="Logg"
-            icon={<Historic title="historielogg" />}
+            icon={<ClockDashedIcon title="historielogg" />}
           />
           <Tabs.Tab
             value="inbox"
             label="Inbox"
-            icon={<Email title="inbox" />}
+            icon={<InboxIcon title="inbox" />}
           />
-          <Tabs.Tab value="sendt" label="Sendt" icon={<Send title="sendt" />} />
+          <Tabs.Tab
+            value="sendt"
+            label="Sendt"
+            icon={<PaperplaneIcon title="sendt" />}
+          />
         </Tabs.List>
         <Tabs.Panel value="logg"></Tabs.Panel>
         <Tabs.Panel value="inbox"></Tabs.Panel>

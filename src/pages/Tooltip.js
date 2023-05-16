@@ -1,12 +1,12 @@
-import { Print } from "@navikt/ds-icons";
 import { Button, Tooltip } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import { PrinterSmallIcon } from "@navikt/aksel-icons";
 
 const TooltipExample = () => {
   return (
     <Layout title="ToolTip">
       <Tooltip content="Skriv ut dokument">
-        <Button icon={<Print title="demo knapp" />} />
+        <Button icon={<PrinterSmallIcon title="demo knapp" />} />
       </Tooltip>
     </Layout>
   );

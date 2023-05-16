@@ -158,12 +158,8 @@
 
   /* Accordion */
   --ac-accordion-header-border: var(--arb-green-300);
-  --ac-accordion-header-border-hover: var(--arb-blue-50);
   --ac-accordion-header-bg-hover: var(--arb-blue-50);
-  --ac-accordion-item-bg-open: var(--arb-green-100);
-  --ac-accordion-item-border-open: transparent;
-  --ac-accordion-content-border: transparent;
-  --ac-accordion-content-border-open: transparent;
+  --ac-accordion-header-icon-bg-hover: var(--arb-blue-100);
 
   /* Link panel */
   --ac-link-panel-hover-text: currentColor;
@@ -323,15 +319,6 @@
 .navds-tag--xsmall {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
-}
-
-/**********************
- * Accordion
- *********************/
-.navds-accordion__header:hover,
-.navds-accordion__header:focus,
-.navds-accordion__item--open .navds-accordion__header {
-  border-radius: 0.25rem !important;
 }
 
 /**********************
