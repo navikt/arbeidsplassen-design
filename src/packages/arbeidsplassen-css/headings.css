@@ -1,0 +1,69 @@
+.navds-heading--2xlarge {
+    font-size: var(--a-font-size-heading-2xlarge);
+    line-height: var(--a-font-line-height-heading-2xlarge);
+}
+
+.navds-heading--2xlarge.navds-typo--spacing {
+    margin-bottom: var(--a-spacing-6);
+}
+@media (max-width: 480px) {
+    .navds-heading--2xlarge {
+        font-size: var(--a-font-size-heading-2xlarge-mobile);
+        line-height: var(--a-font-line-height-heading-2xlarge-mobile);
+    }
+}
+.navds-heading--xlarge {
+    font-size: var(--a-font-size-heading-xlarge);
+    line-height: var(--a-font-line-height-heading-xlarge);
+}
+
+@media (max-width: 480px) {
+    .navds-heading--xlarge {
+        font-size: var(--a-font-size-heading-xlarge-mobile);
+        line-height: var(--a-font-line-height-heading-xlarge-mobile);
+    }
+}
+.navds-heading--large {
+    font-size: var(--a-font-size-heading-large);
+    line-height: var(--a-font-line-height-heading-large-mobile);
+}
+
+@media (max-width: 480px) {
+    .navds-heading--large {
+        font-size: var(--a-font-size-heading-large-mobile);
+        line-height: var(--a-font-line-height-heading-large-mobile);
+    }
+}
+.navds-heading--medium {
+    font-size: var(--a-font-size-heading-medium);
+    line-height: var(--a-font-line-height-heading-medium-mobile);
+}
+
+@media (max-width: 480px) {
+    .navds-heading--medium {
+        font-size: var(--a-font-size-heading-medium-mobile);
+        line-height: var(--a-font-line-height-heading-medium-mobile);
+    }
+}
+.navds-heading--small {
+    font-size: var(--a-font-size-heading-small);
+    line-height: var(--a-font-line-height-heading-small);
+}
+
+@media (max-width: 480px) {
+    .navds-heading--small {
+        font-size: var(--a-font-size-heading-small-mobile);
+        line-height: var(--a-font-line-height-heading-small-mobile);
+    }
+}
+.navds-heading--xsmall {
+    font-size: var(--a-font-size-heading-xsmall);
+    line-height: var(--a-font-line-height-heading-xsmall);
+}
+
+@media (max-width: 480px) {
+    .navds-heading--xsmall {
+        font-size: var(--a-font-size-heading-xsmall-mobile);
+        line-height: var(--a-font-line-height-heading-xsmall-mobile);
+    }
+}
