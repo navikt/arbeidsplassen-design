@@ -1,6 +1,8 @@
 body {
   overflow-y: scroll;
   font-size: 1rem;
+  background: var(--a-bg-default);
+  color: var(--a-text-default);
 }
 
 .layout-toc ul {
@@ -13,8 +15,8 @@ body {
 }
 
 .layout-toc ul li a {
-  background: var(--arb-gray-100);
-  color: var(--arb-green-800) !important;
+  background: var(--a-surface-neutral-subtle);
+  color: var(--a-text-subtle) !important;
   padding: 0 6px;
   border-radius: 4px;
   display: inline-block;
@@ -38,8 +40,8 @@ body {
 
 code {
   font-size: 0.95rem;
-  background: #f9f7f7;
-  color: #666;
+  background: var(--a-surface-neutral-subtle);
+  color: var(--a-text-subtle);
   padding: 2px 8px;
   border-radius: 4px;
   margin-top: 0.75rem;
