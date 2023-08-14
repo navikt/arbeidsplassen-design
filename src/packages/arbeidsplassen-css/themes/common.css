@@ -9,13 +9,13 @@
   --a-font-size-heading-medium: 1.5rem;
   --a-font-size-heading-large: 2rem;
   --a-font-size-heading-xlarge: 3rem;
-  --a-font-size-heading-2xlarge: 4rem;
+  --a-font-size-heading-2xlarge: 3rem;
   --a-font-line-height-heading-xsmall: 1.5;
   --a-font-line-height-heading-small: 1.4;
   --a-font-line-height-heading-medium: 1.33;
   --a-font-line-height-heading-large: 1.25;
   --a-font-line-height-heading-xlarge: 1.2;
-  --a-font-line-height-heading-2xlarge: 1.17;
+  --a-font-line-height-heading-2xlarge: 1.2;
 
   --a-shadow-focus: 0 0 0 3px var(--a-border-focus);
 
