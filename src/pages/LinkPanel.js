@@ -23,7 +23,6 @@ export default function LinkPanelExample() {
   return (
     <Layout title="LinkPanel">
       <Template />
-      <Template className="arb-link-panel arb-primary-solid-bg-text" />
       <Template className="arb-link-panel arb-primary-bg-text" />
       <Template className="arb-link-panel arb-secondary-bg-text" />
       <Template className="arb-link-panel arb-tertiary-bg-text" />

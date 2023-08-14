@@ -2,20 +2,18 @@ import { Alert, Heading, Link } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 import Code from "../examples/Code";
 
-function Template({ showTitle, ...args }) {
+function Template({ showTitle, title, text, ...args }) {
   return (
-    <div className="mb-2">
-      <Alert {...args}>
+    <div className="mb-4">
+      <Alert {...args} className="mb-1_5">
         {!showTitle && (
-          <Heading spacing size="small" level="3">
-            Viktig informasjon
+          <Heading spacing size="xsmall" level="3">
+            {title}
           </Heading>
         )}
-        One morning, when Gregor Samsa woke from troubled dreams, he found
-        himself transformed in his bed into a horrible vermin.{" "}
-        <Link href="#">Les mer om feilen på arbeidsplassen.no</Link>
+        {text} <Link href="#">Les mer på arbeidsplassen.no</Link>
       </Alert>
-      <Code as="Alert" attributes={args} />
+      <Alert {...args}>Alert without heading</Alert>
     </div>
   );
 }
@@ -23,13 +21,42 @@ function Template({ showTitle, ...args }) {
 const AlertExample = () => {
   return (
     <Layout title="Alert">
-      <Template variant="info" />
-      <Template variant="success" />
-      <Template variant="warning" />
-      <Template variant="error" />
-      <Template variant="info" size="small" />
-      <Template variant="info" fullWidth />
-      <Template variant="info" inline />
+      <Template
+        variant="info"
+        title="Info alert"
+        text="Used for notifying users about temporary good-to-know information without any real consequence for user behavour."
+      />
+
+      <Template
+        variant="warning"
+        title="Warning alert"
+        text="Used for alerting users about a potential outage or informing the user that certain actions may lead to certain consequences."
+      />
+      <Template
+        variant="error"
+        title="Error alert"
+        text="Used for communicating system and service errors."
+      />
+      <Template
+        variant="success"
+        title="Success alert"
+        text="Used for notifying users about a successful action performed."
+      />
+      <Template
+        variant="info"
+        inline
+        title="Inline"
+        text="Quisque faucibus dolor ac diam congue blandit. Integer bibendum viverra lorem et commodo. "
+      />
+      <Heading size="medium" level="2" spacing>
+        Full width (no border)
+      </Heading>
+      <Template
+        fullWidth
+        variant="info"
+        title="Info alert"
+        text="Used for notifying users about temporary good-to-know information without any real consequence for user behavour."
+      />
     </Layout>
   );
 };

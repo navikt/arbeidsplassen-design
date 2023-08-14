@@ -7,9 +7,9 @@ const StepperExample = () => {
 
   return (
     <Layout title="Stepper">
-      <div className="mb-2">
+      <div className="mb-4">
         <Heading size="small" level="3" spacing>
-          Default
+          Interactive
         </Heading>
         <Stepper
           activeStep={activeStep}
@@ -23,7 +23,25 @@ const StepperExample = () => {
           <Stepper.Step href="#">Publisering</Stepper.Step>
         </Stepper>
       </div>
-      <div className="mb-2">
+
+      <div className="mb-4">
+        <Heading size="small" level="3" spacing>
+          Static
+        </Heading>
+        <Stepper
+          activeStep={activeStep}
+          interactive={false}
+          orientation="horizontal"
+        >
+          <Stepper.Step href="#">Din bedrift</Stepper.Step>
+          <Stepper.Step href="#">Om stillingen</Stepper.Step>
+          <Stepper.Step href="#">Om bedriften</Stepper.Step>
+          <Stepper.Step href="#">Motta søknader</Stepper.Step>
+          <Stepper.Step href="#">Publisering</Stepper.Step>
+        </Stepper>
+      </div>
+
+      <div className="mb-4">
         <Heading size="small" level="3" spacing>
           Wizard
         </Heading>
@@ -46,22 +64,6 @@ const StepperExample = () => {
           <Stepper.Step href="#" interactive={false}>
             Publisering
           </Stepper.Step>
-        </Stepper>
-      </div>
-      <div className="mb-2">
-        <Heading size="small" level="3" spacing>
-          Display only
-        </Heading>
-        <Stepper
-          activeStep={activeStep}
-          interactive={false}
-          orientation="horizontal"
-        >
-          <Stepper.Step href="#">Din bedrift</Stepper.Step>
-          <Stepper.Step href="#">Om stillingen</Stepper.Step>
-          <Stepper.Step href="#">Om bedriften</Stepper.Step>
-          <Stepper.Step href="#">Motta søknader</Stepper.Step>
-          <Stepper.Step href="#">Publisering</Stepper.Step>
         </Stepper>
       </div>
     </Layout>

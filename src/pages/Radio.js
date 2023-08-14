@@ -1,16 +1,22 @@
-import { Radio, RadioGroup } from "@navikt/ds-react";
+import { Heading, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 
-function Template({ ...args }) {
+function Template({ title, ...args }) {
   return (
     <div className="mb-4">
-      <RadioGroup {...args}>
+      <Heading size="medium" level="2" spacing>
+        {title}
+      </Heading>
+      <RadioGroup
+        legend="Velg din aldersgruppe"
+        description="Informasjonen blir brukt for å gi deg bedre søketreff."
+        onChange={(val) => console.log(val)}
+        defaultValue="10"
+        {...args}
+      >
         <Radio value="10">10-20 år</Radio>
         <Radio value="20">21-45 år</Radio>
         <Radio value="40">46-80 år</Radio>
-        <Radio value="40" disabled>
-          Alle
-        </Radio>
       </RadioGroup>
     </div>
   );
@@ -19,26 +25,13 @@ function Template({ ...args }) {
 export default function RadioExample() {
   return (
     <Layout title="Radio">
+      <Template title="Standard" />
       <Template
-        legend="Velg din aldersgruppe"
-        description="Informasjonen blir brukt for å gi deg bedre søketreff."
-        onChange={(val) => console.log(val)}
-        defaultValue="10"
-      />
-
-      <Template
-        legend="Velg din aldersgruppe"
-        description="Informasjonen blir brukt for å gi deg bedre søketreff."
-        onChange={(val) => console.log(val)}
+        title="Error"
         error="Vi fant ingen resultater på din aldersgruppe."
       />
-
-      <Template
-        legend="Velg din aldersgruppe"
-        description="Informasjonen blir brukt for å gi deg bedre søketreff."
-        onChange={(val) => console.log(val)}
-        disabled
-      />
+      <Template title="Disabled" disabled />
+      <Template title="Read only" readOnly />
     </Layout>
   );
 }

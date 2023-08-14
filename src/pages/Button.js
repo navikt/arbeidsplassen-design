@@ -1,185 +1,51 @@
-import { Button } from "@navikt/ds-react";
+import { Alert, Button, Heading, HStack, Link } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 import { TrashIcon } from "@navikt/aksel-icons";
+
+function ButtonTemplate({ variant, ...args }) {
+  return (
+    <div className="mb-2_5">
+      <Heading size="small" level="2" spacing>
+        {variant}
+      </Heading>
+      <HStack gap="4">
+        <Button variant={variant}>Button</Button>
+        <Button variant={variant} icon={<TrashIcon />}>
+          Button
+        </Button>
+        <Button variant={variant} icon={<TrashIcon />} disabled>
+          Disabled
+        </Button>
+        <Button variant={variant} loading>
+          Laster
+        </Button>
+      </HStack>
+    </div>
+  );
+}
 
 const ButtonExample = () => {
   return (
     <Layout title="Button">
-      <div className="flex mb-2">
-        <Button variant="primary">Button</Button>
-        <Button variant="primary" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button variant="primary" icon={<TrashIcon />} iconPosition="right">
-          Button
-        </Button>
+      <ButtonTemplate variant="primary" />
+      <ButtonTemplate variant="secondary" />
+      <ButtonTemplate variant="tertiary" />
+      <ButtonTemplate variant="danger" />
+      <ButtonTemplate variant="primary-neutral" />
+      <ButtonTemplate variant="secondary-neutral" />
+      <ButtonTemplate variant="tertiary-neutral" />
+
+      <Heading size="small" level="2" spacing>
+        Small or xsmall
+      </Heading>
+      <HStack gap="4">
         <Button variant="primary" size="small">
           Button
         </Button>
         <Button variant="primary" size="xsmall">
           Button
         </Button>
-        <Button variant="primary" loading>
-          Laster
-        </Button>
-      </div>
-      <div className="flex mb-2">
-        <Button disabled variant="primary">
-          Button
-        </Button>
-        <Button disabled variant="primary" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button
-          disabled
-          variant="primary"
-          icon={<TrashIcon />}
-          iconPosition="right"
-        >
-          Button
-        </Button>
-        <Button disabled variant="primary" size="small">
-          Button
-        </Button>
-        <Button disabled variant="primary" size="xsmall">
-          Button
-        </Button>
-        <Button disabled variant="primary" loading>
-          Laster
-        </Button>
-      </div>
-
-      <div className="flex mb-2">
-        <Button variant="secondary">Button</Button>
-        <Button variant="secondary" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button variant="secondary" icon={<TrashIcon />} iconPosition="right">
-          Button
-        </Button>
-        <Button variant="secondary" size="small">
-          Button
-        </Button>
-        <Button variant="secondary" size="xsmall">
-          Button
-        </Button>
-        <Button variant="secondary" loading>
-          Laster
-        </Button>
-      </div>
-      <div className="flex mb-2">
-        <Button disabled variant="secondary">
-          Button
-        </Button>
-        <Button disabled variant="secondary" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button
-          disabled
-          variant="secondary"
-          icon={<TrashIcon />}
-          iconPosition="right"
-        >
-          Button
-        </Button>
-        <Button disabled variant="secondary" size="small">
-          Button
-        </Button>
-        <Button disabled variant="secondary" size="xsmall">
-          Button
-        </Button>
-        <Button disabled variant="secondary" loading>
-          Laster
-        </Button>
-      </div>
-
-      <div className="flex mb-2">
-        <Button variant="tertiary">Button</Button>
-        <Button variant="tertiary" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button variant="tertiary" icon={<TrashIcon />} iconPosition="right">
-          Button
-        </Button>
-        <Button variant="tertiary" size="small">
-          Button
-        </Button>
-        <Button variant="tertiary" size="xsmall">
-          Button
-        </Button>
-        <Button variant="tertiary" loading>
-          Laster
-        </Button>
-      </div>
-      <div className="flex mb-2">
-        <Button disabled variant="tertiary">
-          Button
-        </Button>
-        <Button disabled variant="tertiary" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button
-          disabled
-          variant="tertiary"
-          icon={<TrashIcon />}
-          iconPosition="right"
-        >
-          Button
-        </Button>
-        <Button disabled variant="tertiary" size="small">
-          Button
-        </Button>
-        <Button disabled variant="tertiary" size="xsmall">
-          Button
-        </Button>
-        <Button disabled variant="tertiary" loading>
-          Laster
-        </Button>
-      </div>
-
-      <div className="flex mb-2">
-        <Button variant="danger">Button</Button>
-        <Button variant="danger" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button variant="danger" icon={<TrashIcon />} iconPosition="right">
-          Button
-        </Button>
-        <Button variant="danger" size="small">
-          Button
-        </Button>
-        <Button variant="danger" size="xsmall">
-          Button
-        </Button>
-        <Button variant="danger" loading>
-          Laster
-        </Button>
-      </div>
-      <div className="flex mb-2">
-        <Button disabled variant="danger">
-          Button
-        </Button>
-        <Button disabled variant="danger" icon={<TrashIcon />}>
-          Button
-        </Button>
-        <Button
-          disabled
-          variant="danger"
-          icon={<TrashIcon />}
-          iconPosition="right"
-        >
-          Button
-        </Button>
-        <Button disabled variant="danger" size="small">
-          Button
-        </Button>
-        <Button disabled variant="danger" size="xsmall">
-          Button
-        </Button>
-        <Button disabled variant="danger" loading>
-          Laster
-        </Button>
-      </div>
+      </HStack>
     </Layout>
   );
 };

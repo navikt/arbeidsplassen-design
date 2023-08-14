@@ -6,7 +6,7 @@ export default function Code({ as, attributes, selfClosing }) {
     return `${key}="${attributes[key]}"`;
   });
 
-  const markup = [as, ...attr, selfClosing ? "/" : ""].join(" ").trim();
+  const markup = [...attr].join(" ").trim();
 
-  return <code>&lt;{markup}&gt;</code>;
+  return <code>{markup}</code>;
 }

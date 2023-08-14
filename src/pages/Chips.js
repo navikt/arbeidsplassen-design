@@ -1,4 +1,4 @@
-import { Chips } from "@navikt/ds-react";
+import { Chips, Heading } from "@navikt/ds-react";
 import { useState } from "react";
 import Layout from "../examples/Layout";
 
@@ -10,7 +10,10 @@ const ChipsExample = () => {
 
   return (
     <Layout title="Chips">
-      <div className="mb-2">
+      <div className="mb-4">
+        <Heading size="medium" level="2" spacing>
+          Selectable standard
+        </Heading>
         <Chips>
           {options.map((c) => (
             <Chips.Toggle
@@ -29,7 +32,33 @@ const ChipsExample = () => {
           ))}
         </Chips>
       </div>
-      <div className="mb-2">
+      <div className="mb-4">
+        <Heading size="medium" level="2" spacing>
+          Selectable neutral
+        </Heading>
+        <Chips>
+          {options.map((c) => (
+            <Chips.Toggle
+              variant="neutral"
+              selected={selected.includes(c)}
+              key={c}
+              onClick={() =>
+                setSelected(
+                  selected.includes(c)
+                    ? selected.filter((x) => x !== c)
+                    : [...selected, c]
+                )
+              }
+            >
+              {c}
+            </Chips.Toggle>
+          ))}
+        </Chips>
+      </div>
+      <div className="mb-4">
+        <Heading size="medium" level="2" spacing>
+          Removable standard
+        </Heading>
         <Chips>
           {filter.map((c) => (
             <Chips.Removable
@@ -46,6 +75,9 @@ const ChipsExample = () => {
         </Chips>
       </div>
       <div>
+        <Heading size="medium" level="2" spacing>
+          Removable neutral
+        </Heading>
         <Chips>
           {filter.map((c) => (
             <Chips.Removable

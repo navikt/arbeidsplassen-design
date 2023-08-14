@@ -66,4 +66,15 @@
   --arb-peach-200: #ffc7b7;
   --arb-peach-300: #ffaf96;
   --arb-peach-400: #cd6148;
+
+  --arb-dark-mode-shade-50: #0f242d;
+  --arb-dark-mode-shade-100: #142832;
+  --arb-dark-mode-shade-200: #21343d;
+  --arb-dark-mode-shade-300: #394a52;
+  --arb-dark-mode-shade-400: #57656c;
+  --arb-dark-mode-shade-500: #778388;
+  --arb-dark-mode-shade-600: #929ba0;
+  --arb-dark-mode-shade-700: #b5bbbe;
+  --arb-dark-mode-shade-800: #ced2d4;
+  --arb-dark-mode-shade-900: #eeeff0;
 }

@@ -50,7 +50,7 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin: 0 0 1rem 0;
-  color: var(--arb-text-on-primary);
+  color: var(--a-text-default);
 }
 
 @media (min-width: 960px) {
@@ -73,7 +73,7 @@
 .arb-footer-section ul li a {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--arb-text-on-primary);
+  color: var(--a-text-default);
 }
 
 .arb-footer-section ul li a:hover {
@@ -81,8 +81,9 @@
 }
 
 .arb-footer-section ul li a:focus {
+  text-decoration: none;
   outline: none;
-  color: #fff;
+  color: var(--a-text-on-action);
   background: var(--a-border-focus);
 }
 
@@ -105,11 +106,11 @@
 }
 
 .arb-footer-logo-bg {
-  fill: var(--arb-green-800);
+  fill: var(--arb-logo-iverted-bg);
 }
 
 .arb-footer-logo-text {
-  fill: var(--arb-text-on-primary-solid);
+  fill: var(--arb-logo-iverted-text);
 }
 
 .arb-footer-logo:focus {
@@ -120,5 +121,5 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--arb-text-on-primary);
+  color: var(--a-text-default);
 }

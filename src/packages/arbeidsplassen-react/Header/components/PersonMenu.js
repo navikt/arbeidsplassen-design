@@ -32,7 +32,7 @@ function PersonMenu({ active }) {
       <li>
         <a
           href="/minside"
-          className={active === "cv" ? "arb-header-active" : undefined}
+          className={active === "min-side" ? "arb-header-active" : undefined}
         >
           Min side
         </a>

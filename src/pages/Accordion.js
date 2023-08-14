@@ -1,6 +1,35 @@
-import { Accordion } from "@navikt/ds-react";
+import { Accordion, Heading } from "@navikt/ds-react";
 import { Checkbox, CheckboxGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import Code from "../examples/Code";
+
+function Template({ skipDescription, ...args }) {
+  return (
+    <div className="mb-2">
+      <Accordion {...args}>
+        <Accordion.Item>
+          <Accordion.Header>Område</Accordion.Header>
+          <Accordion.Content>
+            <Arbeidsted />
+          </Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header>Yrke</Accordion.Header>
+          <Accordion.Content>
+            <Yrke />
+          </Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item>
+          <Accordion.Header>Publisert</Accordion.Header>
+          <Accordion.Content>
+            <Yrke />
+          </Accordion.Content>
+        </Accordion.Item>
+      </Accordion>
+      <Code as="Accordion" attributes={args} />
+    </div>
+  );
+}
 
 const Arbeidsted = () => {
   const handleChange = (val) => console.log(val);
@@ -45,26 +74,8 @@ const Yrke = () => {
 const AccordionExample = () => {
   return (
     <Layout title="Accordion">
-      <Accordion>
-        <Accordion.Item>
-          <Accordion.Header>Område</Accordion.Header>
-          <Accordion.Content>
-            <Arbeidsted />
-          </Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item>
-          <Accordion.Header>Yrke</Accordion.Header>
-          <Accordion.Content>
-            <Yrke />
-          </Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item>
-          <Accordion.Header>Publisert</Accordion.Header>
-          <Accordion.Content>
-            <Yrke />
-          </Accordion.Content>
-        </Accordion.Item>
-      </Accordion>
+      <Template />
+      <Template variant="neutral" />
     </Layout>
   );
 };

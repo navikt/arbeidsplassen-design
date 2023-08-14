@@ -9,7 +9,9 @@ const tableOfContentByFilename = [
   "Button",
   "Checkbox",
   "Chips",
+  "ComboBox",
   "ConfirmationPanel",
+  "CopyButton",
   "DatePicker",
   "ErrorSummary",
   "GuidePanel",
@@ -40,18 +42,18 @@ const tableOfContentByFilename = [
   "Typography",
 ].sort();
 
-export default function Layout({ children, title, skipContainer = false }) {
+export default function Layout({ children, title, headerArgs }) {
   return (
     <>
       <div className="arb-push-footer-down">
         <SkipLink />
-        <Header />
-        <main id="main" className="mb-6">
-          <div className="container-large layout-toc">
+        <Header {...headerArgs} />
+        <main id="main" className="container-large mt-2 mb-6">
+          <div className="layout-toc">
             <ul>
               <li>
                 <BodyLong>
-                  <Link href="/">← Design</Link>
+                  <Link href="/">← Home</Link>
                 </BodyLong>
               </li>
               {tableOfContentByFilename.map((it) => (
@@ -63,8 +65,9 @@ export default function Layout({ children, title, skipContainer = false }) {
               ))}
             </ul>
           </div>
-          <div className={!skipContainer ? "container-medium" : ""}>
-            <Heading size="xlarge" level="1" spacing>
+
+          <div>
+            <Heading size="large" level="1" className="mb-2">
               {title}
             </Heading>
             {children}

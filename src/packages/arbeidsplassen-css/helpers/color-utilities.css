@@ -1,8 +1,3 @@
-.arb-primary-solid-bg-text {
-  color: var(--arb-text-on-primary-solid);
-  background-color: var(--arb-surface-primary-solid);
-}
-
 .arb-primary-bg-text {
   color: var(--arb-text-on-primary);
   background-color: var(--arb-surface-primary);

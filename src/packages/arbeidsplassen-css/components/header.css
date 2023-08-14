@@ -15,7 +15,7 @@
 }
 
 .arb-header-wrapper {
-  background: var(--arb-white);
+  background: var(--a-bg-default);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -140,7 +140,7 @@
 .arb-header-menu-both ul li a,
 .arb-header-menu ul li a {
   white-space: nowrap;
-  color: var(--arb-green-900);
+  color: var(--a-text-default);
   text-decoration: none;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -154,8 +154,8 @@
 
 .arb-header-menu-both ul li a:hover,
 .arb-header-menu ul li a:hover {
-  color: var(--arb-blue-600);
-  box-shadow: 0 2px 0 0 var(--arb-blue-600);
+  color: var(--a-text-action);
+  box-shadow: 0 2px 0 0 var(--a-text-action);
 }
 
 .arb-header-menu-both ul li a:active,
@@ -166,7 +166,9 @@
 
 .arb-header-menu-both ul li a:focus,
 .arb-header-menu ul li a:focus {
-  outline: 3px solid var(--arb-blue-900);
+  color: var(--a-text-on-action);
+  background: var(--a-border-focus);
+  outline: none;
 }
 
 @media (min-width: 1344px) {
@@ -192,27 +194,8 @@
   }
 }
 
-.arb-header-account {
-  line-height: 1.5;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.arb-header-account,
-.arb-header-account:hover,
-.arb-header-account:visited {
-  color: var(--arb-blue-500);
-}
-
-.arb-header-account:hover {
-  text-decoration: none;
-}
-
-.arb-header-account:focus {
-  outline: 3px solid var(--arb-blue-900);
+[data-theme="arbeidsplassen-dark"] .arb-header-account {
+  color: var(--a-text-default);
 }
 
 @media (max-width: 400px) {
@@ -220,26 +203,4 @@
   .arb-header-logout-button .arb-button-icon {
     display: none;
   }
-}
-
-.arb-header-change-company {
-  background: none;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  color: var(--arb-blue-500);
-  font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.arb-header-change-company:hover {
-  text-decoration: none;
-}
-
-.arb-header-change-company:focus {
-  outline: 3px solid var(--arb-blue-900);
 }
