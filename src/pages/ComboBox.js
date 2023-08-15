@@ -1,20 +1,52 @@
 import { Heading, UNSAFE_Combobox } from "@navikt/ds-react";
+import { useState } from "react";
 import Layout from "../examples/Layout";
 
 const ComboBoxExample = () => {
-  const initialOptions = [
-    "A New Hope",
-    "The Empire Strikes Back",
-    "Return of the Jedi",
-    "The Phantom Menace",
-    "Attack of the Clones",
-    "Revenge of the Sith",
-    "The Force Awakens",
-    "Rogue One",
-    "The Last Jedi",
-    "Solo",
-    "The Rise of Skywalker",
+  const countries = [
+    "Norge",
+    "Sverige",
+    "Danmark",
+    "Finland",
+    "Island",
+    "Storbritannia",
+    "Tyskland",
+    "Frankrike",
+    "Spania",
+    "Portugal",
+    "Italia",
+    "Hellas",
+    "Kroatia",
+    "Tyrkia",
   ];
+
+  const [filteredOptions, setFilteredOptions] = useState([]);
+  const [value, setValue] = useState("");
+
+  const onChange = (e) => {
+    const text = e.target.value;
+
+    setValue(text);
+    if (text.length > 0) {
+      const found = countries.filter(
+        (c) => c.toLowerCase().indexOf(text.toLowerCase()) !== -1
+      );
+      setFilteredOptions(found);
+    } else {
+      setFilteredOptions([]);
+    }
+  };
+
+  const onToggleSelected = (option, isSelected) => {
+    setValue(option);
+    setFilteredOptions([]);
+  };
+
+  const onClear = () => {
+    console.log("clear");
+    setValue("");
+    setFilteredOptions([]);
+  };
 
   return (
     <Layout title="ComboBox">
@@ -23,9 +55,15 @@ const ComboBoxExample = () => {
       </Heading>
       <UNSAFE_Combobox
         label="Hva er den aller kuleste Star Wars-filmen noensinne, helt objektivt?"
-        options={initialOptions}
-        shouldAutocomplete={true}
-        className="mb-2"
+        className="mb-4"
+        onChange={onChange}
+        onToggleSelected={onToggleSelected}
+        onClear={onClear}
+        filteredOptions={filteredOptions}
+        options={[]}
+        value={value}
+        isListOpen={filteredOptions.length > 0}
+        toggleListButton={false}
       />
 
       <Heading size="medium" level="2" spacing>
@@ -34,9 +72,9 @@ const ComboBoxExample = () => {
       <UNSAFE_Combobox
         allowNewValues
         label="Hva er dine favorittdrikker? Legg gjerne til flere alternativer."
-        options={initialOptions}
+        filteredOptions={filteredOptions}
         isMultiSelect
-        className="mb-2"
+        className="mb-4"
       />
     </Layout>
   );

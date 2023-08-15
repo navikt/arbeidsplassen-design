@@ -15,7 +15,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body data-theme="arbeidsplassen">
+      <body data-theme="arbeidsplassen-dark">
         <Main />
         <NextScript />
       </body>

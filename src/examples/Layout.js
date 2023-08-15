@@ -43,6 +43,11 @@ const tableOfContentByFilename = [
 ].sort();
 
 export default function Layout({ children, title, headerArgs }) {
+  headerArgs = {
+    onLogin: console.log,
+    onLogout: console.log,
+    ...headerArgs,
+  };
   return (
     <>
       <div className="arb-push-footer-down">
