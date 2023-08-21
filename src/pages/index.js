@@ -18,26 +18,6 @@ export default function Home() {
 
       <Panel border className="mb-2">
         <BodyLong spacing>
-          Checkbox i dark theme har feil farge på hakeikon, skal ikke være hvit
-          men mørk blå
-        </BodyLong>
-        <CheckboxGroup hideLegend defaultValue={["alta"]}>
-          <Checkbox value="alta">Alta</Checkbox>
-        </CheckboxGroup>
-      </Panel>
-
-      <Panel border className="mb-2">
-        <BodyLong spacing>
-          Checkbox med readOnly i dark theme har feil farge på check mark, bør
-          være lysere
-        </BodyLong>
-        <CheckboxGroup hideLegend readOnly defaultValue={["alta"]}>
-          <Checkbox value="alta">Alta</Checkbox>
-        </CheckboxGroup>
-      </Panel>
-
-      <Panel border className="mb-2">
-        <BodyLong spacing>
           Switch i dark theme har kanskje for liten kontrast mot mørk bakgrunn
           når den ikke er skrudd på
         </BodyLong>

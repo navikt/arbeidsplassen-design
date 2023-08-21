@@ -1,28 +1,20 @@
 import { BodyLong, Button, Heading, Modal } from "@navikt/ds-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Layout from "../examples/Layout";
 
 const ModalExample = () => {
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    Modal.setAppElement("#__next");
-  }, []);
-
   return (
     <Layout title="Modal">
       <Button onClick={() => setOpen(true)}>Åpne modal</Button>
-      <Modal
-        open={open}
-        aria-label="Modal demo"
-        onClose={() => setOpen((x) => !x)}
-        aria-labelledby="modal-heading"
-        className="modal-small"
-      >
-        <Modal.Content>
-          <Heading spacing level="1" size="large" id="modal-heading">
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <Modal.Header>
+          <Heading level="1" size="large">
             Laborum proident id ullamco
           </Heading>
+        </Modal.Header>
+        <Modal.Body>
           <BodyLong spacing>
             Culpa aliquip ut cupidatat laborum minim quis ex in aliqua. Qui
             incididunt dolor do ad ut. Incididunt eiusmod nostrud deserunt duis
@@ -34,7 +26,7 @@ const ModalExample = () => {
           <Button variant="primary" onClick={() => setOpen((x) => !x)}>
             Lukk modal
           </Button>
-        </Modal.Content>
+        </Modal.Body>
       </Modal>
     </Layout>
   );
