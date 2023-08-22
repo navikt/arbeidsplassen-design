@@ -212,11 +212,20 @@
   --a-table-sort-button-sorted-text: var(--a-text-on-action);
 
   /* Arbeidsplassen specific  */
-  --arb-surface-primary: var(--arb-dark-mode-shade-100);
+  --arb-surface-primary-subtle: var(--arb-dark-mode-shade-50);
+  --arb-surface-primary-moderate: var(--arb-dark-mode-shade-100);
+  --arb-surface-primary: var(--arb-dark-mode-shade-200);
+
+  --arb-surface-secondary-subtle: var(--arb-dark-mode-shade-50);
+  --arb-surface-secondary-moderate: var(--arb-dark-mode-shade-100);
+  --arb-surface-secondary: var(--arb-dark-mode-shade-200);
+
+  --arb-surface-tertiary-subtle: var(--arb-dark-mode-shade-50);
+  --arb-surface-tertiary-moderate: var(--arb-dark-mode-shade-100);
+  --arb-surface-tertiary: var(--arb-dark-mode-shade-200);
+
   --arb-text-on-primary: var(--arb-green-200);
-  --arb-surface-secondary: var(--arb-dark-mode-shade-100);
   --arb-text-on-secondary: var(--arb-blue-100);
-  --arb-surface-tertiary: var(--arb-dark-mode-shade-100);
   --arb-text-on-tertiary: var(--arb-peach-200);
 
   --arb-logo-iverted-bg: var(--arb-green-800);
@@ -224,4 +233,10 @@
 
   --arb-logo-bg: var(--arb-green-200);
   --arb-logo-text: var(--arb-green-800);
+
+  --arb-footer-bg: var(--arb-dark-mode-shade-100);
+
+  --arb-link-panel-primary-bg: var(--arb-dark-mode-shade-100);
+  --arb-link-panel-secondary-bg: var(--arb-dark-mode-shade-100);
+  --arb-link-panel-tertiary-bg: var(--arb-dark-mode-shade-100);
 }

@@ -207,11 +207,20 @@
   --ac-button-tertiary-hover-text: var(--arb-blue-600);
 
   /* Arbeidsplassen specific  */
+  --arb-surface-primary-subtle: var(--arb-green-50);
+  --arb-surface-primary-moderate: var(--arb-green-100);
   --arb-surface-primary: var(--arb-green-200);
+
+  --arb-surface-secondary-subtle: var(--arb-blue-50);
+  --arb-surface-secondary-moderate: var(--arb-blue-100);
+  --arb-surface-secondary: var(--arb-blue-200);
+
+  --arb-surface-tertiary-subtle: var(--arb-peach-50);
+  --arb-surface-tertiary-moderate: var(--arb-peach-100);
+  --arb-surface-tertiary: var(--arb-peach-300);
+
   --arb-text-on-primary: var(--arb-green-700);
-  --arb-surface-secondary: var(--arb-blue-50);
   --arb-text-on-secondary: var(--arb-green-700);
-  --arb-surface-tertiary: var(--arb-peach-100);
   --arb-text-on-tertiary: var(--arb-green-700);
 
   --arb-logo-iverted-bg: var(--arb-green-800);
@@ -219,4 +228,10 @@
 
   --arb-logo-bg: var(--arb-green-200);
   --arb-logo-text: var(--arb-green-800);
+
+  --arb-footer-bg: var(--arb-surface-primary);
+
+  --arb-link-panel-primary-bg: var(--arb-surface-primary);
+  --arb-link-panel-secondary-bg: var(--arb-surface-secondary-subtle);
+  --arb-link-panel-tertiary-bg: var(--arb-surface-tertiary-moderate);
 }
