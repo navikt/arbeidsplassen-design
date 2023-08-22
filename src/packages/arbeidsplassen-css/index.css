@@ -1,7 +1,6 @@
 @import "./themes/colors.css";
 @import "./themes/common.css";
 @import "./themes/light.css";
-@import "./themes/dark.css";
 @import "./components/header.css";
 @import "./components/footer.css";
 @import "./components/link-panel.css";
