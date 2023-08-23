@@ -17,8 +17,6 @@
   --a-font-line-height-heading-xlarge: 1.2;
   --a-font-line-height-heading-2xlarge: 1.2;
 
-  --a-shadow-focus: 0 0 0 3px var(--a-border-focus);
-
   --a-border-radius-small: 4px;
   --a-border-radius-medium: 6px;
 }

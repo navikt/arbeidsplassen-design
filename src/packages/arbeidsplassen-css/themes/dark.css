@@ -116,6 +116,11 @@
   --a-border-alt-3: var(--arb-dark-mode-shade-700);
 
   /*****************************************************
+  * Focus
+  ******************************************************/
+  --a-shadow-focus: 0 0 0 3px var(--a-border-focus);
+
+  /*****************************************************
   * Icon colors
   ******************************************************/
   --a-icon-default: var(--arb-dark-mode-shade-800);
@@ -166,10 +171,6 @@
   --ac-accordion-header-icon-bg-hover: var(--arb-dark-mode-shade-200);
   --ac-accordion-neutral-item-bg-open: var(--arb-dark-mode-shade-100);
 
-  /* Link panel */
-  --ac-link-panel-hover-text: currentColor;
-  --ac-link-panel-hover-border: var(--arb-blue-700);
-
   /* Tabs */
   --ac-tabs-selected-border: var(--arb-green-400);
 
@@ -206,12 +207,33 @@
   --ac-button-tertiary-text: var(--arb-dark-mode-shade-900);
   --ac-button-tertiary-hover-text: var(--arb-dark-mode-shade-600);
   --ac-button-secondary-focus-border: var(--ac-button-secondary-border);
-  --ac-button-tertiary-focus-border: var(--ac-button-secondary-border);
+  --ac-button-secondary-neutral-focus-border: var(--ac-button-secondary-border);
+  --ac-button-tertiary-focus-border: transparent;
+  --ac-button-tertiary-neutral-focus-border: transparent;
 
   /* Table */
   --a-table-sort-button-sorted-text: var(--a-text-on-action);
 
-  /* Arbeidsplassen specific  */
+  /* Popover */
+  --ac-popover-bg: var(--arb-dark-mode-shade-100);
+
+  /* Panel */
+  --ac-panel-bg: var(--arb-dark-mode-shade-100);
+  --ac-panel-border: transparent;
+
+  /* Link panel */
+  --ac-link-panel-hover-text: currentColor;
+  --ac-link-panel-hover-border: transparent;
+  --ac-link-panel-text: var(--arb-text-on-color);
+
+  /*****************************************************
+  * Arbeidsplassen specific variables
+  ******************************************************/
+  --arb-text-on-color: var(--arb-dark-mode-shade-900);
+  --arb-text-on-strong: var(--arb-white);
+
+  --arb-surface-strong: var(--arb-green-700);
+
   --arb-surface-primary-subtle: var(--arb-dark-mode-shade-50);
   --arb-surface-primary-moderate: var(--arb-dark-mode-shade-100);
   --arb-surface-primary: var(--arb-dark-mode-shade-200);
@@ -224,19 +246,17 @@
   --arb-surface-tertiary-moderate: var(--arb-dark-mode-shade-100);
   --arb-surface-tertiary: var(--arb-dark-mode-shade-200);
 
-  --arb-text-on-primary: var(--arb-green-200);
-  --arb-text-on-secondary: var(--arb-blue-100);
-  --arb-text-on-tertiary: var(--arb-peach-200);
-
-  --arb-logo-iverted-bg: var(--arb-green-800);
-  --arb-logo-iverted-text: var(--arb-green-200);
-
-  --arb-logo-bg: var(--arb-green-200);
-  --arb-logo-text: var(--arb-green-800);
-
   --arb-footer-bg: var(--arb-dark-mode-shade-100);
 
   --arb-link-panel-primary-bg: var(--arb-dark-mode-shade-100);
+  --arb-link-panel-primary-text: var(--arb-green-200);
   --arb-link-panel-secondary-bg: var(--arb-dark-mode-shade-100);
+  --arb-link-panel-secondary-text: var(--a-blue-100);
   --arb-link-panel-tertiary-bg: var(--arb-dark-mode-shade-100);
+  --arb-link-panel-tertiary-text: var(--arb-peach-200);
+
+  --arb-logo-bg: var(--arb-green-200);
+  --arb-logo-text: var(--arb-green-800);
+  --arb-logo-iverted-bg: var(--arb-green-800);
+  --arb-logo-iverted-text: var(--arb-green-200);
 }

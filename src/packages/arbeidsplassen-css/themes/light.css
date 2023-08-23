@@ -15,9 +15,9 @@
   --a-surface-subtle: var(--arb-gray-50);
   --a-surface-transparent: var(--arb-transparent);
   --a-surface-backdrop: var(--arb-grayalpha-700);
+  --a-surface-inverted: var(--arb-gray-900);
   --a-surface-inverted-hover: var(--arb-gray-800);
   --a-surface-inverted-active: var(--arb-gray-700);
-  --a-surface-inverted: var(--arb-gray-900);
 
   --a-surface-action-subtle: var(--arb-blue-50);
   --a-surface-action-subtle-hover: var(--arb-blue-50);
@@ -116,6 +116,11 @@
   --a-border-alt-3: var(--arb-green-800);
 
   /*****************************************************
+  * Focus
+  ******************************************************/
+  --a-shadow-focus: 0 0 0 3px var(--a-border-focus);
+
+  /*****************************************************
   * Icon colors
   ******************************************************/
   --a-icon-default: var(--arb-green-800);
@@ -166,10 +171,6 @@
   --ac-accordion-header-icon-bg-hover: var(--arb-green-200);
   --ac-accordion-neutral-item-bg-open: var(--arb-green-50);
 
-  /* Link panel */
-  --ac-link-panel-hover-text: currentColor;
-  --ac-link-panel-hover-border: var(--arb-blue-700);
-
   /* Tabs */
   --ac-tabs-selected-border: var(--arb-green-400);
 
@@ -205,8 +206,29 @@
   --ac-button-secondary-border: var(--arb-blue-500);
   --ac-button-tertiary-text: var(--arb-blue-500);
   --ac-button-tertiary-hover-text: var(--arb-blue-600);
+  --ac-button-tertiary-focus-border: transparent;
+  --ac-button-tertiary-neutral-focus-border: transparent;
 
-  /* Arbeidsplassen specific  */
+  /* Popover */
+  --ac-popover-bg: var(--a-surface-default);
+
+  /* Panel */
+  --ac-panel-bg: var(--arb-surface-primary);
+  --ac-panel-border: transparent;
+
+  /* Link panel */
+  --ac-link-panel-hover-text: currentColor;
+  --ac-link-panel-hover-border: transparent;
+  --ac-link-panel-text: var(--arb-text-on-color);
+
+  /*****************************************************
+  * Arbeidsplassen specific variables
+  ******************************************************/
+  --arb-text-on-color: var(--arb-green-700);
+  --arb-text-on-strong: var(--arb-white);
+
+  --arb-surface-strong: var(--arb-green-700);
+
   --arb-surface-primary-subtle: var(--arb-green-50);
   --arb-surface-primary-moderate: var(--arb-green-100);
   --arb-surface-primary: var(--arb-green-200);
@@ -219,19 +241,17 @@
   --arb-surface-tertiary-moderate: var(--arb-peach-100);
   --arb-surface-tertiary: var(--arb-peach-300);
 
-  --arb-text-on-primary: var(--arb-green-700);
-  --arb-text-on-secondary: var(--arb-green-700);
-  --arb-text-on-tertiary: var(--arb-green-700);
-
-  --arb-logo-iverted-bg: var(--arb-green-800);
-  --arb-logo-iverted-text: var(--arb-green-200);
-
-  --arb-logo-bg: var(--arb-green-200);
-  --arb-logo-text: var(--arb-green-800);
-
   --arb-footer-bg: var(--arb-surface-primary);
 
   --arb-link-panel-primary-bg: var(--arb-surface-primary);
+  --arb-link-panel-primary-text: var(--arb-text-on-color);
   --arb-link-panel-secondary-bg: var(--arb-surface-secondary-subtle);
+  --arb-link-panel-secondary-text: var(--arb-text-on-color);
   --arb-link-panel-tertiary-bg: var(--arb-surface-tertiary-moderate);
+  --arb-link-panel-tertiary-text: var(--arb-text-on-color);
+
+  --arb-logo-bg: var(--arb-green-200);
+  --arb-logo-text: var(--arb-green-800);
+  --arb-logo-iverted-bg: var(--arb-green-800);
+  --arb-logo-iverted-text: var(--arb-green-200);
 }

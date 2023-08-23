@@ -1,5 +1,32 @@
-.arb-link-panel {
-  border-radius: 0.25rem;
+.arb-link-panel-primary,
+.arb-link-panel-secondary,
+.arb-link-panel-tertiary {
   padding: 1.5rem;
-  border: transparent;
+}
+
+.arb-link-panel-primary {
+  background-color: var(--arb-link-panel-primary-bg);
+}
+
+.arb-link-panel-primary .navds-link-panel__title,
+.arb-link-panel-primary:hover .navds-link-panel__title {
+  color: var(--arb-link-panel-primary-text);
+}
+
+.arb-link-panel-secondary {
+  background-color: var(--arb-link-panel-secondary-bg);
+}
+
+.arb-link-panel-secondary .navds-link-panel__title,
+.arb-link-panel-secondary:hover .navds-link-panel__title {
+  color: var(--arb-link-panel-secondary-text);
+}
+
+.arb-link-panel-tertiary {
+  background-color: var(--arb-link-panel-tertiary-bg);
+}
+
+.arb-link-panel-tertiary .navds-link-panel__title,
+.arb-link-panel-tertiary:hover .navds-link-panel__title {
+  color: var(--arb-link-panel-tertiary-text);
 }

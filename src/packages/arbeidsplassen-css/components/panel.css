@@ -1,5 +1,19 @@
-.arb-panel {
-  border-radius: 0.25rem;
+.arb-panel-primary,
+.arb-panel-secondary,
+.arb-panel-tertiary {
+  color: var(--arb-text-on-color) !important;
+}
+
+.arb-panel-primary {
+  background-color: var(--arb-link-panel-primary-bg);
+}
+
+.arb-panel-secondary {
+  background-color: var(--arb-link-panel-secondary-bg);
+}
+
+.arb-panel-tertiary {
+  background-color: var(--arb-link-panel-tertiary-bg);
 }
 
 .arb-panel-lofty {

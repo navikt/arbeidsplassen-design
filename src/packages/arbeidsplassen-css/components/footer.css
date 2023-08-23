@@ -51,7 +51,7 @@
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin: 0 0 1rem 0;
-  color: var(--a-text-default);
+  color: var(--arb-text-on-color);
 }
 
 @media (min-width: 960px) {
@@ -74,7 +74,7 @@
 .arb-footer-section ul li a {
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--a-text-default);
+  color: var(--arb-text-on-color);
 }
 
 .arb-footer-section ul li a:hover {
@@ -122,5 +122,5 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--a-text-default);
+  color: var(--arb-text-on-color);
 }
