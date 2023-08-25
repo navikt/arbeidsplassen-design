@@ -19,44 +19,44 @@
   --a-surface-inverted-hover: var(--arb-dark-mode-shade-300);
   --a-surface-inverted-active: var(--arb-dark-mode-shade-300);
 
-  --a-surface-action-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-action-subtle-hover: var(--arb-dark-mode-shade-100);
   --a-surface-action: var(--arb-blue-200);
   --a-surface-action-hover: var(--arb-blue-300);
   --a-surface-action-active: var(--arb-green-500);
+  --a-surface-action-subtle: var(--arb-dark-mode-shade-100);
+  --a-surface-action-subtle-hover: var(--arb-dark-mode-shade-100);
   --a-surface-action-selected: var(--arb-green-500);
   --a-surface-action-selected-hover: var(--arb-green-400);
 
-  --a-surface-neutral-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-neutral-subtle-hover: var(--arb-dark-mode-shade-200);
-  --a-surface-neutral-moderate: var(--arb-dark-mode-shade-400);
   --a-surface-neutral: var(--arb-dark-mode-shade-200);
+  --a-surface-neutral-moderate: var(--arb-dark-mode-shade-400);
   --a-surface-neutral-hover: var(--arb-dark-mode-shade-100);
   --a-surface-neutral-selected: var(--arb-dark-mode-shade-400);
   --a-surface-neutral-active: var(--arb-dark-mode-shade-400);
+  --a-surface-neutral-subtle: var(--arb-dark-mode-shade-100);
+  --a-surface-neutral-subtle-hover: var(--arb-dark-mode-shade-200);
 
+  --a-surface-success: var(--arb-green-400);
+  --a-surface-success-moderate: var(--arb-green-200);
+  --a-surface-success-hover: var(--arb-green-500);
   --a-surface-success-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-success-subtle-hover: var(--arb-green-300);
-  --a-surface-success-moderate: var(--arb-green-200);
-  --a-surface-success: var(--arb-green-400);
-  --a-surface-success-hover: var(--arb-green-500);
 
-  --a-surface-info-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-info-subtle-hover: var(--arb-blue-200);
-  --a-surface-info-moderate: var(--arb-blue-100);
-  --a-surface-info: var(--arb-blue-400);
-
-  --a-surface-warning-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-warning-subtle-hover: var(--arb-orange-200);
-  --a-surface-warning-moderate: var(--arb-orange-200);
-  --a-surface-warning: var(--arb-orange-300);
-
+  --a-surface-danger: var(--arb-red-700);
+  --a-surface-danger-moderate: var(--arb-red-200);
+  --a-surface-danger-active: var(--arb-red-500);
+  --a-surface-danger-hover: var(--arb-red-600);
   --a-surface-danger-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-danger-subtle-hover: var(--arb-red-200);
-  --a-surface-danger-moderate: var(--arb-red-200);
-  --a-surface-danger: var(--arb-red-700);
-  --a-surface-danger-hover: var(--arb-red-600);
-  --a-surface-danger-active: var(--arb-red-500);
+
+  --a-surface-warning: var(--arb-orange-300);
+  --a-surface-warning-moderate: var(--arb-orange-200);
+  --a-surface-warning-subtle: var(--arb-dark-mode-shade-100);
+  --a-surface-warning-subtle-hover: var(--arb-orange-200);
+
+  --a-surface-info: var(--arb-blue-400);
+  --a-surface-info-moderate: var(--arb-blue-100);
+  --a-surface-info-subtle: var(--arb-dark-mode-shade-100);
+  --a-surface-info-subtle-hover: var(--arb-blue-200);
 
   --a-surface-alt-1-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-alt-1-moderate: var(--arb-dark-mode-shade-400);
@@ -125,68 +125,78 @@
   ******************************************************/
   --a-icon-default: var(--arb-dark-mode-shade-800);
   --a-icon-subtle: var(--arb-dark-mode-shade-600);
-  --a-icon-on-neutral: var(--arb-white);
-  --a-icon-on-inverted: var(--arb-white);
+  --a-icon-success: var(--arb-green-400);
+  --a-icon-danger: var(--arb-red-400);
+  --a-icon-warning: var(--arb-orange-400);
+  --a-icon-info: var(--arb-blue-200);
+  --a-icon-alt-1: var(--arb-green-200);
+  --a-icon-alt-2: var(--arb-blue-100);
+  --a-icon-alt-3: var(--arb-peach-200);
 
   --a-icon-action: var(--arb-blue-200);
   --a-icon-action-selected: var(--arb-blue-700);
   --a-icon-action-on-action-subtle: var(--arb-blue-200);
+
+  --a-icon-on-neutral: var(--arb-white);
   --a-icon-on-action: var(--arb-green-900);
-
-  --a-icon-info: var(--arb-blue-200);
-  --a-icon-on-info: var(--arb-white);
-  --a-icon-success: var(--arb-green-400);
   --a-icon-on-success: var(--arb-green-800);
-  --a-icon-warning: var(--arb-orange-400);
-  --a-icon-on-warning: var(--arb-green-800);
-  --a-icon-danger: var(--arb-red-400);
   --a-icon-on-danger: var(--arb-white);
-
-  --a-icon-alt-1: var(--arb-green-200);
-  --a-icon-alt-2: var(--arb-blue-100);
-  --a-icon-alt-3: var(--arb-peach-200);
+  --a-icon-on-warning: var(--arb-green-800);
+  --a-icon-on-info: var(--arb-white);
+  --a-icon-on-inverted: var(--arb-white);
 
   /*****************************************************
   * Custom components variables
   ******************************************************/
 
-  /* Chip */
-  --ac-chip-toggle-text: var(--a-text-action);
-  --ac-chip-toggle-bg: var(--arb-transparent);
-  --ac-chip-toggle-border: var(--a-border-action);
-  --ac-chip-toggle-hover-bg: var(--a-surface-action-subtle);
-  --ac-chip-toggle-hover-border: var(--a-text-action-on-action-subtle);
+  /* Accordion */
+  --ac-accordion-header-bg-hover: var(--arb-dark-mode-shade-100);
+  --ac-accordion-header-icon-bg-hover: var(--arb-dark-mode-shade-200);
+  --ac-accordion-header-border: var(--arb-transparent);
+  --ac-accordion-neutral-item-bg-open: var(--arb-dark-mode-shade-100);
 
-  --ac-chip-removable-neutral-text: var(--a-text-action);
-  --ac-chip-removable-neutral-bg: var(--arb-transparent);
+  /* Alert */
+  --ac-alert-info-border: var(--arb-blue-900);
+  --ac-alert-info-bg: var(--arb-blue-900);
+  --ac-alert-warning-border: var(--arb-orange-900);
+  --ac-alert-warning-bg: var(--arb-orange-900);
+  --ac-alert-error-border: var(--arb-red-900);
+  --ac-alert-error-bg: var(--arb-red-900);
+  --ac-alert-success-border: var(--arb-green-800);
+  --ac-alert-success-bg: var(--arb-green-800);
+
+  /* Chip */
+  --ac-chip-toggle-border: var(--a-border-action);
+  --ac-chip-toggle-bg: var(--arb-transparent);
+  --ac-chip-toggle-text: var(--a-text-action);
+  --ac-chip-toggle-hover-border: var(--a-text-action-on-action-subtle);
+  --ac-chip-toggle-hover-bg: var(--a-surface-action-subtle);
+
   --ac-chip-removable-neutral-border: var(--a-border-action);
-  --ac-chip-removable-neutral-hover-bg: var(--a-surface-action-subtle);
+  --ac-chip-removable-neutral-bg: var(--arb-transparent);
+  --ac-chip-removable-neutral-text: var(--a-text-action);
   --ac-chip-removable-neutral-hover-border: var(
     --a-text-action-on-action-subtle
   );
+  --ac-chip-removable-neutral-hover-bg: var(--a-surface-action-subtle);
 
-  /* Accordion */
-  --ac-accordion-header-border: var(--arb-transparent);
-  --ac-accordion-header-bg-hover: var(--arb-dark-mode-shade-100);
-  --ac-accordion-header-icon-bg-hover: var(--arb-dark-mode-shade-200);
-  --ac-accordion-neutral-item-bg-open: var(--arb-dark-mode-shade-100);
+  /* Button */
+  --ac-button-secondary-text: var(--arb-dark-mode-shade-900);
+  --ac-button-secondary-hover-text: var(--arb-dark-mode-shade-900);
+  --ac-button-secondary-border: var(--arb-dark-mode-shade-800);
+  --ac-button-tertiary-text: var(--arb-dark-mode-shade-900);
+  --ac-button-tertiary-hover-text: var(--arb-dark-mode-shade-900);
+  --ac-button-secondary-focus-border: var(--ac-button-secondary-border);
+  --ac-button-secondary-neutral-focus-border: var(--ac-button-secondary-border);
+  --ac-button-tertiary-focus-border: transparent;
+  --ac-button-tertiary-neutral-focus-border: transparent;
 
   /* Tabs */
   --ac-tabs-selected-border: var(--arb-green-400);
 
   /* ReadMore */
-  --ac-read-more-line: var(--arb-green-400);
   --ac-read-more-hover-bg: var(--arb-dark-mode-shade-100);
-
-  /* Alert */
-  --ac-alert-info-bg: var(--arb-blue-900);
-  --ac-alert-info-border: var(--arb-blue-900);
-  --ac-alert-success-bg: var(--arb-green-800);
-  --ac-alert-success-border: var(--arb-green-800);
-  --ac-alert-warning-bg: var(--arb-orange-900);
-  --ac-alert-warning-border: var(--arb-orange-900);
-  --ac-alert-error-bg: var(--arb-red-900);
-  --ac-alert-error-border: var(--arb-red-900);
+  --ac-read-more-line: var(--arb-green-400);
 
   /* Tag */
   --ac-tag-info-moderate-text: var(--arb-green-900);
@@ -195,21 +205,10 @@
   --ac-tag-danger-moderate-text: var(--arb-green-900);
 
   /* Stepper */
+  --ac-stepper-non-interactive-line-completed: var(--arb-dark-mode-shade-600);
   --ac-stepper-line: var(--a-border-subtle);
   --ac-stepper-line-completed: var(--arb-blue-300);
-  --ac-stepper-non-interactive-line-completed: var(--arb-dark-mode-shade-600);
   --ac-stepper-active-border: var(--a-surface-action-selected);
-
-  /* Button */
-  --ac-button-secondary-text: var(--arb-dark-mode-shade-900);
-  --ac-button-secondary-hover-text: var(--arb-dark-mode-shade-900);
-  --ac-button-secondary-border: var(--arb-dark-mode-shade-800);
-  --ac-button-tertiary-text: var(--arb-dark-mode-shade-900);
-  --ac-button-tertiary-hover-text: var(--arb-dark-mode-shade-600);
-  --ac-button-secondary-focus-border: var(--ac-button-secondary-border);
-  --ac-button-secondary-neutral-focus-border: var(--ac-button-secondary-border);
-  --ac-button-tertiary-focus-border: transparent;
-  --ac-button-tertiary-neutral-focus-border: transparent;
 
   /* Table */
   --a-table-sort-button-sorted-text: var(--a-text-on-action);
@@ -229,22 +228,9 @@
   /*****************************************************
   * Arbeidsplassen specific variables
   ******************************************************/
-  --arb-text-on-color: var(--arb-dark-mode-shade-900);
-  --arb-text-on-strong: var(--arb-white);
-
-  --arb-surface-strong: var(--arb-green-700);
-
-  --arb-surface-primary-subtle: var(--arb-dark-mode-shade-50);
-  --arb-surface-primary-moderate: var(--arb-dark-mode-shade-100);
-  --arb-surface-primary: var(--arb-dark-mode-shade-200);
-
-  --arb-surface-secondary-subtle: var(--arb-dark-mode-shade-50);
-  --arb-surface-secondary-moderate: var(--arb-dark-mode-shade-100);
-  --arb-surface-secondary: var(--arb-dark-mode-shade-200);
-
-  --arb-surface-tertiary-subtle: var(--arb-dark-mode-shade-50);
-  --arb-surface-tertiary-moderate: var(--arb-dark-mode-shade-100);
-  --arb-surface-tertiary: var(--arb-dark-mode-shade-200);
+  --arb-border: var(--arb-green-600);
+  --arb-border-moderate: var(--arb-green-400);
+  --arb-border-subtle: var(--arb-green-200);
 
   --arb-footer-bg: var(--arb-dark-mode-shade-100);
 
@@ -254,6 +240,20 @@
   --arb-link-panel-secondary-text: var(--a-blue-100);
   --arb-link-panel-tertiary-bg: var(--arb-dark-mode-shade-100);
   --arb-link-panel-tertiary-text: var(--arb-peach-200);
+
+  --arb-surface-strong: var(--arb-green-700);
+  --arb-surface-primary-subtle: var(--arb-dark-mode-shade-50);
+  --arb-surface-primary-moderate: var(--arb-dark-mode-shade-100);
+  --arb-surface-primary: var(--arb-dark-mode-shade-200);
+  --arb-surface-secondary-subtle: var(--arb-dark-mode-shade-50);
+  --arb-surface-secondary-moderate: var(--arb-dark-mode-shade-100);
+  --arb-surface-secondary: var(--arb-dark-mode-shade-200);
+  --arb-surface-tertiary-subtle: var(--arb-dark-mode-shade-50);
+  --arb-surface-tertiary-moderate: var(--arb-dark-mode-shade-100);
+  --arb-surface-tertiary: var(--arb-dark-mode-shade-200);
+
+  --arb-text-on-strong: var(--arb-white);
+  --arb-text-on-color: var(--arb-dark-mode-shade-900);
 
   --arb-logo-bg: var(--arb-green-200);
   --arb-logo-text: var(--arb-green-800);

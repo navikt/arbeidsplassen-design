@@ -1,24 +1,19 @@
 import React from "react";
+import MenuItem from "./MenuItem";
 
 function PersonCompanyMenu({ active }) {
   return (
     <div className="arb-header-menu-both">
       <ul>
         <li>
-          <a
-            href="/"
-            className={active === "person" ? "arb-header-active" : undefined}
-          >
+          <MenuItem href="/" active={active} id="person">
             Person
-          </a>
+          </MenuItem>
         </li>
         <li>
-          <a
-            href="/bedrift"
-            className={active === "bedrift" ? "arb-header-active" : undefined}
-          >
+          <MenuItem href="/bedrift" active={active} id="bedrift">
             Bedrift
-          </a>
+          </MenuItem>
         </li>
       </ul>
     </div>

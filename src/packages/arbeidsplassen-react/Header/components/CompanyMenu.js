@@ -1,35 +1,31 @@
 import React from "react";
+import MenuItem from "./MenuItem";
 
 function CompanyMenu({ active }) {
   return (
     <ul>
       <li>
-        <a
+        <MenuItem
+          active={active}
           href="/stillingsregistrering/stillingsannonser"
-          className={
-            active === "stillingsannonser" ? "arb-header-active" : undefined
-          }
+          id="stillingsannonser"
         >
           Stillingsannonser
-        </a>
+        </MenuItem>
       </li>
       <li>
-        <a
+        <MenuItem
+          active={active}
           href="/jobbtreff/bedrift"
-          className={
-            active === "jobbtreff-bedrift" ? "arb-header-active" : undefined
-          }
+          id="jobbtreff-bedrift"
         >
           Jobbtreff
-        </a>
+        </MenuItem>
       </li>
       <li>
-        <a
-          href="/stillingsregistrering"
-          className={active === "var-side" ? "arb-header-active" : undefined}
-        >
+        <MenuItem active={active} href="/stillingsregistrering" id="var-side">
           Vår side
-        </a>
+        </MenuItem>
       </li>
     </ul>
   );

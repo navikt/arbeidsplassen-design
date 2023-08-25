@@ -1,41 +1,28 @@
 import React from "react";
+import MenuItem from "./MenuItem";
 
 function PersonMenu({ active }) {
   return (
     <ul>
       <li>
-        <a
-          href="/stillinger"
-          className={
-            active === "ledige-stillinger" ? "arb-header-active" : undefined
-          }
-        >
+        <MenuItem href="/stillinger" active={active} id="ledige-stillinger">
           Ledige stillinger
-        </a>
+        </MenuItem>
       </li>
       <li>
-        <a
-          href="/jobbtreff"
-          className={active === "jobbtreff" ? "arb-header-active" : undefined}
-        >
+        <MenuItem href="/jobbtreff" active={active} id="jobbtreff">
           Jobbtreff
-        </a>
+        </MenuItem>
       </li>
       <li>
-        <a
-          href="/cv"
-          className={active === "cv" ? "arb-header-active" : undefined}
-        >
+        <MenuItem href="/cv" active={active} id="cv">
           CV
-        </a>
+        </MenuItem>
       </li>
       <li>
-        <a
-          href="/minside"
-          className={active === "min-side" ? "arb-header-active" : undefined}
-        >
+        <MenuItem href="/minside" active={active} id="min-side">
           Min side
-        </a>
+        </MenuItem>
       </li>
     </ul>
   );

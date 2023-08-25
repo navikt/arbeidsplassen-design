@@ -1,13 +1,5 @@
 import Layout from "../examples/Layout";
-import {
-  BodyLong,
-  Checkbox,
-  CheckboxGroup,
-  DatePicker,
-  Heading,
-  Panel,
-  Switch,
-} from "@navikt/ds-react";
+import { BodyLong, Heading, Switch } from "@navikt/ds-react";
 
 export default function Home() {
   return (
@@ -16,23 +8,13 @@ export default function Home() {
         Known issues
       </Heading>
 
-      <Panel border className="mb-2">
+      <div className="mb-2">
         <BodyLong spacing>
           Switch i dark theme har kanskje for liten kontrast mot mørk bakgrunn
           når den ikke er skrudd på
         </BodyLong>
         <Switch>Slå på notifikasjoner</Switch>
-      </Panel>
-
-      <Panel border className="mb-2">
-        <BodyLong spacing>
-          Shadow rundt date field popup er for mørk i dark theme, nesten ikke
-          mulig å se
-        </BodyLong>
-        <DatePicker>
-          <DatePicker.Input label="Velg dato" />
-        </DatePicker>
-      </Panel>
+      </div>
     </Layout>
   );
 }
