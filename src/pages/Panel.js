@@ -1,6 +1,5 @@
 import { BodyLong, Heading, Panel } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import Code from "../examples/Code";
 
 function Template({ ...args }) {
   return (
@@ -15,7 +14,6 @@ function Template({ ...args }) {
           akkurat deg. Les annonsen nøye og se hva de spør etter.
         </BodyLong>
       </Panel>
-      <Code as="Panel" attributes={args} />
     </div>
   );
 }
@@ -23,11 +21,8 @@ function Template({ ...args }) {
 export default function PanelExample() {
   return (
     <Layout title="Panel">
-      <Template className="arb-panel-lofty" />
-      <Template className="arb-panel-primary arb-panel-lofty" />
-      <Template className="arb-panel-secondary arb-panel-lofty" />
-      <Template className="arb-panel-tertiary arb-panel-lofty" />
-      <Template className="arb-panel-tertiary arb-panel-compact" />
+      <Template className="arb-panel-primary" />
+      <Template className="arb-panel-secondary" />
       <Template className="arb-panel-tertiary" />
     </Layout>
   );

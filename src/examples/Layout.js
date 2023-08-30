@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BodyLong, Heading } from "@navikt/ds-react";
+import { BodyLong, Heading, HGrid } from "@navikt/ds-react";
 import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 import { Footer, Header } from "@navikt/arbeidsplassen-react";
 
@@ -54,11 +54,11 @@ export default function Layout({ children, title, headerArgs }) {
         <SkipLink />
         <Header {...headerArgs} />
         <main id="main" className="container-large mt-2 mb-6">
-          <div className="layout-toc">
+          <HGrid columns="250px auto">
             <ul>
               <li>
                 <BodyLong>
-                  <Link href="/">← Home</Link>
+                  <Link href="/">Known issues</Link>
                 </BodyLong>
               </li>
               {tableOfContentByFilename.map((it) => (
@@ -69,14 +69,14 @@ export default function Layout({ children, title, headerArgs }) {
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div>
-            <Heading size="large" level="1" className="mb-2">
-              {title}
-            </Heading>
-            {children}
-          </div>
+            <div>
+              <Heading size="large" level="1" className="mb-2">
+                {title}
+              </Heading>
+              {children}
+            </div>
+          </HGrid>
         </main>
       </div>
       <Footer />

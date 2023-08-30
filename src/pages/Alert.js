@@ -1,6 +1,5 @@
 import { Alert, Heading, Link } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import Code from "../examples/Code";
 
 function Template({ showTitle, title, text, ...args }) {
   return (

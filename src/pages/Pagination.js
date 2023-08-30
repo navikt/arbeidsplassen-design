@@ -1,7 +1,6 @@
 import { Heading, Pagination } from "@navikt/ds-react";
 import React, { useState } from "react";
 import Layout from "../examples/Layout";
-import Code from "../examples/Code";
 
 const PaginationExample = () => {
   const [pageState, setPageState] = useState(2);

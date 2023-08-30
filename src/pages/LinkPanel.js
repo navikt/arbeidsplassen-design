@@ -1,6 +1,5 @@
 import { LinkPanel } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import Code from "../examples/Code";
 
 function Template({ skipDescription, ...args }) {
   return (
@@ -14,7 +13,6 @@ function Template({ skipDescription, ...args }) {
           </LinkPanel.Description>
         )}
       </LinkPanel>
-      <Code as="LinkPanel" attributes={args} />
     </div>
   );
 }

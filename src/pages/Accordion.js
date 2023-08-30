@@ -1,11 +1,13 @@
 import { Accordion, Heading } from "@navikt/ds-react";
 import { Checkbox, CheckboxGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import Code from "../examples/Code";
 
-function Template({ skipDescription, ...args }) {
+function Template({ skipDescription, title, ...args }) {
   return (
     <div className="mb-2">
+      <Heading size="medium" level="2" spacing>
+        {title}
+      </Heading>
       <Accordion {...args}>
         <Accordion.Item>
           <Accordion.Header>Område</Accordion.Header>
@@ -26,7 +28,6 @@ function Template({ skipDescription, ...args }) {
           </Accordion.Content>
         </Accordion.Item>
       </Accordion>
-      <Code as="Accordion" attributes={args} />
     </div>
   );
 }
@@ -74,8 +75,8 @@ const Yrke = () => {
 const AccordionExample = () => {
   return (
     <Layout title="Accordion">
-      <Template />
-      <Template variant="neutral" />
+      <Template title="Standard" />
+      <Template title="Neutral" />
     </Layout>
   );
 };
