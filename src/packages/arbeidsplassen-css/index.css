@@ -2,6 +2,7 @@
 @import "./themes/common.css";
 @import "./themes/light.css";
 @import "./components/header.css";
+@import "./components/feedback.css";
 @import "./components/footer.css";
 @import "./components/link-panel.css";
 @import "./components/panel.css";

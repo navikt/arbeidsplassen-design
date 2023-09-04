@@ -14,6 +14,7 @@ const tableOfContentByFilename = [
   "CopyButton",
   "DatePicker",
   "ErrorSummary",
+  "FeedbackButton",
   "GuidePanel",
   "Header",
   "Heading",

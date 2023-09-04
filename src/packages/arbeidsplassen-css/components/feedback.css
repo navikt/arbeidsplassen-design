@@ -1,0 +1,28 @@
+.arb-feedback-button {
+  padding: 0.5rem;
+  min-width: 6.5rem;
+  border-radius: var(--a-border-radius-medium);
+  background: none;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.arb-feedback-button:hover {
+  background-color: var(--a-surface-neutral-subtle-hover);
+}
+
+.arb-feedback-button:focus {
+  outline: none;
+  box-shadow: var(--a-shadow-focus);
+}
+
+.arb-feedback-button:active {
+  background-color: var(--a-surface-neutral-active);
+  color: var(--a-text-on-neutral);
+}
