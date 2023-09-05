@@ -4,6 +4,10 @@ on:
 
 jobs:
   deploy-docker-image:
+    permissions:
+      packages: write
+      contents: write
+      actions: read
     name: Publish package
     runs-on: ubuntu-latest
     env:
