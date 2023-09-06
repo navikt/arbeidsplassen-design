@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-react",
-  "version": "5.1.3",
+  "version": "5.1.4",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
