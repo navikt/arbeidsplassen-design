@@ -213,10 +213,6 @@
   /* Popover */
   --ac-popover-bg: var(--a-surface-default);
 
-  /* Panel */
-  --ac-panel-bg: var(--arb-surface-primary);
-  --ac-panel-border: transparent;
-
   /* Link panel */
   --ac-link-panel-hover-text: currentColor;
   --ac-link-panel-hover-border: transparent;

@@ -4,7 +4,7 @@ import Layout from "../examples/Layout";
 function Template({ ...args }) {
   return (
     <div className="mb-2">
-      <Panel border={false} {...args}>
+      <Panel {...args}>
         <Heading spacing level="2" size="medium">
           Tips til jobbsøknaden
         </Heading>
@@ -21,6 +21,8 @@ function Template({ ...args }) {
 export default function PanelExample() {
   return (
     <Layout title="Panel">
+      <Template />
+      <Template border={true} />
       <Template className="arb-panel-primary" />
       <Template className="arb-panel-secondary" />
       <Template className="arb-panel-tertiary" />
