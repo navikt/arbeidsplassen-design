@@ -216,6 +216,9 @@
   /* Popover */
   --ac-popover-bg: var(--arb-dark-mode-shade-100);
 
+  /* Panel */
+  --ac-panel-border: transparent;
+
   /* Link panel */
   --ac-link-panel-hover-text: currentColor;
   --ac-link-panel-hover-border: transparent;
