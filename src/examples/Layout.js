@@ -3,6 +3,12 @@ import { BodyLong, Heading, HGrid } from "@navikt/ds-react";
 import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 import { Footer, Header } from "@navikt/arbeidsplassen-react";
 
+const tableOfContentByFilenameArbeidsplassenSpecific = [
+  "FeedbackButton",
+  "Header",
+  "SkipLink",
+].sort();
+
 const tableOfContentByFilename = [
   "Accordion",
   "Alert",
@@ -14,9 +20,7 @@ const tableOfContentByFilename = [
   "CopyButton",
   "DatePicker",
   "ErrorSummary",
-  "FeedbackButton",
   "GuidePanel",
-  "Header",
   "Heading",
   "HelpText",
   "Ingress",
@@ -30,7 +34,6 @@ const tableOfContentByFilename = [
   "ReadMore",
   "Search",
   "Select",
-  "SkipLink",
   "Stepper",
   "Switch",
   "Table",
@@ -55,21 +58,37 @@ export default function Layout({ children, title, headerArgs }) {
         <SkipLink />
         <Header {...headerArgs} />
         <main id="main" className="container-large mt-2 mb-6">
-          <HGrid columns="250px auto">
-            <ul>
-              <li>
-                <BodyLong>
-                  <Link href="/">Known issues</Link>
-                </BodyLong>
-              </li>
-              {tableOfContentByFilename.map((it) => (
-                <li key={it}>
-                  <BodyLong>
-                    <Link href={`/${it}`}>{it}</Link>
-                  </BodyLong>
-                </li>
-              ))}
-            </ul>
+          <HGrid columns="350px auto">
+            <div>
+              <BodyLong spacing>
+                <Link href="/">Known issues</Link>
+              </BodyLong>
+              <Heading size="xsmall" level="3" spacing>
+                Arbeidsplassen components
+              </Heading>
+              <ul>
+                {tableOfContentByFilenameArbeidsplassenSpecific.map((it) => (
+                  <li key={it}>
+                    <BodyLong>
+                      <Link href={`/${it}`}>{it}</Link>
+                    </BodyLong>
+                  </li>
+                ))}
+              </ul>
+
+              <Heading size="xsmall" level="3" spacing>
+                Aksel components
+              </Heading>
+              <ul>
+                {tableOfContentByFilename.map((it) => (
+                  <li key={it}>
+                    <BodyLong>
+                      <Link href={`/${it}`}>{it}</Link>
+                    </BodyLong>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div>
               <Heading size="large" level="1" className="mb-2">
