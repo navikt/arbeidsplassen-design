@@ -13,7 +13,9 @@ function FeedbackButton({
       aria-describedby={ariaDescribedBy}
       type={htmlType}
       className={
-        className ? `arb-feedback-button ${className}` : "arb-feedback-button"
+        className + "arb-button"
+          ? `arb-button arb-feedback-button ${className}`
+          : "arb-button arb-feedback-button"
       }
       onClick={onClick}
     >
