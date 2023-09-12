@@ -22,6 +22,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: Npm install
         run: npm --workspace=src/packages/arbeidsplassen-react install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build package
         run: npm --workspace=src/packages/arbeidsplassen-react run build
       - name: Publish package
