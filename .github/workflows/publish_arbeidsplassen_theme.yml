@@ -1,0 +1,24 @@
+name: Publish Arbeidsplassen theme package to GPR
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-docker-image:
+    permissions:
+      packages: write
+      contents: write
+      actions: read
+    name: Publish package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - name: Publish package
+        run: npm --workspace=src/packages/arbeidsplassen-theme publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
