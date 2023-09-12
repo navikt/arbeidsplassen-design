@@ -3,13 +3,13 @@ import { BodyLong, Heading, HGrid } from "@navikt/ds-react";
 import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 import { Footer, Header } from "@navikt/arbeidsplassen-react";
 
-const tableOfContentByFilenameArbeidsplassenSpecific = [
+const arbeidsplassenComponents = [
   "FeedbackButton",
   "Header",
   "SkipLink",
 ].sort();
 
-const tableOfContentByFilename = [
+const akselComponents = [
   "Accordion",
   "Alert",
   "Button",
@@ -67,7 +67,7 @@ export default function Layout({ children, title, headerArgs }) {
                 Arbeidsplassen components
               </Heading>
               <ul>
-                {tableOfContentByFilenameArbeidsplassenSpecific.map((it) => (
+                {arbeidsplassenComponents.map((it) => (
                   <li key={it}>
                     <BodyLong>
                       <Link href={`/${it}`}>{it}</Link>
@@ -80,7 +80,7 @@ export default function Layout({ children, title, headerArgs }) {
                 Aksel components
               </Heading>
               <ul>
-                {tableOfContentByFilename.map((it) => (
+                {akselComponents.map((it) => (
                   <li key={it}>
                     <BodyLong>
                       <Link href={`/${it}`}>{it}</Link>
