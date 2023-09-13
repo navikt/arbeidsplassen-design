@@ -3,7 +3,7 @@ import Layout from "../examples/Layout";
 
 const Template = ({ title, ...args }) => {
   return (
-    <div className="mb-2">
+    <div className="mb-8">
       <Heading size="medium" level="2" spacing>
         {title}
       </Heading>

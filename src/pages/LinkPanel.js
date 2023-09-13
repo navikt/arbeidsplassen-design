@@ -3,7 +3,7 @@ import Layout from "../examples/Layout";
 
 function Template({ skipDescription, ...args }) {
   return (
-    <div className="mb-2">
+    <div className="mb-8">
       <LinkPanel href="#" {...args}>
         <LinkPanel.Title>Møt en bedrift</LinkPanel.Title>
         {!skipDescription && (

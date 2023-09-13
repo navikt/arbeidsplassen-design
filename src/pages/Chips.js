@@ -10,7 +10,7 @@ const ChipsExample = () => {
 
   return (
     <Layout title="Chips">
-      <div className="mb-4">
+      <div className="mb-16">
         <Heading size="medium" level="2" spacing>
           Selectable standard
         </Heading>
@@ -32,7 +32,7 @@ const ChipsExample = () => {
           ))}
         </Chips>
       </div>
-      <div className="mb-4">
+      <div className="mb-16">
         <Heading size="medium" level="2" spacing>
           Selectable neutral
         </Heading>
@@ -55,7 +55,7 @@ const ChipsExample = () => {
           ))}
         </Chips>
       </div>
-      <div className="mb-4">
+      <div className="mb-16">
         <Heading size="medium" level="2" spacing>
           Removable standard
         </Heading>

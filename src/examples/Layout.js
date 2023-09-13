@@ -57,7 +57,7 @@ export default function Layout({ children, title, headerArgs }) {
       <div className="arb-push-footer-down">
         <SkipLink />
         <Header {...headerArgs} />
-        <main id="main" className="container-large mt-2 mb-6">
+        <main id="main" className="container-large mt-8 mb-24">
           <HGrid columns="350px auto">
             <div>
               <BodyLong spacing>
@@ -91,7 +91,7 @@ export default function Layout({ children, title, headerArgs }) {
             </div>
 
             <div>
-              <Heading size="large" level="1" className="mb-2">
+              <Heading size="large" level="1" className="mb-8">
                 {title}
               </Heading>
               {children}

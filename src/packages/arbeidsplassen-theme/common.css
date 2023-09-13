@@ -62,7 +62,8 @@
     .navds-button--icon-only,
     .navds-search__button-search,
     .navds-date__field-button,
-    .navds-pagination__item
+    .navds-pagination__item,
+    .arb-feedback-button
   ) {
   border-radius: var(--a-border-radius-full) !important;
   padding: 0.75rem 1.5rem !important;

@@ -8,7 +8,7 @@ export default function Home() {
         Known issues
       </Heading>
 
-      <div className="mb-2">
+      <div className="mb-8">
         <BodyLong spacing>
           Switch i dark theme har kanskje for liten kontrast mot mørk bakgrunn
           når den ikke er skrudd på

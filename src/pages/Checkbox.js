@@ -11,7 +11,7 @@ const handleChange = (val) => console.log(val);
 
 function Template({ title, ...args }) {
   return (
-    <div className="mb-4">
+    <div className="mb-16">
       <Heading size="medium" level="2" spacing>
         {title}
       </Heading>

@@ -4,9 +4,9 @@ import Layout from "../examples/Layout";
 const GuidePanelExample = () => {
   return (
     <Layout title="GuidePanel">
-      <GuidePanel poster className="mb-4">
+      <GuidePanel poster className="mb-16">
         <div className="arb-guide-panel-lofsty">
-          <Heading size="medium" level="3" spacing className="text-center mb-2">
+          <Heading size="medium" level="3" spacing className="text-center mb-8">
             Slik fungerer det
           </Heading>
 

@@ -6,7 +6,7 @@ const PaginationExample = () => {
   const [pageState, setPageState] = useState(2);
   return (
     <Layout title="Pagination">
-      <div className="mb-4">
+      <div className="mb-16">
         <Heading size="medium" level="2" spacing>
           With button text
         </Heading>

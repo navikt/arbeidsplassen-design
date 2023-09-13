@@ -18,7 +18,7 @@ const FeedbackButtonExample = () => {
         Example
       </Heading>
       <FeedbackButton
-        className="mb-2"
+        className="mb-8"
         icon={
           <FaceSmileIcon aria-hidden="true" height="1.5rem" width="1.5rem" />
         }

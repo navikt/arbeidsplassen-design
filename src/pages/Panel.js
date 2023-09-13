@@ -3,7 +3,7 @@ import Layout from "../examples/Layout";
 
 function Template({ ...args }) {
   return (
-    <div className="mb-2">
+    <div className="mb-8">
       <Panel {...args}>
         <Heading spacing level="2" size="medium">
           Tips til jobbsøknaden

@@ -7,7 +7,7 @@ const StepperExample = () => {
 
   return (
     <Layout title="Stepper">
-      <div className="mb-4">
+      <div className="mb-16">
         <Heading size="small" level="3" spacing>
           Interactive
         </Heading>
@@ -24,7 +24,7 @@ const StepperExample = () => {
         </Stepper>
       </div>
 
-      <div className="mb-4">
+      <div className="mb-16">
         <Heading size="small" level="3" spacing>
           Static
         </Heading>
@@ -41,7 +41,7 @@ const StepperExample = () => {
         </Stepper>
       </div>
 
-      <div className="mb-4">
+      <div className="mb-16">
         <Heading size="small" level="3" spacing>
           Wizard
         </Heading>
@@ -49,7 +49,7 @@ const StepperExample = () => {
           activeStep={activeStep}
           onStepChange={(x) => setActiveStep(x)}
           orientation="horizontal"
-          className="mb-2"
+          className="mb-8"
         >
           <Stepper.Step href="#" completed>
             Din bedrift

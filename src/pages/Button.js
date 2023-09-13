@@ -4,7 +4,7 @@ import { TrashIcon } from "@navikt/aksel-icons";
 
 function ButtonTemplate({ variant, ...args }) {
   return (
-    <div className="mb-2_5">
+    <div className="mb-10">
       <Heading size="small" level="2" spacing>
         {variant}
       </Heading>

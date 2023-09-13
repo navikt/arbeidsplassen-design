@@ -7,7 +7,7 @@ const TagExample = () => {
       <Heading size="medium" level="2" spacing>
         Subtle
       </Heading>
-      <HStack gap="4" className="mb-4">
+      <HStack gap="4" className="mb-16">
         <Tag variant="info">Info</Tag>
         <Tag variant="success">Success</Tag>
         <Tag variant="warning">Warning</Tag>
@@ -21,7 +21,7 @@ const TagExample = () => {
       <Heading size="medium" level="2" spacing>
         Moderate
       </Heading>
-      <HStack gap="4" className="mb-4">
+      <HStack gap="4" className="mb-16">
         <Tag variant="info-moderate">Info</Tag>
         <Tag variant="success-moderate">Success</Tag>
         <Tag variant="warning-moderate">Warning</Tag>
@@ -35,7 +35,7 @@ const TagExample = () => {
       <Heading size="medium" level="2" spacing>
         Filled
       </Heading>
-      <HStack gap="4" className="mb-4">
+      <HStack gap="4" className="mb-16">
         <Tag variant="info-filled">Info</Tag>
         <Tag variant="success-filled">Success</Tag>
         <Tag variant="warning-filled">Warning</Tag>
@@ -49,7 +49,7 @@ const TagExample = () => {
       <Heading size="medium" level="2" spacing>
         Medium or small size
       </Heading>
-      <HStack gap="4" className="mb-4">
+      <HStack gap="4" className="mb-16">
         <Tag variant="info-moderate" size="small">
           Small
         </Tag>

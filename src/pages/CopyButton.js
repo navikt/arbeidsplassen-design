@@ -7,12 +7,12 @@ const CopyButtonExample = () => {
       <Heading size="medium" level="2" spacing>
         Neutral
       </Heading>
-      <CopyButton copyText="3.14" className="mb-2" />
+      <CopyButton copyText="3.14" className="mb-8" />
 
       <Heading size="medium" level="2" spacing>
         Med tekst
       </Heading>
-      <CopyButton copyText="3.14" text="Kopier" className="mb-2" />
+      <CopyButton copyText="3.14" text="Kopier" className="mb-8" />
 
       <Heading size="medium" level="2" spacing>
         Action
@@ -21,7 +21,7 @@ const CopyButtonExample = () => {
         copyText="3.14"
         variant="action"
         text="Kopier"
-        className="mb-2"
+        className="mb-8"
       />
     </Layout>
   );

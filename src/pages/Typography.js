@@ -4,7 +4,7 @@ import { BodyLong, Heading, Ingress } from "@navikt/ds-react";
 export default function TypographyPage() {
   return (
     <Layout>
-      <section className="mb-4">
+      <section className="mb-16">
         <Heading size="xlarge" level="2" spacing>
           Om Arbeidsplassen
         </Heading>

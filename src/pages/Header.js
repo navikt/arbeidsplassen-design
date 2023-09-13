@@ -29,7 +29,7 @@ export default function HeaderPage() {
         legend="variant"
         value={variant}
         onChange={(val) => setVariant(val)}
-        className="mb-2"
+        className="mb-8"
       >
         <Radio value="person">person</Radio>
         <Radio value="company">company</Radio>
@@ -40,7 +40,7 @@ export default function HeaderPage() {
         legend="authenticationStatus"
         value={authenticationStatus}
         onChange={(val) => setAuthenticationStatus(val)}
-        className="mb-2"
+        className="mb-8"
       >
         <Radio value="unknown">unknown</Radio>
         <Radio value="is-authenticated">is-authenticated</Radio>
@@ -51,7 +51,7 @@ export default function HeaderPage() {
         label="active"
         value={active}
         onChange={(e) => setActive(e.target.value)}
-        className="mb-2"
+        className="mb-8"
       >
         <option value="person">person</option>
         <option value="bedrift">bedrift</option>
@@ -68,7 +68,7 @@ export default function HeaderPage() {
         legend="showChangeCompany"
         value={showChangeCompany}
         onChange={(val) => setShowChangeCompany(val)}
-        className="mb-2"
+        className="mb-8"
       >
         <Radio value={false}>false</Radio>
         <Radio value={true}>true</Radio>
@@ -78,14 +78,14 @@ export default function HeaderPage() {
         label="userName"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
-        className="mb-2"
+        className="mb-8"
       />
 
       <TextField
         label="companyName"
         value={companyName}
         onChange={(e) => setCompanyName(e.target.value)}
-        className="mb-2"
+        className="mb-8"
       />
     </Layout>
   );

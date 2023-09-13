@@ -55,7 +55,7 @@ const ComboBoxExample = () => {
       </Heading>
       <UNSAFE_Combobox
         label="Hva er den aller kuleste Star Wars-filmen noensinne, helt objektivt?"
-        className="mb-4"
+        className="mb-16"
         onChange={onChange}
         onToggleSelected={onToggleSelected}
         onClear={onClear}
@@ -74,7 +74,7 @@ const ComboBoxExample = () => {
         label="Hva er dine favorittdrikker? Legg gjerne til flere alternativer."
         filteredOptions={filteredOptions}
         isMultiSelect
-        className="mb-4"
+        className="mb-16"
       />
     </Layout>
   );

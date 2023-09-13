@@ -5,7 +5,7 @@ const SearchExample = () => {
   return (
     <Layout title="Search">
       <form>
-        <div className="mb-2">
+        <div className="mb-8">
           <Search
             label="Søk etter ledige stillinger"
             variant="primary"

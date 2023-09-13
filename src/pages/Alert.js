@@ -3,8 +3,8 @@ import Layout from "../examples/Layout";
 
 function Template({ showTitle, title, text, ...args }) {
   return (
-    <div className="mb-4">
-      <Alert {...args} className="mb-1_5">
+    <div className="mb-16">
+      <Alert {...args} className="mb-6">
         {!showTitle && (
           <Heading spacing size="xsmall" level="3">
             {title}
