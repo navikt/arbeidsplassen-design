@@ -41,7 +41,7 @@ const FeedbackButtonExample = () => {
           </Heading>
           <HStack gap="2" justify="center">
             <FeedbackButton
-              ariaDescribedBy="poll-title"
+              aria-describedby="poll-title"
               icon={
                 <FaceSmileIcon
                   aria-hidden="true"
@@ -53,7 +53,7 @@ const FeedbackButtonExample = () => {
               Ja
             </FeedbackButton>
             <FeedbackButton
-              ariaDescribedBy="poll-title"
+              aria-describedby="poll-title"
               icon={
                 <FaceFrownIcon
                   aria-hidden="true"
@@ -65,7 +65,7 @@ const FeedbackButtonExample = () => {
               Nei
             </FeedbackButton>
             <FeedbackButton
-              ariaDescribedBy="poll-title"
+              aria-describedby="poll-title"
               icon={
                 <FaceIcon aria-hidden="true" height="1.5rem" width="1.5rem" />
               }
