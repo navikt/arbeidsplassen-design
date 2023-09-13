@@ -1,27 +1,26 @@
 import React from "react";
+import { Button } from "@navikt/ds-react";
 
 function FeedbackButton({
   children,
   icon,
+  variant = "tertiary-neutral",
   className,
-  onClick,
-  htmlType = "button",
-  ariaDescribedBy,
+  ...rest
 }) {
   return (
-    <button
-      aria-describedby={ariaDescribedBy}
-      type={htmlType}
+    <Button
+      variant={variant}
       className={
-        className + "arb-button"
-          ? `arb-button arb-feedback-button ${className}`
-          : "arb-button arb-feedback-button"
+        className ? `arb-feedback-button ${className}` : "arb-feedback-button"
       }
-      onClick={onClick}
+      {...rest}
     >
-      {icon}
-      {children}
-    </button>
+      <span className="arb-feedback-button-inner">
+        {icon}
+        {children}
+      </span>
+    </Button>
   );
 }
 
