@@ -4,8 +4,6 @@
   left: 0;
   display: block;
   clip: rect(1px, 1px, 1px, 1px);
-  background-color: var(--a-surface-action);
-  color: #fff;
 }
 
 .arb-skip-link:focus,
@@ -14,10 +12,9 @@
   margin: auto;
   clip: auto;
   outline: none;
-  padding: 1.25rem;
-  font-size: 1.125rem;
-  line-height: 1.15;
+  padding: var(--a-spacing-6);
   z-index: 999;
+  text-decoration: underline;
 }
 
 .arb-skip-link:focus:hover,

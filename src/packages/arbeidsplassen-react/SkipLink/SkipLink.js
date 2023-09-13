@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "@navikt/ds-react";
 
 function SkipLink({ href = "#main", text = "Hopp til innhold" }) {
   return (
-    <a href={href} className="arb-skip-link">
+    <Link href={href} className="arb-skip-link">
       {text}
-    </a>
+    </Link>
   );
 }
 

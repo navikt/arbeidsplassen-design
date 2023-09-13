@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BodyLong, Heading, HGrid } from "@navikt/ds-react";
+import { BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
 import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 import { Footer, Header } from "@navikt/arbeidsplassen-react";
 
@@ -61,7 +61,9 @@ export default function Layout({ children, title, headerArgs }) {
           <HGrid columns="350px auto">
             <div>
               <BodyLong spacing>
-                <Link href="/">Known issues</Link>
+                <AkselLink as={Link} href="/">
+                  Known issues
+                </AkselLink>
               </BodyLong>
               <Heading size="xsmall" level="3" spacing>
                 Arbeidsplassen components
@@ -70,7 +72,9 @@ export default function Layout({ children, title, headerArgs }) {
                 {arbeidsplassenComponents.map((it) => (
                   <li key={it}>
                     <BodyLong>
-                      <Link href={`/${it}`}>{it}</Link>
+                      <AkselLink as={Link} href={`/${it}`}>
+                        {it}
+                      </AkselLink>
                     </BodyLong>
                   </li>
                 ))}
@@ -83,7 +87,9 @@ export default function Layout({ children, title, headerArgs }) {
                 {akselComponents.map((it) => (
                   <li key={it}>
                     <BodyLong>
-                      <Link href={`/${it}`}>{it}</Link>
+                      <AkselLink as={Link} href={`/${it}`}>
+                        {it}
+                      </AkselLink>
                     </BodyLong>
                   </li>
                 ))}
