@@ -2,6 +2,13 @@
 .arb-link-panel-secondary,
 .arb-link-panel-tertiary {
   padding: 1.5rem;
+  border: 0;
+}
+
+.arb-link-panel-primary:hover,
+.arb-link-panel-secondary:hover,
+.arb-link-panel-tertiary:hover {
+  box-shadow: none !important;
 }
 
 .arb-link-panel-primary {

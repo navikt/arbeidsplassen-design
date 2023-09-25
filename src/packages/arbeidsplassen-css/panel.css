@@ -1,11 +1,11 @@
 .arb-panel-primary,
 .arb-panel-secondary,
 .arb-panel-tertiary {
-  color: var(--arb-text-on-color) !important;
+  padding: var(--a-spacing-6) !important;
 }
 
 .arb-panel-primary {
-  background-color: var(--arb-link-panel-primary-bg);
+  background-color: var(--a-surface-alt-1);
 }
 
 .arb-panel-secondary {

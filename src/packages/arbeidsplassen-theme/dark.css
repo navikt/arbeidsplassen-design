@@ -1,4 +1,7 @@
 [data-theme="arbeidsplassen-dark"] {
+  color: var(--a-text-default);
+  background-color: var(--a-bg-default);
+
   /******************************************************
    * Background colors
    ******************************************************/
@@ -58,18 +61,18 @@
   --a-surface-info-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-info-subtle-hover: var(--arb-blue-200);
 
-  --a-surface-alt-1-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-alt-1-moderate: var(--arb-dark-mode-shade-400);
+  --a-surface-alt-1-subtle: var(--arb-dark-mode-shade-50);
+  --a-surface-alt-1-moderate: var(--arb-dark-mode-shade-100);
   --a-surface-alt-1: var(--arb-dark-mode-shade-200);
 
-  --a-surface-alt-2-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-alt-2-moderate: var(--arb-dark-mode-shade-400);
+  --a-surface-alt-2-subtle: var(--arb-dark-mode-shade-50);
+  --a-surface-alt-2-moderate: var(--arb-dark-mode-shade-100);
   --a-surface-alt-2: var(--arb-dark-mode-shade-200);
 
-  --a-surface-alt-3-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-alt-3-moderate: var(--arb-dark-mode-shade-400);
+  --a-surface-alt-3-subtle: var(--arb-dark-mode-shade-50);
+  --a-surface-alt-3-moderate: var(--arb-dark-mode-shade-100);
   --a-surface-alt-3: var(--arb-dark-mode-shade-200);
-  --a-surface-alt-3-strong: var(--arb-dark-mode-shade-600);
+  --a-surface-alt-3-strong: var(--arb-dark-mode-shade-400);
 
   /******************************************************
    * Text colors
@@ -202,7 +205,7 @@
   --ac-tag-info-moderate-text: var(--arb-green-900);
   --ac-tag-success-moderate-text: var(--arb-green-900);
   --ac-tag-warning-moderate-text: var(--arb-green-900);
-  --ac-tag-danger-moderate-text: var(--arb-green-900);
+  --ac-tag-error-moderate-text: var(--arb-green-900);
 
   /* Stepper */
   --ac-stepper-non-interactive-line-completed: var(--arb-dark-mode-shade-600);
@@ -222,7 +225,6 @@
   /* Link panel */
   --ac-link-panel-hover-text: currentColor;
   --ac-link-panel-hover-border: transparent;
-  --ac-link-panel-text: var(--arb-text-on-color);
 
   /*****************************************************
   * Arbeidsplassen specific variables
@@ -239,20 +241,6 @@
   --arb-link-panel-secondary-text: var(--a-blue-100);
   --arb-link-panel-tertiary-bg: var(--arb-dark-mode-shade-100);
   --arb-link-panel-tertiary-text: var(--arb-peach-200);
-
-  --arb-surface-strong: var(--arb-green-700);
-  --arb-surface-primary-subtle: var(--arb-dark-mode-shade-50);
-  --arb-surface-primary-moderate: var(--arb-dark-mode-shade-100);
-  --arb-surface-primary: var(--arb-dark-mode-shade-200);
-  --arb-surface-secondary-subtle: var(--arb-dark-mode-shade-50);
-  --arb-surface-secondary-moderate: var(--arb-dark-mode-shade-100);
-  --arb-surface-secondary: var(--arb-dark-mode-shade-200);
-  --arb-surface-tertiary-subtle: var(--arb-dark-mode-shade-50);
-  --arb-surface-tertiary-moderate: var(--arb-dark-mode-shade-100);
-  --arb-surface-tertiary: var(--arb-dark-mode-shade-200);
-
-  --arb-text-on-strong: var(--arb-white);
-  --arb-text-on-color: var(--arb-dark-mode-shade-900);
 
   --arb-logo-bg: var(--arb-green-200);
   --arb-logo-text: var(--arb-green-800);
