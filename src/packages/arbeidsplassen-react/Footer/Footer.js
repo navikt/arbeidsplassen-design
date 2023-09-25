@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@navikt/ds-react";
 
 export default function Footer() {
   return (
@@ -9,18 +10,24 @@ export default function Footer() {
             <h2 className="arb-footer-h2">Om oss</h2>
             <ul>
               <li>
-                <a href="/kontakt">Kontakt oss</a>
+                <Link href="/kontakt" className="arb-footer-link">
+                  Kontakt oss
+                </Link>
               </li>
               <li>
-                <a href="/personvern">Personvern</a>
+                <Link href="/personvern" className="arb-footer-link">
+                  Personvern
+                </Link>
               </li>
               <li>
-                <a href="/tilgjengelighet">Tilgjengelighet</a>
+                <Link href="/tilgjengelighet" className="arb-footer-link">
+                  Tilgjengelighet
+                </Link>
               </li>
               <li>
-                <a href="/om-arbeidsplassen">
+                <Link href="/om-arbeidsplassen" className="arb-footer-link">
                   Om <span translate="no">arbeidsplassen.no</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </section>
@@ -29,20 +36,27 @@ export default function Footer() {
             <h2 className="arb-footer-h2">For jobbsøkere</h2>
             <ul>
               <li>
-                <a href="/nyttige-artikler-for-jobbsokere">
+                <Link
+                  href="/nyttige-artikler-for-jobbsokere"
+                  className="arb-footer-link"
+                >
                   Nyttige artikler for jobbsøkere
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/sporsmal-og-svar">Spørsmål og svar</a>
+                <Link href="/sporsmal-og-svar" className="arb-footer-link">
+                  Spørsmål og svar
+                </Link>
               </li>
               <li>
-                <a href="/jobbe-i-utlandet">Jobbe i utlandet</a>
+                <Link href="/jobbe-i-utlandet" className="arb-footer-link">
+                  Jobbe i utlandet
+                </Link>
               </li>
               <li>
-                <a href="/en/work-in-norway">
+                <Link href="/en/work-in-norway" className="arb-footer-link">
                   Information to refugees from Ukraine
-                </a>
+                </Link>
               </li>
             </ul>
           </section>
@@ -51,20 +65,33 @@ export default function Footer() {
             <h2 className="arb-footer-h2">For bedrifter</h2>
             <ul>
               <li>
-                <a href="/vilkar-og-retningslinjer">Vilkår og retningslinjer</a>
+                <Link
+                  href="/vilkar-og-retningslinjer"
+                  className="arb-footer-link"
+                >
+                  Vilkår og retningslinjer
+                </Link>
               </li>
               <li>
-                <a href="/arbeidsgivertjenester">Hjelp til innlogging</a>
+                <Link href="/arbeidsgivertjenester" className="arb-footer-link">
+                  Hjelp til innlogging
+                </Link>
               </li>
               <li>
-                <a href="/overforing-av-stillingsannonser">
+                <Link
+                  href="/overforing-av-stillingsannonser"
+                  className="arb-footer-link"
+                >
                   Overføre annonser med API
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/nyttige-artikler-for-bedrifter">
+                <Link
+                  href="/nyttige-artikler-for-bedrifter"
+                  className="arb-footer-link"
+                >
                   Nyttige artikler for bedrifter
-                </a>
+                </Link>
               </li>
             </ul>
           </section>
