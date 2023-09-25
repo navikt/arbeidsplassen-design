@@ -4,6 +4,7 @@ import FeedbackButton from "@navikt/arbeidsplassen-react/Feedback/FeedbackButton
 import {
   BodyLong,
   BodyShort,
+  Box,
   Heading,
   HStack,
   Link,
@@ -29,7 +30,7 @@ const FeedbackButtonExample = () => {
       <Heading size="medium" level="2" spacing>
         Full example
       </Heading>
-      <Panel border={false} className="arb-panel-secondary">
+      <Box padding="6" background="surface-alt-2-subtle" borderRadius="small">
         <VStack gap="2" align="center">
           <Heading
             level="3"
@@ -81,7 +82,7 @@ const FeedbackButtonExample = () => {
             <Link href="#">Skriv en kort tilbakemelding</Link>
           </BodyShort>
         </VStack>
-      </Panel>
+      </Box>
     </Layout>
   );
 };

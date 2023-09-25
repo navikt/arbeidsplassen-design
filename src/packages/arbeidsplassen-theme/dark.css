@@ -61,15 +61,15 @@
   --a-surface-info-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-info-subtle-hover: var(--arb-blue-200);
 
-  --a-surface-alt-1-subtle: var(--arb-dark-mode-shade-50);
+  --a-surface-alt-1-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-alt-1-moderate: var(--arb-dark-mode-shade-100);
   --a-surface-alt-1: var(--arb-dark-mode-shade-200);
 
-  --a-surface-alt-2-subtle: var(--arb-dark-mode-shade-50);
+  --a-surface-alt-2-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-alt-2-moderate: var(--arb-dark-mode-shade-100);
   --a-surface-alt-2: var(--arb-dark-mode-shade-200);
 
-  --a-surface-alt-3-subtle: var(--arb-dark-mode-shade-50);
+  --a-surface-alt-3-subtle: var(--arb-dark-mode-shade-100);
   --a-surface-alt-3-moderate: var(--arb-dark-mode-shade-100);
   --a-surface-alt-3: var(--arb-dark-mode-shade-200);
   --a-surface-alt-3-strong: var(--arb-dark-mode-shade-400);
@@ -219,13 +219,6 @@
   /* Popover */
   --ac-popover-bg: var(--arb-dark-mode-shade-100);
 
-  /* Panel */
-  --ac-panel-border: transparent;
-
-  /* Link panel */
-  --ac-link-panel-hover-text: currentColor;
-  --ac-link-panel-hover-border: transparent;
-
   /*****************************************************
   * Arbeidsplassen specific variables
   ******************************************************/
@@ -234,7 +227,9 @@
   --arb-border-subtle: var(--arb-green-200);
 
   --arb-footer-bg: var(--arb-dark-mode-shade-100);
+  --arb-footer-text: var(--a-text-default);
 
+  --arb-link-panel-description-on-color: var(--a-text-default);
   --arb-link-panel-primary-bg: var(--arb-dark-mode-shade-100);
   --arb-link-panel-primary-text: var(--arb-green-200);
   --arb-link-panel-secondary-bg: var(--arb-dark-mode-shade-100);

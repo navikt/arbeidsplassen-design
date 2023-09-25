@@ -3,6 +3,7 @@
 .arb-link-panel-tertiary {
   padding: 1.5rem;
   border: 0;
+  color: var(--arb-link-panel-description-on-color);
 }
 
 .arb-link-panel-primary:hover,

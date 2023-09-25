@@ -10,22 +10,16 @@ export default function Footer() {
             <h2 className="arb-footer-h2">Om oss</h2>
             <ul>
               <li>
-                <Link href="/kontakt" className="arb-footer-link">
-                  Kontakt oss
-                </Link>
+                <Link href="/kontakt">Kontakt oss</Link>
               </li>
               <li>
-                <Link href="/personvern" className="arb-footer-link">
-                  Personvern
-                </Link>
+                <Link href="/personvern">Personvern</Link>
               </li>
               <li>
-                <Link href="/tilgjengelighet" className="arb-footer-link">
-                  Tilgjengelighet
-                </Link>
+                <Link href="/tilgjengelighet">Tilgjengelighet</Link>
               </li>
               <li>
-                <Link href="/om-arbeidsplassen" className="arb-footer-link">
+                <Link href="/om-arbeidsplassen">
                   Om <span translate="no">arbeidsplassen.no</span>
                 </Link>
               </li>
@@ -36,25 +30,18 @@ export default function Footer() {
             <h2 className="arb-footer-h2">For jobbsøkere</h2>
             <ul>
               <li>
-                <Link
-                  href="/nyttige-artikler-for-jobbsokere"
-                  className="arb-footer-link"
-                >
+                <Link href="/nyttige-artikler-for-jobbsokere">
                   Nyttige artikler for jobbsøkere
                 </Link>
               </li>
               <li>
-                <Link href="/sporsmal-og-svar" className="arb-footer-link">
-                  Spørsmål og svar
-                </Link>
+                <Link href="/sporsmal-og-svar">Spørsmål og svar</Link>
               </li>
               <li>
-                <Link href="/jobbe-i-utlandet" className="arb-footer-link">
-                  Jobbe i utlandet
-                </Link>
+                <Link href="/jobbe-i-utlandet">Jobbe i utlandet</Link>
               </li>
               <li>
-                <Link href="/en/work-in-norway" className="arb-footer-link">
+                <Link href="/en/work-in-norway">
                   Information to refugees from Ukraine
                 </Link>
               </li>
@@ -65,31 +52,20 @@ export default function Footer() {
             <h2 className="arb-footer-h2">For bedrifter</h2>
             <ul>
               <li>
-                <Link
-                  href="/vilkar-og-retningslinjer"
-                  className="arb-footer-link"
-                >
+                <Link href="/vilkar-og-retningslinjer">
                   Vilkår og retningslinjer
                 </Link>
               </li>
               <li>
-                <Link href="/arbeidsgivertjenester" className="arb-footer-link">
-                  Hjelp til innlogging
-                </Link>
+                <Link href="/arbeidsgivertjenester">Hjelp til innlogging</Link>
               </li>
               <li>
-                <Link
-                  href="/overforing-av-stillingsannonser"
-                  className="arb-footer-link"
-                >
+                <Link href="/overforing-av-stillingsannonser">
                   Overføre annonser med API
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/nyttige-artikler-for-bedrifter"
-                  className="arb-footer-link"
-                >
+                <Link href="/nyttige-artikler-for-bedrifter">
                   Nyttige artikler for bedrifter
                 </Link>
               </li>
