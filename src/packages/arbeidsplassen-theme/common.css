@@ -1,5 +1,4 @@
-[data-theme="arbeidsplassen"],
-[data-theme="arbeidsplassen-dark"] {
+[data-theme="arbeidsplassen"] {
   --a-font-family: "Inter", sans-serif;
   --a-font-size-medium: 0.875rem;
   --a-font-size-large: 1rem;
