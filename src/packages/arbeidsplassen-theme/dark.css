@@ -1,6 +1,7 @@
 [data-theme="arbeidsplassen-dark"] {
   color: var(--a-text-default);
   background-color: var(--a-bg-default);
+  -webkit-font-smoothing: antialiased;
 
   /******************************************************
    * Background colors
