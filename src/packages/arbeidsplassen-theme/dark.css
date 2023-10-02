@@ -238,8 +238,8 @@
   --arb-link-panel-tertiary-bg: var(--arb-dark-mode-shade-100);
   --arb-link-panel-tertiary-text: var(--arb-peach-200);
 
-  --arb-logo-bg: var(--arb-green-200);
-  --arb-logo-text: var(--arb-green-800);
-  --arb-logo-iverted-bg: var(--arb-green-800);
-  --arb-logo-iverted-text: var(--arb-green-200);
+  --arb-logo-bg: var(--arb-green-800);
+  --arb-logo-letters: var(--arb-green-200);
+  --arb-logo-inverted-bg: var(--arb-green-200);
+  --arb-logo-inverted-letters: var(--arb-green-800);
 }

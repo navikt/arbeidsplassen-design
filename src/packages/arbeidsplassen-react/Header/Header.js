@@ -14,11 +14,11 @@ function joinClassNames(...strings) {
 
 export default function Header({
   className,
-  variant,
+  variant = "all",
   active,
   userName,
   companyName,
-  authenticationStatus,
+  authenticationStatus = "unknown",
   onLogin,
   onLogout,
   showChangeCompany,
@@ -86,16 +86,6 @@ export default function Header({
     </header>
   );
 }
-
-Header.defaultProps = {
-  variant: "all",
-  active: undefined,
-  authenticationStatus: "unknown",
-  userName: undefined,
-  companyName: undefined,
-  showChangeCompany: false,
-  onChangeCompanyClick: undefined,
-};
 
 Header.propTypes = {
   onLogin: PropTypes.func.isRequired,

@@ -58,7 +58,7 @@ export default function Layout({ children, title, headerArgs }) {
         <SkipLink />
         <Header {...headerArgs} />
         <main id="main" className="container-large mt-8 mb-24">
-          <HGrid columns="350px auto">
+          <HGrid columns={{ md: "auto auto", lg: "350px auto" }}>
             <div>
               <BodyLong spacing>
                 <AkselLink as={Link} href="/">

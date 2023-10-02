@@ -106,14 +106,6 @@
   height: 40px;
 }
 
-.arb-footer-logo-bg {
-  fill: var(--arb-logo-iverted-bg);
-}
-
-.arb-footer-logo-text {
-  fill: var(--arb-logo-iverted-text);
-}
-
 .arb-footer-logo:focus {
   outline: 3px solid var(--a-border-focus);
 }

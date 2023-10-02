@@ -1,0 +1,15 @@
+.arb-logo-bg {
+  fill: var(--arb-logo-bg);
+}
+
+.arb-logo-letters {
+  fill: var(--arb-logo-letters);
+}
+
+.arb-logo-inverted-bg {
+  fill: var(--arb-logo-inverted-bg);
+}
+
+.arb-logo-inverted-letters {
+  fill: var(--arb-logo-inverted-letters);
+}
