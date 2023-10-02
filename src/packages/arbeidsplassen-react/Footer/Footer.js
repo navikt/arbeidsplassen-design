@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "@navikt/ds-react";
 
 export default function Footer() {
+  useEffect(() => {
+    try {
+      if (!window.location.href.startsWith("https://arbeidsplassen.nav.no/")) {
+        const theme = localStorage.getItem("theme");
+        if (theme && theme === "dark") {
+          document.body.dataset.theme = "arbeidsplassen-dark";
+        } else {
+          document.body.dataset.theme = "arbeidsplassen";
+        }
+      }
+    } catch (err) {
+      //ignore
+    }
+  }, []);
+
   return (
     <footer className="arb-footer">
       <div className="container-large">
