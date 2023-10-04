@@ -12,30 +12,3 @@
   max-width: 50ch;
   text-align: center;
 }
-
-/**
- * Light / dark mode styling of svg
- */
-[data-theme="arbeidsplassen-dark"] {
-  --arb-svg-arms-and-legs: var(--arb-dark-mode-shade-400);
-  --arb-svg-arms-and-legs-fill: var(--arb-dark-mode-shade-400);
-  --arb-svg-shadow: var(--arb-whitealpha-50);
-}
-
-[data-theme="arbeidsplassen"] {
-  --arb-svg-arms-and-legs: var(--arb-green-700);
-  --arb-svg-arms-and-legs-fill: var(--arb-green-700);
-  --arb-svg-shadow: var(--arb-blue-50);
-}
-
-.arb-not-found-svg-arms-and-legs {
-  stroke: var(--arb-svg-arms-and-legs);
-}
-
-.arb-not-found-svg-arms-and-legs-fill {
-  fill: var(--arb-svg-arms-and-legs-fill);
-}
-
-.arb-not-found-svg-shadow {
-  fill: var(--arb-svg-shadow);
-}

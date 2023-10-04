@@ -6,6 +6,7 @@ import { Footer, Header } from "@navikt/arbeidsplassen-react";
 const arbeidsplassenComponents = [
   "FeedbackButton",
   "Header",
+  "Illustrations",
   "NotFound",
   "SkipLink",
 ].sort();

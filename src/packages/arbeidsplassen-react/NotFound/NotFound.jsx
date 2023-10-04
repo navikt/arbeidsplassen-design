@@ -1,5 +1,5 @@
 import React from "react";
-import ConfusedGrape from "./ConfusedGrape";
+import ConfusedGrape from "../illustrations/ConfusedGrape";
 import { BodyLong, Heading } from "@navikt/ds-react";
 import PropTypes from "prop-types";
 

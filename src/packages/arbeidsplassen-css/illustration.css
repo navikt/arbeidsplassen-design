@@ -1,0 +1,26 @@
+/**
+ * Light / dark mode styling of svg
+ */
+[data-theme="arbeidsplassen-dark"] {
+  --arb-illustration-arms-and-legs-stroke: var(--arb-dark-mode-shade-400);
+  --arb-illustration-arms-and-legs-fill: var(--arb-dark-mode-shade-400);
+  --arb-illustration-shadow: var(--arb-whitealpha-50);
+}
+
+[data-theme="arbeidsplassen"] {
+  --arb-illustration-arms-and-legs-stroke: var(--arb-green-700);
+  --arb-illustration-arms-and-legs-fill: var(--arb-green-700);
+  --arb-illustration-shadow: var(--arb-blue-50);
+}
+
+.arb-illustration-arms-and-legs-stroke {
+  stroke: var(--arb-illustration-arms-and-legs-stroke);
+}
+
+.arb-illustration-arms-and-legs-fill {
+  fill: var(--arb-illustration-arms-and-legs-fill);
+}
+
+.arb-illustration-shadow {
+  fill: var(--arb-illustration-shadow);
+}

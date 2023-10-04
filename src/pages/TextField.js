@@ -21,6 +21,7 @@ export default function TextFieldExample() {
       <Template error="Tilbakemeldingen er for kort" />
       <Template disabled />
       <Template readOnly />
+      <Template type="time" htmlSize="4" />
     </Layout>
   );
 }

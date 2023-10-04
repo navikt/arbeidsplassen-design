@@ -1,5 +1,4 @@
 import Layout from "../examples/Layout";
-import { Header } from "../packages/arbeidsplassen-react";
 import { Radio, RadioGroup, Select, TextField } from "@navikt/ds-react";
 import { useState } from "react";
 
