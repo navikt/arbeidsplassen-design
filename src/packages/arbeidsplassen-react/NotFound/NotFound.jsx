@@ -13,7 +13,7 @@ function NotFound({ title, children, className }) {
       {children ? (
         children
       ) : (
-        <BodyLong children="arb-not-found-description">
+        <BodyLong className="arb-not-found-description">
           Nettsiden kan være slettet eller flyttet, eller det var en feil i
           lenken som førte deg hit.
         </BodyLong>
