@@ -234,7 +234,4 @@
   --arb-logo-letters: var(--arb-green-800);
   --arb-logo-inverted-bg: var(--arb-green-800);
   --arb-logo-inverted-letters: var(--arb-green-200);
-
-  /* typeahead can be removed when all apps are using Combobox from aksel  */
-  --arb-typeahead-bg: var(--a-surface-action-subtle);
 }
