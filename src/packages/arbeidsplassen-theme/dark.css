@@ -221,6 +221,9 @@
   --ac-popover-bg: var(--arb-dark-mode-shade-100);
   --ac-modal-bg: var(--arb-dark-mode-shade-100);
 
+  /* Combobox */
+  --ac-combobox-list-item-bg: var(--arb-dark-mode-shade-100);
+
   /*****************************************************
   * Arbeidsplassen specific variables
   ******************************************************/
