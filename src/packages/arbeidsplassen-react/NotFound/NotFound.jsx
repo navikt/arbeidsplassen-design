@@ -7,7 +7,7 @@ function NotFound({ title, text, className }) {
   return (
     <div className={className ? `arb-not-found ${className}` : "arb-not-found"}>
       <ConfusedGrape className="mb-8" ariaHidden="true" />
-      <Heading spacing size="large" level="1">
+      <Heading spacing size="large" level="1" className="arb-not-found-title">
         {title ? title : "Fant ikke siden"}
       </Heading>
       {text ? (
