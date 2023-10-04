@@ -23,10 +23,18 @@ const ModalExample = () => {
             exercitation non minim minim pariatur sunt laborum ipsum.
             Exercitation nostrud est laborum magna non non aliqua qui esse.
           </BodyLong>
-          <Button variant="primary" onClick={() => setOpen((x) => !x)}>
-            Lukk modal
-          </Button>
         </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={() => setOpen((x) => !x)}>
+            Knapp 1
+          </Button>
+          <Button variant="secondary" onClick={() => setOpen((x) => !x)}>
+            Knapp 2
+          </Button>
+          <Button variant="tertiary" onClick={() => setOpen((x) => !x)}>
+            Knapp 3
+          </Button>
+        </Modal.Footer>
       </Modal>
     </Layout>
   );

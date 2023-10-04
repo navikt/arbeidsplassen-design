@@ -10,6 +10,7 @@
   --arb-grayalpha-700: rgba(0, 0, 0, 0.65);
   --arb-grayalpha-800: rgba(0, 0, 0, 0.75);
   --arb-grayalpha-900: rgba(0, 0, 0, 0.85);
+  --arb-whitealpha-50: rgba(255, 255, 255, 0.06);
   --arb-white: #ffffff;
   --arb-blue-50: #e3e6f7;
   --arb-blue-100: #c6cdf5;

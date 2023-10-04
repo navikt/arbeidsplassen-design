@@ -26,8 +26,8 @@
   --a-surface-action: var(--arb-blue-200);
   --a-surface-action-hover: var(--arb-blue-300);
   --a-surface-action-active: var(--arb-green-500);
-  --a-surface-action-subtle: var(--arb-dark-mode-shade-100);
-  --a-surface-action-subtle-hover: var(--arb-dark-mode-shade-100);
+  --a-surface-action-subtle: var(--arb-whitealpha-50);
+  --a-surface-action-subtle-hover: var(--arb-whitealpha-50);
   --a-surface-action-selected: var(--arb-green-500);
   --a-surface-action-selected-hover: var(--arb-green-400);
 

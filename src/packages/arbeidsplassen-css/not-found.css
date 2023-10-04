@@ -19,7 +19,7 @@
 [data-theme="arbeidsplassen-dark"] {
   --arb-svg-arms-and-legs: var(--arb-dark-mode-shade-400);
   --arb-svg-arms-and-legs-fill: var(--arb-dark-mode-shade-400);
-  --arb-svg-shadow: var(--arb-dark-mode-shade-100);
+  --arb-svg-shadow: var(--arb-whitealpha-50);
 }
 
 [data-theme="arbeidsplassen"] {
