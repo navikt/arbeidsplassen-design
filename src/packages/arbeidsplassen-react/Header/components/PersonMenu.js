@@ -19,9 +19,9 @@ function PersonMenu({ active }) {
           CV
         </MenuItem>
       </li>
-      <li>
-        <MenuItem href="/minside" active={active} id="min-side">
-          Min side
+      <li className="arb-header-divider">
+        <MenuItem href="/bedrift" id="for-bedrifter">
+          For bedrifter
         </MenuItem>
       </li>
     </ul>

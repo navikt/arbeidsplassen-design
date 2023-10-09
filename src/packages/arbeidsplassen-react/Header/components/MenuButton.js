@@ -6,8 +6,10 @@ function MenuButton({ isMobileMenuHidden, toggleMenu }) {
   return (
     <Button
       variant="tertiary"
-      className="arb-header-menu-button arb-header-hide-on-desktop"
+      className="arb-header-menu-button arb-header-menu-button-below-desktop"
       onClick={toggleMenu}
+      aria-expanded={isMobileMenuHidden}
+      aria-controls="arb-header-menu"
       icon={
         isMobileMenuHidden ? (
           <MenuHamburgerIcon aria-hidden="true" />
