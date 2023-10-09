@@ -170,6 +170,7 @@
   text-decoration: none;
   font-size: 1rem;
   line-height: 1.5rem;
+  display: inline-flex;
 }
 
 .arb-header-menu-link-active .arb-header-menu-item-inner {
