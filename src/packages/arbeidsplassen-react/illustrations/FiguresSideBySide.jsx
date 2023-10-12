@@ -3,7 +3,7 @@ import React from "react";
 export default function GrapeAndPapayaTogether({
   className,
   ariaHidden = true,
-  title = "To frukter som ser på hverandre",
+  title = "To figurer som ser på hverandre",
 }) {
   return (
     <svg
@@ -63,7 +63,7 @@ export default function GrapeAndPapayaTogether({
           cy="55.4844"
           rx="4.94729"
           ry="6.6133"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
         <ellipse
           cx="233.582"
@@ -77,13 +77,12 @@ export default function GrapeAndPapayaTogether({
           cy="55.4844"
           rx="4.94729"
           ry="6.6133"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
       </g>
       <path
         d="M226.174 77.1709C223.13 85.0763 207.476 82.1474 209.059 75.6164L226.174 77.1709Z"
-        fill="#024B62"
-        stroke="#024B62"
+        className="arb-illustration-face-fill arb-illustration-face-stroke"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -141,7 +140,7 @@ export default function GrapeAndPapayaTogether({
           cy="92.7902"
           rx="4.37076"
           ry="7.79016"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
         <ellipse
           cx="99.0117"
@@ -155,12 +154,12 @@ export default function GrapeAndPapayaTogether({
           cy="92.7902"
           rx="4.37076"
           ry="7.79016"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
       </g>
       <path
         d="M90.2285 116.503C89.4164 117.549 81.4566 115.87 81.6686 114.934"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
       />

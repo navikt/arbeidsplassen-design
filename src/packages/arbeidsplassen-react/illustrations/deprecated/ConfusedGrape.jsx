@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+/**
+ * @deprecated
+ */
 function ConfusedGrape({
   className,
   ariaHidden = true,
-  title = "Forvirret drue",
+  title = "Forvirret figur",
 }) {
   return (
     <svg
@@ -52,7 +55,7 @@ function ConfusedGrape({
           cy="50.8672"
           rx="4.60431"
           ry="7.18062"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
         <ellipse
           cx="88.3667"
@@ -66,7 +69,7 @@ function ConfusedGrape({
           cy="50.8672"
           rx="4.60431"
           ry="7.18062"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
       </g>
       <path
@@ -87,21 +90,21 @@ function ConfusedGrape({
       />
       <path
         d="M49.7015 29.8954C55.5801 22.3101 60.6231 21.5563 63.434 26.2083"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M97.9122 30.2216C92.7069 27.1549 88.2848 26.1827 83.7012 27.716"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M64.7028 64.5216C66.1313 63.5647 72.5599 64.0431 79.7028 65"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

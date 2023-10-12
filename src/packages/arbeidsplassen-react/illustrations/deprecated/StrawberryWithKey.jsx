@@ -1,9 +1,12 @@
 import React from "react";
 
+/**
+ * @deprecated
+ */
 function StrawberryWithKey({
   className,
   ariaHidden = true,
-  title = "Jorbær med nøkkel",
+  title = "Figur med nøkkel",
 }) {
   return (
     <svg
@@ -65,7 +68,7 @@ function StrawberryWithKey({
           rx="5.17904"
           ry="9.2308"
           transform="matrix(-1 0 0 1 109.887 35.1846)"
-          className="arb-illustration-arms-and-legs-fill"
+          className="arb-illustration-face-fill"
         />
         <ellipse
           cx="9.78264"
@@ -81,12 +84,12 @@ function StrawberryWithKey({
           rx="5.17905"
           ry="9.2308"
           transform="matrix(-1 0 0 1 76.666 34.7827)"
-          className="arb-illustration-arms-and-legs-fill"
+          className="arb-illustration-face-fill"
         />
       </g>
       <path
         d="M99.1172 65.7161C97.1236 71.4658 85.4314 69.7165 86.3877 64.9876"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
       />
@@ -106,7 +109,7 @@ function StrawberryWithKey({
         fillRule="evenodd"
         clipRule="evenodd"
         d="M5.62088 1.39622L9.41173 0.797819L12.5905 20.935C15.6471 21.3585 18.2381 23.8947 18.7761 27.3031C19.4253 31.4156 16.84 35.2406 13.0017 35.8465C9.16334 36.4524 5.5255 33.6098 4.87633 29.4973C4.33829 26.0888 6.02209 22.8778 8.79962 21.5334L6.81584 8.96624C6.12197 9.78257 5.07071 10.3871 3.83319 10.5824L3.20139 10.6821L2.80957 8.20003L3.44138 8.10029C4.08298 7.99901 4.56461 7.69792 4.84616 7.37332C5.12311 7.05403 5.17358 6.76704 5.1409 6.56004C5.10823 6.35304 4.97181 6.09555 4.60998 5.87709C4.24213 5.655 3.69117 5.51691 3.04957 5.61819L2.41776 5.71792L2.02593 3.23568L2.65776 3.13608C3.89528 2.94073 5.08162 3.192 5.99321 3.7549L5.62088 1.39622ZM12.4139 32.1234C13.8549 31.8959 15.359 30.2694 14.9853 27.9015C14.6115 25.5337 12.6795 24.4496 11.2385 24.677C9.79757 24.9045 8.29341 26.531 8.66719 28.8989C9.04096 31.2667 10.973 32.3508 12.4139 32.1234Z"
-        className="arb-illustration-arms-and-legs-fill"
+        className="arb-illustration-items-fill"
       />
       <defs>
         <linearGradient

@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+/**
+ * @deprecated
+ */
 export default function GrapeAndStrawberryClappingHands({
   className,
   ariaHidden = true,
-  title = "To frukter som klapper hender",
+  title = "To figurer som klapper hender",
 }) {
   return (
     <svg
@@ -66,7 +69,7 @@ export default function GrapeAndStrawberryClappingHands({
           rx="5.15258"
           ry="9.18363"
           transform="matrix(-1 0 0 1 268.518 31.9678)"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
         <ellipse
           cx="9.73265"
@@ -82,12 +85,12 @@ export default function GrapeAndStrawberryClappingHands({
           rx="5.15258"
           ry="9.18363"
           transform="matrix(-1 0 0 1 235.312 31.9678)"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
       </g>
       <path
         d="M258.044 58.5029C255.109 68.928 243.381 67.6582 245.094 59.1896"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
       />
@@ -144,7 +147,7 @@ export default function GrapeAndStrawberryClappingHands({
           cy="35.4054"
           rx="4.37076"
           ry="7.79016"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
         <ellipse
           cx="103.012"
@@ -158,12 +161,12 @@ export default function GrapeAndStrawberryClappingHands({
           cy="35.4054"
           rx="4.37076"
           ry="7.79016"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
       </g>
       <path
         d="M82.7637 55.3389C83.5402 60.5778 97.1121 61.5176 97.2406 57.3496"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
       />

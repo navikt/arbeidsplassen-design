@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function WavingGrape({
   className,
   ariaHidden = true,
-  title = "Vinkende drue",
+  title = "Vinkende figur",
 }) {
   return (
     <svg
@@ -64,7 +64,7 @@ function WavingGrape({
           cy="35.4051"
           rx="4.37076"
           ry="5.84262"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
         <ellipse
           cx="102.966"
@@ -78,12 +78,12 @@ function WavingGrape({
           cy="35.4051"
           rx="4.37076"
           ry="5.84262"
-          fill="#024B62"
+          className="arb-illustration-face-fill"
         />
       </g>
       <path
         d="M80.7184 55.3389C81.5688 58.179 95.1482 58.8789 95.2175 56.6299"
-        className="arb-illustration-arms-and-legs-stroke"
+        className="arb-illustration-face-stroke"
         strokeWidth="2"
         strokeLinecap="round"
       />
