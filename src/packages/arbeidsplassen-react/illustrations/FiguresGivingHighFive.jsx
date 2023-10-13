@@ -1,7 +1,6 @@
-import PropTypes from "prop-types";
 import React from "react";
 
-export default function GrapeAndStrawberryClappingHands({
+export default function FiguresGivingHighFive({
   className,
   ariaHidden = true,
   title = "To figurer som klapper hender",
@@ -222,7 +221,3 @@ export default function GrapeAndStrawberryClappingHands({
     </svg>
   );
 }
-
-GrapeAndStrawberryClappingHands.propTypes = {
-  className: PropTypes.string,
-};

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function GrapeAndPapayaTogether({
+export default function FiguresSideBySide({
   className,
   ariaHidden = true,
   title = "To figurer som ser på hverandre",

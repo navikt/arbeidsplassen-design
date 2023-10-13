@@ -1,6 +1,6 @@
 import React from "react";
 
-function CelebratingFigure({
+export default function CelebratingFigure({
   className,
   ariaHidden = true,
   title = "Figur som feirer",
@@ -159,5 +159,3 @@ function CelebratingFigure({
     </svg>
   );
 }
-
-export default CelebratingFigure;

@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-function ConfusedGrape({
+export default function ConfusedFigure({
   className,
   ariaHidden = true,
   title = "Forvirret figur",
@@ -134,10 +133,3 @@ function ConfusedGrape({
     </svg>
   );
 }
-
-ConfusedGrape.propTypes = {
-  ariaHidden: PropTypes.string,
-  className: PropTypes.string,
-};
-
-export default ConfusedGrape;

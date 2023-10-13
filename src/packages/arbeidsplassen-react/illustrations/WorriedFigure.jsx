@@ -1,6 +1,6 @@
 import React from "react";
 
-function WorriedFigure({
+export default function WorriedFigure({
   className,
   ariaHidden = true,
   title = "Bekymret figur",
@@ -136,5 +136,3 @@ function WorriedFigure({
     </svg>
   );
 }
-
-export default WorriedFigure;

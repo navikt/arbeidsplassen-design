@@ -3,6 +3,7 @@ import Layout from "../examples/Layout";
 import {
   CelebratingFigure,
   ConfusedFigure,
+  FigureHoldingAHeart,
   FiguresGivingHighFive,
   FiguresSideBySide,
   FigureWithKey,
@@ -23,6 +24,7 @@ const IllustrationsExample = () => {
         <FigureWithMagnifier />
         <WavingFigure />
         <WorriedFigure />
+        <FigureHoldingAHeart />
       </HStack>
     </Layout>
   );

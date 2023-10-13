@@ -1,6 +1,6 @@
 import React from "react";
 
-function StrawberryWithKey({
+export default function FigureWithKey({
   className,
   ariaHidden = true,
   title = "Figur med nøkkel",
@@ -132,5 +132,3 @@ function StrawberryWithKey({
     </svg>
   );
 }
-
-export default StrawberryWithKey;

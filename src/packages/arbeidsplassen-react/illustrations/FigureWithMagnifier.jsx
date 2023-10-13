@@ -1,6 +1,6 @@
 import React from "react";
 
-function FigureWithMagnifier({
+export default function FigureWithMagnifier({
   className,
   ariaHidden = true,
   title = "Figur med forstørrelsesglass",
@@ -115,5 +115,3 @@ function FigureWithMagnifier({
     </svg>
   );
 }
-
-export default FigureWithMagnifier;

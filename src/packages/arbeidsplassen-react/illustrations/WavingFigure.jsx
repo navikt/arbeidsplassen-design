@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-function WavingGrape({
+export default function WavingFigure({
   className,
   ariaHidden = true,
   title = "Vinkende figur",
@@ -123,10 +122,3 @@ function WavingGrape({
     </svg>
   );
 }
-
-WavingGrape.propTypes = {
-  ariaHidden: PropTypes.string,
-  className: PropTypes.string,
-};
-
-export default WavingGrape;
