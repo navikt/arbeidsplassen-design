@@ -1,10 +1,10 @@
 import React from "react";
 
-function FigureJugglingShieldWithCheckmark(
+function FigureJugglingShieldWithCheckmark({
   className,
   ariaHidden = true,
-  title = "Figur som sjonglerer"
-) {
+  title = "Figur som sjonglerer",
+}) {
   return (
     <svg
       width="148"
