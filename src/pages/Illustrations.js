@@ -4,6 +4,7 @@ import {
   CelebratingFigure,
   ConfusedFigure,
   FigureHoldingAHeart,
+  FigureJugglingShieldWithCheckmark,
   FiguresGivingHighFive,
   FiguresSideBySide,
   FigureWithKey,
@@ -25,6 +26,7 @@ const IllustrationsExample = () => {
         <WavingFigure />
         <WorriedFigure />
         <FigureHoldingAHeart />
+        <FigureJugglingShieldWithCheckmark />
       </HStack>
     </Layout>
   );

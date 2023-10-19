@@ -12,3 +12,4 @@ export { default as FigureWithMagnifier } from "./FigureWithMagnifier";
 export { default as WavingFigure } from "./WavingFigure";
 export { default as WorriedFigure } from "./WorriedFigure";
 export { default as FigureHoldingAHeart } from "./FigureHoldingAHeart";
+export { default as FigureJugglingShieldWithCheckmark } from "./FigureJugglingShieldWithCheckmark";
