@@ -31,10 +31,10 @@
   "homepage": "https://github.com/navikt/arbeidsplassen-design#readme",
   "description": "",
   "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6"
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1"
