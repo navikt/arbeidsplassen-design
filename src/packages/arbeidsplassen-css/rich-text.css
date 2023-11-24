@@ -71,3 +71,28 @@
   line-height: var(--a-font-line-height-large);
   margin: 0 0 var(--a-spacing-3) 0;
 }
+
+.arb-rich-text a {
+  color: var(--a-text-action);
+  text-decoration: underline;
+}
+
+.arb-rich-text a:hover {
+  text-decoration: none;
+}
+
+.arb-rich-text a:focus-visible {
+  outline: none;
+  color: var(--a-text-on-action);
+  text-decoration: none;
+  background-color: var(--a-border-focus);
+  box-shadow: 0 0 0 2px var(--a-border-focus);
+}
+
+.arb-rich-text a:active {
+  outline: none;
+  color: var(--a-text-on-action);
+  text-decoration: none;
+  background-color: var(--a-border-focus);
+  box-shadow: 0 0 0 2px var(--a-border-focus);
+}

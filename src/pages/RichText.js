@@ -16,6 +16,12 @@ const RichTextExample = () => {
           helst trekke tilbake din <b>søknad</b> og{" "}
           <strong>informasjonen</strong> du har oppgitt.
         </p>
+
+        <p>
+          Du søker kun med relevant informasjon for stillingen og kan når som
+          helst <a href="#">trekke tilbake din søknad</a>
+        </p>
+
         <ul>
           <li>Du søker kun med relevant informasjon fo</li>
           <li>Slightly domed and divided by arches</li>
