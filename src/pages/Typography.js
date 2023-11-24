@@ -1,5 +1,5 @@
 import Layout from "../examples/Layout";
-import { BodyLong, Heading, Ingress } from "@navikt/ds-react";
+import { BodyLong, Heading, List } from "@navikt/ds-react";
 
 export default function TypographyPage() {
   return (
@@ -8,11 +8,11 @@ export default function TypographyPage() {
         <Heading size="xlarge" level="2" spacing>
           Om Arbeidsplassen
         </Heading>
-        <Ingress spacing>
+        <BodyLong size="large" spacing>
           Arbeidsplassen.no er en åpen møteplass for alle på arbeidsmarkedet.
           Vårt mål er at arbeidsmarkedet skal være så oversiktlig som mulig for
           alle, enten du er på jakt etter en jobb eller leter etter en kandidat.
-        </Ingress>
+        </BodyLong>
 
         <BodyLong spacing>
           Alle jobbsøkere, arbeidsgivere, vikar- og bemanningsbyråer og andre
@@ -45,6 +45,19 @@ export default function TypographyPage() {
           Slightly domed and divided by arches into stiff sections. The bedding
           was hardly able to cover it and seemed ready to slide off any moment.
         </BodyLong>
+        <Heading size="xsmall" level="5" spacing>
+          XSmall subtitle
+        </Heading>
+        <BodyLong spacing>
+          Slightly domed and divided by arches into stiff sections. The bedding
+          was hardly able to cover it and seemed ready to slide off any moment.
+        </BodyLong>
+
+        <List>
+          <List.Item>Du søker kun med relevant informasjon fo</List.Item>
+          <List.Item>Slightly domed and divided by arches</List.Item>
+          <List.Item>If he lifted his head a little</List.Item>
+        </List>
       </section>
     </Layout>
   );

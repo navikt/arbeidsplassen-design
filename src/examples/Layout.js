@@ -8,6 +8,7 @@ const arbeidsplassenComponents = [
   "Header",
   "Illustrations",
   "NotFound",
+  "RichText",
   "SkipLink",
 ].sort();
 

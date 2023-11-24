@@ -1,0 +1,73 @@
+.arb-rich-text h1 {
+  margin: 0 0 var(--a-spacing-5) 0;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  font-size: var(--a-font-size-heading-2xlarge);
+  line-height: var(--a-font-line-height-heading-2xlarge);
+}
+
+.arb-rich-text h2 {
+  margin: 0 0 var(--a-spacing-4) 0;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  font-size: var(--a-font-size-heading-xlarge);
+  line-height: var(--a-font-line-height-heading-xlarge);
+}
+
+.arb-rich-text h3 {
+  margin: 0 0 var(--a-spacing-3) 0;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-size: var(--a-font-size-heading-medium);
+  line-height: var(--a-font-line-height-heading-medium);
+}
+
+.arb-rich-text h4 {
+  margin: 0 0 var(--a-spacing-3) 0;
+  letter-spacing: -0.01em;
+  font-weight: var(--a-font-weight-bold);
+  font-size: var(--a-font-size-heading-small);
+  line-height: var(--a-font-line-height-heading-small);
+}
+
+.arb-rich-text h5 {
+  margin: 0 0 var(--a-spacing-3) 0;
+  letter-spacing: -0.01em;
+  font-weight: var(--a-font-weight-bold);
+  font-size: var(--a-font-size-heading-xsmall);
+  line-height: var(--a-font-line-height-heading-xsmall);
+}
+
+.arb-rich-text h6 {
+  margin: 0 0 var(--a-spacing-3) 0;
+  letter-spacing: -0.01em;
+  font-weight: var(--a-font-weight-bold);
+  font-size: 14px;
+  line-height: var(--a-font-line-height-heading-xsmall);
+}
+
+.arb-rich-text p {
+  margin: 0 0 var(--a-spacing-7) 0;
+  font-size: var(--a-font-size-large);
+  font-weight: var(--a-font-weight-regular);
+  letter-spacing: 0;
+  line-height: var(--a-font-line-height-xlarge);
+}
+
+.arb-rich-text b,
+.arb-rich-text strong {
+  font-weight: var(--a-font-weight-bold);
+}
+
+.arb-rich-text ul,
+.arb-rich-text ol {
+  margin-block: var(--a-spacing-4);
+}
+
+.arb-rich-text li {
+  font-size: var(--a-font-size-large);
+  font-weight: var(--a-font-weight-regular);
+  letter-spacing: 0;
+  line-height: var(--a-font-line-height-large);
+  margin: 0 0 var(--a-spacing-3) 0;
+}
