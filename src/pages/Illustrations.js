@@ -7,6 +7,7 @@ import {
   FigureJugglingShieldWithCheckmark,
   FiguresGivingHighFive,
   FiguresSideBySide,
+  FigureWithEnvelope,
   FigureWithKey,
   FigureWithMagnifier,
   WavingFigure,
@@ -27,6 +28,7 @@ const IllustrationsExample = () => {
         <WorriedFigure />
         <FigureHoldingAHeart />
         <FigureJugglingShieldWithCheckmark />
+        <FigureWithEnvelope />
       </HStack>
     </Layout>
   );
