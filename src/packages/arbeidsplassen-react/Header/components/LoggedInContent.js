@@ -16,7 +16,7 @@ function LoggedInContent({
         <Button
           as="a"
           variant="tertiary"
-          href="/minside"
+          href="/min-side"
           icon={<PersonIcon aria-hidden="true" />}
         >
           Min side
