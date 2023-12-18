@@ -94,7 +94,7 @@ export default function Footer() {
               inverted
               height="40"
               width="40"
-              title="Arbeidsplassen"
+              title="Arbeidsplassen logo"
             />
           </a>
           <p className="arb-footer-p">
