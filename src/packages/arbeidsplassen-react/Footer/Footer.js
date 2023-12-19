@@ -24,7 +24,7 @@ export default function Footer() {
         <nav className="arb-footer-sections">
           <section className="arb-footer-section">
             <h2 className="arb-footer-h2">Om oss</h2>
-            <ul>
+            <ul aria-label="Nyttige lenker">
               <li>
                 <Link href="/kontakt">Kontakt oss</Link>
               </li>
@@ -44,7 +44,7 @@ export default function Footer() {
 
           <section className="arb-footer-section">
             <h2 className="arb-footer-h2">For jobbsøkere</h2>
-            <ul>
+            <ul aria-label="Nyttige lenker for jobbsøkere">
               <li>
                 <Link href="/nyttige-artikler-for-jobbsokere">
                   Nyttige artikler for jobbsøkere
@@ -66,7 +66,7 @@ export default function Footer() {
 
           <section className="arb-footer-section">
             <h2 className="arb-footer-h2">For bedrifter</h2>
-            <ul>
+            <ul aria-label="Nyttige lenker for bedrifter">
               <li>
                 <Link href="/vilkar-og-retningslinjer">
                   Vilkår og retningslinjer
