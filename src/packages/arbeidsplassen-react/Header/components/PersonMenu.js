@@ -15,7 +15,7 @@ function PersonMenu({ active }) {
         </MenuItem>
       </li>
       <li>
-        <MenuItem href="/cv" active={active} id="cv">
+        <MenuItem href="/cv?v1" active={active} id="cv">
           CV
         </MenuItem>
       </li>
