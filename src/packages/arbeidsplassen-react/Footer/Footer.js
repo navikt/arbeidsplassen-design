@@ -19,7 +19,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="arb-footer">
+    <footer className="arb-footer" lang="no">
       <div className="container-large">
         <nav className="arb-footer-sections">
           <section className="arb-footer-section">
