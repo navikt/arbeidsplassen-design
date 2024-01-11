@@ -8,13 +8,13 @@ function Logo() {
         width="216"
         height="48"
         className="arb-header-logo-desktop"
-        title="Arbeidsplassen"
+        title="Arbeidsplassen logo"
       />
       <ArbeidsplassenLogoSmall
         width="48"
         height="48"
         className="arb-header-logo-mobile"
-        title="Arbeidsplassen"
+        title="Arbeidsplassen logo"
       />
     </a>
   );
