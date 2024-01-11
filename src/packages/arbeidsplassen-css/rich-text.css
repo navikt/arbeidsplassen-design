@@ -1,5 +1,6 @@
 .arb-rich-text {
   font-size: var(--a-font-size-large);
+  line-height: var(--a-font-line-height-xlarge);
 }
 
 .arb-rich-text h1 {
