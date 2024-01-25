@@ -47,18 +47,7 @@
 }
 
 .arb-footer-h2 {
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin: 0 0 1rem 0;
   color: var(--arb-footer-text);
-}
-
-@media (min-width: 960px) {
-  .arb-footer-h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 }
 
 .arb-footer-section ul {

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "@navikt/ds-react";
+import { Link, Heading } from "@navikt/ds-react";
 import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
 
 export default function Footer() {
@@ -23,7 +23,9 @@ export default function Footer() {
       <div className="container-large">
         <nav className="arb-footer-sections">
           <section className="arb-footer-section">
-            <h2 className="arb-footer-h2">Om oss</h2>
+            <Heading level="2" size="medium" spacing className="arb-footer-h2">
+              Om oss
+            </Heading>
             <ul aria-label="Nyttige lenker">
               <li>
                 <Link href="/kontakt">Kontakt oss</Link>
@@ -43,7 +45,9 @@ export default function Footer() {
           </section>
 
           <section className="arb-footer-section">
-            <h2 className="arb-footer-h2">For jobbsøkere</h2>
+            <Heading level="2" size="medium" spacing className="arb-footer-h2">
+              For jobbsøkere
+            </Heading>
             <ul aria-label="Nyttige lenker for jobbsøkere">
               <li>
                 <Link href="/nyttige-artikler-for-jobbsokere">
@@ -65,7 +69,9 @@ export default function Footer() {
           </section>
 
           <section className="arb-footer-section">
-            <h2 className="arb-footer-h2">For bedrifter</h2>
+            <Heading level="2" size="medium" spacing className="arb-footer-h2">
+              For bedrifter
+            </Heading>
             <ul aria-label="Nyttige lenker for bedrifter">
               <li>
                 <Link href="/vilkar-og-retningslinjer">
