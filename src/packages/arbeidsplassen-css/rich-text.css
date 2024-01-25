@@ -5,7 +5,7 @@
 
 .arb-rich-text h1 {
   margin: var(--a-spacing-4) 0 var(--a-spacing-5) 0;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   font-weight: 700;
   font-size: var(--a-font-size-heading-2xlarge);
   line-height: var(--a-font-line-height-heading-2xlarge);
@@ -20,7 +20,7 @@
 
 .arb-rich-text h2 {
   margin: var(--a-spacing-7) 0 var(--a-spacing-4) 0;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.022em;
   font-weight: 700;
   font-size: var(--a-font-size-heading-xlarge);
   line-height: var(--a-font-line-height-heading-xlarge);
@@ -35,7 +35,7 @@
 
 .arb-rich-text h3 {
   margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.019em;
   font-weight: 700;
   font-size: var(--a-font-size-heading-medium);
   line-height: var(--a-font-line-height-heading-medium);
@@ -43,7 +43,7 @@
 
 .arb-rich-text h4 {
   margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.017em;
   font-weight: var(--a-font-weight-bold);
   font-size: var(--a-font-size-heading-small);
   line-height: var(--a-font-line-height-heading-small);
@@ -51,7 +51,7 @@
 
 .arb-rich-text h5 {
   margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.011em;
   font-weight: var(--a-font-weight-bold);
   font-size: var(--a-font-size-heading-xsmall);
   line-height: var(--a-font-line-height-heading-xsmall);
@@ -59,7 +59,7 @@
 
 .arb-rich-text h6 {
   margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.006em;
   font-weight: var(--a-font-weight-bold);
   font-size: 14px;
   line-height: var(--a-font-line-height-heading-xsmall);
@@ -69,7 +69,7 @@
   margin: var(--a-spacing-3) 0 var(--a-spacing-7) 0;
   font-size: var(--a-font-size-large);
   font-weight: var(--a-font-weight-regular);
-  letter-spacing: 0;
+  letter-spacing: -0.011em;
   line-height: var(--a-font-line-height-xlarge);
 }
 
@@ -86,7 +86,7 @@
 .arb-rich-text li {
   font-size: var(--a-font-size-large);
   font-weight: var(--a-font-weight-regular);
-  letter-spacing: 0;
+  letter-spacing: -0.011em;
   line-height: var(--a-font-line-height-large);
   margin: 0 0 var(--a-spacing-3) 0;
 }

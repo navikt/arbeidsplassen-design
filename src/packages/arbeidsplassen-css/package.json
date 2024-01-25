@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-css",
-  "version": "8.2.7",
+  "version": "8.2.8",
   "main": "index.css",
   "private": false,
   "scripts": {
