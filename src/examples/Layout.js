@@ -22,6 +22,7 @@ const akselComponents = [
   "ConfirmationPanel",
   "CopyButton",
   "DatePicker",
+  "Dropdown",
   "ErrorSummary",
   "GuidePanel",
   "Heading",

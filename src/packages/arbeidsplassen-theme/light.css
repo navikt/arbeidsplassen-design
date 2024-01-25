@@ -205,6 +205,10 @@
 
   /* Popover */
   --ac-popover-bg: var(--a-surface-default);
+  --ac-popover-border: var(--a-border-divider);
+
+  /* Dropdown */
+  --ac-dropdown-item-active-bg: var(--a-text-action-selected);
 
   /* ComboBox */
   --ac-combobox-list-bg: var(--a-surface-action-subtle);
