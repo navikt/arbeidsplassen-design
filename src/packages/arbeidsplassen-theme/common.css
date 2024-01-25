@@ -32,6 +32,11 @@
   font-weight: 700 !important;
 }
 
+.navds-heading--small,
+.navds-heading--xsmall {
+  font-weight: 600 !important;
+}
+
 .navds-heading--2xlarge {
   letter-spacing: -0.03em !important;
 }
