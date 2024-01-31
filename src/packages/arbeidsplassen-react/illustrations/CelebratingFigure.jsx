@@ -144,7 +144,7 @@ export default function CelebratingFigure({
           y2="81.1372"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#EE7D7A" />
+          <stop offset="0" stopColor="#EE7D7A" />
           <stop offset="1" stopColor="#E36E6B" />
         </linearGradient>
         <clipPath id="clip0_2680_48962">
