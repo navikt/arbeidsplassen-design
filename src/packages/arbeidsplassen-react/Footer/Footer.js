@@ -1,23 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "@navikt/ds-react";
 import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
 
 export default function Footer() {
-  useEffect(() => {
-    try {
-      if (!window.location.href.startsWith("https://arbeidsplassen.nav.no/")) {
-        const theme = localStorage.getItem("theme");
-        if (theme && theme === "dark") {
-          document.body.dataset.theme = "arbeidsplassen-dark";
-        } else {
-          document.body.dataset.theme = "arbeidsplassen";
-        }
-      }
-    } catch (err) {
-      //ignore
-    }
-  }, []);
-
   return (
     <footer className="arb-footer" lang="no">
       <div className="container-large">
