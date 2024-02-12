@@ -74,7 +74,7 @@ function FigureHoldingAHeart({
           y2="168.349"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FFB682" />
+          <stop offset="0" stopColor="#FFB682" />
           <stop offset="1" stopColor="#EDA572" />
         </linearGradient>
         <clipPath id="clip0_2719_77107">

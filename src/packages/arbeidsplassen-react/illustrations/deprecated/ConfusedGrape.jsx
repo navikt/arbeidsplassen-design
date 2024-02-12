@@ -122,7 +122,7 @@ function ConfusedGrape({
           y2="132.641"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#9CA8F5" />
+          <stop offset="0" stopColor="#9CA8F5" />
           <stop offset="1" stopColor="#717DC7" />
         </linearGradient>
         <clipPath id="clip0_1106_13559">

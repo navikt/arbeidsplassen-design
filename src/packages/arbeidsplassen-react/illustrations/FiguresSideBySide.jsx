@@ -184,7 +184,7 @@ export default function FiguresSideBySide({
           y2="169.271"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#FFB682" />
+          <stop offset="0" stopColor="#FFB682" />
           <stop offset="1" stopColor="#EDA572" />
         </linearGradient>
         <linearGradient
@@ -195,7 +195,7 @@ export default function FiguresSideBySide({
           y2="179.507"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#9CA8F5" />
+          <stop offset="0" stopColor="#9CA8F5" />
           <stop offset="1" stopColor="#717DC7" />
         </linearGradient>
         <clipPath id="clip0_1046_13268">

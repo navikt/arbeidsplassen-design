@@ -134,7 +134,7 @@ export default function FigureWithEnvelope({
           y2="100.168"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#EE7D7A" />
+          <stop offset="0" stopColor="#EE7D7A" />
           <stop offset="1" stopColor="#E36E6B" />
         </linearGradient>
         <clipPath id="clip0_4436_281">

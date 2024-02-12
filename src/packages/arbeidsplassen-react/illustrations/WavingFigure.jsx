@@ -107,7 +107,7 @@ export default function WavingFigure({
           y2="89.7623"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#90E8C3" />
+          <stop offset="0" stopColor="#90E8C3" />
           <stop offset="1" stopColor="#7CCCAB" />
         </linearGradient>
         <clipPath id="clip0_1741_26769">

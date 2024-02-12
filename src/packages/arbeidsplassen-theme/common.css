@@ -66,6 +66,24 @@
 }
 
 /******************************************************
+ * Paragraph overrides
+ ******************************************************/
+
+.navds-body-long,
+.navds-body-short {
+  letter-spacing: -0.011em !important;
+}
+
+.navds-body-long.navds-body-long--small,
+.navds-body-short.navds-body-short--small {
+  letter-spacing: -0.006em !important;
+}
+
+.navds-label {
+  letter-spacing: -0.011em !important;
+}
+
+/******************************************************
  * Button overrides
  ******************************************************/
 .navds-button:not(
