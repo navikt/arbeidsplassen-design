@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: dark) {
-  [data-theme="arbeidsplassen-follow-os-settings"] {
+  [data-theme="arbeidsplassen-dark"] {
     color-scheme: dark;
     color: var(--a-text-default);
     background-color: var(--a-bg-default);
