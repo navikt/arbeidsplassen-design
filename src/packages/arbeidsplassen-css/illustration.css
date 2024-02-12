@@ -1,20 +1,3 @@
-/**
- * Light / dark mode styling of svg
- */
-[data-theme="arbeidsplassen"] {
-  --arb-illustration-arms-and-legs: var(--arb-green-700);
-  --arb-illustration-face: var(--arb-green-700);
-  --arb-illustration-shadow: var(--arb-blue-50);
-  --arb-illustration-items: var(--arb-green-700);
-}
-
-[data-theme="arbeidsplassen-dark"] {
-  --arb-illustration-arms-and-legs: var(--arb-green-600);
-  --arb-illustration-face: var(--arb-green-700);
-  --arb-illustration-items: var(--arb-green-600);
-  --arb-illustration-shadow: var(--arb-whitealpha-50);
-}
-
 .arb-illustration-arms-and-legs-stroke {
   stroke: var(--arb-illustration-arms-and-legs);
 }

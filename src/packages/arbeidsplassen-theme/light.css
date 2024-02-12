@@ -238,4 +238,9 @@
   --arb-logo-letters: var(--arb-green-800);
   --arb-logo-inverted-bg: var(--arb-green-800);
   --arb-logo-inverted-letters: var(--arb-green-200);
+
+  --arb-illustration-arms-and-legs: var(--arb-green-700);
+  --arb-illustration-face: var(--arb-green-700);
+  --arb-illustration-shadow: var(--arb-blue-50);
+  --arb-illustration-items: var(--arb-green-700);
 }

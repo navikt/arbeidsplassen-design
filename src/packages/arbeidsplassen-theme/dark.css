@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: dark) {
-  [data-theme="arbeidsplassen-dark"] {
+  [data-use-prefered-color-scheme="true"] {
     color-scheme: dark;
     color: var(--a-text-default);
     background-color: var(--a-bg-default);
@@ -228,8 +228,8 @@
     --ac-combobox-list-bg: var(--arb-dark-mode-shade-100);
 
     /*****************************************************
-  * Arbeidsplassen specific variables
-  ******************************************************/
+    * Arbeidsplassen specific variables
+    ******************************************************/
     --arb-border: var(--arb-green-600);
     --arb-border-moderate: var(--arb-green-400);
     --arb-border-subtle: var(--arb-green-200);
@@ -249,5 +249,10 @@
     --arb-logo-letters: var(--arb-green-200);
     --arb-logo-inverted-bg: var(--arb-green-200);
     --arb-logo-inverted-letters: var(--arb-green-800);
+
+    --arb-illustration-arms-and-legs: var(--arb-green-600);
+    --arb-illustration-face: var(--arb-green-700);
+    --arb-illustration-items: var(--arb-green-600);
+    --arb-illustration-shadow: var(--arb-whitealpha-50);
   }
 }
