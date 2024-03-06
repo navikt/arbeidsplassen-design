@@ -29,6 +29,15 @@
   .container-small,
   .container-medium,
   .container-large {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-small,
+  .container-medium,
+  .container-large {
     padding-left: 4rem;
     padding-right: 4rem;
   }
