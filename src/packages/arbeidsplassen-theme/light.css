@@ -102,6 +102,7 @@
   --a-border-subtle: var(--arb-grayalpha-200);
   --a-border-subtle-hover: var(--arb-grayalpha-300);
   --a-border-action: var(--arb-blue-500);
+  --a-border-action-hover: var(--arb-blue-500);
   --a-border-action-selected: var(--arb-blue-600);
   --a-border-selected: var(--arb-blue-600);
   --a-border-success: var(--arb-green-400);
@@ -172,6 +173,7 @@
   --ac-chip-toggle-text: var(--a-text-action);
   --ac-chip-toggle-hover-border: var(--a-text-action-on-action-subtle);
   --ac-chip-toggle-hover-bg: var(--a-surface-action-subtle);
+  --ac-chip-toggle-circle-border: var(--a-border-action);
 
   --ac-chip-removable-neutral-border: var(--a-border-action);
   --ac-chip-removable-neutral-bg: var(--arb-transparent);
@@ -215,6 +217,9 @@
   --ac-combobox-list-item-bg: var(--a-surface-action-subtle);
   --ac-combobox-list-item-hover-bg: var(--arb-blue-100);
   --ac-combobox-list-item-hover-border-left: var(--a-surface-action-active);
+
+  /* Radio and Checkbox */
+  --ac-radio-checkbox-action: var(--a-surface-action);
 
   /*****************************************************
   * Arbeidsplassen specific variables
