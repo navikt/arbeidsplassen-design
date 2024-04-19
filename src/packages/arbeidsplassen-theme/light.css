@@ -232,6 +232,14 @@
   --ac-combobox-list-item-hover-bg: var(--arb-blue-100);
   --ac-combobox-list-item-hover-border-left: var(--a-surface-action-active);
 
+  /* Modal */
+  --ac-modal-bg: var(--a-surface-default);
+  --ac-modal-backdrop: var(--a-surface-backdrop);
+
+  /* Switch */
+  --ac-switch-bg: var(--a-surface-neutral);
+  --ac-switch-hover-bg: var(--a-surface-neutral-hover);
+
   /* Radio and Checkbox */
   --ac-radio-checkbox-action: var(--a-surface-action);
 

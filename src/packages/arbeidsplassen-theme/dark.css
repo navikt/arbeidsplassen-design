@@ -235,6 +235,11 @@
     /* Popover */
     --ac-popover-bg: var(--arb-dark-mode-shade-100);
     --ac-modal-bg: var(--arb-dark-mode-shade-100);
+    --ac-modal-backdrop: var(--a-surface-backdrop);
+
+    /* Switch */
+    --ac-switch-bg: var(--arb-dark-mode-shade-400);
+    --ac-switch-hover-bg: var(--arb-dark-mode-shade-500);
 
     /* Combobox */
     --ac-combobox-list-bg: var(--arb-dark-mode-shade-100);
