@@ -212,6 +212,20 @@
   /* Dropdown */
   --ac-dropdown-item-active-bg: var(--a-text-action-selected);
 
+  /* Tag */
+
+  --ac-tag-alt-1-bg: var(--a-surface-alt-1-subtle);
+  --ac-tag-alt-1-moderate-bg: var(--a-surface-alt-1-moderate);
+  --ac-tag-alt-1-filled-bg: var(--a-surface-alt-1);
+
+  --ac-tag-alt-2-bg: var(--a-surface-alt-2-subtle);
+  --ac-tag-alt-2-moderate-bg: var(--a-surface-alt-2-moderate);
+  --ac-tag-alt-2-filled-bg: var(--a-surface-alt-2);
+
+  --ac-tag-alt-3-bg: var(--a-surface-alt-3-subtle);
+  --ac-tag-alt-3-moderate-bg: var(--a-surface-alt-3-moderate);
+  --ac-tag-alt-3-filled-bg: var(--a-surface-alt-3);
+
   /* ComboBox */
   --ac-combobox-list-bg: var(--a-surface-action-subtle);
   --ac-combobox-list-item-bg: var(--a-surface-action-subtle);
