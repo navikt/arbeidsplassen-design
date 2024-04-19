@@ -211,6 +211,18 @@
     --ac-tag-warning-moderate-text: var(--arb-green-900);
     --ac-tag-error-moderate-text: var(--arb-green-900);
 
+    --ac-tag-alt-1-bg: var(--arb-whitealpha-50);
+    --ac-tag-alt-1-moderate-bg: var(--arb-whitealpha-50);
+    --ac-tag-alt-1-filled-bg: var(--arb-whitealpha-100);
+
+    --ac-tag-alt-2-bg: var(--arb-whitealpha-50);
+    --ac-tag-alt-2-moderate-bg: var(--arb-whitealpha-50);
+    --ac-tag-alt-2-filled-bg: var(--arb-whitealpha-100);
+
+    --ac-tag-alt-3-bg: var(--arb-whitealpha-50);
+    --ac-tag-alt-3-moderate-bg: var(--arb-whitealpha-50);
+    --ac-tag-alt-3-filled-bg: var(--arb-whitealpha-100);
+
     /* Stepper */
     --ac-stepper-non-interactive-line-completed: var(--arb-dark-mode-shade-600);
     --ac-stepper-line: var(--a-border-subtle);
