@@ -23,7 +23,7 @@
 
   --a-surface-action: var(--arb-blue-500);
   --a-surface-action-hover: var(--arb-blue-600);
-  --a-surface-action-active: var(--arb-blue-800);
+  --a-surface-action-active: var(--arb-green-700);
   --a-surface-action-subtle: var(--arb-blue-50);
   --a-surface-action-subtle-hover: var(--arb-blue-50);
   --a-surface-action-selected: var(--arb-green-700);
@@ -79,9 +79,12 @@
   --a-text-subtle: var(--arb-grayalpha-700);
   --a-text-visited: var(--arb-blue-900);
   --a-text-danger: var(--arb-red-500);
+
   --a-text-action: var(--arb-blue-500);
+  --a-text-action-hover: var(--arb-blue-600);
   --a-text-action-selected: var(--arb-green-700);
   --a-text-action-on-action-subtle: var(--arb-blue-600);
+  
   --a-text-on-inverted: var(--arb-white);
   --a-text-on-neutral: var(--arb-white);
   --a-text-on-action: var(--arb-white);
@@ -101,18 +104,22 @@
   --a-border-divider: var(--arb-grayalpha-200);
   --a-border-subtle: var(--arb-grayalpha-200);
   --a-border-subtle-hover: var(--arb-grayalpha-300);
+  --a-border-on-inverted: var(--arb-gray-200);
+  --a-border-on-inverted-subtle: var(--arb-gray-700);
+
   --a-border-action: var(--arb-blue-500);
   --a-border-action-hover: var(--arb-blue-500);
   --a-border-action-selected: var(--arb-blue-600);
   --a-border-selected: var(--arb-blue-600);
+
   --a-border-success: var(--arb-green-400);
   --a-border-danger: var(--arb-red-500);
   --a-border-warning: var(--arb-orange-400);
   --a-border-info: var(--arb-blue-300);
-  --a-border-on-inverted: var(--arb-gray-200);
-  --a-border-on-inverted-subtle: var(--arb-gray-700);
-  --a-border-focus: var(--arb-blue-900);
+
+  --a-border-focus: var(--arb-green-700);
   --a-border-focus-on-inverted: var(--arb-blue-200);
+
   --a-border-alt-1: var(--arb-green-400);
   --a-border-alt-2: var(--arb-blue-300);
   --a-border-alt-3: var(--arb-peach-300);
@@ -137,6 +144,7 @@
 
   --a-icon-action: var(--arb-blue-500);
   --a-icon-action-selected: var(--arb-blue-700);
+  --a-icon-action-hover: var(--arb-blue-600);
   --a-icon-action-on-action-subtle: var(--arb-blue-600);
 
   --a-icon-on-neutral: var(--arb-white);
@@ -167,6 +175,10 @@
   --ac-alert-success-border: var(--arb-green-200);
   --ac-alert-success-bg: var(--arb-green-200);
 
+   /* Button */
+   --ac-button-tertiary-focus-border: transparent;
+   --ac-button-tertiary-neutral-focus-border: transparent;
+
   /* Chip */
   --ac-chip-toggle-border: var(--a-border-action);
   --ac-chip-toggle-bg: var(--arb-transparent);
@@ -174,6 +186,8 @@
   --ac-chip-toggle-hover-border: var(--a-text-action-on-action-subtle);
   --ac-chip-toggle-hover-bg: var(--a-surface-action-subtle);
   --ac-chip-toggle-circle-border: var(--a-border-action);
+
+  --ac-chip-toggle-neutral-border: var(--a-border-subtle);
 
   --ac-chip-removable-neutral-border: var(--a-border-action);
   --ac-chip-removable-neutral-bg: var(--arb-transparent);
@@ -183,21 +197,32 @@
   );
   --ac-chip-removable-neutral-hover-bg: var(--a-surface-action-subtle);
 
-  /* Button */
-  --ac-button-secondary-text: var(--arb-blue-500);
-  --ac-button-secondary-hover-text: var(--arb-blue-600);
-  --ac-button-secondary-border: var(--arb-blue-500);
-  --ac-button-tertiary-text: var(--arb-blue-500);
-  --ac-button-tertiary-hover-text: var(--arb-blue-600);
-  --ac-button-tertiary-focus-border: transparent;
-  --ac-button-tertiary-neutral-focus-border: transparent;
+  /* Combobox */
+  --ac-combobox-list-item-selected-bg: var(--a-surface-alt-1-moderate);
+  --ac-combobox-list-item-selected-hover-bg: var(--a-surface-alt-1);
+  --ac-combobox-list-item-hover-border-left: var(--a-border-subtle-hover);
+  --ac-combobox-list-item-selected-hover-border-left: var(--a-border-focus);
 
-  /* Tabs */
-  --ac-tabs-selected-border: var(--arb-green-400);
+  /* Dropdown */
+  --ac-dropdown-item-active-bg: var(--a-surface-action-selected);
+
+   /* Link */
+   --ac-link-active-bg: var(--a-surface-action-selected);
+
+   /* Modal */
+   --ac-modal-bg: var(--a-surface-default);
+   --ac-modal-backdrop: var(--a-surface-backdrop);
+
+  /* Popover */
+  --ac-popover-bg: var(--a-surface-default);
+  --ac-popover-border: var(--a-border-divider);
 
   /* ReadMore */
   --ac-read-more-hover-bg: var(--arb-blue-50);
   --ac-read-more-line: var(--arb-green-200);
+
+  /* Radio and Checkbox */
+  --ac-radio-checkbox-action: var(--a-surface-action);
 
   /* Stepper */
   --ac-stepper-non-interactive-line-completed: var(--arb-grayalpha-600);
@@ -205,15 +230,20 @@
   --ac-stepper-line-completed: var(--arb-blue-300);
   --ac-stepper-active-border: var(--a-surface-action-selected);
 
-  /* Popover */
-  --ac-popover-bg: var(--a-surface-default);
-  --ac-popover-border: var(--a-border-divider);
+  /* Switch */
+  --ac-switch-action: var(--a-text-action);
+  --ac-switch-bg: var(--a-surface-neutral);
+  --ac-switch-hover-bg: var(--a-surface-neutral);
+  --ac-switch-checked-bg: var(--a-surface-success);
+  --ac-switch-checked-hover-bg: var(--a-surface-success);
+  --ac-switch-thumb-bg: var(--a-surface-default);
+  --ac-switch-thumb-icon: var(--arb-grayalpha-500);
+  --ac-switch-thumb-icon-checked: var(--a-icon-success);
 
-  /* Dropdown */
-  --ac-dropdown-item-active-bg: var(--a-text-action-selected);
+  /* Tabs */
+  --ac-tabs-selected-border: var(--arb-green-400);
 
   /* Tag */
-
   --ac-tag-alt-1-bg: var(--a-surface-alt-1-subtle);
   --ac-tag-alt-1-moderate-bg: var(--a-surface-alt-1-moderate);
   --ac-tag-alt-1-filled-bg: var(--a-surface-alt-1);
@@ -226,23 +256,6 @@
   --ac-tag-alt-3-moderate-bg: var(--a-surface-alt-3-moderate);
   --ac-tag-alt-3-filled-bg: var(--a-surface-alt-3);
 
-  /* ComboBox */
-  --ac-combobox-list-bg: var(--a-surface-action-subtle);
-  --ac-combobox-list-item-bg: var(--a-surface-action-subtle);
-  --ac-combobox-list-item-hover-bg: var(--arb-blue-100);
-  --ac-combobox-list-item-hover-border-left: var(--a-surface-action-active);
-
-  /* Modal */
-  --ac-modal-bg: var(--a-surface-default);
-  --ac-modal-backdrop: var(--a-surface-backdrop);
-
-  /* Switch */
-  --ac-switch-bg: var(--a-surface-neutral);
-  --ac-switch-hover-bg: var(--a-surface-neutral-hover);
-
-  /* Radio and Checkbox */
-  --ac-radio-checkbox-action: var(--a-surface-action);
-
   /*****************************************************
   * Arbeidsplassen specific variables
   ******************************************************/
@@ -252,6 +265,12 @@
 
   --arb-footer-bg: var(--a-surface-alt-1);
   --arb-footer-text: var(--arb-green-700);
+  --arb-footer-focus-text: var(--arb-white);
+  
+  --arb-illustration-arms-and-legs: var(--arb-green-700);
+  --arb-illustration-face: var(--arb-green-700);
+  --arb-illustration-shadow: var(--arb-blue-50);
+  --arb-illustration-items: var(--arb-green-700);
 
   --arb-link-panel-description-on-color: var(--arb-green-700);
   --arb-link-panel-primary-bg: var(--a-surface-alt-1);
@@ -265,9 +284,4 @@
   --arb-logo-letters: var(--arb-green-800);
   --arb-logo-inverted-bg: var(--arb-green-800);
   --arb-logo-inverted-letters: var(--arb-green-200);
-
-  --arb-illustration-arms-and-legs: var(--arb-green-700);
-  --arb-illustration-face: var(--arb-green-700);
-  --arb-illustration-shadow: var(--arb-blue-50);
-  --arb-illustration-items: var(--arb-green-700);
 }
