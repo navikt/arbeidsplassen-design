@@ -84,7 +84,7 @@
   --a-text-action-hover: var(--arb-blue-600);
   --a-text-action-selected: var(--arb-green-700);
   --a-text-action-on-action-subtle: var(--arb-blue-600);
-  
+
   --a-text-on-inverted: var(--arb-white);
   --a-text-on-neutral: var(--arb-white);
   --a-text-on-action: var(--arb-white);
@@ -175,9 +175,9 @@
   --ac-alert-success-border: var(--arb-green-200);
   --ac-alert-success-bg: var(--arb-green-200);
 
-   /* Button */
-   --ac-button-tertiary-focus-border: transparent;
-   --ac-button-tertiary-neutral-focus-border: transparent;
+  /* Button */
+  --ac-button-tertiary-focus-border: transparent;
+  --ac-button-tertiary-neutral-focus-border: transparent;
 
   /* Chip */
   --ac-chip-toggle-border: var(--a-border-action);
@@ -206,12 +206,12 @@
   /* Dropdown */
   --ac-dropdown-item-active-bg: var(--a-surface-action-selected);
 
-   /* Link */
-   --ac-link-active-bg: var(--a-surface-action-selected);
+  /* Link */
+  --ac-link-active-bg: var(--a-surface-action-selected);
 
-   /* Modal */
-   --ac-modal-bg: var(--a-surface-default);
-   --ac-modal-backdrop: var(--a-surface-backdrop);
+  /* Modal */
+  --ac-modal-bg: var(--a-surface-default);
+  --ac-modal-backdrop: var(--a-surface-backdrop);
 
   /* Popover */
   --ac-popover-bg: var(--a-surface-default);
@@ -240,6 +240,9 @@
   --ac-switch-thumb-icon: var(--arb-grayalpha-500);
   --ac-switch-thumb-icon-checked: var(--a-icon-success);
 
+  /* Progress bar */
+  --ac-progress-bar-fg: var(--arb-green-300);
+
   /* Tabs */
   --ac-tabs-selected-border: var(--arb-green-400);
 
@@ -266,7 +269,7 @@
   --arb-footer-bg: var(--a-surface-alt-1);
   --arb-footer-text: var(--arb-green-700);
   --arb-footer-focus-text: var(--arb-white);
-  
+
   --arb-illustration-arms-and-legs: var(--arb-green-700);
   --arb-illustration-face: var(--arb-green-700);
   --arb-illustration-shadow: var(--arb-blue-50);

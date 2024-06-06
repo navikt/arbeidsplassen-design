@@ -110,12 +110,12 @@
     --a-border-subtle-hover: var(--arb-whitealpha-50);
     --a-border-on-inverted: var(--arb-gray-200);
     --a-border-on-inverted-subtle: var(--arb-gray-700);
-    
+
     --a-border-action: var(--arb-blue-200);
     --a-border-action-hover: var(--arb-blue-200);
     --a-border-action-selected: var(--a-border-default);
     --a-border-selected: var(--a-border-default);
-    
+
     --a-border-success: var(--arb-green-400);
     --a-border-danger: var(--arb-red-300);
     --a-border-warning: var(--arb-orange-400);
@@ -123,7 +123,7 @@
 
     --a-border-focus: var(--arb-dark-mode-shade-900);
     --a-border-focus-on-inverted: var(--arb-blue-200);
-    
+
     --a-border-alt-1: var(--arb-dark-mode-shade-700);
     --a-border-alt-2: var(--arb-dark-mode-shade-700);
     --a-border-alt-3: var(--arb-dark-mode-shade-700);
@@ -158,15 +158,30 @@
     --a-icon-on-warning: var(--arb-green-800);
     --a-icon-on-info: var(--arb-white);
     --a-icon-on-inverted: var(--arb-white);
-    
+
     /*****************************************************
   * Shadows
   ******************************************************/
-  --a-shadow-xlarge: 0px 10px 24px 0px rgba(0, 0, 0, 0.45), 0px 3px 5px 0px rgba(0, 0, 0, 0.35), 0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset, 0px 0px 1px 0px rgba(255, 255, 255, 0.35) inset;
-  --a-shadow-large: 0px 10px 16px 0px rgba(0, 0, 0, 0.35), 0px 2px 5px 0px rgba(0, 0, 0, 0.35), 0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset, 0px 0px 1px 0px rgba(255, 255, 255, 0.35) inset;
-  --a-shadow-medium: 0px 5px 12px 0px rgba(0, 0, 0, 0.35), 0px 1px 3px 0px rgba(0, 0, 0, 0.50), 0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset, 0px 0px 1px 0px rgba(255, 255, 255, 0.30) inset;
-  --a-shadow-small: 0px 3px 8px 0px rgba(0, 0, 0, 0.35), 0px 1px 3px 0px rgba(0, 0, 0, 0.50), 0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset, 0px 0px 1px 0px rgba(255, 255, 255, 0.30) inset;
-  --a-shadow-xsmall: 0px 0px 0.5px 0px rgba(0, 0, 0, 0.50), 0px 1px 3px 0px rgba(0, 0, 0, 0.50), 0px 1px 0px 0px rgba(255, 255, 255, 0.10) inset, 0px 0px 1px 0px rgba(255, 255, 255, 0.30) inset;
+    --a-shadow-xlarge: 0px 10px 24px 0px rgba(0, 0, 0, 0.45),
+      0px 3px 5px 0px rgba(0, 0, 0, 0.35),
+      0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset,
+      0px 0px 1px 0px rgba(255, 255, 255, 0.35) inset;
+    --a-shadow-large: 0px 10px 16px 0px rgba(0, 0, 0, 0.35),
+      0px 2px 5px 0px rgba(0, 0, 0, 0.35),
+      0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset,
+      0px 0px 1px 0px rgba(255, 255, 255, 0.35) inset;
+    --a-shadow-medium: 0px 5px 12px 0px rgba(0, 0, 0, 0.35),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.5),
+      0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset,
+      0px 0px 1px 0px rgba(255, 255, 255, 0.3) inset;
+    --a-shadow-small: 0px 3px 8px 0px rgba(0, 0, 0, 0.35),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.5),
+      0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset,
+      0px 0px 1px 0px rgba(255, 255, 255, 0.3) inset;
+    --a-shadow-xsmall: 0px 0px 0.5px 0px rgba(0, 0, 0, 0.5),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.5),
+      0px 1px 0px 0px rgba(255, 255, 255, 0.1) inset,
+      0px 0px 1px 0px rgba(255, 255, 255, 0.3) inset;
 
     /*****************************************************
   * Custom components variables
@@ -187,7 +202,7 @@
     --ac-alert-error-bg: var(--arb-red-900);
     --ac-alert-success-border: var(--arb-green-800);
     --ac-alert-success-bg: var(--arb-green-800);
-    
+
     /* Button */
     --ac-button-primary-bg: var(--arb-blue-600);
     --ac-button-primary-hover-bg: var(--arb-blue-500);
@@ -217,9 +232,9 @@
     --ac-combobox-list-item-selected-hover-border-left: var(--arb-green-400);
 
     /* Link */
-  --ac-link-active-bg: var(--a-border-focus);
-  --ac-link-active-text: var(--arb-green-800);
-  --ac-link-focus-text: var(--arb-green-800);
+    --ac-link-active-bg: var(--a-border-focus);
+    --ac-link-active-text: var(--arb-green-800);
+    --ac-link-focus-text: var(--arb-green-800);
 
     /* Popover */
     --ac-popover-bg: var(--arb-dark-mode-shade-100);
@@ -236,6 +251,9 @@
     --ac-stepper-line-completed: var(--arb-blue-300);
     --ac-stepper-active-border: var(--a-surface-action-selected);
     --ac-stepper-text: var(--arb-blue-600);
+
+    /* Progress bar */
+    --ac-progress-bar-fg: var(--arb-green-600);
 
     /* Switch */
     --ac-switch-action: var(--a-text-action);
@@ -282,7 +300,7 @@
     --arb-footer-bg: var(--arb-dark-mode-shade-100);
     --arb-footer-text: var(--a-text-default);
     --arb-footer-focus-text: var(--arb-green-800);
-    
+
     --arb-illustration-arms-and-legs: var(--arb-green-600);
     --arb-illustration-face: var(--arb-green-700);
     --arb-illustration-items: var(--arb-green-600);
