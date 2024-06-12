@@ -10,6 +10,11 @@ function PersonMenu({ active }) {
         </MenuItem>
       </li>
       <li>
+        <MenuItem href="/jobbtreff" active={active} id="jobbtreff">
+          Jobbtreff
+        </MenuItem>
+      </li>
+      <li>
         <MenuItem href="/cv?v1" active={active} id="cv">
           CV
         </MenuItem>

@@ -13,6 +13,15 @@ function CompanyMenu({ active }) {
           Stillingsannonser
         </MenuItem>
       </li>
+      <li>
+        <MenuItem
+          active={active}
+          href="/jobbtreff/bedrift"
+          id="jobbtreff-bedrift"
+        >
+          Jobbtreff
+        </MenuItem>
+      </li>
       <li className="arb-header-divider">
         <MenuItem href="/" id="for-jobbsokere">
           For jobbsøkere
