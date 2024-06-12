@@ -81,7 +81,7 @@
    ******************************************************/
     --a-text-default: var(--arb-dark-mode-shade-900);
     --a-text-subtle: var(--arb-dark-mode-shade-600);
-    --a-text-visited: var(--arb-blue-900);
+    --a-text-visited: var(--a-purple-300);
     --a-text-danger: var(--arb-red-300);
 
     --a-text-action: var(--arb-blue-200);

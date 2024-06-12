@@ -77,7 +77,7 @@
    ******************************************************/
   --a-text-default: var(--arb-green-800);
   --a-text-subtle: var(--arb-grayalpha-700);
-  --a-text-visited: var(--arb-blue-900);
+  --a-text-visited: var(--a-purple-500);
   --a-text-danger: var(--arb-red-500);
 
   --a-text-action: var(--arb-blue-500);
