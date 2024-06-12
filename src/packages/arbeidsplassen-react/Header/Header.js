@@ -89,11 +89,5 @@ Header.propTypes = {
     "is-authenticated",
     "not-authenticated",
   ]),
-  active: PropTypes.oneOf([
-    "ledige-stillinger",
-    "jobbtreff",
-    "cv",
-    "stillingsannonser",
-    "jobbtreff-bedrift",
-  ]),
+  active: PropTypes.oneOf(["ledige-stillinger", "cv", "stillingsannonser"]),
 };
