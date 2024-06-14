@@ -123,12 +123,16 @@
   border-bottom-right-radius: 0 !important;
 }
 
+.navds-chips__removable--neutral:focus-visible {
+  box-shadow: 0 0 0 3px var(--a-border-focus);
+}
+
 /******************************************************
  * Combobox overrides
  ******************************************************/
 .navds-combobox__input {
   background-color: var(--a-surface-default);
- }
+}
 
 /******************************************************
  * Tag overrides
