@@ -66,7 +66,7 @@
 }
 
 .arb-rich-text p {
-  margin: var(--a-spacing-3) 0 var(--a-spacing-7) 0;
+  margin: var(--a-spacing-3) 0 var(--a-spacing-5) 0;
   font-size: var(--a-font-size-large);
   font-weight: var(--a-font-weight-regular);
   letter-spacing: -0.011em;
