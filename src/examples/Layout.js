@@ -7,6 +7,7 @@ const arbeidsplassenComponents = [
   "FeedbackButton",
   "Header",
   "Illustrations",
+  "LoginPage",
   "NotFound",
   "RichText",
   "SkipLink",
