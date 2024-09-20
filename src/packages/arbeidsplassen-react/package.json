@@ -10,12 +10,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && babel . --out-dir dist"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/navikt/arbeidsplassen-design.git"
