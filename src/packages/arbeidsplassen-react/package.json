@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-react",
-  "version": "8.3.1-test-1",
+  "version": "8.3.1-test-2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "private": false,
@@ -34,9 +34,10 @@
     "@babel/preset-react": "^7.22.15"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "@navikt/aksel-icons": "^6.16.3",
-    "@navikt/ds-react": "^6.16.3",
-    "prop-types": "^15.8.1"
+    "@babel/polyfill": "^7.12.1"
+  },
+  "peerDependencies": {
+    "@navikt/aksel-icons": "6.x",
+    "@navikt/ds-react": "6.x"
   }
 }
