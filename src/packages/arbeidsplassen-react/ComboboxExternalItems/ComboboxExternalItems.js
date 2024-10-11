@@ -1,4 +1,4 @@
-import { useId } from "react";
+import React, { useId } from "react";
 import { BodyLong, Chips, VStack } from "@navikt/ds-react";
 import PropTypes from "prop-types";
 
