@@ -71,11 +71,13 @@ ComboboxExternalItems.propTypes = {
   fontSize: PropTypes.string,
   fontWeight: PropTypes.string,
   items: PropTypes.arrayOf(
-    PropTypes.string |
+    PropTypes.oneOfType([
+      PropTypes.string,
       PropTypes.shape({
         label: PropTypes.string,
         value: PropTypes.string,
-      })
+      }),
+    ])
   ),
   itemsLeadingText: PropTypes.string.isRequired,
   noItemsText: PropTypes.string.isRequired,
