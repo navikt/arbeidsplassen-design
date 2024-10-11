@@ -4,15 +4,7 @@ import Layout from "../examples/Layout";
 import { ComboboxExternalItems } from "@navikt/arbeidsplassen-react/ComboboxExternalItems";
 
 const ComboboxExternalItemsExample = () => {
-  const [items, setItems] = useState([]);
-
-  setTimeout(() => {
-    setItems(["tea"]);
-  }, 5000);
-
-  setTimeout(() => {
-    setItems(["tea", "coffee"]);
-  }, 15000);
+  const [items, setItems] = useState(["tea", "coffee", "juice"]);
 
   const removeItem = (val) => {
     setItems(() =>
