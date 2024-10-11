@@ -34,16 +34,31 @@ function ComboboxExternalItems({
             {itemsLeadingText}
           </BodyLong>
           <Chips aria-labelledby={chipsLabelId}>
-            {items.map((item, index) => (
-              <Chips.Removable
-                key={`${item}-${index}`}
-                onDelete={() => {
-                  removeComboboxItem(item);
-                }}
-              >
-                {item}
-              </Chips.Removable>
-            ))}
+            {items.map((item, index) => {
+              if (typeof item === "object") {
+                return (
+                  <Chips.Removable
+                    key={`${item.value}-${index}`}
+                    onDelete={() => {
+                      removeComboboxItem(item.value);
+                    }}
+                  >
+                    {item.label}
+                  </Chips.Removable>
+                );
+              } else {
+                return (
+                  <Chips.Removable
+                    key={`${item}-${index}`}
+                    onDelete={() => {
+                      removeComboboxItem(item);
+                    }}
+                  >
+                    {item}
+                  </Chips.Removable>
+                );
+              }
+            })}
           </Chips>
         </VStack>
       )}
@@ -55,7 +70,13 @@ ComboboxExternalItems.propTypes = {
   ariaLive: PropTypes.string,
   fontSize: PropTypes.string,
   fontWeight: PropTypes.string,
-  items: PropTypes.arrayOf(PropTypes.string),
+  items: PropTypes.arrayOf(
+    PropTypes.string |
+      PropTypes.shape({
+        label: PropTypes.string,
+        value: PropTypes.string,
+      })
+  ),
   itemsLeadingText: PropTypes.string.isRequired,
   noItemsText: PropTypes.string.isRequired,
   removeComboboxItem: PropTypes.func.isRequired,
