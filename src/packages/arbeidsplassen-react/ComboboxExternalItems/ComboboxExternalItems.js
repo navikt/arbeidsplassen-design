@@ -15,7 +15,7 @@ function ComboboxExternalItems({
 
   return (
     <VStack aria-live={ariaLive}>
-      {items.length === 0 ? (
+      {items.length === 0 && noItemsText && (
         <BodyLong
           weight={fontWeight}
           size={fontSize}
@@ -23,7 +23,8 @@ function ComboboxExternalItems({
         >
           {noItemsText}
         </BodyLong>
-      ) : (
+      )}
+      {items.length > 0 && (
         <VStack>
           <BodyLong
             id={chipsLabelId}
@@ -80,7 +81,7 @@ ComboboxExternalItems.propTypes = {
     ])
   ),
   itemsLeadingText: PropTypes.string.isRequired,
-  noItemsText: PropTypes.string.isRequired,
+  noItemsText: PropTypes.string,
   removeComboboxItem: PropTypes.func.isRequired,
 };
 
