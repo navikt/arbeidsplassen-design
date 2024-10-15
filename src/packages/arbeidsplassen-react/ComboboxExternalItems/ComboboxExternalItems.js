@@ -41,7 +41,10 @@ function ComboboxExternalItems({
                   <Chips.Removable
                     key={`${item.value}-${index}`}
                     onDelete={() => {
-                      removeComboboxItem(item.value);
+                      removeComboboxItem({
+                        label: item.label,
+                        value: item.value,
+                      });
                     }}
                   >
                     {item.label}

@@ -24,7 +24,9 @@ const ComboboxExternalItemsExample = () => {
 
   const removeObjectItem = (val) => {
     setItemsObject(() =>
-      val.length === 1 ? options : itemsObject.filter((y) => y.value !== val)
+      val.length === 1
+        ? options
+        : itemsObject.filter((y) => y.value !== val.value)
     );
   };
 
