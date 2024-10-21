@@ -241,7 +241,7 @@
   --ac-switch-thumb-icon-checked: var(--a-icon-success);
 
   /* Progress bar */
-  --ac-progress-bar-fg: var(--arb-green-300);
+  --ac-progress-bar-fg: var(--arb-green-700);
 
   /* Tabs */
   --ac-tabs-selected-border: var(--arb-green-400);

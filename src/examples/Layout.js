@@ -4,9 +4,11 @@ import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 import { Footer, Header } from "@navikt/arbeidsplassen-react";
 
 const arbeidsplassenComponents = [
+  "ComboboxExternalItems",
   "FeedbackButton",
   "Header",
   "Illustrations",
+  "LoginPage",
   "NotFound",
   "RichText",
   "SkipLink",
