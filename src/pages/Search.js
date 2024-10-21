@@ -13,7 +13,7 @@ const SearchExample = () => {
           />
         </div>
 
-        <Search label="Søk alle NAV sine sider" variant="simple" />
+        <Search label="Søk alle Nav sine sider" variant="simple" />
       </form>
     </Layout>
   );

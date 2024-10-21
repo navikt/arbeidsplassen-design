@@ -89,7 +89,7 @@ export default function Footer() {
             />
           </a>
           <p className="arb-footer-p">
-            <span translate="no">arbeidsplassen.no</span> – en tjeneste fra NAV
+            <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
           </p>
         </section>
       </div>
