@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Heading } from "@navikt/ds-react";
-import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
+import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall.js";
 
 export default function Footer() {
   return (

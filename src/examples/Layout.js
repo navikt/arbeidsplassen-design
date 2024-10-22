@@ -6,6 +6,7 @@ import { Footer, Header } from "@navikt/arbeidsplassen-react";
 const arbeidsplassenComponents = [
   "ComboboxExternalItems",
   "FeedbackButton",
+  "Footer",
   "Header",
   "Illustrations",
   "LoginPage",

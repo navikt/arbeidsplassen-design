@@ -1,6 +1,6 @@
 import React from "react";
-import PersonMenu from "./PersonMenu";
-import CompanyMenu from "./CompanyMenu";
+import PersonMenu from "./PersonMenu.js";
+import CompanyMenu from "./CompanyMenu.js";
 
 function MenuLinks({ variant, active, className }) {
   return (

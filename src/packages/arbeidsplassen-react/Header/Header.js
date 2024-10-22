@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Logo from "./components/Logo";
-import MenuButton from "./components/MenuButton";
-import LoggedInContent from "./components/LoggedInContent";
-import MenuLinks from "./components/MenuLinks";
+import Logo from "./components/Logo.js";
+import MenuButton from "./components/MenuButton.js";
+import LoggedInContent from "./components/LoggedInContent.js";
+import MenuLinks from "./components/MenuLinks.js";
 
 function joinClassNames(...strings) {
   return strings.filter((x) => typeof x === "string" && x.length > 0).join(" ");

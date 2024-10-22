@@ -1,5 +1,5 @@
 import React from "react";
-import FigureWithKey from "../illustrations/FigureWithKey";
+import FigureWithKey from "../illustrations/FigureWithKey.js";
 import { BodyLong, Button, Heading, Link } from "@navikt/ds-react";
 import { EnterIcon } from "@navikt/aksel-icons";
 import PropTypes from "prop-types";

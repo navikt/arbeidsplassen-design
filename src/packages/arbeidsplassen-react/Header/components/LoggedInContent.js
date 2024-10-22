@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@navikt/ds-react";
 import { Buldings3Icon, PersonIcon } from "@navikt/aksel-icons";
-import LoginButton from "./LoginButton";
+import LoginButton from "./LoginButton.js";
 
 function LoggedInContent({
   variant,

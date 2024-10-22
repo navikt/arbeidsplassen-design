@@ -1,6 +1,6 @@
 import React from "react";
-import ArbeidsplassenLogo from "../../Logo/ArbeidsplassenLogo";
-import ArbeidsplassenLogoSmall from "../../Logo/ArbeidsplassenLogoSmall";
+import ArbeidsplassenLogo from "../../Logo/ArbeidsplassenLogo.js";
+import ArbeidsplassenLogoSmall from "../../Logo/ArbeidsplassenLogoSmall.js";
 function Logo() {
   return (
     <a href="/" className="arb-header-logo">

@@ -1,1 +1,1 @@
-export { default as FeedbackButton } from "./FeedbackButton";
+export { default as FeedbackButton } from "./FeedbackButton.js";

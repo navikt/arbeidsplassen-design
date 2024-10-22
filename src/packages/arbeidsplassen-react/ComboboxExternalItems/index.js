@@ -1,1 +1,1 @@
-export { default as ComboboxExternalItems } from "./ComboboxExternalItems";
+export { default as ComboboxExternalItems } from "./ComboboxExternalItems.js";
