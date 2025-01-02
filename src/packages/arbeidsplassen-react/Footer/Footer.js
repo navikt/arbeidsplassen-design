@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useId } from "react";
 import { Link, Heading } from "@navikt/ds-react";
 import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
 
 export default function Footer() {
+  const aboutHeadingId = useId();
+  const jobSeekerHeadingId = useId();
+  const companyHeadingId = useId();
+
   return (
     <footer className="arb-footer" lang="no">
       <div className="container-large">
         <nav className="arb-footer-sections">
-          <section className="arb-footer-section">
-            <Heading level="2" size="medium" spacing className="arb-footer-h2">
+          <section
+            className="arb-footer-section"
+            aria-labelledby={aboutHeadingId}
+          >
+            <Heading
+              id={aboutHeadingId}
+              level="2"
+              size="medium"
+              spacing
+              className="arb-footer-h2"
+            >
               Om oss
             </Heading>
             <ul aria-label="Nyttige lenker">
@@ -29,8 +42,17 @@ export default function Footer() {
             </ul>
           </section>
 
-          <section className="arb-footer-section">
-            <Heading level="2" size="medium" spacing className="arb-footer-h2">
+          <section
+            className="arb-footer-section"
+            aria-labelledby={jobSeekerHeadingId}
+          >
+            <Heading
+              id={jobSeekerHeadingId}
+              level="2"
+              size="medium"
+              spacing
+              className="arb-footer-h2"
+            >
               For jobbsøkere
             </Heading>
             <ul aria-label="Nyttige lenker for jobbsøkere">
@@ -53,8 +75,17 @@ export default function Footer() {
             </ul>
           </section>
 
-          <section className="arb-footer-section">
-            <Heading level="2" size="medium" spacing className="arb-footer-h2">
+          <section
+            className="arb-footer-section"
+            aria-labelledby={companyHeadingId}
+          >
+            <Heading
+              id={companyHeadingId}
+              level="2"
+              size="medium"
+              spacing
+              className="arb-footer-h2"
+            >
               For bedrifter
             </Heading>
             <ul aria-label="Nyttige lenker for bedrifter">
@@ -79,7 +110,7 @@ export default function Footer() {
             </ul>
           </section>
         </nav>
-        <section className="arb-footer-bottom">
+        <div className="arb-footer-bottom">
           <a href="/" className="arb-footer-logo">
             <ArbeidsplassenLogoSmall
               inverted
@@ -91,7 +122,7 @@ export default function Footer() {
           <p className="arb-footer-p">
             <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
           </p>
-        </section>
+        </div>
       </div>
     </footer>
   );
