@@ -127,6 +127,10 @@
   box-shadow: 0 0 0 3px var(--a-border-focus);
 }
 
+.navds-chips__toggle:focus-visible {
+  box-shadow: 0 0 0 3px var(--a-border-focus);
+}
+
 /******************************************************
  * Combobox overrides
  ******************************************************/
