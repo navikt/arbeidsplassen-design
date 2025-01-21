@@ -157,3 +157,10 @@
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
 }
+
+/******************************************************
+ * Error overrides
+ ******************************************************/
+.navds-error-message.navds-error-message--show-icon svg {
+  margin-top: 0.3em !important;
+}
