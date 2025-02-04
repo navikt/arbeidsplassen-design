@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@navikt/ds-react";
-import { Buldings3Icon, PersonIcon } from "@navikt/aksel-icons";
+import { Buildings3Icon, PersonIcon } from "@navikt/aksel-icons";
 import LoginButton from "./LoginButton";
 
 function LoggedInContent({
@@ -28,7 +28,7 @@ function LoggedInContent({
           as="a"
           variant="tertiary"
           href="/stillingsregistrering"
-          icon={<Buldings3Icon aria-hidden="true" />}
+          icon={<Buildings3Icon aria-hidden="true" />}
         >
           Min bedriftsside
         </Button>
