@@ -62,7 +62,13 @@ export default function Layout({ children, title, headerArgs }) {
     <>
       <div className="arb-push-footer-down">
         <SkipLink />
-        <Header {...headerArgs} />
+        <Header
+          variant={headerArgs.variant}
+          authenticationStatus={headerArgs.authenticationStatus}
+          active={headerArgs.active}
+          onLogin={headerArgs.onLogin}
+          onLogout={headerArgs.onLogout}
+        />
         <main id="main" className="container-large mt-8 mb-24">
           <HGrid columns={{ md: "auto auto", lg: "350px auto" }}>
             <div>
