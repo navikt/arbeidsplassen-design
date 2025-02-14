@@ -2,9 +2,11 @@ import Link from "next/link";
 import { BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
 import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
 import { Footer, Header } from "@navikt/arbeidsplassen-react";
+import { CookieBanner } from "@navikt/arbeidsplassen-react/CookieBanner";
 
 const arbeidsplassenComponents = [
   "ComboboxExternalItems",
+  "CookieBanner",
   "FeedbackButton",
   "Header",
   "Illustrations",
@@ -52,7 +54,12 @@ const akselComponents = [
   "Typography",
 ].sort();
 
-export default function Layout({ children, title, headerArgs }) {
+export default function Layout({
+  children,
+  title,
+  headerArgs,
+  cookieBannerArgs,
+}) {
   headerArgs = {
     onLogin: console.log,
     onLogout: console.log,
@@ -61,6 +68,12 @@ export default function Layout({ children, title, headerArgs }) {
   return (
     <>
       <div className="arb-push-footer-down">
+        {cookieBannerArgs && (
+          <CookieBanner
+            onNecessaryOnlyClick={cookieBannerArgs.onNecessaryOnlyClick}
+            onAcceptAllClick={cookieBannerArgs.onAcceptAllClick}
+          />
+        )}
         <SkipLink />
         <Header
           variant={headerArgs.variant}
