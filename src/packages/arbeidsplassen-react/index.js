@@ -7,3 +7,4 @@ export * from "./SkipLink";
 export * from "./NotFound";
 export * from "./RichText";
 export * from "./illustrations";
+export * from "./CookieBanner";

@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
 import SkipLink from "@navikt/arbeidsplassen-react/SkipLink/SkipLink";
-import { Footer, Header } from "@navikt/arbeidsplassen-react";
-import { CookieBanner } from "@navikt/arbeidsplassen-react/CookieBanner";
+import { Footer, Header, CookieBanner } from "@navikt/arbeidsplassen-react";
 
 const arbeidsplassenComponents = [
   "ComboboxExternalItems",
