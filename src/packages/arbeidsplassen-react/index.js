@@ -1,4 +1,5 @@
 export * from "./ComboboxExternalItems";
+export * from "./CookieBanner";
 export * from "./Feedback";
 export * from "./Footer";
 export * from "./Header";
@@ -7,4 +8,3 @@ export * from "./SkipLink";
 export * from "./NotFound";
 export * from "./RichText";
 export * from "./illustrations";
-export * from "./CookieBanner";
