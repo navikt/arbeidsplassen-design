@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BodyLong,
   Box,
@@ -12,7 +12,13 @@ import {
 import PropTypes from "prop-types";
 import { ListItem } from "@navikt/ds-react/List";
 
-function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick }) {
+function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick, onOpen }) {
+  useEffect(() => {
+    if (onOpen) {
+      onOpen();
+    }
+  }, [onOpen]);
+
   return (
     <Box
       as="section"
@@ -66,6 +72,7 @@ function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick }) {
 CookieBanner.propTypes = {
   onNecessaryOnlyClick: PropTypes.func.isRequired,
   onAcceptAllClick: PropTypes.func.isRequired,
+  onOpen: PropTypes.func,
 };
 
 export default CookieBanner;
