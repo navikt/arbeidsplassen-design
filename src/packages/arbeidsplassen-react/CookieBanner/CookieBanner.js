@@ -25,6 +25,7 @@ function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick, onOpen }) {
       aria-labelledby="arb-cookie-banner-title"
       padding={{ xs: "6 0", md: "8 0" }}
       background="surface-alt-2-subtle"
+      id="arb-cookie-banner-section"
     >
       <div className="container-large">
         <Heading level="1" size="large" spacing id="arb-cookie-banner-title">
