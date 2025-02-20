@@ -40,7 +40,7 @@ export function getCookie(req = null) {
 
     const cookieData = parseConsentCookie(decodeURIComponent(match[2]));
 
-    if (!validateAgainstSchema(consentData, ConsentDataSchema)) {
+    if (!validateAgainstSchema(cookieData, ConsentDataSchema)) {
       console.warn(
         `Cookie "${consentCookieName}" does not match the expected schema.`
       );
@@ -60,7 +60,7 @@ export function getCookie(req = null) {
 
     const cookieData = parseConsentCookie(decodeURIComponent(match[2]));
 
-    if (!validateAgainstSchema(consentData, ConsentDataSchema)) {
+    if (!validateAgainstSchema(cookieData, ConsentDataSchema)) {
       console.warn(
         `Cookie "${consentCookieName}" does not match the expected schema.`
       );
@@ -125,9 +125,9 @@ function parseConsentCookie(cookieString) {
   return consentData;
 }
 
-export function getCreatedAtValue() {
+export function getCreatedAtValue(req = null) {
   try {
-    const existingCookie = getCookie();
+    const existingCookie = getCookie(req);
     return existingCookie?.meta?.createdAt || new Date().toISOString();
   } catch (error) {
     console.warn(
@@ -138,9 +138,9 @@ export function getCreatedAtValue() {
   }
 }
 
-export function getUserActionTakenValue() {
+export function getUserActionTakenValue(req = null) {
   try {
-    const existingCookie = getCookie();
+    const existingCookie = getCookie(req);
     return existingCookie?.userActionTaken || false;
   } catch (error) {
     console.warn(
@@ -151,9 +151,9 @@ export function getUserActionTakenValue() {
   }
 }
 
-export function getConsentValues() {
+export function getConsentValues(req = null) {
   try {
-    const existingCookie = getCookie();
+    const existingCookie = getCookie(req);
     return {
       analyticsConsent: existingCookie?.consent?.analytics || false,
       surveysConsent: existingCookie?.consent?.surveys || false,
