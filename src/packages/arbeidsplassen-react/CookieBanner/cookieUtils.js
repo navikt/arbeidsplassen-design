@@ -73,13 +73,29 @@ export function getUserActionTakenValue(cookieName) {
   }
 }
 
+export function getConsentValues(cookieName) {
+  try {
+    const existingCookie = getCookie(cookieName);
+    return {
+      analyticsConsent: existingCookie?.consent?.analytics || false,
+      surveysConsent: existingCookie?.consent?.surveys || false,
+    };
+  } catch (error) {
+    console.warn(`Error retrieving consent values for "${cookieName}":`, error);
+    return {
+      analyticsConsent: false,
+      surveysConsent: false,
+    };
+  }
+}
+
 function validateAgainstSchema(obj, schema) {
   if (typeof obj !== "object" || obj === null) return false;
 
   return Object.entries(schema).every(([key, type]) => {
     if (typeof type === "object") {
-      return validateAgainstSchema(obj[key], type);
+      return obj[key] && validateAgainstSchema(obj[key], type);
     }
-    return typeof obj[key] === type;
+    return obj.hasOwnProperty(key) && typeof obj[key] === type;
   });
 }
