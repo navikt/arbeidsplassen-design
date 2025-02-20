@@ -1,3 +1,16 @@
+const ConsentDataSchema = {
+  consent: {
+    analytics: "boolean",
+    surveys: "boolean",
+  },
+  userActionTaken: "boolean",
+  meta: {
+    createdAt: "string",
+    updatedAt: "string",
+    version: "number",
+  },
+};
+
 export function setCookie(name, value, days = 90) {
   if (typeof document === "undefined") {
     return;
@@ -46,19 +59,6 @@ export function getCreatedAtValue(cookieName) {
     return new Date().toISOString();
   }
 }
-
-const ConsentDataSchema = {
-  consent: {
-    analytics: "boolean",
-    surveys: "boolean",
-  },
-  userActionTaken: "boolean",
-  meta: {
-    createdAt: "string",
-    updatedAt: "string",
-    version: "number",
-  },
-};
 
 function validateAgainstSchema(obj, schema) {
   if (typeof obj !== "object" || obj === null) return false;
