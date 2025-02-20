@@ -30,30 +30,99 @@ export function setCookie(value, days = 90) {
   }
 }
 
-export function getCookie() {
-  if (typeof document === "undefined") {
-    return;
-  }
+export function getCookie(req = null) {
+  if (req) {
+    const cookies = req.headers.cookie || "";
+    const match = cookies.match(
+      new RegExp(`(^| )${consentCookieName}=([^;]+)`)
+    );
+    if (!match) return null;
 
-  const match = document.cookie.match(
-    new RegExp(`(^| )${consentCookieName}=([^;]+)`)
-  );
-  if (!match) return null;
+    const cookieData = parseConsentCookie(decodeURIComponent(match[2]));
 
-  try {
-    const parsedData = JSON.parse(decodeURIComponent(match[2]));
-    if (!validateAgainstSchema(parsedData, ConsentDataSchema)) {
-      throw new Error(
+    if (!validateAgainstSchema(consentData, ConsentDataSchema)) {
+      console.warn(
         `Cookie "${consentCookieName}" does not match the expected schema.`
       );
+      return null;
     }
-    return parsedData;
-  } catch (e) {
-    console.warn(`Failed to parse cookie "${consentCookieName}":`, e);
-    throw new Error(
-      `Failed to get cookie "${consentCookieName}": ${e.message}`
+
+    return cookieData;
+  } else {
+    if (typeof document === "undefined") {
+      return null;
+    }
+
+    const match = document.cookie.match(
+      new RegExp(`(^| )${consentCookieName}=([^;]+)`)
     );
+    if (!match) return null;
+
+    const cookieData = parseConsentCookie(decodeURIComponent(match[2]));
+
+    if (!validateAgainstSchema(consentData, ConsentDataSchema)) {
+      console.warn(
+        `Cookie "${consentCookieName}" does not match the expected schema.`
+      );
+      return null;
+    }
+
+    return cookieData;
   }
+}
+
+function isValidISOString(dateString) {
+  const date = new Date(dateString);
+  return date.toISOString() === dateString;
+}
+
+function parseConsentCookie(cookieString) {
+  const consentData = {
+    consent: {
+      analytics: false,
+      surveys: false,
+    },
+    userActionTaken: false,
+    meta: {
+      createdAt: "",
+      updatedAt: "",
+      version: 0,
+    },
+  };
+
+  const cookieParts = cookieString.split("; ");
+
+  cookieParts.forEach((part) => {
+    const [key, value] = part.split("=");
+    switch (key) {
+      case "analyticsConsent":
+        consentData.consent.analytics = value === "true";
+        break;
+      case "surveysConsent":
+        consentData.consent.surveys = value === "true";
+        break;
+      case "userActionTaken":
+        consentData.userActionTaken = value === "true";
+        break;
+      case "createdAt":
+        consentData.meta.createdAt = isValidISOString(value)
+          ? value
+          : new Date().toISOString();
+        break;
+      case "updatedAt":
+        consentData.meta.updatedAt = isValidISOString(value)
+          ? value
+          : new Date().toISOString();
+        break;
+      case "version":
+        consentData.meta.version = Number(value) || 1;
+        break;
+      default:
+        break;
+    }
+  });
+
+  return consentData;
 }
 
 export function getCreatedAtValue() {
