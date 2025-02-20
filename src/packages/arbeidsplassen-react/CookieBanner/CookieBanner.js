@@ -11,13 +11,81 @@ import {
 } from "@navikt/ds-react";
 import PropTypes from "prop-types";
 import { ListItem } from "@navikt/ds-react/List";
+import { getCreatedAtValue, setCookie } from "./cookieUtils";
 
-function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick, onOpen }) {
+function CookieBanner({
+  handleCookieError,
+  onNecessaryOnlyClick,
+  onAcceptAllClick,
+  onOpen,
+  onClose,
+}) {
+  const consentCookieName = "arbeidsplassen-consent";
   useEffect(() => {
     if (onOpen) {
       onOpen();
     }
   }, [onOpen]);
+
+  const handleNecessaryOnlyClick = () => {
+    if (onNecessaryOnlyClick) {
+      onNecessaryOnlyClick();
+    } else {
+      try {
+        const createdAt = getCreatedAtValue(consentCookieName);
+
+        const consentData = {
+          consent: { analytics: false, surveys: false },
+          userActionTaken: true,
+          meta: {
+            createdAt: createdAt,
+            updatedAt: new Date().toISOString(),
+            version: 1,
+          },
+        };
+
+        setCookie(consentCookieName, consentData);
+      } catch (error) {
+        if (handleCookieError) {
+          handleCookieError(error);
+        }
+      }
+    }
+
+    if (onClose) {
+      onClose();
+    }
+  };
+
+  const handleAcceptAllClick = () => {
+    if (onAcceptAllClick) {
+      onAcceptAllClick();
+    } else {
+      try {
+        const createdAt = getCreatedAtValue(consentCookieName);
+
+        const consentData = {
+          consent: { analytics: true, surveys: true },
+          userActionTaken: true,
+          meta: {
+            createdAt: createdAt,
+            updatedAt: new Date().toISOString(),
+            version: 1,
+          },
+        };
+
+        setCookie(consentCookieName, consentData);
+      } catch (error) {
+        if (handleCookieError) {
+          handleCookieError(error);
+        }
+      }
+    }
+
+    if (onClose) {
+      onClose();
+    }
+  };
 
   return (
     <Box
@@ -53,14 +121,14 @@ function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick, onOpen }) {
           <Button
             type="button"
             variant="secondary-neutral"
-            onClick={onNecessaryOnlyClick}
+            onClick={handleNecessaryOnlyClick}
           >
             Bare nødvendige
           </Button>
           <Button
             type="button"
             variant="secondary-neutral"
-            onClick={onAcceptAllClick}
+            onClick={handleAcceptAllClick}
           >
             Godta alle
           </Button>
@@ -71,9 +139,11 @@ function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick, onOpen }) {
 }
 
 CookieBanner.propTypes = {
-  onNecessaryOnlyClick: PropTypes.func.isRequired,
-  onAcceptAllClick: PropTypes.func.isRequired,
+  handleCookieError: PropTypes.func,
+  onNecessaryOnlyClick: PropTypes.func,
+  onAcceptAllClick: PropTypes.func,
   onOpen: PropTypes.func,
+  onClose: PropTypes.func,
 };
 
 export default CookieBanner;
