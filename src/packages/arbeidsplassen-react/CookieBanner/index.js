@@ -1,2 +1,11 @@
+import {
+  getUserActionTakenValue as originalGetUserActionTakenValue,
+  getCookie as originalGetCookie,
+} from "./cookieUtils";
+
 export { default as CookieBanner } from "./CookieBanner";
-export { getCookie, getUserActionTakenValue } from "./cookieUtils";
+
+export const CookieBannerUtils = {
+  getUserActionTakenValue: originalGetUserActionTakenValue,
+  getCookie: originalGetCookie,
+};
