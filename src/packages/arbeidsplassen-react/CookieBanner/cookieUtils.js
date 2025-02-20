@@ -60,6 +60,19 @@ export function getCreatedAtValue(cookieName) {
   }
 }
 
+export function getUserActionTakenValue(cookieName) {
+  try {
+    const existingCookie = getCookie(cookieName);
+    return existingCookie?.userActionTaken || false;
+  } catch (error) {
+    console.warn(
+      `Error getting userActionTaken value from cookie "${cookieName}":`,
+      error
+    );
+    return false;
+  }
+}
+
 function validateAgainstSchema(obj, schema) {
   if (typeof obj !== "object" || obj === null) return false;
 
