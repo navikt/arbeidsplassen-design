@@ -20,7 +20,6 @@ function CookieBanner({
   onOpen,
   onClose,
 }) {
-  const consentCookieName = "arbeidsplassen-consent";
   useEffect(() => {
     if (onOpen) {
       onOpen();
@@ -32,7 +31,7 @@ function CookieBanner({
       onNecessaryOnlyClick();
     } else {
       try {
-        const createdAt = getCreatedAtValue(consentCookieName);
+        const createdAt = getCreatedAtValue();
 
         const consentData = {
           consent: { analytics: false, surveys: false },
@@ -44,7 +43,7 @@ function CookieBanner({
           },
         };
 
-        setCookie(consentCookieName, consentData);
+        setCookie(consentData);
       } catch (error) {
         if (handleCookieError) {
           handleCookieError(error);
@@ -62,7 +61,7 @@ function CookieBanner({
       onAcceptAllClick();
     } else {
       try {
-        const createdAt = getCreatedAtValue(consentCookieName);
+        const createdAt = getCreatedAtValue();
 
         const consentData = {
           consent: { analytics: true, surveys: true },
@@ -74,7 +73,7 @@ function CookieBanner({
           },
         };
 
-        setCookie(consentCookieName, consentData);
+        setCookie(consentData);
       } catch (error) {
         if (handleCookieError) {
           handleCookieError(error);
