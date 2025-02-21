@@ -84,43 +84,66 @@ function parseConsentCookie(cookieString) {
     },
     userActionTaken: false,
     meta: {
-      createdAt: "",
-      updatedAt: "",
-      version: 0,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      version: 1,
     },
   };
 
-  const cookieParts = cookieString.split("; ");
+  try {
+    const decodedString = decodeURIComponent(cookieString);
 
-  cookieParts.forEach((part) => {
-    const [key, value] = part.split("=");
-    switch (key) {
-      case "analyticsConsent":
-        consentData.consent.analytics = value === "true";
-        break;
-      case "surveysConsent":
-        consentData.consent.surveys = value === "true";
-        break;
-      case "userActionTaken":
-        consentData.userActionTaken = value === "true";
-        break;
-      case "createdAt":
-        consentData.meta.createdAt = isValidISOString(value)
-          ? value
-          : new Date().toISOString();
-        break;
-      case "updatedAt":
-        consentData.meta.updatedAt = isValidISOString(value)
-          ? value
-          : new Date().toISOString();
-        break;
-      case "version":
-        consentData.meta.version = Number(value) || 1;
-        break;
-      default:
-        break;
+    const trimmedString = decodedString.replace(/^{|}$/g, "");
+
+    const keyValuePairs = trimmedString.match(
+      /"([^"]+)":(".*?"|\d+|true|false)/g
+    );
+
+    if (!keyValuePairs) {
+      throw new Error("Invalid cookie format");
     }
-  });
+
+    keyValuePairs.forEach((pair) => {
+      const [key, rawValue] = pair
+        .split(/:(.+)/)
+        .map((s) => s.trim().replace(/^"|"$/g, ""));
+
+      let value;
+      if (rawValue === "true") value = true;
+      else if (rawValue === "false") value = false;
+      else if (!isNaN(rawValue)) value = Number(rawValue);
+      else value = rawValue;
+
+      switch (key) {
+        case "analytics":
+          consentData.consent.analytics = value;
+          break;
+        case "surveys":
+          consentData.consent.surveys = value;
+          break;
+        case "userActionTaken":
+          consentData.userActionTaken = value;
+          break;
+        case "createdAt":
+          consentData.meta.createdAt = isValidISOString(value)
+            ? value
+            : new Date().toISOString();
+          break;
+        case "updatedAt":
+          consentData.meta.updatedAt = isValidISOString(value)
+            ? value
+            : new Date().toISOString();
+          break;
+        case "version":
+          consentData.meta.version = value;
+          break;
+        default:
+          break;
+      }
+    });
+  } catch (error) {
+    console.error("Failed to parse consent cookie:", error);
+  }
 
   return consentData;
 }
