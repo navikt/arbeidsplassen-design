@@ -30,9 +30,8 @@ export function setCookie(value, days = 90) {
   }
 }
 
-export function getCookie(req = null) {
-  if (req) {
-    const cookies = req.headers.cookie || "";
+export function getCookie(cookies = null) {
+  if (cookies) {
     const match = cookies.match(
       new RegExp(`(^| )${consentCookieName}=([^;]+)`)
     );
@@ -148,9 +147,9 @@ function parseConsentCookie(cookieString) {
   return consentData;
 }
 
-export function getCreatedAtValue(req = null) {
+export function getCreatedAtValue(cookies = null) {
   try {
-    const existingCookie = getCookie(req);
+    const existingCookie = getCookie(cookies);
     return existingCookie?.meta?.createdAt || new Date().toISOString();
   } catch (error) {
     console.warn(
@@ -161,9 +160,9 @@ export function getCreatedAtValue(req = null) {
   }
 }
 
-export function getUserActionTakenValue(req = null) {
+export function getUserActionTakenValue(cookies = null) {
   try {
-    const existingCookie = getCookie(req);
+    const existingCookie = getCookie(cookies);
     return existingCookie?.userActionTaken || false;
   } catch (error) {
     console.warn(
@@ -174,9 +173,9 @@ export function getUserActionTakenValue(req = null) {
   }
 }
 
-export function getConsentValues(req = null) {
+export function getConsentValues(cookies = null) {
   try {
-    const existingCookie = getCookie(req);
+    const existingCookie = getCookie(cookies);
     return {
       analyticsConsent: existingCookie?.consent?.analytics || false,
       surveysConsent: existingCookie?.consent?.surveys || false,
