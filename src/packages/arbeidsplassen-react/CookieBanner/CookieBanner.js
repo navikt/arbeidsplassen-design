@@ -20,6 +20,26 @@ function CookieBanner({
   onOpen,
   onClose,
 }) {
+  // Clear localStorage on load
+  const preserveKeys = ["isDebug"];
+  useEffect(() => {
+    try {
+      const preservedValues = {};
+      preserveKeys.forEach((key) => {
+        const value = localStorage.getItem(key);
+        if (value) {
+          preservedValues[key] = value;
+        }
+      });
+
+      localStorage.clear();
+
+      Object.entries(preservedValues).forEach(([key, value]) => {
+        localStorage.setItem(key, value);
+      });
+    } catch {}
+  }, []);
+
   useEffect(() => {
     if (onOpen) {
       onOpen();
