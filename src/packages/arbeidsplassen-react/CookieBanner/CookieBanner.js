@@ -127,12 +127,12 @@ function CookieBanner({
 
         <List aria-label="Beskrivelse av valgene du har:" className="mb-8">
           <ListItem>
-            <Label as="span">Bare nødvendige:</Label> Sikrer at tjenesten
-            fungerer og er trygg. Kan ikke velges bort.
-          </ListItem>
-          <ListItem>
             <Label as="span">Godta alle:</Label> Hjelper oss gjøre tjenestene
             bedre for deg basert på anonymisert bruk.
+          </ListItem>
+          <ListItem>
+            <Label as="span">Bare nødvendige:</Label> Sikrer at tjenesten
+            fungerer og er trygg. Kan ikke velges bort.
           </ListItem>
         </List>
 
@@ -140,16 +140,16 @@ function CookieBanner({
           <Button
             type="button"
             variant="secondary-neutral"
-            onClick={handleNecessaryOnlyClick}
+            onClick={handleAcceptAllClick}
           >
-            Bare nødvendige
+            Godta alle
           </Button>
           <Button
             type="button"
             variant="secondary-neutral"
-            onClick={handleAcceptAllClick}
+            onClick={handleNecessaryOnlyClick}
           >
-            Godta alle
+            Bare nødvendige
           </Button>
         </Stack>
       </div>
