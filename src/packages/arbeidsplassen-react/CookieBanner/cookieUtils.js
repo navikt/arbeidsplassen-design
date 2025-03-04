@@ -23,7 +23,7 @@ export function setCookie(value, days = 90) {
     expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
     const isProduction = process.env.NODE_ENV === "production";
     const secureFlag = isProduction ? "; Secure" : "";
-    document.cookie = `${consentCookieName}=${jsonString}; expires=${expires.toUTCString()}; path=/; SameSite=Strict${secureFlag}`;
+    document.cookie = `${consentCookieName}=${jsonString}; expires=${expires.toUTCString()}; path=/; SameSite=Lax${secureFlag}`;
   } catch (e) {
     console.error(`Failed to set cookie "${consentCookieName}":`, e);
     throw new Error(
