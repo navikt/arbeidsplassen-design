@@ -65,7 +65,7 @@ export default function Footer() {
                 <Link href="/sporsmal-og-svar">Spørsmål og svar</Link>
               </li>
               <li>
-                <Link href="/jobbe-i-utlandet">Jobbe i utlandet</Link>
+                <Link href="/jobbe-i-utlandet">Jobbe i utlandet (EURES)</Link>
               </li>
               <li>
                 <Link href="/en/work-in-norway" lang="en">
