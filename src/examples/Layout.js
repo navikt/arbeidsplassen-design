@@ -68,10 +68,7 @@ export default function Layout({
     <>
       <div className="arb-push-footer-down">
         {cookieBannerArgs && (
-          <CookieBanner
-            onNecessaryOnlyClick={cookieBannerArgs.onNecessaryOnlyClick}
-            onAcceptAllClick={cookieBannerArgs.onAcceptAllClick}
-          />
+          <CookieBanner onClose={cookieBannerArgs.onClose} />
         )}
         <SkipLink />
         <Header

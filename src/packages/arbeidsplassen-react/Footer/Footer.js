@@ -32,6 +32,9 @@ export default function Footer() {
                 <Link href="/personvern">Personvern</Link>
               </li>
               <li>
+                <Link href="/informasjonskapsler">Informasjonskapsler</Link>
+              </li>
+              <li>
                 <Link href="/tilgjengelighet">Tilgjengelighet</Link>
               </li>
               <li>

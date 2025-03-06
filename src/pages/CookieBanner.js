@@ -11,10 +11,7 @@ const CookieBannerExample = () => {
       cookieBannerArgs={
         showCookieBanner
           ? {
-              onNecessaryOnlyClick: () => {
-                setShowCookieBanner(false);
-              },
-              onAcceptAllClick: () => {
+              onClose: () => {
                 setShowCookieBanner(false);
               },
             }

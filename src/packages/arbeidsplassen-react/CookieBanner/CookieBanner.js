@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BodyLong,
   Box,
@@ -11,14 +11,108 @@ import {
 } from "@navikt/ds-react";
 import PropTypes from "prop-types";
 import { ListItem } from "@navikt/ds-react/List";
+import { getCreatedAtValue, setCookie } from "./cookieUtils";
 
-function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick }) {
+function CookieBanner({
+  handleCookieError,
+  onNecessaryOnlyClick,
+  onAcceptAllClick,
+  onOpen,
+  onClose,
+}) {
+  // Clear localStorage on load
+  const preserveKeys = ["isDebug"];
+  useEffect(() => {
+    try {
+      const preservedValues = {};
+      preserveKeys.forEach((key) => {
+        const value = localStorage.getItem(key);
+        if (value) {
+          preservedValues[key] = value;
+        }
+      });
+
+      localStorage.clear();
+
+      Object.entries(preservedValues).forEach(([key, value]) => {
+        localStorage.setItem(key, value);
+      });
+    } catch {}
+  }, []);
+
+  useEffect(() => {
+    if (onOpen) {
+      onOpen();
+    }
+  }, [onOpen]);
+
+  const handleNecessaryOnlyClick = () => {
+    if (onNecessaryOnlyClick) {
+      onNecessaryOnlyClick();
+    } else {
+      try {
+        const createdAt = getCreatedAtValue();
+
+        const consentData = {
+          consent: { analytics: false, surveys: false },
+          userActionTaken: true,
+          meta: {
+            createdAt: createdAt,
+            updatedAt: new Date().toISOString(),
+            version: 1,
+          },
+        };
+
+        setCookie(consentData);
+      } catch (error) {
+        if (handleCookieError) {
+          handleCookieError(error);
+        }
+      }
+    }
+
+    if (onClose) {
+      onClose();
+    }
+  };
+
+  const handleAcceptAllClick = () => {
+    if (onAcceptAllClick) {
+      onAcceptAllClick();
+    } else {
+      try {
+        const createdAt = getCreatedAtValue();
+
+        const consentData = {
+          consent: { analytics: true, surveys: true },
+          userActionTaken: true,
+          meta: {
+            createdAt: createdAt,
+            updatedAt: new Date().toISOString(),
+            version: 1,
+          },
+        };
+
+        setCookie(consentData);
+      } catch (error) {
+        if (handleCookieError) {
+          handleCookieError(error);
+        }
+      }
+    }
+
+    if (onClose) {
+      onClose();
+    }
+  };
+
   return (
     <Box
       as="section"
       aria-labelledby="arb-cookie-banner-title"
       padding={{ xs: "6 0", md: "8 0" }}
       background="surface-alt-2-subtle"
+      id="arb-cookie-banner-section"
     >
       <div className="container-large">
         <Heading level="1" size="large" spacing id="arb-cookie-banner-title">
@@ -33,12 +127,12 @@ function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick }) {
 
         <List aria-label="Beskrivelse av valgene du har:" className="mb-8">
           <ListItem>
-            <Label as="span">Bare nødvendige:</Label> Sikrer at tjenesten
-            fungerer og er trygg. Kan ikke velges bort.
-          </ListItem>
-          <ListItem>
             <Label as="span">Godta alle:</Label> Hjelper oss gjøre tjenestene
             bedre for deg basert på anonymisert bruk.
+          </ListItem>
+          <ListItem>
+            <Label as="span">Bare nødvendige:</Label> Sikrer at tjenesten
+            fungerer og er trygg. Kan ikke velges bort.
           </ListItem>
         </List>
 
@@ -46,16 +140,16 @@ function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick }) {
           <Button
             type="button"
             variant="secondary-neutral"
-            onClick={onNecessaryOnlyClick}
+            onClick={handleAcceptAllClick}
           >
-            Bare nødvendige
+            Godta alle
           </Button>
           <Button
             type="button"
             variant="secondary-neutral"
-            onClick={onAcceptAllClick}
+            onClick={handleNecessaryOnlyClick}
           >
-            Godta alle
+            Bare nødvendige
           </Button>
         </Stack>
       </div>
@@ -64,8 +158,11 @@ function CookieBanner({ onNecessaryOnlyClick, onAcceptAllClick }) {
 }
 
 CookieBanner.propTypes = {
-  onNecessaryOnlyClick: PropTypes.func.isRequired,
-  onAcceptAllClick: PropTypes.func.isRequired,
+  handleCookieError: PropTypes.func,
+  onNecessaryOnlyClick: PropTypes.func,
+  onAcceptAllClick: PropTypes.func,
+  onOpen: PropTypes.func,
+  onClose: PropTypes.func,
 };
 
 export default CookieBanner;
