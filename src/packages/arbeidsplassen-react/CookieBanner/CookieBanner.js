@@ -14,6 +14,7 @@ import { ListItem } from "@navikt/ds-react/List";
 import { getCreatedAtValue, setCookie } from "./cookieUtils";
 
 function CookieBanner({
+  headingLevel = "1",
   handleCookieError,
   onNecessaryOnlyClick,
   onAcceptAllClick,
@@ -115,7 +116,12 @@ function CookieBanner({
       id="arb-cookie-banner-section"
     >
       <div className="container-large">
-        <Heading level="1" size="large" spacing id="arb-cookie-banner-title">
+        <Heading
+          level={headingLevel}
+          size="large"
+          spacing
+          id="arb-cookie-banner-title"
+        >
           Informasjonskapsler på arbeidsplassen.no
         </Heading>
         <BodyLong>
@@ -158,6 +164,7 @@ function CookieBanner({
 }
 
 CookieBanner.propTypes = {
+  headingLevel: PropTypes.string,
   handleCookieError: PropTypes.func,
   onNecessaryOnlyClick: PropTypes.func,
   onAcceptAllClick: PropTypes.func,

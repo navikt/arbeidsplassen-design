@@ -68,7 +68,7 @@ export default function Layout({
     <>
       <div className="arb-push-footer-down">
         {cookieBannerArgs && (
-          <CookieBanner onClose={cookieBannerArgs.onClose} />
+          <CookieBanner headingLevel="2" onClose={cookieBannerArgs.onClose} />
         )}
         <SkipLink />
         <Header
