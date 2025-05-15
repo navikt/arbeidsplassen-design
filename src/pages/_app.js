@@ -1,4 +1,5 @@
 import "@navikt/ds-css";
+import "@navikt/ds-css/darkside";
 import "../packages/arbeidsplassen-css/index.css";
 import "../packages/arbeidsplassen-theme/index.css";
 

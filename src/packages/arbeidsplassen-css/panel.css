@@ -1,7 +1,7 @@
 .arb-panel-primary,
 .arb-panel-secondary,
 .arb-panel-tertiary {
-  padding: var(--a-spacing-6) !important;
+  padding: var(--ax-space-24) !important;
 }
 
 .arb-panel-primary {

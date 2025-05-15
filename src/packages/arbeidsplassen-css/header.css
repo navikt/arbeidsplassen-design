@@ -1,13 +1,13 @@
 .arb-header-wrapper {
   background: var(--a-bg-default);
-  padding-top: var(--a-spacing-4);
-  padding-bottom: var(--a-spacing-4);
+  padding-top: var(--ax-space-16);
+  padding-bottom: var(--ax-space-16);
 }
 
 @media (min-width: 768px) {
   .arb-header-wrapper {
-    padding-top: var(--a-spacing-6);
-    padding-bottom: var(--a-spacing-6);
+    padding-top: var(--ax-space-24);
+    padding-bottom: var(--ax-space-24);
   }
 }
 
@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: var(--a-spacing-4) 0;
+  gap: var(--ax-space-16) 0;
 }
 
 @media (min-width: 768px) {
@@ -105,7 +105,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: var(--a-spacing-4);
+  gap: var(--ax-space-16);
 }
 
 @media (max-width: 1343px) {
@@ -129,14 +129,14 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--a-spacing-4);
-  margin: 0 0 var(--a-spacing-4) var(--a-spacing-20);
+  gap: var(--ax-space-16);
+  margin: 0 0 var(--ax-space-16) var(--ax-space-80);
 }
 
 @media (min-width: 768px) {
   .arb-header-links ul {
     flex-direction: row;
-    margin: 0 0 0 var(--a-spacing-20);
+    margin: 0 0 0 var(--ax-space-80);
   }
 }
 
@@ -220,9 +220,9 @@
   .arb-header-divider::before {
     content: " ";
     height: 1px;
-    width: var(--a-spacing-4);
+    width: var(--ax-space-16);
     background: var(--a-border-default);
-    margin-bottom: var(--a-spacing-4);
+    margin-bottom: var(--ax-space-16);
   }
 }
 
@@ -236,13 +236,13 @@
     height: 100%;
     width: 1px;
     background: var(--a-border-default);
-    margin-right: var(--a-spacing-4);
+    margin-right: var(--ax-space-16);
   }
 }
 
 .arb-header-user {
   display: flex;
-  gap: var(--a-spacing-4) var(--a-spacing-2);
+  gap: var(--ax-space-16) var(--ax-space-8);
   flex-wrap: wrap;
   justify-content: center;
   font-size: 1rem;
