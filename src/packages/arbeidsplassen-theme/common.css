@@ -1,21 +1,21 @@
 [data-theme="arbeidsplassen"] {
-  --a-font-family: "Inter", sans-serif;
-  --a-font-size-medium: 0.875rem;
-  --a-font-size-large: 1rem;
-  --a-font-size-xlarge: 1.5rem;
-  --a-font-line-height-xlarge: 1.5;
-  --a-font-size-heading-xsmall: 1rem;
-  --a-font-size-heading-small: 1.25rem;
-  --a-font-size-heading-medium: 1.5rem;
-  --a-font-size-heading-large: 1.75rem;
-  --a-font-size-heading-xlarge: 2rem;
-  --a-font-size-heading-2xlarge: 3rem;
-  --a-font-line-height-heading-xsmall: 1.5;
-  --a-font-line-height-heading-small: 1.4;
-  --a-font-line-height-heading-medium: 1.33;
-  --a-font-line-height-heading-large: 1.25;
-  --a-font-line-height-heading-xlarge: 1.2;
-  --a-font-line-height-heading-2xlarge: 1.2;
+  --ax-font-family: "Inter", sans-serif;
+  --ax-font-size-medium: 0.875rem;
+  --ax-font-size-large: 1rem;
+  --ax-font-size-xlarge: 1.5rem;
+  --ax-font-line-height-xlarge: 1.5;
+  --ax-font-size-heading-xsmall: 1rem;
+  --ax-font-size-heading-small: 1.25rem;
+  --ax-font-size-heading-medium: 1.5rem;
+  --ax-font-size-heading-large: 1.75rem;
+  --ax-font-size-heading-xlarge: 2rem;
+  --ax-font-size-heading-2xlarge: 3rem;
+  --ax-font-line-height-heading-xsmall: 1.5;
+  --ax-font-line-height-heading-small: 1.4;
+  --ax-font-line-height-heading-medium: 1.33;
+  --ax-font-line-height-heading-large: 1.25;
+  --ax-font-line-height-heading-xlarge: 1.2;
+  --ax-font-line-height-heading-2xlarge: 1.2;
 
   --a-border-radius-small: 4px;
   --a-border-radius-medium: 6px;
@@ -24,61 +24,57 @@
 /******************************************************
  * Heading overrides
  ******************************************************/
-.navds-heading--2xlarge,
-.navds-heading--xlarge,
-.navds-heading--large,
-.navds-heading--medium {
+.aksel-heading--2xlarge,
+.aksel-heading--xlarge,
+.aksel-heading--large,
+.aksel-heading--medium {
   font-weight: 700 !important;
 }
 
-.navds-heading--small,
-.navds-heading--xsmall {
+.aksel-heading--small,
+.aksel-heading--xsmall {
   font-weight: 600 !important;
 }
 
-.navds-heading--2xlarge {
+.aksel-heading--2xlarge {
   letter-spacing: -0.03em !important;
 }
 
-.navds-heading--xlarge {
+.aksel-heading--xlarge {
   letter-spacing: -0.022em !important;
 }
 
-.navds-heading--large {
+.aksel-heading--large {
   letter-spacing: -0.022em !important;
 }
 
-.navds-heading--medium {
+.aksel-heading--medium {
   letter-spacing: -0.019em !important;
 }
 
-.navds-heading--small {
+.aksel-heading--small {
   letter-spacing: -0.017em !important;
 }
 
-.navds-heading--xsmall {
+.aksel-heading--xsmall {
   letter-spacing: -0.011em !important;
-}
-
-.navds-ingress {
-  letter-spacing: -0.019em !important;
 }
 
 /******************************************************
  * Paragraph overrides
  ******************************************************/
 
-.navds-body-long,
-.navds-body-short {
+.aksel-body-long,
+.aksel-body-short {
   letter-spacing: -0.011em !important;
 }
 
-.navds-body-long.navds-body-long--small,
-.navds-body-short.navds-body-short--small {
+.aksel-body-long.aksel-body-long--small,
+.aksel-body-short.aksel-body-short--small {
   letter-spacing: -0.006em !important;
 }
 
-.navds-label {
+.aksel-label {
   letter-spacing: -0.011em !important;
 }
 

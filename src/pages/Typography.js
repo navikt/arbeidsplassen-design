@@ -1,5 +1,5 @@
 import Layout from "../examples/Layout";
-import { BodyLong, Heading, List } from "@navikt/ds-react";
+import { BodyLong, BodyShort, Heading, Label, List } from "@navikt/ds-react";
 
 export default function TypographyPage() {
   return (
@@ -53,6 +53,48 @@ export default function TypographyPage() {
           was hardly able to cover it and seemed ready to slide off any moment.
         </BodyLong>
 
+        <Heading size="medium" level="3" spacing>
+          BodyLong small
+        </Heading>
+        <BodyLong spacing size="small">
+          Slightly domed and divided by arches into stiff sections. The bedding
+          was hardly able to cover it and seemed ready to slide off any moment.
+        </BodyLong>
+
+        <Heading size="medium" level="3" spacing>
+          BodyShort small
+        </Heading>
+        <BodyShort spacing size="small">
+          Slightly domed and divided by arches into stiff sections. The bedding
+          was hardly able to cover it and seemed ready to slide off any moment.
+        </BodyShort>
+
+        <Heading size="medium" level="3" spacing>
+          BodyLong large
+        </Heading>
+        <BodyLong spacing size="large">
+          Slightly domed and divided by arches into stiff sections. The bedding
+          was hardly able to cover it and seemed ready to slide off any moment.
+        </BodyLong>
+
+        <Heading size="medium" level="3" spacing>
+          BodyShort large
+        </Heading>
+        <BodyShort spacing size="large">
+          Slightly domed and divided by arches into stiff sections. The bedding
+          was hardly able to cover it and seemed ready to slide off any moment.
+        </BodyShort>
+
+        <Heading size="medium" level="3" spacing>
+          Label
+        </Heading>
+        <Label spacing>
+          Slightly domed and divided by arches into stiff sections.
+        </Label>
+
+        <Heading size="medium" level="3" spacing>
+          List
+        </Heading>
         <List>
           <List.Item>Du søker kun med relevant informasjon fo</List.Item>
           <List.Item>Slightly domed and divided by arches</List.Item>
