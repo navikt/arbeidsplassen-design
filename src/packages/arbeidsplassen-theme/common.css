@@ -113,18 +113,18 @@
 /******************************************************
  * Chips overrides
  ******************************************************/
-.navds-chips__chip {
+.aksel-chips__chip {
   font-weight: 600 !important;
   font-size: 1rem !important;
   border-bottom-right-radius: 0 !important;
 }
 
 .navds-chips__removable--neutral:focus-visible {
-  box-shadow: 0 0 0 3px var(--a-border-focus);
+  box-shadow: 0 0 0 3px var(--a-border-focus);/*todo*/
 }
 
 .navds-chips__toggle:focus-visible {
-  box-shadow: 0 0 0 3px var(--a-border-focus);
+  box-shadow: 0 0 0 3px var(--a-border-focus);/*todo*/
 }
 
 /******************************************************
@@ -137,19 +137,19 @@
 /******************************************************
  * Tag overrides
  ******************************************************/
-.navds-tag {
+.aksel-tag {
   font-weight: 600 !important;
-  border-radius: var(--a-border-radius-full) !important;
+  border-radius: var(--ax-border-radius-full) !important;
   border-bottom-right-radius: 0 !important;
 }
 
-.navds-tag--medium {
+.aksel-tag--medium {
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
 }
 
-.navds-tag--small,
-.navds-tag--xsmall {
+.aksel-tag--small,
+.aksel-tag--xsmall {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
 }
@@ -157,6 +157,6 @@
 /******************************************************
  * Error overrides
  ******************************************************/
-.navds-error-message.navds-error-message--show-icon svg {
+.aksel-error-message.aksel-error-message--show-icon svg {
   margin-top: 0.3em !important;
 }
