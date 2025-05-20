@@ -46,6 +46,7 @@ export default function HeaderPage() {
         className="mb-8"
       >
         <option value="ledige-stillinger">ledige-stillinger</option>
+        <option value="sommerjobb">sommerjobb</option>
         <option value="cv">cv</option>
         <option value="stillingsannonser">stillingsannonser</option>
       </Select>

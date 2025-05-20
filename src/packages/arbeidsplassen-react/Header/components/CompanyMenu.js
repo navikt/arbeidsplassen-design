@@ -9,6 +9,7 @@ function CompanyMenu({ active }) {
           active={active}
           href="/stillingsregistrering/stillingsannonser"
           id="stillingsannonser"
+          rel="nofollow"
         >
           Stillingsannonser
         </MenuItem>
