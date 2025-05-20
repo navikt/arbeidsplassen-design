@@ -6,7 +6,8 @@ function FeedbackButton({
   icon,
   variant = "tertiary-neutral",
   className,
-  ...rest
+  onClick,
+  ariaDescribedby,
 }) {
   return (
     <Button
@@ -14,7 +15,8 @@ function FeedbackButton({
       className={
         className ? `arb-feedback-button ${className}` : "arb-feedback-button"
       }
-      {...rest}
+      onClick={onClick}
+      aria-describedby={ariaDescribedby}
     >
       <span className="arb-feedback-button-inner">
         {icon}
