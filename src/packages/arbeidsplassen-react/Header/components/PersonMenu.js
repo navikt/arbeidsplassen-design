@@ -10,11 +10,6 @@ function PersonMenu({ active }) {
         </MenuItem>
       </li>
       <li>
-        <MenuItem href="/sommerjobb" active={active} id="sommerjobb">
-          Sommerjobben 2025 ☀️
-        </MenuItem>
-      </li>
-      <li>
         <MenuItem href="/cv?v1" active={active} id="cv">
           CV
         </MenuItem>

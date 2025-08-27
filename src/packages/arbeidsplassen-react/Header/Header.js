@@ -91,7 +91,6 @@ Header.propTypes = {
   ]),
   active: PropTypes.oneOf([
     "ledige-stillinger",
-    "sommerjobb",
     "cv",
     "stillingsannonser",
   ]),
