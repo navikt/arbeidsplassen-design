@@ -1,5 +1,5 @@
 import Layout from "../examples/Layout";
-import LoginPage from "@navikt/arbeidsplassen-react/LoginPage/LoginPage";
+import { LoginPage } from "@navikt/arbeidsplassen-react";
 
 const LoginPageExample = () => {
   return (

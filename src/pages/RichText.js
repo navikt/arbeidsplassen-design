@@ -1,5 +1,5 @@
 import Layout from "../examples/Layout";
-import RichText from "@navikt/arbeidsplassen-react/RichText/RichText";
+import { RichText } from "@navikt/arbeidsplassen-react";
 
 const RichTextExample = () => {
   return (
