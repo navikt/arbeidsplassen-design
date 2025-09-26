@@ -1,6 +1,6 @@
 import Layout from "../examples/Layout";
 import { FaceSmileIcon, FaceIcon, FaceFrownIcon } from "@navikt/aksel-icons";
-import FeedbackButton from "@navikt/arbeidsplassen-react/Feedback/FeedbackButton";
+import { FeedbackButton } from "@navikt/arbeidsplassen-react";
 import {
   BodyLong,
   BodyShort,

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Heading } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import { ComboboxExternalItems } from "@navikt/arbeidsplassen-react/ComboboxExternalItems";
+import { ComboboxExternalItems } from "@navikt/arbeidsplassen-react";
 
 const ComboboxExternalItemsExample = () => {
   const [items, setItems] = useState(["tea", "coffee", "juice"]);

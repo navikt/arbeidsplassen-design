@@ -1,6 +1,6 @@
 import Layout from "../examples/Layout";
 import { BodyLong, Heading, Link } from "@navikt/ds-react";
-import NotFound from "@navikt/arbeidsplassen-react/NotFound/NotFound";
+import { NotFound } from "@navikt/arbeidsplassen-react";
 
 const NotFoundExample = () => {
   return (

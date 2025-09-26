@@ -3,6 +3,7 @@
 reports/
 node_modules/
 dist/
+dist-types/
 
 # dependencies
 /node_modules
