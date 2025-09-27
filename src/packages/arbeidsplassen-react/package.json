@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-react",
-  "version": "8.7.0",
+  "version": "8.7.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "private": false,
@@ -22,6 +22,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "types": "dist-types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -36,7 +37,11 @@
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-react": "^7.22.15",
-    "@types/node": "^24.5.2"
+    "@babel/preset-typescript": "^7.24.0",
+    "typescript": "^5.5.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/node": "^20.0.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1"
