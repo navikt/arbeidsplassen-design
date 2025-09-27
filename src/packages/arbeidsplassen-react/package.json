@@ -1,6 +1,6 @@
 {
   "name": "@navikt/arbeidsplassen-react",
-  "version": "8.7.2",
+  "version": "8.7.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "private": false,
@@ -33,6 +33,7 @@
   "homepage": "https://github.com/navikt/arbeidsplassen-design#readme",
   "description": "",
   "devDependencies": {
+    "@navikt/ds-react": "^7.30.1",
     "@babel/cli": "^7.28.3",
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
