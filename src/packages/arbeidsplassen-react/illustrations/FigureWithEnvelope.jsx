@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for FigureWithEnvelope.
+ * @typedef {Object} FigureWithEnvelopeProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {FigureWithEnvelopeProps} props */
 export default function FigureWithEnvelope({
   className,
   ariaHidden = true,

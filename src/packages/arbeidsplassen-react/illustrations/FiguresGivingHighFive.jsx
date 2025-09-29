@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for FiguresGivingHighFive.
+ * @typedef {Object} FiguresGivingHighFiveProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {FiguresGivingHighFiveProps} props */
 export default function FiguresGivingHighFive({
   className,
   ariaHidden = true,

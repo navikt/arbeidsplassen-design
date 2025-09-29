@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for FigureWithKey.
+ * @typedef {Object} FigureWithKeyProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {FigureWithKeyProps} props */
 export default function FigureWithKey({
   className,
   ariaHidden = true,

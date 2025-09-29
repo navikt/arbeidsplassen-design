@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for FigureWithMagnifier.
+ * @typedef {Object} FigureWithMagnifierProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {FigureWithMagnifierProps} props */
 export default function FigureWithMagnifier({
   className,
   ariaHidden = true,

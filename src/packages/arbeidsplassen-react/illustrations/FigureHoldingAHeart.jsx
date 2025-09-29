@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for FigureHoldingAHeart.
+ * @typedef {Object} FigureHoldingAHeartProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {FigureHoldingAHeartProps} props */
 function FigureHoldingAHeart({
   className,
   ariaHidden = true,

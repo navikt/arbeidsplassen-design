@@ -135,6 +135,7 @@ export default function CookieBannerB({
             as="section"
             aria-labelledby={titleId}
             id={sectionId}
+            padding={{ xs: "6", md: "8" }}
             background="surface-alt-2-subtle"
         >
             <div className="container-large">
