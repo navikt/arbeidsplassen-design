@@ -154,11 +154,11 @@ export default function CookieBannerB({
                 </BodyLong>
 
                 <Stack gap="2" direction={{ xs: "column", sm: "row" }}>
-                    <Button type="button" variant="secondary-neutral" onClick={handleAcceptAllClick}>
-                        Godta alle informasjonskapsler
-                    </Button>
                     <Button type="button" variant="secondary-neutral" onClick={handleNecessaryOnlyClick}>
                         Kun nødvendige
+                    </Button>
+                    <Button type="button" variant="secondary-neutral" onClick={handleAcceptAllClick}>
+                        Godta alle informasjonskapsler
                     </Button>
                 </Stack>
             </div>
