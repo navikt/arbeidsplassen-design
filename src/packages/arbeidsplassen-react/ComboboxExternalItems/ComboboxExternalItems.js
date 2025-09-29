@@ -2,6 +2,26 @@ import React, { useId } from "react";
 import { BodyLong, Chips, VStack } from "@navikt/ds-react";
 import PropTypes from "prop-types";
 
+/**
+ * @typedef {string | { label: string, value: string }} ComboboxItem
+ */
+
+/**
+ * Props for ComboboxExternalItems.
+ *
+ * @typedef {Object} ComboboxExternalItemsProps
+ * @property {string} [ariaLive]
+ * @property {string} [fontSize]
+ * @property {string} [fontWeight]
+ * @property {ComboboxItem[]} [items]
+ * @property {string} itemsLeadingText            - Påkrevd
+ * @property {string} [noItemsText]
+ * @property {(item: ComboboxItem) => void} removeComboboxItem - Påkrevd
+ */
+
+/**
+ * @param {ComboboxExternalItemsProps} props
+ */
 function ComboboxExternalItems({
   ariaLive = "polite",
   fontSize = "normal",
