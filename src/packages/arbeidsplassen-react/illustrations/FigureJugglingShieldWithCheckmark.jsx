@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for FigureJugglingShieldWithCheckmark.
+ * @typedef {Object} FigureJugglingShieldWithCheckmarkProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {FigureJugglingShieldWithCheckmarkProps} props */
 function FigureJugglingShieldWithCheckmark({
   className,
   ariaHidden = true,

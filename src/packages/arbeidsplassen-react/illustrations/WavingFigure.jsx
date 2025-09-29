@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for WavingFigure.
+ * @typedef {Object} WavingFigureProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {WavingFigureProps} props */
 export default function WavingFigure({
   className,
   ariaHidden = true,

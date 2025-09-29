@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for ConfusedFigure.
+ * @typedef {Object} ConfusedFigureProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {ConfusedFigureProps} props */
 export default function ConfusedFigure({
   className,
   ariaHidden = true,

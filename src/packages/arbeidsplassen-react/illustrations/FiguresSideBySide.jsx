@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for FiguresSideBySide.
+ * @typedef {Object} FiguresSideBySideProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {FiguresSideBySideProps} props */
 export default function FiguresSideBySide({
   className,
   ariaHidden = true,

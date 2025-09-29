@@ -1,5 +1,14 @@
 import React from "react";
 
+/**
+ * Props for CelebratingFigure.
+ * @typedef {Object} CelebratingFigureProps
+ * @property {string} [className]
+ * @property {boolean} [ariaHidden]
+ * @property {string} [title]
+ */
+
+/** @param {CelebratingFigureProps} props */
 export default function CelebratingFigure({
   className,
   ariaHidden = true,

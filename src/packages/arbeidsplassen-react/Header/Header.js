@@ -9,6 +9,29 @@ function joinClassNames(...strings) {
   return strings.filter((x) => typeof x === "string" && x.length > 0).join(" ");
 }
 
+/**
+ * @typedef { "is-authenticated" | "not-authenticated" | "unknown" } AuthenticationStatus
+ */
+
+/**
+ * @typedef { "company" | "person" | "all"  } Variant
+ */
+/**
+ * @typedef { "ledige-stillinger" |"cv" | "stillingsannonser" } Active
+ */
+
+/**
+ * Props for Header.
+ * @typedef {Object} HeaderProps
+ * @property {string} [className]
+ * @property {Variant} [variant]
+ * @property {Active} [active]
+ * @property {AuthenticationStatus} [authenticationStatus]
+ * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogin
+ * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogout
+ */
+
+/** @param {HeaderProps} props */
 export default function Header({
   className,
   variant = "all",
