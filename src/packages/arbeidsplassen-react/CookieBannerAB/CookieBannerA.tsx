@@ -159,19 +159,20 @@ function CookieBannerA({
                     <Button
                         type="button"
                         variant="secondary-neutral"
-                        onClick={handleAcceptAllClick}
-                        data-testid="accept-all"
-                    >
-                        Godta alle informasjonskapsler
-                    </Button>
-                    <Button
-                        type="button"
-                        variant="secondary-neutral"
                         onClick={handleNecessaryOnlyClick}
                         data-testid="necessary-only"
                     >
                         Kun nødvendige
                     </Button>
+                    <Button
+                        type="button"
+                        variant="secondary-neutral"
+                        onClick={handleAcceptAllClick}
+                        data-testid="accept-all"
+                    >
+                        Godta alle informasjonskapsler
+                    </Button>
+
                 </Stack>
             </div>
         </Box>
