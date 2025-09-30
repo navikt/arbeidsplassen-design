@@ -54,7 +54,7 @@ const buildConsentData = (acceptedAll: boolean): ConsentData => {
     const nowIso = new Date().toISOString();
 
     return {
-        consent: { analytics: acceptedAll, surveys: acceptedAll },
+        consent: { analytics: acceptedAll },
         userActionTaken: true,
         meta: { createdAt, updatedAt: nowIso, version: CONSENT_VERSION },
     };

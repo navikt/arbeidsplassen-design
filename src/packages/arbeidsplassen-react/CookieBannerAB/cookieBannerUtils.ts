@@ -2,7 +2,6 @@
 export type ConsentData = {
     consent: {
         analytics: boolean;
-        surveys: boolean;
     };
     userActionTaken: boolean;
     meta: {
@@ -14,7 +13,6 @@ export type ConsentData = {
 
 export type ConsentValues = {
     analyticsConsent: boolean;
-    surveysConsent: boolean;
 };
 
 /** --- Konstanter --- */
@@ -43,7 +41,6 @@ function validateConsentData(input: unknown): input is ConsentData {
 
     if (!isObject(consent)) return false;
     if (!isBoolean(consent.analytics)) return false;
-    if (!isBoolean(consent.surveys)) return false;
 
     if (!isBoolean(userActionTaken)) return false;
 
@@ -68,7 +65,7 @@ function assertConsentData(input: unknown): asserts input is ConsentData {
 
 /** Default-objekt (brukes ved fallback) */
 const makeDefaultConsentData = (nowISO: string = new Date().toISOString()): ConsentData => ({
-    consent: { analytics: false, surveys: false },
+    consent: { analytics: false },
     userActionTaken: false,
     meta: { createdAt: nowISO, updatedAt: nowISO, version: CURRENT_VERSION },
 });
@@ -157,7 +154,6 @@ export function getConsentValues(cookies?: string | null): ConsentValues {
     const existing = getCookie(cookies);
     return {
         analyticsConsent: existing?.consent.analytics ?? false,
-        surveysConsent: existing?.consent.surveys ?? false,
     };
 }
 
@@ -171,7 +167,6 @@ export function updateConsent(
     const next: ConsentData = {
         consent: {
             analytics: partial.consent?.analytics ?? current.consent.analytics,
-            surveys: partial.consent?.surveys ?? current.consent.surveys,
         },
         userActionTaken: partial.userActionTaken ?? current.userActionTaken,
         meta: {
