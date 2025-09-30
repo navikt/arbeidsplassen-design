@@ -1,188 +1,202 @@
-/** --- Types --- */
+import {
+  CONSENT_COOKIE_NAME,
+  CONSENT_COOKIE_MAX_AGE_DAYS,
+  type ConsentCookie as V1Consent,
+  readConsent,
+  writeConsent,
+  readConsentFromCookieHeader,
+  makeSetCookieHeader,
+} from "./consentCookie";
+
 export type ConsentData = {
-    consent: {
-        analytics: boolean;
-    };
-    userActionTaken: boolean;
-    meta: {
-        createdAt: string; // ISO
-        updatedAt: string; // ISO
-        version: number;
-    };
+  consent: { analytics: boolean };
+  userActionTaken: boolean;
+  meta: {
+    createdAt: string; // ISO
+    updatedAt: string; // ISO
+    version: number;
+  };
 };
 
 export type ConsentValues = {
-    analyticsConsent: boolean;
+  analyticsConsent: boolean;
 };
 
 /** --- Konstanter --- */
-const consentCookieName = "arbeidsplassen-consent";
+const consentCookieName = CONSENT_COOKIE_NAME;
 const CURRENT_VERSION = 1 as const;
 
-/** --- Små helpers --- */
+/** --- Mapper mellom legacy og V1 --- */
+const v1ToLegacy = (v1: V1Consent): ConsentData => ({
+  consent: { analytics: v1.consent.analytics },
+  userActionTaken: v1.state.userActionTaken,
+  meta: {
+    createdAt: v1.timestamp.createdAt,
+    updatedAt: v1.timestamp.updatedAt,
+    version: v1.version,
+  },
+});
+
+const legacyToV1 = (legacy: ConsentData): V1Consent => ({
+  version: 1,
+  timestamp: {
+    createdAt: legacy.meta.createdAt,
+    updatedAt: legacy.meta.updatedAt,
+  },
+  consent: { analytics: legacy.consent.analytics },
+  state: { userActionTaken: legacy.userActionTaken },
+});
+
+/** --- Små helpers (kun for legacy validering / parsing) --- */
 const isObject = (v: unknown): v is Readonly<Record<string, unknown>> =>
-    typeof v === "object" && v !== null;
-
+  typeof v === "object" && v !== null;
 const isBoolean = (v: unknown): v is boolean => typeof v === "boolean";
-const isNumber = (v: unknown): v is number => typeof v === "number" && Number.isFinite(v);
-
-const isValidISOString = (dateString: string): boolean => {
-    const d = new Date(dateString);
-    return Number.isFinite(d.getTime()) && d.toISOString() === dateString;
+const isNumber = (v: unknown): v is number =>
+  typeof v === "number" && Number.isFinite(v);
+const isValidISOString = (s: string): boolean => {
+  const d = new Date(s);
+  return Number.isFinite(d.getTime()) && d.toISOString() === s;
 };
 
-/** --- Validering --- */
 function validateConsentData(input: unknown): input is ConsentData {
-    if (!isObject(input)) return false;
+  if (!isObject(input)) return false;
+  const { consent, userActionTaken, meta } = input as Record<string, unknown>;
+  if (
+    !isObject(consent) ||
+    !isBoolean((consent as Record<string, unknown>).analytics)
+  )
+    return false;
+  if (!isBoolean(userActionTaken)) return false;
+  if (!isObject(meta)) return false;
 
-    const consent = input.consent;
-    const userActionTaken = input.userActionTaken;
-    const meta = input.meta;
-
-    if (!isObject(consent)) return false;
-    if (!isBoolean(consent.analytics)) return false;
-
-    if (!isBoolean(userActionTaken)) return false;
-
-    if (!isObject(meta)) return false;
-
-    const createdAt = meta.createdAt;
-    const updatedAt = meta.updatedAt;
-    const version = meta.version;
-
-    if (typeof createdAt !== "string" || !isValidISOString(createdAt)) return false;
-    if (typeof updatedAt !== "string" || !isValidISOString(updatedAt)) return false;
-    if (!isNumber(version) || !Number.isInteger(version) || version < 0) return false;
-
-    return true;
+  const m = meta as Record<string, unknown>;
+  if (typeof m.createdAt !== "string" || !isValidISOString(m.createdAt))
+    return false;
+  if (typeof m.updatedAt !== "string" || !isValidISOString(m.updatedAt))
+    return false;
+  if (
+    !isNumber(m.version) ||
+    !Number.isInteger(m.version) ||
+    (m.version as number) < 0
+  )
+    return false;
+  return true;
 }
 
 function assertConsentData(input: unknown): asserts input is ConsentData {
-    if (!validateConsentData(input)) {
-        throw new Error("Invalid ConsentData payload");
-    }
+  if (!validateConsentData(input))
+    throw new Error("Invalid ConsentData payload");
 }
 
-/** Default-objekt (brukes ved fallback) */
-const makeDefaultConsentData = (nowISO: string = new Date().toISOString()): ConsentData => ({
-    consent: { analytics: false },
-    userActionTaken: false,
-    meta: { createdAt: nowISO, updatedAt: nowISO, version: CURRENT_VERSION },
+const makeDefaultConsentData = (
+  nowISO: string = new Date().toISOString()
+): ConsentData => ({
+  consent: { analytics: false },
+  userActionTaken: false,
+  meta: { createdAt: nowISO, updatedAt: nowISO, version: CURRENT_VERSION },
 });
 
-/** Parse + valider JSON fra cookie */
-function parseConsentCookie(raw: string): ConsentData | null {
-    try {
-        const decoded = decodeURIComponent(raw);
-        const parsed = JSON.parse(decoded) as unknown;
-        return validateConsentData(parsed) ? parsed : null;
-    } catch {
-        return null;
-    }
-}
-
-/** Henter verdien for gitt cookieName fra en cookie-string */
-function readCookieFromString(allCookies: string, name: string): string | null {
-    // Cookie-header: "a=1; b=2; c=3"
-    const parts = allCookies.split(";").map((c) => c.trim());
-    for (const part of parts) {
-        if (part.startsWith(`${name}=`)) {
-            return part.slice(name.length + 1);
-        }
-    }
+function parseLegacyCookieValue(raw: string): ConsentData | null {
+  try {
+    const decoded = decodeURIComponent(raw);
+    const parsed = JSON.parse(decoded) as unknown;
+    return validateConsentData(parsed) ? parsed : null;
+  } catch {
     return null;
+  }
 }
 
-/** --- Public API --- */
+function readCookieFromString(allCookies: string, name: string): string | null {
+  const parts = allCookies.split(";").map((c) => c.trim());
+  for (const part of parts) {
+    if (part.startsWith(`${name}=`)) return part.slice(name.length + 1);
+  }
+  return null;
+}
 
-export function setCookie(value: ConsentData, days: number = 90): void {
-    if (typeof document === "undefined") return;
-
-    try {
-        // Valider før vi skriver
-        assertConsentData(value);
-        const jsonString = encodeURIComponent(JSON.stringify(value));
-
-        const expires = new Date();
-        expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-
-        const isProduction = process.env.NODE_ENV === "production";
-        const secure = isProduction ? "; Secure" : "";
-        const sameSite = "; SameSite=Lax";
-
-        document.cookie = `${consentCookieName}=${jsonString}; expires=${expires.toUTCString()}; path=/${sameSite}${secure}`;
-    } catch (e) {
-        // Behold tydelig feilmelding uten å bruke console i lib-kode
-        const msg = e instanceof Error ? e.message : "Unknown error";
-        throw new Error(`Failed to set cookie "${consentCookieName}": ${msg}`);
-    }
+/** Skriver legacy-format ut til document.cookie (men bruker V1 internt). */
+export function setCookie(
+  value: ConsentData,
+  days: number = CONSENT_COOKIE_MAX_AGE_DAYS
+): void {
+  if (typeof document === "undefined") return;
+  assertConsentData(value);
+  writeConsent(legacyToV1(value), days); // pass-through av days
 }
 
 /**
- * Hent cookie. `cookies` kan være en Cookie-header string (server)
- * eller undefined/null (klient -> leser fra document.cookie).
+ * Leser cookie. Hvis `cookies` (server-header) er gitt, parses den derfra.
+ * Returnerer legacy-objekt, men henter fra V1 hvis mulig.
  */
 export function getCookie(cookies?: string | null): ConsentData | null {
-    const source = (() => {
-        if (typeof cookies === "string") return cookies;
-        if (typeof document !== "undefined") return document.cookie ?? "";
-        return "";
-    })();
+  if (typeof cookies === "string") {
+    // Prøv V1 først
+    const v1 = readConsentFromCookieHeader(cookies);
+    if (v1) return v1ToLegacy(v1);
 
-    if (!source) return null;
+    // Fallback: legacy i header
+    const raw = readCookieFromString(cookies, consentCookieName);
+    if (raw) {
+      const legacy = parseLegacyCookieValue(raw);
+      if (legacy) return legacy;
+    }
+    return null;
+  }
 
-    const raw = readCookieFromString(source, consentCookieName);
-    if (!raw) return null;
-
-    return parseConsentCookie(raw);
+  // Klient
+  const v1 = readConsent();
+  return v1 ? v1ToLegacy(v1) : null;
 }
 
-/** Hent createdAt eller nåværende tidspunkt som fallback */
-export function getCreatedAtValue(cookies?: string | null): string {
-    const existing = getCookie(cookies);
-    return existing?.meta.createdAt ?? new Date().toISOString();
-}
-
-/** Hent userActionTaken, default false */
 export function getUserActionTakenValue(cookies?: string | null): boolean {
-    const existing = getCookie(cookies);
-    return existing?.userActionTaken ?? false;
+  const existing = getCookie(cookies);
+  return existing?.userActionTaken ?? false;
 }
 
-/** Hent kun consent-flaggene i et lite, typed objekt */
 export function getConsentValues(cookies?: string | null): ConsentValues {
-    const existing = getCookie(cookies);
-    return {
-        analyticsConsent: existing?.consent.analytics ?? false,
-    };
+  const existing = getCookie(cookies);
+  return { analyticsConsent: existing?.consent.analytics ?? false };
 }
 
-/** Oppdater deler av consent og bump updatedAt (beholder createdAt/version) */
+/** Oppdater deler av consent (legacy signatur) – skrives via V1. */
 export function updateConsent(
-    partial: Partial<Pick<ConsentData, "consent" | "userActionTaken">>,
-    cookies?: string | null,
+  partial: Partial<Pick<ConsentData, "consent" | "userActionTaken">>,
+  cookies?: string | null
 ): ConsentData {
-    const current = getCookie(cookies) ?? makeDefaultConsentData();
-    const nowISO = new Date().toISOString();
-    const next: ConsentData = {
-        consent: {
-            analytics: partial.consent?.analytics ?? current.consent.analytics,
-        },
-        userActionTaken: partial.userActionTaken ?? current.userActionTaken,
-        meta: {
-            createdAt: current.meta.createdAt,
-            updatedAt: nowISO,
-            version: current.meta.version ?? CURRENT_VERSION,
-        },
-    };
+  const currentLegacy = getCookie(cookies) ?? makeDefaultConsentData();
+  const nowISO = new Date().toISOString();
 
-    setCookie(next);
-    return next;
+  const nextLegacy: ConsentData = {
+    consent: {
+      analytics: partial.consent?.analytics ?? currentLegacy.consent.analytics,
+    },
+    userActionTaken: partial.userActionTaken ?? currentLegacy.userActionTaken,
+    meta: {
+      createdAt: currentLegacy.meta.createdAt,
+      updatedAt: nowISO,
+      version: currentLegacy.meta.version ?? CURRENT_VERSION,
+    },
+  };
+
+  writeConsent(legacyToV1(nextLegacy)); // skriver via ny motor
+  return nextLegacy;
 }
 
-/** Hard reset til default og skriver cookie */
+/** Hard reset (legacy return), men skriver via V1. */
 export function resetConsent(): ConsentData {
-    const fresh = makeDefaultConsentData();
-    setCookie(fresh);
-    return fresh;
+  const now = new Date().toISOString();
+  const freshV1: V1Consent = {
+    version: 1,
+    timestamp: { createdAt: now, updatedAt: now },
+    consent: { analytics: false },
+    state: { userActionTaken: false },
+  };
+  writeConsent(freshV1);
+  return v1ToLegacy(freshV1);
 }
+
+/** Set-Cookie for server-respons */
+export const makeServerSetCookieHeader = (legacy: ConsentData): string => {
+  assertConsentData(legacy);
+  return makeSetCookieHeader(legacyToV1(legacy));
+};
