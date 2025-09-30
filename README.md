@@ -4,8 +4,9 @@ Vi bruker design-komponentene til [Aksel](https://aksel.nav.no/) med vår egen "
 utvalgte css-variabler. I tillegg har vi noen egne React-komponenter, slik som `Header` og `Footer`.
 
 **Installasjon**
+
 ```bash
-npm install @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt/arbeidsplassen-css  
+npm install @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt/arbeidsplassen-css
 ```
 
 **Bruk**
@@ -14,18 +15,20 @@ Legg til `data-theme="arbeidsplassen"` på for eksempel `body` i koden for å ak
 sitt "theme".
 
 Importer både css fra arbeidsplassen-design og fra Nav sitt designsystem i koden din, f.eks i `app.js`:
+
 ```
 import "@navikt/ds-css";
 import "@navikt/arbeidsplassen-css";
 ```
 
 Eksempel på bruk i din kode:
+
 ```
 import { Header, Footer } from "@navikt/arbeidsplassen-react";
 import { Button, TextField } from "@navikt/ds-react";
 ```
 
-### Hvordan få tilgang til @navikt/arbeidsplassen-react og  @navikt/arbeidsplassen-css
+### Hvordan få tilgang til @navikt/arbeidsplassen-react og @navikt/arbeidsplassen-css
 
 Opprett fila `.npmrc` i hjemkatalogen din. F.eks. `~/.npmrc` Mer info: https://docs.npmjs.com/cli/v9/configuring-npm/npmrc
 
@@ -43,6 +46,7 @@ Ikke sjekk inn `.npmrc` til GitHub.
 Mer informasjon om autentisering: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token
 
 ## Kjøre arbeidsplassen-design lokalt
+
 For å kunne utvikle og teste css og egne komponenter har vi en Next.js app som viser alle komponentene våre
 
 ```bash
@@ -50,7 +54,7 @@ npm install
 npm run dev
 ```
 
-Eksempel-appen kjører på [http://localhost:3000](http://localhost:3000)
+Eksempel-appen kjører på [http://localhost:3001](http://localhost:3001)
 
 ## Publisere nye versjoner
 
