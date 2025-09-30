@@ -17,7 +17,7 @@ function joinClassNames(...strings) {
  * @typedef { "company" | "person" | "all"  } Variant
  */
 /**
- * @typedef { "ledige-stillinger" |"cv" | "stillingsannonser" | "sommerjobb" } Active
+ * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" } Active
  */
 
 /**
@@ -114,8 +114,7 @@ Header.propTypes = {
   ]),
   active: PropTypes.oneOf([
     "ledige-stillinger",
-    "cv",
     "stillingsannonser",
-      "sommerjobb"
+    "sommerjobb",
   ]),
 };

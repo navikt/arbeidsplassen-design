@@ -9,11 +9,6 @@ function PersonMenu({ active }) {
           Ledige stillinger
         </MenuItem>
       </li>
-      <li>
-        <MenuItem href="/cv?v1" active={active} id="cv">
-          CV
-        </MenuItem>
-      </li>
       <li className="arb-header-divider">
         <MenuItem href="/bedrift" id="for-bedrifter">
           For bedrifter
