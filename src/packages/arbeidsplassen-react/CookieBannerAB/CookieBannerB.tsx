@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from "react";
-import { updateConsent } from "./cookieBannerUtils";
+import { acceptAllOptionalConsents, updateConsent } from "./cookieBannerUtils";
 import { BodyLong, Box, Button, Heading, Link, Stack } from "@navikt/ds-react";
 
 export type CookieBannerVariant = "A" | "B";
@@ -98,10 +98,7 @@ export default function CookieBannerB({
   const persistConsentSafely = (acceptedAll: boolean): void => {
     if (disableAutoCookie) return;
     try {
-      updateConsent({
-        consent: { analytics: acceptedAll },
-        userActionTaken: true,
-      });
+      acceptAllOptionalConsents(acceptedAll);
     } catch (err) {
       onError?.(err);
     }

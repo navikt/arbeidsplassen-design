@@ -4,31 +4,33 @@ import { writeBrowserCookie } from "./cookieWrite";
 /** ---------- Konstanter ---------- */
 export const CONSENT_COOKIE_NAME = "arbeidsplassen-consent";
 export const CONSENT_COOKIE_MAX_AGE_DAYS = 90 as const;
+export const CONSENT_VERSION = 2 as const;
 
-/** ---------- Typer (V1 anbefalt struktur) ---------- */
-export type ConsentV1 = {
-  version: 1;
-  timestamp: {
-    createdAt: string; // ISO 8601
-    updatedAt: string; // ISO 8601
-  };
+/** ---------- Typer ---------- */
+/** V2 (gjeldende) */
+export type ConsentV2 = {
+  version: 2;
+  timestamp: { createdAt: string; updatedAt: string }; // ISO 8601
   consent: {
     analytics: boolean;
+    surveys: boolean; // NY: Skyra
   };
-  state: {
-    userActionTaken: boolean;
-  };
+  state: { userActionTaken: boolean };
 };
 
-/** Legacy: nåværende cookie hos dere (for migrering) */
-export type LegacyConsent = {
+/** V1 (for migrering) */
+export type ConsentV1 = {
+  version: 1;
+  timestamp: { createdAt: string; updatedAt: string };
   consent: { analytics: boolean };
+  state: { userActionTaken: boolean };
+};
+
+/** Legacy (for migrering) – feltet `surveys` kan mangle */
+export type LegacyConsent = {
+  consent: { analytics: boolean; surveys?: boolean };
   userActionTaken: boolean;
-  meta: {
-    createdAt: string;
-    updatedAt: string;
-    version: number;
-  };
+  meta: { createdAt: string; updatedAt: string; version: number };
 };
 
 /** ---------- Zod schema ---------- */
@@ -36,7 +38,22 @@ const isoDatetime = z
   .string()
   .refine((s) => !Number.isNaN(Date.parse(s)), { message: "Invalid ISO date" });
 
-export const ConsentV1Schema = z.object({
+const ConsentV2Schema = z.object({
+  version: z.literal(2),
+  timestamp: z.object({
+    createdAt: isoDatetime,
+    updatedAt: isoDatetime,
+  }),
+  consent: z.object({
+    analytics: z.boolean(),
+    surveys: z.boolean(),
+  }),
+  state: z.object({
+    userActionTaken: z.boolean(),
+  }),
+});
+
+const ConsentV1Schema = z.object({
   version: z.literal(1),
   timestamp: z.object({
     createdAt: isoDatetime,
@@ -50,7 +67,7 @@ export const ConsentV1Schema = z.object({
   }),
 });
 
-export type ConsentCookie = z.infer<typeof ConsentV1Schema>;
+export type ConsentCookie = z.infer<typeof ConsentV2Schema>;
 
 /** ---------- Helpers: tid & cookie ---------- */
 const nowIso = (): string => new Date().toISOString();
@@ -78,35 +95,48 @@ const readRawCookie = (name: string): string | undefined => {
   }
 };
 
-/** ---------- Migrering fra legacy ---------- */
+/** ---------- Type guards for migrering ---------- */
 const isLegacy = (u: unknown): u is LegacyConsent => {
   if (!u || typeof u !== "object") return false;
   const o = u as Record<string, unknown>;
   const consent = o["consent"];
   const uat = o["userActionTaken"];
   const meta = o["meta"];
-  return (
+  const hasConsent =
     !!consent &&
-    typeof (consent as Record<string, unknown>).analytics === "boolean" &&
-    typeof uat === "boolean" &&
+    typeof (consent as Record<string, unknown>).analytics === "boolean";
+  const hasMeta =
     !!meta &&
     typeof (meta as Record<string, unknown>).createdAt === "string" &&
-    typeof (meta as Record<string, unknown>).updatedAt === "string"
-  );
+    typeof (meta as Record<string, unknown>).updatedAt === "string";
+  return hasConsent && typeof uat === "boolean" && hasMeta;
 };
 
-export const migrateLegacyToV1 = (u: LegacyConsent): ConsentV1 => ({
-  version: 1,
+/** ---------- Migreringer ---------- */
+const migrateV1ToV2 = (v1: ConsentV1): ConsentV2 => ({
+  version: 2,
   timestamp: {
-    createdAt: u.meta.createdAt,
-    updatedAt: u.meta.updatedAt,
+    createdAt: v1.timestamp.createdAt,
+    updatedAt: v1.timestamp.updatedAt,
   },
   consent: {
-    analytics: u.consent.analytics,
+    analytics: v1.consent.analytics,
+    surveys: false, // default når V1 ikke kjenner Skyra
   },
-  state: {
-    userActionTaken: u.userActionTaken,
+  state: { userActionTaken: v1.state.userActionTaken },
+});
+
+const migrateLegacyToV2 = (legacy: LegacyConsent): ConsentV2 => ({
+  version: 2,
+  timestamp: {
+    createdAt: legacy.meta.createdAt,
+    updatedAt: legacy.meta.updatedAt,
   },
+  consent: {
+    analytics: legacy.consent.analytics,
+    surveys: legacy.consent.surveys ?? false,
+  },
+  state: { userActionTaken: legacy.userActionTaken },
 });
 
 /** ---------- Parse + normalisering ---------- */
@@ -117,14 +147,19 @@ export const parseConsentCookie = (
   const data = tryJsonParse(raw);
   if (!data) return null;
 
-  // Først: forsøk V1
-  const v1 = ConsentV1Schema.safeParse(data);
-  if (v1.success) return v1.data;
+  const v2 = ConsentV2Schema.safeParse(data);
+  if (v2.success) return v2.data;
 
-  // Deretter: forsøk legacy -> migrer -> valider
+  const v1 = ConsentV1Schema.safeParse(data);
+  if (v1.success) {
+    const migrated = migrateV1ToV2(v1.data);
+    const validated = ConsentV2Schema.safeParse(migrated);
+    return validated.success ? validated.data : null;
+  }
+
   if (isLegacy(data)) {
-    const migrated = migrateLegacyToV1(data);
-    const validated = ConsentV1Schema.safeParse(migrated);
+    const migrated = migrateLegacyToV2(data);
+    const validated = ConsentV2Schema.safeParse(migrated);
     return validated.success ? validated.data : null;
   }
 
@@ -133,28 +168,23 @@ export const parseConsentCookie = (
 
 /** ---------- Public API ---------- */
 
-/** Leser og validerer samtykke-cookien. */
+/** Leser og validerer samtykke-cookien (alltid V2 ut). */
 export const readConsent = (): ConsentCookie | null => {
   const raw = readRawCookie(CONSENT_COOKIE_NAME);
   if (!raw) return null;
 
-  const parsed = tryJsonParse(raw);
-
-  // V1 direkte?
-  const v1 = ConsentV1Schema.safeParse(parsed);
-  if (v1.success) return v1.data;
-
-  // Legacy? Migrer → skriv V1 tilbake → returner V1
-  if (isLegacy(parsed)) {
-    const migrated = migrateLegacyToV1(parsed);
-    writeConsent(migrated);
-    return migrated;
+  // Forsøk V2 / V1 / Legacy i ett
+  const parsed = parseConsentCookie(raw);
+  if (parsed) {
+    // Hvis innholdet ikke var V2 opprinnelig: skriv tilbake som V2 for å normalisere
+    writeConsent(parsed);
+    return parsed;
   }
 
   return null;
 };
 
-/** Skriver en komplett ConsentV1 til cookie (overstyrer hele objektet). */
+/** Skriver komplett ConsentV2 til cookie (overstyrer hele objektet). */
 export const writeConsent = (
   consent: ConsentCookie,
   days: number = CONSENT_COOKIE_MAX_AGE_DAYS
@@ -169,52 +199,68 @@ export const writeConsent = (
   });
 };
 
-/** Oppretter ny cookie hvis mangler, ellers oppdaterer felt + updatedAt. */
+/** Upsert – oppdaterer felt og `updatedAt` (bevarer `createdAt`). */
 export const upsertConsent = (
   updater: (prev: ConsentCookie | null) => ConsentCookie
 ): ConsentCookie => {
   const prev = readConsent();
   const next = updater(prev);
-  // sørg for å oppdatere updatedAt (men bevar createdAt)
   const createdAt = prev?.timestamp.createdAt ?? nowIso();
-  const nextNormalized: ConsentCookie = {
+
+  const normalized: ConsentCookie = {
     ...next,
-    version: 1,
-    timestamp: {
-      createdAt,
-      updatedAt: nowIso(),
+    version: CONSENT_VERSION,
+    timestamp: { createdAt, updatedAt: nowIso() },
+    consent: {
+      analytics: next.consent.analytics,
+      surveys: next.consent.surveys,
     },
+    state: { userActionTaken: next.state.userActionTaken },
   };
-  writeConsent(nextNormalized);
-  return nextNormalized;
+
+  writeConsent(normalized);
+  return normalized;
 };
 
 /** Convenience: toggle/set analytics. */
-export const setAnalyticsConsent = (enabled: boolean): ConsentCookie => {
-  return upsertConsent((prev) => ({
-    version: 1,
+export const setAnalyticsConsent = (enabled: boolean): ConsentCookie =>
+  upsertConsent((prev) => ({
+    version: CONSENT_VERSION,
     timestamp: {
       createdAt: prev?.timestamp.createdAt ?? nowIso(),
       updatedAt: nowIso(),
     },
     consent: {
       analytics: enabled,
+      surveys: prev?.consent.surveys ?? false,
     },
-    state: {
-      userActionTaken: true,
-    },
+    state: { userActionTaken: true },
   }));
-};
+
+/** NY: toggle/set surveys (Skyra). */
+export const setSurveysConsent = (enabled: boolean): ConsentCookie =>
+  upsertConsent((prev) => ({
+    version: CONSENT_VERSION,
+    timestamp: {
+      createdAt: prev?.timestamp.createdAt ?? nowIso(),
+      updatedAt: nowIso(),
+    },
+    consent: {
+      analytics: prev?.consent.analytics ?? false,
+      surveys: enabled,
+    },
+    state: { userActionTaken: true },
+  }));
 
 /** Hent nåværende analytics-samtykke (false hvis mangler/ugyldig). */
-export const getAnalyticsConsent = (): boolean => {
-  const c = readConsent();
-  return c?.consent.analytics ?? false;
-};
+export const getAnalyticsConsent = (): boolean =>
+  readConsent()?.consent.analytics ?? false;
 
-// --- Ekstra helpers for server/edge ---
+/** Hent nåværende surveys-samtykke (false hvis mangler/ugyldig). */
+export const getSurveysConsent = (): boolean =>
+  readConsent()?.consent.surveys ?? false;
 
-/** Parse Consent-cookie fra en Cookie-header (server/edge). */
+// --- Server/edge helpers ---
 export const readConsentFromCookieHeader = (
   cookieHeader: string | null | undefined
 ): ConsentCookie | null => {
@@ -224,16 +270,7 @@ export const readConsentFromCookieHeader = (
   if (!hit) return null;
 
   const raw = decodeURIComponent(hit.slice(CONSENT_COOKIE_NAME.length + 1));
-  // Prøv V1
-  const v1 = parseConsentCookie(raw);
-  if (v1) return v1;
-  // Prøv legacy → migrer
-  const maybeLegacy = tryJsonParse(raw);
-  if (isLegacy(maybeLegacy)) {
-    const migrated = migrateLegacyToV1(maybeLegacy);
-    return migrated; // skriv tilbake i respons med makeSetCookieHeader hvis ønsket
-  }
-  return null;
+  return parseConsentCookie(raw);
 };
 
 export const makeSetCookieHeader = (
@@ -247,7 +284,7 @@ export const makeSetCookieHeader = (
   }
 ): string => {
   const sameSite = opts?.sameSite ?? "Lax";
-  const isHttps = opts?.isHttps ?? true; // prod default
+  const isHttps = opts?.isHttps ?? true;
   const mustSecure = sameSite === "None";
   const secureFlag =
     typeof opts?.secure === "boolean"
