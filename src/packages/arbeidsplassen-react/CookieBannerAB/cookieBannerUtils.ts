@@ -11,7 +11,7 @@ import {
 
 /** UI-vendt (legacy-ish) shape – nå MED surveys */
 export type ConsentData = {
-  consent: { analytics: boolean; surveys: boolean };
+  consent: { analytics: boolean; skyraSurveys: boolean };
   userActionTaken: boolean;
   meta: {
     createdAt: string; // ISO
@@ -22,7 +22,7 @@ export type ConsentData = {
 
 export type ConsentValues = {
   analyticsConsent: boolean;
-  surveysConsent: boolean;
+  skyraConsent: boolean;
 };
 
 /** --- Konstanter --- */
@@ -31,7 +31,10 @@ const CURRENT_VERSION = CONSENT_VERSION;
 
 /** --- Mapper mellom V2 og UI-shape --- */
 const v2ToLegacy = (v2: V2Consent): ConsentData => ({
-  consent: { analytics: v2.consent.analytics, surveys: v2.consent.surveys },
+  consent: {
+    analytics: v2.consent.analytics,
+    skyraSurveys: v2.consent.surveys,
+  },
   userActionTaken: v2.state.userActionTaken,
   meta: {
     createdAt: v2.timestamp.createdAt,
@@ -48,7 +51,7 @@ const legacyToV2 = (legacy: ConsentData): V2Consent => ({
   },
   consent: {
     analytics: legacy.consent.analytics,
-    surveys: legacy.consent.surveys,
+    surveys: legacy.consent.skyraSurveys,
   },
   state: { userActionTaken: legacy.userActionTaken },
 });
@@ -98,7 +101,7 @@ function normalizeLegacy(input: ConsentData): ConsentData {
   return {
     consent: {
       analytics: input.consent.analytics,
-      surveys: input.consent.surveys ?? false,
+      skyraSurveys: input.consent.skyraSurveys ?? false,
     },
     userActionTaken: input.userActionTaken,
     meta: input.meta,
@@ -114,7 +117,7 @@ function assertConsentData(input: unknown): asserts input is ConsentData {
 const makeDefaultConsentData = (
   nowISO: string = new Date().toISOString()
 ): ConsentData => ({
-  consent: { analytics: false, surveys: false },
+  consent: { analytics: false, skyraSurveys: false },
   userActionTaken: false,
   meta: { createdAt: nowISO, updatedAt: nowISO, version: CURRENT_VERSION },
 });
@@ -182,12 +185,12 @@ export function getConsentValues(cookies?: string | null): ConsentValues {
   const existing = getCookie(cookies) ?? makeDefaultConsentData();
   return {
     analyticsConsent: existing.consent.analytics,
-    surveysConsent: existing.consent.surveys,
+    skyraConsent: existing.consent.skyraSurveys,
   };
 }
 export const acceptAllOptionalConsents = (accepted: boolean): ConsentData =>
   updateConsent({
-    consent: { analytics: accepted, surveys: accepted },
+    consent: { analytics: accepted, skyraSurveys: accepted },
     userActionTaken: true,
   });
 
@@ -205,7 +208,8 @@ export function updateConsent(
   const nextLegacy: ConsentData = normalizeLegacy({
     consent: {
       analytics: partial.consent?.analytics ?? currentLegacy.consent.analytics,
-      surveys: partial.consent?.surveys ?? currentLegacy.consent.surveys,
+      skyraSurveys:
+        partial.consent?.skyraSurveys ?? currentLegacy.consent.skyraSurveys,
     },
     userActionTaken: partial.userActionTaken ?? currentLegacy.userActionTaken,
     meta: {
