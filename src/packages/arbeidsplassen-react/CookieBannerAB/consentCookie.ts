@@ -13,7 +13,7 @@ export type ConsentV2 = {
   timestamp: { createdAt: string; updatedAt: string }; // ISO 8601
   consent: {
     analytics: boolean;
-    surveys: boolean; // NY: Skyra
+    skyraSurveys: boolean; // NY: Skyra
   };
   state: { userActionTaken: boolean };
 };
@@ -46,7 +46,7 @@ const ConsentV2Schema = z.object({
   }),
   consent: z.object({
     analytics: z.boolean(),
-    surveys: z.boolean(),
+    skyraSurveys: z.boolean(),
   }),
   state: z.object({
     userActionTaken: z.boolean(),
@@ -121,7 +121,7 @@ const migrateV1ToV2 = (v1: ConsentV1): ConsentV2 => ({
   },
   consent: {
     analytics: v1.consent.analytics,
-    surveys: false, // default når V1 ikke kjenner Skyra
+    skyraSurveys: false, // default når V1 ikke kjenner Skyra
   },
   state: { userActionTaken: v1.state.userActionTaken },
 });
@@ -134,7 +134,7 @@ const migrateLegacyToV2 = (legacy: LegacyConsent): ConsentV2 => ({
   },
   consent: {
     analytics: legacy.consent.analytics,
-    surveys: legacy.consent.surveys ?? false,
+    skyraSurveys: legacy.consent.surveys ?? false,
   },
   state: { userActionTaken: legacy.userActionTaken },
 });
@@ -213,7 +213,7 @@ export const upsertConsent = (
     timestamp: { createdAt, updatedAt: nowIso() },
     consent: {
       analytics: next.consent.analytics,
-      surveys: next.consent.surveys,
+      skyraSurveys: next.consent.skyraSurveys,
     },
     state: { userActionTaken: next.state.userActionTaken },
   };
@@ -232,7 +232,7 @@ export const setAnalyticsConsent = (enabled: boolean): ConsentCookie =>
     },
     consent: {
       analytics: enabled,
-      surveys: prev?.consent.surveys ?? false,
+      skyraSurveys: prev?.consent.skyraSurveys ?? false,
     },
     state: { userActionTaken: true },
   }));
@@ -247,7 +247,7 @@ export const setSurveysConsent = (enabled: boolean): ConsentCookie =>
     },
     consent: {
       analytics: prev?.consent.analytics ?? false,
-      surveys: enabled,
+      skyraSurveys: enabled,
     },
     state: { userActionTaken: true },
   }));
@@ -258,7 +258,7 @@ export const getAnalyticsConsent = (): boolean =>
 
 /** Hent nåværende surveys-samtykke (false hvis mangler/ugyldig). */
 export const getSurveysConsent = (): boolean =>
-  readConsent()?.consent.surveys ?? false;
+  readConsent()?.consent.skyraSurveys ?? false;
 
 // --- Server/edge helpers ---
 export const readConsentFromCookieHeader = (

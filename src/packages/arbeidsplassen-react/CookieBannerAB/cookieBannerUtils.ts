@@ -33,7 +33,7 @@ const CURRENT_VERSION = CONSENT_VERSION;
 const v2ToLegacy = (v2: V2Consent): ConsentData => ({
   consent: {
     analytics: v2.consent.analytics,
-    skyraSurveys: v2.consent.surveys,
+    skyraSurveys: v2.consent.skyraSurveys,
   },
   userActionTaken: v2.state.userActionTaken,
   meta: {
@@ -51,7 +51,7 @@ const legacyToV2 = (legacy: ConsentData): V2Consent => ({
   },
   consent: {
     analytics: legacy.consent.analytics,
-    surveys: legacy.consent.skyraSurveys,
+    skyraSurveys: legacy.consent.skyraSurveys,
   },
   state: { userActionTaken: legacy.userActionTaken },
 });
@@ -229,7 +229,7 @@ export function resetConsent(): ConsentData {
   const freshV2: V2Consent = {
     version: 2,
     timestamp: { createdAt: now, updatedAt: now },
-    consent: { analytics: false, surveys: false },
+    consent: { analytics: false, skyraSurveys: false },
     state: { userActionTaken: false },
   };
   writeConsent(freshV2);
