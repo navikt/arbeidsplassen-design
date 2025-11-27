@@ -1,63 +1,45 @@
-import { Alert, Heading, Link } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import { Alert, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
+import { LOREM_IPSUM_PARAGRAPH } from "@/examples/loremIpsum";
+import { useState } from "react";
 
-function Template({ showTitle, title, text, ...args }) {
-  return (
-    <div className="mb-16">
-      <Alert {...args} className="mb-6">
-        {!showTitle && (
-          <Heading spacing size="xsmall" level="3">
-            {title}
-          </Heading>
-        )}
-        {text} <Link href="#">Les mer på arbeidsplassen.no</Link>
-      </Alert>
-      <Alert {...args}>Alert without heading</Alert>
-    </div>
-  );
-}
+const GlobalAlertExample = () => {
+    const [variant, setVariant] = useState("error");
+    const [size, setSize] = useState("medium");
+    const [fullWidth, setFullWidth] = useState(false);
+    const [inline, setInline] = useState(false);
 
-const AlertExample = () => {
-  return (
-    <Layout title="Alert">
-      <Template
-        variant="info"
-        title="Info alert"
-        text="Used for notifying users about temporary good-to-know information without any real consequence for user behavour."
-      />
+    return (
+        <Layout title="Alert (avviklet)">
+            <Alert variant={variant} size={size} fullWidth={fullWidth} inline={inline}>
+                {LOREM_IPSUM_PARAGRAPH}
+            </Alert>
 
-      <Template
-        variant="warning"
-        title="Warning alert"
-        text="Used for alerting users about a potential outage or informing the user that certain actions may lead to certain consequences."
-      />
-      <Template
-        variant="error"
-        title="Error alert"
-        text="Used for communicating system and service errors."
-      />
-      <Template
-        variant="success"
-        title="Success alert"
-        text="Used for notifying users about a successful action performed."
-      />
-      <Template
-        variant="info"
-        inline
-        title="Inline"
-        text="Quisque faucibus dolor ac diam congue blandit. Integer bibendum viverra lorem et commodo. "
-      />
-      <Heading size="medium" level="2" spacing>
-        Full width (no border)
-      </Heading>
-      <Template
-        fullWidth
-        variant="info"
-        title="Info alert"
-        text="Used for notifying users about temporary good-to-know information without any real consequence for user behavour."
-      />
-    </Layout>
-  );
+            <Heading size="medium" level="2" spacing className="mt-12">
+                Props
+            </Heading>
+            <HStack gap="24">
+                <RadioGroup legend="status" value={variant} onChange={setVariant}>
+                    {["error", "warning", "info", "success"].map((option) => (
+                        <Radio value={option}>{option}</Radio>
+                    ))}
+                </RadioGroup>
+                <RadioGroup legend="size" value={size} onChange={setSize}>
+                    {["medium", "small"].map((option) => (
+                        <Radio value={option}>{option}</Radio>
+                    ))}
+                </RadioGroup>
+                <RadioGroup legend="fullWidth" value={fullWidth} onChange={setFullWidth}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="inline" value={inline} onChange={setInline}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 };
 
-export default AlertExample;
+export default GlobalAlertExample;

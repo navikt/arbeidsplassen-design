@@ -1,30 +1,34 @@
-import { CopyButton, Heading } from "@navikt/ds-react";
+import { CopyButton, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import { useState } from "react";
 
 const CopyButtonExample = () => {
-  return (
-    <Layout title="CopyButton">
-      <Heading size="medium" level="2" spacing>
-        Neutral
-      </Heading>
-      <CopyButton copyText="3.14" className="mb-8" />
+    const [variant, setVariant] = useState("neutral");
 
-      <Heading size="medium" level="2" spacing>
-        Med tekst
-      </Heading>
-      <CopyButton copyText="3.14" text="Kopier" className="mb-8" />
+    return (
+        <Layout title="CopyButton">
+            <Heading size="medium" level="2" spacing>
+                Bare ikon
+            </Heading>
+            <CopyButton variant={variant} copyText="3.14" className="mb-8" />
 
-      <Heading size="medium" level="2" spacing>
-        Action
-      </Heading>
-      <CopyButton
-        copyText="3.14"
-        variant="action"
-        text="Kopier"
-        className="mb-8"
-      />
-    </Layout>
-  );
+            <Heading size="medium" level="2" spacing>
+                Med tekst
+            </Heading>
+            <CopyButton copyText="3.14" variant={variant} text="Kopier" className="mb-8" />
+
+            <Heading size="medium" level="2" spacing>
+                Props
+            </Heading>
+            <HStack gap="24">
+                <RadioGroup legend="variant" value={variant} onChange={setVariant}>
+                    {["neutral", "action"].map((option) => (
+                        <Radio value={option}>{option}</Radio>
+                    ))}
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 };
 
 export default CopyButtonExample;

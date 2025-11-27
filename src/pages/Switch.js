@@ -1,30 +1,37 @@
-import { Switch, Heading } from "@navikt/ds-react";
+import { useState } from "react";
+import { Heading, HStack, Radio, RadioGroup, Switch } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 
-function Template({ title, ...args }) {
-  return (
-    <div className="mb-16">
-      <Heading size="medium" level="2" spacing>
-        {title}
-      </Heading>
-      <Switch {...args}>Motta beskjed på e-post ved nye treff</Switch>
-      <Switch checked {...args}>Motta beskjed på e-post ved nye treff</Switch>
-    </div>
-  );
-}
-
 const SwitchExample = () => {
-  return (
-    <Layout title="Switch">
-      <div className="mb-16">
-      <Heading size="medium" level="2" spacing>Standard</Heading>
-      <Switch description="Du får en påminnelse med mulighet til å fornye.">Motta beskjed på e-post ved nye treff</Switch>
-    </div>
-      <Template title="Disabled" disabled />
-      <Template title="Read only" readOnly />
-      <Template title="Loading" loading />
-    </Layout>
-  );
+    const [loading, setLoading] = useState(false);
+    const [disabled, setDisabled] = useState(false);
+    const [readOnly, setReadOnly] = useState(false);
+
+    return (
+        <Layout title="Switch">
+            <Switch loading={loading} disabled={disabled} readOnly={readOnly}>
+                Motta beskjed på e-post ved nye treff
+            </Switch>
+            <Heading size="medium" level="2" spacing className="mt-24">
+                Props
+            </Heading>
+
+            <HStack gap="24">
+                <RadioGroup legend="loading" value={loading} onChange={setLoading}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 };
 
 export default SwitchExample;
