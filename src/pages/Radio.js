@@ -1,37 +1,45 @@
-import { Heading, Radio, RadioGroup } from "@navikt/ds-react";
+import { useState } from "react";
+import { Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 
-function Template({ title, ...args }) {
-  return (
-    <div className="mb-16">
-      <Heading size="medium" level="2" spacing>
-        {title}
-      </Heading>
-      <RadioGroup
-        legend="Velg din aldersgruppe"
-        description="Informasjonen blir brukt for å gi deg bedre søketreff."
-        onChange={(val) => console.log(val)}
-        defaultValue="10"
-        {...args}
-      >
-        <Radio value="10">10-20 år</Radio>
-        <Radio value="20">21-45 år</Radio>
-        <Radio value="40">46-80 år</Radio>
-      </RadioGroup>
-    </div>
-  );
-}
-
 export default function RadioExample() {
-  return (
-    <Layout title="Radio">
-      <Template title="Standard" />
-      <Template
-        title="Error"
-        error="Vi fant ingen resultater på din aldersgruppe."
-      />
-      <Template title="Disabled" disabled />
-      <Template title="Read only" readOnly />
-    </Layout>
-  );
+    const [error, setError] = useState(false);
+    const [disabled, setDisabled] = useState(false);
+    const [readOnly, setReadOnly] = useState(false);
+
+    return (
+        <Layout title="Radio">
+            <RadioGroup
+                legend="Velg din aldersgruppe"
+                description="Informasjonen blir brukt for å gi deg bedre søketreff."
+                onChange={(val) => console.log(val)}
+                defaultValue="10"
+                error={error ? "Dette ser feil ut!" : undefined}
+                disabled={disabled}
+                readOnly={readOnly}
+            >
+                <Radio value="10">10-20 år</Radio>
+                <Radio value="20">21-45 år</Radio>
+                <Radio value="40">46-80 år</Radio>
+            </RadioGroup>
+
+            <Heading size="medium" level="2" spacing className="mt-24">
+                Props
+            </Heading>
+            <HStack gap="24">
+                <RadioGroup legend="error" value={error} onChange={setError}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 }

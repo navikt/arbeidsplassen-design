@@ -1,29 +1,29 @@
-import { Heading, ReadMore } from "@navikt/ds-react";
+import React, { useState } from "react";
+import { Heading, HStack, Radio, RadioGroup, ReadMore } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-
-const Template = ({ title, ...args }) => {
-  return (
-    <div className="mb-8">
-      <Heading size="medium" level="2" spacing>
-        {title}
-      </Heading>
-      <ReadMore {...args}>
-        Velg superrask søknad når dere registrerer en stillingsannonse.
-        Spesifiser hvilke kvalifikasjoner dere har behov for. Jobbsøkerne svarer
-        på hvilke kvalifikasjoner de oppfyller, og begrunner kort hvorfor de er
-        rett person for jobben.
-      </ReadMore>
-    </div>
-  );
-};
+import { LOREM_IPSUM_BLOCK } from "@/examples/loremIpsum";
 
 const ReadMoreExample = () => {
-  return (
-    <Layout title="ReadMore">
-      <Template header="Slik fungerer det" title="Standard size" />
-      <Template header="Slik fungerer det" size="small" title="Small" />
-    </Layout>
-  );
+    const [size, setSize] = useState("medium");
+
+    return (
+        <Layout title="ReadMore">
+            <ReadMore header="Slik fungerer det" size={size}>
+                {LOREM_IPSUM_BLOCK}
+            </ReadMore>
+
+            <Heading size="medium" level="2" spacing className="mt-24">
+                Props
+            </Heading>
+            <HStack gap="24">
+                <RadioGroup legend="size" value={size} onChange={setSize}>
+                    {["large", "medium", "small"].map((option) => (
+                        <Radio value={option}>{option}</Radio>
+                    ))}
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 };
 
 export default ReadMoreExample;

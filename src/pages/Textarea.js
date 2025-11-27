@@ -1,32 +1,42 @@
-import { Heading, Textarea } from "@navikt/ds-react";
+import React, { useState } from "react";
+import { Heading, HStack, Radio, RadioGroup, Textarea } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import React from "react";
-
-function Template({ title, ...args }) {
-  return (
-    <div className="mb-16">
-      <Heading size="medium" level="2" spacing>
-        {title}
-      </Heading>
-      <Textarea
-        label="Har du noen tilbakemeldinger?"
-        maxLength={400}
-        {...args}
-        description="Vi lagrer bare selve meldingen, ikke hvem som sendte den."
-      />
-    </div>
-  );
-}
 
 const TextareaExample = () => {
-  return (
-    <Layout title="Textarea">
-      <Template title="Standard" />
-      <Template title="Error" error="For mange tegn" />
-      <Template title="Disabled" disabled />
-      <Template title="Read only" readOnly />
-    </Layout>
-  );
+    const [error, setError] = useState(false);
+    const [disabled, setDisabled] = useState(false);
+    const [readOnly, setReadOnly] = useState(false);
+
+    return (
+        <Layout title="Textarea">
+            <Textarea
+                label="Har du noen tilbakemeldinger?"
+                maxLength={400}
+                description="Vi lagrer bare selve meldingen, ikke hvem som sendte den."
+                error={error ? "Dette ser feil ut!" : undefined}
+                disabled={disabled}
+                readOnly={readOnly}
+            />
+
+            <Heading size="medium" level="2" spacing className="mt-24">
+                Props
+            </Heading>
+            <HStack gap="24">
+                <RadioGroup legend="error" value={error} onChange={setError}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 };
 
 export default TextareaExample;

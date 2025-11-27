@@ -1,30 +1,39 @@
-import { BodyLong, Link, VStack } from "@navikt/ds-react";
+import { BodyLong, Heading, HStack, Link, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import { useState } from "react";
 
 const LinkExample = () => {
-  return (
-    <Layout title="Link">
-      <BodyLong spacing>
-        Jobbtreff er en ny tjeneste på <Link inlineText href="#">arbeidsplassen.no</Link>.
-        Nå kan du som er jobbsøker bli kjent med en bedrift som trenger folk. De
-        forteller om hva slags kompetanse de trenger og om jobbmulighetene. Vi
-        har forenklet søkeprosessen slik at du med noen få klikk kan vise
-        hvorfor du er rett person for jobben.
-      </BodyLong>
+    const [variant, setVariant] = useState("action");
+    return (
+        <Layout title="Link">
+            <BodyLong spacing>
+                Officia incididunt Culpa sit aute est duis minim in in voluptate velit Incididunt laborum nisi nisi
+                Lorem vofficia sit aute est duis minim adipisicing non veniam culpa sit aute est duis{" "}
+                <Link variant={variant} inlineText href="/">
+                    dette er en ganske lang lenke som brekker til flere linjer ved behov
+                </Link>{" "}
+                minim in in voluptate velit Incididunt laborum nisi nisi Lorem officia adipisicing non veniam occaecat
+                commodo id ad aliquip.
+            </BodyLong>
 
-      <VStack gap="3">
-        <BodyLong>
-          <Link href="#">Action variant (default)</Link>
-        </BodyLong>
-        <BodyLong>
-          <Link variant="neutral" href="#">Neutral variant</Link>
-        </BodyLong>
-        <BodyLong>
-          <Link variant="subtle" href="#">Subtle variant</Link>
-        </BodyLong>
-      </VStack>
-    </Layout>
-  );
+            <BodyLong>
+                <Link href="#" variant={variant}>
+                    Vaffeloppskrift
+                </Link>
+            </BodyLong>
+
+            <Heading size="medium" level="2" spacing className="mt-24">
+                Props
+            </Heading>
+            <HStack gap="24">
+                <RadioGroup legend="variant" value={variant} onChange={setVariant}>
+                    {["action", "neutral", "subtle"].map((option) => (
+                        <Radio value={option}>{option}</Radio>
+                    ))}
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 };
 
 export default LinkExample;

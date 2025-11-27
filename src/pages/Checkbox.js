@@ -1,49 +1,58 @@
-import {
-  Checkbox,
-  CheckboxGroup,
-  Heading,
-  Radio,
-  RadioGroup,
-} from "@navikt/ds-react";
+import { Checkbox, CheckboxGroup, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import { useState } from "react";
 
 const handleChange = (val) => console.log(val);
 
-function Template({ title, ...args }) {
-  return (
-    <div className="mb-16">
-      <Heading size="medium" level="2" spacing>
-        {title}
-      </Heading>
-      <CheckboxGroup
-        legend="Velg arbeidssted"
-        description="Du kan velge flere steder om du vil"
-        onChange={(val) => handleChange(val)}
-        defaultValue={["alta"]}
-        {...args}
-      >
-        <Checkbox value="alta">Alta</Checkbox>
-        <Checkbox value="bardufoss">Bardufoss</Checkbox>
-        <Checkbox value="bergen">Bergen</Checkbox>
-        <Checkbox value="bodø" indeterminate>
-          Bodø (indeterminate)
-        </Checkbox>
-      </CheckboxGroup>
-    </div>
-  );
+function CheckboxTemplate({ error, disabled, readOnly }) {
+    return (
+        <CheckboxGroup
+            legend="Velg arbeidssted"
+            description="Du kan velge flere steder om du vil"
+            onChange={(val) => handleChange(val)}
+            defaultValue={["alta"]}
+            error={error ? "Dette ser feil ut!" : undefined}
+            disabled={disabled}
+            readOnly={readOnly}
+        >
+            <Checkbox value="alta">Alta</Checkbox>
+            <Checkbox value="bardufoss">Bardufoss</Checkbox>
+            <Checkbox value="bergen">Bergen</Checkbox>
+            <Checkbox value="bodø" indeterminate>
+                Bodø (indeterminate)
+            </Checkbox>
+        </CheckboxGroup>
+    );
 }
 
 const CheckboxExample = () => {
-  const handleChange = (val) => console.log(val);
+    const [error, setError] = useState(false);
+    const [disabled, setDisabled] = useState(false);
+    const [readOnly, setReadOnly] = useState(false);
 
-  return (
-    <Layout title="Checkbox">
-      <Template title="Standard" />
-      <Template title="Error" error="Du må velge minst et valg" />
-      <Template title="Disabled" disabled />
-      <Template title="Read only" readOnly />
-    </Layout>
-  );
+    return (
+        <Layout title="Checkbox">
+            <CheckboxTemplate error={error} disabled={disabled} readOnly={readOnly} />
+
+            <Heading size="medium" level="2" spacing className="mt-24">
+                Props
+            </Heading>
+            <HStack gap="24">
+                <RadioGroup legend="error" value={error} onChange={setError}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+                <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
+                    <Radio value={false}>false</Radio>
+                    <Radio value={true}>true</Radio>
+                </RadioGroup>
+            </HStack>
+        </Layout>
+    );
 };
 
 export default CheckboxExample;
