@@ -99,12 +99,12 @@ function CookieBanner({
     };
 
     return (
-        <Box
+        <Box.New
             as="section"
             aria-labelledby="arb-cookie-banner-title"
             padding={{ xs: "6 0", md: "8 0" }}
-            background="surface-alt-2-subtle"
             id="arb-cookie-banner-section"
+            className="coockie-banner"
         >
             <div className="container-large">
                 <Heading level={headingLevel} size="large" spacing id="arb-cookie-banner-title">
@@ -137,7 +137,7 @@ function CookieBanner({
                     </Button>
                 </Stack>
             </div>
-        </Box>
+        </Box.New>
     );
 }
 

@@ -1,108 +1,108 @@
 .arb-rich-text {
-    font-size: var(--a-font-size-large);
-    line-height: var(--a-font-line-height-xlarge);
-    margin-bottom: var(--a-spacing-5);
+    font-size: var(--ax-font-size-large);
+    line-height: var(--ax-font-line-height-xlarge);
+    margin-bottom: var(--ax-space-20);
 }
 
 .arb-rich-text > *:last-child {
     margin-bottom: 0;
 }
 
-.arb-rich-text h1:not(.navds-heading) {
-    margin: var(--a-spacing-4) 0 var(--a-spacing-5) 0;
+.arb-rich-text h1:not(.aksel-heading) {
+    margin: var(--ax-space-16) 0 var(--ax-space-20) 0;
     letter-spacing: -0.03em;
     font-weight: 700;
-    font-size: var(--a-font-size-heading-2xlarge);
-    line-height: var(--a-font-line-height-heading-2xlarge);
+    font-size: var(--ax-font-size-heading-2xlarge);
+    line-height: var(--ax-font-line-height-heading-2xlarge);
 }
 
 @media (max-width: 480px) {
-    .arb-rich-text h1:not(.navds-heading) {
-        font-size: var(--a-font-size-heading-xlarge);
-        line-height: var(--a-font-line-height-heading-xlarge);
+    .arb-rich-text h1:not(.aksel-heading) {
+        font-size: var(--ax-font-size-heading-xlarge);
+        line-height: var(--ax-font-line-height-heading-xlarge);
     }
 }
 
-.arb-rich-text h2:not(.navds-heading) {
-    margin: var(--a-spacing-7) 0 var(--a-spacing-4) 0;
+.arb-rich-text h2:not(.aksel-heading) {
+    margin: var(--ax-space-28) 0 var(--ax-space-16) 0;
     letter-spacing: -0.022em;
     font-weight: 700;
-    font-size: var(--a-font-size-heading-xlarge);
-    line-height: var(--a-font-line-height-heading-xlarge);
+    font-size: var(--ax-font-size-heading-xlarge);
+    line-height: var(--ax-font-line-height-heading-xlarge);
 }
 
 @media (max-width: 480px) {
-    .arb-rich-text h2:not(.navds-heading) {
-        font-size: var(--a-font-size-heading-large);
-        line-height: var(--a-font-line-height-heading-large);
+    .arb-rich-text h2:not(.aksel-heading) {
+        font-size: var(--ax-font-size-heading-large);
+        line-height: var(--ax-font-line-height-heading-large);
     }
 }
 
-.arb-rich-text h3:not(.navds-heading) {
-    margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
+.arb-rich-text h3:not(.aksel-heading) {
+    margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
     letter-spacing: -0.019em;
     font-weight: 700;
-    font-size: var(--a-font-size-heading-medium);
-    line-height: var(--a-font-line-height-heading-medium);
+    font-size: var(--ax-font-size-heading-medium);
+    line-height: var(--ax-font-line-height-heading-medium);
 }
 
-.arb-rich-text h4:not(.navds-heading) {
-    margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
+.arb-rich-text h4:not(.aksel-heading) {
+    margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
     letter-spacing: -0.017em;
-    font-weight: var(--a-font-weight-bold);
-    font-size: var(--a-font-size-heading-small);
-    line-height: var(--a-font-line-height-heading-small);
+    font-weight: var(--ax-font-weight-bold);
+    font-size: var(--ax-font-size-heading-small);
+    line-height: var(--ax-font-line-height-heading-small);
 }
 
-.arb-rich-text h5:not(.navds-heading) {
-    margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
+.arb-rich-text h5:not(.aksel-heading) {
+    margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
     letter-spacing: -0.011em;
-    font-weight: var(--a-font-weight-bold);
-    font-size: var(--a-font-size-heading-xsmall);
-    line-height: var(--a-font-line-height-heading-xsmall);
+    font-weight: var(--ax-font-weight-bold);
+    font-size: var(--ax-font-size-heading-xsmall);
+    line-height: var(--ax-font-line-height-heading-xsmall);
 }
 
-.arb-rich-text h6:not(.navds-heading) {
-    margin: var(--a-spacing-7) 0 var(--a-spacing-3) 0;
+.arb-rich-text h6:not(.aksel-heading) {
+    margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
     letter-spacing: -0.006em;
-    font-weight: var(--a-font-weight-bold);
+    font-weight: var(--ax-font-weight-bold);
     font-size: 14px;
-    line-height: var(--a-font-line-height-heading-xsmall);
+    line-height: var(--ax-font-line-height-heading-xsmall);
 }
 
 .arb-rich-text p {
-    margin: var(--a-spacing-3) 0 var(--a-spacing-5) 0;
-    font-size: var(--a-font-size-large);
-    font-weight: var(--a-font-weight-regular);
+    margin: var(--ax-space-12) 0 var(--ax-space-20) 0;
+    font-size: var(--ax-font-size-large);
+    font-weight: var(--ax-font-weight-regular);
     letter-spacing: -0.011em;
-    line-height: var(--a-font-line-height-xlarge);
+    line-height: var(--ax-font-line-height-xlarge);
 }
 
 .arb-rich-text b,
 .arb-rich-text strong {
-    font-weight: var(--a-font-weight-bold);
+    font-weight: var(--ax-font-weight-bold);
 }
 
 .arb-rich-text ul,
 .arb-rich-text ol {
-    margin: 0 0 var(--a-spacing-5) 0;
+    margin: 0 0 var(--ax-space-20) 0;
 }
 
 .arb-rich-text ul li p,
 .arb-rich-text ol li p {
-    margin: 0 0 var(--a-spacing-2) 0;
+    margin: 0 0 var(--ax-space-8) 0;
 }
 
 .arb-rich-text li {
-    font-size: var(--a-font-size-large);
-    font-weight: var(--a-font-weight-regular);
+    font-size: var(--ax-font-size-large);
+    font-weight: var(--ax-font-weight-regular);
     letter-spacing: -0.011em;
-    line-height: var(--a-font-line-height-large);
-    margin: 0 0 var(--a-spacing-3) 0;
+    line-height: var(--ax-font-line-height-large);
+    margin: 0 0 var(--ax-space-12) 0;
 }
 
 .arb-rich-text a {
-    color: var(--a-text-action);
+    color: var(--ax-text-accent-subtle);
     text-decoration: underline;
 }
 
@@ -112,16 +112,16 @@
 
 .arb-rich-text a:focus-visible {
     outline: none;
-    color: var(--a-text-on-action);
+    color: var(--ax-text-accent-contrast);
     text-decoration: none;
-    background-color: var(--a-border-focus);
-    box-shadow: 0 0 0 2px var(--a-border-focus);
+    background-color: var(--ax-border-focus);
+    box-shadow: 0 0 0 2px var(--ax-border-focus);
 }
 
 .arb-rich-text a:active {
     outline: none;
-    color: var(--a-text-on-action);
+    color: var(--ax-text-accent-contrast);
     text-decoration: none;
-    background-color: var(--a-border-focus);
-    box-shadow: 0 0 0 2px var(--a-border-focus);
+    background-color: var(--ax-border-focus);
+    box-shadow: 0 0 0 2px var(--ax-border-focus);
 }

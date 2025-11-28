@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import { Link, Heading } from "@navikt/ds-react";
+import { Link, Heading, BodyShort } from "@navikt/ds-react";
 import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
 
 export default function Footer() {
@@ -17,19 +17,27 @@ export default function Footer() {
                         </Heading>
                         <ul aria-label="Nyttige lenker">
                             <li>
-                                <Link href="/kontakt">Kontakt oss</Link>
+                                <Link href="/kontakt" variant="neutral">
+                                    Kontakt oss
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/personvern">Personvern</Link>
+                                <Link href="/personvern" variant="neutral">
+                                    Personvern
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/informasjonskapsler">Informasjonskapsler</Link>
+                                <Link href="/informasjonskapsler" variant="neutral">
+                                    Informasjonskapsler
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/tilgjengelighet">Tilgjengelighet</Link>
+                                <Link href="/tilgjengelighet" variant="neutral">
+                                    Tilgjengelighet
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/om-arbeidsplassen">
+                                <Link href="/om-arbeidsplassen" variant="neutral">
                                     Om <span translate="no">arbeidsplassen.no</span>
                                 </Link>
                             </li>
@@ -42,16 +50,22 @@ export default function Footer() {
                         </Heading>
                         <ul aria-label="Nyttige lenker for jobbsøkere">
                             <li>
-                                <Link href="/nyttige-artikler-for-jobbsokere">Nyttige artikler for jobbsøkere</Link>
+                                <Link href="/nyttige-artikler-for-jobbsokere" variant="neutral">
+                                    Nyttige artikler for jobbsøkere
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/sporsmal-og-svar">Spørsmål og svar</Link>
+                                <Link href="/sporsmal-og-svar" variant="neutral">
+                                    Spørsmål og svar
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/jobbe-i-utlandet">Jobbe i utlandet (EURES)</Link>
+                                <Link href="/jobbe-i-utlandet" variant="neutral">
+                                    Jobbe i utlandet (EURES)
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/en/work-in-norway" lang="en">
+                                <Link href="/en/work-in-norway" lang="en" variant="neutral">
                                     Information to refugees from Ukraine
                                 </Link>
                             </li>
@@ -64,27 +78,35 @@ export default function Footer() {
                         </Heading>
                         <ul aria-label="Nyttige lenker for bedrifter">
                             <li>
-                                <Link href="/vilkar-og-retningslinjer">Vilkår og retningslinjer</Link>
+                                <Link href="/vilkar-og-retningslinjer" variant="neutral">
+                                    Vilkår og retningslinjer
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/arbeidsgivertjenester">Hjelp til innlogging</Link>
+                                <Link href="/arbeidsgivertjenester" variant="neutral">
+                                    Hjelp til innlogging
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/overforing-av-stillingsannonser">Overføre annonser med API</Link>
+                                <Link href="/overforing-av-stillingsannonser" variant="neutral">
+                                    Overføre annonser med API
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/nyttige-artikler-for-bedrifter">Nyttige artikler for bedrifter</Link>
+                                <Link href="/nyttige-artikler-for-bedrifter" variant="neutral">
+                                    Nyttige artikler for bedrifter
+                                </Link>
                             </li>
                         </ul>
                     </section>
                 </nav>
                 <div className="arb-footer-bottom">
-                    <a href="/" className="arb-footer-logo">
+                    <Link href="/" className="arb-footer-logo" variant="neutral">
                         <ArbeidsplassenLogoSmall inverted height="40" width="40" title="Arbeidsplassen logo" />
-                    </a>
-                    <p className="arb-footer-p">
+                    </Link>
+                    <BodyShort>
                         <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
-                    </p>
+                    </BodyShort>
                 </div>
             </div>
         </footer>
