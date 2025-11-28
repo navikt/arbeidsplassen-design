@@ -1,6 +1,7 @@
-import { Heading, HStack, Radio, RadioGroup, Search } from "@navikt/ds-react";
+import { HStack, Radio, RadioGroup, Search } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 import React, { useState } from "react";
+import PropsCard from "@/examples/PropsCard";
 
 const SearchExample = () => {
     const [variant, setVariant] = useState("primary");
@@ -8,12 +9,9 @@ const SearchExample = () => {
 
     return (
         <Layout title="Search">
-            <form>
-                <Search label="Søk etter ledige stillinger" variant={variant} size={size} />
+            <Search label="Søk etter ledige stillinger" variant={variant} size={size} />
 
-                <Heading size="medium" level="2" spacing className="mt-24">
-                    Props
-                </Heading>
+            <PropsCard>
                 <HStack gap="24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {["primary", "secondary", "simple"].map((option) => (
@@ -26,7 +24,7 @@ const SearchExample = () => {
                         ))}
                     </RadioGroup>
                 </HStack>
-            </form>
+            </PropsCard>
         </Layout>
     );
 };

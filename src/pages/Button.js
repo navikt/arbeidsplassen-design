@@ -2,6 +2,7 @@ import { Button, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 import { TrashIcon } from "@navikt/aksel-icons";
 import { useState } from "react";
+import PropsCard from "@/examples/PropsCard";
 
 function ButtonTemplate({ variant, size }) {
     return (
@@ -40,16 +41,15 @@ const ButtonExample = () => {
             <ButtonTemplate variant="tertiary-neutral" size={size} />
             <ButtonTemplate variant="danger" size={size} />
 
-            <Heading size="medium" level="2" spacing className="mt-24">
-                Props
-            </Heading>
-            <HStack gap="24">
-                <RadioGroup legend="size" value={size} onChange={setSize}>
-                    {["medium", "small", "xsmall"].map((option) => (
-                        <Radio value={option}>{option}</Radio>
-                    ))}
-                </RadioGroup>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="size" value={size} onChange={setSize}>
+                        {["medium", "small", "xsmall"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 };

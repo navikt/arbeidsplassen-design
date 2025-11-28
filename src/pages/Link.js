@@ -1,6 +1,7 @@
-import { BodyLong, Heading, HStack, Link, Radio, RadioGroup } from "@navikt/ds-react";
+import { BodyLong, HStack, Link, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
 import { useState } from "react";
+import PropsCard from "@/examples/PropsCard";
 
 const LinkExample = () => {
     const [variant, setVariant] = useState("action");
@@ -22,16 +23,15 @@ const LinkExample = () => {
                 </Link>
             </BodyLong>
 
-            <Heading size="medium" level="2" spacing className="mt-24">
-                Props
-            </Heading>
-            <HStack gap="24">
-                <RadioGroup legend="variant" value={variant} onChange={setVariant}>
-                    {["action", "neutral", "subtle"].map((option) => (
-                        <Radio value={option}>{option}</Radio>
-                    ))}
-                </RadioGroup>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="variant" value={variant} onChange={setVariant}>
+                        {["action", "neutral", "subtle"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 };
