@@ -3,29 +3,26 @@ import Layout from "../examples/Layout";
 import { useState } from "react";
 
 const CookieBannerAExample = () => {
-  const [showCookieBanner, setShowCookieBanner] = useState(true);
+    const [showCookieBanner, setShowCookieBanner] = useState(true);
 
-  return (
-    <Layout
-      title="CookieBannerA"
-      cookieBannerAArgs={
-        showCookieBanner
-          ? {
-              onClose: () => {
-                setShowCookieBanner(false);
-              },
+    return (
+        <Layout
+            title="CookieBannerA"
+            cookieBannerAArgs={
+                showCookieBanner
+                    ? {
+                          onClose: () => {
+                              setShowCookieBanner(false);
+                          },
+                      }
+                    : false
             }
-          : false
-      }
-    >
-      <Switch
-        checked={showCookieBanner}
-        onChange={(e) => setShowCookieBanner(e.target.checked)}
-      >
-        Vis cookie banner
-      </Switch>
-    </Layout>
-  );
+        >
+            <Switch checked={showCookieBanner} onChange={(e) => setShowCookieBanner(e.target.checked)}>
+                Vis cookie banner
+            </Switch>
+        </Layout>
+    );
 };
 
 export default CookieBannerAExample;

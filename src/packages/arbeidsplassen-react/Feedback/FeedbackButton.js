@@ -26,29 +26,20 @@ import { Button } from "@navikt/ds-react";
  */
 
 /** @param {FeedbackButtonProps} props */
-function FeedbackButton({
-  children,
-  icon,
-  variant = "tertiary-neutral",
-  className,
-  onClick,
-  ariaDescribedby,
-}) {
-  return (
-    <Button
-      variant={variant}
-      className={
-        className ? `arb-feedback-button ${className}` : "arb-feedback-button"
-      }
-      onClick={onClick}
-      aria-describedby={ariaDescribedby}
-    >
-      <span className="arb-feedback-button-inner">
-        {icon}
-        {children}
-      </span>
-    </Button>
-  );
+function FeedbackButton({ children, icon, variant = "tertiary-neutral", className, onClick, ariaDescribedby }) {
+    return (
+        <Button
+            variant={variant}
+            className={className ? `arb-feedback-button ${className}` : "arb-feedback-button"}
+            onClick={onClick}
+            aria-describedby={ariaDescribedby}
+        >
+            <span className="arb-feedback-button-inner">
+                {icon}
+                {children}
+            </span>
+        </Button>
+    );
 }
 
 export default FeedbackButton;

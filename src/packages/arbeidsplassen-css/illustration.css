@@ -1,27 +1,27 @@
 .arb-illustration-arms-and-legs-stroke {
-  stroke: var(--arb-illustration-arms-and-legs);
+    stroke: var(--arb-illustration-arms-and-legs);
 }
 
 .arb-illustration-arms-and-legs-fill {
-  fill: var(--arb-illustration-arms-and-legs);
+    fill: var(--arb-illustration-arms-and-legs);
 }
 
 .arb-illustration-face-stroke {
-  stroke: var(--arb-illustration-face);
+    stroke: var(--arb-illustration-face);
 }
 
 .arb-illustration-face-fill {
-  fill: var(--arb-illustration-face);
+    fill: var(--arb-illustration-face);
 }
 
 .arb-illustration-items-stroke {
-  stroke: var(--arb-illustration-items);
+    stroke: var(--arb-illustration-items);
 }
 
 .arb-illustration-items-fill {
-  fill: var(--arb-illustration-items);
+    fill: var(--arb-illustration-items);
 }
 
 .arb-illustration-shadow {
-  fill: var(--arb-illustration-shadow);
+    fill: var(--arb-illustration-shadow);
 }

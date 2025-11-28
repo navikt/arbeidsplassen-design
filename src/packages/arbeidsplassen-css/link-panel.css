@@ -1,40 +1,40 @@
 .arb-link-panel-primary,
 .arb-link-panel-secondary,
 .arb-link-panel-tertiary {
-  padding: 1.5rem;
-  border: 0;
-  color: var(--arb-link-panel-description-on-color);
+    padding: 1.5rem;
+    border: 0;
+    color: var(--arb-link-panel-description-on-color);
 }
 
 .arb-link-panel-primary:hover,
 .arb-link-panel-secondary:hover,
 .arb-link-panel-tertiary:hover {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .arb-link-panel-primary {
-  background-color: var(--arb-link-panel-primary-bg);
+    background-color: var(--arb-link-panel-primary-bg);
 }
 
 .arb-link-panel-primary .navds-link-panel__title,
 .arb-link-panel-primary:hover .navds-link-panel__title {
-  color: var(--arb-link-panel-primary-text);
+    color: var(--arb-link-panel-primary-text);
 }
 
 .arb-link-panel-secondary {
-  background-color: var(--arb-link-panel-secondary-bg);
+    background-color: var(--arb-link-panel-secondary-bg);
 }
 
 .arb-link-panel-secondary .navds-link-panel__title,
 .arb-link-panel-secondary:hover .navds-link-panel__title {
-  color: var(--arb-link-panel-secondary-text);
+    color: var(--arb-link-panel-secondary-text);
 }
 
 .arb-link-panel-tertiary {
-  background-color: var(--arb-link-panel-tertiary-bg);
+    background-color: var(--arb-link-panel-tertiary-bg);
 }
 
 .arb-link-panel-tertiary .navds-link-panel__title,
 .arb-link-panel-tertiary:hover .navds-link-panel__title {
-  color: var(--arb-link-panel-tertiary-text);
+    color: var(--arb-link-panel-tertiary-text);
 }

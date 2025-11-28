@@ -1,11 +1,11 @@
 .arb-feedback-button {
-  min-width: 5rem;
+    min-width: 5rem;
 }
 
 .arb-feedback-button-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: var(--a-spacing-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--a-spacing-2);
 }

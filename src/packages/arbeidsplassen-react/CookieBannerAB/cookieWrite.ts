@@ -4,11 +4,11 @@ type SameSiteValue = "Lax" | "Strict" | "None";
 type WriteCookieOptions = {
     name: string;
     value: string;
-    days?: number;           // default 90
-    path?: string;           // default "/"
-    domain?: string;         // default undefined (host-scoped)
-    sameSite?: SameSiteValue;// default "Lax"
-    secure?: boolean;        // default: infer from protocol OR required by SameSite=None
+    days?: number; // default 90
+    path?: string; // default "/"
+    domain?: string; // default undefined (host-scoped)
+    sameSite?: SameSiteValue; // default "Lax"
+    secure?: boolean; // default: infer from protocol OR required by SameSite=None
 };
 
 const defaultDays = 90 as const;
@@ -16,20 +16,12 @@ const defaultDays = 90 as const;
 export const writeBrowserCookie = (opts: WriteCookieOptions): void => {
     if (typeof document === "undefined") return;
 
-    const {
-        name,
-        value,
-        days = defaultDays,
-        path = "/",
-        domain,
-        sameSite = "Lax",
-        secure,
-    } = opts;
+    const { name, value, days = defaultDays, path = "/", domain, sameSite = "Lax", secure } = opts;
 
     // Best effort: https? => secure true; http (localhost) => secure false.
     const isHttps = typeof window !== "undefined" && window.location.protocol === "https:";
     const mustSecure = sameSite === "None";
-    const secureFlag = typeof secure === "boolean" ? secure : (mustSecure ? true : isHttps);
+    const secureFlag = typeof secure === "boolean" ? secure : mustSecure ? true : isHttps;
 
     // Calculate expiry
     const maxAgeSeconds = Math.round(days * 86400);
