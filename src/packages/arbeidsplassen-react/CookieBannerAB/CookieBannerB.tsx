@@ -118,12 +118,12 @@ export default function CookieBannerB({
     };
 
     return (
-        <Box
+        <Box.New
             as="section"
             aria-labelledby={titleId}
             id={sectionId}
             padding={{ xs: "6", md: "8" }}
-            background="surface-alt-2-subtle"
+            className="coockie-banner"
         >
             <div className="container-large">
                 <Heading level={headingLevel} size="large" spacing id="arb-cookie-banner-title">
@@ -149,6 +149,6 @@ export default function CookieBannerB({
                     </Button>
                 </Stack>
             </div>
-        </Box>
+        </Box.New>
     );
 }
