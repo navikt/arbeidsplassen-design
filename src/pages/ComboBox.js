@@ -1,35 +1,23 @@
-import { Heading, UNSAFE_Combobox } from "@navikt/ds-react";
+import { UNSAFE_Combobox } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import {
+    PLACEHOLDER_INPUT_DESCRIPTION,
+    PLACEHOLDER_INPUT_LABEL,
+    PLACEHOLDER_INPUT_OPTIONS,
+} from "@/examples/placeholders";
 
 const ComboBoxExample = () => {
-  const initialOptions = [
-    "tea",
-    "coffee",
-    "hot chocolate",
-    "lemonade",
-    "orange juice",
-    "apple juice",
-    "smoothie",
-    "milk",
-    "water",
-    "soda",
-    "beer",
-    "wine",
-  ];
-
-  return (
-    <Layout title="ComboBox">
-      <Heading size="medium" level="2" spacing>
-        Combobox
-      </Heading>
-      <UNSAFE_Combobox
-        allowNewValues
-        label="Hva er dine favorittdrikker? Legg gjerne til flere alternativer."
-        options={initialOptions}
-        isMultiSelect
-      />
-    </Layout>
-  );
+    return (
+        <Layout title="ComboBox">
+            <UNSAFE_Combobox
+                allowNewValues
+                label={PLACEHOLDER_INPUT_LABEL}
+                description={PLACEHOLDER_INPUT_DESCRIPTION}
+                options={PLACEHOLDER_INPUT_OPTIONS}
+                isMultiSelect
+            />
+        </Layout>
+    );
 };
 
 export default ComboBoxExample;

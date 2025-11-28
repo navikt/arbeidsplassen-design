@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Heading, HStack, Radio, RadioGroup, TextField } from "@navikt/ds-react";
+import { HStack, Radio, RadioGroup, TextField } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import PropsCard from "@/examples/PropsCard";
 
 export default function TextFieldExample() {
     const [error, setError] = useState(false);
@@ -17,23 +18,22 @@ export default function TextFieldExample() {
                 readOnly={readOnly}
             />
 
-            <Heading size="medium" level="2" spacing className="mt-24">
-                Props
-            </Heading>
-            <HStack gap="24">
-                <RadioGroup legend="error" value={error} onChange={setError}>
-                    <Radio value={false}>false</Radio>
-                    <Radio value={true}>true</Radio>
-                </RadioGroup>
-                <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
-                    <Radio value={false}>false</Radio>
-                    <Radio value={true}>true</Radio>
-                </RadioGroup>
-                <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
-                    <Radio value={false}>false</Radio>
-                    <Radio value={true}>true</Radio>
-                </RadioGroup>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="error" value={error} onChange={setError}>
+                        <Radio value={false}>false</Radio>
+                        <Radio value={true}>true</Radio>
+                    </RadioGroup>
+                    <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
+                        <Radio value={false}>false</Radio>
+                        <Radio value={true}>true</Radio>
+                    </RadioGroup>
+                    <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
+                        <Radio value={false}>false</Radio>
+                        <Radio value={true}>true</Radio>
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 }

@@ -1,11 +1,13 @@
 import { Chips, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import { useState } from "react";
 import Layout from "../examples/Layout";
+import PropsCard from "@/examples/PropsCard";
+import { PLACEHOLDER_INPUT_OPTIONS } from "@/examples/placeholders";
 
 const ChipsExample = () => {
-    const options = ["Norsk", "Dansk", "Svensk", "Tysk", "Spansk"];
+    const options = PLACEHOLDER_INPUT_OPTIONS;
 
-    const [selected, setSelected] = useState(["Dansk", "Svensk"]);
+    const [selected, setSelected] = useState(["Brød"]);
     const [filter, setFilter] = useState(options);
 
     const [variant, setVariant] = useState("action");
@@ -51,25 +53,24 @@ const ChipsExample = () => {
                 </Chips>
             </div>
 
-            <Heading size="medium" level="2" spacing>
-                Props
-            </Heading>
-            <HStack gap="24">
-                <RadioGroup legend="variant" value={variant} onChange={setVariant}>
-                    {["action", "neutral"].map((option) => (
-                        <Radio value={option}>{option}</Radio>
-                    ))}
-                </RadioGroup>
-                <RadioGroup legend="size" value={size} onChange={setSize}>
-                    {["medium", "small"].map((option) => (
-                        <Radio value={option}>{option}</Radio>
-                    ))}
-                </RadioGroup>
-                <RadioGroup legend="checkmark" value={checkmark} onChange={setCheckmark}>
-                    <Radio value={true}>true</Radio>
-                    <Radio value={false}>false</Radio>
-                </RadioGroup>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="variant" value={variant} onChange={setVariant}>
+                        {["action", "neutral"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                    <RadioGroup legend="size" value={size} onChange={setSize}>
+                        {["medium", "small"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                    <RadioGroup legend="checkmark" value={checkmark} onChange={setCheckmark}>
+                        <Radio value={true}>true</Radio>
+                        <Radio value={false}>false</Radio>
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 };

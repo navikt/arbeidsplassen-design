@@ -1,7 +1,8 @@
 import Layout from "../examples/Layout";
-import { GlobalAlert, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
-import { LOREM_IPSUM_HEADING, LOREM_IPSUM_PARAGRAPH } from "@/examples/loremIpsum";
+import { GlobalAlert, HStack, Radio, RadioGroup } from "@navikt/ds-react";
+import { PLACEHOLDER_HEADING, PLACEHOLDER_PARAGRAPH } from "@/examples/placeholders";
 import { useState } from "react";
+import PropsCard from "@/examples/PropsCard";
 
 const GlobalAlertExample = () => {
     const [status, setStatus] = useState("announcement");
@@ -12,31 +13,30 @@ const GlobalAlertExample = () => {
         <Layout title="GlobalAlert">
             <GlobalAlert status={status} size={size}>
                 <GlobalAlert.Header>
-                    <GlobalAlert.Title>{LOREM_IPSUM_HEADING}</GlobalAlert.Title>
+                    <GlobalAlert.Title>{PLACEHOLDER_HEADING}</GlobalAlert.Title>
                     {showCloseButton && <GlobalAlert.CloseButton onClick={() => alert("Lukket alert")} />}
                 </GlobalAlert.Header>
-                <GlobalAlert.Content>{LOREM_IPSUM_PARAGRAPH}</GlobalAlert.Content>
+                <GlobalAlert.Content>{PLACEHOLDER_PARAGRAPH}</GlobalAlert.Content>
             </GlobalAlert>
 
-            <Heading size="medium" level="2" spacing className="mt-24">
-                Props
-            </Heading>
-            <HStack gap="24">
-                <RadioGroup legend="status" value={status} onChange={setStatus}>
-                    {["announcement", "success", "warning", "error"].map((option) => (
-                        <Radio value={option}>{option}</Radio>
-                    ))}
-                </RadioGroup>
-                <RadioGroup legend="size" value={size} onChange={setSize}>
-                    {["medium", "small"].map((option) => (
-                        <Radio value={option}>{option}</Radio>
-                    ))}
-                </RadioGroup>
-                <RadioGroup legend="closeButton" value={showCloseButton} onChange={setShowCloseButton}>
-                    <Radio value={false}>false</Radio>
-                    <Radio value={true}>true</Radio>
-                </RadioGroup>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="status" value={status} onChange={setStatus}>
+                        {["announcement", "success", "warning", "error"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                    <RadioGroup legend="size" value={size} onChange={setSize}>
+                        {["medium", "small"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                    <RadioGroup legend="closeButton" value={showCloseButton} onChange={setShowCloseButton}>
+                        <Radio value={false}>false</Radio>
+                        <Radio value={true}>true</Radio>
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 };

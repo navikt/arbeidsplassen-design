@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
-import { CookieBanner, CookieBannerA, CookieBannerB, Footer, Header, SkipLink } from "@navikt/arbeidsplassen-react";
+import { CookieBanner, CookieBannerA, CookieBannerB, Header, SkipLink } from "@navikt/arbeidsplassen-react";
+import Footer from "@/packages/arbeidsplassen-react/Footer/Footer";
 
 const arbeidsplassenComponents = [
     "ComboboxExternalItems",
@@ -14,9 +15,10 @@ const arbeidsplassenComponents = [
     "NotFound",
     "RichText",
     "SkipLink",
+    "Colors",
 ].sort();
 
-const deprecatedAkselComponents = ["Alert", "Ingress", "LinkPanel"];
+const deprecatedAkselComponents = ["Alert", "ConfirmationPanel", "Ingress", "LinkPanel"];
 
 const akselComponents = [
     "Accordion",
@@ -25,7 +27,6 @@ const akselComponents = [
     "Checkbox",
     "Chips",
     "ComboBox",
-    "ConfirmationPanel",
     "CopyButton",
     "DatePicker",
     "Dropdown",
@@ -36,9 +37,10 @@ const akselComponents = [
     "Heading",
     "HelpText",
     "Link",
+    "LinkCard",
+    "List",
     "Modal",
     "Pagination",
-    "Panel",
     "Popover",
     "Radio",
     "ReadMore",
@@ -133,7 +135,7 @@ export default function Layout({
                         </div>
 
                         <div>
-                            <Heading size="large" level="1" className="mb-8">
+                            <Heading size="xlarge" level="1" spacing>
                                 {title}
                             </Heading>
                             {children}

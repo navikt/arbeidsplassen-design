@@ -1,6 +1,13 @@
 import { useState } from "react";
-import { Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
+import { HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import PropsCard from "@/examples/PropsCard";
+import {
+    PLACEHOLDER_INPUT_DESCRIPTION,
+    PLACEHOLDER_INPUT_ERROR,
+    PLACEHOLDER_INPUT_LABEL,
+    PLACEHOLDER_INPUT_OPTIONS,
+} from "@/examples/placeholders";
 
 export default function RadioExample() {
     const [error, setError] = useState(false);
@@ -10,36 +17,35 @@ export default function RadioExample() {
     return (
         <Layout title="Radio">
             <RadioGroup
-                legend="Velg din aldersgruppe"
-                description="Informasjonen blir brukt for å gi deg bedre søketreff."
+                legend={PLACEHOLDER_INPUT_LABEL}
+                description={PLACEHOLDER_INPUT_DESCRIPTION}
                 onChange={(val) => console.log(val)}
-                defaultValue="10"
-                error={error ? "Dette ser feil ut!" : undefined}
+                defaultValue="Brød"
+                error={error ? PLACEHOLDER_INPUT_ERROR : undefined}
                 disabled={disabled}
                 readOnly={readOnly}
             >
-                <Radio value="10">10-20 år</Radio>
-                <Radio value="20">21-45 år</Radio>
-                <Radio value="40">46-80 år</Radio>
+                {PLACEHOLDER_INPUT_OPTIONS.map((option) => (
+                    <Radio value={option}>{option}</Radio>
+                ))}
             </RadioGroup>
 
-            <Heading size="medium" level="2" spacing className="mt-24">
-                Props
-            </Heading>
-            <HStack gap="24">
-                <RadioGroup legend="error" value={error} onChange={setError}>
-                    <Radio value={false}>false</Radio>
-                    <Radio value={true}>true</Radio>
-                </RadioGroup>
-                <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
-                    <Radio value={false}>false</Radio>
-                    <Radio value={true}>true</Radio>
-                </RadioGroup>
-                <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
-                    <Radio value={false}>false</Radio>
-                    <Radio value={true}>true</Radio>
-                </RadioGroup>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="error" value={error} onChange={setError}>
+                        <Radio value={false}>false</Radio>
+                        <Radio value={true}>true</Radio>
+                    </RadioGroup>
+                    <RadioGroup legend="disabled" value={disabled} onChange={setDisabled}>
+                        <Radio value={false}>false</Radio>
+                        <Radio value={true}>true</Radio>
+                    </RadioGroup>
+                    <RadioGroup legend="readOnly" value={readOnly} onChange={setReadOnly}>
+                        <Radio value={false}>false</Radio>
+                        <Radio value={true}>true</Radio>
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 }

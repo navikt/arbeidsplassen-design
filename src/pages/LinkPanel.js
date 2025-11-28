@@ -18,12 +18,11 @@ function Template({ skipDescription, className }) {
 
 export default function LinkPanelExample() {
     return (
-        <Layout title="LinkPanel">
+        <Layout title="LinkPanel (avviklet)">
             <Template />
             <Template className="arb-link-panel-primary" />
             <Template className="arb-link-panel-secondary" />
             <Template className="arb-link-panel-tertiary" />
-            <Template className="arb-link-panel-tertiary" skipDescription />
         </Layout>
     );
 }

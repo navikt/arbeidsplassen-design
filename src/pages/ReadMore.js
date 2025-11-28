@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Heading, HStack, Radio, RadioGroup, ReadMore } from "@navikt/ds-react";
+import { HStack, Radio, RadioGroup, ReadMore } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
-import { LOREM_IPSUM_BLOCK } from "@/examples/loremIpsum";
+import { PLACEHOLDER_BLOCK } from "@/examples/placeholders";
+import PropsCard from "@/examples/PropsCard";
 
 const ReadMoreExample = () => {
     const [size, setSize] = useState("medium");
@@ -9,19 +10,18 @@ const ReadMoreExample = () => {
     return (
         <Layout title="ReadMore">
             <ReadMore header="Slik fungerer det" size={size}>
-                {LOREM_IPSUM_BLOCK}
+                {PLACEHOLDER_BLOCK}
             </ReadMore>
 
-            <Heading size="medium" level="2" spacing className="mt-24">
-                Props
-            </Heading>
-            <HStack gap="24">
-                <RadioGroup legend="size" value={size} onChange={setSize}>
-                    {["large", "medium", "small"].map((option) => (
-                        <Radio value={option}>{option}</Radio>
-                    ))}
-                </RadioGroup>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="size" value={size} onChange={setSize}>
+                        {["large", "medium", "small"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 };
