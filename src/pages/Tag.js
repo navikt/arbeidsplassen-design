@@ -1,62 +1,36 @@
-import { Heading, HStack, Tag } from "@navikt/ds-react";
+import { HStack, Radio, RadioGroup, Tag } from "@navikt/ds-react";
 import Layout from "../examples/Layout";
+import { useState } from "react";
+import PropsCard from "@/examples/PropsCard";
 
 const TagExample = () => {
+    const [variant, setVariant] = useState("default");
+    const [size, setSize] = useState("medium");
+
     return (
         <Layout title="Tag">
-            <Heading size="medium" level="2" spacing>
-                Subtle
-            </Heading>
             <HStack gap="4" className="mb-16">
-                <Tag variant="info">Info</Tag>
-                <Tag variant="success">Success</Tag>
-                <Tag variant="warning">Warning</Tag>
-                <Tag variant="error">Danger</Tag>
-                <Tag variant="neutral">Neutral</Tag>
-                <Tag variant="alt1">Alt 1</Tag>
-                <Tag variant="alt2">Alt 2</Tag>
-                <Tag variant="alt3">Alt 3</Tag>
+                {["info", "success", "warning", "error", "neutral", "alt1", "alt2", "alt3"].map((tag) => (
+                    <Tag variant={variant !== "default" ? `${tag}-${variant}` : tag} size={size}>
+                        {tag}
+                    </Tag>
+                ))}
             </HStack>
 
-            <Heading size="medium" level="2" spacing>
-                Moderate
-            </Heading>
-            <HStack gap="4" className="mb-16">
-                <Tag variant="info-moderate">Info</Tag>
-                <Tag variant="success-moderate">Success</Tag>
-                <Tag variant="warning-moderate">Warning</Tag>
-                <Tag variant="error-moderate">Danger</Tag>
-                <Tag variant="neutral-moderate">Neutral</Tag>
-                <Tag variant="alt1-moderate">Alt 1</Tag>
-                <Tag variant="alt2-moderate">Alt 2</Tag>
-                <Tag variant="alt3-moderate">Alt 3</Tag>
-            </HStack>
-
-            <Heading size="medium" level="2" spacing>
-                Filled
-            </Heading>
-            <HStack gap="4" className="mb-16">
-                <Tag variant="info-filled">Info</Tag>
-                <Tag variant="success-filled">Success</Tag>
-                <Tag variant="warning-filled">Warning</Tag>
-                <Tag variant="error-filled">Danger</Tag>
-                <Tag variant="neutral-filled">Neutral</Tag>
-                <Tag variant="alt1-filled">Alt 1</Tag>
-                <Tag variant="alt2-filled">Alt 2</Tag>
-                <Tag variant="alt3-filled">Alt 3</Tag>
-            </HStack>
-
-            <Heading size="medium" level="2" spacing>
-                Medium or small size
-            </Heading>
-            <HStack gap="4" className="mb-16">
-                <Tag variant="info-moderate" size="small">
-                    Small
-                </Tag>
-                <Tag variant="info-moderate" size="xsmall">
-                    Xsmall
-                </Tag>
-            </HStack>
+            <PropsCard>
+                <HStack gap="24">
+                    <RadioGroup legend="variant" value={variant} onChange={setVariant}>
+                        {["default", "moderate", "filled"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                    <RadioGroup legend="size" value={size} onChange={setSize}>
+                        {["medium", "small", "xsmall"].map((option) => (
+                            <Radio value={option}>{option}</Radio>
+                        ))}
+                    </RadioGroup>
+                </HStack>
+            </PropsCard>
         </Layout>
     );
 };
