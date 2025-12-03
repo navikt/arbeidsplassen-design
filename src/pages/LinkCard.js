@@ -11,7 +11,7 @@ export default function LinkCardExample() {
 
     return (
         <Layout title="LinkCard">
-            <LinkCard arrowPosition={arrowPosition} size={size} href="#" className={`arb-link-panel-${color}`}>
+            <LinkCard arrowPosition={arrowPosition} size={size} href="#">
                 <LinkCard.Title>
                     <LinkCard.Anchor href="#">{PLACEHOLDER_HEADING}</LinkCard.Anchor>
                 </LinkCard.Title>
@@ -20,11 +20,6 @@ export default function LinkCardExample() {
 
             <PropsCard>
                 <HStack gap="24">
-                    <RadioGroup legend="color" value={color} onChange={setColor}>
-                        {["primary", "secondary", "tertiary", "none"].map((option) => (
-                            <Radio value={option}>{option}</Radio>
-                        ))}
-                    </RadioGroup>
                     <RadioGroup legend="arrowPosition" value={arrowPosition} onChange={setArrowPosition}>
                         {["baseline", "center"].map((option) => (
                             <Radio value={option}>{option}</Radio>
