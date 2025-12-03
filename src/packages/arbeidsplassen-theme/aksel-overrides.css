@@ -45,11 +45,9 @@
  ******************************************************/
 .aksel-chips__chip {
     font-weight: 600 !important;
-    font-size: 1rem !important;
     border-bottom-right-radius: 0 !important;
 }
 
-.light .aksel-chips__removable,
 .light .aksel-chips__toggle--action[aria-pressed="true"],
 .light .aksel-chips__removable--action {
     background: var(--arb-success-800);
