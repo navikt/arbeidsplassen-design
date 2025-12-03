@@ -10,8 +10,7 @@
     background-color: var(--arb-brand-peach-100);
 }
 
-.dark .arb-link-panel-primary .aksel-link-card__title
-{
+.dark .arb-link-panel-primary .aksel-link-card__title {
     color: var(--arb-accent-200);
 }
 
@@ -20,5 +19,5 @@
 }
 
 .dark .arb-link-panel-tertiary .aksel-link-card__title {
-    color:  var(--arb-brand-peach-300);
+    color: var(--arb-brand-peach-300);
 }

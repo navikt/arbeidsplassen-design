@@ -104,7 +104,7 @@ function CookieBanner({
             aria-labelledby="arb-cookie-banner-title"
             padding={{ xs: "6 0", md: "8 0" }}
             id="arb-cookie-banner-section"
-            className="coockie-banner"
+            className="cookie-banner"
         >
             <div className="container-large">
                 <Heading level={headingLevel} size="large" spacing id="arb-cookie-banner-title">

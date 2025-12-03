@@ -123,7 +123,7 @@ export default function CookieBannerB({
             aria-labelledby={titleId}
             id={sectionId}
             padding={{ xs: "6", md: "8" }}
-            className="coockie-banner"
+            className="cookie-banner"
         >
             <div className="container-large">
                 <Heading level={headingLevel} size="large" spacing id="arb-cookie-banner-title">
