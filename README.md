@@ -77,4 +77,3 @@ Eksempel-appen kjører på [http://localhost:3001](http://localhost:3001)
 
 - Endre `version` i `src/packages/arbeidsplassen-css/package.json` til ny versjon du ønsker å publisere.
 - Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github (https://github.com/navikt/arbeidsplassen-design/actions)
-.
