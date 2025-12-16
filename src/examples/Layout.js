@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
 import { CookieBanner, CookieBannerA, CookieBannerB, Header, SkipLink } from "@navikt/arbeidsplassen-react";
 import Footer from "@/packages/arbeidsplassen-react/Footer/Footer";
+import { PageBlock } from "@navikt/ds-react/Page";
 
 const arbeidsplassenComponents = [
     "ComboboxExternalItems",
@@ -78,13 +79,16 @@ export default function Layout({
                 {cookieBannerAArgs && <CookieBannerA headingLevel="2" onClose={cookieBannerAArgs.onClose} />}
                 {cookieBannerBArgs && <CookieBannerB headingLevel="2" onClose={cookieBannerBArgs.onClose} />}
                 <SkipLink />
-                <Header
-                    variant={headerArgs.variant}
-                    authenticationStatus={headerArgs.authenticationStatus}
-                    active={headerArgs.active}
-                    onLogin={headerArgs.onLogin}
-                    onLogout={headerArgs.onLogout}
-                />
+                <PageBlock width="2xl" gutters>
+                    <Header
+                        variant={headerArgs.variant}
+                        authenticationStatus={headerArgs.authenticationStatus}
+                        active={headerArgs.active}
+                        onLogin={headerArgs.onLogin}
+                        onLogout={headerArgs.onLogout}
+                    />
+                </PageBlock>
+
                 <main id="main" className="container-large mt-8 mb-24">
                     <HGrid columns={{ md: "auto auto", lg: "350px auto" }}>
                         <div>
@@ -143,6 +147,7 @@ export default function Layout({
                     </HGrid>
                 </main>
             </div>
+
             <Footer />
         </>
     );
