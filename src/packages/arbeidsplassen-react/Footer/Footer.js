@@ -6,26 +6,19 @@ import { PageBlock } from "@navikt/ds-react/Page";
 /** @typedef {import("@navikt/ds-react/Page").PageBlockProps} PageBlockProps */
 
 /**
- * (Valgfritt) strammere union enn bare `string`.
- * Tilpass listen hvis dere støtter flere språk.
  * @typedef {"nb" | "nn" | "en" | "ru" | "uk"} FooterLang
  */
 
 /**
  * Props for Footer.
- * @typedef {{
- *    contentWidth?: PageBlockProps["width"];
- *    contentGutters?: PageBlockProps["gutters"];
- *    lang?: FooterLang;
- *
- * }} FooterProps
+ * @typedef {Object} HeaderProps
+ * @property {PageBlockProps["width"]} [contentWidth]
+ * @property {PageBlockProps["gutters"]} [contentGutters]
+ * @property {FooterLang} [lang]
  */
 
-/**
- * @param {FooterProps} props
- */
-export default function Footer(props) {
-    const { contentWidth = "2xl", contentGutters = true, lang = "nb" } = props;
+/** @param {FooterProps} props */
+export default function Footer({ contentWidth = "2xl", contentGutters = true, lang = "nb" }) {
     const aboutHeadingId = useId();
     const jobSeekerHeadingId = useId();
     const companyHeadingId = useId();

@@ -33,7 +33,7 @@ function joinClassNames(...strings) {
  * @property {AuthenticationStatus} [authenticationStatus]
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogin
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogout
- * @property lang?: HeaderLang;
+ * @property {HeaderLang} [lang]
  */
 
 /** @param {HeaderProps} props */
