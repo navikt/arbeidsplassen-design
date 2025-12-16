@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Bleed, BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
+import { BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
 import { CookieBanner, CookieBannerA, CookieBannerB, Header, SkipLink } from "@navikt/arbeidsplassen-react";
 import Footer from "@/packages/arbeidsplassen-react/Footer/Footer";
 import { PageBlock } from "@navikt/ds-react/Page";
