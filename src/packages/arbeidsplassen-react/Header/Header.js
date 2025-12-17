@@ -21,6 +21,10 @@ function joinClassNames(...strings) {
  */
 
 /**
+ * @typedef {"nb" | "nn" | "en" | "ru" | "uk"} HeaderLang
+ */
+
+/**
  * Props for Header.
  * @typedef {Object} HeaderProps
  * @property {string} [className]
@@ -29,6 +33,7 @@ function joinClassNames(...strings) {
  * @property {AuthenticationStatus} [authenticationStatus]
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogin
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogout
+ * @property {HeaderLang} [lang]
  */
 
 /** @param {HeaderProps} props */
@@ -39,6 +44,7 @@ export default function Header({
     authenticationStatus = "unknown",
     onLogin,
     onLogout,
+    lang = "nb",
 }) {
     const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
 
@@ -47,7 +53,7 @@ export default function Header({
     };
 
     return (
-        <header className="container-large arb-header-wrapper" lang="no">
+        <header className="arb-header-wrapper" lang={lang}>
             <nav aria-label="Hovedmeny" className={joinClassNames("arb-header", className)}>
                 <div className="arb-header-top">
                     <Logo active={active} />
