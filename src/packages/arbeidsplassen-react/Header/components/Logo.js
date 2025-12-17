@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ArbeidsplassenLogo from "../../Logo/ArbeidsplassenLogo";
 import ArbeidsplassenLogoSmall from "../../Logo/ArbeidsplassenLogoSmall";
-import UngLogo from "@/packages/arbeidsplassen-react/Header/components/UngLogo.js";
+import UngLogo from "./UngLogo.js";
 
 function Logo({ active }) {
     return (
