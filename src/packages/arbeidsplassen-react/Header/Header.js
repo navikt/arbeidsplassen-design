@@ -50,7 +50,7 @@ export default function Header({
         <header className="container-large arb-header-wrapper" lang="no">
             <nav aria-label="Hovedmeny" className={joinClassNames("arb-header", className)}>
                 <div className="arb-header-top">
-                    <Logo />
+                    <Logo active={active} />
 
                     <MenuButton toggleMenu={toggleMenu} isMobileMenuHidden={isMobileMenuHidden} />
 
@@ -94,5 +94,5 @@ Header.propTypes = {
     onLogout: PropTypes.func.isRequired,
     variant: PropTypes.oneOf(["person", "company"]),
     authenticationStatus: PropTypes.oneOf(["unknown", "is-authenticated", "not-authenticated"]),
-    active: PropTypes.oneOf(["ledige-stillinger", "stillingsannonser", "sommerjobb"]),
+    active: PropTypes.oneOf(["ledige-stillinger", "ung", "stillingsannonser", "sommerjobb"]),
 };

@@ -68,6 +68,12 @@
     }
 }
 
+.arb-header-logo-flex {
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+}
+
 .arb-header-logo:focus-visible {
     box-shadow: var(--a-shadow-focus);
     outline: none;
