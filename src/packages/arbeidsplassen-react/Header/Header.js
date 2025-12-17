@@ -17,7 +17,7 @@ function joinClassNames(...strings) {
  * @typedef { "company" | "person" | "all"  } Variant
  */
 /**
- * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" } Active
+ * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" | "ung" } Active
  */
 
 /**
