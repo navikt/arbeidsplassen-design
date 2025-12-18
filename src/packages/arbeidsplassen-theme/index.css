@@ -1,4 +1,2 @@
-@import "./colors.css";
-@import "./common.css";
-@import "./light.css";
-@import "./dark.css";
+@import "arbeidsplassen-theme.css";
+@import "aksel-overrides.css";
