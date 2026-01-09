@@ -14,6 +14,11 @@ function PersonMenu({ active }) {
                     Ung
                 </MenuItem>
             </li>
+            <li>
+                <MenuItem href="/sommerjobb" active={active} id="sommerjobb">
+                    Sommerjobben 2026 ☀️
+                </MenuItem>
+            </li>
             <li className="arb-header-divider">
                 <MenuItem href="/bedrift" id="for-bedrifter">
                     For bedrifter
