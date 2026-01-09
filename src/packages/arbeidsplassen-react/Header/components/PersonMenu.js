@@ -16,7 +16,7 @@ function PersonMenu({ active }) {
             </li>
             <li>
                 <MenuItem href="/sommerjobb" active={active} id="sommerjobb">
-                    Sommerjobben 2026 ☀️
+                    Sommerjobben {new Date().getFullYear()} ☀️
                 </MenuItem>
             </li>
             <li className="arb-header-divider">
