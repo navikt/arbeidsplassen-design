@@ -1,15 +1,31 @@
 .arb-logo-bg {
-    fill: var(--arb-logo-bg);
+    fill: var(--arb-success-300);
 }
 
 .arb-logo-letters {
-    fill: var(--arb-logo-letters);
+    fill: var(--arb-success-900);
+}
+
+.dark .arb-logo-bg {
+    fill: var(--arb-success-900);
+}
+
+.dark .arb-logo-letters {
+    fill: var(--arb-success-300);
 }
 
 .arb-logo-inverted-bg {
-    fill: var(--arb-logo-inverted-bg);
+    fill: var(--arb-success-900);
 }
 
 .arb-logo-inverted-letters {
-    fill: var(--arb-logo-inverted-letters);
+    fill: var(--arb-success-300);
+}
+
+.dark .arb-logo-inverted-bg {
+    fill: var(--arb-success-300);
+}
+
+.dark .arb-logo-inverted-letters {
+    fill: var(--arb-success-900);
 }

@@ -1,9 +1,11 @@
 .arb-skip-link {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 8px;
+    left: 8px;
     display: block;
     clip: rect(1px, 1px, 1px, 1px);
+    background: var(--ax-bg-accent-strong);
+    color: var(--ax-text-contrast);
 }
 
 .arb-skip-link:focus,
@@ -11,8 +13,7 @@
     text-align: center;
     margin: auto;
     clip: auto;
-    outline: none;
-    padding: var(--a-spacing-6);
+    padding: var(--ax-space-24);
     z-index: 999;
     text-decoration: underline;
 }
