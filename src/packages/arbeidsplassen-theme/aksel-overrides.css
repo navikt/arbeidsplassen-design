@@ -38,10 +38,6 @@
     border-bottom-right-radius: 0 !important;
 }
 
-.light .aksel-chips__removable {
-    background: var(--arb-brand-green-800);
-}
-
 /******************************************************
  * Tag overrides
  ******************************************************/
