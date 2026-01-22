@@ -118,11 +118,11 @@ export default function CookieBannerB({
     };
 
     return (
-        <Box.New
+        <Box
             as="section"
             aria-labelledby={titleId}
             id={sectionId}
-            padding={{ xs: "6", md: "8" }}
+            padding={{ xs: "space-6", md: "space-8" }}
             className="cookie-banner"
         >
             <div className="container-large">
@@ -140,7 +140,7 @@ export default function CookieBannerB({
                     </Link>
                 </BodyLong>
 
-                <Stack gap="2" direction={{ xs: "column", sm: "row" }}>
+                <Stack gap="space-2" direction={{ xs: "column", sm: "row" }}>
                     <Button type="button" variant="secondary-neutral" onClick={handleNecessaryOnlyClick}>
                         Kun nødvendige
                     </Button>
@@ -149,6 +149,6 @@ export default function CookieBannerB({
                     </Button>
                 </Stack>
             </div>
-        </Box.New>
+        </Box>
     );
 }
