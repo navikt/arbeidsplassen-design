@@ -129,11 +129,11 @@ function CookieBannerA({
                     Vi bruker cookies
                 </Heading>
 
-                <BodyShort spacing>
+                <BodyLong spacing>
                     Vi bruker nødvendige cookies for at siden skal fungere. Godtar du alle, kan vi bruke anonymisert
                     statistikk til å forbedre jobbsøket.
                     <strong> Uansett valg deler vi aldri dine data med andre.</strong>
-                </BodyShort>
+                </BodyLong>
 
                 <BodyLong spacing>
                     <Link href={cookieInfoHref} data-color="neutral" inlineText>
