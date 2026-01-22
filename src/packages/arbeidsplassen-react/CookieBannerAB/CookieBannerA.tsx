@@ -121,7 +121,7 @@ function CookieBannerA({
             as="section"
             aria-labelledby={titleId}
             id={sectionId}
-            padding={{ xs: "space-6", md: "space-8" }}
+            padding={{ xs: "space-24", md: "space-32" }}
             className="cookie-banner"
         >
             <div className="container-large">
@@ -136,12 +136,12 @@ function CookieBannerA({
                 </BodyShort>
 
                 <BodyLong spacing>
-                    <Link href={cookieInfoHref} variant="neutral" inlineText>
+                    <Link href={cookieInfoHref} data-color="neutral" inlineText>
                         Mer om informasjonskapsler på arbeidsplassen.no
                     </Link>
                 </BodyLong>
 
-                <Stack gap="space-2" direction={{ xs: "column", sm: "row" }}>
+                <Stack gap="space-8" direction={{ xs: "column", sm: "row" }}>
                     <Button
                         type="button"
                         variant="secondary-neutral"

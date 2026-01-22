@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import ArbeidsplassenLogo from "../../Logo/ArbeidsplassenLogo";
 import ArbeidsplassenLogoSmall from "../../Logo/ArbeidsplassenLogoSmall";
 import UngLogo from "./UngLogo.js";
+import { Link } from "@navikt/ds-react";
 
 function Logo({ active }) {
     return (
-        <a href="/" className="arb-header-logo">
+        <Link href="/" className="arb-header-logo">
             <span className="arb-header-logo-flex">
                 <ArbeidsplassenLogo
                     width="216"
@@ -22,7 +23,7 @@ function Logo({ active }) {
                 />
                 {active === "ung" && <UngLogo />}
             </span>
-        </a>
+        </Link>
     );
 }
 

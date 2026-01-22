@@ -122,7 +122,7 @@ export default function CookieBannerB({
             as="section"
             aria-labelledby={titleId}
             id={sectionId}
-            padding={{ xs: "space-6", md: "space-8" }}
+            padding={{ xs: "space-24", md: "space-32" }}
             className="cookie-banner"
         >
             <div className="container-large">
@@ -135,12 +135,12 @@ export default function CookieBannerB({
                     <strong>Uansett valg deler vi aldri dine data med andre.</strong> Du kan endre valget senere.
                 </BodyLong>
                 <BodyLong spacing={true}>
-                    <Link href={cookieInfoHref} variant="neutral" inlineText>
+                    <Link href={cookieInfoHref} data-color="neutral" inlineText>
                         Mer om informasjonskapsler på arbeidsplassen.no
                     </Link>
                 </BodyLong>
 
-                <Stack gap="space-2" direction={{ xs: "column", sm: "row" }}>
+                <Stack gap="space-8" direction={{ xs: "column", sm: "row" }}>
                     <Button type="button" variant="secondary-neutral" onClick={handleNecessaryOnlyClick}>
                         Kun nødvendige
                     </Button>

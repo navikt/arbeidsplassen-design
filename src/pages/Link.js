@@ -10,7 +10,7 @@ const LinkExample = () => {
             <BodyLong spacing>
                 Officia incididunt Culpa sit aute est duis minim in in voluptate velit Incididunt laborum nisi nisi
                 Lorem vofficia sit aute est duis minim adipisicing non veniam culpa sit aute est duis{" "}
-                <Link variant={variant} inlineText href="/">
+                <Link data-color={variant} inlineText href="/">
                     dette er en ganske lang lenke som brekker til flere linjer ved behov
                 </Link>{" "}
                 minim in in voluptate velit Incididunt laborum nisi nisi Lorem officia adipisicing non veniam occaecat
@@ -18,7 +18,7 @@ const LinkExample = () => {
             </BodyLong>
 
             <BodyLong>
-                <Link href="#" variant={variant}>
+                <Link href="#" data-color={variant}>
                     Vaffeloppskrift
                 </Link>
             </BodyLong>

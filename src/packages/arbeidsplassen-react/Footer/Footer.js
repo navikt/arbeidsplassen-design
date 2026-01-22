@@ -33,32 +33,34 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                         </Heading>
                         <ul aria-label="Nyttige lenker">
                             <li>
-                                <Link href="/kontakt" variant="neutral">
+                                <Link href="/kontakt" data-color="neutral">
                                     Kontakt oss
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/personvern" variant="neutral">
+                                <Link href="/personvern" data-color="neutral">
                                     Personvern
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/informasjonskapsler" variant="neutral">
+                                <Link href="/informasjonskapsler" data-color="neutral">
                                     Informasjonskapsler
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/tilgjengelighet" variant="neutral">
+                                <Link href="/tilgjengelighet" data-color="neutral">
                                     Tilgjengelighet
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/om-arbeidsplassen" variant="neutral">
+                                <Link href="/om-arbeidsplassen" data-color="neutral">
                                     Om <span translate="no">arbeidsplassen.no</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/nettstedkart">Nettstedkart</Link>
+                                <Link href="/nettstedkart" data-color="neutral">
+                                    Nettstedkart
+                                </Link>
                             </li>
                         </ul>
                     </section>
@@ -69,22 +71,22 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                         </Heading>
                         <ul aria-label="Nyttige lenker for jobbsøkere">
                             <li>
-                                <Link href="/nyttige-artikler-for-jobbsokere" variant="neutral">
+                                <Link href="/nyttige-artikler-for-jobbsokere" data-color="neutral">
                                     Nyttige artikler for jobbsøkere
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/sporsmal-og-svar" variant="neutral">
+                                <Link href="/sporsmal-og-svar" data-color="neutral">
                                     Spørsmål og svar
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/jobbe-i-utlandet" variant="neutral">
+                                <Link href="/jobbe-i-utlandet" data-color="neutral">
                                     Jobbe i utlandet (EURES)
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/en/work-in-norway" lang="en" variant="neutral">
+                                <Link href="/en/work-in-norway" lang="en" data-color="neutral">
                                     Information to refugees from Ukraine
                                 </Link>
                             </li>
@@ -97,22 +99,22 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                         </Heading>
                         <ul aria-label="Nyttige lenker for bedrifter">
                             <li>
-                                <Link href="/vilkar-og-retningslinjer" variant="neutral">
+                                <Link href="/vilkar-og-retningslinjer" data-color="neutral">
                                     Vilkår og retningslinjer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/arbeidsgivertjenester" variant="neutral">
+                                <Link href="/arbeidsgivertjenester" data-color="neutral">
                                     Hjelp til innlogging
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/overforing-av-stillingsannonser" variant="neutral">
+                                <Link href="/overforing-av-stillingsannonser" data-color="neutral">
                                     Overføre annonser med API
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/nyttige-artikler-for-bedrifter" variant="neutral">
+                                <Link href="/nyttige-artikler-for-bedrifter" data-color="neutral">
                                     Nyttige artikler for bedrifter
                                 </Link>
                             </li>
@@ -120,7 +122,7 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                     </section>
                 </nav>
                 <div className="arb-footer-bottom">
-                    <Link href="/" className="arb-footer-logo" variant="neutral">
+                    <Link href="/" className="arb-footer-logo" data-color="neutral">
                         <ArbeidsplassenLogoSmall inverted height="40" width="40" title="Arbeidsplassen logo" />
                     </Link>
                     <BodyShort>

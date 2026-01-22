@@ -74,11 +74,6 @@
     align-items: flex-end;
 }
 
-.arb-header-logo:focus-visible {
-    box-shadow: var(--a-shadow-focus);
-    outline: none;
-}
-
 .arb-header-logo-mobile {
     display: block;
     width: 48px;
@@ -196,16 +191,6 @@
 .arb-header-menu-link:active .arb-header-menu-item-inner {
     color: var(--ax-text-accent-contrast);
     background: var(--ax-bg-accent-strong-pressed);
-}
-
-.arb-header-menu-link-active:focus .arb-header-menu-item-inner,
-.arb-header-menu-link:focus .arb-header-menu-item-inner {
-    box-shadow: none;
-}
-
-.arb-header-menu-link:focus {
-    box-shadow: var(--a-shadow-focus);
-    outline: none;
 }
 
 @media (min-width: 1344px) {
