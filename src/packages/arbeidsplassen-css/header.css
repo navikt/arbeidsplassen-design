@@ -176,7 +176,7 @@
 
 .arb-header-menu-link-active .arb-header-menu-item-inner {
     font-weight: 600;
-    box-shadow: 0 4px 0 0 var(--arb-success-500);
+    box-shadow: 0 4px 0 0 var(--arb-brand-green-500);
 }
 
 .arb-header-menu-link:hover .arb-header-menu-item-inner {

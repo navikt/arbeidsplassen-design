@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
     return (
         <Theme theme={darkMode ? "dark" : "light"}>
             <Component {...pageProps} />
-            <Box position="fixed" bottom="2" left="2">
+            <Box>
                 <Switch checked={darkMode} onChange={(e) => setDarkMode(e.target.checked)}>
                     Dark mode
                 </Switch>

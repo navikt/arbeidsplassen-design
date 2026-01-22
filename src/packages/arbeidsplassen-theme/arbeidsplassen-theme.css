@@ -1,71 +1,33 @@
 :root {
     --ax-font-family: "Inter", sans-serif;
-    --ax-text-neutral: var(--arb-success-900);
+    --ax-text-neutral: var(--arb-brand-green-900);
 }
 
 /******************************************************
 * Arbeidsplassen colors
 ******************************************************/
 :root {
-    --arb-neutral-000: #ffffff;
-    --arb-neutral-100: #f8f8f8;
-    --arb-neutral-200: #ebebeb;
-    --arb-neutral-300: #dddddd;
-    --arb-neutral-400: #c3c3c3;
-    --arb-neutral-500: #a8a8a8;
-    --arb-neutral-600: #8d8d8d;
-    --arb-neutral-700: #808080;
-    --arb-neutral-800: #575757;
-    --arb-neutral-900: #4a4a4a;
-    --arb-neutral-1000: #404040;
-    --arb-neutral-100A: rgba(0, 0, 0, 0.03);
-    --arb-neutral-200A: rgba(0, 0, 0, 0.05);
-    --arb-neutral-300A: rgba(0, 0, 0, 0.1);
-    --arb-neutral-400A: rgba(0, 0, 0, 0.19);
+    --arb-brand-blue-100: #e3e6f7;
+    --arb-brand-blue-200: #c6cdf5;
+    --arb-brand-blue-300: #90a1ee;
+    --arb-brand-blue-400: #647be8;
+    --arb-brand-blue-500: #3856e1;
+    --arb-brand-blue-600: #1e3cc7;
+    --arb-brand-blue-700: #1a34af;
+    --arb-brand-blue-800: #172d98;
+    --arb-brand-blue-900: #252a76;
+    --arb-brand-blue-1000: #0c1852;
 
-    --arb-accent-100: #e3e6f7;
-    --arb-accent-200: #c6cdf5;
-    --arb-accent-300: #90a1ee;
-    --arb-accent-400: #647be8;
-    --arb-accent-500: #3856e1;
-    --arb-accent-600: #1e3cc7;
-    --arb-accent-700: #1a34af;
-    --arb-accent-800: #172d98;
-    --arb-accent-900: #252a76;
-    --arb-accent-1000: #0c1852;
-
-    --arb-success-100: #effcf3;
-    --arb-success-200: #dff8ec;
-    --arb-success-300: #c1f3db;
-    --arb-success-400: #8fcfbd;
-    --arb-success-500: #60c7ae;
-    --arb-success-600: #03b0a4;
-    --arb-success-700: #028088;
-    --arb-success-800: #024b62;
-    --arb-success-900: #003141;
-    --arb-success-1000: #081d27;
-
-    --arb-warning-100: #fff4de;
-    --arb-warning-200: #ffe8ba;
-    --arb-warning-300: #fcd483;
-    --arb-warning-400: #f6c459;
-    --arb-warning-500: #f7b839;
-    --arb-warning-600: #eda215;
-    --arb-warning-700: #cf8308;
-    --arb-warning-800: #945b00;
-    --arb-warning-900: #664106;
-    --arb-warning-1000: #452d05;
-
-    --arb-danger-100: #ffdfde;
-    --arb-danger-200: #f7b7b5;
-    --arb-danger-300: #e88987;
-    --arb-danger-400: #d9625d;
-    --arb-danger-500: #cf4942;
-    --arb-danger-600: #b7342c;
-    --arb-danger-700: #9e2821;
-    --arb-danger-800: #7a1c17;
-    --arb-danger-900: #571511;
-    --arb-danger-1000: #3d0906;
+    --arb-brand-green-100: #effcf3;
+    --arb-brand-green-200: #dff8ec;
+    --arb-brand-green-300: #c1f3db;
+    --arb-brand-green-400: #8fcfbd;
+    --arb-brand-green-500: #60c7ae;
+    --arb-brand-green-600: #03b0a4;
+    --arb-brand-green-700: #028088;
+    --arb-brand-green-800: #024b62;
+    --arb-brand-green-900: #003141;
+    --arb-brand-green-1000: #081d27;
 
     --arb-brand-peach-100: #fff1e8;
     --arb-brand-peach-200: #ffeadd;
@@ -73,6 +35,7 @@
     --arb-brand-peach-400: #ffaf96;
     --arb-brand-peach-500: #cd6148;
 
+    --arb-brand-pink-400: #f7eeff;
+
     --arb-dark-mode-shade-200: #172b34; /* todo */
-    --arb-dark-mode-shade-1000: #dfe4e5; /* todo */
 }

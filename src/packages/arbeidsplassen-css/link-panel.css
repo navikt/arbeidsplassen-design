@@ -1,9 +1,9 @@
 .light .arb-link-panel-primary {
-    background-color: var(--arb-accent-100);
+    background-color: var(--arb-brand-blue-100);
 }
 
 .light .arb-link-panel-secondary {
-    background-color: var(--arb-success-300);
+    background-color: var(--arb-brand-green-300);
 }
 
 .light .arb-link-panel-tertiary {
@@ -11,11 +11,11 @@
 }
 
 .dark .arb-link-panel-primary .aksel-link-card__title {
-    color: var(--arb-accent-200);
+    color: var(--arb-brand-blue-200);
 }
 
 .dark .arb-link-panel-secondary .aksel-link-card__title {
-    color: var(--arb-success-300);
+    color: var(--arb-brand-green-300);
 }
 
 .dark .arb-link-panel-tertiary .aksel-link-card__title {
