@@ -102,17 +102,17 @@ function CookieBanner({
         <Box
             as="section"
             aria-labelledby="arb-cookie-banner-title"
-            padding={{ xs: "6 0", md: "8 0" }}
-            background="surface-alt-2-subtle"
+            padding={{ xs: "space-24", md: "space-32" }}
             id="arb-cookie-banner-section"
+            className="cookie-banner"
         >
             <div className="container-large">
                 <Heading level={headingLevel} size="large" spacing id="arb-cookie-banner-title">
                     Informasjonskapsler på arbeidsplassen.no
                 </Heading>
-                <BodyLong>
+                <BodyLong className="mb-2">
                     Uansett valg deler vi aldri dine data med andre.{" "}
-                    <Link href="/informasjonskapsler" variant="neutral" inlineText>
+                    <Link href="/informasjonskapsler" data-color="neutral" inlineText>
                         Mer om informasjonskapsler på arbeidsplassen.no
                     </Link>
                 </BodyLong>
@@ -128,7 +128,7 @@ function CookieBanner({
                     </ListItem>
                 </List>
 
-                <Stack gap="2" direction={{ xs: "column", sm: "row" }}>
+                <Stack gap="space-8" direction={{ xs: "column", sm: "row" }}>
                     <Button type="button" variant="secondary-neutral" onClick={handleAcceptAllClick}>
                         Godta alle
                     </Button>

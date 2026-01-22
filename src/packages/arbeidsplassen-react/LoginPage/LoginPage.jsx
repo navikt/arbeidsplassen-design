@@ -1,12 +1,12 @@
 import React from "react";
 import FigureWithKey from "../illustrations/FigureWithKey";
-import { BodyLong, Button, Heading } from "@navikt/ds-react";
+import { BodyLong, Button, Heading, VStack } from "@navikt/ds-react";
 import { EnterIcon } from "@navikt/aksel-icons";
 import PropTypes from "prop-types";
 
 function LoginPage({ link, className }) {
     return (
-        <div className={className ? `arb-log-in ${className}` : "arb-log-in"}>
+        <VStack align="center" className={className}>
             <FigureWithKey className="mb-8" ariaHidden="true" />
             <Heading spacing size="large" level="1">
                 Logg inn for å fortsette
@@ -15,7 +15,7 @@ function LoginPage({ link, className }) {
             <Button as="a" role="link" variant="primary" href={link} icon={<EnterIcon aria-hidden="true" />}>
                 Logg inn
             </Button>
-        </div>
+        </VStack>
     );
 }
 

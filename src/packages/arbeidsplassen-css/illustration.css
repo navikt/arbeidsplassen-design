@@ -1,3 +1,17 @@
+.light {
+    --arb-illustration-arms-and-legs: var(--arb-success-800);
+    --arb-illustration-face: var(--arb-success-800);
+    --arb-illustration-shadow: var(--arb-accent-100);
+    --arb-illustration-items: var(--arb-success-800);
+}
+
+.dark {
+    --arb-illustration-arms-and-legs: var(--arb-success-700);
+    --arb-illustration-face: var(--arb-success-800);
+    --arb-illustration-shadow: rgba(255, 255, 255, 0.06);
+    --arb-illustration-items: var(--arb-success-700);
+}
+
 .arb-illustration-arms-and-legs-stroke {
     stroke: var(--arb-illustration-arms-and-legs);
 }

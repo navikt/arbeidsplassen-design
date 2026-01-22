@@ -20,7 +20,7 @@ const GlobalAlertExample = () => {
             </GlobalAlert>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="status" value={status} onChange={setStatus}>
                         {["announcement", "success", "warning", "error"].map((option) => (
                             <Radio value={option}>{option}</Radio>

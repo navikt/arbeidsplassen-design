@@ -1,0 +1,7 @@
+.light .cookie-banner {
+    background: var(--arb-accent-100);
+}
+
+.dark .cookie-banner {
+    background: var(--arb-dark-mode-shade-200);
+}

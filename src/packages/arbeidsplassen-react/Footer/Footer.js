@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import { Link, Heading } from "@navikt/ds-react";
+import { Link, Heading, BodyShort } from "@navikt/ds-react";
 import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
 import { PageBlock } from "@navikt/ds-react/Page";
 
@@ -33,24 +33,34 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                         </Heading>
                         <ul aria-label="Nyttige lenker">
                             <li>
-                                <Link href="/kontakt">Kontakt oss</Link>
+                                <Link href="/kontakt" data-color="neutral">
+                                    Kontakt oss
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/personvern">Personvern</Link>
+                                <Link href="/personvern" data-color="neutral">
+                                    Personvern
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/informasjonskapsler">Informasjonskapsler</Link>
+                                <Link href="/informasjonskapsler" data-color="neutral">
+                                    Informasjonskapsler
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/tilgjengelighet">Tilgjengelighet</Link>
+                                <Link href="/tilgjengelighet" data-color="neutral">
+                                    Tilgjengelighet
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/om-arbeidsplassen">
+                                <Link href="/om-arbeidsplassen" data-color="neutral">
                                     Om <span translate="no">arbeidsplassen.no</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/nettstedkart">Nettstedkart</Link>
+                                <Link href="/nettstedkart" data-color="neutral">
+                                    Nettstedkart
+                                </Link>
                             </li>
                         </ul>
                     </section>
@@ -61,16 +71,22 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                         </Heading>
                         <ul aria-label="Nyttige lenker for jobbsøkere">
                             <li>
-                                <Link href="/nyttige-artikler-for-jobbsokere">Nyttige artikler for jobbsøkere</Link>
+                                <Link href="/nyttige-artikler-for-jobbsokere" data-color="neutral">
+                                    Nyttige artikler for jobbsøkere
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/sporsmal-og-svar">Spørsmål og svar</Link>
+                                <Link href="/sporsmal-og-svar" data-color="neutral">
+                                    Spørsmål og svar
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/jobbe-i-utlandet">Jobbe i utlandet (EURES)</Link>
+                                <Link href="/jobbe-i-utlandet" data-color="neutral">
+                                    Jobbe i utlandet (EURES)
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/en/work-in-norway" lang="en">
+                                <Link href="/en/work-in-norway" lang="en" data-color="neutral">
                                     Information to refugees from Ukraine
                                 </Link>
                             </li>
@@ -83,27 +99,35 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                         </Heading>
                         <ul aria-label="Nyttige lenker for bedrifter">
                             <li>
-                                <Link href="/vilkar-og-retningslinjer">Vilkår og retningslinjer</Link>
+                                <Link href="/vilkar-og-retningslinjer" data-color="neutral">
+                                    Vilkår og retningslinjer
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/arbeidsgivertjenester">Hjelp til innlogging</Link>
+                                <Link href="/arbeidsgivertjenester" data-color="neutral">
+                                    Hjelp til innlogging
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/overforing-av-stillingsannonser">Overføre annonser med API</Link>
+                                <Link href="/overforing-av-stillingsannonser" data-color="neutral">
+                                    Overføre annonser med API
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/nyttige-artikler-for-bedrifter">Nyttige artikler for bedrifter</Link>
+                                <Link href="/nyttige-artikler-for-bedrifter" data-color="neutral">
+                                    Nyttige artikler for bedrifter
+                                </Link>
                             </li>
                         </ul>
                     </section>
                 </nav>
                 <div className="arb-footer-bottom">
-                    <a href="/" className="arb-footer-logo">
+                    <Link href="/" className="arb-footer-logo" data-color="neutral">
                         <ArbeidsplassenLogoSmall inverted height="40" width="40" title="Arbeidsplassen logo" />
-                    </a>
-                    <p className="arb-footer-p">
+                    </Link>
+                    <BodyShort>
                         <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
-                    </p>
+                    </BodyShort>
                 </div>
             </PageBlock>
         </footer>

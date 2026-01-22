@@ -11,15 +11,15 @@ const CopyButtonExample = () => {
             <Heading size="medium" level="2" spacing>
                 Bare ikon
             </Heading>
-            <CopyButton variant={variant} copyText="3.14" className="mb-8" />
+            <CopyButton data-color={variant} copyText="3.14" className="mb-8" />
 
             <Heading size="medium" level="2" spacing>
                 Med tekst
             </Heading>
-            <CopyButton copyText="3.14" variant={variant} text="Kopier" className="mb-8" />
+            <CopyButton copyText="3.14" data-color={variant} text="Kopier" className="mb-8" />
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {["neutral", "action"].map((option) => (
                             <Radio value={option}>{option}</Radio>

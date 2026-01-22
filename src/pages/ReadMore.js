@@ -14,7 +14,7 @@ const ReadMoreExample = () => {
             </ReadMore>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="size" value={size} onChange={setSize}>
                         {["large", "medium", "small"].map((option) => (
                             <Radio value={option}>{option}</Radio>

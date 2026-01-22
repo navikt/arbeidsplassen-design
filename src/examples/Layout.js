@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { BodyLong, Heading, HGrid, Link as AkselLink } from "@navikt/ds-react";
+import { BodyLong, Heading, HGrid, Link as AkselLink, Page } from "@navikt/ds-react";
 import { CookieBanner, CookieBannerA, CookieBannerB, Header, SkipLink } from "@navikt/arbeidsplassen-react";
 import Footer from "@/packages/arbeidsplassen-react/Footer/Footer";
-import { PageBlock } from "@navikt/ds-react/Page";
 
 const arbeidsplassenComponents = [
     "ComboboxExternalItems",
@@ -73,82 +72,77 @@ export default function Layout({
         ...headerArgs,
     };
     return (
-        <>
-            <div className="arb-push-footer-down">
-                {cookieBannerArgs && <CookieBanner headingLevel="2" onClose={cookieBannerArgs.onClose} />}
-                {cookieBannerAArgs && <CookieBannerA headingLevel="2" onClose={cookieBannerAArgs.onClose} />}
-                {cookieBannerBArgs && <CookieBannerB headingLevel="2" onClose={cookieBannerBArgs.onClose} />}
-                <SkipLink />
-                <PageBlock width="2xl" gutters>
-                    <Header
-                        variant={headerArgs.variant}
-                        authenticationStatus={headerArgs.authenticationStatus}
-                        active={headerArgs.active}
-                        onLogin={headerArgs.onLogin}
-                        onLogout={headerArgs.onLogout}
-                    />
-                </PageBlock>
+        <Page footer={<Footer />}>
+            {cookieBannerArgs && <CookieBanner headingLevel="2" onClose={cookieBannerArgs.onClose} />}
+            {cookieBannerAArgs && <CookieBannerA headingLevel="2" onClose={cookieBannerAArgs.onClose} />}
+            {cookieBannerBArgs && <CookieBannerB headingLevel="2" onClose={cookieBannerBArgs.onClose} />}
+            <SkipLink />
+            <Page.Block width="2xl" gutters>
+                <Header
+                    variant={headerArgs.variant}
+                    authenticationStatus={headerArgs.authenticationStatus}
+                    active={headerArgs.active}
+                    onLogin={headerArgs.onLogin}
+                    onLogout={headerArgs.onLogout}
+                />
+            </Page.Block>
+            <Page.Block width="2xl" gutters as="main" id="main" className="mt-8 mb-24">
+                <HGrid columns={{ md: "auto auto", lg: "350px auto" }}>
+                    <div>
+                        <Heading size="xsmall" level="3" spacing>
+                            Arbeidsplassen components
+                        </Heading>
+                        <ul>
+                            {arbeidsplassenComponents.map((it) => (
+                                <li key={it}>
+                                    <BodyLong>
+                                        <AkselLink as={Link} href={`/${it}`}>
+                                            {it}
+                                        </AkselLink>
+                                    </BodyLong>
+                                </li>
+                            ))}
+                        </ul>
 
-                <main id="main" className="container-large mt-8 mb-24">
-                    <HGrid columns={{ md: "auto auto", lg: "350px auto" }}>
-                        <div>
-                            <Heading size="xsmall" level="3" spacing>
-                                Arbeidsplassen components
-                            </Heading>
-                            <ul>
-                                {arbeidsplassenComponents.map((it) => (
-                                    <li key={it}>
-                                        <BodyLong>
-                                            <AkselLink as={Link} href={`/${it}`}>
-                                                {it}
-                                            </AkselLink>
-                                        </BodyLong>
-                                    </li>
-                                ))}
-                            </ul>
+                        <Heading size="xsmall" level="3" spacing>
+                            Aksel components
+                        </Heading>
+                        <ul>
+                            {akselComponents.map((it) => (
+                                <li key={it}>
+                                    <BodyLong>
+                                        <AkselLink as={Link} href={`/${it}`}>
+                                            {it}
+                                        </AkselLink>
+                                    </BodyLong>
+                                </li>
+                            ))}
+                        </ul>
 
-                            <Heading size="xsmall" level="3" spacing>
-                                Aksel components
-                            </Heading>
-                            <ul>
-                                {akselComponents.map((it) => (
-                                    <li key={it}>
-                                        <BodyLong>
-                                            <AkselLink as={Link} href={`/${it}`}>
-                                                {it}
-                                            </AkselLink>
-                                        </BodyLong>
-                                    </li>
-                                ))}
-                            </ul>
+                        <Heading size="xsmall" level="3" spacing>
+                            Avviklet
+                        </Heading>
+                        <ul>
+                            {deprecatedAkselComponents.map((it) => (
+                                <li key={it}>
+                                    <BodyLong>
+                                        <AkselLink as={Link} href={`/${it}`}>
+                                            {it}
+                                        </AkselLink>
+                                    </BodyLong>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                            <Heading size="xsmall" level="3" spacing>
-                                Avviklet
-                            </Heading>
-                            <ul>
-                                {deprecatedAkselComponents.map((it) => (
-                                    <li key={it}>
-                                        <BodyLong>
-                                            <AkselLink as={Link} href={`/${it}`}>
-                                                {it}
-                                            </AkselLink>
-                                        </BodyLong>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div>
-                            <Heading size="xlarge" level="1" spacing>
-                                {title}
-                            </Heading>
-                            {children}
-                        </div>
-                    </HGrid>
-                </main>
-            </div>
-
-            <Footer />
-        </>
+                    <div>
+                        <Heading size="xlarge" level="1" spacing>
+                            {title}
+                        </Heading>
+                        {children}
+                    </div>
+                </HGrid>
+            </Page.Block>
+        </Page>
     );
 }

@@ -23,7 +23,7 @@ const ChipsExample = () => {
                 <Chips size={size}>
                     {options.map((c) => (
                         <Chips.Toggle
-                            variant={variant}
+                            data-color={variant}
                             checkmark={checkmark}
                             selected={selected.includes(c)}
                             key={c}
@@ -43,7 +43,7 @@ const ChipsExample = () => {
                 <Chips size={size}>
                     {filter.map((c) => (
                         <Chips.Removable
-                            variant={variant}
+                            data-color={variant}
                             key={c}
                             onClick={() => setFilter((x) => (x.length === 1 ? options : x.filter((y) => y !== c)))}
                         >
@@ -54,7 +54,7 @@ const ChipsExample = () => {
             </div>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {["action", "neutral"].map((option) => (
                             <Radio value={option}>{option}</Radio>

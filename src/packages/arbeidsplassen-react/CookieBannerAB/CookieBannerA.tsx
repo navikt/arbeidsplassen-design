@@ -121,27 +121,27 @@ function CookieBannerA({
             as="section"
             aria-labelledby={titleId}
             id={sectionId}
-            padding={{ xs: "6", md: "8" }}
-            background="surface-alt-2-subtle"
+            padding={{ xs: "space-24", md: "space-32" }}
+            className="cookie-banner"
         >
             <div className="container-large">
                 <Heading level={headingLevel} size="large" spacing id={titleId}>
                     Vi bruker cookies
                 </Heading>
 
-                <BodyShort spacing>
+                <BodyLong spacing>
                     Vi bruker nødvendige cookies for at siden skal fungere. Godtar du alle, kan vi bruke anonymisert
                     statistikk til å forbedre jobbsøket.
                     <strong> Uansett valg deler vi aldri dine data med andre.</strong>
-                </BodyShort>
+                </BodyLong>
 
                 <BodyLong spacing>
-                    <Link href={cookieInfoHref} variant="neutral" inlineText>
+                    <Link href={cookieInfoHref} data-color="neutral" inlineText>
                         Mer om informasjonskapsler på arbeidsplassen.no
                     </Link>
                 </BodyLong>
 
-                <Stack gap="2" direction={{ xs: "column", sm: "row" }}>
+                <Stack gap="space-8" direction={{ xs: "column", sm: "row" }}>
                     <Button
                         type="button"
                         variant="secondary-neutral"

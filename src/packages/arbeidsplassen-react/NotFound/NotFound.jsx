@@ -1,23 +1,23 @@
 import React from "react";
 import ConfusedGrape from "../illustrations/ConfusedFigure";
-import { BodyLong, Heading } from "@navikt/ds-react";
+import { BodyLong, Heading, VStack } from "@navikt/ds-react";
 import PropTypes from "prop-types";
 
 function NotFound({ title, text, className }) {
     return (
-        <div className={className ? `arb-not-found ${className}` : "arb-not-found"}>
+        <VStack align="center" className={className}>
             <ConfusedGrape className="mb-8" ariaHidden="true" />
-            <Heading spacing size="large" level="1" className="arb-not-found-title">
+            <Heading spacing size="large" align="center" level="1">
                 {title ? title : "Fant ikke siden"}
             </Heading>
             {text ? (
-                <BodyLong className="arb-not-found-description">{text}</BodyLong>
+                <BodyLong align="center">{text}</BodyLong>
             ) : (
-                <BodyLong className="arb-not-found-description">
+                <BodyLong align="center">
                     Nettsiden kan være slettet eller flyttet, eller det var en feil i lenken som førte deg hit.
                 </BodyLong>
             )}
-        </div>
+        </VStack>
     );
 }
 

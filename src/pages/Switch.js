@@ -15,7 +15,7 @@ const SwitchExample = () => {
             </Switch>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="loading" value={loading} onChange={setLoading}>
                         <Radio value={false}>false</Radio>
                         <Radio value={true}>true</Radio>

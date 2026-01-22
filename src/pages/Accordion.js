@@ -25,7 +25,7 @@ const AccordionExample = () => {
             </Accordion>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="size" value={size} onChange={setSize}>
                         {["small", "medium", "large"].map((option) => (
                             <Radio value={option}>{option}</Radio>

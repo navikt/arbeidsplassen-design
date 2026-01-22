@@ -1,0 +1,63 @@
+/******************************************************
+ * Button overrides
+ ******************************************************/
+.aksel-button:not(
+    .aksel-button--icon-only,
+    .aksel-search__button-search,
+    .aksel-date__field-button,
+    .aksel-pagination__item,
+    .arb-feedback-button
+) {
+    border-radius: var(--ax-radius-full) !important;
+    padding: 0.75rem 1.5rem !important;
+}
+
+.aksel-button--small:not(
+    .aksel-button--icon-only,
+    .aksel-search__button-search,
+    .aksel-date__field-button,
+    .aksel-pagination__item
+) {
+    padding: 0.5rem 1rem !important;
+}
+
+.aksel-button--xsmall:not(
+    .aksel-button--icon-only,
+    .aksel-search__button-search,
+    .aksel-date__field-button,
+    .aksel-pagination__item
+) {
+    padding: 0.375rem 1rem !important;
+}
+
+/******************************************************
+ * Chips overrides
+ ******************************************************/
+.aksel-chips__chip {
+    font-weight: 600 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.light .aksel-chips__removable {
+    background: var(--arb-success-800);
+}
+
+/******************************************************
+ * Tag overrides
+ ******************************************************/
+.aksel-tag {
+    font-weight: 600 !important;
+    border-radius: var(--ax-radius-full) !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.aksel-tag--medium {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+.aksel-tag--small,
+.aksel-tag--xsmall {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}

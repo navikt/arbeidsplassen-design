@@ -17,7 +17,7 @@ import {
 const IllustrationsExample = () => {
     return (
         <Layout title="Illustrations">
-            <HStack gap="20" align="end">
+            <HStack gap="space-20" align="end">
                 <CelebratingFigure />
                 <ConfusedFigure />
                 <FiguresGivingHighFive />
