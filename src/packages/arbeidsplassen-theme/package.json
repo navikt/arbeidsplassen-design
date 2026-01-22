@@ -1,6 +1,6 @@
 {
     "name": "@navikt/arbeidsplassen-theme",
-    "version": "6.1.1",
+    "version": "10.0.0",
     "main": "index.css",
     "private": false,
     "scripts": {
