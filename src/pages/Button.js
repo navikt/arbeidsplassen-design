@@ -16,7 +16,7 @@ const ButtonExample = () => {
             </Button>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {[
                             "primary",

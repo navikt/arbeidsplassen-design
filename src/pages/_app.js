@@ -1,4 +1,4 @@
-import "@navikt/ds-css/darkside";
+import "@navikt/ds-css";
 import "../packages/arbeidsplassen-css/index.css";
 import "../packages/arbeidsplassen-theme/index.css";
 import { Box, Switch, Theme } from "@navikt/ds-react";

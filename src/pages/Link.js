@@ -24,7 +24,7 @@ const LinkExample = () => {
             </BodyLong>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {["action", "neutral", "subtle"].map((option) => (
                             <Radio value={option}>{option}</Radio>

@@ -12,7 +12,7 @@ const SearchExample = () => {
             <Search label="Søk etter ledige stillinger" variant={variant} size={size} />
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {["primary", "secondary", "simple"].map((option) => (
                             <Radio value={option}>{option}</Radio>

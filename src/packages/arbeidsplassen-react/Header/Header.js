@@ -47,7 +47,7 @@ export default function Header({
     };
 
     return (
-        <header className="container-large arb-header-wrapper" lang="no">
+        <header className="arb-header-wrapper" lang="no">
             <nav aria-label="Hovedmeny" className={joinClassNames("arb-header", className)}>
                 <div className="arb-header-top">
                     <Logo />

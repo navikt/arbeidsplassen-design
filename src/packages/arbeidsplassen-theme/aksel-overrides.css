@@ -1,14 +1,4 @@
 /******************************************************
- * Heading overrides
- ******************************************************/
-.aksel-heading--2xlarge,
-.aksel-heading--xlarge,
-.aksel-heading--large,
-.aksel-heading--medium {
-    font-weight: 700 !important;
-}
-
-/******************************************************
  * Button overrides
  ******************************************************/
 .aksel-button:not(
@@ -48,8 +38,7 @@
     border-bottom-right-radius: 0 !important;
 }
 
-.light .aksel-chips__toggle--action[aria-pressed="true"],
-.light .aksel-chips__removable--action {
+.light .aksel-chips__removable {
     background: var(--arb-success-800);
 }
 

@@ -19,7 +19,7 @@ const CopyButtonExample = () => {
             <CopyButton copyText="3.14" variant={variant} text="Kopier" className="mb-8" />
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {["neutral", "action"].map((option) => (
                             <Radio value={option}>{option}</Radio>

@@ -6,7 +6,6 @@ import PropsCard from "@/examples/PropsCard";
 
 export default function LinkCardExample() {
     const [arrowPosition, setArrowPosition] = useState("baseline");
-    const [color, setColor] = useState("primary");
     const [size, setSize] = useState("medium");
 
     return (
@@ -19,7 +18,7 @@ export default function LinkCardExample() {
             </LinkCard>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="arrowPosition" value={arrowPosition} onChange={setArrowPosition}>
                         {["baseline", "center"].map((option) => (
                             <Radio value={option}>{option}</Radio>

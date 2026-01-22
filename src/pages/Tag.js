@@ -9,7 +9,7 @@ const TagExample = () => {
 
     return (
         <Layout title="Tag">
-            <HStack gap="4" className="mb-16">
+            <HStack gap="space-4" className="mb-16">
                 {["info", "success", "warning", "error", "neutral", "alt1", "alt2", "alt3"].map((tag) => (
                     <Tag variant={variant !== "default" ? `${tag}-${variant}` : tag} size={size}>
                         {tag}
@@ -18,7 +18,7 @@ const TagExample = () => {
             </HStack>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
                         {["default", "moderate", "filled"].map((option) => (
                             <Radio value={option}>{option}</Radio>

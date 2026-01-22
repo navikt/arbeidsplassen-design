@@ -19,7 +19,7 @@ const ConfirmationPanelExample = () => {
             </ConfirmationPanel>
 
             <PropsCard>
-                <HStack gap="24">
+                <HStack gap="space-24">
                     <RadioGroup legend="error" value={error} onChange={setError}>
                         <Radio value={false}>false</Radio>
                         <Radio value={true}>true</Radio>
