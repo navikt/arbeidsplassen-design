@@ -17,7 +17,11 @@ function joinClassNames(...strings) {
  * @typedef { "company" | "person" | "all"  } Variant
  */
 /**
- * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" } Active
+ * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" | "ung" } Active
+ */
+
+/**
+ * @typedef {"nb" | "nn" | "en" | "ru" | "uk"} HeaderLang
  */
 
 /**
@@ -29,6 +33,7 @@ function joinClassNames(...strings) {
  * @property {AuthenticationStatus} [authenticationStatus]
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogin
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogout
+ * @property {HeaderLang} [lang]
  */
 
 /** @param {HeaderProps} props */
@@ -39,6 +44,7 @@ export default function Header({
     authenticationStatus = "unknown",
     onLogin,
     onLogout,
+    lang = "nb",
 }) {
     const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
 
@@ -47,10 +53,10 @@ export default function Header({
     };
 
     return (
-        <header className="arb-header-wrapper" lang="no">
+        <header className="arb-header-wrapper" lang={lang}>
             <nav aria-label="Hovedmeny" className={joinClassNames("arb-header", className)}>
                 <div className="arb-header-top">
-                    <Logo />
+                    <Logo active={active} />
 
                     <MenuButton toggleMenu={toggleMenu} isMobileMenuHidden={isMobileMenuHidden} />
 
@@ -94,5 +100,5 @@ Header.propTypes = {
     onLogout: PropTypes.func.isRequired,
     variant: PropTypes.oneOf(["person", "company"]),
     authenticationStatus: PropTypes.oneOf(["unknown", "is-authenticated", "not-authenticated"]),
-    active: PropTypes.oneOf(["ledige-stillinger", "stillingsannonser", "sommerjobb"]),
+    active: PropTypes.oneOf(["ledige-stillinger", "ung", "stillingsannonser", "sommerjobb"]),
 };

@@ -1,15 +1,31 @@
 import React, { useId } from "react";
 import { Link, Heading, BodyShort } from "@navikt/ds-react";
 import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
+import { PageBlock } from "@navikt/ds-react/Page";
 
-export default function Footer() {
+/** @typedef {import("@navikt/ds-react/Page").PageBlockProps} PageBlockProps */
+
+/**
+ * @typedef {"nb" | "nn" | "en" | "ru" | "uk"} FooterLang
+ */
+
+/**
+ * Props for Footer.
+ * @typedef {Object} HeaderProps
+ * @property {PageBlockProps["width"]} [contentWidth]
+ * @property {PageBlockProps["gutters"]} [contentGutters]
+ * @property {FooterLang} [lang]
+ */
+
+/** @param {FooterProps} props */
+export default function Footer({ contentWidth = "2xl", contentGutters = true, lang = "nb" }) {
     const aboutHeadingId = useId();
     const jobSeekerHeadingId = useId();
     const companyHeadingId = useId();
 
     return (
-        <footer className="arb-footer" lang="no">
-            <div className="container-large">
+        <footer className="arb-footer" lang={lang}>
+            <PageBlock width={contentWidth} gutters={contentGutters}>
                 <nav className="arb-footer-sections">
                     <section className="arb-footer-section" aria-labelledby={aboutHeadingId}>
                         <Heading id={aboutHeadingId} level="2" size="medium" spacing className="arb-footer-h2">
@@ -40,6 +56,9 @@ export default function Footer() {
                                 <Link href="/om-arbeidsplassen" variant="neutral">
                                     Om <span translate="no">arbeidsplassen.no</span>
                                 </Link>
+                            </li>
+                            <li>
+                                <Link href="/nettstedkart">Nettstedkart</Link>
                             </li>
                         </ul>
                     </section>
@@ -108,7 +127,7 @@ export default function Footer() {
                         <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
                     </BodyShort>
                 </div>
-            </div>
+            </PageBlock>
         </footer>
     );
 }

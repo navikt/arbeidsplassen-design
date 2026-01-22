@@ -39,6 +39,7 @@ export default function HeaderPage() {
 
                 <Select label="active" value={active} onChange={(e) => setActive(e.target.value)} className="mb-8">
                     <option value="ledige-stillinger">ledige-stillinger</option>
+                    <option value="ung">ung</option>
                     <option value="stillingsannonser">stillingsannonser</option>
                 </Select>
             </PropsCard>
