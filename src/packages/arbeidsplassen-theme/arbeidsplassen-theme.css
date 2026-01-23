@@ -1,5 +1,8 @@
 :root {
     --ax-font-family: "Inter", sans-serif;
+}
+
+.light {
     --ax-text-neutral: var(--arb-brand-green-900);
 }
 
