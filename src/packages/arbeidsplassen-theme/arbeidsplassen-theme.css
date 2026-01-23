@@ -2,10 +2,6 @@
     --ax-font-family: "Inter", sans-serif;
 }
 
-.light {
-    --ax-text-neutral: var(--arb-brand-green-900);
-}
-
 /******************************************************
 * Arbeidsplassen colors
 ******************************************************/
@@ -44,6 +40,8 @@
 }
 
 .light {
+    --ax-text-neutral: var(--arb-brand-green-900);
+
     --ax-accent-100: #F2F4FD;
     --ax-accent-200: #E9ECFC;
     --ax-accent-300: #D7DDF9;
