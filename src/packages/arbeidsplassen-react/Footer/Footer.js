@@ -125,7 +125,7 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                     <Link href="/" className="arb-footer-logo" data-color="neutral">
                         <ArbeidsplassenLogoSmall inverted height="40" width="40" title="Arbeidsplassen logo" />
                     </Link>
-                    <BodyShort>
+                    <BodyShort className="arb-footer-p">
                         <span translate="no">arbeidsplassen.no</span> – en tjeneste fra Nav
                     </BodyShort>
                 </div>
