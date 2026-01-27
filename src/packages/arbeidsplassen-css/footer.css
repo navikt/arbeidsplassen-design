@@ -76,3 +76,10 @@
     display: inline-flex;
     height: 40px;
 }
+
+
+.arb-footer-h2,
+.arb-footer-p,
+.arb-footer-section ul li a {
+    color: var(--arb-brand-green-800);
+}
