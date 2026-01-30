@@ -10,7 +10,6 @@
 
 .arb-rich-text h1:not(.aksel-heading) {
     margin: var(--ax-space-16) 0 var(--ax-space-20) 0;
-    letter-spacing: -0.03em;
     font-weight: 700;
     font-size: var(--ax-font-size-heading-2xlarge);
     line-height: var(--ax-font-line-height-heading-2xlarge);
@@ -25,7 +24,6 @@
 
 .arb-rich-text h2:not(.aksel-heading) {
     margin: var(--ax-space-28) 0 var(--ax-space-16) 0;
-    letter-spacing: -0.022em;
     font-weight: 700;
     font-size: var(--ax-font-size-heading-xlarge);
     line-height: var(--ax-font-line-height-heading-xlarge);
@@ -40,7 +38,6 @@
 
 .arb-rich-text h3:not(.aksel-heading) {
     margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
-    letter-spacing: -0.019em;
     font-weight: 700;
     font-size: var(--ax-font-size-heading-medium);
     line-height: var(--ax-font-line-height-heading-medium);
@@ -48,7 +45,6 @@
 
 .arb-rich-text h4:not(.aksel-heading) {
     margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
-    letter-spacing: -0.017em;
     font-weight: var(--ax-font-weight-bold);
     font-size: var(--ax-font-size-heading-small);
     line-height: var(--ax-font-line-height-heading-small);
@@ -56,7 +52,6 @@
 
 .arb-rich-text h5:not(.aksel-heading) {
     margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
-    letter-spacing: -0.011em;
     font-weight: var(--ax-font-weight-bold);
     font-size: var(--ax-font-size-heading-xsmall);
     line-height: var(--ax-font-line-height-heading-xsmall);
@@ -64,7 +59,6 @@
 
 .arb-rich-text h6:not(.aksel-heading) {
     margin: var(--ax-space-28) 0 var(--ax-space-12) 0;
-    letter-spacing: -0.006em;
     font-weight: var(--ax-font-weight-bold);
     font-size: 14px;
     line-height: var(--ax-font-line-height-heading-xsmall);
@@ -74,7 +68,6 @@
     margin: var(--ax-space-12) 0 var(--ax-space-20) 0;
     font-size: var(--ax-font-size-large);
     font-weight: var(--ax-font-weight-regular);
-    letter-spacing: -0.011em;
     line-height: var(--ax-font-line-height-xlarge);
 }
 
@@ -85,7 +78,7 @@
 
 .arb-rich-text ul,
 .arb-rich-text ol {
-    margin: 0 0 var(--ax-space-20) 0;
+    margin: var(--ax-space-12) 0 var(--ax-space-20) 0;
 }
 
 .arb-rich-text ul li p,
@@ -96,7 +89,6 @@
 .arb-rich-text li {
     font-size: var(--ax-font-size-large);
     font-weight: var(--ax-font-weight-regular);
-    letter-spacing: -0.011em;
     line-height: var(--ax-font-line-height-large);
     margin: 0 0 var(--ax-space-12) 0;
 }
