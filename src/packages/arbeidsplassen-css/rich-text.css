@@ -89,7 +89,7 @@
 .arb-rich-text li {
     font-size: var(--ax-font-size-large);
     font-weight: var(--ax-font-weight-regular);
-    line-height: var(--ax-font-line-height-large);
+    line-height: var(--ax-font-line-height-xlarge);
     margin: 0 0 var(--ax-space-12) 0;
 }
 
