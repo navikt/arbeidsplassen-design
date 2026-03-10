@@ -1,7 +1,7 @@
 import React from "react";
 import MenuItem from "./MenuItem";
 
-function PersonMenu({ active }) {
+function PersonMenu({active, showMuligheter}) {
     return (
         <ul>
             <li>
@@ -19,6 +19,14 @@ function PersonMenu({ active }) {
                     Sommerjobben {new Date().getFullYear()} ☀️
                 </MenuItem>
             </li>
+
+            {showMuligheter &&
+                <li>
+                    <MenuItem href="/muligheter" active={active} id="muligheter">
+                        Jobbmulighet
+                    </MenuItem>
+                </li>
+            }
             <li className="arb-header-divider">
                 <MenuItem href="/bedrift" id="for-bedrifter">
                     For bedrifter

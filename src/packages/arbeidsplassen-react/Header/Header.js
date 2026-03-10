@@ -14,10 +14,14 @@ function joinClassNames(...strings) {
  */
 
 /**
+ * @typedef { "no-access" | "has-access" } MuligheterAccessStatus
+ */
+
+/**
  * @typedef { "company" | "person" | "all"  } Variant
  */
 /**
- * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" | "ung" } Active
+ * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" | "ung" | "muligheter" } Active
  */
 
 /**
@@ -31,6 +35,7 @@ function joinClassNames(...strings) {
  * @property {Variant} [variant]
  * @property {Active} [active]
  * @property {AuthenticationStatus} [authenticationStatus]
+ * @property {MuligheterAccessStatus} [muligheterAccessStatus]
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogin
  * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogout
  * @property {HeaderLang} [lang]
@@ -42,6 +47,7 @@ export default function Header({
     variant = "all",
     active,
     authenticationStatus = "unknown",
+    muligheterAccessStatus = "no-access",
     onLogin,
     onLogout,
     lang = "nb",
@@ -52,6 +58,9 @@ export default function Header({
         setIsMobileMenuHidden((prevState) => !prevState);
     };
 
+    // TODO: Temporary option, remove when "Muligheter"-mvp is EOL.
+    const showMuligheter = muligheterAccessStatus === "has-access" && authenticationStatus === "is-authenticated";
+
     return (
         <header className="arb-header-wrapper" lang={lang}>
             <nav aria-label="Hovedmeny" className={joinClassNames("arb-header", className)}>
@@ -60,7 +69,7 @@ export default function Header({
 
                     <MenuButton toggleMenu={toggleMenu} isMobileMenuHidden={isMobileMenuHidden} />
 
-                    <MenuLinks variant={variant} active={active} className="arb-header-links-above-large" />
+                    <MenuLinks variant={variant} active={active} className="arb-header-links-above-large" showMuligheter={showMuligheter}/>
 
                     <div className="arb-header-spacer" />
 
@@ -80,7 +89,7 @@ export default function Header({
                         isMobileMenuHidden ? "arb-header-menu-hidden" : undefined,
                     )}
                 >
-                    <MenuLinks variant={variant} active={active} className="arb-header-links-below-large" />
+                    <MenuLinks variant={variant} active={active} className="arb-header-links-below-large" showMuligheter={showMuligheter}/>
 
                     <LoggedInContent
                         className="arb-header-user-below-tablet"
@@ -100,5 +109,6 @@ Header.propTypes = {
     onLogout: PropTypes.func.isRequired,
     variant: PropTypes.oneOf(["person", "company"]),
     authenticationStatus: PropTypes.oneOf(["unknown", "is-authenticated", "not-authenticated"]),
-    active: PropTypes.oneOf(["ledige-stillinger", "ung", "stillingsannonser", "sommerjobb"]),
+    muligheterAccessStatus: PropTypes.oneOf(["no-access", "has-access"]),
+    active: PropTypes.oneOf(["ledige-stillinger", "ung", "stillingsannonser", "sommerjobb", "muligheter"]),
 };
