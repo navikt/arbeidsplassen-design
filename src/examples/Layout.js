@@ -81,6 +81,7 @@ export default function Layout({
                 <Header
                     variant={headerArgs.variant}
                     authenticationStatus={headerArgs.authenticationStatus}
+                    muligheterAccessStatus={headerArgs.muligheterAccessStatus}
                     active={headerArgs.active}
                     onLogin={headerArgs.onLogin}
                     onLogout={headerArgs.onLogout}

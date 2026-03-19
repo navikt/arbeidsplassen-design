@@ -7,6 +7,7 @@ export default function HeaderPage() {
     const [variant, setVariant] = useState("person");
     const [active, setActive] = useState("ledige-stillinger");
     const [authenticationStatus, setAuthenticationStatus] = useState("is-authenticated");
+    const [muligheterAccessStatus, setMuligheterAccessStatus] = useState("no-access");
 
     return (
         <Layout
@@ -14,6 +15,7 @@ export default function HeaderPage() {
             headerArgs={{
                 variant,
                 authenticationStatus,
+                muligheterAccessStatus,
                 active,
                 onLogin: console.log,
                 onLogout: console.log,
@@ -37,11 +39,22 @@ export default function HeaderPage() {
                     <Radio value="not-authenticated">not-authenticated</Radio>
                 </RadioGroup>
 
+                <RadioGroup
+                    legend="muligheterAccessStatus"
+                    value={muligheterAccessStatus}
+                    onChange={(val) => setMuligheterAccessStatus(val)}
+                    className="mb-8"
+                >
+                    <Radio value="has-access">has-access</Radio>
+                    <Radio value="no-access">no-access</Radio>
+                </RadioGroup>
+
                 <Select label="active" value={active} onChange={(e) => setActive(e.target.value)} className="mb-8">
                     <option value="ledige-stillinger">ledige-stillinger</option>
                     <option value="ung">ung</option>
                     <option value="sommerjobb">sommerjobb</option>
                     <option value="stillingsannonser">stillingsannonser</option>
+                    <option value="muligheter">muligheter</option>
                 </Select>
             </PropsCard>
         </Layout>
