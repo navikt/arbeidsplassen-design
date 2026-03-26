@@ -15,7 +15,7 @@
     "@types/node": "^24.5.2",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.8.1"
   },
   "dependencies": {
     "@babel/traverse": ">=7.29.0",
