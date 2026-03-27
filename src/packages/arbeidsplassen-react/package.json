@@ -45,7 +45,7 @@
         "@babel/preset-env": "^7.28.3",
         "@babel/preset-react": "^7.28.5",
         "@babel/preset-typescript": "^7.28.5",
-        "typescript": "^5.5.0",
+        "typescript": "^5.9.3",
         "@types/react": "^18.2.0",
         "@types/react-dom": "^18.2.0",
         "@types/node": "^20.19.37",
