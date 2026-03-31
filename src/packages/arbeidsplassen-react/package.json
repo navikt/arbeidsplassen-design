@@ -42,7 +42,7 @@
         "@navikt/ds-react": "^8.8.0",
         "@babel/cli": "^7.28.6",
         "@babel/core": "^7.28.4",
-        "@babel/preset-env": "^7.28.3",
+        "@babel/preset-env": "^7.29.2",
         "@babel/preset-react": "^7.28.5",
         "@babel/preset-typescript": "^7.28.5",
         "typescript": "^5.9.3",
