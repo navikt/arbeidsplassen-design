@@ -11,23 +11,23 @@
     "postinstall": "npm run build --workspace=src/packages/arbeidsplassen-react"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.27.1",
-    "@types/node": "^24.5.2",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/node": "^20.19.37",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.8.1"
   },
   "dependencies": {
-    "@babel/traverse": ">=7.23.2",
-    "@navikt/aksel-icons": "^8.0.1",
-    "@navikt/ds-css": "^8.0.1",
-    "@navikt/ds-react": "^8.0.1",
+    "@babel/traverse": ">=7.29.0",
+    "@navikt/aksel-icons": "^8.9.0",
+    "@navikt/ds-css": "^8.9.0",
+    "@navikt/ds-react": "^8.9.0",
     "next": "^14.2.26",
     "prop-types": "^15.8.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.6.3",
-    "zod": "^4.1.11"
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.9.3",
+    "zod": "^4.3.6"
   },
   "publishConfig": {
     "access": "public"

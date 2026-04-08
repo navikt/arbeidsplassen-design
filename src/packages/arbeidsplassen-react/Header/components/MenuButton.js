@@ -8,7 +8,7 @@ function MenuButton({ isMobileMenuHidden, toggleMenu }) {
             variant="tertiary"
             className="arb-header-menu-button arb-header-menu-button-below-desktop"
             onClick={toggleMenu}
-            aria-expanded={isMobileMenuHidden}
+            aria-expanded={!isMobileMenuHidden}
             aria-controls="arb-header-menu"
             icon={isMobileMenuHidden ? <MenuHamburgerIcon aria-hidden="true" /> : <XMarkIcon aria-hidden="true" />}
         >

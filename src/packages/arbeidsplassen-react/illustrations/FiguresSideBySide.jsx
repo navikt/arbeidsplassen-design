@@ -141,8 +141,8 @@ export default function FiguresSideBySide({ className, ariaHidden = true, title 
                     y2="169.271"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset="0" stopColor="#FFB682" />
-                    <stop offset="1" stopColor="#EDA572" />
+                    <stop offset="0" stopColor="#90E8C3" />
+                    <stop offset="1" stopColor="#7CCCAB" />
                 </linearGradient>
                 <linearGradient
                     id="paint1_linear_1046_13268"
