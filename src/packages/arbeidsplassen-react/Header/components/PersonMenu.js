@@ -23,7 +23,7 @@ function PersonMenu({active, showMuligheter}) {
             {showMuligheter &&
                 <li>
                     <MenuItem href="/muligheter" active={active} id="muligheter">
-                        Jobbmulighet
+                        Reserverte stillinger
                     </MenuItem>
                 </li>
             }
