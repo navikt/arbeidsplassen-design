@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@babel/traverse": ">=7.29.0",
-    "@navikt/aksel-icons": "^8.10.1",
+    "@navikt/aksel-icons": "^8.10.2",
     "@navikt/ds-css": "^8.10.2",
     "@navikt/ds-react": "^8.10.1",
     "next": "^14.2.26",
