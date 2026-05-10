@@ -1,4 +1,3 @@
-// cookieWrite.ts
 type SameSiteValue = "Lax" | "Strict" | "None";
 
 type WriteCookieOptions = {

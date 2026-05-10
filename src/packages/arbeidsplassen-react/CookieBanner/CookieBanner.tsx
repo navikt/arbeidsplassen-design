@@ -1,10 +1,8 @@
 import React, { useEffect, useMemo } from "react";
-import { acceptAllOptionalConsents, updateConsent } from "./cookieBannerUtils";
-import { BodyLong, BodyShort, Box, Button, Heading, Link, Stack } from "@navikt/ds-react";
+import { acceptAllOptionalConsents } from "./cookieBannerUtils";
+import { BodyLong, Box, Button, Heading, Link, Stack } from "@navikt/ds-react";
 
-export type CookieBannerVariant = "A" | "B";
 export type CookieBannerAcceptedPayload = Readonly<{
-    variant: CookieBannerVariant;
     url: string;
 }>;
 
@@ -41,7 +39,6 @@ export type CookieBannerProps = {
     cookieInfoHref?: string;
     titleId?: string;
     sectionId?: string;
-    variant?: CookieBannerVariant;
     getUrl?: () => string;
     onAcceptedAllTrack?: (payload: CookieBannerAcceptedPayload) => void;
 };
@@ -50,7 +47,8 @@ const defaultGetUrl = (): string => {
     if (typeof window === "undefined") return "/";
     return window.location.pathname;
 };
-function CookieBannerA({
+
+export default function CookieBanner({
     headingLevel = "1",
     onError,
     onNecessaryOnly,
@@ -62,7 +60,6 @@ function CookieBannerA({
     cookieInfoHref = "/informasjonskapsler",
     titleId = "arb-cookie-banner-title",
     sectionId = "arb-cookie-banner-section",
-    variant = "A",
     getUrl = defaultGetUrl,
     onAcceptedAllTrack,
 }: CookieBannerProps) {
@@ -111,7 +108,6 @@ function CookieBannerA({
         onAcceptAll?.();
         onClose?.();
         onAcceptedAllTrack?.({
-            variant,
             url: getUrl(),
         });
     };
@@ -126,36 +122,24 @@ function CookieBannerA({
         >
             <div className="container-large">
                 <Heading level={headingLevel} size="large" spacing id={titleId}>
-                    Vi bruker cookies
+                    Cookies for en trygg og bedre tjeneste
                 </Heading>
-
-                <BodyLong spacing>
-                    Vi bruker nødvendige cookies for at siden skal fungere. Godtar du alle, kan vi bruke anonymisert
-                    statistikk til å forbedre jobbsøket.
-                    <strong> Uansett valg deler vi aldri dine data med andre.</strong>
+                <BodyLong spacing={true}>
+                    Nødvendige cookies må til for at siden skal fungere. Godtar du alle, kan vi bruke anonymisert
+                    statistikk til å forbedre jobbsøket.{" "}
+                    <strong>Uansett valg deler vi aldri dine data med andre.</strong> Du kan endre valget senere.
                 </BodyLong>
-
-                <BodyLong spacing>
+                <BodyLong spacing={true}>
                     <Link href={cookieInfoHref} data-color="neutral" inlineText>
                         Mer om informasjonskapsler på arbeidsplassen.no
                     </Link>
                 </BodyLong>
 
                 <Stack gap="space-8" direction={{ xs: "column", sm: "row" }}>
-                    <Button
-                        type="button"
-                        variant="secondary-neutral"
-                        onClick={handleNecessaryOnlyClick}
-                        data-testid="necessary-only"
-                    >
+                    <Button type="button" variant="secondary-neutral" onClick={handleNecessaryOnlyClick}>
                         Kun nødvendige
                     </Button>
-                    <Button
-                        type="button"
-                        variant="secondary-neutral"
-                        onClick={handleAcceptAllClick}
-                        data-testid="accept-all"
-                    >
+                    <Button type="button" variant="secondary-neutral" onClick={handleAcceptAllClick}>
                         Godta alle informasjonskapsler
                     </Button>
                 </Stack>
@@ -163,5 +147,3 @@ function CookieBannerA({
         </Box>
     );
 }
-
-export default CookieBannerA;
