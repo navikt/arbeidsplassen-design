@@ -2,13 +2,14 @@
   "name": "design",
   "version": "0.1.0",
   "private": false,
+  "packageManager": "pnpm@10.11.0",
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "prettier:format": "npx prettier -w src",
     "types": "tsc -p tsconfig.json",
-    "postinstall": "npm run build --workspace=src/packages/arbeidsplassen-react"
+    "postinstall": "pnpm --filter @navikt/arbeidsplassen-react build"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.28.5",
@@ -31,10 +32,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "workspaces": [
-    "src/packages/arbeidsplassen-theme",
-    "src/packages/arbeidsplassen-css",
-    "src/packages/arbeidsplassen-react"
-  ]
+  }
 }

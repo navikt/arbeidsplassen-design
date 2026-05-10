@@ -1,0 +1,12 @@
+packages:
+  - src/packages/*
+
+# Vent minst 4 døgn før pnpm får installere helt ny-publiserte pakkeversjoner.
+# Dette reduserer risikoen for å ta inn kompromitterte eller ondsinnede releases
+# før de rekker å bli oppdaget og fjernet fra npm-registeret.
+minimumReleaseAge: 5760
+
+lockfileIncludeTarballUrl: true
+
+minimumReleaseAgeExclude:
+  - '@navikt/*'
