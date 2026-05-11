@@ -1,8 +1,8 @@
-import { CheckboxField } from "@/packages/arbeidsplassen-react/CheckboxField/CheckboxField";
-import {useState} from "react";
-import Layout from "@/examples/Layout";
-import PropsCard from "@/examples/PropsCard";
-import {HStack, Radio, RadioGroup} from "@navikt/ds-react";
+import { CheckboxField } from "@navikt/arbeidsplassen-react";
+import { useState } from "react";
+import Layout from "../examples/Layout";
+import PropsCard from "../examples/PropsCard";
+import { HStack, Radio, RadioGroup } from "@navikt/ds-react";
 
 const CheckboxFieldExample = () => {
     const [checked, setChecked] = useState(false);

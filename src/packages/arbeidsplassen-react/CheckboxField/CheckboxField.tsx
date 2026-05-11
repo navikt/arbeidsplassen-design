@@ -6,7 +6,7 @@ export interface CheckboxFieldProps {
     children?: React.ReactNode;
     error?: React.ReactNode;
     checked: boolean;
-    onChange?: (value: boolean) => void;
+    onChange: (value: boolean) => void;
     size?: "small" | "medium";
     className?: string;
 }
@@ -45,7 +45,7 @@ export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
                 <Checkbox
                     ref={ref}
                     checked={checked}
-                    onChange={(e) => onChange?.(e.target.checked)}
+                    onChange={(e) => onChange(e.target.checked)}
                     aria-describedby={describedBy}
                     size={size as "small" | "medium"}
                 >
