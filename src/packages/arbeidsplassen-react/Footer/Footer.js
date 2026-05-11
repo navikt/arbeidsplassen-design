@@ -48,8 +48,11 @@ export default function Footer({ contentWidth = "2xl", contentGutters = true, la
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/tilgjengelighet" data-color="neutral">
-                                    Tilgjengelighet
+                                <Link
+                                    href="https://uustatus.no/nb/erklaringer/publisert/9f7beaf9-ea64-4a93-8e20-8282f8fd1fce"
+                                    data-color="neutral"
+                                >
+                                    Tilgjengelighetserklæring
                                 </Link>
                             </li>
                             <li>

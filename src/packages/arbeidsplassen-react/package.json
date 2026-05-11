@@ -1,6 +1,6 @@
 {
     "name": "@navikt/arbeidsplassen-react",
-    "version": "10.0.10",
+    "version": "11.0.0",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "private": false,
@@ -36,20 +36,20 @@
     "homepage": "https://github.com/navikt/arbeidsplassen-design#readme",
     "description": "",
     "peerDependencies": {
-        "zod": "^4.3.6"
+        "zod": "^4.4.2"
     },
     "devDependencies": {
-        "@navikt/ds-react": "^8.9.1",
+        "@navikt/ds-react": "^8.10.3",
         "@babel/cli": "^7.28.6",
         "@babel/core": "^7.29.0",
-        "@babel/preset-env": "^7.29.2",
+        "@babel/preset-env": "^7.29.3",
         "@babel/preset-react": "^7.28.5",
         "@babel/preset-typescript": "^7.28.5",
         "typescript": "^5.9.3",
         "@types/react": "^18.2.0",
         "@types/react-dom": "^18.2.0",
         "@types/node": "^20.19.39",
-        "zod": "^4.3.6"
+        "zod": "^4.4.2"
     },
     "dependencies": {
         "@babel/polyfill": "^7.12.1"
