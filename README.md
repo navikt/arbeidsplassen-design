@@ -11,13 +11,13 @@ pnpm add @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt/ar
 
 ### Installer pakken sammen med Zod:
 ```bash
-pnpm add zod@^4.1.11
+pnpm add zod
 ```
 
 ⚠️ Merk:
 Denne pakken bruker Zod til validering, men inkluderer det ikke selv.
 Applikasjonen din må derfor ha zod installert som avhengighet.
-Vi støtter og tester kun mot Zod v4 (^4.1.11).
+Vi støtter Zod v4.
 
 ## Bruk
 
