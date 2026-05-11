@@ -1,6 +1,5 @@
 export * from "./ComboboxExternalItems";
 export * from "./CookieBanner";
-export * from "./CookieBannerAB";
 export * from "./Feedback";
 export * from "./Footer";
 export * from "./Header";
