@@ -6,18 +6,18 @@ utvalgte css-variabler. I tillegg har vi noen egne React-komponenter, slik som `
 ## Installasjon
 
 ```bash
-npm install @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt/arbeidsplassen-css
+pnpm add @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt/arbeidsplassen-css
 ```
 
 ### Installer pakken sammen med Zod:
 ```bash
-npm install zod@^4.1.11
+pnpm add zod
 ```
 
 ⚠️ Merk:
 Denne pakken bruker Zod til validering, men inkluderer det ikke selv.
 Applikasjonen din må derfor ha zod installert som avhengighet.
-Vi støtter og tester kun mot Zod v4 (^4.1.11).
+Vi støtter Zod v4.
 
 ## Bruk
 
@@ -60,8 +60,8 @@ Mer informasjon om autentisering: https://docs.github.com/en/packages/working-wi
 For å kunne utvikle og teste css og egne komponenter har vi en Next.js app som viser alle komponentene våre
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Eksempel-appen kjører på [http://localhost:3001](http://localhost:3001)
