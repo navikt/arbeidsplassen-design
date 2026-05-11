@@ -16,6 +16,7 @@ const arbeidsplassenComponents = [
     "RichText",
     "SkipLink",
     "Colors",
+    "CheckboxField",
 ].sort();
 
 const deprecatedAkselComponents = ["Alert", "ConfirmationPanel", "Ingress", "LinkPanel"];

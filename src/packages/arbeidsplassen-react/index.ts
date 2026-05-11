@@ -1,3 +1,4 @@
+export * from "./CheckboxField";
 export * from "./ComboboxExternalItems";
 export * from "./CookieBanner";
 export * from "./CookieBannerAB";
