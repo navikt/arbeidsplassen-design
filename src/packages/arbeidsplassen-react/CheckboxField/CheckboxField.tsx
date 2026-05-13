@@ -1,15 +1,12 @@
-import React, { forwardRef } from "react";
+import React, {ComponentPropsWithoutRef, forwardRef} from "react";
 import { Checkbox, ErrorMessage } from "@navikt/ds-react";
 
-export interface CheckboxFieldProps {
+type AkselCheckBoxProps = ComponentPropsWithoutRef<typeof Checkbox>;
+export type CheckboxFieldProps = Omit<AkselCheckBoxProps, "error" | "errorId" | "onChange"> & {
     label: React.ReactNode;
-    children?: React.ReactNode;
     error?: React.ReactNode;
-    checked: boolean;
-    onChange: (value: boolean) => void;
-    size?: "small" | "medium";
-    className?: string;
-}
+    onChange?: (value: boolean) => void;
+};
 
 export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
     (
@@ -21,6 +18,7 @@ export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
             onChange,
             size = "medium",
             className,
+            ...checboxProps
         },
         ref
     ) => {
@@ -43,17 +41,20 @@ export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
                 )}
 
                 <Checkbox
+                    {...checboxProps}
                     ref={ref}
                     checked={checked}
-                    onChange={(e) => onChange(e.target.checked)}
+                    onChange={(e) => onChange?.(e.target.checked)}
                     aria-describedby={describedBy}
-                    size={size as "small" | "medium"}
+                    error={Boolean(error)}
+                    errorId={error != null ? errorId : undefined}
+                    size={size}
                 >
                     {label}
                 </Checkbox>
 
                 {error && (
-                    <ErrorMessage id={errorId} size={size as "small" | "medium"} showIcon>
+                    <ErrorMessage id={errorId} size={size} showIcon>
                         {error}
                     </ErrorMessage>
                 )}
