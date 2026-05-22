@@ -1,8 +1,12 @@
-import React from "react";
 import { Button } from "@navikt/ds-react";
 import { MenuHamburgerIcon, XMarkIcon } from "@navikt/aksel-icons";
 
-function MenuButton({ isMobileMenuHidden, toggleMenu }) {
+interface MenuButtonProps {
+    isMobileMenuHidden: boolean;
+    toggleMenu: () => void;
+}
+
+export default function MenuButton({ isMobileMenuHidden, toggleMenu }: MenuButtonProps) {
     return (
         <Button
             variant="tertiary"
@@ -16,7 +20,3 @@ function MenuButton({ isMobileMenuHidden, toggleMenu }) {
         </Button>
     );
 }
-
-MenuButton.propTypes = {};
-
-export default MenuButton;

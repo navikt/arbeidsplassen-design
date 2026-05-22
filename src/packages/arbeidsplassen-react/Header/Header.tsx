@@ -1,47 +1,25 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import { useState, type MouseEventHandler } from "react";
 import Logo from "./components/Logo";
 import MenuButton from "./components/MenuButton";
 import LoggedInContent from "./components/LoggedInContent";
 import MenuLinks from "./components/MenuLinks";
+import type { AuthenticationStatus, MuligheterAccessStatus, Variant, Active, HeaderLang } from "./types";
 
-function joinClassNames(...strings) {
+function joinClassNames(...strings: (string | undefined)[]) {
     return strings.filter((x) => typeof x === "string" && x.length > 0).join(" ");
 }
 
-/**
- * @typedef { "is-authenticated" | "not-authenticated" | "unknown" } AuthenticationStatus
- */
+export interface HeaderProps {
+    className?: string;
+    variant?: Variant;
+    active?: Active;
+    authenticationStatus?: AuthenticationStatus;
+    muligheterAccessStatus?: MuligheterAccessStatus;
+    onLogin: MouseEventHandler<HTMLButtonElement>;
+    onLogout: MouseEventHandler<HTMLButtonElement>;
+    lang?: HeaderLang;
+}
 
-/**
- * @typedef { "no-access" | "has-access" } MuligheterAccessStatus
- */
-
-/**
- * @typedef { "company" | "person" | "all"  } Variant
- */
-/**
- * @typedef { "ledige-stillinger" | "stillingsannonser" | "sommerjobb" | "ung" | "muligheter" } Active
- */
-
-/**
- * @typedef {"nb" | "nn" | "en" | "ru" | "uk"} HeaderLang
- */
-
-/**
- * Props for Header.
- * @typedef {Object} HeaderProps
- * @property {string} [className]
- * @property {Variant} [variant]
- * @property {Active} [active]
- * @property {AuthenticationStatus} [authenticationStatus]
- * @property {MuligheterAccessStatus} [muligheterAccessStatus]
- * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogin
- * @property {(e: React.MouseEventHandler<HTMLButtonElement>) => void} onLogout
- * @property {HeaderLang} [lang]
- */
-
-/** @param {HeaderProps} props */
 export default function Header({
     className,
     variant = "all",
@@ -51,7 +29,7 @@ export default function Header({
     onLogin,
     onLogout,
     lang = "nb",
-}) {
+}: HeaderProps) {
     const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
 
     const toggleMenu = () => {
@@ -103,12 +81,3 @@ export default function Header({
         </header>
     );
 }
-
-Header.propTypes = {
-    onLogin: PropTypes.func.isRequired,
-    onLogout: PropTypes.func.isRequired,
-    variant: PropTypes.oneOf(["person", "company"]),
-    authenticationStatus: PropTypes.oneOf(["unknown", "is-authenticated", "not-authenticated"]),
-    muligheterAccessStatus: PropTypes.oneOf(["no-access", "has-access"]),
-    active: PropTypes.oneOf(["ledige-stillinger", "ung", "stillingsannonser", "sommerjobb", "muligheter"]),
-};

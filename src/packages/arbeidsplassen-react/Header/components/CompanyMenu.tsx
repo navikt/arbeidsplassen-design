@@ -1,7 +1,11 @@
-import React from "react";
 import MenuItem from "./MenuItem";
+import type { Active } from "../types";
 
-function CompanyMenu({ active }) {
+interface CompanyMenuProps {
+    active?: Active;
+}
+
+export default function CompanyMenu({ active }: CompanyMenuProps) {
     return (
         <ul>
             <li>
@@ -22,5 +26,3 @@ function CompanyMenu({ active }) {
         </ul>
     );
 }
-
-export default CompanyMenu;

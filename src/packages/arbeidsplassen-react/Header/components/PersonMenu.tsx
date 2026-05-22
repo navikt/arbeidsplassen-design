@@ -1,7 +1,12 @@
-import React from "react";
 import MenuItem from "./MenuItem";
+import type { Active } from "../types";
 
-function PersonMenu({active, showMuligheter}) {
+interface PersonMenuProps {
+    active?: Active;
+    showMuligheter?: boolean;
+}
+
+export default function PersonMenu({ active, showMuligheter }: PersonMenuProps) {
     return (
         <ul>
             <li>
@@ -35,7 +40,3 @@ function PersonMenu({active, showMuligheter}) {
         </ul>
     );
 }
-
-PersonMenu.propTypes = {};
-
-export default PersonMenu;

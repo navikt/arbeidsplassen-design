@@ -1,7 +1,16 @@
-import React from "react";
+import { type ReactNode } from "react";
 import { Link } from "@navikt/ds-react";
+import type { Active } from "../types";
 
-function MenuItem({ href, active, id, children, rel }) {
+interface MenuItemProps {
+    href: string;
+    active?: Active;
+    id?: string;
+    children: ReactNode;
+    rel?: string;
+}
+
+export default function MenuItem({ href, active, id, children, rel }: MenuItemProps) {
     return (
         <Link
             href={href}
@@ -12,7 +21,3 @@ function MenuItem({ href, active, id, children, rel }) {
         </Link>
     );
 }
-
-MenuItem.propTypes = {};
-
-export default MenuItem;

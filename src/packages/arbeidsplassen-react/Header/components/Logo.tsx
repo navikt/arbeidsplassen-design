@@ -1,11 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
 import ArbeidsplassenLogo from "../../Logo/ArbeidsplassenLogo";
 import ArbeidsplassenLogoSmall from "../../Logo/ArbeidsplassenLogoSmall";
-import UngLogo from "./UngLogo.js";
+import UngLogo from "./UngLogo";
 import { Link } from "@navikt/ds-react";
+import type { Active } from "../types";
 
-function Logo({ active }) {
+interface LogoProps {
+    active?: Active;
+}
+
+export default function Logo({ active }: LogoProps) {
     return (
         <Link href="/" className="arb-header-logo">
             <span className="arb-header-logo-flex">
@@ -26,9 +29,3 @@ function Logo({ active }) {
         </Link>
     );
 }
-
-Logo.propTypes = {
-    active: PropTypes.string,
-};
-
-export default Logo;

@@ -1,8 +1,15 @@
-import React from "react";
+import { type MouseEventHandler } from "react";
 import { Button } from "@navikt/ds-react";
 import { EnterIcon, LeaveIcon } from "@navikt/aksel-icons";
+import type { AuthenticationStatus } from "../types";
 
-function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick }) {
+interface LoginButtonProps {
+    authenticationStatus: AuthenticationStatus;
+    handleLogOutClick: MouseEventHandler<HTMLButtonElement>;
+    handleLogInClick: MouseEventHandler<HTMLButtonElement>;
+}
+
+export default function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick }: LoginButtonProps) {
     if (authenticationStatus === "is-authenticated") {
         return (
             <Button
@@ -29,5 +36,3 @@ function LoginButton({ authenticationStatus, handleLogOutClick, handleLogInClick
         return <div />;
     }
 }
-
-export default LoginButton;

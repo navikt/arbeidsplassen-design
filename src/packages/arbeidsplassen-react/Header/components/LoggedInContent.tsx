@@ -1,9 +1,18 @@
-import React from "react";
+import { type MouseEventHandler } from "react";
 import { Button } from "@navikt/ds-react";
 import { Buildings3Icon, PersonIcon } from "@navikt/aksel-icons";
 import LoginButton from "./LoginButton";
+import type { Variant, AuthenticationStatus } from "../types";
 
-function LoggedInContent({ variant, authenticationStatus, onLogin, onLogout, className }) {
+interface LoggedInContentProps {
+    variant: Variant;
+    authenticationStatus: AuthenticationStatus;
+    onLogin: MouseEventHandler<HTMLButtonElement>;
+    onLogout: MouseEventHandler<HTMLButtonElement>;
+    className?: string;
+}
+
+export default function LoggedInContent({ variant, authenticationStatus, onLogin, onLogout, className }: LoggedInContentProps) {
     return (
         <div className={`arb-header-user ${className}`}>
             {variant === "person" && authenticationStatus === "is-authenticated" && (
@@ -31,5 +40,3 @@ function LoggedInContent({ variant, authenticationStatus, onLogin, onLogout, cla
         </div>
     );
 }
-
-export default LoggedInContent;
