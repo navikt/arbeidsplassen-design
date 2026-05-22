@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 
-interface RichTextProps {
+export interface RichTextProps {
     className?: string;
     children: ReactNode;
 }

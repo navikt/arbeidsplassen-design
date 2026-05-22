@@ -1,6 +1,6 @@
 import { Link } from "@navikt/ds-react";
 
-interface SkipLinkProps {
+export interface SkipLinkProps {
     href?: string;
     text?: string;
 }

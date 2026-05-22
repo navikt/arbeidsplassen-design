@@ -1,7 +1,7 @@
 import ConfusedFigure from "../illustrations/ConfusedFigure";
 import { BodyLong, Heading, VStack } from "@navikt/ds-react";
 
-interface NotFoundProps {
+export interface NotFoundProps {
     title?: string;
     text?: string;
     className?: string;

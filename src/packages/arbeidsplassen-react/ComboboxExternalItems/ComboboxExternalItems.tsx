@@ -3,7 +3,7 @@ import { BodyLong, Chips, VStack } from "@navikt/ds-react";
 
 export type ComboboxItem = string | { label: string; value: string };
 
-interface ComboboxExternalItemsProps {
+export interface ComboboxExternalItemsProps {
     ariaLive?: "off" | "assertive" | "polite";
     fontSize?: "small" | "medium" | "large";
     fontWeight?: "regular" | "semibold";

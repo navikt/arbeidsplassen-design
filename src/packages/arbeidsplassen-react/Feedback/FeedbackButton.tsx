@@ -1,7 +1,7 @@
 import { type ReactNode, type MouseEventHandler } from "react";
 import { Button } from "@navikt/ds-react";
 
-type ButtonVariant =
+export type ButtonVariant =
     | "primary"
     | "primary-neutral"
     | "secondary"
@@ -10,7 +10,7 @@ type ButtonVariant =
     | "tertiary-neutral"
     | "danger";
 
-interface FeedbackButtonProps {
+export interface FeedbackButtonProps {
     children: ReactNode;
     icon?: ReactNode;
     variant?: ButtonVariant;

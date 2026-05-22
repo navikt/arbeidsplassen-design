@@ -2,7 +2,7 @@ import FigureWithKey from "../illustrations/FigureWithKey";
 import { BodyLong, Button, Heading, VStack } from "@navikt/ds-react";
 import { EnterIcon } from "@navikt/aksel-icons";
 
-interface LoginPageProps {
+export interface LoginPageProps {
     link?: string;
     className?: string;
 }
