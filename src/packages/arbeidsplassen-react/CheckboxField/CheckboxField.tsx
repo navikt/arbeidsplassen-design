@@ -1,10 +1,10 @@
-import React, {ComponentPropsWithoutRef, forwardRef} from "react";
+import { ComponentPropsWithoutRef, forwardRef, type ReactNode } from "react";
 import { Checkbox, ErrorMessage } from "@navikt/ds-react";
 
 type AkselCheckBoxProps = ComponentPropsWithoutRef<typeof Checkbox>;
 export type CheckboxFieldProps = Omit<AkselCheckBoxProps, "error" | "errorId" | "onChange"> & {
-    label: React.ReactNode;
-    error?: React.ReactNode;
+    label: ReactNode;
+    error?: ReactNode;
     onChange?: (value: boolean) => void;
 };
 

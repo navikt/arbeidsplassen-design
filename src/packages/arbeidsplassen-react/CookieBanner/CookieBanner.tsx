@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { acceptAllOptionalConsents } from "./cookieBannerUtils";
 import { BodyLong, Box, Button, Heading, Link, Stack } from "@navikt/ds-react";
 
