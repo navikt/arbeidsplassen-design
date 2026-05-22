@@ -1,24 +1,17 @@
-import React, { useId } from "react";
+import { useId } from "react";
 import { Link, Heading, BodyShort } from "@navikt/ds-react";
 import ArbeidsplassenLogoSmall from "../Logo/ArbeidsplassenLogoSmall";
-import { PageBlock } from "@navikt/ds-react/Page";
+import { PageBlock, type PageBlockProps } from "@navikt/ds-react/Page";
 
-/** @typedef {import("@navikt/ds-react/Page").PageBlockProps} PageBlockProps */
+type FooterLang = "nb" | "nn" | "en" | "ru" | "uk";
 
-/**
- * @typedef {"nb" | "nn" | "en" | "ru" | "uk"} FooterLang
- */
+interface FooterProps {
+    contentWidth?: PageBlockProps["width"];
+    contentGutters?: PageBlockProps["gutters"];
+    lang?: FooterLang;
+}
 
-/**
- * Props for Footer.
- * @typedef {Object} HeaderProps
- * @property {PageBlockProps["width"]} [contentWidth]
- * @property {PageBlockProps["gutters"]} [contentGutters]
- * @property {FooterLang} [lang]
- */
-
-/** @param {FooterProps} props */
-export default function Footer({ contentWidth = "2xl", contentGutters = true, lang = "nb" }) {
+export default function Footer({ contentWidth = "2xl", contentGutters = true, lang = "nb" }: FooterProps) {
     const aboutHeadingId = useId();
     const jobSeekerHeadingId = useId();
     const companyHeadingId = useId();

@@ -1,36 +1,27 @@
-import React, { useId } from "react";
+import { useId } from "react";
 import { BodyLong, Chips, VStack } from "@navikt/ds-react";
-import PropTypes from "prop-types";
 
-/**
- * @typedef {string | { label: string, value: string }} ComboboxItem
- */
+export type ComboboxItem = string | { label: string; value: string };
 
-/**
- * Props for ComboboxExternalItems.
- *
- * @typedef {Object} ComboboxExternalItemsProps
- * @property {string} [ariaLive]
- * @property {string} [fontSize]
- * @property {string} [fontWeight]
- * @property {ComboboxItem[]} [items]
- * @property {string} itemsLeadingText            - Påkrevd
- * @property {string} [noItemsText]
- * @property {(item: ComboboxItem) => void} removeComboboxItem - Påkrevd
- */
+interface ComboboxExternalItemsProps {
+    ariaLive?: "off" | "assertive" | "polite";
+    fontSize?: "small" | "medium" | "large";
+    fontWeight?: "regular" | "semibold";
+    items?: ComboboxItem[];
+    itemsLeadingText: string;
+    noItemsText?: string;
+    removeComboboxItem: (item: ComboboxItem) => void;
+}
 
-/**
- * @param {ComboboxExternalItemsProps} props
- */
-function ComboboxExternalItems({
+export default function ComboboxExternalItems({
     ariaLive = "polite",
-    fontSize = "normal",
+    fontSize = "medium",
     fontWeight = "regular",
     items = [],
     itemsLeadingText,
     noItemsText,
     removeComboboxItem,
-}) {
+}: ComboboxExternalItemsProps) {
     const chipsLabelId = `ul-label-removable-chips-${useId()}`;
 
     return (
@@ -85,23 +76,3 @@ function ComboboxExternalItems({
         </VStack>
     );
 }
-
-ComboboxExternalItems.propTypes = {
-    ariaLive: PropTypes.string,
-    fontSize: PropTypes.string,
-    fontWeight: PropTypes.string,
-    items: PropTypes.arrayOf(
-        PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.shape({
-                label: PropTypes.string,
-                value: PropTypes.string,
-            }),
-        ]),
-    ),
-    itemsLeadingText: PropTypes.string.isRequired,
-    noItemsText: PropTypes.string,
-    removeComboboxItem: PropTypes.func.isRequired,
-};
-
-export default ComboboxExternalItems;
