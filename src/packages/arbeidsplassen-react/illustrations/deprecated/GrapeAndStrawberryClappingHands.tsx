@@ -1,14 +1,15 @@
-import PropTypes from "prop-types";
-import React from "react";
+interface GrapeAndStrawberryClappingHandsProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
 
-/**
- * @deprecated
- */
+/** @deprecated */
 export default function GrapeAndStrawberryClappingHands({
     className,
     ariaHidden = true,
     title = "To figurer som klapper hender",
-}) {
+}: GrapeAndStrawberryClappingHandsProps) {
     return (
         <svg
             width="367"
@@ -191,7 +192,3 @@ export default function GrapeAndStrawberryClappingHands({
         </svg>
     );
 }
-
-GrapeAndStrawberryClappingHands.propTypes = {
-    className: PropTypes.string,
-};

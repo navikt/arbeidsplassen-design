@@ -1,13 +1,16 @@
-import React from "react";
 import FigureWithKey from "../illustrations/FigureWithKey";
 import { BodyLong, Button, Heading, VStack } from "@navikt/ds-react";
 import { EnterIcon } from "@navikt/aksel-icons";
-import PropTypes from "prop-types";
 
-function LoginPage({ link, className }) {
+interface LoginPageProps {
+    link?: string;
+    className?: string;
+}
+
+export default function LoginPage({ link, className }: LoginPageProps) {
     return (
         <VStack align="center" className={className}>
-            <FigureWithKey className="mb-8" ariaHidden="true" />
+            <FigureWithKey className="mb-8" ariaHidden={true} />
             <Heading spacing size="large" level="1">
                 Logg inn for å fortsette
             </Heading>
@@ -18,10 +21,3 @@ function LoginPage({ link, className }) {
         </VStack>
     );
 }
-
-LoginPage.propTypes = {
-    link: PropTypes.string,
-    className: PropTypes.string,
-};
-
-export default LoginPage;

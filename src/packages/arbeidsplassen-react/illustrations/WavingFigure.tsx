@@ -1,15 +1,9 @@
-import React from "react";
-
-/**
- * Props for WavingFigure.
- * @typedef {Object} WavingFigureProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {WavingFigureProps} props */
-export default function WavingFigure({ className, ariaHidden = true, title = "Vinkende figur" }) {
+interface WavingFigureProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function WavingFigure({ className, ariaHidden = true, title = "Vinkende figur" }: WavingFigureProps) {
     return (
         <svg
             width="183"

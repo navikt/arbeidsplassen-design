@@ -1,15 +1,11 @@
-import React from "react";
+interface ConfusedGrapeProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
 
-/**
- * Props for ConfusedFigure.
- * @typedef {Object} ConfusedFigureProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {ConfusedFigureProps} props */
-export default function ConfusedFigure({ className, ariaHidden = true, title = "Forvirret figur" }) {
+/** @deprecated */
+export default function ConfusedGrape({ className, ariaHidden = true, title = "Forvirret figur" }: ConfusedGrapeProps) {
     return (
         <svg
             width="157"

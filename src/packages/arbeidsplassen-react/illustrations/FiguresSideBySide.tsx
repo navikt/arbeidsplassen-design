@@ -1,13 +1,13 @@
-import React from "react";
-
-/**
- * @deprecated
- */
-export default function GrapeAndPapayaTogether({
+interface FiguresSideBySideProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function FiguresSideBySide({
     className,
     ariaHidden = true,
     title = "To figurer som ser på hverandre",
-}) {
+}: FiguresSideBySideProps) {
     return (
         <svg
             width="306"
@@ -139,8 +139,8 @@ export default function GrapeAndPapayaTogether({
                     y2="169.271"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset="0" stopColor="#FFB682" />
-                    <stop offset="1" stopColor="#EDA572" />
+                    <stop offset="0" stopColor="#90E8C3" />
+                    <stop offset="1" stopColor="#7CCCAB" />
                 </linearGradient>
                 <linearGradient
                     id="paint1_linear_1046_13268"

@@ -1,15 +1,9 @@
-import React from "react";
-
-/**
- * Props for WorriedFigure.
- * @typedef {Object} WorriedFigureProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {WorriedFigureProps} props */
-export default function WorriedFigure({ className, ariaHidden = true, title = "Bekymret figur" }) {
+interface WorriedFigureProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function WorriedFigure({ className, ariaHidden = true, title = "Bekymret figur" }: WorriedFigureProps) {
     return (
         <svg
             width="174"

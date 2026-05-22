@@ -1,15 +1,13 @@
-import React from "react";
-
-/**
- * Props for FigureWithEnvelope.
- * @typedef {Object} FigureWithEnvelopeProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {FigureWithEnvelopeProps} props */
-export default function FigureWithEnvelope({ className, ariaHidden = true, title = "Figur med konvolutt" }) {
+interface FigureWithEnvelopeProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function FigureWithEnvelope({
+    className,
+    ariaHidden = true,
+    title = "Figur med konvolutt",
+}: FigureWithEnvelopeProps) {
     return (
         <svg
             width="180"

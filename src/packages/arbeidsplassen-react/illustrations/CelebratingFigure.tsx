@@ -1,15 +1,13 @@
-import React from "react";
-
-/**
- * Props for CelebratingFigure.
- * @typedef {Object} CelebratingFigureProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {CelebratingFigureProps} props */
-export default function CelebratingFigure({ className, ariaHidden = true, title = "Figur som feirer" }) {
+interface CelebratingFigureProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function CelebratingFigure({
+    className,
+    ariaHidden = true,
+    title = "Figur som feirer",
+}: CelebratingFigureProps) {
     return (
         <svg
             width="264"

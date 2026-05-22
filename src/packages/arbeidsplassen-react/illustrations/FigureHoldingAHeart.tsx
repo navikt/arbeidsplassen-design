@@ -1,15 +1,13 @@
-import React from "react";
-
-/**
- * Props for FigureHoldingAHeart.
- * @typedef {Object} FigureHoldingAHeartProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {FigureHoldingAHeartProps} props */
-function FigureHoldingAHeart({ className, ariaHidden = true, title = "Figur som holder et hjerte" }) {
+interface FigureHoldingAHeartProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function FigureHoldingAHeart({
+    className,
+    ariaHidden = true,
+    title = "Figur som holder et hjerte",
+}: FigureHoldingAHeartProps) {
     return (
         <svg
             width="180"
@@ -77,5 +75,3 @@ function FigureHoldingAHeart({ className, ariaHidden = true, title = "Figur som 
         </svg>
     );
 }
-
-export default FigureHoldingAHeart;

@@ -1,10 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-
-/**
- * @deprecated
- */
-function ConfusedGrape({ className, ariaHidden = true, title = "Forvirret figur" }) {
+interface ConfusedFigureProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function ConfusedFigure({
+    className,
+    ariaHidden = true,
+    title = "Forvirret figur",
+}: ConfusedFigureProps) {
     return (
         <svg
             width="157"
@@ -104,10 +107,3 @@ function ConfusedGrape({ className, ariaHidden = true, title = "Forvirret figur"
         </svg>
     );
 }
-
-ConfusedGrape.propTypes = {
-    ariaHidden: PropTypes.string,
-    className: PropTypes.string,
-};
-
-export default ConfusedGrape;

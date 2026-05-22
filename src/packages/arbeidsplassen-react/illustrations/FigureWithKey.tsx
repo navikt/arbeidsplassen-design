@@ -1,15 +1,13 @@
-import React from "react";
-
-/**
- * Props for FigureWithKey.
- * @typedef {Object} FigureWithKeyProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {FigureWithKeyProps} props */
-export default function FigureWithKey({ className, ariaHidden = true, title = "Figur med nøkkel" }) {
+interface FigureWithKeyProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function FigureWithKey({
+    className,
+    ariaHidden = true,
+    title = "Figur med nøkkel",
+}: FigureWithKeyProps) {
     return (
         <svg
             width="209"

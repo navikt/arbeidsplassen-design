@@ -1,15 +1,13 @@
-import React from "react";
-
-/**
- * Props for FigureWithMagnifier.
- * @typedef {Object} FigureWithMagnifierProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {FigureWithMagnifierProps} props */
-export default function FigureWithMagnifier({ className, ariaHidden = true, title = "Figur med forstørrelsesglass" }) {
+interface FigureWithMagnifierProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function FigureWithMagnifier({
+    className,
+    ariaHidden = true,
+    title = "Figur med forstørrelsesglass",
+}: FigureWithMagnifierProps) {
     return (
         <svg
             width="144"

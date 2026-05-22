@@ -1,10 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
+interface WavingGrapeProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
 
-/**
- * @deprecated
- */
-function WavingGrape({ className, ariaHidden = true, title = "Vinkende figur" }) {
+/** @deprecated */
+export default function WavingGrape({ className, ariaHidden = true, title = "Vinkende figur" }: WavingGrapeProps) {
     return (
         <svg
             width="183"
@@ -93,10 +94,3 @@ function WavingGrape({ className, ariaHidden = true, title = "Vinkende figur" })
         </svg>
     );
 }
-
-WavingGrape.propTypes = {
-    ariaHidden: PropTypes.string,
-    className: PropTypes.string,
-};
-
-export default WavingGrape;

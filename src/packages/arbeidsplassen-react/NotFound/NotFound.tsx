@@ -1,12 +1,16 @@
-import React from "react";
-import ConfusedGrape from "../illustrations/ConfusedFigure";
+import ConfusedFigure from "../illustrations/ConfusedFigure";
 import { BodyLong, Heading, VStack } from "@navikt/ds-react";
-import PropTypes from "prop-types";
 
-function NotFound({ title, text, className }) {
+interface NotFoundProps {
+    title?: string;
+    text?: string;
+    className?: string;
+}
+
+export default function NotFound({ title, text, className }: NotFoundProps) {
     return (
         <VStack align="center" className={className}>
-            <ConfusedGrape className="mb-8" ariaHidden="true" />
+            <ConfusedFigure className="mb-8" ariaHidden={true} />
             <Heading spacing size="large" align="center" level="1">
                 {title ? title : "Fant ikke siden"}
             </Heading>
@@ -20,11 +24,3 @@ function NotFound({ title, text, className }) {
         </VStack>
     );
 }
-
-NotFound.propTypes = {
-    title: PropTypes.string,
-    text: PropTypes.string,
-    className: PropTypes.string,
-};
-
-export default NotFound;

@@ -1,13 +1,20 @@
-import React from "react";
+interface ArbeidsplassenLogoProps {
+    className?: string;
+    ariaHidden?: boolean;
+    inverted?: boolean;
+    title?: string;
+    width?: string;
+    height?: string;
+}
 
-function ArbeidsplassenLogoSmall({
+export default function ArbeidsplassenLogoSmall({
     className,
     ariaHidden,
     inverted,
     title = "Arbeidsplassen logo",
     width = "54",
     height = "54",
-}) {
+}: ArbeidsplassenLogoProps) {
     return (
         <svg
             className={className}
@@ -32,5 +39,3 @@ function ArbeidsplassenLogoSmall({
         </svg>
     );
 }
-
-export default ArbeidsplassenLogoSmall;

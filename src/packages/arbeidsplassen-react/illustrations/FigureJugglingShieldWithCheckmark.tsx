@@ -1,15 +1,13 @@
-import React from "react";
-
-/**
- * Props for FigureJugglingShieldWithCheckmark.
- * @typedef {Object} FigureJugglingShieldWithCheckmarkProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {FigureJugglingShieldWithCheckmarkProps} props */
-function FigureJugglingShieldWithCheckmark({ className, ariaHidden = true, title = "Figur som sjonglerer" }) {
+interface FigureJugglingShieldWithCheckmarkProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
+export default function FigureJugglingShieldWithCheckmark({
+    className,
+    ariaHidden = true,
+    title = "Figur som sjonglerer",
+}: FigureJugglingShieldWithCheckmarkProps) {
     return (
         <svg
             width="148"
@@ -106,5 +104,3 @@ function FigureJugglingShieldWithCheckmark({ className, ariaHidden = true, title
         </svg>
     );
 }
-
-export default FigureJugglingShieldWithCheckmark;

@@ -1,9 +1,11 @@
-import React from "react";
+interface StrawberryWithKeyProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
 
-/**
- * @deprecated
- */
-function StrawberryWithKey({ className, ariaHidden = true, title = "Figur med nøkkel" }) {
+/** @deprecated */
+export default function StrawberryWithKey({ className, ariaHidden = true, title = "Figur med nøkkel" }: StrawberryWithKeyProps) {
     return (
         <svg
             width="209"
@@ -126,5 +128,3 @@ function StrawberryWithKey({ className, ariaHidden = true, title = "Figur med n�
         </svg>
     );
 }
-
-export default StrawberryWithKey;

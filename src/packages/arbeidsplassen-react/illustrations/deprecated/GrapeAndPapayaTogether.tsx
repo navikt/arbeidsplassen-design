@@ -1,15 +1,15 @@
-import React from "react";
+interface GrapeAndPapayaTogetherProps {
+    className?: string;
+    ariaHidden?: boolean;
+    title?: string;
+}
 
-/**
- * Props for FiguresSideBySide.
- * @typedef {Object} FiguresSideBySideProps
- * @property {string} [className]
- * @property {boolean} [ariaHidden]
- * @property {string} [title]
- */
-
-/** @param {FiguresSideBySideProps} props */
-export default function FiguresSideBySide({ className, ariaHidden = true, title = "To figurer som ser på hverandre" }) {
+/** @deprecated */
+export default function GrapeAndPapayaTogether({
+    className,
+    ariaHidden = true,
+    title = "To figurer som ser på hverandre",
+}: GrapeAndPapayaTogetherProps) {
     return (
         <svg
             width="306"
@@ -141,8 +141,8 @@ export default function FiguresSideBySide({ className, ariaHidden = true, title 
                     y2="169.271"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset="0" stopColor="#90E8C3" />
-                    <stop offset="1" stopColor="#7CCCAB" />
+                    <stop offset="0" stopColor="#FFB682" />
+                    <stop offset="1" stopColor="#EDA572" />
                 </linearGradient>
                 <linearGradient
                     id="paint1_linear_1046_13268"
