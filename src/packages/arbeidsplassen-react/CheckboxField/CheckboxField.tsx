@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, forwardRef, type ReactNode } from "react";
+import { ComponentPropsWithoutRef, forwardRef, type ReactNode, useId } from "react";
 import { Checkbox, ErrorMessage } from "@navikt/ds-react";
 
 type AkselCheckBoxProps = ComponentPropsWithoutRef<typeof Checkbox>;
@@ -22,8 +22,8 @@ export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
         },
         ref
     ) => {
-        const contentId = React.useId();
-        const errorId = React.useId();
+        const contentId = useId();
+        const errorId = useId();
 
         const describedBy = [
             children && contentId,
