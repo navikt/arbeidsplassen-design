@@ -5,7 +5,11 @@ interface StrawberryWithKeyProps {
 }
 
 /** @deprecated */
-export default function StrawberryWithKey({ className, ariaHidden = true, title = "Figur med nøkkel" }: StrawberryWithKeyProps) {
+export default function StrawberryWithKey({
+    className,
+    ariaHidden = true,
+    title = "Figur med nøkkel",
+}: StrawberryWithKeyProps) {
     return (
         <svg
             width="209"

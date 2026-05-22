@@ -25,13 +25,13 @@ export default function PersonMenu({ active, showMuligheter }: PersonMenuProps) 
                 </MenuItem>
             </li>
 
-            {showMuligheter &&
+            {showMuligheter && (
                 <li>
                     <MenuItem href="/muligheter" active={active} id="muligheter">
                         Reserverte stillinger
                     </MenuItem>
                 </li>
-            }
+            )}
             <li className="arb-header-divider">
                 <MenuItem href="/bedrift" id="for-bedrifter">
                     For bedrifter

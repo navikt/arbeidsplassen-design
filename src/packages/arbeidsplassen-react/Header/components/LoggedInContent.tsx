@@ -12,7 +12,13 @@ interface LoggedInContentProps {
     className?: string;
 }
 
-export default function LoggedInContent({ variant, authenticationStatus, onLogin, onLogout, className }: LoggedInContentProps) {
+export default function LoggedInContent({
+    variant,
+    authenticationStatus,
+    onLogin,
+    onLogout,
+    className,
+}: LoggedInContentProps) {
     return (
         <div className={`arb-header-user ${className}`}>
             {variant === "person" && authenticationStatus === "is-authenticated" && (

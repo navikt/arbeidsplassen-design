@@ -47,7 +47,12 @@ export default function Header({
 
                     <MenuButton toggleMenu={toggleMenu} isMobileMenuHidden={isMobileMenuHidden} />
 
-                    <MenuLinks variant={variant} active={active} className="arb-header-links-above-large" showMuligheter={showMuligheter}/>
+                    <MenuLinks
+                        variant={variant}
+                        active={active}
+                        className="arb-header-links-above-large"
+                        showMuligheter={showMuligheter}
+                    />
 
                     <div className="arb-header-spacer" />
 
@@ -67,7 +72,12 @@ export default function Header({
                         isMobileMenuHidden ? "arb-header-menu-hidden" : undefined,
                     )}
                 >
-                    <MenuLinks variant={variant} active={active} className="arb-header-links-below-large" showMuligheter={showMuligheter}/>
+                    <MenuLinks
+                        variant={variant}
+                        active={active}
+                        className="arb-header-links-below-large"
+                        showMuligheter={showMuligheter}
+                    />
 
                     <LoggedInContent
                         className="arb-header-user-below-tablet"

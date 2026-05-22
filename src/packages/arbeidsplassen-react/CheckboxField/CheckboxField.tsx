@@ -9,28 +9,11 @@ export type CheckboxFieldProps = Omit<AkselCheckBoxProps, "error" | "errorId" | 
 };
 
 export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
-    (
-        {
-            label,
-            children,
-            error,
-            checked,
-            onChange,
-            size = "medium",
-            className,
-            ...checboxProps
-        },
-        ref
-    ) => {
+    ({ label, children, error, checked, onChange, size = "medium", className, ...checboxProps }, ref) => {
         const contentId = useId();
         const errorId = useId();
 
-        const describedBy = [
-            children && contentId,
-            error && errorId,
-        ]
-            .filter(Boolean)
-            .join(" ") || undefined;
+        const describedBy = [children && contentId, error && errorId].filter(Boolean).join(" ") || undefined;
 
         return (
             <div className={className}>
@@ -60,7 +43,7 @@ export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
                 )}
             </div>
         );
-    }
+    },
 );
 
 export default CheckboxField;
