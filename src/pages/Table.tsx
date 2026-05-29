@@ -1,15 +1,23 @@
 import { Checkbox, Table } from "@navikt/ds-react";
 import { useState } from "react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const TableExample = () => {
-    const [selectedRows, setSelectedRows] = useState([]);
-    const [sort, setSort] = useState(null);
+interface TableRow {
+    name: string;
+    fnr: string;
+    start: string;
+}
 
-    const toggleSelectedRow = (value) =>
+export default function TableExample() {
+    const [selectedRows, setSelectedRows] = useState<string[]>([]);
+    const [sort, setSort] = useState<{ orderBy: keyof TableRow; direction: "ascending" | "descending" } | undefined>(
+        undefined,
+    );
+
+    const toggleSelectedRow = (value: string) =>
         setSelectedRows((list) => (list.includes(value) ? list.filter((id) => id !== value) : [...list, value]));
 
-    const handleSort = (sortKey) => {
+    const handleSort = (sortKey: keyof TableRow) => {
         setSort(
             sort && sortKey === sort.orderBy && sort.direction === "descending"
                 ? undefined
@@ -27,7 +35,7 @@ const TableExample = () => {
 
     sortData = sortData.slice().sort((a, b) => {
         if (sort) {
-            const comparator = (a, b, orderBy) => {
+            const comparator = (a: TableRow, b: TableRow, orderBy: keyof TableRow) => {
                 if (b[orderBy] < a[orderBy] || b[orderBy] === undefined) {
                     return -1;
                 }
@@ -50,7 +58,7 @@ const TableExample = () => {
                         <Table.DataCell>
                             <Checkbox
                                 checked={selectedRows.length === data.length}
-                                indeterminate={selectedRows.length && selectedRows.length !== data.length}
+                                indeterminate={selectedRows.length > 0 && selectedRows.length !== data.length}
                                 onChange={() => {
                                     selectedRows.length
                                         ? setSelectedRows([])
@@ -99,9 +107,9 @@ const TableExample = () => {
             </Table>
         </Layout>
     );
-};
+}
 
-const data = [
+const data: TableRow[] = [
     {
         name: "Jakobsen, Markus",
         fnr: "03129265463",
@@ -128,5 +136,3 @@ const data = [
         start: "2010-07-17",
     },
 ];
-
-export default TableExample;
