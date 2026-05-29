@@ -1,11 +1,11 @@
 import { HStack, Radio, RadioGroup, Search } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
-import React, { useState } from "react";
+import Layout from "@/examples/Layout";
+import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
-const SearchExample = () => {
-    const [variant, setVariant] = useState("primary");
-    const [size, setSize] = useState("medium");
+export default function SearchExample() {
+    const [variant, setVariant] = useState<"primary" | "secondary" | "simple">("primary");
+    const [size, setSize] = useState<"small" | "medium">("medium");
 
     return (
         <Layout title="Search">
@@ -27,6 +27,4 @@ const SearchExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default SearchExample;
+}

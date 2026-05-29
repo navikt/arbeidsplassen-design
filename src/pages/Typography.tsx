@@ -1,10 +1,10 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { BodyLong, Heading, List } from "@navikt/ds-react";
 import { PLACEHOLDER_BLOCK, PLACEHOLDER_HEADING, PLACEHOLDER_PARAGRAPH } from "@/examples/placeholders";
 
 export default function TypographyPage() {
     return (
-        <Layout>
+        <Layout title="Typography">
             <section className="mb-16">
                 <Heading size="xlarge" level="2" spacing>
                     {PLACEHOLDER_HEADING}

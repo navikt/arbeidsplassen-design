@@ -1,12 +1,10 @@
 import { HelpText } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const HelpTextExample = () => {
+export default function HelpTextExample() {
     return (
         <Layout title="HelpText">
             <HelpText title="Hvor kommer dette fra?">Informasjonen er hentet fra X sin statistikk fra 2021</HelpText>
         </Layout>
     );
-};
-
-export default HelpTextExample;
+}

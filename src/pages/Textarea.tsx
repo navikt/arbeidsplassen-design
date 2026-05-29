@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { HStack, Radio, RadioGroup, TextField } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import { HStack, Radio, RadioGroup, Textarea } from "@navikt/ds-react";
+import Layout from "@/examples/Layout";
 import PropsCard from "@/examples/PropsCard";
 
-export default function TextFieldExample() {
+export default function TextareaExample() {
     const [error, setError] = useState(false);
     const [disabled, setDisabled] = useState(false);
     const [readOnly, setReadOnly] = useState(false);
 
     return (
-        <Layout title="TextField">
-            <TextField
+        <Layout title="Textarea">
+            <Textarea
                 label="Har du noen tilbakemeldinger?"
+                maxLength={400}
                 description="Vi lagrer bare selve meldingen, ikke hvem som sendte den."
                 error={error ? "Dette ser feil ut!" : undefined}
                 disabled={disabled}

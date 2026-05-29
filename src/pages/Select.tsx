@@ -1,8 +1,8 @@
 import { Select } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { PLACEHOLDER_INPUT_LABEL, PLACEHOLDER_INPUT_OPTIONS } from "@/examples/placeholders";
 
-const SelectExample = () => {
+export default function SelectExample() {
     return (
         <Layout title="Select">
             <Select label={PLACEHOLDER_INPUT_LABEL}>
@@ -13,6 +13,4 @@ const SelectExample = () => {
             </Select>
         </Layout>
     );
-};
-
-export default SelectExample;
+}

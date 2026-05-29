@@ -3,8 +3,8 @@ import Layout from "../examples/Layout";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
-const CopyButtonExample = () => {
-    const [variant, setVariant] = useState("neutral");
+export default function CopyButtonExample() {
+    const [variant, setVariant] = useState<"neutral" | "action">("neutral");
 
     return (
         <Layout title="CopyButton">
@@ -29,6 +29,4 @@ const CopyButtonExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default CopyButtonExample;
+}

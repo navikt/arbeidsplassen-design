@@ -1,4 +1,4 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { List } from "@navikt/ds-react";
 import { PLACEHOLDER_BLOCK, PLACEHOLDER_PARAGRAPH } from "@/examples/placeholders";
 

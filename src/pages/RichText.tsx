@@ -1,7 +1,7 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { RichText } from "@navikt/arbeidsplassen-react";
 
-const RichTextExample = () => {
+export default function RichTextExample() {
     return (
         <Layout title="RichText">
             <RichText>
@@ -29,6 +29,4 @@ const RichTextExample = () => {
             </RichText>
         </Layout>
     );
-};
-
-export default RichTextExample;
+}

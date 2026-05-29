@@ -1,8 +1,8 @@
 import { Button, Popover } from "@navikt/ds-react";
 import { useRef, useState } from "react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const PopoverExample = () => {
+export default function PopoverExample() {
     const buttonRef = useRef(null);
     const [openState, setOpenState] = useState(false);
     return (
@@ -15,6 +15,4 @@ const PopoverExample = () => {
             </Popover>
         </Layout>
     );
-};
-
-export default PopoverExample;
+}

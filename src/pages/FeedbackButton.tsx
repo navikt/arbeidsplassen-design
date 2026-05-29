@@ -1,9 +1,9 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { FaceSmileIcon } from "@navikt/aksel-icons";
 import { FeedbackButton } from "@navikt/arbeidsplassen-react";
 import { HStack } from "@navikt/ds-react";
 
-const FeedbackButtonExample = () => {
+export default function FeedbackButtonExample() {
     return (
         <Layout title="FeedbackButton">
             <HStack gap="space-8">
@@ -13,6 +13,4 @@ const FeedbackButtonExample = () => {
             </HStack>
         </Layout>
     );
-};
-
-export default FeedbackButtonExample;
+}

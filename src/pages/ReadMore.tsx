@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { HStack, Radio, RadioGroup, ReadMore } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { PLACEHOLDER_BLOCK } from "@/examples/placeholders";
 import PropsCard from "@/examples/PropsCard";
 
-const ReadMoreExample = () => {
-    const [size, setSize] = useState("medium");
+export default function ReadMoreExample() {
+    const [size, setSize] = useState<"small" | "medium" | "large">("medium");
 
     return (
         <Layout title="ReadMore">
@@ -24,6 +24,4 @@ const ReadMoreExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default ReadMoreExample;
+}

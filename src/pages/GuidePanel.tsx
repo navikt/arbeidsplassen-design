@@ -1,7 +1,7 @@
 import { BodyLong, GuidePanel, Heading } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const GuidePanelExample = () => {
+export default function GuidePanelExample() {
     return (
         <Layout title="GuidePanel">
             <GuidePanel poster className="mb-16">
@@ -52,6 +52,4 @@ const GuidePanelExample = () => {
             </GuidePanel>
         </Layout>
     );
-};
-
-export default GuidePanelExample;
+}

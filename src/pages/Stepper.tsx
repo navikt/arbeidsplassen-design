@@ -1,8 +1,8 @@
 import { Heading, Stepper } from "@navikt/ds-react";
 import { useState } from "react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const StepperExample = () => {
+export default function StepperExample() {
     const [activeStep, setActiveStep] = useState(3);
 
     return (
@@ -62,6 +62,4 @@ const StepperExample = () => {
             </div>
         </Layout>
     );
-};
-
-export default StepperExample;
+}

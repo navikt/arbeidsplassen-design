@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Accordion, Checkbox, CheckboxGroup, HStack, Radio, RadioGroup } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import PropsCard from "@/examples/PropsCard";
 import { PLACEHOLDER_INPUT_LABEL, PLACEHOLDER_INPUT_OPTIONS } from "@/examples/placeholders";
 

@@ -1,7 +1,7 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { BodyLong } from "@navikt/ds-react";
 
-const SkipLinkExample = () => {
+export default function SkipLinkExample() {
     return (
         <Layout title="SkipLink">
             <BodyLong>
@@ -10,6 +10,4 @@ const SkipLinkExample = () => {
             </BodyLong>
         </Layout>
     );
-};
-
-export default SkipLinkExample;
+}

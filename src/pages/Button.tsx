@@ -1,5 +1,5 @@
 import { Button, HStack, Radio, RadioGroup } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { TrashIcon } from "@navikt/aksel-icons";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";

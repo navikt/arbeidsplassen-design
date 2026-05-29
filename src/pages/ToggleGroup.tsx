@@ -1,8 +1,8 @@
 import { ToggleGroup } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { ClockDashedIcon, InboxIcon, PaperplaneIcon } from "@navikt/aksel-icons";
 
-const ToggleGroupExample = () => {
+export default function ToggleGroupExample() {
     return (
         <Layout title="ToggleGroup">
             <ToggleGroup defaultValue="lest" onChange={console.log}>
@@ -21,6 +21,4 @@ const ToggleGroupExample = () => {
             </ToggleGroup>
         </Layout>
     );
-};
-
-export default ToggleGroupExample;
+}

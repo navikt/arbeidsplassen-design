@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FormProgress } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const FormProgressExample = () => {
+export default function FormProgressExample() {
     const [activeStep, setActiveStep] = useState(2);
 
     return (
@@ -18,6 +18,4 @@ const FormProgressExample = () => {
             </FormProgress>
         </Layout>
     );
-};
-
-export default FormProgressExample;
+}

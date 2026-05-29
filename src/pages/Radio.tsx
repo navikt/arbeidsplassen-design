@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HStack, Radio, RadioGroup } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import PropsCard from "@/examples/PropsCard";
 import {
     PLACEHOLDER_INPUT_DESCRIPTION,

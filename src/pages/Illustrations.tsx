@@ -1,5 +1,5 @@
 import { HStack } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import {
     CelebratingFigure,
     ConfusedFigure,
@@ -14,7 +14,7 @@ import {
     WorriedFigure,
 } from "../packages/arbeidsplassen-react/illustrations";
 
-const IllustrationsExample = () => {
+export default function IllustrationsExample() {
     return (
         <Layout title="Illustrations">
             <HStack gap="space-20" align="end">
@@ -32,6 +32,4 @@ const IllustrationsExample = () => {
             </HStack>
         </Layout>
     );
-};
-
-export default IllustrationsExample;
+}

@@ -1,12 +1,12 @@
 import { HStack, Pagination, Radio, RadioGroup } from "@navikt/ds-react";
-import React, { useState } from "react";
-import Layout from "../examples/Layout";
+import { useState } from "react";
+import Layout from "@/examples/Layout";
 import PropsCard from "@/examples/PropsCard";
 
-const PaginationExample = () => {
+export default function PaginationExample() {
     const [pageState, setPageState] = useState(2);
 
-    const [size, setSize] = useState("medium");
+    const [size, setSize] = useState<"xsmall" | "small" | "medium">("medium");
     const [prevNextTexts, setPrevNextTexts] = useState(true);
 
     return (
@@ -24,7 +24,7 @@ const PaginationExample = () => {
             <PropsCard>
                 <HStack gap="space-24">
                     <RadioGroup legend="size" value={size} onChange={setSize}>
-                        {["medium", "small", "xsmall"].map((option) => (
+                        {["xsmall", "medium", "small"].map((option) => (
                             <Radio value={option}>{option}</Radio>
                         ))}
                     </RadioGroup>
@@ -36,6 +36,4 @@ const PaginationExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default PaginationExample;
+}

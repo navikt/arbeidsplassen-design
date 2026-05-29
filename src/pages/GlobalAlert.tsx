@@ -1,12 +1,12 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { GlobalAlert, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import { PLACEHOLDER_HEADING, PLACEHOLDER_PARAGRAPH } from "@/examples/placeholders";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
-const GlobalAlertExample = () => {
-    const [status, setStatus] = useState("announcement");
-    const [size, setSize] = useState("medium");
+export default function GlobalAlertExample() {
+    const [status, setStatus] = useState<"announcement" | "success" | "warning" | "error">("announcement");
+    const [size, setSize] = useState<"small" | "medium">("medium");
     const [showCloseButton, setShowCloseButton] = useState(false);
 
     return (
@@ -39,6 +39,4 @@ const GlobalAlertExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default GlobalAlertExample;
+}

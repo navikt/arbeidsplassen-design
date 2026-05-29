@@ -1,7 +1,7 @@
 import { Heading } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const HeadingExample = () => {
+export default function HeadingExample() {
     return (
         <Layout title="Heading">
             <Heading level="1" size="xlarge" spacing>
@@ -21,6 +21,4 @@ const HeadingExample = () => {
             </Heading>
         </Layout>
     );
-};
-
-export default HeadingExample;
+}

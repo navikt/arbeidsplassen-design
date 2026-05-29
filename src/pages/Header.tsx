@@ -1,13 +1,14 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { BodyLong, Radio, RadioGroup, Select } from "@navikt/ds-react";
+import type { Variant, Active, AuthenticationStatus, MuligheterAccessStatus } from "@navikt/arbeidsplassen-react";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
 export default function HeaderPage() {
-    const [variant, setVariant] = useState("person");
-    const [active, setActive] = useState("ledige-stillinger");
-    const [authenticationStatus, setAuthenticationStatus] = useState("is-authenticated");
-    const [muligheterAccessStatus, setMuligheterAccessStatus] = useState("no-access");
+    const [variant, setVariant] = useState<Variant>("person");
+    const [active, setActive] = useState<Active>("ledige-stillinger");
+    const [authenticationStatus, setAuthenticationStatus] = useState<AuthenticationStatus>("is-authenticated");
+    const [muligheterAccessStatus, setMuligheterAccessStatus] = useState<MuligheterAccessStatus>("no-access");
 
     return (
         <Layout
@@ -49,7 +50,12 @@ export default function HeaderPage() {
                     <Radio value="no-access">no-access</Radio>
                 </RadioGroup>
 
-                <Select label="active" value={active} onChange={(e) => setActive(e.target.value)} className="mb-8">
+                <Select
+                    label="active"
+                    value={active}
+                    onChange={(e) => setActive(e.target.value as Active)}
+                    className="mb-8"
+                >
                     <option value="ledige-stillinger">ledige-stillinger</option>
                     <option value="ung">ung</option>
                     <option value="sommerjobb">sommerjobb</option>

@@ -1,8 +1,8 @@
 import { Button, Tooltip } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { PrinterSmallIcon } from "@navikt/aksel-icons";
 
-const TooltipExample = () => {
+export default function TooltipExample() {
     return (
         <Layout title="ToolTip">
             <Tooltip content="Skriv ut dokument">
@@ -10,6 +10,4 @@ const TooltipExample = () => {
             </Tooltip>
         </Layout>
     );
-};
-
-export default TooltipExample;
+}

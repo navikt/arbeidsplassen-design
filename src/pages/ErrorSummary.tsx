@@ -1,7 +1,7 @@
 import { ErrorSummary } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const ErrorSummaryExample = () => {
+export default function ErrorSummaryExample() {
     return (
         <Layout title="ErrorSummary">
             <ErrorSummary heading="Du må fikse disse feilene før du kan sende inn søknad." headingTag="h3">
@@ -10,6 +10,4 @@ const ErrorSummaryExample = () => {
             </ErrorSummary>
         </Layout>
     );
-};
-
-export default ErrorSummaryExample;
+}

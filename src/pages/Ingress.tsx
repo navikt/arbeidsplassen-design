@@ -1,7 +1,7 @@
 import { Ingress } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const IngressExample = () => {
+export default function IngressExample() {
     return (
         <Layout title="Ingress (avviklet)">
             <Ingress>
@@ -10,6 +10,4 @@ const IngressExample = () => {
             </Ingress>
         </Layout>
     );
-};
-
-export default IngressExample;
+}
