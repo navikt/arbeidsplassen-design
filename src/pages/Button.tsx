@@ -4,9 +4,18 @@ import { TrashIcon } from "@navikt/aksel-icons";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
-const ButtonExample = () => {
-    const [size, setSize] = useState("medium");
-    const [variant, setVariant] = useState("primary");
+type ButtonVariant =
+    | "primary"
+    | "primary-neutral"
+    | "secondary"
+    | "secondary-neutral"
+    | "tertiary"
+    | "tertiary-neutral"
+    | "danger";
+
+export default function ButtonExample() {
+    const [size, setSize] = useState<"medium" | "small" | "xsmall">("medium");
+    const [variant, setVariant] = useState<ButtonVariant>("primary");
     const [loading, setLoading] = useState(false);
 
     return (
@@ -43,6 +52,4 @@ const ButtonExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default ButtonExample;
+}

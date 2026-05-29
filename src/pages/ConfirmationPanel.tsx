@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { ConfirmationPanel, HStack, Radio, RadioGroup } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
 import PropsCard from "@/examples/PropsCard";
+import Layout from "@/examples/Layout";
+import { PLACEHOLDER_INPUT_ERROR } from "@/examples/placeholders";
 
-const ConfirmationPanelExample = () => {
+export default function ConfirmationPanelExample() {
     const [checked, setChecked] = useState(false);
     const [error, setError] = useState(false);
 
@@ -13,7 +14,7 @@ const ConfirmationPanelExample = () => {
                 checked={checked}
                 label="Ja, jeg samtykker."
                 onChange={() => setChecked((x) => !x)}
-                error={error ? "Dette ser feil ut!" : undefined}
+                error={error ? PLACEHOLDER_INPUT_ERROR : undefined}
             >
                 For å komme videre må du gi oss lov til å hente inn og bruke opplysninger om deg.
             </ConfirmationPanel>
@@ -28,6 +29,4 @@ const ConfirmationPanelExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default ConfirmationPanelExample;
+}

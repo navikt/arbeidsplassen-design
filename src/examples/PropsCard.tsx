@@ -15,4 +15,4 @@ export default function PropsCard({ children }: PropsCardProps) {
             <InfoCard.Content>{children}</InfoCard.Content>
         </InfoCard>
     );
-};
+}

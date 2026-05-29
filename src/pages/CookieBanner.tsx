@@ -1,8 +1,8 @@
 import { Switch } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
 import { useState } from "react";
+import Layout from "@/examples/Layout";
 
-const CookieBannerExample = () => {
+export default function CookieBannerExample() {
     const [showCookieBanner, setShowCookieBanner] = useState(true);
 
     return (
@@ -23,6 +23,4 @@ const CookieBannerExample = () => {
             </Switch>
         </Layout>
     );
-};
-
-export default CookieBannerExample;
+}

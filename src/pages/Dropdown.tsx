@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Button, Dropdown } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const DropdownExample = () => {
+export default function DropdownExample() {
     return (
         <Layout title="Dropdown">
             <Dropdown>
@@ -28,6 +28,4 @@ const DropdownExample = () => {
             </Dropdown>
         </Layout>
     );
-};
-
-export default DropdownExample;
+}

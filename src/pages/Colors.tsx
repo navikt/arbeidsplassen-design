@@ -1,7 +1,7 @@
-import Layout from "../examples/Layout";
 import { BodyShort, Box, Heading, HGrid } from "@navikt/ds-react";
+import Layout from "@/examples/Layout";
 
-const ColorsExample = () => {
+export default function ColorsExample() {
     return (
         <Layout title="Colors">
             <div>
@@ -18,7 +18,7 @@ const ColorsExample = () => {
                     "meta-lime",
                     "meta-purple",
                 ].map((color) => (
-                    <Box paddingBlock="4">
+                    <Box paddingBlock="space-16">
                         <Heading size="small" level="2">
                             {color}
                         </Heading>
@@ -43,6 +43,4 @@ const ColorsExample = () => {
             </div>
         </Layout>
     );
-};
-
-export default ColorsExample;
+}

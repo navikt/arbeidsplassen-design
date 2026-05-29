@@ -9,14 +9,20 @@ import {
     PLACEHOLDER_INPUT_OPTIONS,
 } from "@/examples/placeholders";
 
-const handleChange = (val) => console.log(val);
+const handleChange = (val: string[]) => console.log(val);
 
-function CheckboxTemplate({ error, disabled, readOnly }) {
+interface CheckboxTemplateProps {
+    error?: boolean;
+    disabled?: boolean;
+    readOnly?: boolean;
+}
+
+function CheckboxTemplate({ error, disabled, readOnly }: CheckboxTemplateProps) {
     return (
         <CheckboxGroup
             legend={PLACEHOLDER_INPUT_LABEL}
             description={PLACEHOLDER_INPUT_DESCRIPTION}
-            onChange={(val) => handleChange(val)}
+            onChange={handleChange}
             defaultValue={["Brød"]}
             error={error ? PLACEHOLDER_INPUT_ERROR : undefined}
             disabled={disabled}
@@ -32,7 +38,7 @@ function CheckboxTemplate({ error, disabled, readOnly }) {
     );
 }
 
-const CheckboxExample = () => {
+export default function CheckboxExample() {
     const [error, setError] = useState(false);
     const [disabled, setDisabled] = useState(false);
     const [readOnly, setReadOnly] = useState(false);
@@ -59,6 +65,4 @@ const CheckboxExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default CheckboxExample;
+}

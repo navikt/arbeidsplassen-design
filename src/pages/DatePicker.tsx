@@ -1,7 +1,7 @@
 import { DatePicker, useDatepicker } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const DatePickerExample = () => {
+export default function DatePickerExample() {
     const { datepickerProps, inputProps, selectedDay } = useDatepicker({
         fromDate: new Date("Aug 23 2019"),
         onDateChange: console.log,
@@ -14,6 +14,4 @@ const DatePickerExample = () => {
             </DatePicker>
         </Layout>
     );
-};
-
-export default DatePickerExample;
+}

@@ -4,8 +4,10 @@ import Layout from "../examples/Layout";
 import PropsCard from "@/examples/PropsCard";
 import { PLACEHOLDER_INPUT_LABEL, PLACEHOLDER_INPUT_OPTIONS } from "@/examples/placeholders";
 
-const AccordionExample = () => {
-    const [size, setSize] = useState("medium");
+type AccordionSize = "small" | "medium" | "large";
+
+export default function AccordionExample() {
+    const [size, setSize] = useState<AccordionSize>("medium");
     const [indent, setIndent] = useState(true);
     return (
         <Layout title="Accordion">
@@ -39,6 +41,4 @@ const AccordionExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default AccordionExample;
+}

@@ -1,13 +1,15 @@
-import React, { useState } from "react";
-import Layout from "../examples/Layout";
+import { useState } from "react";
 import { ComboboxExternalItems } from "@navikt/arbeidsplassen-react";
+import type { ComboboxItem } from "@navikt/arbeidsplassen-react";
 import { PLACEHOLDER_INPUT_OPTIONS } from "@/examples/placeholders";
+import Layout from "@/examples/Layout";
 
-const ComboboxExternalItemsExample = () => {
-    const [items, setItems] = useState(PLACEHOLDER_INPUT_OPTIONS);
+export default function ComboboxExternalItemsExample() {
+    const [items, setItems] = useState<string[]>(PLACEHOLDER_INPUT_OPTIONS);
 
-    const removeItem = (val) => {
-        setItems(() => (val.length === 1 ? options : items.filter((y) => y !== val)));
+    const removeItem = (val: ComboboxItem) => {
+        const valStr = typeof val === "string" ? val : val.value;
+        setItems((prev) => prev.filter((y) => y !== valStr));
     };
 
     return (
@@ -20,6 +22,4 @@ const ComboboxExternalItemsExample = () => {
             ></ComboboxExternalItems>
         </Layout>
     );
-};
-
-export default ComboboxExternalItemsExample;
+}

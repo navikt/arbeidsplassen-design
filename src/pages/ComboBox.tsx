@@ -1,12 +1,12 @@
 import { UNSAFE_Combobox } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
 import {
     PLACEHOLDER_INPUT_DESCRIPTION,
     PLACEHOLDER_INPUT_LABEL,
     PLACEHOLDER_INPUT_OPTIONS,
 } from "@/examples/placeholders";
+import Layout from "@/examples/Layout";
 
-const ComboBoxExample = () => {
+export default function ComboBoxExample() {
     return (
         <Layout title="ComboBox">
             <UNSAFE_Combobox
@@ -18,6 +18,4 @@ const ComboBoxExample = () => {
             />
         </Layout>
     );
-};
-
-export default ComboBoxExample;
+}

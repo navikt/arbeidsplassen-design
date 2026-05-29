@@ -1,10 +1,11 @@
 import { CheckboxField } from "@navikt/arbeidsplassen-react";
 import { useState } from "react";
-import Layout from "../examples/Layout";
-import PropsCard from "../examples/PropsCard";
 import { HStack, Radio, RadioGroup } from "@navikt/ds-react";
+import { PLACEHOLDER_INPUT_ERROR } from "@/examples/placeholders";
+import Layout from "@/examples/Layout";
+import PropsCard from "@/examples/PropsCard";
 
-const CheckboxFieldExample = () => {
+export default function CheckboxFieldExample() {
     const [checked, setChecked] = useState(false);
     const [error, setError] = useState(false);
 
@@ -14,7 +15,7 @@ const CheckboxFieldExample = () => {
                 label="Ja, jeg samtykker."
                 checked={checked}
                 onChange={setChecked}
-                error={error ? "Dette ser feil ut!" : undefined}
+                error={error ? PLACEHOLDER_INPUT_ERROR : undefined}
             >
                 For å komme videre må du gi oss lov til å hente inn og bruke opplysninger om deg.
             </CheckboxField>
@@ -28,6 +29,4 @@ const CheckboxFieldExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default CheckboxFieldExample;
+}
