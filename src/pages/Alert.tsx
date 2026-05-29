@@ -1,12 +1,12 @@
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { Alert, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import { PLACEHOLDER_PARAGRAPH } from "@/examples/placeholders";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
-const GlobalAlertExample = () => {
-    const [variant, setVariant] = useState("error");
-    const [size, setSize] = useState("medium");
+export default function AlertExample() {
+    const [variant, setVariant] = useState<"info" | "success" | "warning" | "error">("error");
+    const [size, setSize] = useState<"small" | "medium">("medium");
     const [fullWidth, setFullWidth] = useState(false);
     const [inline, setInline] = useState(false);
 
@@ -40,6 +40,4 @@ const GlobalAlertExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default GlobalAlertExample;
+}
