@@ -1,6 +1,7 @@
+import { type ReactNode } from "react";
 import Link from "next/link";
 import { BodyLong, Heading, HGrid, Link as AkselLink, Page } from "@navikt/ds-react";
-import { CookieBanner, Header, SkipLink } from "@navikt/arbeidsplassen-react";
+import { CookieBanner, Header, SkipLink, type HeaderProps } from "@navikt/arbeidsplassen-react";
 import Footer from "@/packages/arbeidsplassen-react/Footer/Footer";
 
 const arbeidsplassenComponents = [
@@ -57,13 +58,15 @@ const akselComponents = [
     "Typography",
 ].sort();
 
-export default function Layout({
-    children,
-    title,
-    headerArgs,
-    cookieBannerArgs,
-}) {
-    headerArgs = {
+interface LayoutProps {
+    children?: ReactNode;
+    title: string;
+    headerArgs?: Partial<HeaderProps>;
+    cookieBannerArgs?: { onClose: () => void } | false;
+}
+
+export default function Layout({ children, title, headerArgs, cookieBannerArgs }: LayoutProps) {
+    const mergedHeaderArgs = {
         onLogin: console.log,
         onLogout: console.log,
         ...headerArgs,
@@ -74,12 +77,12 @@ export default function Layout({
             <SkipLink />
             <Page.Block width="2xl" gutters>
                 <Header
-                    variant={headerArgs.variant}
-                    authenticationStatus={headerArgs.authenticationStatus}
-                    muligheterAccessStatus={headerArgs.muligheterAccessStatus}
-                    active={headerArgs.active}
-                    onLogin={headerArgs.onLogin}
-                    onLogout={headerArgs.onLogout}
+                    variant={mergedHeaderArgs.variant}
+                    authenticationStatus={mergedHeaderArgs.authenticationStatus}
+                    muligheterAccessStatus={mergedHeaderArgs.muligheterAccessStatus}
+                    active={mergedHeaderArgs.active}
+                    onLogin={mergedHeaderArgs.onLogin}
+                    onLogout={mergedHeaderArgs.onLogout}
                 />
             </Page.Block>
             <Page.Block width="2xl" gutters as="main" id="main" className="mt-8 mb-24">
