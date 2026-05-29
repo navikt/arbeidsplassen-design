@@ -1,7 +1,11 @@
 import { LinkPanel } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-function Template({ skipDescription, className }) {
+interface TemplateProps {
+    className?: string;
+}
+
+function Template({ className }: TemplateProps) {
     return (
         <div className="mb-8">
             <LinkPanel href="#" className={className}>

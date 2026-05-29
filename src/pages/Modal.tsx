@@ -1,14 +1,14 @@
 import { BodyLong, Button, Heading, Modal } from "@navikt/ds-react";
 import { useState } from "react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 
-const ModalExample = () => {
+export default function ModalExample() {
     const [open, setOpen] = useState(false);
 
     return (
         <Layout title="Modal">
             <Button onClick={() => setOpen(true)}>Åpne modal</Button>
-            <Modal open={open} onClose={() => setOpen(false)}>
+            <Modal open={open} onClose={() => setOpen(false)} aria-label="Eksempel modal">
                 <Modal.Header>
                     <Heading level="1" size="large">
                         Laborum proident id ullamco
@@ -37,6 +37,4 @@ const ModalExample = () => {
             </Modal>
         </Layout>
     );
-};
-
-export default ModalExample;
+}

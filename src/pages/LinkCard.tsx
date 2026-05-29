@@ -1,16 +1,16 @@
 import { HStack, LinkCard, Radio, RadioGroup } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { useState } from "react";
 import { PLACEHOLDER_HEADING, PLACEHOLDER_PARAGRAPH } from "@/examples/placeholders";
 import PropsCard from "@/examples/PropsCard";
 
 export default function LinkCardExample() {
-    const [arrowPosition, setArrowPosition] = useState("baseline");
-    const [size, setSize] = useState("medium");
+    const [arrowPosition, setArrowPosition] = useState<"center" | "baseline">("baseline");
+    const [size, setSize] = useState<"small" | "medium">("medium");
 
     return (
         <Layout title="LinkCard">
-            <LinkCard arrowPosition={arrowPosition} size={size} href="#">
+            <LinkCard arrowPosition={arrowPosition} size={size}>
                 <LinkCard.Title>
                     <LinkCard.Anchor href="#">{PLACEHOLDER_HEADING}</LinkCard.Anchor>
                 </LinkCard.Title>
