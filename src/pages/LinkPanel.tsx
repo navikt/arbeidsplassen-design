@@ -10,11 +10,9 @@ function Template({ className }: TemplateProps) {
         <div className="mb-8">
             <LinkPanel href="#" className={className}>
                 <LinkPanel.Title>Møt en bedrift</LinkPanel.Title>
-                {!skipDescription && (
-                    <LinkPanel.Description>
-                        Følg en direkte sending og bli kjent med bedriften og deres stillinger.
-                    </LinkPanel.Description>
-                )}
+                <LinkPanel.Description>
+                    Følg en direkte sending og bli kjent med bedriften og deres stillinger.
+                </LinkPanel.Description>
             </LinkPanel>
         </div>
     );

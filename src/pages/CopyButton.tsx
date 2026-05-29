@@ -4,7 +4,7 @@ import PropsCard from "@/examples/PropsCard";
 import Layout from "@/examples/Layout";
 
 export default function CopyButtonExample() {
-    const [variant, setVariant] = useState<"neutral" | "action">("neutral");
+    const [variant, setVariant] = useState<"neutral" | "accent">("neutral");
 
     return (
         <Layout title="CopyButton">
@@ -21,7 +21,7 @@ export default function CopyButtonExample() {
             <PropsCard>
                 <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
-                        {["neutral", "action"].map((option) => (
+                        {["neutral", "accent"].map((option) => (
                             <Radio value={option}>{option}</Radio>
                         ))}
                     </RadioGroup>

@@ -3,6 +3,19 @@ import Layout from "@/examples/Layout";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
+type TagVariant = "outline" | "moderate" | "strong";
+
+const tagColors = [
+    "info",
+    "success",
+    "warning",
+    "danger",
+    "neutral",
+    "meta-purple",
+    "meta-lime",
+    "brand-blue",
+] as const;
+
 export default function TagExample() {
     const [variant, setVariant] = useState<TagVariant>("outline");
     const [size, setSize] = useState<"xsmall" | "small" | "medium">("medium");
@@ -20,7 +33,7 @@ export default function TagExample() {
             <PropsCard>
                 <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
-                        {["default", "moderate", "filled"].map((option) => (
+                        {["outline", "moderate", "strong"].map((option) => (
                             <Radio value={option}>{option}</Radio>
                         ))}
                     </RadioGroup>

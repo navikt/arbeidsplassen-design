@@ -52,7 +52,7 @@ export default function TableExample() {
 
     return (
         <Layout title="Table">
-            <Table sort={sort} onSortChange={(sortKey) => handleSort(sortKey)}>
+            <Table sort={sort} onSortChange={(sortKey) => handleSort(sortKey as keyof TableRow)}>
                 <Table.Header>
                     <Table.Row>
                         <Table.DataCell>
