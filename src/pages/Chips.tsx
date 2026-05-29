@@ -1,17 +1,19 @@
 import { Chips, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
 import { useState } from "react";
-import Layout from "../examples/Layout";
 import PropsCard from "@/examples/PropsCard";
 import { PLACEHOLDER_INPUT_OPTIONS } from "@/examples/placeholders";
+import Layout from "@/examples/Layout";
 
-const ChipsExample = () => {
+type DataColor = "neutral" | "accent";
+
+export default function ChipsExample() {
     const options = PLACEHOLDER_INPUT_OPTIONS;
 
-    const [selected, setSelected] = useState(["Brød"]);
-    const [filter, setFilter] = useState(options);
+    const [selected, setSelected] = useState<string[]>(["Brød"]);
+    const [filter, setFilter] = useState<string[]>(options);
 
-    const [variant, setVariant] = useState("action");
-    const [size, setSize] = useState("medium");
+    const [variant, setVariant] = useState<DataColor>("accent");
+    const [size, setSize] = useState<"small" | "medium">("medium");
     const [checkmark, setCheckmark] = useState(true);
 
     return (
@@ -56,7 +58,7 @@ const ChipsExample = () => {
             <PropsCard>
                 <HStack gap="space-24">
                     <RadioGroup legend="variant" value={variant} onChange={setVariant}>
-                        {["action", "neutral"].map((option) => (
+                        {["accent", "neutral"].map((option) => (
                             <Radio value={option}>{option}</Radio>
                         ))}
                     </RadioGroup>
@@ -73,6 +75,4 @@ const ChipsExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default ChipsExample;
+}
