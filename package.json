@@ -21,6 +21,7 @@
   "dependencies": {
     "@babel/traverse": ">=7.29.0",
     "@navikt/aksel-icons": "^8.10.1",
+    "@navikt/arbeidsplassen-react": "workspace:*",
     "@navikt/ds-css": "^8.10.3",
     "@navikt/ds-react": "^8.10.3",
     "next": "^14.2.26",

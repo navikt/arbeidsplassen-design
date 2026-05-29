@@ -12,7 +12,7 @@ import {
     FigureWithMagnifier,
     WavingFigure,
     WorriedFigure,
-} from "../packages/arbeidsplassen-react/illustrations";
+} from "@navikt/arbeidsplassen-react";
 
 export default function IllustrationsExample() {
     return (
