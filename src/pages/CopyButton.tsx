@@ -1,7 +1,7 @@
 import { CopyButton, Heading, HStack, Radio, RadioGroup } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
+import Layout from "@/examples/Layout";
 
 export default function CopyButtonExample() {
     const [variant, setVariant] = useState<"neutral" | "action">("neutral");
