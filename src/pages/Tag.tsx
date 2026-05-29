@@ -1,18 +1,18 @@
 import { HStack, Radio, RadioGroup, Tag } from "@navikt/ds-react";
-import Layout from "../examples/Layout";
+import Layout from "@/examples/Layout";
 import { useState } from "react";
 import PropsCard from "@/examples/PropsCard";
 
-const TagExample = () => {
-    const [variant, setVariant] = useState("default");
-    const [size, setSize] = useState("medium");
+export default function TagExample() {
+    const [variant, setVariant] = useState<TagVariant>("outline");
+    const [size, setSize] = useState<"xsmall" | "small" | "medium">("medium");
 
     return (
         <Layout title="Tag">
             <HStack gap="space-4" className="mb-16">
-                {["info", "success", "warning", "error", "neutral", "alt1", "alt2", "alt3"].map((tag) => (
-                    <Tag variant={variant !== "default" ? `${tag}-${variant}` : tag} size={size}>
-                        {tag}
+                {tagColors.map((color) => (
+                    <Tag variant={variant} data-color={color} size={size} key={color}>
+                        {color}
                     </Tag>
                 ))}
             </HStack>
@@ -33,6 +33,4 @@ const TagExample = () => {
             </PropsCard>
         </Layout>
     );
-};
-
-export default TagExample;
+}
