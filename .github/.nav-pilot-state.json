@@ -1,8 +1,8 @@
 {
   "collection": "nextjs-frontend",
-  "version": "2026.05.19-124507-b57b838",
+  "version": "2026.06.03-174942-badb737",
   "scope": "repo",
-  "source_sha": "4967f58",
+  "source_sha": "badb737",
   "installed_at": "2026-05-20T11:37:04Z",
   "files": [
     {
@@ -15,11 +15,11 @@
     },
     {
       "path": ".github/agents/forfatter.agent.md",
-      "hash": "6cc31221eab50d30"
+      "hash": "3dd47103e9bf04a8"
     },
     {
       "path": ".github/agents/nav-pilot.agent.md",
-      "hash": "e50baf495f28613f"
+      "hash": "c04c7831376e7c56"
     },
     {
       "path": ".github/skills/aksel-spacing/",
@@ -35,7 +35,7 @@
     },
     {
       "path": ".github/skills/nav-plan/",
-      "hash": "0849265460ea23e2"
+      "hash": "0a160744cf2b4e82"
     },
     {
       "path": ".github/skills/nav-deep-interview/",
@@ -47,7 +47,7 @@
     },
     {
       "path": ".github/skills/nav-troubleshoot/",
-      "hash": "ce043cf29ce427b1"
+      "hash": "e9900d58d91ee0ee"
     },
     {
       "path": ".github/instructions/nextjs-aksel.instructions.md",
@@ -79,7 +79,7 @@
     },
     {
       "path": ".github/prompts/aksel-component.prompt.md",
-      "hash": "dbeb27a9cad0e768"
+      "hash": "8f6e07fff457bc3d"
     },
     {
       "path": ".github/prompts/nextjs-api-route.prompt.md",
