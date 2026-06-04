@@ -24,7 +24,7 @@ export default function PaginationExample() {
             <PropsCard>
                 <HStack gap="space-24">
                     <RadioGroup legend="size" value={size} onChange={setSize}>
-                        {["xsmall", "medium", "small"].map((option) => (
+                        {["xsmall", "small", "medium"].map((option) => (
                             <Radio value={option}>{option}</Radio>
                         ))}
                     </RadioGroup>
