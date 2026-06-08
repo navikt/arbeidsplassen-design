@@ -1,0 +1,146 @@
+import { type ReactNode } from "react";
+import Link from "next/link";
+import { BodyLong, Heading, HGrid, Link as AkselLink, Page } from "@navikt/ds-react";
+import { CookieBanner, Footer, Header, SkipLink, type HeaderProps } from "@navikt/arbeidsplassen-react";
+
+const arbeidsplassenComponents = [
+    "ComboboxExternalItems",
+    "CookieBanner",
+    "FeedbackButton",
+    "Header",
+    "Illustrations",
+    "LoginPage",
+    "NotFound",
+    "RichText",
+    "SkipLink",
+    "Colors",
+    "CheckboxField",
+].sort();
+
+const deprecatedAkselComponents = ["Alert", "ConfirmationPanel", "Ingress", "LinkPanel"];
+
+const akselComponents = [
+    "Accordion",
+    "ActionMenu",
+    "Button",
+    "Checkbox",
+    "Chips",
+    "ComboBox",
+    "CopyButton",
+    "DatePicker",
+    "Dropdown",
+    "ErrorSummary",
+    "FormProgress",
+    "GlobalAlert",
+    "GuidePanel",
+    "Heading",
+    "HelpText",
+    "Link",
+    "LinkCard",
+    "List",
+    "Modal",
+    "Pagination",
+    "Popover",
+    "Radio",
+    "ReadMore",
+    "Search",
+    "Select",
+    "Stepper",
+    "Switch",
+    "Table",
+    "Tabs",
+    "Tag",
+    "Textarea",
+    "TextField",
+    "ToggleGroup",
+    "Tooltip",
+    "Typography",
+].sort();
+
+interface LayoutProps {
+    children?: ReactNode;
+    title: string;
+    headerArgs?: Partial<HeaderProps>;
+    cookieBannerArgs?: { onClose: () => void } | false;
+}
+
+export default function Layout({ children, title, headerArgs, cookieBannerArgs }: LayoutProps) {
+    const mergedHeaderArgs = {
+        onLogin: console.log,
+        onLogout: console.log,
+        ...headerArgs,
+    };
+    return (
+        <Page footer={<Footer />}>
+            {cookieBannerArgs && <CookieBanner headingLevel="2" onClose={cookieBannerArgs.onClose} />}
+            <SkipLink />
+            <Page.Block width="2xl" gutters>
+                <Header
+                    variant={mergedHeaderArgs.variant}
+                    authenticationStatus={mergedHeaderArgs.authenticationStatus}
+                    muligheterAccessStatus={mergedHeaderArgs.muligheterAccessStatus}
+                    active={mergedHeaderArgs.active}
+                    onLogin={mergedHeaderArgs.onLogin}
+                    onLogout={mergedHeaderArgs.onLogout}
+                />
+            </Page.Block>
+            <Page.Block width="2xl" gutters as="main" id="main" className="mt-8 mb-24">
+                <HGrid columns={{ md: "auto auto", lg: "350px auto" }}>
+                    <div>
+                        <Heading size="xsmall" level="3" spacing>
+                            Arbeidsplassen components
+                        </Heading>
+                        <ul>
+                            {arbeidsplassenComponents.map((it) => (
+                                <li key={it}>
+                                    <BodyLong>
+                                        <AkselLink as={Link} href={`/${it}`}>
+                                            {it}
+                                        </AkselLink>
+                                    </BodyLong>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <Heading size="xsmall" level="3" spacing>
+                            Aksel components
+                        </Heading>
+                        <ul>
+                            {akselComponents.map((it) => (
+                                <li key={it}>
+                                    <BodyLong>
+                                        <AkselLink as={Link} href={`/${it}`}>
+                                            {it}
+                                        </AkselLink>
+                                    </BodyLong>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <Heading size="xsmall" level="3" spacing>
+                            Avviklet
+                        </Heading>
+                        <ul>
+                            {deprecatedAkselComponents.map((it) => (
+                                <li key={it}>
+                                    <BodyLong>
+                                        <AkselLink as={Link} href={`/${it}`}>
+                                            {it}
+                                        </AkselLink>
+                                    </BodyLong>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <Heading size="xlarge" level="1" spacing>
+                            {title}
+                        </Heading>
+                        {children}
+                    </div>
+                </HGrid>
+            </Page.Block>
+        </Page>
+    );
+}

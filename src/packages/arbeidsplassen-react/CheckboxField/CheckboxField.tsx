@@ -1,36 +1,19 @@
-import React, {ComponentPropsWithoutRef, forwardRef} from "react";
+import { ComponentPropsWithoutRef, forwardRef, type ReactNode, useId } from "react";
 import { Checkbox, ErrorMessage } from "@navikt/ds-react";
 
 type AkselCheckBoxProps = ComponentPropsWithoutRef<typeof Checkbox>;
 export type CheckboxFieldProps = Omit<AkselCheckBoxProps, "error" | "errorId" | "onChange"> & {
-    label: React.ReactNode;
-    error?: React.ReactNode;
+    label: ReactNode;
+    error?: ReactNode;
     onChange?: (value: boolean) => void;
 };
 
 export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
-    (
-        {
-            label,
-            children,
-            error,
-            checked,
-            onChange,
-            size = "medium",
-            className,
-            ...checboxProps
-        },
-        ref
-    ) => {
-        const contentId = React.useId();
-        const errorId = React.useId();
+    ({ label, children, error, checked, onChange, size = "medium", className, ...checboxProps }, ref) => {
+        const contentId = useId();
+        const errorId = useId();
 
-        const describedBy = [
-            children && contentId,
-            error && errorId,
-        ]
-            .filter(Boolean)
-            .join(" ") || undefined;
+        const describedBy = [children && contentId, error && errorId].filter(Boolean).join(" ") || undefined;
 
         return (
             <div className={className}>
@@ -60,7 +43,7 @@ export const CheckboxField = forwardRef<HTMLInputElement, CheckboxFieldProps>(
                 )}
             </div>
         );
-    }
+    },
 );
 
 export default CheckboxField;
