@@ -1,5 +1,9 @@
-# Storybook bygges i CI — Docker-imagen inneholder kun de statiske filene
-FROM nginxinc/nginx-unprivileged:alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY storybook-static/ /usr/share/nginx/html/
+FROM cgr.dev/chainguard/nginx:latest
+
+USER nginx
+WORKDIR /app
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY storybook-static/ ./
+
 EXPOSE 8080

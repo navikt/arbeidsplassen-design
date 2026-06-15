@@ -5,8 +5,8 @@ export default create({
     // Typography
     fontBase: '"Open Sans", sans-serif',
     fontCode: "monospace",
-    brandTitle: "My custom Storybook",
-    brandUrl: "https://example.com",
+    brandTitle: "Arbeidsplassen Storybook",
+    brandUrl: "https://www.figma.com/design/wF4Pxarz2zhPQgoT9cRlk5/Designsystem-AP-2.0?node-id=2847-10087&m=dev",
     brandImage: "https://arbeidsplassen.nav.no/images/arbeidsplassen-logo.png",
     brandTarget: "_self",
 

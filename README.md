@@ -79,3 +79,49 @@ Eksempel-appen kjører på [http://localhost:3001](http://localhost:3001)
 - Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github (https://github.com/navikt/arbeidsplassen-design/actions)
 
 ## Bruker storybook for dokumentasjon
+
+### Kjøre Storybook lokalt
+
+```bash
+pnpm storybook
+```
+
+Storybook kjører på [http://localhost:6006](http://localhost:6006)
+
+### Kjøre UI-tester lokalt
+
+```bash
+pnpm test-storybook
+```
+
+Tester kjøres med Vitest + Playwright (Chromium) mot Storybook-stories.
+
+### CI-tester feiler med "Vite unexpectedly reloaded a test"
+
+Testen bruker Vite sin dep-optimizer. Når en avhengighet ikke er pre-bundlet på forhånd, oppdager Vite den under kjøring og reloader — noe som dreper pågående tester med feilmeldingen:
+
+```
+[vitest] Vite unexpectedly reloaded a test. This may cause tests to fail...
+Error: Vitest failed to find the current suite.
+```
+
+CI-loggen forteller deg nøyaktig hvilken dep som mangler:
+
+```
+✨ new dependencies optimized: <pakkenavn>
+✨ optimized dependencies changed. reloading
+```
+
+**Fix:** Legg til den manglende pakken i `optimizeDeps.include` i `vite.config.ts`:
+
+```ts
+optimizeDeps: {
+    entries: ["src/stories/**/*.stories.tsx"],
+    include: [
+        "react",
+        "react/jsx-runtime",
+        "react/jsx-dev-runtime",
+        // legg til <pakkenavn> her
+    ],
+},
+```

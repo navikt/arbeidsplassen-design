@@ -122,12 +122,12 @@ export const DetailComponent: Story = {
 
 export const ErrorMessageComponent: Story = {
     render: () => {
-        const exampeText = "Du må fylle ut tekstfeltet før innsending.";
+        const exampleText = "Du må fylle ut tekstfeltet før innsending.";
 
         return (
             <VStack gap="space-20">
-                <ErrorMessage>Medium (18px): {exampeText}</ErrorMessage>
-                <ErrorMessage size="small">Small (16px): {exampeText}</ErrorMessage>
+                <ErrorMessage>Medium (18px): {exampleText}</ErrorMessage>
+                <ErrorMessage size="small">Small (16px): {exampleText}</ErrorMessage>
             </VStack>
         );
     },
