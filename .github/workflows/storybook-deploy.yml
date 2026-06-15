@@ -1,17 +1,23 @@
 name: Build and deploy Storybook
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
+    branches: ['**']
 
 jobs:
   build-deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
+    if: |
+      github.ref_name == 'main' ||
+      contains(github.event.head_commit.message, 'deploy:dev') ||
+      github.event_name == 'workflow_dispatch'
     permissions:
       contents: read
       id-token: write
       actions: read
+      packages: read
     steps:
       - uses: actions/checkout@v4
 
