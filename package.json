@@ -1,36 +1,60 @@
 {
-  "name": "design",
-  "version": "0.1.0",
-  "private": false,
-  "packageManager": "pnpm@10.11.0",
-  "scripts": {
-    "dev": "next dev -p 3001",
-    "build": "next build",
-    "start": "next start",
-    "prettier:format": "npx prettier -w src",
-    "types": "tsc -p tsconfig.json",
-    "postinstall": "pnpm --filter @navikt/arbeidsplassen-react build"
-  },
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.28.5",
-    "@types/node": "^20.19.42",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "prettier": "^3.8.3"
-  },
-  "dependencies": {
-    "@babel/traverse": ">=7.29.0",
-    "@navikt/aksel-icons": "^8.11.1",
-    "@navikt/arbeidsplassen-react": "workspace:*",
-    "@navikt/ds-css": "^8.11.1",
-    "@navikt/ds-react": "^8.11.1",
-    "next": "^14.2.26",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "typescript": "5.9.3",
-    "zod": "^4.4.2"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+    "name": "design",
+    "version": "0.1.0",
+    "private": false,
+    "packageManager": "pnpm@10.11.0",
+    "scripts": {
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build -o storybook-static",
+        "prettier:format": "npx prettier -w src",
+        "types": "tsc -p tsconfig.json",
+        "postinstall": "pnpm --filter @navikt/arbeidsplassen-react build",
+        "build-storybook-docs": "storybook build --docs",
+        "test-storybook": "vitest --project=storybook",
+        "test-storybook:coverage": "vitest --project=storybook --coverage"
+    },
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.28.5",
+        "@storybook/addon-a11y": "^10.4.5",
+        "@storybook/addon-designs": "^11.1.3",
+        "@storybook/addon-docs": "^10.4.5",
+        "@storybook/addon-vitest": "^10.4.5",
+        "@storybook/react": "^10.4.5",
+        "@storybook/react-vite": "^10.4.5",
+        "@types/node": "^20.19.42",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "@vitejs/plugin-react": "^6.0.2",
+        "@vitest/browser": "^4.1.9",
+        "@vitest/browser-playwright": "^4.1.9",
+        "@vitest/coverage-v8": "^4.1.9",
+        "mockdate": "^3.0.5",
+        "msw": "^2.14.6",
+        "msw-storybook-addon": "^2.0.7",
+        "playwright": "^1.60.0",
+        "prettier": "^3.8.3",
+        "storybook": "^10.4.5",
+        "vite": "^6.0.0",
+        "vite-plus": "^0.1.24",
+        "vitest": "^4.1.9"
+    },
+    "dependencies": {
+        "@babel/traverse": ">=7.29.0",
+        "@navikt/aksel-icons": "^8.11.1",
+        "@navikt/arbeidsplassen-react": "workspace:*",
+        "@navikt/ds-css": "^8.11.1",
+        "@navikt/ds-react": "^8.11.1",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "typescript": "5.9.3",
+        "zod": "^4.4.2"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "msw": {
+        "workerDirectory": [
+            "public"
+        ]
+    }
 }
