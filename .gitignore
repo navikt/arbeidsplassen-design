@@ -13,12 +13,8 @@ dist-types/
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
+# storybook
+/storybook-static/
 
 # misc
 .DS_Store
@@ -35,4 +31,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+# next.js
+/.next/
+.env*.local
 

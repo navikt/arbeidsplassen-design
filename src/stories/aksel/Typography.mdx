@@ -1,0 +1,37 @@
+import { Canvas , Meta } from "@storybook/addon-docs/blocks";
+
+import * as TypographyStories from "./Typography.stories";
+
+<Meta of={TypographyStories} />
+
+# Typography
+Et sett med komponenter for typografi-stilene
+
+Egnet til:
+- Overskrifter
+- Avsnitt
+- Komponent-tekst
+
+<Canvas of={TypographyStories.Default} />
+
+## Heading
+<Canvas of={TypographyStories.Headings} />
+
+## BodyLong
+<Canvas of={TypographyStories.BodyLongComponent} />
+
+## BodyShort
+<Canvas of={TypographyStories.BodyShortComponent} />
+
+## Label
+<Canvas of={TypographyStories.LabelComponent} />
+
+## Detail
+<Canvas of={TypographyStories.DetailComponent} />
+
+## ErrorMessage
+<Canvas of={TypographyStories.ErrorMessageComponent} />
+
+## Ingress
+BodyLong med size=large.
+<Canvas of={TypographyStories.IngressBodyLongLarge} />

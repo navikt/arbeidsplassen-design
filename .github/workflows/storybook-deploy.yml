@@ -1,0 +1,57 @@
+name: Build and deploy Storybook
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['**']
+
+jobs:
+  build-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    if: |
+      github.ref_name == 'main' ||
+      contains(github.event.head_commit.message, 'deploy:dev') ||
+      github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read
+      id-token: write
+      actions: read
+      packages: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Install dependencies
+        run: |
+          pnpm config set @navikt:registry https://npm.pkg.github.com
+          pnpm config set //npm.pkg.github.com/:_authToken $NODE_AUTH_TOKEN
+          pnpm install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Storybook
+        run: pnpm build-storybook
+
+      - name: Push Docker image to GAR
+        uses: nais/docker-build-push@v0
+        id: docker-build-push
+        with:
+          team: arbeidsplassen
+          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}
+          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }}
+
+      - name: Deploy to dev-gcp
+        uses: nais/deploy/actions/deploy@v2
+        env:
+          CLUSTER: dev-gcp
+          RESOURCE: .nais/dev.yaml
+          VAR: image=${{ steps.docker-build-push.outputs.image }}

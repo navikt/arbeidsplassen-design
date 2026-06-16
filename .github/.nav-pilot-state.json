@@ -1,8 +1,8 @@
 {
   "collection": "nextjs-frontend",
-  "version": "2026.06.04-224557-2114270",
+  "version": "2026.06.10-110214-d01e504",
   "scope": "repo",
-  "source_sha": "2114270",
+  "source_sha": "d01e504",
   "installed_at": "2026-05-20T11:37:04Z",
   "files": [
     {
@@ -19,7 +19,7 @@
     },
     {
       "path": ".github/agents/nav-pilot.agent.md",
-      "hash": "1a77f9c4ecf37af8"
+      "hash": "f490eb3f9ca1e9a3"
     },
     {
       "path": ".github/skills/aksel-spacing/",
