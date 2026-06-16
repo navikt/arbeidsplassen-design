@@ -53,6 +53,11 @@ const preview: Preview = {
                 </>
             ),
         },
+        options: {
+            storySort: {
+                order: ["Arbeidsplassen", "Aksel", "Avviklet"],
+            },
+        },
     },
 };
 

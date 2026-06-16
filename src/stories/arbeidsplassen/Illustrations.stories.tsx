@@ -14,9 +14,6 @@ import {
     WorriedFigure,
 } from "@navikt/arbeidsplassen-react";
 
-// Illustrations er ikke en enkelt komponent — vis alle figurer samlet
-// Se utkommentert kode under for komplett liste
-
 const meta = {
     title: "Arbeidsplassen/Illustrations",
     tags: [],

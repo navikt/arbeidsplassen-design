@@ -32,9 +32,6 @@ function ColorSwatch({ cssVar, align }: { cssVar: string; align?: "end" }) {
     );
 }
 
-// Colors er ikke en komponent — det er en visning av CSS-variabler
-// Se utkommentert kode under for implementasjon med --arb-* og --ax-* tokens
-
 const meta = {
     title: "Arbeidsplassen/Colors",
     tags: [],

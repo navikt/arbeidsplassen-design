@@ -1,82 +1,164 @@
-# Ta i bruk designsystemet i ditt prosjekt
+# Arbeidsplassen designsystem
 
-Vi bruker design-komponentene til [Aksel](https://aksel.nav.no/) med vår egen "theme" som endrer farger og noen
-utvalgte css-variabler. I tillegg har vi noen egne React-komponenter, slik som `Header` og `Footer`.
+Dette repoet inneholder designsystemet for [arbeidsplassen.nav.no](https://arbeidsplassen.nav.no) - tema, CSS-stiler og React-komponenter som bygger på [Aksel](https://aksel.nav.no/), NAVs felles designsystem.
 
-## Installasjon
+**For deg som designer:** Bla gjennom komponentene i Storybook (menyen til venstre).  
+**For deg som utvikler:** Se installasjonsveiledningen nedenfor.
+
+---
+
+## Innhold
+
+| Pakke                                 | Innhold                                                                                                                                                  |
+|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `@navikt/arbeidsplassen-react`        | React-komponenter: `Header`, `Footer`, `CookieBanner`, `LoginPage`, `NotFound`, `SkipLink`, `CheckboxField`, `Feedback`, `RichText`, illustrasjoner m.m. |
+| `@navikt/arbeidsplassen-css`          | CSS for alle komponentene og arbeidsplassen-temaet                                                                                                       |
+| `@navikt/ds-react` + `@navikt/ds-css` | Aksel-komponenter (`Button`, `TextField`, `Select` osv.) med arbeidsplassen-farger                                                                       |
+
+---
+
+## For designere
+
+Alle komponenter har egne sider i Storybook med:
+
+- **Canvas** - interaktive eksempler med kontrollerbare props
+- **Docs** - automatisk generert API-dokumentasjon
+
+Se sidene under **Arbeidsplassen** i menyen for egne komponenter, og **Aksel** for felles NAV-komponenter.
+
+---
+
+## For utviklere
+
+### 1. Tilgang til `@navikt`-pakker
+
+Prosjektet bruker `@navikt`-pakker fra [GitHub Packages](https://github.com/orgs/navikt/packages). Du trenger en **Personal Access Token (PAT)** med `read:packages`-tilgang. Har du allerede en fra et annet Nav-prosjekt, kan du gjenbruke den.
+
+**Opprett PAT** (hvis du ikke har en): Gå til [github.com/settings/tokens](https://github.com/settings/tokens) → classic token med `read:packages` → velg **"Authorize token"** under **"Configure SSO"** for `@navikt`.
+
+**Sett `NODE_AUTH_TOKEN`** i shell-profilen din (`~/.zshrc` eller `~/.bashrc`):
+
+```bash
+export NODE_AUTH_TOKEN="ghp_ditt_token_her"
+```
+
+Åpne en ny terminal eller kjør `source ~/.zshrc`.
+
+> ⚠️ Lagre aldri et faktisk token direkte i `~/.npmrc` eller i shell-historikk.
+
+### 2. Installasjon
 
 ```bash
 pnpm add @navikt/ds-react @navikt/ds-css @navikt/arbeidsplassen-react @navikt/arbeidsplassen-css
 ```
 
-### Installer pakken sammen med Zod:
+#### Zod er et peer-dependency
+
+`@navikt/arbeidsplassen-react` bruker [Zod](https://zod.dev/) til validering, men inkluderer det ikke selv. Installer Zod v4 i applikasjonen din:
+
 ```bash
 pnpm add zod
 ```
 
-⚠️ Merk:
-Denne pakken bruker Zod til validering, men inkluderer det ikke selv.
-Applikasjonen din må derfor ha zod installert som avhengighet.
-Vi støtter Zod v4.
+### 3. Legg til tema
 
-## Bruk
+Arbeidsplassen-temaet aktiveres med et `data`-attributt på `<body>` (eller annet rotnivå-element):
 
-Legg til `data-theme="arbeidsplassen"` på for eksempel `body` i koden for å aktivere arbeidsplassen
-sitt "theme".
-
-Importer både css fra arbeidsplassen-design og fra Nav sitt designsystem i koden din, f.eks i `app.js`:
-
+```html
+<body data-theme="arbeidsplassen">
 ```
+
+### 4. Importer CSS
+
+I rotfilen din (f.eks. `app.tsx` eller `_app.tsx`):
+
+```ts
 import "@navikt/ds-css";
 import "@navikt/arbeidsplassen-css";
 ```
 
-Eksempel på bruk i din kode:
+### 5. Bruk komponenter
 
-```
-import { Header, Footer } from "@navikt/arbeidsplassen-react";
+```tsx
+// Egne arbeidsplassen-komponenter
+import { Header, Footer, CookieBanner } from "@navikt/arbeidsplassen-react";
+
+// Aksel-komponenter
 import { Button, TextField } from "@navikt/ds-react";
 ```
 
-## Hvordan få tilgang til @navikt/arbeidsplassen-react og @navikt/arbeidsplassen-css
+---
 
-Opprett fila `.npmrc` i hjemkatalogen din. F.eks. `~/.npmrc` Mer info: https://docs.npmjs.com/cli/v9/configuring-npm/npmrc
+## Lokal utvikling
 
-Legg til følgende i fila
-
-```
-@navikt:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=$TOKEN
-```
-
-Opprett et token med "read:packages" rettigheter. [https://github.com/settings/tokens](https://github.com/settings/tokens) Bytt ut \$TOKEN med tokenet du akkurat opprettet. Velg Authorize token under "Configure SSO" for å gi tokenet tilgang til @navikt.
-
-Ikke sjekk inn `.npmrc` til GitHub.
-
-Mer informasjon om autentisering: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token
-
-## Kjøre arbeidsplassen-design lokalt
-
-For å kunne utvikle og teste css og egne komponenter har vi en Next.js app som viser alle komponentene våre
+### Kjøre Storybook lokalt
 
 ```bash
 pnpm install
-pnpm dev
+pnpm storybook
 ```
 
-Eksempel-appen kjører på [http://localhost:3001](http://localhost:3001)
+Storybook kjører på [http://localhost:6006](http://localhost:6006).
+
+### Kjøre UI-tester lokalt
+
+```bash
+pnpm test-storybook
+```
+
+Tester kjøres med Vitest + Playwright (Chromium) mot Storybook-stories.
+
+---
 
 ## Publisere nye versjoner
 
-### arbeidsplassen-react
+Pakker publiseres manuelt via GitHub Actions.
 
-- Endre `version` i `src/packages/arbeidsplassen-react/package.json` til ny versjon du ønsker å publisere.
-- Kjør `Publish REACT package` workflow under fanen `Actions` på repositoryet på Github (https://github.com/navikt/arbeidsplassen-design/actions)
+### `@navikt/arbeidsplassen-react`
 
-### arbeidsplassen-css
+1. Oppdater `version` i `src/packages/arbeidsplassen-react/package.json`.
+2. Kjør workflowen **Publish REACT package** under [Actions](https://github.com/navikt/arbeidsplassen-design/actions).
 
-- Endre `version` i `src/packages/arbeidsplassen-css/package.json` til ny versjon du ønsker å publisere.
-- Kjør `Publish CSS package` workflow under fanen `Actions` på repositoryet på Github (https://github.com/navikt/arbeidsplassen-design/actions)
+### `@navikt/arbeidsplassen-css`
+
+1. Oppdater `version` i `src/packages/arbeidsplassen-css/package.json`.
+2. Kjør workflowen **Publish CSS package** under [Actions](https://github.com/navikt/arbeidsplassen-design/actions).
+
+---
+
+## Feilsøking
+
+### «Vite unexpectedly reloaded a test»
+
+Tester bruker Vites dep-optimizer. Når en avhengighet ikke er pre-bundlet på forhånd, oppdager Vite den under kjøring og reloader - noe som dreper pågående tester:
+
+```
+[vitest] Vite unexpectedly reloaded a test. This may cause tests to fail,
+lead to flaky behaviour or duplicated test runs.
+Error: Vitest failed to find the current suite.
+```
+
+CI-loggen forteller deg hvilken pakke som mangler:
+
+```
+✨ new dependencies optimized: <pakkenavn>
+✨ optimized dependencies changed. reloading
+```
+
+**Løsning:** Legg til den manglende pakken i `optimizeDeps.include` i `vite.config.ts`:
+
+```ts
+optimizeDeps: {
+    entries: ["src/stories/**/*.stories.tsx"],
+    include: [
+        "react",
+        "react/jsx-runtime",
+        "react/jsx-dev-runtime",
+        // legg til <pakkenavn> her
+    ]
+}
+```
+
 
 ## Bruker storybook for dokumentasjon
 
@@ -98,7 +180,7 @@ Tester kjøres med Vitest + Playwright (Chromium) mot Storybook-stories.
 
 ### CI-tester feiler med "Vite unexpectedly reloaded a test"
 
-Testen bruker Vite sin dep-optimizer. Når en avhengighet ikke er pre-bundlet på forhånd, oppdager Vite den under kjøring og reloader — noe som dreper pågående tester med feilmeldingen:
+Testen bruker Vite sin dep-optimizer. Når en avhengighet ikke er pre-bundlet på forhånd, oppdager Vite den under kjøring og reloader - noe som dreper pågående tester med feilmeldingen:
 
 ```
 [vitest] Vite unexpectedly reloaded a test. This may cause tests to fail...
@@ -122,6 +204,6 @@ optimizeDeps: {
         "react/jsx-runtime",
         "react/jsx-dev-runtime",
         // legg til <pakkenavn> her
-    ],
-},
+    ]
+}
 ```
