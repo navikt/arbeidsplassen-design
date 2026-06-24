@@ -42,7 +42,7 @@
         "@babel/traverse": ">=7.29.0",
         "@navikt/aksel-icons": "^8.11.1",
         "@navikt/arbeidsplassen-react": "workspace:*",
-        "@navikt/ds-css": "^8.11.1",
+        "@navikt/ds-css": "^8.13.0",
         "@navikt/ds-react": "^8.11.1",
         "react": "18.3.1",
         "react-dom": "18.3.1",
