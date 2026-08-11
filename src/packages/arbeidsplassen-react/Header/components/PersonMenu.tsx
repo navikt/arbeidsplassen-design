@@ -19,11 +19,6 @@ export default function PersonMenu({ active, showMuligheter }: PersonMenuProps) 
                     Ung
                 </MenuItem>
             </li>
-            <li>
-                <MenuItem href="/sommerjobb" active={active} id="sommerjobb">
-                    Sommerjobben {new Date().getFullYear()} ☀️
-                </MenuItem>
-            </li>
 
             {showMuligheter && (
                 <li>
