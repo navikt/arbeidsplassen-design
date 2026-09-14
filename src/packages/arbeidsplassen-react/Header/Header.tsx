@@ -3,7 +3,7 @@ import Logo from "./components/Logo";
 import MenuButton from "./components/MenuButton";
 import LoggedInContent from "./components/LoggedInContent";
 import MenuLinks from "./components/MenuLinks";
-import type { AuthenticationStatus, MuligheterAccessStatus, Variant, Active, HeaderLang } from "./types";
+import type { AuthenticationStatus, Variant, Active, HeaderLang } from "./types";
 
 function joinClassNames(...strings: (string | undefined)[]) {
     return strings.filter((x) => typeof x === "string" && x.length > 0).join(" ");
@@ -14,7 +14,6 @@ export interface HeaderProps {
     variant?: Variant;
     active?: Active;
     authenticationStatus?: AuthenticationStatus;
-    muligheterAccessStatus?: MuligheterAccessStatus;
     onLogin: MouseEventHandler<HTMLButtonElement>;
     onLogout: MouseEventHandler<HTMLButtonElement>;
     lang?: HeaderLang;
@@ -25,7 +24,6 @@ export default function Header({
     variant = "all",
     active,
     authenticationStatus = "unknown",
-    muligheterAccessStatus = "no-access",
     onLogin,
     onLogout,
     lang = "nb",
@@ -35,9 +33,6 @@ export default function Header({
     const toggleMenu = () => {
         setIsMobileMenuHidden((prevState) => !prevState);
     };
-
-    // TODO: Temporary option, remove when "Muligheter"-mvp is EOL.
-    const showMuligheter = muligheterAccessStatus === "has-access" && authenticationStatus === "is-authenticated";
 
     return (
         <header className="arb-header-wrapper" lang={lang}>
@@ -51,7 +46,6 @@ export default function Header({
                         variant={variant}
                         active={active}
                         className="arb-header-links-above-large"
-                        showMuligheter={showMuligheter}
                     />
 
                     <div className="arb-header-spacer" />
@@ -76,7 +70,6 @@ export default function Header({
                         variant={variant}
                         active={active}
                         className="arb-header-links-below-large"
-                        showMuligheter={showMuligheter}
                     />
 
                     <LoggedInContent

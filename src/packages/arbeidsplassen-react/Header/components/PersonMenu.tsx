@@ -3,10 +3,9 @@ import type { Active } from "../types";
 
 interface PersonMenuProps {
     active?: Active;
-    showMuligheter?: boolean;
 }
 
-export default function PersonMenu({ active, showMuligheter }: PersonMenuProps) {
+export default function PersonMenu({ active }: PersonMenuProps) {
     return (
         <ul>
             <li>
@@ -19,14 +18,6 @@ export default function PersonMenu({ active, showMuligheter }: PersonMenuProps) 
                     Ung
                 </MenuItem>
             </li>
-
-            {showMuligheter && (
-                <li>
-                    <MenuItem href="/muligheter" active={active} id="muligheter">
-                        Reserverte stillinger
-                    </MenuItem>
-                </li>
-            )}
             <li className="arb-header-divider">
                 <MenuItem href="/bedrift" id="for-bedrifter">
                     For bedrifter
