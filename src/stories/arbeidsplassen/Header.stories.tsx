@@ -15,13 +15,9 @@ const meta = {
             control: "select",
             options: ["unknown", "is-authenticated", "not-authenticated"],
         },
-        muligheterAccessStatus: {
-            control: "select",
-            options: ["has-access", "no-access"],
-        },
         active: {
             control: "select",
-            options: ["ledige-stillinger", "ung", "sommerjobb", "stillingsannonser", "muligheter"],
+            options: ["ledige-stillinger", "ung", "sommerjobb", "stillingsannonser"],
         },
     },
     args: {
@@ -37,7 +33,6 @@ export const PersonInnlogget: Story = {
     args: {
         variant: "person",
         authenticationStatus: "is-authenticated",
-        muligheterAccessStatus: "no-access",
         active: "ledige-stillinger",
     },
     play: async ({ canvas }) => {
@@ -49,7 +44,6 @@ export const PersonUinnlogget: Story = {
     args: {
         variant: "person",
         authenticationStatus: "not-authenticated",
-        muligheterAccessStatus: "no-access",
         active: "ledige-stillinger",
     },
 };
@@ -58,16 +52,6 @@ export const Company: Story = {
     args: {
         variant: "company",
         authenticationStatus: "is-authenticated",
-        muligheterAccessStatus: "no-access",
         active: "stillingsannonser",
-    },
-};
-
-export const MedMuligheterTilgang: Story = {
-    args: {
-        variant: "person",
-        authenticationStatus: "is-authenticated",
-        muligheterAccessStatus: "has-access",
-        active: "muligheter",
     },
 };
