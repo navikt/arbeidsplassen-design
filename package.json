@@ -25,7 +25,7 @@
         "@types/react": "^18.2.0",
         "@types/react-dom": "^18.2.0",
         "@vitejs/plugin-react": "^6.0.2",
-        "@vitest/browser": "^4.1.9",
+        "@vitest/browser": "^4.1.10",
         "@vitest/browser-playwright": "^4.1.9",
         "@vitest/coverage-v8": "^4.1.9",
         "mockdate": "^3.0.5",
