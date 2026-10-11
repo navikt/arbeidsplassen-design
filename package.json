@@ -36,7 +36,7 @@
         "storybook": "^10.4.5",
         "vite": "^6.0.0",
         "vite-plus": "^0.1.24",
-        "vitest": "^4.1.9"
+        "vitest": "^4.1.11"
     },
     "dependencies": {
         "@babel/traverse": ">=7.29.0",
