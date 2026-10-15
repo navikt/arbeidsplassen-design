@@ -12,6 +12,7 @@ import {
     FigureWithMagnifier,
     WavingFigure,
     WorriedFigure,
+    HalloweenFigure
 } from "@navikt/arbeidsplassen-react";
 
 const meta = {
@@ -36,6 +37,7 @@ export const Default: Story = {
             <FigureHoldingAHeart />
             <FigureJugglingShieldWithCheckmark />
             <FigureWithEnvelope />
+            <HalloweenFigure />
         </HStack>
     ),
 };

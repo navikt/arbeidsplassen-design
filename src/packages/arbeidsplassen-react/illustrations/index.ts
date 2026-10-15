@@ -14,3 +14,4 @@ export { default as WorriedFigure } from "./WorriedFigure";
 export { default as FigureHoldingAHeart } from "./FigureHoldingAHeart";
 export { default as FigureJugglingShieldWithCheckmark } from "./FigureJugglingShieldWithCheckmark";
 export { default as FigureWithEnvelope } from "./FigureWithEnvelope";
+export { default as HalloweenFigure } from "./HalloweenFigure";
