@@ -10,6 +10,7 @@ export { default as FiguresSideBySide } from "./FiguresSideBySide";
 export { default as FigureWithKey } from "./FigureWithKey";
 export { default as FigureWithMagnifier } from "./FigureWithMagnifier";
 export { default as WavingFigure } from "./WavingFigure";
+export { default as WavingFigureRed } from "./WavingFigureRed";
 export { default as WorriedFigure } from "./WorriedFigure";
 export { default as FigureHoldingAHeart } from "./FigureHoldingAHeart";
 export { default as FigureJugglingShieldWithCheckmark } from "./FigureJugglingShieldWithCheckmark";
