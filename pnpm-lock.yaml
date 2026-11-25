@@ -11,17 +11,17 @@ importers:
                 specifier: ">=7.29.0"
                 version: 7.29.7
             "@navikt/aksel-icons":
-                specifier: ^8.11.1
-                version: 8.12.1
+                specifier: ^8.23.1
+                version: 8.23.1
             "@navikt/arbeidsplassen-react":
                 specifier: workspace:*
                 version: link:src/packages/arbeidsplassen-react
             "@navikt/ds-css":
-                specifier: ^8.11.1
-                version: 8.12.1
+                specifier: ^8.23.1
+                version: 8.23.1
             "@navikt/ds-react":
-                specifier: ^8.11.1
-                version: 8.12.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+                specifier: ^8.23.1
+                version: 8.23.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
             react:
                 specifier: 18.3.1
                 version: 18.3.1
@@ -113,8 +113,8 @@ importers:
                 specifier: ^7.12.1
                 version: 7.12.1
             "@navikt/aksel-icons":
-                specifier: ^8.11.1
-                version: 8.12.1
+                specifier: ^8.23.1
+                version: 8.23.1
         devDependencies:
             "@babel/cli":
                 specifier: ^7.28.6
@@ -132,8 +132,8 @@ importers:
                 specifier: ^7.28.5
                 version: 7.29.7(@babel/core@7.29.7)
             "@navikt/ds-react":
-                specifier: ^8.11.1
-                version: 8.12.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+                specifier: ^8.23.1
+                version: 8.23.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
             "@types/node":
                 specifier: ^20.19.42
                 version: 20.19.42
@@ -1745,45 +1745,45 @@ packages:
         peerDependencies:
             react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-    "@floating-ui/core@1.7.5":
+    "@floating-ui/core@1.8.0":
         resolution:
             {
-                integrity: sha512-1Ih4WTWyw0+lKyFMcBHGbb5U5FtuHJuujoyyr5zTaWS5EYMeT6Jb2AuDeftsCsEuchO+mM2ij5+q9crhydzLhQ==,
-                tarball: https://registry.npmjs.org/@floating-ui/core/-/core-1.7.5.tgz,
+                integrity: sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==,
+                tarball: https://registry.npmjs.org/@floating-ui/core/-/core-1.8.0.tgz,
             }
 
-    "@floating-ui/dom@1.7.6":
+    "@floating-ui/dom@1.8.0":
         resolution:
             {
-                integrity: sha512-9gZSAI5XM36880PPMm//9dfiEngYoC6Am2izES1FF406YFsjvyBMmeJ2g4SAju3xWwtuynNRFL2s9hgxpLI5SQ==,
-                tarball: https://registry.npmjs.org/@floating-ui/dom/-/dom-1.7.6.tgz,
+                integrity: sha512-yXSrzeHZBTZadLOlfyhCkJHNeLJnHRnRInwdZ40L7ZiaAtrBwoYlsDrX3v5zB1Utk7CLfzcOVnVVWoXEky7Ceg==,
+                tarball: https://registry.npmjs.org/@floating-ui/dom/-/dom-1.8.0.tgz,
             }
 
-    "@floating-ui/react-dom@2.1.8":
+    "@floating-ui/react-dom@2.1.9":
         resolution:
             {
-                integrity: sha512-cC52bHwM/n/CxS87FH0yWdngEZrjdtLW/qVruo68qg+prK7ZQ4YGdut2GyDVpoGeAYe/h899rVeOVm6Oi40k2A==,
-                tarball: https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.1.8.tgz,
+                integrity: sha512-JDjEFGCpImxDCA7JJKviA0M9+RtmJdj0m/NVU5IMgBK+AmZouAQQ7/+2GLH0GXXY0YMw9oXPB8hKdbPYg5QLYg==,
+                tarball: https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.1.9.tgz,
             }
         peerDependencies:
             react: ">=16.8.0"
             react-dom: ">=16.8.0"
 
-    "@floating-ui/react@0.27.19":
+    "@floating-ui/react@0.27.20":
         resolution:
             {
-                integrity: sha512-31B8h5mm8YxotlE7/AU/PhNAl8eWxAmjL/v2QOxroDNkTFLk3Uu82u63N3b6TXa4EGJeeZLVcd/9AlNlVqzeog==,
-                tarball: https://registry.npmjs.org/@floating-ui/react/-/react-0.27.19.tgz,
+                integrity: sha512-CMqMy7OaXl9W0eq1Uy7L7i2Y/anPvHmFmESd2CEw0t5YvZhcVCeo4MBevAmswRllX7Y2dEidA4ozGPunLSTQpw==,
+                tarball: https://registry.npmjs.org/@floating-ui/react/-/react-0.27.20.tgz,
             }
         peerDependencies:
             react: ">=17.0.0"
             react-dom: ">=17.0.0"
 
-    "@floating-ui/utils@0.2.11":
+    "@floating-ui/utils@0.2.12":
         resolution:
             {
-                integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==,
-                tarball: https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.11.tgz,
+                integrity: sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==,
+                tarball: https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.12.tgz,
             }
 
     "@inquirer/ansi@2.0.7":
@@ -1934,25 +1934,25 @@ packages:
             "@emnapi/core": ^1.7.1
             "@emnapi/runtime": ^1.7.1
 
-    "@navikt/aksel-icons@8.12.1":
+    "@navikt/aksel-icons@8.23.1":
         resolution:
             {
-                integrity: sha512-v05kWk0eJFOg1gKF9LJDS+n/W1S2aVDTNbhRdiuKi01ec5B9jiN8grOzylGtungvabLhiakGmROT3XmkXDgn9w==,
-                tarball: https://npm.pkg.github.com/download/@navikt/aksel-icons/8.12.1/27192b377f4a142ceeeafadbf48a15c999047bb5,
+                integrity: sha512-c07DAdYtpt0DO/pfmLMXM31DPVI+m7mkA3qZ+zY/RuDCDgwlHpNsMFN23ddF1kbf/YXsTvMbxx0x42cBzCKqdQ==,
+                tarball: https://registry.npmjs.org/@navikt/aksel-icons/-/aksel-icons-8.23.1.tgz,
             }
 
-    "@navikt/ds-css@8.12.1":
+    "@navikt/ds-css@8.23.1":
         resolution:
             {
-                integrity: sha512-4PgSwo/HKPifRgSkfPupR/VJTi3LrATzKk2g3/c/Pe3OUOpI5ldgR199r4r5WBBM+5Z2rosRwm9eC7jCWlQ9nQ==,
-                tarball: https://npm.pkg.github.com/download/@navikt/ds-css/8.12.1/3f43013514e6a0827ee11c94376e461254e57146,
+                integrity: sha512-8pHnprrJvpkXcT06K9GZ7qSlIVmdAwmhSrXesXw/ac+8J36PGUy3XPLE0RjARMVlhbgPfqxM9nynAh7ZdKFZ2A==,
+                tarball: https://registry.npmjs.org/@navikt/ds-css/-/ds-css-8.23.1.tgz,
             }
 
-    "@navikt/ds-react@8.12.1":
+    "@navikt/ds-react@8.23.1":
         resolution:
             {
-                integrity: sha512-7WJWiuVLsTfEI0/AV/XWVKduX+JG2f90aJMT6hDxQ1odwMsRdRuT/P8p+W65Ql+Sz82kbgV9megIsmzFRSbSuw==,
-                tarball: https://npm.pkg.github.com/download/@navikt/ds-react/8.12.1/876ebdda91c3befa9a28c4aeeb74930cc72bae30,
+                integrity: sha512-VjyBxOSKkvJfsewW/NL/O3PpwiAgcO3gil3S881UeQKpBqfw/eNZzQHpTk3DCm8/G45uhPtHWVRGdnMwnXnSlQ==,
+                tarball: https://registry.npmjs.org/@navikt/ds-react/-/ds-react-8.23.1.tgz,
             }
         peerDependencies:
             "@types/react": ^17.0.30 || ^18 || ^19
@@ -1962,11 +1962,11 @@ packages:
             "@types/react":
                 optional: true
 
-    "@navikt/ds-tokens@8.12.1":
+    "@navikt/ds-tokens@8.23.1":
         resolution:
             {
-                integrity: sha512-PTuxQHQ4ZsUks3sg3X6dHF0oHzLvKenmZYL9OlvKmO+0cYTY8JhJwe72rUtR9qoorezdszcsiOzbwzIVUpE8+Q==,
-                tarball: https://npm.pkg.github.com/download/@navikt/ds-tokens/8.12.1/f6da64efb569ecea60619860c2260deb41a50008,
+                integrity: sha512-iGu3qUgsYnj22cMJWiTgKcFUfquZS9kKHLK3mW0BCToyetlCT9kWulVttW0/e1xjLK06DI7kaOIJuZryy9SwGw==,
+                tarball: https://registry.npmjs.org/@navikt/ds-tokens/-/ds-tokens-8.23.1.tgz,
             }
 
     "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
@@ -3260,14 +3260,6 @@ packages:
             typescript:
                 optional: true
 
-    "@tabby_ai/hijri-converter@1.0.5":
-        resolution:
-            {
-                integrity: sha512-r5bClKrcIusDoo049dSL8CawnHR6mRdDwhlQuIgZRNty68q0x8k3Lf1BtPAMxRf/GgnHBnIO4ujd3+GQdLWzxQ==,
-                tarball: https://registry.npmjs.org/@tabby_ai/hijri-converter/-/hijri-converter-1.0.5.tgz,
-            }
-        engines: { node: ">=16.0.0" }
-
     "@testing-library/dom@10.4.1":
         resolution:
             {
@@ -4058,13 +4050,6 @@ packages:
             {
                 integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==,
                 tarball: https://registry.npmjs.org/csstype/-/csstype-3.2.3.tgz,
-            }
-
-    date-fns-jalali@4.1.0-0:
-        resolution:
-            {
-                integrity: sha512-hTIP/z+t+qKwBDcmmsnmjWTduxCg+5KfdqWQvb2X/8C9+knYY6epN/pfxdDuyVlSVeFz0sM5eEfwIUQ70U4ckg==,
-                tarball: https://registry.npmjs.org/date-fns-jalali/-/date-fns-jalali-4.1.0-0.tgz,
             }
 
     date-fns@4.1.0:
@@ -5116,15 +5101,19 @@ packages:
             }
         engines: { node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0 }
 
-    react-day-picker@9.14.0:
+    react-day-picker@10.0.2:
         resolution:
             {
-                integrity: sha512-tBaoDWjPwe0M5pGrum4H0SR6Lyk+BO9oHnp9JbKpGKW2mlraNPgP9BMfsg5pWpwrssARmeqk7YBl2oXutZTaHA==,
-                tarball: https://registry.npmjs.org/react-day-picker/-/react-day-picker-9.14.0.tgz,
+                integrity: sha512-QetiKtZWE9Uaw/pM/SYNv6WPYOTRnSJ2puL0GgwkmUFMIwiY0dtjH1W4B7DOVXVNQM0ZOClGpH/heOfBSzWeiA==,
+                tarball: https://registry.npmjs.org/react-day-picker/-/react-day-picker-10.0.2.tgz,
             }
         engines: { node: ">=18" }
         peerDependencies:
+            "@types/react": ">=16.8.0"
             react: ">=16.8.0"
+        peerDependenciesMeta:
+            "@types/react":
+                optional: true
 
     react-docgen-typescript@2.4.0:
         resolution:
@@ -6855,30 +6844,30 @@ snapshots:
         transitivePeerDependencies:
             - "@types/react"
 
-    "@floating-ui/core@1.7.5":
+    "@floating-ui/core@1.8.0":
         dependencies:
-            "@floating-ui/utils": 0.2.11
+            "@floating-ui/utils": 0.2.12
 
-    "@floating-ui/dom@1.7.6":
+    "@floating-ui/dom@1.8.0":
         dependencies:
-            "@floating-ui/core": 1.7.5
-            "@floating-ui/utils": 0.2.11
+            "@floating-ui/core": 1.8.0
+            "@floating-ui/utils": 0.2.12
 
-    "@floating-ui/react-dom@2.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+    "@floating-ui/react-dom@2.1.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
         dependencies:
-            "@floating-ui/dom": 1.7.6
+            "@floating-ui/dom": 1.8.0
             react: 18.3.1
             react-dom: 18.3.1(react@18.3.1)
 
-    "@floating-ui/react@0.27.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+    "@floating-ui/react@0.27.20(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
         dependencies:
-            "@floating-ui/react-dom": 2.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-            "@floating-ui/utils": 0.2.11
+            "@floating-ui/react-dom": 2.1.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+            "@floating-ui/utils": 0.2.12
             react: 18.3.1
             react-dom: 18.3.1(react@18.3.1)
             tabbable: 6.4.0
 
-    "@floating-ui/utils@0.2.11": {}
+    "@floating-ui/utils@0.2.12": {}
 
     "@inquirer/ansi@2.0.7": {}
 
@@ -6973,24 +6962,24 @@ snapshots:
             "@tybys/wasm-util": 0.10.2
         optional: true
 
-    "@navikt/aksel-icons@8.12.1": {}
+    "@navikt/aksel-icons@8.23.1": {}
 
-    "@navikt/ds-css@8.12.1": {}
+    "@navikt/ds-css@8.23.1": {}
 
-    "@navikt/ds-react@8.12.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+    "@navikt/ds-react@8.23.1(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
         dependencies:
-            "@floating-ui/react": 0.27.19(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-            "@floating-ui/react-dom": 2.1.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-            "@navikt/aksel-icons": 8.12.1
-            "@navikt/ds-tokens": 8.12.1
+            "@floating-ui/react": 0.27.20(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+            "@floating-ui/react-dom": 2.1.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+            "@navikt/aksel-icons": 8.23.1
+            "@navikt/ds-tokens": 8.23.1
             date-fns: 4.1.0
             react: 18.3.1
-            react-day-picker: 9.14.0(react@18.3.1)
+            react-day-picker: 10.0.2(@types/react@18.3.31)(react@18.3.1)
             react-dom: 18.3.1(react@18.3.1)
         optionalDependencies:
             "@types/react": 18.3.31
 
-    "@navikt/ds-tokens@8.12.1": {}
+    "@navikt/ds-tokens@8.23.1": {}
 
     "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
         optional: true
@@ -7486,8 +7475,6 @@ snapshots:
         transitivePeerDependencies:
             - supports-color
 
-    "@tabby_ai/hijri-converter@1.0.5": {}
-
     "@testing-library/dom@10.4.1":
         dependencies:
             "@babel/code-frame": 7.29.7
@@ -7923,8 +7910,6 @@ snapshots:
     css.escape@1.5.1: {}
 
     csstype@3.2.3: {}
-
-    date-fns-jalali@4.1.0-0: {}
 
     date-fns@4.1.0: {}
 
@@ -8488,13 +8473,13 @@ snapshots:
             ansi-styles: 5.2.0
             react-is: 17.0.2
 
-    react-day-picker@9.14.0(react@18.3.1):
+    react-day-picker@10.0.2(@types/react@18.3.31)(react@18.3.1):
         dependencies:
             "@date-fns/tz": 1.4.1
-            "@tabby_ai/hijri-converter": 1.0.5
             date-fns: 4.1.0
-            date-fns-jalali: 4.1.0-0
             react: 18.3.1
+        optionalDependencies:
+            "@types/react": 18.3.31
 
     react-docgen-typescript@2.4.0(typescript@5.9.3):
         dependencies:
