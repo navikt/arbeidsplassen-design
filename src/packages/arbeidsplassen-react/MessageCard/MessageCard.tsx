@@ -18,14 +18,17 @@ const variantConfig = {
     info: {
         color: "info-moderate",
         Icon: InformationSquareFillIcon,
+        alternativeText: "Informasjon",
     },
     warning: {
         color: "warning-moderate",
         Icon: ExclamationmarkTriangleFillIcon,
+        alternativeText: "Advarsel",
     },
     error: {
         color: "danger-moderate",
         Icon: XMarkOctagonFillIcon,
+        alternativeText: "Feil",
     },
 } as const;
 
@@ -37,7 +40,7 @@ export default function MessageCard({ variant, children, title, titleLevel = "h2
     return (
         <Box background={config.color} padding="space-16" borderRadius="12" className="arb-message-card">
             <HStack gap="space-12" align="start" wrap={false}>
-                <Icon aria-hidden className={`arb-message-card-icon arb-message-card-icon-${variant}`} />
+                <Icon title={config.alternativeText} className={`arb-message-card-icon arb-message-card-icon-${variant}`} />
                 <VStack gap="space-8">
                     {hasTitle && (
                         <BodyShort as={titleLevel} weight="semibold" className="arb-message-card-title">
