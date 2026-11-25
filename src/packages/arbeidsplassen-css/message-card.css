@@ -1,0 +1,22 @@
+.arb-message-card .arb-message-card-title {
+    line-height: var(--ax-font-line-height-heading-small);
+}
+
+.arb-message-card-icon {
+    flex-shrink: 0;
+    width: var(--ax-space-24);
+    height: var(--ax-space-24);
+    margin-top: var(--ax-space-2);
+}
+
+.arb-message-card-icon-info {
+    color: var(--ax-text-info-subtle);
+}
+
+.arb-message-card-icon-warning {
+    color: var(--ax-text-warning-decoration);
+}
+
+.arb-message-card-icon-error {
+    color: var(--ax-text-danger-subtle);
+}

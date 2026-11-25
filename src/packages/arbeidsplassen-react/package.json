@@ -52,6 +52,7 @@
         "zod": "^4.4.2"
     },
     "dependencies": {
+        "@navikt/aksel-icons": "^8.11.1",
         "@babel/polyfill": "^7.12.1"
     }
 }
