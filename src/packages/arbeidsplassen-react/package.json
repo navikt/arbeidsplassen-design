@@ -1,6 +1,6 @@
 {
     "name": "@navikt/arbeidsplassen-react",
-    "version": "12.0.6",
+    "version": "12.1.0",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "private": false,
@@ -39,7 +39,7 @@
         "zod": "^4.4.2"
     },
     "devDependencies": {
-        "@navikt/ds-react": "^8.11.1",
+        "@navikt/ds-react": "^8.23.1",
         "@babel/cli": "^7.28.6",
         "@babel/core": "^7.29.0",
         "@babel/preset-env": "^7.29.3",
@@ -52,6 +52,7 @@
         "zod": "^4.4.2"
     },
     "dependencies": {
+        "@navikt/aksel-icons": "^8.23.1",
         "@babel/polyfill": "^7.12.1"
     }
 }
